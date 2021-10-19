@@ -1,0 +1,5 @@
+udo apt-get update
+sudo apt-get upgrade
+sudo aptinstall vim -y
+sudo apt install vim -y
+sudo apt install pip -y
