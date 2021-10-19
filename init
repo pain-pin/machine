@@ -3,5 +3,6 @@ sudo apt-get upgrade
 sudo aptinstall vim -y
 sudo apt install vim -y
 sudo apt install pip -y
+sudo apt install youtube-dl -y
 echo "" >> .bashrc
 echo echo "set -o vi" >> .bashrc
