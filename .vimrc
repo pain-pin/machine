@@ -22,6 +22,16 @@ set ruler       " Show row and column ruler information
 set undolevels=1000     " Number of undo levels
 
 set backspace=indent,eol,start	" Backspace behaviour
+"" close and tab when writing {
+inoremap { {<CR><BS>}<Esc>ko
+set expandtab
+
+""inoremap { {}<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+""inoremap < <lt>><left>
+inoremap " ""<left>
+inoremap ' ''<left>
 
 " templates files
 autocmd BufNewFile *.py 0r ~/.vim/templates/template.py
