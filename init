@@ -1,6 +1,7 @@
 udo apt-get update
 sudo apt-get upgrade
-sudo aptinstall vim -y
+sudo apt install vlc -y
+sudo apt install thunderbird -y
 sudo apt install vim -y
 sudo apt install pip -y
 pip install youtube-dl
