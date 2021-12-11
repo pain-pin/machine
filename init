@@ -4,7 +4,8 @@ sudo apt install vlc -y
 sudo apt install thunderbird -y
 sudo apt install vim -y
 sudo apt install pip -y
+sudo apt install git -y
 pip install youtube-dl
+
 PATH+=/home/$USER/.local/bin
-echo "" >> .bashrc
-echo echo "set -o vi" >> .bashrc
+git clone https://github.com/presk0/machine.git
