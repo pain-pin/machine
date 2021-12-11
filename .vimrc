@@ -27,12 +27,13 @@ inoremap { {<CR><BS>}<Esc>ko
 set expandtab
 
 ""inoremap { {}<left>
-inoremap ( ()<left>
-inoremap [ []<left>
+""inoremap ( ()<left>
+""inoremap [ []<left>
 ""inoremap < <lt>><left>
-inoremap " ""<left>
-inoremap ' ''<left>
+""inoremap " ""<left>
+""inoremap ' ''<left>
 
 " templates files
 autocmd BufNewFile *.py 0r ~/.vim/templates/template.py
 autocmd BufNewFile *.sh 0r ~/.vim/templates/template.sh
+autocmd BufNewFile *.c 0r ~/.vim/templates/template.c
