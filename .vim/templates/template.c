@@ -1,9 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include "header.h"
 
-int i;
-
-int main(void) {
-    return 0;
+int main(void) #int argc, char *argv[])
+{
+    return (0);
 }
