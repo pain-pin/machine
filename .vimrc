@@ -1,3 +1,4 @@
+syntax on
 set number      " Show line numbers
 set linebreak   " Break lines at word (requires Wrap lines)
 set showbreak=+++       " Wrap-broken line prefix
@@ -22,10 +23,7 @@ set ruler       " Show row and column ruler information
 set undolevels=1000     " Number of undo levels
 
 set backspace=indent,eol,start	" Backspace behaviour
-"" close and tab when writing {
-inoremap { {<CR><BS>}<Esc>ko
 set expandtab
 
-autocmd BufNewFile *.py 0r ~/.vim/templates/template.py
 autocmd BufNewFile *.sh 0r ~/.vim/templates/template.sh
 autocmd BufNewFile *.c 0r ~/.vim/templates/template.c
