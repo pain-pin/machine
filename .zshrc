@@ -100,7 +100,7 @@ fi
 export USER=supersko
 export MAIL=ndionis@student.42mulhouse.fr 
 
-alias basha="vim ~/.zshrc && source  ~/.zshrc"
+alias basha="vim + ~/.zshrc && source  ~/.zshrc"
 alias normi="norminette -R CheckForbiddenSourceHeader"
 alias ggc="gcc -Wall -Wextra -Werror"
 alias mouliseb="sh /Users/ndionis/mouliseb/run.sh --project /Users/ndionis/mouliseb/$1"
@@ -114,3 +114,8 @@ alias gpush="git push"
 alias gpush="git push"
 alias grepfunctions='awk "/^(int|void|t_|char|size_t).*\)$/" * | sort | grep -v "main\|test" | awk "{printf \"\%s;\n\", \$0}"'
 alias -s c="vim"
+
+sedi()
+{
+    awk "{gsub(\"$1\", \"$2\"); print }" $3
+}
