@@ -112,5 +112,5 @@ alias gc="git commit -m "
 alias gaddc="git add . && git commit -m"
 alias gpush="git push"
 alias gpush="git push"
-alias grepfunctions="awk '/^(int|void|t_|char|size_t).*\)$/'"
+alias grepfunctions='awk "/^(int|void|t_|char|size_t).*\)$/" * | sort | grep -v "main\|test" | awk "{printf \"\%s;\n\", \$0}"'
 alias -s c="vim"
