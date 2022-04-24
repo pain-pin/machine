@@ -117,10 +117,14 @@ alias -s c="vim"
 
 sedi()
 {
-
     REG=$1
     shift
     NEW_WD=$1
     shift
-    awk "{gsub(\"$REG\", \"$NEW_WD\"); print }" $*
+    awk "{gsub(\"$REG\", \"$NEW_WD\"); print}" $*
+    if (read -q "rep?Confirmer Mofifications : y/n"); then
+        for F in $*; do
+            awk "{gsub(\"$REG\", \"$NEW_WD\"); print }" $F > $F.cpy
+        done
+    fi
 }
