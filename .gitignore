@@ -31,7 +31,7 @@ machine
 push_swap
 sgoinfre
 tesst.c
-.zcompdump-k0r4p3-5.7.1
+.zcompdump*
 libft.a
 test.c
 

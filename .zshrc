@@ -117,5 +117,10 @@ alias -s c="vim"
 
 sedi()
 {
-    awk "{gsub(\"$1\", \"$2\"); print }" $3
+
+    REG=$1
+    shift
+    NEW_WD=$1
+    shift
+    awk "{gsub(\"$REG\", \"$NEW_WD\"); print }" $*
 }
