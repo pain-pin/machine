@@ -107,11 +107,12 @@ alias mouliseb="sh /Users/ndionis/mouliseb/run.sh --project /Users/ndionis/mouli
 alias cd="cd"
 # git aliases
 alias ginit="git init ."
+alias gitignore="vim + .gitignore && git add .gitignore"
 alias gadd="git add ."
 alias gc="git commit -m "
 alias gaddc="git add . && git commit -m"
 alias gpush="git push"
-alias gpush="git push"
+alias gbr="git branch"
 alias grepfunctions='awk "/^(int|void|t_|char|size_t).*\)$/" * | sort | grep -v "main\|test" | awk "{printf \"\%s;\n\", \$0}"'
 alias -s c="vim"
 
