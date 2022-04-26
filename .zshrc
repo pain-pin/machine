@@ -100,21 +100,23 @@ fi
 export USER=supersko
 export MAIL=ndionis@student.42mulhouse.fr 
 
+alias vimrc="vim ~/.vimrc"
+alias zshrc="vim ~/.zshrc"
 alias basha="vim + ~/.zshrc && source  ~/.zshrc"
 alias normi="norminette -R CheckForbiddenSourceHeader"
 alias ggc="gcc -Wall -Wextra -Werror"
-alias mouliseb="sh /Users/ndionis/mouliseb/run.sh --project /Users/ndionis/mouliseb/$1"
-alias cd="cd"
 # git aliases
 alias ginit="git init ."
+alias gstat="git status"
 alias gitignore="vim + .gitignore && git add .gitignore"
 alias gadd="git add ."
 alias gc="git commit -m "
 alias gaddc="git add . && git commit -m"
 alias gpush="git push"
 alias gbr="git branch"
-alias grepfunctions='awk "/^(int|void|t_|char|size_t).*\)$/" * | sort | grep -v "main\|test" | awk "{printf \"\%s;\n\", \$0}"'
-alias -s c="vim"
+
+alias grepfunctions='awk "/^(struct|int|void|t_|char|size_t).*\)$/" * | sort | grep -v "main\|test" | awk "{printf \"\%s;\n\", \$0}"'
+alias -s c="vim" #suffix
 
 sedi()
 {
@@ -125,7 +127,9 @@ sedi()
     awk "{gsub(\"$REG\", \"$NEW_WD\"); print}" $*
     if (read -q "rep?Confirmer Mofifications : y/n"); then
         for F in $*; do
-            awk "{gsub(\"$REG\", \"$NEW_WD\"); print }" $F > $F.cpy
+            awk "{gsub(\"$REG\", \"$NEW_WD\"); print }" $F > $F.tmp
+            cat $F.tmp > $F
+            rm $F.tmp
         done
     fi
 }
