@@ -114,9 +114,46 @@ alias gc="git commit -m "
 alias gaddc="git add . && git commit -m"
 alias gpush="git push"
 alias gbr="git branch"
-
-alias grepfunctions='awk "/^(struct|int|void|t_|char|size_t).*\)$/" * | sort | grep -v "main\|test" | awk "{printf \"\%s;\n\", \$0}"'
 alias -s c="vim" #suffix
+
+grepfunctions()
+{
+	if [ $# -eq 1 ]; then
+		echo "usage: grepfunctions [files.c]"
+		break
+	fi
+	shift
+	awk "/^[[:alpha:]].+\)$/" $@ | sort -i | grep -v "main" | awk "{printf \"\%s;\n\", \$0}"
+}
+
+makeheader()
+{
+	if [ $# -eq 0 ]; then
+		echo "header\'s filelename is missing"
+		echo "usage: $0 HEADER.h"
+		echo
+		return
+	fi
+	if [ $# -gt 1 ]; then
+		echo "usage: $0 HEADER.h"
+		echo
+		return
+	fi
+	if [ -f $1 ]; then
+		if read -q "rep?File $1 already exist, are you shure you want to replace it ? : y/n\n" ; then
+			HEADER_DEF=$(basename -s .h $1 | awk '{$0 = toupper($0) ; gsub(/\./, "_"); print $0}')
+			echo "#ifndef $HEADER_DEF" > $1
+			echo "# define $HEADER_DEF\n" >> $1
+			grepfunctions *.c >> $1
+			echo "\n#endif" >> $1
+		else
+			echo
+			echo "Aborted"
+			echo
+		fi
+	fi
+	return
+}
 
 sedi()
 {
@@ -125,7 +162,7 @@ sedi()
     NEW_WD=$1
     shift
     awk "{gsub(\"$REG\", \"$NEW_WD\"); print}" $*
-    if (read -q "rep?Confirmer Mofifications : y/n"); then
+    if read -q "rep?Confirmer Mofifications : y/n" ; then
         for F in $*; do
             awk "{gsub(\"$REG\", \"$NEW_WD\"); print }" $F > $F.tmp
             cat $F.tmp > $F
