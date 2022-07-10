@@ -1,0 +1,68 @@
+2022-07-06T14:52:22.624Z [debug] [main] Safe constructing new CMakeTools instance
+2022-07-06T14:52:22.625Z [debug] [variant] Constructing VariantManager
+2022-07-06T14:52:22.625Z [debug] [main] Constructing new CMakeTools instance
+2022-07-06T14:52:22.626Z [debug] [main] Starting CMakeTools second-phase init
+2022-07-06T14:52:22.684Z [info] [variant] Loaded new set of variants
+2022-07-06T14:52:22.685Z [debug] [main] CMakeTools instance initialization complete.
+2022-07-06T14:52:22.686Z [debug] [kit] Reading kits file /Users/ndionis/.local/share/CMakeTools/cmake-tools-kits.json
+2022-07-06T14:52:22.774Z [info] [kit] Successfully loaded 1 kits from /Users/ndionis/.local/share/CMakeTools/cmake-tools-kits.json
+2022-07-06T14:52:22.775Z [debug] [kit] Not reading non-existent kits file: /Users/ndionis/minishell/.vscode/cmake-kits.json
+2022-07-06T14:52:22.824Z [debug] [extension] [6487] cmake.buildDirectory started
+2022-07-06T14:52:22.824Z [debug] [main] Not starting CMake driver: no kits defined
+2022-07-06T14:52:22.825Z [debug] [extension] [6487] cmake.buildDirectory finished (returned null)
+2022-07-06T14:52:23.031Z [debug] [extension] [3314] cmake.buildDirectory started
+2022-07-06T14:52:23.031Z [debug] [main] Not starting CMake driver: no kits defined
+2022-07-06T14:52:23.031Z [debug] [extension] [3314] cmake.buildDirectory finished (returned null)
+2022-07-06T15:06:19.279Z [debug] [main] Not starting CMake driver: no kits defined
+2022-07-06T15:21:16.716Z [debug] [main] Not starting CMake driver: no kits defined
+2022-07-06T15:26:01.688Z [debug] [main] Not starting CMake driver: no kits defined
+2022-07-06T15:26:35.822Z [debug] [main] Not starting CMake driver: no kits defined
+2022-07-06T15:26:35.840Z [debug] [main] Not starting CMake driver: no kits defined
+2022-07-06T15:26:35.840Z [debug] [main] Not starting CMake driver: no kits defined
+2022-07-06T15:28:17.596Z [debug] [main] Not starting CMake driver: no kits defined
+2022-07-06T15:28:42.923Z [debug] [main] Not starting CMake driver: no kits defined
+2022-07-06T15:30:07.407Z [debug] [main] Not starting CMake driver: no kits defined
+2022-07-06T15:30:24.361Z [debug] [main] Not starting CMake driver: no kits defined
+2022-07-06T15:31:35.712Z [debug] [main] Not starting CMake driver: no kits defined
+2022-07-06T15:31:38.931Z [debug] [main] Not starting CMake driver: no kits defined
+2022-07-06T15:34:03.971Z [debug] [main] Not starting CMake driver: no kits defined
+2022-07-06T15:46:14.275Z [debug] [main] Not starting CMake driver: no kits defined
+2022-07-06T15:46:14.316Z [debug] [main] Not starting CMake driver: no kits defined
+4Z [debug] [kit] Testing Clang binary: /usr/bin/clang
+2022-06-29T16:47:59.434Z [info] [proc] Executing command: /usr/bin/clang -v
+2022-06-29T16:47:59.442Z [debug] [kit] Testing GCC binary: /usr/bin/gcc
+2022-06-29T16:47:59.442Z [info] [proc] Executing command: /usr/bin/gcc -v
+2022-06-29T16:47:59.449Z [debug] [kit] Testing GCC binary: /usr/bin/llvm-gcc
+2022-06-29T16:47:59.449Z [info] [proc] Executing command: /usr/bin/llvm-gcc -v
+2022-06-29T16:47:59.498Z [debug] [extension] [1400] cmake.buildDirectory started
+2022-06-29T16:47:59.499Z [debug] [main] Not starting CMake driver: no kits defined
+2022-06-29T16:47:59.499Z [debug] [extension] [1400] cmake.buildDirectory finished (returned null)
+2022-06-29T16:47:59.534Z [debug] [kit] Detected Clang compiler: /usr/bin/clang
+2022-06-29T16:47:59.535Z [debug] [kit] Detected Clang compiler: /usr/bin/clang
+2022-06-29T16:47:59.535Z [debug] [kit] Bad GCC binary. "/usr/bin/llvm-gcc -v" reports version:  output: Apple clang version 12.0.0 (clang-1200.0.32.29)
+Target: x86_64-apple-darwin19.6.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+2022-06-29T16:47:59.536Z [debug] [kit] Bad GCC binary. "/usr/bin/gcc -v" reports version:  output: Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/c++/4.2.1
+Apple clang version 12.0.0 (clang-1200.0.32.29)
+Target: x86_64-apple-darwin19.6.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+2022-06-29T16:47:59.545Z [debug] [kit] Found 1 kits in directory /usr/bin
+2022-06-29T16:47:59.545Z [info] [kit] Found Kit: Clang 12.0.0 x86_64-apple-darwin19.6.0
+2022-06-29T16:47:59.546Z [debug] [kitsController] Saving kits to /Users/ndionis/.local/share/CMakeTools/cmake-tools-kits.json
+2022-06-29T16:47:59.546Z [debug] [kitsController] Saving new kits to /Users/ndionis/.local/share/CMakeTools/cmake-tools-kits.json
+2022-06-29T16:47:59.548Z [debug] [extension] [2929] cmake.buildDirectory started
+2022-06-29T16:47:59.550Z [debug] [main] Not starting CMake driver: no kits defined
+2022-06-29T16:47:59.550Z [debug] [extension] [2929] cmake.buildDirectory finished (returned null)
+2022-06-29T16:51:44.393Z [debug] [main] Not starting CMake driver: no kits defined
+2022-06-29T16:51:44.393Z [debug] [main] Not starting CMake driver: no kits defined
+2022-06-29T16:51:44.393Z [debug] [main] Not starting CMake driver: no kits defined
+2022-06-29T17:59:31.519Z [debug] [main] Not starting CMake driver: no kits defined
+2022-06-29T17:59:34.327Z [debug] [main] Not starting CMake driver: no kits defined
+2022-06-29T18:12:29.815Z [debug] [main] Not starting CMake driver: no kits defined
+2022-06-29T18:12:52.882Z [debug] [main] Not starting CMake driver: no kits defined
+2022-06-29T19:08:55.188Z [debug] [extension] Deactivate CMakeTools
+2022-06-29T19:08:55.634Z [fatal] [rollbar] Unhandled exception: Unhandled Promise rejection: Post-folder-open Canceled: Canceled {"folder":{"uri":{"$mid":1,"fsPath":"/Users/ndionis/minishell","external":"file:///Users/ndionis/minishell","path":"/Users/ndionis/minishell","scheme":"file"},"name":"minishell","index":0}}
