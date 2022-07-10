@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -146,12 +146,19 @@ makeheader()
 			echo "# define $HEADER_DEF\n" >> $1
 			grepfunctions *.c >> $1
 			echo "\n#endif" >> $1
+			return
 		else
 			echo
 			echo "Aborted"
 			echo
+			return
 		fi
 	fi
+	HEADER_DEF=$(basename -s .h $1 | awk '{$0 = toupper($0) ; gsub(/\./, "_"); print $0}')
+	echo "#ifndef $HEADER_DEF" > $1
+	echo "# define $HEADER_DEF\n" >> $1
+	grepfunctions *.c >> $1
+	echo "\n#endif" >> $1
 	return
 }
 
@@ -170,3 +177,4 @@ sedi()
         done
     fi
 }
+export PATH=/Users/ndionis/.brew/bin:/Users/ndionis/.brew/bin:/Users/ndionis/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Library/Apple/usr/bin
