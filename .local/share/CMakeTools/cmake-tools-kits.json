@@ -1,9 +1,0 @@
-[
-  {
-    "name": "Clang 12.0.0 x86_64-apple-darwin19.6.0",
-    "compilers": {
-      "C": "/usr/bin/clang",
-      "CXX": "/usr/bin/clang++"
-    }
-  }
-]

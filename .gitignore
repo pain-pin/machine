@@ -41,3 +41,5 @@ test_folder
 .cpy
 hello_makefile
 .vscode
+*.swo
+
