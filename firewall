@@ -1,0 +1,33 @@
+D'apres chat gpt:
+
+Bien sûr ! Je peux vous fournir un exemple de règles de pare-feu IPtables qui appliquent des restrictions strictes, y compris le blocage des adresses connues pour être liées aux spams ou à la publicité, tout en autorisant les requêtes des GAFAM (Google, Apple, Facebook, Amazon, Microsoft) uniquement si elles proviennent de votre propre ordinateur. Veuillez noter que la mise en œuvre de ces règles peut être complexe et dépendra de votre configuration spécifique. Assurez-vous de sauvegarder votre configuration existante et d'être familier avec les concepts de base d'IPtables avant de les appliquer. Voici un exemple :
+
+shell
+
+# Supprimer toutes les règles existantes
+iptables -F
+iptables -X
+
+# Politique par défaut : refuser toutes les connexions entrantes et sortantes
+iptables -P INPUT DROP
+iptables -P OUTPUT DROP
+iptables -P FORWARD DROP
+
+# Autoriser les connexions établies et les connexions liées
+iptables -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+iptables -A OUTPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+
+# Bloquer les adresses IP connues pour le spam et la publicité
+iptables -A OUTPUT -m set --match-set spam_ips src -j DROP
+
+# Autoriser les requêtes sortantes vers les GAFAM en provenance de votre propre ordinateur
+iptables -A OUTPUT -p tcp -m multiport --dports 80,443 -m set --match-set gafam_ips src -m owner --uid-owner <your_user_id> -j ACCEPT
+
+# Bloquer toutes les autres requêtes sortantes
+iptables -A OUTPUT -j DROP
+
+Dans cet exemple, vous devrez remplacer <your_user_id> par l'ID utilisateur de votre propre ordinateur. De plus, vous devrez configurer et maintenir une liste d'adresses IP connues pour le spam et la publicité dans un ensemble appelé "spam_ips", et une liste d'adresses IP appartenant aux GAFAM dans un ensemble appelé "gafam_ips".
+
+Veuillez noter que cette configuration est un exemple et peut nécessiter des ajustements en fonction de vos besoins spécifiques. Il est également important de garder à l'esprit que les adresses IP peuvent changer et que vous devrez mettre à jour régulièrement les ensembles d'adresses IP pour maintenir l'efficacité de ces règles.
+
+Assurez-vous de comprendre pleinement l'impact de ces règles sur votre système et votre connectivité avant de les appliquer. Il est recommandé de tester ces règles dans un environnement de test avant de les déployer sur un système en production.
