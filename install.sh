@@ -10,6 +10,7 @@ sudo apt install make -y
 sudo apt install pip -y
 sudo apt install vlc -y
 sudo apt install curl -y
+sudo apt install tmux -y
 sudo apt install python3.11-venv -y
 #installation de whisper
 sudo apt install ffmpeg -y
