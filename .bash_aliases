@@ -68,7 +68,11 @@ machine_install () {
 
 2text () {
 	echo "usage: $0 ."
+	TEXT_FOLD="texte"
+	mkdir "$TEXT_FOLD"
 	for FILE in $1/* ; do
-		echo $FILE
+		$BASE=${FILE%.*}
+		whisper $FILE > "$TEXT_FOLD/$BASE.txt"
+		rm "$BASE.json" "$BASE.srt" "$BASE.tsv" "$BASE.vtt"
 	done
 }
