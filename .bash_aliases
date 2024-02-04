@@ -68,11 +68,31 @@ machine_install () {
 
 2text () {
 	echo "usage: $0 ."
-	TEXT_FOLD="texte"
+	TEXT_FOLD="new_text"
 	mkdir "$TEXT_FOLD"
-	for FILE in $1/* ; do
+	for FILE in $1/*\.* ; do
 		$BASE=${FILE%.*}
 		whisper $FILE > "$TEXT_FOLD/$BASE.txt"
+		cd $TEXT_FOLD
 		rm "$BASE.json" "$BASE.srt" "$BASE.tsv" "$BASE.vtt"
+		cd -
 	done
+}
+
+netstat_tunlp () {
+	netstat -tunlp
+}
+
+nmap_full () {
+	sudo nmap --scanflags URGACKPSHRSTSYNFIN $@
+}
+
+nmap_sA () {
+#ACK scan: the target would respond to the ACK with RST regardless of the state of the port
+#help to guess firewall rules if the packet is droped
+	nmap -sA --reason #or -v -vv -d -dd
+}
+
+nmap_version () {
+	nmap -sV --version-intensity 9 $@
 }
