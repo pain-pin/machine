@@ -4,6 +4,11 @@ cp -r .vim .bashrc .bash_aliases ..
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get dist-upgrade
+#dns over TSL
+sudo apt install stubby
+sudo systemctl start stubby
+sudo systemctl enable stubby
+#
 sudo apt install vim -y
 sudo apt install gcc -y
 sudo apt install make -y
