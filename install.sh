@@ -5,6 +5,8 @@ sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get dist-upgrade
 #dns over TSL
+#https://www.techrepublic.com/article/how-to-use-dns-over-tls-on-ubuntu-linux/
+#IPv4 tab and set DNS Automatic to OFF. Next, in the DNS textarea, enter 127.0.0.1
 sudo apt install stubby
 sudo systemctl start stubby
 sudo systemctl enable stubby
