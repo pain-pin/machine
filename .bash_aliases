@@ -94,5 +94,13 @@ nmap_sA () {
 }
 
 nmap_version () {
-	nmap -sV --version-intensity 9 $@
+	#-O = OS detection
+	#-sV services versions
+	#version intensity max
+	#-sC use default script
+	nmap -sV --version-intensity 9 -O -sC $@
+}
+
+nmap_ssh_brute () {
+	nmap --script "ssh-brute" $1 #--script-args userdb=user_list.txt,passdb=passwd_list.txt
 }
