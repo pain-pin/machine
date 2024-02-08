@@ -57,7 +57,7 @@ basha () {
 }
 
 machine_install () {
-	FILE=~/machine
+	FILE=~/machine/install.sh
 	vim $FILE
 	cd $FILE
 	git add $FILE
@@ -67,15 +67,20 @@ machine_install () {
 }
 
 2text () {
-	echo "usage: $0 ."
+	if [ -z $1 ] ; then
+		echo "usage: $0 ."
+		return 1
+	fi
+	LOC=$1/
 	TEXT_FOLD="new_text"
 	mkdir "$TEXT_FOLD"
-	for FILE in $1/*\.* ; do
-		$BASE=${FILE%.*}
-		whisper $FILE > "$TEXT_FOLD/$BASE.txt"
-		cd $TEXT_FOLD
-		rm "$BASE.json" "$BASE.srt" "$BASE.tsv" "$BASE.vtt"
-		cd -
+	for FILE in $LOC*\.* ; do
+		BASE="${FILE#$LOC}"
+		BASE="${BASE%.*}"
+		whisper --language fr $FILE > "$TEXT_FOLD/$BASE.txt"
+		#cd $TEXT_FOLD
+		#rm "$BASE.json" "$BASE.srt" "$BASE.tsv" "$BASE.vtt"
+		#cd -
 	done
 }
 

@@ -1,0 +1,3 @@
+For using DNS over TLS thanks to stubby:
+	https://www.techrepublic.com/article/how-to-use-dns-over-tls-on-ubuntu-linux/
+		IPv4 tab and set DNS Automatic to OFF. Next, in the DNS textarea, enter 127.0.0.1
