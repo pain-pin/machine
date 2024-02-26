@@ -22,8 +22,8 @@ sudo apt install tree -y
 sudo apt install python3.11-venv -y
 #installation de whisper
 sudo apt install ffmpeg -y
-python3 -m venv ~/.env_whisper
-source ~/.env_whisper/bin/activate
+python3 -m venv ~/.venv
+source ~/.venv/bin/activate
 mkdir pip_cache
 TMP=$HOME/pip_cache/ ; TMPDIR=$TMP pip install --cache-dir=$TMP openai-whisper
 rm -rf ~/pip_cache/
