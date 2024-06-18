@@ -17,6 +17,18 @@ to_wav () {
 	done
 }
 
+#convert wav to mp3
+to_mp3 () {
+	#OUTDIR_NAME="wav_files"
+	#mkdir $OUTDIR_NAME
+	for file in "$@" ; do
+		MP3_NAME=${file%.*}.mp3
+		echo $file
+		echo
+		ffmpeg -i $file -vn -b:a 192k "$MP3_NAME"
+	done
+}
+
 install_machine () {
 	cp -ir machine/* ~
 }
@@ -49,11 +61,9 @@ sphynx () {
 }
 
 basha () {
-	cd
-	vim + .bash_aliases
-	source .bashrc
-	cp .bash_aliases ~/machine/.bash_aliases
-	cd -
+	vim + ~/.bash_aliases
+	source ~/.bashrc
+	cp ~/.bash_aliases ~/machine/.bash_aliases
 }
 
 machine_install () {
@@ -108,4 +118,14 @@ nmap_version () {
 
 nmap_ssh_brute () {
 	nmap --script "ssh-brute" $1 #--script-args userdb=user_list.txt,passdb=passwd_list.txt
+}
+
+gitadd () {
+	git add $(git status | grep -P '\t' | awk '{print $NF}' | xargs)
+}
+
+gitRoot () {
+	git add Root.*
+	git commit -m "Root database update"
+	git push
 }
