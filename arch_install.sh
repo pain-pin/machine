@@ -2,8 +2,28 @@
 MACHINE_DIR="$HOME/machine"
 
 cp -r $MACHINE_DIR/.vim $MACHINE_DIR/.bashrc $MACHINE_DIR/.bash_aliases $MACHINE_DIR/.config $HOME
-pacman -S cherrytree
+# utiliser ln -s est preferable a cp, trouve un moyen...
+pacman -Syu cherrytree
 pacman -S redshift
 pacman -S vlc
+pacman -S tcpdump
+pacman -S moreutils
+pacman -S net-tools
+pacman -S make
+pacman -S tr
+pacman -S go
+
+wget https://gitlab.archlinux.org/pacman/pacman/-/raw/master/scripts/makepkg.sh.in
+chmod +x makepkg.sh.in
+mv makepkg.sh.in /bin/makepkg
+
+git clone https://aur.archlinux.org/yay.git
+cd yay/
+makepkg
+sudo cp pkg/yay/usr/bin/yay /bin
+cd ..
+rm -rf yay
 
 #pip install openai-whisper pydub
+
+
