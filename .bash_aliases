@@ -129,3 +129,7 @@ gitRoot () {
 	git commit -m "Root database update"
 	git push
 }
+
+aur () {
+	git clone https://aur.archlinux.org/$1.git
+}
