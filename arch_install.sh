@@ -1,9 +1,7 @@
 #!/usr/bin/bash
 MACHINE_DIR="$HOME/machine"
 
-sudo iptables -P FORWARD DROP
-sudo iptables-save > /tmp/a.tmp
-sudo mv /tmp/a.tmp /etc/iptables/iptables.rules 
+bash $MACHINE_DIR/networking/iptables_script.sh
 
 ln -s $MACHINE_DIR/.vim $MACHINE_DIR/.bashrc $MACHINE_DIR/.bash_aliases $MACHINE_DIR/.config $HOME
 
@@ -14,6 +12,7 @@ pacman -S tcpdump
 pacman -S moreutils
 pacman -S net-tools
 pacman -S make
+pacman -S whois
 
 wget https://gitlab.archlinux.org/pacman/pacman/-/raw/master/scripts/makepkg.sh.in
 chmod +x makepkg.sh.in
@@ -25,7 +24,7 @@ makepkg
 sudo cp pkg/yay/usr/bin/yay /bin
 cd ..
 rm -rf yay
-
+yay -S grepcidr
 #pip install openai-whisper pydub
 
 
