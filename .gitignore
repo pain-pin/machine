@@ -43,3 +43,4 @@ hello_makefile
 .vscode
 *.swo
 
+.*~
