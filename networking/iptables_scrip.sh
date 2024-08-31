@@ -3,8 +3,8 @@
 ARGPARSE_DESCRIPTION="Configure your firewall from iptables"      # this is optional
 source $(dirname $0)/argparse.bash || exit 1
 argparse "$@" <<EOF || exit 1
-parser.add_argument('-f', '--file_in', help='ip list file (can contain CIDR)')
-parser.add_argument('-r', '--reset', action=argparse.BooleanOptionalAction, default=True, help='reset the rules')
+parser.add_argument('-f', '--file_in', help='ip list file , can contain CIDR and ignore lines containing #')
+parser.add_argument('-r', '--reset', action=argparse.BooleanOptionalAction, required=True, help='reset the rules')
 parser.add_argument('-s', '--simple', action=argparse.BooleanOptionalAction, default=True, help='set the rules as /etc/iptables/simple_firewall.rules')
 parser.add_argument('-l', '--log', action=argparse.BooleanOptionalAction, default=True, help='use -j LOG rule')
 parser.add_argument('-d', '--drop', action=argparse.BooleanOptionalAction, default=True, help='use -j DROP rule')
@@ -12,6 +12,11 @@ parser.add_argument('-u', '--update', action=argparse.BooleanOptionalAction, def
 EOF
 
 IPTABLES_FILE="/etc/iptables/iptables.rules"
+
+echo "RESET=$RESET"
+echo "SIMPLE=$SIMPLE"
+echo "FILE_IN=$FILE_IN"
+echo "UPDATE=$UPDATE"
 
 if [ -n "$RESET" ]; then
     ## from https://wiki.archlinux.org/title/Iptables
@@ -26,9 +31,11 @@ if [ -n "$RESET" ]; then
     iptables -t raw -X
     iptables -t security -F
     iptables -t security -X
-    iptables -P INPUT ACCEPT
+    iptables -P INPUT DROP
     iptables -P FORWARD DROP
     iptables -P OUTPUT ACCEPT
+
+    iptables -N logdrop
 fi
 
 if [ -n "$SIMPLE" ]; then
@@ -37,23 +44,34 @@ if [ -n "$SIMPLE" ]; then
     iptables -P FORWARD DROP
     iptables -P OUTPUT ACCEPT
     # Ajouter les règles spécifiques
-    iptables -A INPUT -p icmp -j ACCEPT
+    iptables -A logdrop -m limit --limit 15/m --limit-burst 50 -j LOG --log-level 8
+    iptables -A logdrop -j DROP
+    iptables -A INPUT -p icmp -j logdrop
     iptables -A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
     iptables -A INPUT -i lo -j ACCEPT
-    iptables -A INPUT -p tcp -j REJECT --reject-with tcp-reset
-    iptables -A INPUT -p udp -j REJECT --reject-with icmp-port-unreachable
-    iptables -A INPUT -j REJECT --reject-with icmp-proto-unreachable
+    iptables -A INPUT -p tcp -j logdrop #--reject-with tcp-reset
+    iptables -A INPUT -p udp -j logdrop #--reject-with icmp-port-unreachable
+    iptables -A INPUT -j logdrop #--reject-with icmp-proto-unreachable
+
 fi
 
 if [ -f "$FILE_IN" ]; then
     for IP in $(cut -d\n -f1 $FILE_IN); do
-        if [ -n "$LOG" ] ; then
-            iptables -I INPUT -s $IP -j LOG --log-prefix "IPTables-INPUT-Dropped: " --log-level 4
-            iptables -I OUTPUT -d $IP -j LOG --log-prefix "IPTables-OUTPUT-Dropped: " --log-level 4
-        fi
-        if [ -n "$DROP" ] ; then
-            iptables -I INPUT -s $IP -j DROP -m comment --comment "banned IP going in"
-            iptables -I OUTPUT -d $IP -j DROP -m comment --comment "banned IP going out"
+        #ignore les lignes contenant #
+        if [ -z "$(echo "$IP" | grep -E '#')" ]; then
+            if [ -n "$LOG" -a -n "$DROP" ] ; then
+                iptables -I INPUT -s $IP -j logdrop
+                iptables -I OUTPUT -d $IP -j logdrop
+                continue
+            fi
+            if [ -n "$LOG" ] ; then
+                iptables -I INPUT -s $IP -j LOG --log-prefix "IPTables-INPUT-Dropped: " #--log-level 4
+                iptables -I OUTPUT -d $IP -j LOG --log-prefix "IPTables-OUTPUT-Dropped: " #--log-level 4
+            fi
+            if [ -n "$DROP" ] ; then
+                iptables -A INPUT -s $IP -j DROP -m comment --comment "banned IP going in"
+                iptables -A OUTPUT -d $IP -j DROP -m comment --comment "banned IP going out"
+            fi
         fi
     done
 fi

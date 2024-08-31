@@ -63,7 +63,13 @@ sphynx () {
 basha () {
 	vim + ~/.bash_aliases
 	source ~/.bashrc
-	cp ~/.bash_aliases ~/machine/.bash_aliases
+	#cp ~/.bash_aliases ~/machine/.bash_aliases
+}
+
+brc () {
+	vim + ~/.bashrc
+	source ~/.bashrc
+	#cp ~/.bash_aliases ~/machine/.bash_aliases
 }
 
 machine_install () {
@@ -132,4 +138,15 @@ gitRoot () {
 
 aur () {
 	git clone https://aur.archlinux.org/$1.git
+}
+
+hist () {
+    HIST_FILE=~/.history
+    while read LINE; do
+        if [ -n "$(echo "$LINE" | grep '^#')" ]; then
+            date -d "$(echo $LINE | sed 's/\#/@/g')"
+        else
+            echo "$LINE"
+        fi
+    done < $HIST_FILE
 }
