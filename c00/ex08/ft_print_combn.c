@@ -6,10 +6,11 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/05 11:43:06 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/05 13:56:28 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
 #include <unistd.h>
 #include <stdio.h>
 
@@ -101,4 +102,4 @@ int	main(int argc, char **argv)
 	ft_print_combn(10);
 	return (0);
 }
-
+*/
