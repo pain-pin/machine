@@ -36,15 +36,15 @@ install_machine () {
 cexec () {
 	BASE="$1"
 	NAME="${BASE%.*}"
-	FLAGS="-Wall -Wextra -Werror"
-	gcc $BASE $FLAGS -o "$NAME" && ./"$NAME" && rm $NAME
+	FLAGS=('-Wall' '-Wextra' '-Werror')
+	cc ${FLAGS[@]} $BASE -o "$NAME" && ./"$NAME" && rm $NAME
 }
 
 cdebug () {
 	BASE="$1"
 	NAME="${BASE%.*}"
 	FLAGS="-g3"
-	gcc $BASE $FLAGS -o "$NAME" && gdb "$NAME" && rm $NAME
+	cc $BASE $FLAGS -o "$NAME" && gdb "$NAME" && rm $NAME
 }
 
 pipe () {
