@@ -6,12 +6,15 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/05 16:30:18 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/05 19:31:58 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
+#ifndef FT_SWAP
+# define FT_SWAP
+#endif
 
 void ft_swap(int *a, int *b)
 {
