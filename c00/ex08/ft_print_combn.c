@@ -6,14 +6,14 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/04 21:26:36 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/05 11:43:06 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
 
-int	have_n_char(long int num, int n)
+int	have_n_char(long long int num, int n)
 {
 	while(n--)
 	{
@@ -24,11 +24,11 @@ int	have_n_char(long int num, int n)
 	return (1);
 }
 
-int is_printable(long int num, int n)
+int is_printable(long long int num, int n)
 {
-	long int	last_digit;
+	long long int	last_digit;
 
-	if (!(have_n_char(num, n) || have_n_char(num, n - 1))
+	if (!(have_n_char(num, n) || have_n_char(num, n - 1)))
 		return (0);
 	last_digit = 10;
 	while (num)
@@ -41,7 +41,7 @@ int is_printable(long int num, int n)
 	return (1);
 }
 
-void ft_putlongnbr(long int nb)
+void ft_putlongnbr(long long int nb)
 {
 	char	c;
 	if (nb == 0)
@@ -55,28 +55,50 @@ void ft_putlongnbr(long int nb)
 	}
 }
 
+void	print_num(long long int nb, int n)
+{
+	if (have_n_char(nb, n - 1))
+	{
+		write(1, "0", 1);
+		n--;
+	}
+	ft_putlongnbr(nb);
+}
+
 void	ft_print_combn(int n)
 {
-	int	combn[n];
-	int	i;
+	long long int	max;
+	int				i;
+	int				m;
 
-	i = n;
-	while (i > 0)
+	m = n;
+	i = 1;
+	while (--m)
+		i *= 10;
+	max = i * 100;
+	while (++i < max)
 	{
-		i--;
+		if (is_printable(i, n))
+			print_num(i, n);
 	}
 }
 
 int	main(int argc, char **argv)
 {
-	//printf("%i\n", is_printable(123));
-	//printf("%i\n", is_printable(2123));
-	//printf("%i\n", is_printable(2123));
+	//printf("%i\n", is_printable(123, 3));
+	//printf("%i\n", is_printable(123, 4));
+	//printf("%i\n", is_printable(2123, 5));
+	//printf("%i\n", is_printable(2123, 4));
 	//
-	printf("%i\n", have_n_char(212, 4));
-	printf("%i\n", have_n_char(1212, 4));
-	printf("%i\n", have_n_char(10, 2));
-	printf("%i\n", have_n_char(0, 0));
+	//printf("%i\n", have_n_char(212, 4));
+	//printf("%i\n", have_n_char(1212, 4));
+	//printf("%i\n", have_n_char(10, 2));
+	//printf("%i\n", have_n_char(0, 0));
+	//
+	//ft_print_combn(0);
+	//ft_print_combn(1);
+	ft_print_combn(3);
+	ft_print_combn(10);
 	return (0);
 }
 
