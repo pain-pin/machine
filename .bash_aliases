@@ -36,7 +36,7 @@ install_machine () {
 cexec () {
 	BASE="$1"
 	NAME="${BASE%.*}"
-	#FLAGS="-lsqlite3"
+	FLAGS="-Wall -Wextra -Werror"
 	gcc $BASE $FLAGS -o "$NAME" && ./"$NAME" && rm $NAME
 }
 
