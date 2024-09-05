@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   template.c                                         :+:      :+:    :+:   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/04 20:12:43 by nidionis         ###   ########.fr       */
+/*   Created: 2024/09/04 12:22:22 by nidionis          #+#    #+#             */
+/*   Updated: 2024/09/04 16:19:35 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	main(int argc, char **argv)
+void	ft_is_negative(int n)
 {
-	return (0);
+	if (n < 0)
+	{
+		write(1, "N", 1);
+	}
+	else
+	{
+		write(1, "P", 1);
+	}
 }
+//int	main()
+//{
+//	ft_is_negative(-1);
+//	ft_is_negative(0);
+//	ft_is_negative(1);
+//}

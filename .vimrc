@@ -42,7 +42,7 @@ set shiftwidth=4
 set tabstop=4
 
 " Use space characters instead of tabs.
-set expandtab
+"set expandtab
 
 " Do not save backup files.
 "set nobackup
@@ -256,3 +256,15 @@ set laststatus=2
 autocmd BufNewFile readme.md 0r ~/.vim/templates/template.md
 autocmd BufNewFile *.sh 0r ~/.vim/templates/template.sh
 autocmd BufNewFile *.py 0r ~/.vim/templates/template.py
+autocmd BufNewFile *.c 0r ~/.vim/templates/template.c
+
+set mouse=a
+
+"https://stackoverflow.com/questions/21316727/automatic-closing-brackets-for-vim#34992101
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O

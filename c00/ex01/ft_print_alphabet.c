@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   template.c                                         :+:      :+:    :+:   */
+/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/04 20:12:43 by nidionis         ###   ########.fr       */
+/*   Created: 2024/09/04 12:30:06 by nidionis          #+#    #+#             */
+/*   Updated: 2024/09/04 12:30:47 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	main(int argc, char **argv)
+void	ft_print_alphabet(void)
 {
-	return (0);
+	char	i;
+
+	i = 'a';
+	while (i <= 'z')
+	{
+		write(1, &i, 1);
+		i++;
+	}
 }

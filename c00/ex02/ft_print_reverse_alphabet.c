@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   template.c                                         :+:      :+:    :+:   */
+/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/04 20:12:43 by nidionis         ###   ########.fr       */
+/*   Created: 2024/09/04 15:36:27 by nidionis          #+#    #+#             */
+/*   Updated: 2024/09/04 15:36:59 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	main(int argc, char **argv)
+void	ft_print_alphabet(void)
 {
-	return (0);
+	char	i;
+
+	i = 'z';
+	while (i >= 'a')
+	{
+		write(1, &i, 1);
+		i--;
+	}
 }

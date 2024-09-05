@@ -36,8 +36,15 @@ install_machine () {
 cexec () {
 	BASE="$1"
 	NAME="${BASE%.*}"
-	FLAGS="-lsqlite3"
-	gcc $BASE $FLAGS -o "$NAME" && ./"$NAME"
+	#FLAGS="-lsqlite3"
+	gcc $BASE $FLAGS -o "$NAME" && ./"$NAME" && rm $NAME
+}
+
+cdebug () {
+	BASE="$1"
+	NAME="${BASE%.*}"
+	FLAGS="-g3"
+	gcc $BASE $FLAGS -o "$NAME" && gdb "$NAME" && rm $NAME
 }
 
 pipe () {
@@ -149,4 +156,13 @@ hist () {
             echo "$LINE"
         fi
     done < $HIST_FILE
+}
+
+test_funct () {
+	awk '/^[a-z]+\tft_.*\)$/ { print "\nint main(int argc, char **argv)\n{\n\t"$2");\n}"}' $1 >> $1
+	vim + $1
+	gcc $1 -o test_funct && ./test_funct && rm test_funct
+	awk 'BEGIN {A=1000} { if ($0 ~ /.*main.*/) A=NR ; if (NR < A) print $0}' $1 > /tmp/test_f.tmp
+	cat /tmp/test_f.tmp > $1
+	rm /tmp/test_f.tmp
 }
