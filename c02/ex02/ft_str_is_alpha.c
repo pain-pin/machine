@@ -1,25 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/04 15:36:27 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/06 11:37:05 by nidionis         ###   ########.fr       */
+/*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
+/*   Updated: 2024/09/08 12:41:54 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
-void	ft_print_reverse_alphabet(void)
+int char_is_alpha(char c)
 {
-	char	i;
-
-	i = 'z';
-	while (i >= 'a')
-	{
-		write(1, &i, 1);
-		i--;
-	}
+	if (c >= 'a' && c <= 'z')
+		return (1);
+	if (c >= 'A' && c <= 'Z')
+		return (1);
+	return (0);
 }
+
+int	ft_str_is_alpha(char *str)
+{
+	int	is_alpha = 1;
+	while (*str && is_alpha)
+	{
+		if (!char_is_alpha(*str))
+			is_alpha = 0;
+	}
+	return is_alpha;
+}
+/*
+int	main(int argc, char **argv)
+{
+	return (0);
+}
+*/

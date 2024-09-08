@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/05 13:55:27 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/06 11:54:31 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,12 @@ void	ft_putnbr(int nb)
 	else if (nb < 0)
 	{
 		write(1, "-", 1);
-		if (nb == -147483648)
-			write(1, "147483648", 9);
+		if (nb == -2147483648)
+			write(1, "2147483648", 9);
 		else
 			ft_putnbr(-1 * nb);
 	}
-	else if (nb > 0)
+	else
 	{
 		if (nb / 10)
 			ft_putnbr(nb / 10);
@@ -34,15 +34,24 @@ void	ft_putnbr(int nb)
 		write(1, &c, 1);
 	}
 }
-//
-//int	main(void)
-//{
-//	ft_putnbr(103);
-//	write(1, "\n", 1);
-//	ft_putnbr(0);
-//	write(1, "\n", 1);
-//	ft_putnbr(-147483648);
-//	write(1, "\n", 1);
-//	ft_putnbr(147483647);
-//	write(1, "\n", 1);
-//}
+/*
+int	main(void)
+{
+	ft_putnbr(103);
+	write(1, "\n", 1);
+	ft_putnbr(0);
+	write(1, "\n", 1);
+	ft_putnbr(-147483648);
+	write(1, "\n", 1);
+	ft_putnbr(147483647);
+	write(1, "\n", 1);
+	ft_putnbr(10000);
+	write(1, "\n", 1);
+	ft_putnbr(-10);
+	write(1, "\n", 1);
+	ft_putnbr(-2147483648);
+	write(1, "\n", 1);
+	ft_putnbr(2147483647);
+	write(1, "\n", 1);
+}
+*/
