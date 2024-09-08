@@ -1,42 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/08 14:31:08 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/08 14:34:19 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
-int	char_is_alpha(char c)
+char	*ft_strupcase(char *str)
 {
-	if (c >= 'a' && c <= 'z')
-		return (1);
-	if (c >= 'A' && c <= 'Z')
-		return (1);
-	return (0);
-}
+	char	*strcpy;
 
-int	ft_str_is_alpha(char *str)
-{
-	int	is_alpha;
-
-	is_alpha = 1;
-	while (*str && is_alpha)
+	strcpy = str;
+	while (*str)
 	{
-		if (!char_is_alpha(*str))
-			is_alpha = 0;
+		if (*str <= 'z' && *str >= 'a')
+		{
+			*str -= 'a';
+			*str += 'A';
+		}
+		str++;
 	}
-	return (is_alpha);
+	return (strcpy);
 }
-/*
-int	main(int argc, char **argv)
-{
-	return (0);
-}
-*/

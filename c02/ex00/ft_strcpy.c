@@ -6,12 +6,11 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/07 18:01:26 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/08 14:29:27 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
 char	*ft_strcpy(char *dest, char *src)
 {
@@ -22,7 +21,7 @@ char	*ft_strcpy(char *dest, char *src)
 		*dest++ = *src++;
 	return (dest_cpy);
 }
-
+/*
 int	main(void)
 {
 	char	source[50] = "qwerty";
@@ -36,3 +35,4 @@ int	main(void)
 	printf("%s \n",ft_strcpy(dest, source));
 	return (0);
 }
+*/
