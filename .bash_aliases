@@ -34,7 +34,7 @@ install_machine () {
 }
 
 cexec () {
-	BASE="$1"
+	BASE=($@)
 	NAME="${BASE%.*}"
 	FLAGS=('-Wall' '-Wextra' '-Werror')
 	cc ${FLAGS[@]} $BASE -o "$NAME" && ./"$NAME" && rm $NAME
@@ -165,4 +165,8 @@ test_funct () {
 	awk 'BEGIN {A=1000} { if ($0 ~ /.*main.*/) A=NR ; if (NR < A) print $0}' $1 > /tmp/test_f.tmp
 	cat /tmp/test_f.tmp > $1
 	rm /tmp/test_f.tmp
+}
+
+normi () {
+	norminette -R CheckForbiddenSourceHeader $1
 }

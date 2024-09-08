@@ -1,25 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/04 15:36:27 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/06 11:37:05 by nidionis         ###   ########.fr       */
+/*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
+/*   Updated: 2024/09/07 18:01:26 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
-void	ft_print_reverse_alphabet(void)
+char	*ft_strcpy(char *dest, char *src)
 {
-	char	i;
+	char	*dest_cpy;
 
-	i = 'z';
-	while (i >= 'a')
-	{
-		write(1, &i, 1);
-		i--;
-	}
+	dest_cpy = dest;
+	while (*src)
+		*dest++ = *src++;
+	return (dest_cpy);
+}
+
+int	main(void)
+{
+	char	source[50] = "qwerty";
+	char	dest[50] = "lkjhgf";
+
+	//source = "Abcde";
+	//dest = "qwertytfyt";
+
+	printf("%s \n", source);
+	printf("%s \n", dest);
+	printf("%s \n",ft_strcpy(dest, source));
+	return (0);
 }
