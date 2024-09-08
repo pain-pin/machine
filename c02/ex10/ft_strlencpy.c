@@ -1,42 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_strlencpy.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/08 14:31:08 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/08 14:35:52 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
-int	char_is_alpha(char c)
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	if (c >= 'a' && c <= 'z')
-		return (1);
-	if (c >= 'A' && c <= 'Z')
-		return (1);
-	return (0);
-}
+	char	*cpy;
 
-int	ft_str_is_alpha(char *str)
-{
-	int	is_alpha;
-
-	is_alpha = 1;
-	while (*str && is_alpha)
-	{
-		if (!char_is_alpha(*str))
-			is_alpha = 0;
-	}
-	return (is_alpha);
+	cpy = dest;
+	while (size-- && *src)
+		*dest++ = *src++;
+	*dest = '\0';
+	return (cpy);
 }
-/*
-int	main(int argc, char **argv)
-{
-	return (0);
-}
-*/

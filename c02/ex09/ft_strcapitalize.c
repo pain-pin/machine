@@ -1,38 +1,58 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/08 14:31:08 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/08 14:35:29 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
-int	char_is_alpha(char c)
+int	is_alphanum(char c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (1);
 	if (c >= 'A' && c <= 'Z')
 		return (1);
+	if (c >= '0' && c <= '9')
+		return (1);
 	return (0);
 }
 
-int	ft_str_is_alpha(char *str)
+int	char_is_low(char c)
 {
-	int	is_alpha;
+	if (c >= 'a' && c <= 'z')
+		return (1);
+	return (0);
+}
 
-	is_alpha = 1;
-	while (*str && is_alpha)
+void	capitlise(char *str)
+{
+	if (char_is_low(*str))
 	{
-		if (!char_is_alpha(*str))
-			is_alpha = 0;
+		*str -= 'a';
+		*str += 'A';
 	}
-	return (is_alpha);
+}
+
+char	*ft_strcapitalize(char *str)
+{
+	char	*strcpy;
+
+	strcpy = str;
+	if (str == strcpy)
+		capitlise(*str++);
+	while (*str)
+	{
+		if (!is_alphanum(*(str - 1)))
+			capitlise(*str);
+		str++;
+	}
+	return (strcpy);
 }
 /*
 int	main(int argc, char **argv)
