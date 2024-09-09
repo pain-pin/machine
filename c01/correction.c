@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/05 20:45:10 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/09 17:37:30 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,10 @@
 #include "./ex04/ft_ultimate_div_mod.c"
 #include "./ex05/ft_putstr.c"
 #include "./ex06/ft_strlen.c"
+/*
 #include "./ex07/ft_rev_int_tab.c"
 #include "./ex08/ft_sort_int_tab.c"
+*/
 
 void	print_int_tab(int *tab, int size)
 {
@@ -41,7 +43,7 @@ int	main(int argc, char **argv)
 	int	j = 999;
 	int div;
 	int mod;
-	int	tab[10] ={5, 1, 8, 2, 0, 9, 9, 3, -1, -99};
+//	int	tab[10] ={5, 1, 8, 2, 0, 9, 9, 3, -1, -99};
 
 	ft_ft(&i);
 	if (i == 42)
@@ -87,6 +89,7 @@ int	main(int argc, char **argv)
 	ft_putstr("");
 	printf("-----------------------------------\n");
 	printf("[ex05] strlen('hello') = %i, strlen("")=%i\n", ft_strlen("hello"), ft_strlen(""));
+	/*
 	printf("-----------------------------------\n");
 	printf("[ex06] tableau initial:\n");
 	print_int_tab(tab, 10);
@@ -98,8 +101,15 @@ int	main(int argc, char **argv)
 	print_int_tab(tab, 10);
 	printf("[ex07] avec ft_rev_int_tab:\n");
 	ft_sort_int_tab(tab, 10);
-	print_int_tab(tab, 10);
 
+	int size = 3;
+	print_int_tab(tab, size);
+	tab = {2, 1, 3};
+	print_int_tab(tab, size);
+	printf("[ex07] avec ft_rev_int_tab:\n");
+	ft_sort_int_tab(tab, size);
+	print_int_tab(tab, size);
+	*/
 	return (0);
 }
 

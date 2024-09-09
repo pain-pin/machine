@@ -6,26 +6,25 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/09 11:15:44 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/09 19:36:02 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#ifndef STRNCMP
-# define STRNCMP
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ske_strncmp(char *s1, char *s2, unsigned int n)
 {
+	if (!n)
+		return (0);
 	while (*s1 && n--)	
 	{
 		if (*s1 != *s2)
-			return (*s1 - s2);
+			return (*s1 - *s2);
 		s1++;
 		s2++;
 	}
-	return (*s1 - *s2);
+	return (0);
 }
-#endif
 
 int	slen(char *str)
 {
@@ -44,7 +43,7 @@ char	*ft_strstr(char *str, char *to_find)
 	len = slen(to_find);
 	while (*str)
 	{
-		if (ft_strncmp(str, to_find, len))
+		if (!ske_strncmp(str, to_find, len))
 			return (str);
 		str++;
 	}

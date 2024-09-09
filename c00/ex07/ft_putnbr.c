@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/06 11:54:31 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/08 13:21:32 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ void	ft_putnbr(int nb)
 	}
 }
 /*
+#include <limits.h>
+#include <stdio.h>
 int	main(void)
 {
 	ft_putnbr(103);
@@ -53,5 +55,7 @@ int	main(void)
 	write(1, "\n", 1);
 	ft_putnbr(2147483647);
 	write(1, "\n", 1);
+	//printf("int max = %i", INT_MAX);
+	//printf("int min = %i", INT_MIN);
 }
 */
