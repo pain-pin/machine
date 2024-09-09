@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/08 14:32:20 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/08 15:59:44 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_str_is_numeric(char *str)
 	is_num = 1;
 	while (*str && is_num)
 	{
-		if (!char_is_num(*str))
+		if (!char_is_num(*str++))
 			is_num = 0;
 	}
 	return (is_num);

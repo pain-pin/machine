@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/08 14:35:29 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/08 15:53:45 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	is_alphanum(char c)
 	return (0);
 }
 
-int	char_is_low(char c)
+int	c_is_low(char c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (1);
@@ -32,7 +32,7 @@ int	char_is_low(char c)
 
 void	capitlise(char *str)
 {
-	if (char_is_low(*str))
+	if (c_is_low(*str))
 	{
 		*str -= 'a';
 		*str += 'A';
@@ -45,11 +45,11 @@ char	*ft_strcapitalize(char *str)
 
 	strcpy = str;
 	if (str == strcpy)
-		capitlise(*str++);
+		capitlise(str++);
 	while (*str)
 	{
 		if (!is_alphanum(*(str - 1)))
-			capitlise(*str);
+			capitlise(str);
 		str++;
 	}
 	return (strcpy);

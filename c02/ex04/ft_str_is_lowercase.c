@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/08 14:32:58 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/08 15:58:58 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_str_is_lowercase(char *str)
 	is_lowercase = 1;
 	while (*str && is_lowercase)
 	{
-		if (!char_is_low(*str))
+		if (!char_is_low(*str++))
 			is_lowercase = 0;
 	}
 	return (is_lowercase);

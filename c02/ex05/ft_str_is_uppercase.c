@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/08 14:33:25 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/08 16:00:04 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_str_is_uppercase(char *str)
 	isup = 1;
 	while (*str && isup)
 	{
-		if (!char_is_up(*str))
+		if (!char_is_up(*str++))
 			isup = 0;
 	}
 	return (isup);
