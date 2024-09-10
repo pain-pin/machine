@@ -6,11 +6,12 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/10 09:27:18 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/10 09:24:28 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
 void	ft_putnbr(int nb)
 {
@@ -34,26 +35,9 @@ void	ft_putnbr(int nb)
 		write(1, &c, 1);
 	}
 }
-#include <limits.h>
-#include <stdio.h>
-int	main(void)
+/*
+int	main(int argc, char **argv)
 {
-	ft_putnbr(103);
-	write(1, "\n", 1);
-	ft_putnbr(0);
-	write(1, "\n", 1);
-	ft_putnbr(-147483648);
-	write(1, "\n", 1);
-	ft_putnbr(147483647);
-	write(1, "\n", 1);
-	ft_putnbr(10000);
-	write(1, "\n", 1);
-	ft_putnbr(-10);
-	write(1, "\n", 1);
-	ft_putnbr(-2147483648);
-	write(1, "\n", 1);
-	ft_putnbr(2147483647);
-	write(1, "\n", 1);
-	//printf("int max = %i", INT_MAX);
-	//printf("int min = %i", INT_MIN);
+	return (0);
 }
+*/

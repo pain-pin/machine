@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/09 19:13:04 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/10 09:53:42 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@
 #include "./ex02/ft_str_is_alpha.c"
 #include "./ex03/ft_str_is_numeric.c"
 #include "./ex04/ft_str_is_lowercase.c"
-#include "./ex05/ft_is_uppercase.c"
+#include "./ex05/ft_str_is_uppercase.c"
 #include "./ex06/ft_str_is_printable.c"
 #include "./ex07/ft_strupcase.c"
-#include "./ex08/ft_lowcase.c"
+#include "./ex08/ft_strlowcase.c"
 #include "./ex09/ft_strcapitalize.c"
-#include "./ex10/ft_strlencpy.c"
+#include "./ex10/ft_strlcpy.c"
 
 int	main(void)
 {
@@ -46,14 +46,14 @@ int	main(void)
 	printf("[ex01] var0 = %s\n", var0);
 	printf("[ex01] var1 = %s\n", var1);
 	ft_strncpy(var0, var1, i);
-	printf("[ex01] -- ft_strcpy , %i = --\n", i);
+	printf("[ex01] -- ft_strncpy , %i = --\n", i);
 	printf("[ex01] var0 = %s\n", var0);
 	printf("[ex01] var1 = %s\n", var1);
 	strcpy(var0 , "tatatatatatata");
 	strcpy(var1 , "cicicicicicici");
 	i = 2;
 	strncpy(var0, var1, i);
-	printf("[ex01] -- strcpy , %i = --\n", i);
+	printf("[ex01] -- strncpy , %i = --\n", i);
 	printf("[ex01] var0 = %s\n", var0);
 	printf("[ex01] var1 = %s\n", var1);
 	printf("\n");
@@ -64,14 +64,14 @@ int	main(void)
 	printf("[ex01] var0 = %s\n", var0);
 	printf("[ex01] var1 = %s\n", var1);
 	ft_strncpy(var0, var1, i);
-	printf("[ex01] -- ft_strcpy , %i = --\n", i);
+	printf("[ex01] -- ft_strncpy , %i = --\n", i);
 	printf("[ex01] var0 = %s\n", var0);
 	printf("[ex01] var1 = %s\n", var1);
 	strcpy(var0 , "");
 	strcpy(var1 , "cicicicicicici");
 	i = 2;
 	strncpy(var0, var1, i);
-	printf("[ex01] -- strcpy , %i = --\n", i);
+	printf("[ex01] -- strncpy , %i = --\n", i);
 	printf("[ex01] var0 = %s\n", var0);
 	printf("[ex01] var1 = %s\n", var1);
 	printf("\n");
@@ -82,14 +82,14 @@ int	main(void)
 	printf("[ex01] var0 = %s\n", var0);
 	printf("[ex01] var1 = %s\n", var1);
 	ft_strncpy(var0, var1, i);
-	printf("[ex01] -- ft_strcpy , %i = --\n", i);
+	printf("[ex01] -- ft_strncpy , %i = --\n", i);
 	printf("[ex01] var0 = %s\n", var0);
 	printf("[ex01] var1 = %s\n", var1);
 	strcpy(var0 , "tatatat");
 	strcpy(var1 , "");
 	i = 2;
 	strncpy(var0, var1, i);
-	printf("[ex01] -- strcpy , %i = --\n", i);
+	printf("[ex01] -- strncpy , %i = --\n", i);
 	printf("[ex01] var0 = %s\n", var0);
 	printf("[ex01] var1 = %s\n", var1);
 	printf("\n");
@@ -100,14 +100,14 @@ int	main(void)
 	printf("[ex01] var0 = %s\n", var0);
 	printf("[ex01] var1 = %s\n", var1);
 	ft_strncpy(var0, var1, i);
-	printf("[ex01] -- ft_strcpy , %i = --\n", i);
+	printf("[ex01] -- ft_strncpy , %i = --\n", i);
 	printf("[ex01] var0 = %s\n", var0);
 	printf("[ex01] var1 = %s\n", var1);
 	strcpy(var0 , "tatatat");
 	strcpy(var1 , "roro");
 	i = 0;
 	strncpy(var0, var1, i);
-	printf("[ex01] -- strcpy , %i = --\n", i);
+	printf("[ex01] -- strncpy , %i = --\n", i);
 	printf("[ex01] var0 = %s\n", var0);
 	printf("[ex01] var1 = %s\n", var1);
 	printf("\n");
