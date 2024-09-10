@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/10 13:23:04 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/10 18:59:51 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,11 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	int	i;
 
 	i = 0;
-	if (!n)
-		return (dest);
-	while (--n && src[i] && dest[i])
+	while (n-- != 0 && src[i])
 	{
 		dest[i] = src[i];
 		i++;
 	}
-	dest[i] = src[i];
+	dest[i] = '\0';
 	return (dest);
 }
