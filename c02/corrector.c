@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/10 13:14:41 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/10 15:15:45 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -183,16 +183,26 @@ int	main(void)
 	printf("[ex08] var0 = %s\n", var0);
 	printf("[ex08] strlowcase = %s\n", ft_strlowcase(var0));
 	printf("--------------------------------------\n");
+	printf("\n");
 	strcpy(var0 , "salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un");
 	printf("[ex09] var0 = %s\n", var0);
 	printf("[ex09] strcapitalize = %s\n", ft_strcapitalize(var0));
+	printf("\n");
+
+	strcpy(var0 , "saLut, commEnt tu vas ? 42mots quArante-deux; cinquante+et+un");
+	printf("[ex09] var0 = %s\n", var0);
+	printf("[ex09] strcapitalize = %s\n", ft_strcapitalize(var0));
+	printf("\n");
+
 	strcpy(var0 , "");
 	printf("[ex09] var0 = %s\n", var0);
 	printf("[ex09] strcapitalize = %s\n", ft_strcapitalize(var0));
+	printf("\n");
 	printf("--------------------------------------\n");
+	printf("\n");
 	strcpy(var0 , "tatatatatatata");
 	strcpy(var1 , "cicicicicicici");
-	i = 4444;
+	i = 4;
 	printf("[ex10] var0 = %s\n", var0);
 	printf("[ex10] var1 = %s\n", var1);
 	int n = ft_strlcpy(var0, var1, i);
