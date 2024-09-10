@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/09 18:12:18 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/10 13:08:23 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,22 @@ int	main(void)
 	printf("[ex00] str0 = %s, str1 = %s\n", str0, str1);
 	printf("[ex00] ft_strcmp returns %i\n", ft_strcmp(str0, str1));
 	printf("[ex00] strcmp returns %i\n", strcmp(str0, str1));
+
+	printf("\n");
+	strcpy(str0, "dalle");
+	strcpy(str1, "grang");
+	printf("[ex00] str0 = %s, str1 = %s\n", str0, str1);
+	printf("[ex00] ft_strcmp returns %i\n", ft_strcmp(str0, str1));
+	printf("[ex00] strcmp returns %i\n", strcmp(str0, str1));
+
 	printf("------------------------------------\n");
+	strcpy(str0, "abc");
+	strcpy(str1, "abd");
+	i = 0;
+	printf("[ex01] str0 = %s, str1 = %s, n = %i\n", str0, str1, i);
+	printf("[ex01] ft_strncmp returns %i\n", ft_strncmp(str0, str1, i));
+	printf("[ex01] strncmp returns %i\n", strncmp(str0, str1, i));
+	printf("\n");
 	strcpy(str0, "abc");
 	strcpy(str1, "abd");
 	i = 2;

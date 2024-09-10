@@ -6,13 +6,14 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/10 09:53:42 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/10 13:14:41 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
 #include <string.h>
+#include <bsd/bsd.h>
 
 #include "./ex00/ft_strcpy.c"
 #include "./ex01/ft_strncpy.c"
@@ -198,9 +199,9 @@ int	main(void)
 	printf("[ex10] -- ft_strlcpy , l = %i,  retour = %u--\n", i, n);
 	printf("[ex10] src = %s\n", var0);
 	printf("[ex10] dest = %s\n", var1);
-	//strcpy(var0 , "tatatatatatata");
-	//strcpy(var1 , "cicicicicicici");
-	//i = 4444;
+	strcpy(var0 , "tatatatatatata");
+	strcpy(var1 , "cicicicicicici");
+	i = 4444;
 	//n = strlcpy(var0, var1, i);
 	//printf("[ex10] -- strlcpy , l = %i,  retour = %u--\n", i, n);
 	//printf("[ex10] src = %s\n", var0);
@@ -208,25 +209,24 @@ int	main(void)
 
 
 
-	printf("--------------------------------------\n");
-	strcpy(var0 , "");
-	strcpy(var1 , "uvwyz");
-	i = 10;
-	printf("[ex10] var0 = %s\n", var0);
-	printf("[ex10] var1 = %s\n", var1);
-	n = ft_strlcpy(var0, var1, i);
-	printf("[ex10] -- ft_strlcpy , l = %i,  retour = %u--\n", i, n);
-	printf("[ex10] var0 = %s\n", var0);
-	printf("[ex10] var1 = %s\n", var1);
-	printf("--------------------------------------\n");
-	strcpy(var0 , "a");
-	strcpy(var1 , "uvwyz");
-	i = 100;
-	printf("[ex10] var0 = %s\n", var0);
-	printf("[ex10] var1 = %s\n", var1);
-	n = ft_strlcpy(var0, var1, i);
-	printf("[ex10] -- ft_strlcpy , l = %i,  retour = %u--\n", i, n);
-	printf("[ex10] var0 = %s\n", var0);
-	printf("[ex10] var1 = %s\n", var1);
+	//strcpy(var0 , "");
+	//strcpy(var1 , "uvwyz");
+	//i = 10;
+	//printf("[ex10] var0 = %s\n", var0);
+	//printf("[ex10] var1 = %s\n", var1);
+	//n = ft_strlcpy(var0, var1, i);
+	//printf("[ex10] -- ft_strlcpy , l = %i,  retour = %u--\n", i, n);
+	//printf("[ex10] var0 = %s\n", var0);
+	//printf("[ex10] var1 = %s\n", var1);
+	//
+	//strcpy(var0 , "a");
+	//strcpy(var1 , "uvwyz");
+	//i = 100;
+	//printf("[ex10] var0 = %s\n", var0);
+	//printf("[ex10] var1 = %s\n", var1);
+	//n = ft_strlcpy(var0, var1, i);
+	//printf("[ex10] -- ft_strlcpy , l = %i,  retour = %u--\n", i, n);
+	//printf("[ex10] var0 = %s\n", var0);
+	//printf("[ex10] var1 = %s\n", var1);
 }
 
