@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/08 15:53:45 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/10 13:19:18 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,15 @@ void	capitlise(char *str)
 	}
 }
 
+void	putlow(char *str)
+{
+	if (*str <= 'Z' && *str >='A')
+	{
+		*str -= 'A';
+		*str += 'a';
+	}
+}
+
 char	*ft_strcapitalize(char *str)
 {
 	char	*strcpy;
@@ -50,6 +59,8 @@ char	*ft_strcapitalize(char *str)
 	{
 		if (!is_alphanum(*(str - 1)))
 			capitlise(str);
+		else
+			putlow(str);
 		str++;
 	}
 	return (strcpy);

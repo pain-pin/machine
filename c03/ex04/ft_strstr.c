@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/09 19:36:02 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/10 10:55:13 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ske_strncmp(char *s1, char *s2, unsigned int n)
 {
 	if (!n)
 		return (0);
-	while (*s1 && n--)	
+	while (*s1 && n--)
 	{
 		if (*s1 != *s2)
 			return (*s1 - *s2);

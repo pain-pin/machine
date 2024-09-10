@@ -6,14 +6,14 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/10 10:50:16 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/10 14:04:47 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
 
-int	baselen(char *base)
+int	abaselen(char *base)
 {
 	int	i;
 
@@ -23,14 +23,14 @@ int	baselen(char *base)
 	return (i);
 }
 
-int	check_base(char *base)
+int	acheck_base(char *base)
 {
 	char	*base_cpy;
 	int		i;
 
 	base_cpy = base;
-	if (baselen(base) < 2)
-		return (0)
+	if (abaselen(base) < 2)
+		return (0);
 	while (*base)	
 	{
 		if (*base == '+' || *base == '-')
@@ -56,7 +56,7 @@ int	is_base_num(char c, char *base)
 }
 
 /* if sign == 0 if it's not a num */
-char	*prefix(char *str, int *sign, char *base)
+char	*cprefix(char *str, int *sign, char *base)
 {
 	*sign = 1;
 	while (*str == ' ' || *str == '+' || *str == '-')
@@ -90,9 +90,9 @@ int ft_atoi_base(char *str, char *base)
 	int	nbr;
 	int	nbase;
 
-	nbase = baselen(base);
-	str = prefix(str, &sign, base);
-	if (!sign || !check_base(base))
+	nbase = abaselen(base);
+	str = cprefix(str, &sign, base);
+	if (!sign || !acheck_base(base))
 		return (0);
 	nbr = 0;
 	while (is_base_num(*str, base))
