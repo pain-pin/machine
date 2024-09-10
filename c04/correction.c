@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/10 14:23:59 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/10 19:27:47 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,36 +61,28 @@ int	main()
 	printf("\n");
 	nb = 42;
 	printf("[ex04] ft_putnbr_base(%i, %s) return: ", nb, base);
-	wait(10);
 	ft_putnbr_base(nb, base);
-	wait(10);
 	printf("\n");
 
 	printf("\n");
 	strcpy(base ,"qwerty");
 	nb = -42;
 	printf("[ex04] ft_putnbr_base(%i, %s) return: ", nb, base);
-	wait(10);
 	ft_putnbr_base(nb, base);
-	wait(10);
 	printf("\n");
 
 	printf("\n");
 	strcpy(base ,"q");
 	nb = -42;
 	printf("[ex04] ft_putnbr_base(%i, %s) return: ", nb, base);
-	wait(10);
 	ft_putnbr_base(nb, base);
-	wait(10);
 	printf("\n");
 
 	printf("\n");
 	strcpy(base ,"01");
 	nb = 15;
 	printf("[ex03] ft_putnbr_base(%i, %s) return: ", nb, base);
-	wait(10);
 	ft_putnbr_base(nb, base);
-	wait(10);
 	printf("\n");
 
 	printf("-----------------------------------------------\n");

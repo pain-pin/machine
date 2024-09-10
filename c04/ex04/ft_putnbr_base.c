@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/10 14:19:02 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/10 19:23:32 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,12 +60,12 @@ void	ft_putnbr_base(int nb, char *base)
 		else if (nb < 0)
 		{
 			write(1, "-", 1);
-			ft_putnbr(-1 * nb);
+			ft_putnbr_base(-1 * nb, base);
 		}
 		else
 		{
 			if (nb / b)
-				ft_putnbr(nb / b);
+				ft_putnbr_base(nb / b, base);
 			c = base[nb % b];
 			write(1, &c, 1);
 		}
