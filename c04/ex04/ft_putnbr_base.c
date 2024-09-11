@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/10 19:23:32 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/11 16:22:26 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	check_base(char *base)
 	base_cpy = base;
 	if (baselen(base) < 2)
 		return (0);
-	while (*base)	
+	while (*base)
 	{
 		if (*base == '+' || *base == '-')
 			return (0);
@@ -47,7 +47,7 @@ int	check_base(char *base)
 	return (1);
 }
 
-void	ft_putnbr_base(int nb, char *base)
+void	ft_putnbr_base_long(int long nb, char *base)
 {
 	char	c;
 	int		b;
@@ -60,14 +60,19 @@ void	ft_putnbr_base(int nb, char *base)
 		else if (nb < 0)
 		{
 			write(1, "-", 1);
-			ft_putnbr_base(-1 * nb, base);
+			ft_putnbr_base_long(-1 * nb, base);
 		}
 		else
 		{
 			if (nb / b)
-				ft_putnbr_base(nb / b, base);
+				ft_putnbr_base_long(nb / b, base);
 			c = base[nb % b];
 			write(1, &c, 1);
 		}
 	}
+}
+
+void	ft_putnbr_base(int nb, char *base)
+{
+	ft_putnbr_base_long((long int)nb, base);
 }

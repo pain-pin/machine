@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/10 10:55:07 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/11 15:31:19 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,20 +20,25 @@
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	unsigned int	ret_val;
+	char			*src_cpy;
+	unsigned int	i;
 
 	ret_val = 0;
-	if (size)
-		return (0);
-	while (*dest++ && --size > 0)
+	src_cpy = src;
+	while (*dest)
+	{
+		ret_val++;
+		dest++;
+	}
+	i = ret_val;
+	while (*src_cpy++)
 		ret_val++;
 	if (size > 0)
 	{
-		while (*src && --size > 0)
-		{
+		while (*src && i++ < size - 1)
 			*dest++ = *src++;
-			ret_val++;
-		}
 	}
-	*dest = *src;
+	if (size)
+		*dest = '\0';
 	return (ret_val);
 }

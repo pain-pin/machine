@@ -6,32 +6,23 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/10 14:04:47 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/11 16:20:44 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
 
-int	abaselen(char *base)
+int	acheck_base(char *base)
 {
-	int	i;
+	int		i;
 
 	i = 0;
 	while (*base++)
 		i++;
-	return (i);
-}
-
-int	acheck_base(char *base)
-{
-	char	*base_cpy;
-	int		i;
-
-	base_cpy = base;
-	if (abaselen(base) < 2)
+	if (i < 2)
 		return (0);
-	while (*base)	
+	while (*base)
 	{
 		if (*base == '+' || *base == '-')
 			return (0);
@@ -73,7 +64,7 @@ char	*cprefix(char *str, int *sign, char *base)
 int	c_to_i(char c, char *base)
 {
 	int	n;
-	
+
 	n = 0;
 	while (*base)
 	{
@@ -84,13 +75,15 @@ int	c_to_i(char c, char *base)
 	return (-1);
 }
 
-int ft_atoi_base(char *str, char *base)
+int	ft_atoi_base(char *str, char *base)
 {
 	int	sign;
 	int	nbr;
 	int	nbase;
 
-	nbase = abaselen(base);
+	nbase = 0;
+	while (base[nbase])
+		nbase++;
 	str = cprefix(str, &sign, base);
 	if (!sign || !acheck_base(base))
 		return (0);
