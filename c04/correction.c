@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/11 16:23:45 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/11 17:18:56 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,6 +103,10 @@ int	main()
 	strcpy(base ,"0");
 	printf("\n");
 	printf("[ex05] ft_atoi_base(\"5\", %s) return: %i\n", base, ft_atoi_base("5", base));
+	printf("\n");
+	printf("\n");
+	strcpy(base ,"01");
+	printf("[ex05] ft_atoi_base(\"-10000000000000000000000000000000\", %s) return: %i\n", base, ft_atoi_base("-10000000000000000000000000000000", base));
 	printf("\n");
 }
 
