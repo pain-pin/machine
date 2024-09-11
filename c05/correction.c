@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/11 16:44:54 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/11 17:33:35 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 #include "ex02/ft_iterative_power.c"
 #include "ex03/ft_recursive_power.c"
 #include "ex04/ft_fibonacci.c"
-//#include "ex05/ft_sqrt.c"
-//#include "ex06/ft_is_prime.c"
-//#include "ex07/ft_find_next_prime.c"
+#include "ex05/ft_sqrt.c"
+#include "ex06/ft_is_prime.c"
+#include "ex07/ft_find_next_prime.c"
 int	main()
 {
 	int i;
@@ -123,6 +123,94 @@ int	main()
 
 	i = 1;
 	printf("ft_fibonacci(%i) = %i\n", i, ft_fibonacci(i));
+	printf("\n");
+
+	printf("-----------------------------------------------------------\n");
+	printf("\n");
+
+	i = 0;
+	printf("ft_sqrt(%i) = %i\n", i, ft_sqrt(i));
+	printf("\n");
+
+	i = -1;
+	printf("ft_sqrt(%i) = %i\n", i, ft_sqrt(i));
+	printf("\n");
+
+	i = 10;
+	printf("ft_sqrt(%i) = %i\n", i, ft_sqrt(i));
+	printf("\n");
+
+	i = 4;
+	printf("ft_sqrt(%i) = %i\n", i, ft_sqrt(i));
+	printf("\n");
+
+	printf("-----------------------------------------------------------\n");
+	printf("\n");
+
+	i = 0;
+	printf("ft_is_prime(%i) = %i\n", i, ft_is_prime(i));
+	printf("\n");
+
+	i = -1;
+	printf("ft_is_prime(%i) = %i\n", i, ft_is_prime(i));
+	printf("\n");
+
+	i = 10;
+	printf("ft_is_prime(%i) = %i\n", i, ft_is_prime(i));
+	printf("\n");
+
+	i = 1;
+	printf("ft_is_prime(%i) = %i\n", i, ft_is_prime(i));
+	printf("\n");
+
+	i = 2;
+	printf("ft_is_prime(%i) = %i\n", i, ft_is_prime(i));
+	printf("\n");
+
+	i = 3;
+	printf("ft_is_prime(%i) = %i\n", i, ft_is_prime(i));
+	printf("\n");
+
+	i = 4;
+	printf("ft_is_prime(%i) = %i\n", i, ft_is_prime(i));
+	printf("\n");
+
+	i = 7;
+	printf("ft_is_prime(%i) = %i\n", i, ft_is_prime(i));
+	printf("\n");
+
+	printf("-----------------------------------------------------------\n");
+
+	i = 0;
+	printf("ft_find_next_prime(%i) = %i\n", i, ft_find_next_prime(i));
+	printf("\n");
+
+	i = -1;
+	printf("ft_find_next_prime(%i) = %i\n", i, ft_find_next_prime(i));
+	printf("\n");
+
+	i = 10;
+	printf("ft_find_next_prime(%i) = %i\n", i, ft_find_next_prime(i));
+	printf("\n");
+
+	i = 1;
+	printf("ft_find_next_prime(%i) = %i\n", i, ft_find_next_prime(i));
+	printf("\n");
+
+	i = 2;
+	printf("ft_find_next_prime(%i) = %i\n", i, ft_find_next_prime(i));
+	printf("\n");
+
+	i = 3;
+	printf("ft_find_next_prime(%i) = %i\n", i, ft_find_next_prime(i));
+	printf("\n");
+
+	i = 4;
+	printf("ft_find_next_prime(%i) = %i\n", i, ft_find_next_prime(i));
+	printf("\n");
+
+	i = 7;
+	printf("ft_find_next_prime(%i) = %i\n", i, ft_find_next_prime(i));
 	printf("\n");
 
 
