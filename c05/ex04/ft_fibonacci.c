@@ -6,15 +6,17 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/11 13:18:55 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/11 17:36:41 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
 
-int ft_fibonacci(int index)
+int	ft_fibonacci(int index)
 {
+	if (index < 0)
+		return (-1);
 	if (!index)
 		return (0);
 	if (index == 1)
