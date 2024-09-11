@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/10 13:59:44 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/11 16:19:58 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*prefix(char *str, int *sign)
 	return (str);
 }
 
-int ft_atoi(char *str)
+int	ft_atoi(char *str)
 {
 	int	sign;
 	int	nbr;

@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/10 19:54:45 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/11 13:18:55 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int ft_fibonacci(int index)
 		return (0);
 	if (index == 1)
 		return (1);
-	return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2))
+	return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
 }
 /*
 int	main(int argc, char **argv)

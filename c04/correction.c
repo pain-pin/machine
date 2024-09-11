@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/10 19:27:47 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/11 16:23:45 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,13 @@ int	main()
 	printf("\n");
 	strcpy(base ,"01");
 	nb = 15;
+	printf("[ex03] ft_putnbr_base(%i, %s) return: ", nb, base);
+	ft_putnbr_base(nb, base);
+	printf("\n");
+
+	printf("\n");
+	strcpy(base ,"01");
+	nb = -2147483648;
 	printf("[ex03] ft_putnbr_base(%i, %s) return: ", nb, base);
 	ft_putnbr_base(nb, base);
 	printf("\n");

@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/10 15:15:45 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/11 13:45:14 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -216,7 +216,6 @@ int	main(void)
 	//printf("[ex10] -- strlcpy , l = %i,  retour = %u--\n", i, n);
 	//printf("[ex10] src = %s\n", var0);
 	//printf("[ex10] dest = %s\n", var1);
-
 
 
 	//strcpy(var0 , "");

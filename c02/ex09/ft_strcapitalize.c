@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/10 13:19:18 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/11 12:58:37 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	capitlise(char *str)
 
 void	putlow(char *str)
 {
-	if (*str <= 'Z' && *str >='A')
+	if (*str <= 'Z' && *str >= 'A')
 	{
 		*str -= 'A';
 		*str += 'a';
