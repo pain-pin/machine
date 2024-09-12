@@ -168,5 +168,5 @@ test_funct () {
 }
 
 normi () {
-	norminette -R CheckForbiddenSourceHeader $1
+	norminette -R CheckForbiddenSourceHeader -R CheckDefine $1
 }
