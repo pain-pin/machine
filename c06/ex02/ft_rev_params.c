@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_rev_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/11 17:41:04 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/12 10:52:16 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+int	main(int argc, char **argv)
 {
-	unsigned int	i;
+	char	*param_addr;
+	int		nb_params;
 
-	i = 0;
-	while (i < n && src[i])
+	(void)argc;
+	nb_params = 0;
+	argv++;
+	while (argv[nb_params])
+		nb_params++;
+	while (nb_params--)
 	{
-		dest[i] = src[i];
-		i++;
+		param_addr = argv[nb_params];
+		while (*param_addr)
+			write(1, param_addr++, 1);
+		write(1, "\n", 1);
 	}
-	while (i < n)
-		dest[i++] = '\0';
-	return (dest);
+	return (0);
 }
