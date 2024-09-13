@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/11 15:00:31 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/13 11:11:06 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -239,3 +239,24 @@ int	main(void)
 	return (0);
 }
 
+/*
+#include <bsd/bsd.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <string.h>
+int main (int argc, char **argv) {
+	//char src[100];
+	char dest[100];
+	int size = 1;
+	int ret;
+
+	(void)argc;
+	//src = argv[2];
+	strcpy(dest, argv[1]);
+	ret = strlcat(dest, argv[2],size);
+	printf("strlcat returns %i, dest = %s\n", ret, dest);
+	strcpy(dest, argv[1]);
+	ret = ft_strlcat(dest,argv[2], size);
+	printf("ft_strlcat returns %i, dest = %s\n", ret, dest);
+}
+*/
