@@ -6,12 +6,12 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/12 11:09:48 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/16 13:14:08 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
+#include <stdlib.h>
 
 int	ft_ultimate_range(int **range, int min, int max)
 {
@@ -22,10 +22,10 @@ int	ft_ultimate_range(int **range, int min, int max)
 		*range = NULL;
 		return (0);
 	}
-	*tab = malloc(sizeof(int) * (max - min));
+	*range = malloc(sizeof(int) * (max - min));
 	i = 0;
 	while (min < max)
-		*tab[i++] = min++;
+		(*range)[i++] = min++;
 	return (i);
 }
 /*
