@@ -6,12 +6,12 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/12 15:06:16 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/16 11:43:26 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
+#include <stdlib.h>
 
 char	*ft_strdup(char *src)
 {
@@ -30,7 +30,7 @@ char	*ft_strdup(char *src)
 		dup[i] = src[i];
 		i++;
 	}
-	dup[i] = '0';
+	dup[i] = '\0';
 	return (dup);
 }
 /*

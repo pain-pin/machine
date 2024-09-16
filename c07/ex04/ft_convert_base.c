@@ -6,13 +6,14 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/12 13:04:16 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/16 11:42:07 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdio.h>
+#include "ft_convert_base2.c"
 
 int	baselen(char *base)
 {

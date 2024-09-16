@@ -170,3 +170,7 @@ test_funct () {
 normi () {
 	norminette -R CheckForbiddenSourceHeader -R CheckDefine $1
 }
+
+ctagss () {
+	ctags -R --c-kinds=+p --fields=+S $@
+}
