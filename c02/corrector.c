@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/11 18:31:38 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/16 12:18:48 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@
 #include "./ex06/ft_str_is_printable.c"
 #include "./ex07/ft_strupcase.c"
 #include "./ex08/ft_strlowcase.c"
-#include "./ex09/ft_strcapitalize.c"
-#include "./ex10/ft_strlcpy.c"
+//#include "./ex09/ft_strcapitalize.c"
+//#include "./ex10/ft_strlcpy.c"
 
 int	main(void)
 {
@@ -182,6 +182,7 @@ int	main(void)
 	strcpy(var0 , "E49-y");
 	printf("[ex08] var0 = %s\n", var0);
 	printf("[ex08] strlowcase = %s\n", ft_strlowcase(var0));
+	/*
 	printf("--------------------------------------\n");
 	printf("\n");
 	strcpy(var0 , "salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un");
@@ -212,6 +213,7 @@ int	main(void)
 	strcpy(var0 , "tatatatatatata");
 	strcpy(var1 , "cicicicicicici");
 	i = 4444;
+	*/
 	//n = strlcpy(var0, var1, i);
 	//printf("[ex10] -- strlcpy , l = %i,  retour = %u--\n", i, n);
 	//printf("[ex10] src = %s\n", var0);

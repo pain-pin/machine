@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/11 16:19:58 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/16 16:59:18 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,9 @@ int	ft_atoi(char *str)
 		nbr *= 10;
 		nbr += *str++ - '0';
 	}
-	return (nbr);
+	if (nbr == INT_MIN)
+		return (INT_MIN);
+	return (nbr * sign);
 }
 /*
 int	main(int argc, char **argv)

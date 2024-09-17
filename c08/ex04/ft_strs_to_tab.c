@@ -6,34 +6,13 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/12 19:57:48 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/17 15:24:46 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
-//#include "ft_stock_str.h"
-typedef struct s_stock_str
-{
-	int size;
-	char *str;
-	char *copy;
-}	t_stock_str;
-/*
-int	tab_len(char **tab)
-{
-	int	i;
-
-	i = 0;
-	if (tab)
-	{
-		while (*tab++)
-			i++;
-	}
-	return (i);
-}
-*/
 
 char	*ft_strdup(char *src)
 {
@@ -52,7 +31,7 @@ char	*ft_strdup(char *src)
 		dup[i] = src[i];
 		i++;
 	}
-	dup[i] = '0';
+	dup[i] = '\0';
 	return (dup);
 }
 
@@ -88,7 +67,7 @@ void	str_to_stock(char *str, struct s_stock_str *ret_i)
 	ret_i->copy = ft_strdup(str);
 }
 
-struct s_stock_str *ft_strs_to_tab(int ac, char **av)
+struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 {
 	struct s_stock_str	*ret;
 	int					i;
@@ -110,7 +89,7 @@ struct s_stock_str *ft_strs_to_tab(int ac, char **av)
 	str_to_stock(ft_strdup(""), &(ret[i]));
 	return (ret);
 }
-
+/*
 int	tab_len(struct s_stock_str *tab)
 {
 	int	i;
@@ -118,7 +97,7 @@ int	tab_len(struct s_stock_str *tab)
 	i = 0;
 	if (tab)
 	{
-		while (*(tab->str) != '\0')
+		while (*(tab->str) != 0)
 		{
 			tab++;
 			i++;
@@ -126,22 +105,23 @@ int	tab_len(struct s_stock_str *tab)
 	}
 	return (i);
 }
-
 void print_stock(struct s_stock_str *stock)
 {
 	int i = 0;
 
 	while (i < tab_len(stock))
 	{
-		printf("[%i] str = %s, str_cpy = %s\n", i, stock->str, stock->copy);
+		printf("[%i] str = %s, str_cpy = %s\n", i, stock[i].str, stock[i].copy);
 		i++;
 	}
 }
+
 int	main(int argc, char **argv)
 {
-	(void)argc;
-	(void)argv;
-	print_stock(ft_strs_to_tab(argc, argv));
+	(void)argc--;
+	(void)argv++;
+	struct s_stock_str	*ret = ft_strs_to_tab(argc, argv);
+	print_stock(ret);
 	return (0);
 }
-
+*/

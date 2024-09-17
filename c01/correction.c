@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/09 17:37:30 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/16 18:06:29 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,12 +88,12 @@ int	main(int argc, char **argv)
 	ft_putstr("[ex05 ]bonjour, ft_putstr fonctionne ?\n");
 	ft_putstr("");
 	printf("-----------------------------------\n");
-	printf("[ex05] strlen('hello') = %i, strlen("")=%i\n", ft_strlen("hello"), ft_strlen(""));
+	printf("[ex06] strlen('hello') = %i, strlen("")=%i\n", ft_strlen("hello"), ft_strlen(""));
 	/*
 	printf("-----------------------------------\n");
-	printf("[ex06] tableau initial:\n");
+	printf("[ex07] tableau initial:\n");
 	print_int_tab(tab, 10);
-	printf("[ex06] avec ft_rev_int_tab:\n");
+	printf("[ex07] avec ft_rev_int_tab:\n");
 	ft_rev_int_tab(tab, 10);
 	print_int_tab(tab, 10);
 	printf("-----------------------------------\n");

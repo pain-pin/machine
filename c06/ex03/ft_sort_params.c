@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/12 10:53:43 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/16 17:05:28 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,5 +76,7 @@ int	main(int argc, char **argv)
 		write(1, "\n", 1);
 		argv++;
 	}
+	if (!nb_params)
+		write(1, "\n", 1);
 	return (0);
 }
