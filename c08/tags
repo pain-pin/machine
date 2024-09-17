@@ -1,0 +1,36 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/nidionis/machine/c08/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+ABS	ex02/ft_abs.h	/^# define ABS(/;"	d
+EVEN	ex01/ft_boolean.h	/^# define EVEN(/;"	d
+EVEN_MSG	ex01/ft_boolean.h	/^# define EVEN_MSG /;"	d
+FALSE	ex01/ft_boolean.h	/^# define FALSE /;"	d
+FT_ABS_H	ex02/ft_abs.h	/^# define FT_ABS_H$/;"	d
+FT_BOOLEAN_H	ex01/ft_boolean.h	/^# define FT_BOOLEAN_H$/;"	d
+FT_H	ex00/ft.h	/^# define FT_H$/;"	d
+FT_POINT_H	ex03/ft_point.h	/^# define FT_POINT_H$/;"	d
+ODD_MSG	ex01/ft_boolean.h	/^# define ODD_MSG /;"	d
+SUCCESS	ex01/ft_boolean.h	/^# define SUCCESS /;"	d
+TRUE	ex01/ft_boolean.h	/^# define TRUE /;"	d
+clean	ex04/ft_strs_to_tab.c	/^void	clean(struct s_stock_str **ret)$/;"	f	typeref:typename:void
+durtitoa	ex05/ft_show_tab.c	/^void	durtitoa(int nb, char (*str)[])$/;"	f	typeref:typename:void
+ft_strdup	ex04/ft_strs_to_tab.c	/^char	*ft_strdup(char *src)$/;"	f	typeref:typename:char *
+ft_strs_to_tab	ex04/ft_strs_to_tab.c	/^struct s_stock_str *ft_strs_to_tab(int ac, char **av)$/;"	f	typeref:struct:s_stock_str *
+my_print	ex05/ft_show_tab.c	/^void	my_print(char *str)$/;"	f	typeref:typename:void
+print_stock	ex05/ft_show_tab.c	/^void print_stock(struct s_stock_str *stock)$/;"	f	typeref:typename:void
+s_point	ex03/ft_point.h	/^typedef struct s_point$/;"	s
+sstr_len	ex05/ft_show_tab.c	/^int	sstr_len(char *str)$/;"	f	typeref:typename:int
+str_to_stock	ex04/ft_strs_to_tab.c	/^void	str_to_stock(char *str, struct s_stock_str *ret_i)$/;"	f	typeref:typename:void
+t_bool	ex01/ft_boolean.h	/^typedef int	t_bool;$/;"	t	typeref:typename:int
+t_point	ex03/ft_point.h	/^}	t_point;$/;"	t	typeref:struct:s_point
+ttab_len	ex05/ft_show_tab.c	/^int	ttab_len(struct s_stock_str *tab)$/;"	f	typeref:typename:int
+x	ex03/ft_point.h	/^	int	x;$/;"	m	struct:s_point	typeref:typename:int
+y	ex03/ft_point.h	/^	int	y;$/;"	m	struct:s_point	typeref:typename:int

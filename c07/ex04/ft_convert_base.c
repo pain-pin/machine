@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/16 11:42:07 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/17 11:56:18 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ char	*ft_strcat(char *dest, char *src)
 	return (dest_cpy);
 }
 
-void	ft_putnbr_base_long(int long nb, char *base, char **result)
+void	itoa_base(int long nb, char *base, char **result)
 {
 	char	c;
 	int		b;
@@ -73,12 +73,12 @@ void	ft_putnbr_base_long(int long nb, char *base, char **result)
 		else if (nb < 0)
 		{
 			ft_strcat(*result, "-");
-			ft_putnbr_base_long(-1 * nb, base, result);
+			itoa_base(-1 * nb, base, result);
 		}
 		else
 		{
 			if (nb / b)
-				ft_putnbr_base_long(nb / b, base, result);
+				itoa_base(nb / b, base, result);
 			c = base[nb % b];
 			ft_strcat(*result, &c);
 		}
@@ -92,9 +92,9 @@ char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 
 	if (check_base(base_from) && check_base(base_to))
 	{
-		result = malloc(999999999);
+		result = malloc(10000000000);
 		i_nbr = ft_atoi_base(nbr, base_from);
-		ft_putnbr_base_long(i_nbr, base_to, &result);
+		itoa_base(i_nbr, base_to, &result);
 	}
 	else
 		result = NULL;

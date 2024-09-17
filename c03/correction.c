@@ -6,13 +6,14 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/13 11:11:06 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/16 18:01:32 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
 #include <string.h>
+#include <bsd/bsd.h>
 #include "./ex00/ft_strcmp.c"
 #include "./ex01/ft_strncmp.c"
 #include "./ex02/ft_strcat.c"
@@ -45,6 +46,20 @@ int	main(void)
 	printf("\n");
 	strcpy(str0, "dalle");
 	strcpy(str1, "grang");
+	printf("[ex00] str0 = %s, str1 = %s\n", str0, str1);
+	printf("[ex00] ft_strcmp returns %i\n", ft_strcmp(str0, str1));
+	printf("[ex00] strcmp returns %i\n", strcmp(str0, str1));
+
+	printf("\n");
+	strcpy(str0, "dalle");
+	strcpy(str1, "dallee");
+	printf("[ex00] str0 = %s, str1 = %s\n", str0, str1);
+	printf("[ex00] ft_strcmp returns %i\n", ft_strcmp(str0, str1));
+	printf("[ex00] strcmp returns %i\n", strcmp(str0, str1));
+
+	printf("\n");
+	strcpy(str0, "dallee");
+	strcpy(str1, "dalle");
 	printf("[ex00] str0 = %s, str1 = %s\n", str0, str1);
 	printf("[ex00] ft_strcmp returns %i\n", ft_strcmp(str0, str1));
 	printf("[ex00] strcmp returns %i\n", strcmp(str0, str1));
@@ -84,7 +99,26 @@ int	main(void)
 	printf("[ex01] str0 = %s, str1 = %s, n = %i\n", str0, str1, i);
 	printf("[ex01] ft_strncmp returns %i\n", ft_strncmp(str0, str1, i));
 	printf("[ex01] strncmp returns %i\n", strncmp(str0, str1, i));
+
+	printf("\n");
+	i = 3;
+	strcpy(str0, "ab");
+	strcpy(str1, "abca");
+	printf("[ex01] str0 = %s, str1 = %s, n = %i\n", str0, str1, i);
+	printf("[ex01] ft_strncmp returns %i\n", ft_strncmp(str0, str1, i));
+	printf("[ex01] strncmp returns %i\n", strncmp(str0, str1, i));
+
+
+	printf("\n");
+	i = 3;
+	strcpy(str0, "abc");
+	strcpy(str1, "ab");
+	printf("[ex01] str0 = %s, str1 = %s, n = %i\n", str0, str1, i);
+	printf("[ex01] ft_strncmp returns %i\n", ft_strncmp(str0, str1, i));
+	printf("[ex01] strncmp returns %i\n", strncmp(str0, str1, i));
+
 	printf("------------------------------------\n");
+
 	strcpy(str0, "aa");
 	strcpy(str1, "zz");
 	printf("[ex02] str0 = %s, str1 = %s\n", str0, str1);
@@ -117,6 +151,7 @@ int	main(void)
 	strcpy(str0, "abc");
 	strcpy(str1, "abd");
 	printf("[ex03] strncat returns %s\n", strncat(str0, str1, i));
+
 	printf("\n");
 	i = 2;
 	strcpy(str0, "");
@@ -126,6 +161,7 @@ int	main(void)
 	strcpy(str0, "");
 	strcpy(str1, "");
 	printf("[ex03] strncat returns %s\n", strncat(str0, str1, i));
+
 	printf("\n");
 	i = 0;
 	strcpy(str0, "abca");
@@ -135,6 +171,7 @@ int	main(void)
 	strcpy(str0, "abca");
 	strcpy(str1, "abba");
 	printf("[ex03] strncat returns %s\n", strncat(str0, str1, i));
+
 	printf("\n");
 	i = 6;
 	strcpy(str0, "abba");
@@ -196,45 +233,52 @@ int	main(void)
 	strcpy(str1, "abd");
 	i = 2;
 	printf("[ex05] str0 = %s, str1 = %s, n = %i\n", str0, str1, i);
-	printf("[ex05] ft_strlcat returns %u\n", ft_strlcat(str0, str1, i));
+	printf("[ex05] ft_strlcat returns %u\n", (unsigned int)ft_strlcat(str0, str1, i));
 	printf("[ex05] str0 = %s\n", str0);
 	//printf("[ex05] str0 = %s, str1 = %s, n = %i\n", str0, str1, i);
-	//strcpy(str0, "abc");
-	//strcpy(str1, "abd");
-	//printf("[ex05] strlcat returns %u\n", strlcat(str0, str1, i));
+	strcpy(str0, "abc");
+	strcpy(str1, "abd");
+	printf("[ex05] strlcat returns %u\n", (unsigned int)strlcat(str0, str1, i));
+	printf("[ex05] str0 = %s\n", str0);
+
 	printf("\n");
 	i = 2;
 	strcpy(str0, "");
 	strcpy(str1, "");
 	printf("[ex05] str0 = %s, str1 = %s, n = %i\n", str0, str1, i);
-	printf("[ex05] ft_strlcat returns %u\n", ft_strlcat(str0, str1, i));
+	printf("[ex05] ft_strlcat returns %u\n", (unsigned int)ft_strlcat(str0, str1, i));
 	printf("[ex05] str0 = %s\n", str0);
 	//printf("[ex05] str0 = %s, str1 = %s, n = %i\n", str0, str1, i);
-	//strcpy(str0, "");
-	//strcpy(str1, "");
-	//printf("[ex05] strlcat returns %u\n", strlcat(str0, str1, i));
+	strcpy(str0, "");
+	strcpy(str1, "");
+	printf("[ex05] strlcat returns %u\n", (unsigned int)strlcat(str0, str1, i));
+	printf("[ex05] str0 = %s\n", str0);
+
 	printf("\n");
 	i = 0;
 	strcpy(str0, "abca");
 	strcpy(str1, "abba");
 	printf("[ex05] str0 = %s, str1 = %s, n = %i\n", str0, str1, i);
-	printf("[ex05] ft_strlcat returns %u\n", ft_strlcat(str0, str1, i));
+	printf("[ex05] ft_strlcat returns %u\n", (unsigned int)ft_strlcat(str0, str1, i));
 	printf("[ex05] str0 = %s\n", str0);
 	//printf("[ex05] str0 = %s, str1 = %s, n = %i\n", str0, str1, i);
-	//strcpy(str0, "abca");
-	//strcpy(str1, "abba");
-	//printf("[ex05] strlcat returns %u\n", strlcat(str0, str1, i));
+	strcpy(str0, "abca");
+	strcpy(str1, "abba");
+	printf("[ex05] strlcat returns %u\n", (unsigned int)strlcat(str0, str1, i));
+	printf("[ex05] str0 = %s\n", str0);
+
 	printf("\n");
 	i = 8;
 	strcpy(str0, "abba");
 	strcpy(str1, "abca");
 	printf("[ex05] str0 = %s, str1 = %s, n = %i\n", str0, str1, i);
-	printf("[ex05] ft_strlcat returns %u\n", ft_strlcat(str0, str1, i));
+	printf("[ex05] ft_strlcat returns %u\n", (unsigned int)ft_strlcat(str0, str1, i));
 	printf("[ex05] str0 = %s\n", str0);
 	//printf("[ex05] str0 = %s, str1 = %s, n = %i\n", str0, str1, i);
-	//strcpy(str0, "abba");
-	//strcpy(str1, "abca");
-	//printf("[ex05] strlcat returns %u\n", strlcat(str0, str1, i));
+	strcpy(str0, "abba");
+	strcpy(str1, "abca");
+	printf("[ex05] strlcat returns %u\n", (unsigned int)strlcat(str0, str1, i));
+	printf("[ex05] str0 = %s\n", str0);
 
 	return (0);
 }
