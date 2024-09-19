@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/12 13:03:30 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/18 13:22:28 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,7 @@ int	ft_atoi_base(char *str, char *base)
 	int			sign;
 	long int	nbr;
 	int			nbase;
+	int			i;
 
 	nbase = 0;
 	while (base[nbase])
@@ -88,6 +89,10 @@ int	ft_atoi_base(char *str, char *base)
 	str = cprefix(str, &sign, base);
 	if (!sign || !acheck_base(base))
 		return (0);
+	i = 0;
+	while (str[i])
+		if (!is_base_num(str[i++], base))
+			return (0);
 	nbr = 0;
 	while (is_base_num(*str, base))
 	{

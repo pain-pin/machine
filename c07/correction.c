@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/16 15:39:55 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/18 18:30:15 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 #include "./ex02/ft_ultimate_range.c"
 #include "./ex03/ft_strjoin.c"
 #include "./ex04/ft_convert_base.c"
+#include "./ex04/ft_convert_base2.c"
 #include "./ex05/ft_split.c"
 
 void	print_tab(char **tab)
@@ -90,6 +91,15 @@ int	main(int argc, char **argv)
 	printf("\n");
 
 	param1 = -1;
+	param2 = 0;
+	tab = ft_range(param1, param2);
+	printf("ex01 : ft_range(%i, %i) returns", param1, param2);
+	print_int_tab(tab, 1);
+	free(tab);
+
+	printf("\n");
+
+	param1 = 0;
 	param2 = 0;
 	tab = ft_range(param1, param2);
 	printf("ex01 : ft_range(%i, %i) returns", param1, param2);

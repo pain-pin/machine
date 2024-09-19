@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/16 13:14:08 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/17 19:20:29 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,11 @@ int	ft_ultimate_range(int **range, int min, int max)
 /*
 int	main(int argc, char **argv)
 {
+	int *tab;
+
+	malloc ().....
+	ft_ultimate_range(&tab, 0, 5);
+	free(tab);
 	return (0);
 }
 */

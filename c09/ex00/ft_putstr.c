@@ -1,37 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_range.c                                         :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/18 13:27:33 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/18 15:37:54 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdlib.h>
 #include <stdio.h>
 
-int	*ft_range(int min, int max)
+void	ft_putstr(char *str)
 {
-	int	*tab;
-	int	i;
-
-	if (max - min <= 0)
-		return (NULL);
-	tab = (int *)malloc(sizeof(int) * (max - min));
-	i = 0;
-	while (min < max)
-		tab[i++] = min++;
-	return (tab);
+	while (*str)
+		write(1, str++, 1);
 }
 /*
 int	main(int argc, char **argv)
 {
-	(void)argc;
-	(void)argv;
 	return (0);
 }
 */
