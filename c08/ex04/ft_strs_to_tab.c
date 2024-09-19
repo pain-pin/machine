@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/17 15:24:46 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/17 16:52:32 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,25 +69,25 @@ void	str_to_stock(char *str, struct s_stock_str *ret_i)
 
 struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 {
-	struct s_stock_str	*ret;
+	struct s_stock_str	*tab;
 	int					i;
 
-	ret = malloc(sizeof(struct s_stock_str) * (ac + 1));
-	if (!ret)
+	tab = malloc(sizeof(struct s_stock_str) * (ac + 1));
+	if (!tab)
 		return (NULL);
 	i = 0;
 	while (i < ac)
 	{
-		str_to_stock(av[i], &(ret[i]));
-		if (!ret->copy)
+		str_to_stock(av[i], &(tab[i]));
+		if (!tab->copy)
 		{
-			clean(&ret);
+			clean(&tab);
 			return (NULL);
 		}
 		i++;
 	}
-	str_to_stock(ft_strdup(""), &(ret[i]));
-	return (ret);
+	str_to_stock(ft_strdup(""), &(tab[i]));
+	return (tab);
 }
 /*
 int	tab_len(struct s_stock_str *tab)

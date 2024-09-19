@@ -6,14 +6,15 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/17 11:56:18 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/18 14:56:11 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdio.h>
-#include "ft_convert_base2.c"
+
+int	ft_atoi_base(char *str, char *base);
 
 int	baselen(char *base)
 {
@@ -54,8 +55,7 @@ char	*ft_strcat(char *dest, char *src)
 	dest_cpy = dest;
 	while (*dest)
 		dest++;
-	while (*src)
-		*dest++ = *src++;
+	*dest++ = *src++;
 	*dest = '\0';
 	return (dest_cpy);
 }
@@ -89,10 +89,14 @@ char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 {
 	long int	i_nbr;
 	char		*result;
+	int			size;
 
 	if (check_base(base_from) && check_base(base_to))
 	{
-		result = malloc(10000000000);
+		size = 2 * (8 * 4) + 1;
+		result = malloc(size);
+		while (--size > -1)
+			result[size] = 0;
 		i_nbr = ft_atoi_base(nbr, base_from);
 		itoa_base(i_nbr, base_to, &result);
 	}
