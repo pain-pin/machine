@@ -6,13 +6,14 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/17 16:52:32 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/20 12:29:29 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include "ft_stock_str.h"
 
 char	*ft_strdup(char *src)
 {
@@ -89,7 +90,7 @@ struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 	str_to_stock(ft_strdup(""), &(tab[i]));
 	return (tab);
 }
-/*
+
 int	tab_len(struct s_stock_str *tab)
 {
 	int	i;
@@ -105,6 +106,7 @@ int	tab_len(struct s_stock_str *tab)
 	}
 	return (i);
 }
+/*
 void print_stock(struct s_stock_str *stock)
 {
 	int i = 0;
@@ -115,7 +117,6 @@ void print_stock(struct s_stock_str *stock)
 		i++;
 	}
 }
-
 int	main(int argc, char **argv)
 {
 	(void)argc--;

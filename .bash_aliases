@@ -79,6 +79,12 @@ brc () {
 	#cp ~/.bash_aliases ~/machine/.bash_aliases
 }
 
+vrc () {
+	vim + ~/.vimrc
+	source ~/.vimrc
+	#cp ~/.bash_aliases ~/machine/.bash_aliases
+}
+
 machine_install () {
 	FILE=~/machine/install.sh
 	vim $FILE
@@ -174,3 +180,5 @@ normi () {
 ctagss () {
 	ctags -R --c-kinds=+p --fields=+S $@
 }
+
+alias ccc="cc -Wall -Wextra -Werror"

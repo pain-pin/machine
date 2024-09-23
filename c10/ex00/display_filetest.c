@@ -1,41 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_range.c                                :+:      :+:    :+:   */
+/*   display_filetest.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/21 20:20:48 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/19 14:20:18 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdlib.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 
-int	ft_ultimate_range(int **range, int min, int max)
+void	putstr(char *str)
 {
-	unsigned int	i;
-
-	if (max - min <= 0)
-	{
-		*range = NULL;
-		return (0);
-	}
-	*range = malloc(sizeof(int) * (max - min));
-	i = 0;
-	while (min < max)
-		(*range)[i++] = min++;
-	return (i);
+	while (*str)
+		write(1, str++, 1);
 }
-/*
+
 int	main(int argc, char **argv)
 {
-	int *tab;
+	int		fd;
+	char	*path;
+	char	buff[1];
 
-	malloc ().....
-	ft_ultimate_range(&tab, 0, 5);
-	free(tab);
+	if (argc == 1)
+		putstr("File name missing.\n");
+	else if (argc > 2)
+		putstr("Too many arguments.\n");
+	else
+	{
+		path = argv[1];
+		fd = open(path, O_RDONLY);
+		if (fd == -1)
+			putstr("Cannot read file.\n");
+		else
+		{
+			while (read(fd, buff, 1))
+				write(1, buff, 1);
+		}
+	}
 	return (0);
 }
-*/
+

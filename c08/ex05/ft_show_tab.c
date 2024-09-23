@@ -6,13 +6,14 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/17 15:24:28 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/20 12:28:08 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include "ft_stock_str.h"
 
 int	ttab_len(struct s_stock_str *tab)
 {
