@@ -1,8 +1,4 @@
-#!/usr/bin/bash
 
-FILE=bsq.h
-
-echo "
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -28,9 +24,24 @@ echo "
 # define I_FULL 3
 
 
-" > $FILE
 
-awk '/^[a-z].*)$/ {print $0";"}' *.c | grep -v main >> bsq.h
+int	is_sep(char c, char *charset);
+int	strlen_char(char *str, char *charset);
+int	count_words(char *str, char *charset);
+char	*ft_strndup(char *str, int n);
+char	**ft_split(char *str, char *charset);
+void	print_tab(char **tab);
+void	free_map(char ***tab_);
+int	is_digit(char c);
+void	putstr(char *str);
+int	ft_strlen(char *str);
+int	check_double_param(char *line);
+void	format_param(char *param_line, int param_index, int	size);
+int	check_and_format_params(char *first_line);
+int	contains_only_available_params(char *str, char *chars);
+int	line_available(char *line, char *params, int last_line_size);
+int	check_map(char **map);
+void	clean_buff(char (*buff)[BUFF_SIZE]);
+void	check_and_solve(char *map_path);
 
-echo >> bsq.h
-echo "#endif" >> bsq.h
+#endif
