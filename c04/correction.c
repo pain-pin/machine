@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/17 17:17:28 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/19 18:23:10 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,8 @@
 #include "./ex01/ft_putstr.c"
 #include "./ex02/ft_putnbr.c"
 #include "./ex03/ft_atoi.c"
-/*
-#include "./ex04/ft_putnbr_base.c"
-#include "./ex05/ft_atoi_base.c"
-*/
+//#include "./ex04/ft_putnbr_base.c"
+//#include "./ex05/ft_atoi_base.c"
 int	main()
 {
 	printf("[ex00] ft_strlen(\"hello\") = %i\n", ft_strlen("hello"));
@@ -56,8 +54,8 @@ int	main()
 	printf("[ex03] ft_atoi(\"  +-+123\") return: %i\n", ft_atoi("  +-+123"));
 	printf("\n");
 	printf("[ex03] ft_atoi(\" ---+--+1234ab567\") return: %i\n", ft_atoi(" ---+--+1234ab567"));
-	/*
 	printf("-----------------------------------------------\n");
+	/*
 	int	nb;
 	char base[100] = "qwerty";
 	printf("\n");
@@ -110,5 +108,5 @@ int	main()
 	strcpy(base ,"01");
 	printf("[ex05] ft_atoi_base(\"-10000000000000000000000000000000\", %s) return: %i\n", base, ft_atoi_base("-10000000000000000000000000000000", base));
 	printf("\n");
-*/
+	*/
 }

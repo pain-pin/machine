@@ -1,41 +1,59 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_range.c                                :+:      :+:    :+:   */
+/*   ft_cat.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/21 20:20:48 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/19 15:27:42 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdlib.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 
-int	ft_ultimate_range(int **range, int min, int max)
+void	putstr(char *str)
 {
-	unsigned int	i;
-
-	if (max - min <= 0)
-	{
-		*range = NULL;
-		return (0);
-	}
-	*range = malloc(sizeof(int) * (max - min));
-	i = 0;
-	while (min < max)
-		(*range)[i++] = min++;
-	return (i);
+	while (*str)
+		write(1, str++, 1);
 }
-/*
+
+void	readfd(int fd)
+{
+	char	buff[30000];
+
+	while (read(fd, buff, 1))
+		putstr(buff);
+}
+
 int	main(int argc, char **argv)
 {
-	int *tab;
+	int		fd;
+	char	*path;
 
-	malloc ().....
-	ft_ultimate_range(&tab, 0, 5);
-	free(tab);
+	argv++;
+	if (argc == 1)
+		readfd(0);
+	else
+	{
+		while (*argv)
+		{
+			path = *argv;
+			fd = open(path, O_RDONLY);
+			if (fd == -1)
+			{
+				putstr("Cannot read file.\n");
+				return (1);
+			}
+			else
+				readfd(fd);
+			close(fd);
+			argv++;
+		}
+	}
+	close(fd);
 	return (0);
 }
-*/

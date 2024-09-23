@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/10 10:55:19 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/21 20:22:58 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,11 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 	while (*dest)
 		dest++;
 	if (nb > 0)
-		while (*src && nb--)
+		while (*src && nb)
+		{
+			nb -= 1;
 			*dest++ = *src++;
+		}
 	*dest = '\0';
 	return (dest_cpy);
 }

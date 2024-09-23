@@ -1,41 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_range.c                                :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/21 20:20:48 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/10 10:55:29 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdlib.h>
+#include <stdio.h>
 
-int	ft_ultimate_range(int **range, int min, int max)
+int	ft_strcmp(char *s1, char *s2)
 {
-	unsigned int	i;
-
-	if (max - min <= 0)
+	while (*s1)
 	{
-		*range = NULL;
-		return (0);
+		if (*s1 != *s2)
+			return (*s1 - *s2);
+		s1++;
+		s2++;
 	}
-	*range = malloc(sizeof(int) * (max - min));
-	i = 0;
-	while (min < max)
-		(*range)[i++] = min++;
-	return (i);
+	return (*s1 - *s2);
 }
-/*
-int	main(int argc, char **argv)
-{
-	int *tab;
-
-	malloc ().....
-	ft_ultimate_range(&tab, 0, 5);
-	free(tab);
-	return (0);
-}
-*/
