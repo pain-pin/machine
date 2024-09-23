@@ -6,31 +6,78 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2024/09/23 14:06:47 by nidionis         ###   ########.fr       */
+/*   Updated: 2024/09/23 17:20:08 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-# define BUFF_SIZE 30000
-# define I_SIZE 0
-# define I_EMPTY 1
-# define I_OBSTA 2
-# define I_FULL 3
+#include "bsq.h"
 
-check_double_param(char *line)
+void	print_map(char **map)
+{
+	if (!map)
+		return ;
+	while (*map)
+	{
+		putstr(*map);
+		putstr("\n");
+		map++;
+	}
+}
+
+void	free_map(char ***tab_)
+{
+	int		i;
+	char	**tab;
+
+	tab = *tab_;
+	if (!tab)
+		return ;
+	i = 0;
+	while (tab[i])
+	{
+		free(tab[i]);
+		tab[i++] = NULL;
+	}
+	free(tab);
+	tab = NULL;
+}
+
+int	is_digit(char c)
+{
+	if (c <= '9' && c >= '0')
+		return (1);
+	return (0);
+}
+
+void	putstr(char *str)
+{
+	while (*str)
+		write(1, str++, 1);
+}
+
+int	ft_strlen(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (*str++)
+		i++;
+	return (i);
+}
+
+int	check_double_param(char *line)
 {
 	int	i;
 	int	j;
 
-	i = 1
+	i = 1;
 	while (i < 4)
 	{
 		j = i + 1;
 		while (j < 4)
 			if (line[i] == line[j++])
 				return (0);
-		i++
+		i++;
 	}
 	return (1);
 }
@@ -40,16 +87,22 @@ check_double_param(char *line)
  * ex:
  * 24.ox become \\24.ox
  */
-void	format_param(char *param_line, int param_index)
+void	format_param(char *param_line, int param_index, int size)
 {
 	int	i;
 
 	i = 0;
+	param_line[I_SIZE] = size;
 	while (i < 3)
+	{
 		param_line[i + 1] = param_line[param_index + i];
+		i++;
+	}
+	param_line[i] = '\0';
 }
 
-/* make an atoi, and replace the ascii value
+/* 
+ * make an atoi, and replace the ascii value
  * at the beginning of the line with the int value
  * then move the 'empty', 'obstacle' and 'fill' values
  * to the index 1, 2 and 3 of the line.
@@ -66,16 +119,16 @@ int	check_and_format_params(char *first_line)
 	if (!is_digit(first_line[0]))
 		return (0);
 	while (is_digit(first_line[i]))
-		size *= 10 + first_line[i++] - '0';
-	if (strlen(&first_line[i]) != 3)
+		size = 10 * size + first_line[i++] - '0';
+	if (ft_strlen(&first_line[i]) != 3)
 		return (0);
-	format_param(first_line, i);
+	format_param(first_line, i, size);
 	if (!check_double_param(first_line))
 		return (0);
-	return (1);
+	return (1);	
 }
 
-int	contains_only_chars(char *str, char *chars)
+int	contains_only_available_params(char *str, char *chars)
 {
 	int	i;
 	int	char_available;
@@ -96,11 +149,11 @@ int	contains_only_chars(char *str, char *chars)
 	return (char_available);
 }
 
-int	line_available(char *line, char *params)
+int	line_available(char *line, char *params, int last_line_size)
 {
-	if (strlen(line) != params[I_SIZE])
+	if (ft_strlen(line) != last_line_size)
 		return (0);
-	if (!contains_only_chars(line, &params[1]))
+	if (!contains_only_available_params(line, &params[1]))
 		return (0);
 	return (1);
 }
@@ -108,6 +161,8 @@ int	line_available(char *line, char *params)
 int	check_map(char **map)
 {
 	char	*params;
+	int		last_line_size;
+	int		nb_line;
 
 	if (!map)
 		return (0);
@@ -115,39 +170,65 @@ int	check_map(char **map)
 	if (!check_and_format_params(params))
 		return (0);
 	map++;
+	last_line_size = ft_strlen(*map);
+	nb_line = 0;
 	while (*map)
 	{
-		if (!line_available(*map, params))
+		if (!line_available(*map, params, last_line_size))
 			return (0);
+		last_line_size = ft_strlen(*map);
 		map++;
+		nb_line++;
 	}
+	if (nb_line != params[0])
+		return (0);
 	return (1);
 }
 
-int	check_and_solve(char 	*map_path)
+void	clean_buff(char (*buff)[BUFF_SIZE])
 {
+	char	*buf;
+	int		i;
+
+	buf = *buff;
+	i = 0;
+	while (i++ < BUFF_SIZE)
+		*buf++ = '\0';
+}
+	
+void	check_and_solve(char *map_path)
+{
+	char	**map;
+	char	buff[BUFF_SIZE];
+	int		fd;
+
 	fd = open(map_path, O_RDONLY);
-	if (fd = -1)
+	if (fd == -1)
 		putstr("map error\n");
 	else
 	{
-		read(fd, buff, B)
-		map = ft_split(buff, "\n")
+		clean_buff(&buff);
+		read(fd, buff, BUFF_SIZE);
+		map = ft_split(buff, "\n");
 		if (!check_map(map))
 			putstr("map error\n");
 		else
+		{
+			print_map(&map[1]);
+			putstr("\n");
+		}
+		/*
+		else
 			solve_map(map);
-		free_map(map);
+		*/
+		free_map(&map);
 	}
 	close(fd);
 }
 
 int	main(int argc, char **argv)
 {
-	int		fd;
-	char	buff[BUFF_SIZE];
-	char	**map
-
+	(void)argc;
 	argv++;
 	while (*argv)
 	{

@@ -1,0 +1,46 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/nidionis/machine/bsq/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+$(NAME)	Makefile	/^$(NAME) : $(OBJ)$/;"	t
+%.o	Makefile	/^%.o : %.c$/;"	t
+BSQ_H	bsq.h	/^# define BSQ_H$/;"	d
+BUFF_SIZE	bsq.h	/^# define BUFF_SIZE /;"	d
+CC	Makefile	/^CC = cc$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -Wall -Wextra -Werror$/;"	m
+I_EMPTY	bsq.h	/^# define I_EMPTY /;"	d
+I_FULL	bsq.h	/^# define I_FULL /;"	d
+I_OBSTA	bsq.h	/^# define I_OBSTA /;"	d
+I_SIZE	bsq.h	/^# define I_SIZE /;"	d
+MAIN	Makefile	/^MAIN = main.c$/;"	m
+NAME	Makefile	/^NAME = bsq$/;"	m
+OBJ	Makefile	/^OBJ = $(SRC:.c=.o)$/;"	m
+SRC	Makefile	/^SRC = *.c$/;"	m
+all	Makefile	/^all: $(NAME)$/;"	t
+check_and_format_params	main.c	/^int	check_and_format_params(char *first_line)$/;"	f	typeref:typename:int
+check_and_solve	main.c	/^void	check_and_solve(char *map_path)$/;"	f	typeref:typename:void
+check_double_param	main.c	/^int	check_double_param(char *line)$/;"	f	typeref:typename:int
+check_map	main.c	/^int	check_map(char **map)$/;"	f	typeref:typename:int
+clean	Makefile	/^clean:$/;"	t
+contains_only_available_params	main.c	/^int	contains_only_available_params(char *str, char *chars)$/;"	f	typeref:typename:int
+count_words	ft_split.c	/^int	count_words(char *str, char *charset)$/;"	f	typeref:typename:int
+fclean	Makefile	/^fclean: clean$/;"	t
+format_param	main.c	/^void	format_param(char *param_line, int param_index, int	size)$/;"	f	typeref:typename:void
+free_map	main.c	/^void	free_map(char ***tab_)$/;"	f	typeref:typename:void
+ft_split	ft_split.c	/^char	**ft_split(char *str, char *charset)$/;"	f	typeref:typename:char **
+ft_strlen	main.c	/^int	ft_strlen(char *str)$/;"	f	typeref:typename:int
+ft_strndup	ft_split.c	/^char	*ft_strndup(char *str, int n)$/;"	f	typeref:typename:char *
+is_digit	main.c	/^int	is_digit(char c)$/;"	f	typeref:typename:int
+is_sep	ft_split.c	/^int	is_sep(char c, char *charset)$/;"	f	typeref:typename:int
+line_available	main.c	/^int	line_available(char *line, char *params)$/;"	f	typeref:typename:int
+main	main.c	/^int	main(int argc, char **argv)$/;"	f	typeref:typename:int
+putstr	main.c	/^void	putstr(char *str)$/;"	f	typeref:typename:void
+re	Makefile	/^re: fclean all$/;"	t
+strlen_char	ft_split.c	/^int	strlen_char(char *str, char *charset)$/;"	f	typeref:typename:int
