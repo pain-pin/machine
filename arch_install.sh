@@ -13,23 +13,26 @@ mv ~/.bashrc ~/.bashrc_original
 
 ln -s $MACHINE_DIR/.vim $MACHINE_DIR/.bashrc $MACHINE_DIR/.bash_aliases $MACHINE_DIR/.config $HOME
 
-pacman -Syu cherrytree
-pacman -S firefox
-pacman -S redshift
-pacman -S vlc
-pacman -S tcpdump
-pacman -S moreutils
-pacman -S net-tools
-pacman -S make
-pacman -S whois
-pacman -S syslog-ng
-pacman -S nmap
-pacman -S lldb
-pacman -S terminator
-pacman -S man-db
-pacman -S apropos
-pacman -S gdb
-mandb
+pacman --noconfirm -Syu cherrytree
+pacman --noconfirm -S firefox
+pacman --noconfirm -S redshift
+pacman --noconfirm -S vlc
+pacman --noconfirm -S tcpdump
+pacman --noconfirm -S moreutils
+pacman --noconfirm -S net-tools
+pacman --noconfirm -S make
+pacman --noconfirm -S whois
+pacman --noconfirm -S syslog-ng
+pacman --noconfirm -S nmap
+pacman --noconfirm -S lldb
+pacman --noconfirm -S terminator
+pacman --noconfirm -S man-db
+pacman --noconfirm -S apropos
+pacman --noconfirm -S gdb
+pacman --noconfirm -S docker
+pacman --noconfirm -S go
+pacman --noconfirm -S makepkg
+mandb #rend possible la commande apropos
 #pacman -S zram-generator
 #pacman -S cuda
 #pacman -S zsh
@@ -42,16 +45,31 @@ git config --global user.name "presk0"
 #wget https://gitlab.archlinux.org/pacman/pacman/-/raw/master/scripts/makepkg.sh.in
 #chmod +x makepkg.sh.in
 #mv makepkg.sh.in /bin/makepkg
-#
-#git clone https://aur.archlinux.org/yay.git
-#cd yay/
-#makepkg
-#sudo cp pkg/yay/usr/bin/yay /bin
-#cd ..
-#rm -rf yay
-#yay -S grepcidr
+
+git clone https://aur.archlinux.org/yay.git
+cd yay/
+makepkg
+cd ..
+rm -rf yay
+yay -S grepcidr
+#yay -S python-coverage
+#yay -S mesa
+#yay -S vulkan-radeon
+
 #pip install openai-whisper pydub
 
 # log iptables dans /var/log/iptables.log au lieu de dmesg via syslog-ng
 #awk '/filter f_everything/ { print "#" $0; print "filter f_everything { level(debug..emerg) and not facility(auth, authpriv) and not filter(f_iptables); };" ; next } 1' /etc/syslog-ng/syslog-ng.conf > /tmp/tmp
 #mv /tmp/tmp /etc/syslog-ng/syslog-ng.conf
+
+cd ~
+git clone git@github.com:presk0/perso.git
+cd perso
+python3 -m venv env
+source env/bin/activate
+pip install torch
+pip install numpy
+pip install pydub
+pip install transformers
+pip install accelerate
+pacman --noconfirm -S python-pytorch-rocm
