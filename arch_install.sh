@@ -8,8 +8,6 @@
 MACHINE_DIR="$HOME/machine"
 USER=$(users | cut -d\  -f1)
 
-bash $MACHINE_DIR/networking/iptables_script.sh -f networking ip_to_ban.txt -r
-
 mv ~/.bashrc ~/.bashrc_original
 
 ln -s $MACHINE_DIR/.vim $MACHINE_DIR/.bashrc $MACHINE_DIR/.bash_aliases $MACHINE_DIR/.config $HOME
@@ -39,6 +37,10 @@ mandb #rend possible la commande apropos
 #pacman -S cuda
 #pacman -S zsh
 pacman --noconfirm -S python-pytorch-rocm
+
+systemctl enable ulogd
+systemctl start ulogd
+bash $MACHINE_DIR/networking/iptables_script.sh -f networking ip_to_ban.txt -r
 
 #echo "zram-size = ram w* 2\ncompression-algorithm = zstd" >> /etc/systemd/zram-generator.conf
 
