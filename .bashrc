@@ -61,6 +61,11 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+set -o vi
+
+bind 'set show-all-if-ambiguous on'
+bind 'TAB:menu-complete'
+
 export PS1="\u@\H-\D{%y%m%d}-\t-\w \n\r>"
 
 export OCTET="(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)"
