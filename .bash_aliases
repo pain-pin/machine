@@ -90,7 +90,18 @@ machine_install () {
 	vim $FILE
 	cd $FILE
 	git add $FILE
-	git commit -m "machine install mofified"
+	git commit -m "$FILE install mofified"
+	git push
+	cd -
+}
+
+arch_install () {
+	FOLD=~/machine
+	FILE=$FOLD/arch_install.sh
+	vim $FILE
+	cd $FOLD
+	git add $FILE
+	git commit -m "$FILE install mofified"
 	git push
 	cd -
 }
