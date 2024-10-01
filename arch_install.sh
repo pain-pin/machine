@@ -70,7 +70,8 @@ cd perso
 python3 -m venv env
 source env/bin/activate
 #pip install torch
-pip install numpy
+#pip install numpy
+pip install openai-whisper
 pip install pydub
 pip install transformers
 pip install accelerate
