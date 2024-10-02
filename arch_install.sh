@@ -10,7 +10,7 @@ USER=$(users | cut -d\  -f1)
 
 mv ~/.bashrc ~/.bashrc_original
 
-ln -s $MACHINE_DIR/.vim $MACHINE_DIR/.bashrc $MACHINE_DIR/.bash_aliases $MACHINE_DIR/.config $HOME
+ln -s $MACHINE_DIR/.vim $MACHINE_DIR/.vimrc $MACHINE_DIR/.bashrc $MACHINE_DIR/.bash_aliases $MACHINE_DIR/.config $HOME
 
 pacman --noconfirm -Syu cherrytree
 pacman --noconfirm -S firefox
