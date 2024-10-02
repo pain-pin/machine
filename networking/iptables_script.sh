@@ -24,18 +24,13 @@ if [ -n "$RESET" ]; then
     iptables -F
     iptables -X
     iptables -t nat -F
-    iptables -t nat -X
-    iptables -t mangle -F
-    iptables -t mangle -X
-    iptables -t raw -F
-    iptables -t raw -X
-    iptables -t security -F
-    iptables -t security -X
-    iptables -P INPUT DROP
-    iptables -P FORWARD DROP
-    iptables -P OUTPUT ACCEPT
-
-    iptables -N logdrop
+iptables -t nat -X
+	iptables -t mangle -F
+	iptables -t mangle -X
+	iptables -t raw -F
+	iptables -t raw -X
+	iptables -t security -F
+	iptables -t security -X
 fi
 
 if [ -n "$SIMPLE" ]; then
@@ -43,16 +38,16 @@ if [ -n "$SIMPLE" ]; then
     iptables -P INPUT DROP
     iptables -P FORWARD DROP
     iptables -P OUTPUT ACCEPT
+    iptables -N logdrop
     # Ajouter les règles spécifiques
-    iptables -A logdrop -m limit --limit 15/m --limit-burst 50 -j LOG --log-level 8
+    iptables -A logdrop -m limit --limit 15/m --limit-burst 50 -j NFLOG --nflog-prefix "logdrop: "
     iptables -A logdrop -j DROP
     iptables -A INPUT -p icmp -j logdrop
     iptables -A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
-    iptables -A INPUT -i lo -j ACCEPT
-    iptables -A INPUT -p tcp -j logdrop #--reject-with tcp-reset
-    iptables -A INPUT -p udp -j logdrop #--reject-with icmp-port-unreachable
-    iptables -A INPUT -j logdrop #--reject-with icmp-proto-unreachable
-
+    #iptables -A INPUT -i lo -j ACCEPT
+    #iptables -A INPUT -p tcp -j logdrop
+    #iptables -A INPUT -p udp -j logdrop
+    iptables -A INPUT -j logdrop
 fi
 
 if [ -f "$FILE_IN" ]; then
@@ -65,8 +60,8 @@ if [ -f "$FILE_IN" ]; then
                 continue
             fi
             if [ -n "$LOG" ] ; then
-                iptables -I INPUT -s $IP -j LOG --log-prefix "IPTables-INPUT-Dropped: " #--log-level 4
-                iptables -I OUTPUT -d $IP -j LOG --log-prefix "IPTables-OUTPUT-Dropped: " #--log-level 4
+                iptables -I INPUT -s $IP -j NFLOG --nflog-prefix "input: "
+                iptables -I OUTPUT -d $IP -j NFLOG --nflog-prefix "output: "
             fi
             if [ -n "$DROP" ] ; then
                 iptables -A INPUT -s $IP -j DROP -m comment --comment "banned IP going in"
