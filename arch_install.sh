@@ -1,9 +1,9 @@
 #!/usr/bin/bash
 
-#if [[ $EUID -ne 0 ]]; then
-#   echo "This script must be run as root"
-#   exit 1
-#fi
+if [[ $EUID -ne 0 ]]; then
+   echo "This script must be run as root"
+   exit 1
+fi
 
 MACHINE_DIR="$HOME/machine"
 USER=$(users | cut -d\  -f1)
@@ -36,11 +36,11 @@ mandb #rend possible la commande apropos
 #pacman -S zram-generator
 #pacman -S cuda
 #pacman -S zsh
-pacman --noconfirm -S python-pytorch-rocm
+#pacman --noconfirm -S python-pytorch-rocm
 
 systemctl enable ulogd
 systemctl start ulogd
-bash $MACHINE_DIR/networking/iptables_script.sh -f networking ip_to_ban.txt -r
+bash $MACHINE_DIR/networking/iptables_script.sh -f networking/ip_to_ban.txt -r
 
 #echo "zram-size = ram w* 2\ncompression-algorithm = zstd" >> /etc/systemd/zram-generator.conf
 
@@ -73,10 +73,10 @@ python3 -m venv env
 source env/bin/activate
 #pip install torch
 #pip install numpy
-pip install openai-whisper
-pip install pydub
-pip install transformers
-pip install accelerate
+#pip install openai-whisper
+#pip install pydub
+#pip install transformers
+#pip install accelerate
 
 EOF
 mv ~/yay.tmp /usr/bin/yay
