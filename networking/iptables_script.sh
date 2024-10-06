@@ -25,7 +25,7 @@ if [ -n "$RESET" ]; then
     iptables -X
     iptables -N logdrop
     iptables -I logdrop -j DROP
-    iptables -I logdrop -m limit --limit 15/m --limit-burst 50 -j NFLOG --nflog-prefix "iptables"
+    iptables -I logdrop -m limit --limit 15/m --limit-burst 50 -j NFLOG --nflog-group 1 --nflog-prefix "iptables"
     iptables -P INPUT DROP
     iptables -P FORWARD DROP
     iptables -P OUTPUT ACCEPT
@@ -51,8 +51,8 @@ if [ -f "$FILE_IN" ]; then
                 continue
             fi
             if [ -n "$LOG" ] ; then
-                iptables -A INPUT -s $IP -j NFLOG --nflog-prefix "iptables"
-                iptables -A OUTPUT -d $IP -j NFLOG --nflog-prefix "iptables"
+                iptables -A INPUT -s $IP -j NFLOG --nflog-group 1 --nflog-prefix "iptables"
+                iptables -A OUTPUT -d $IP -j NFLOG --nflog-group 1 --nflog-prefix "iptables"
             fi
             if [ -n "$DROP" ] ; then
                 iptables -A INPUT -s $IP -j DROP -m comment --comment "banned IP going in"
@@ -64,4 +64,5 @@ fi
 
 if [ -n "$UPDATE" ] ; then
     iptables-save > "$IPTABLES_FILE"
+    systemctl restart ulogd
 fi
