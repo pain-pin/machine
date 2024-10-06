@@ -5,12 +5,15 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-MACHINE_DIR="$HOME/machine"
+MACHINE_DIR="$SUDO_HOME/machine"
 USER=$(users | cut -d\  -f1)
 
-mv ~/.bashrc ~/.bashrc_original
-
-ln -s $MACHINE_DIR/.vim $MACHINE_DIR/.vimrc $MACHINE_DIR/.bashrc $MACHINE_DIR/.bash_aliases $MACHINE_DIR/.config $HOME
+FILES_TO_LINK="$MACHINE_DIR/.vim $MACHINE_DIR/.vimrc $MACHINE_DIR/.bashrc $MACHINE_DIR/.bash_aliases $MACHINE_DIR/.config"
+for F in $FILES_TO_LINK; do
+	BASENAME=$(basename $F)
+	mv $SUDO_HOME/$BASENAME $SUDO_HOME/$BASENAME.original
+	ls -s $F $SUDO_HOME/$BASENAME
+done;
 
 pacman --noconfirm -Syu cherrytree
 pacman --noconfirm -S firefox
