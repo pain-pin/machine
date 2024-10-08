@@ -193,3 +193,8 @@ ctagss () {
 }
 
 alias ccc="cc -Wall -Wextra -Werror"
+
+ulog_sort () {
+	sudo grep -Eo "MAC.*DST=[^ ]*" /var/log/ulogd.syslogemu  | sort | uniq -c | sort -n
+
+}

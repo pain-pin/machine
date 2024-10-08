@@ -76,3 +76,6 @@ export IPV6_REG="(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1
 export IP_REG="($IPV4_REG)|($IPV6_REG)"
 export YES_REG='\$y\$[./A-Za-z0-9]+\$[./A-Za-z0-9]{,86}\$[./A-Za-z0-9]{43}'
 #export OPENAI_API_KEY="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"
+
+# Added by LM Studio CLI tool (lms)
+export PATH="$PATH:/home/presk0/.cache/lm-studio/bin"
