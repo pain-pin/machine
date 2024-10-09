@@ -74,6 +74,8 @@ cp $(find src/yay* -name yay) ~/yay.tmp
 cd ..
 rm -rf yay
 
+bufsize=150000
+file="/var/log/iptables_group1.log"
 cd ~
 git clone git@github.com:presk0/perso.git
 cd perso
