@@ -66,7 +66,7 @@ set -o vi
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
 
-export PS1="\u@\H-\D{%y%m%d}-\t-\w\n=>"
+export PS1="\n\u@\H-\D{%y%m%d}-\t-\w\n=>"
 #export PS1=">"
 
 export OCTET="(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)"
