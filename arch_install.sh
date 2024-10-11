@@ -17,6 +17,7 @@ done;
 
 pacman --noconfirm -Syu cherrytree
 pacman --noconfirm -S firefox
+pacman --noconfirm -S unzip
 pacman --noconfirm -S redshift
 pacman --noconfirm -S vlc
 pacman --noconfirm -S tcpdump
