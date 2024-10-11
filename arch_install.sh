@@ -35,6 +35,7 @@ pacman --noconfirm -S gdb
 pacman --noconfirm -S docker
 pacman --noconfirm -S go
 pacman --noconfirm -S makepkg
+pacman --noconfirm -S tree
 mandb #rend possible la commande apropos
 #pacman -S zram-generator
 #pacman -S cuda
