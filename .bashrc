@@ -66,7 +66,18 @@ set -o vi
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
 
-export PS1="\n\u@\H-\D{%y%m%d}-\t-\w\n=>"
+#export PS1="\n\u@\H-\D{%y%m%d}-\t-\w\n=>"
+# Couleurs
+USER_COLOR="\[\e[1;32m\]"   # Vert clair pour l'utilisateur
+HOST_COLOR="\[\e[1;34m\]"   # Bleu clair pour l'hôte
+DATE_COLOR="\[\e[1;33m\]"   # Jaune pour la date
+TIME_COLOR="\[\e[1;36m\]"   # Cyan pour l'heure
+DIR_COLOR="\[\e[1;35m\]"    # Magenta clair pour le répertoire
+RESET_COLOR="\[\e[0m\]"     # Réinitialisation des couleurs
+
+# Prompt
+PS1="${USER_COLOR}\n\u${RESET_COLOR}@${HOST_COLOR}\H${RESET_COLOR}-${DATE_COLOR}\D{%y%m%d}${RESET_COLOR}-${TIME_COLOR}\t${RESET_COLOR}-${DIR_COLOR}\w${RESET_COLOR}\n=> "
+
 #export PS1=">"
 
 export OCTET="(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)"

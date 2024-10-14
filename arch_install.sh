@@ -12,7 +12,7 @@ FILES_TO_LINK="$MACHINE_DIR/.vim $MACHINE_DIR/.vimrc $MACHINE_DIR/.bashrc $MACHI
 for F in $FILES_TO_LINK; do
 	BASENAME=$(basename $F)
 	mv $SUDO_HOME/$BASENAME $SUDO_HOME/$BASENAME.original
-	ls -s $F $SUDO_HOME/$BASENAME
+	ln -s $F $SUDO_HOME/$BASENAME
 done;
 
 pacman --noconfirm -Syu cherrytree
