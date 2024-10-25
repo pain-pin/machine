@@ -231,10 +231,10 @@ iptables_update () {
 	F_PERSISTENT="/etc/iptables.rules"
 	FILE="$(find /home -name 'iptables_script.sh' | head -1)"
 	F_TMP=/etc/iptables.rules.backup
-	cp $F_PERSISTENT > $F_TMP
+	sudo cp $F_PERSISTENT > $F_TMP
 	vim + $FILE
 	sudo ./$FILE -f ip_to_ban.txt -r
-	sudo ip_tables-save > $HOME/tmp
+	sudo iptables-save > $HOME/tmp
 	sudo mv $HOME/tmp $F_PERSISTENT
 }
 
