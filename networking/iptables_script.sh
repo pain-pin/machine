@@ -23,21 +23,30 @@ if [ -n "$RESET" ]; then
     ## reset rules
     iptables -F
     iptables -X
-    iptables -N logdrop
-    iptables -I logdrop -j DROP
-    iptables -I logdrop -m limit --limit 15/m --limit-burst 50 -j NFLOG --nflog-group 1 --nflog-prefix "iptables"
-    iptables -P INPUT DROP
-    iptables -P FORWARD DROP
-    iptables -P OUTPUT ACCEPT
+    iptables -t nat -F
+	iptables -t nat -X
+	iptables -t mangle -F
+	iptables -t mangle -X
+	iptables -t raw -F
+	iptables -t raw -X
+	iptables -t security -F
+	iptables -t security -X
 fi
 
 if [ -n "$SIMPLE" ]; then
     # Définir les politiques par défaut
-    iptables -A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+    iptables -P INPUT DROP
+    iptables -P FORWARD DROP
+    iptables -P OUTPUT ACCEPT
+    iptables -N logdrop
+    # Ajouter les règles spécifiques
+    iptables -A logdrop -m limit --limit 15/m --limit-burst 50 -j NFLOG --nflog-prefix "logdrop: "
+    iptables -A logdrop -j DROP
     iptables -A INPUT -p icmp -j logdrop
+    iptables -A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
     iptables -A INPUT -i lo -j ACCEPT
-    iptables -A INPUT -p tcp -j logdrop
-    iptables -A INPUT -p udp -j logdrop
+    #iptables -A INPUT -p tcp -j logdrop
+    #iptables -A INPUT -p udp -j logdrop
     iptables -A INPUT -j logdrop
 fi
 
@@ -46,13 +55,13 @@ if [ -f "$FILE_IN" ]; then
         #ignore les lignes contenant #
         if [ -z "$(echo "$IP" | grep -E '#')" ]; then
             if [ -n "$LOG" -a -n "$DROP" ] ; then
-                iptables -A INPUT -s $IP -j logdrop
-                iptables -A OUTPUT -d $IP -j logdrop
+                iptables -I INPUT -s $IP -j logdrop
+                iptables -I OUTPUT -d $IP -j logdrop
                 continue
             fi
             if [ -n "$LOG" ] ; then
-                iptables -A INPUT -s $IP -j NFLOG --nflog-group 1 --nflog-prefix "iptables"
-                iptables -A OUTPUT -d $IP -j NFLOG --nflog-group 1 --nflog-prefix "iptables"
+                iptables -I INPUT -s $IP -j NFLOG --nflog-prefix "input: "
+                iptables -I OUTPUT -d $IP -j NFLOG --nflog-prefix "output: "
             fi
             if [ -n "$DROP" ] ; then
                 iptables -A INPUT -s $IP -j DROP -m comment --comment "banned IP going in"
@@ -64,5 +73,4 @@ fi
 
 if [ -n "$UPDATE" ] ; then
     iptables-save > "$IPTABLES_FILE"
-    systemctl restart ulogd
 fi
