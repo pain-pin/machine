@@ -68,15 +68,27 @@ sphynx () {
 }
 
 basha () {
-	vim + ~/.bash_aliases
-	source ~/.bashrc
-	#cp ~/.bash_aliases ~/machine/.bash_aliases
+	SOURCE="$HOME/.bashrc"
+	FILE="$(find /home -name '.bash_aliases'| head -1)"
+	F_PATH="$(dirname $FILE)"
+	vim + $FILE
+	source $SOURCE
+	cd "$F_PATH"
+	git pull
+	git add $FILE && git commit -m "something new in $(basename $FILE)" && git push
+	cd -
 }
 
 brc () {
-	vim + ~/.bashrc
-	source ~/.bashrc
-	#cp ~/.bash_aliases ~/machine/.bash_aliases
+	SOURCE="$HOME/.bashrc"
+	FILE="$(find /home -name '.bashrc'| head -1)"
+	F_PATH="$(dirname $FILE)"
+	vim + $FILE
+	source $SOURCE
+	cd "$F_PATH"
+	git pull
+	git add $FILE && git commit -m "something new in $(basename $FILE)" && git push
+	cd -
 }
 
 vrc () {
@@ -198,3 +210,17 @@ ulog_sort () {
 	sudo grep -Eo "MAC.*DST=[^ ]*" /var/log/ulogd.syslogemu  | sort | uniq -c | sort -n
 
 }
+
+sed_in_place () {
+	TMP="/tmp/sed_in_place.tmp"
+	REG=$1
+	CHANGE=$2
+	for F in $(find . ) ; do
+		if [ -n "$(file $F | grep 'ASCII text')" ] ; then
+			gawk -v reg="$REG" -v change="$CHANGE" '{gsub(reg, change); print $0}' "$F" > $TMP
+			chmod --reference=$F $TMP
+			mv -f TMP $F
+		fi
+	done
+}
+
