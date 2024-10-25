@@ -224,3 +224,16 @@ sed_in_place () {
 	done
 }
 
+git@github.com:presk0/minishell42.git
+
+iptables_update () {
+	F_PATH="$(dirname $FILE)"
+	F_PERSISTENT="/etc/iptables.rules"
+	FILE="$(find /home -name 'iptables_script.sh' | head -1)"
+	F_TMP=/etc/iptables.rules.backup
+	sudo cp $F_PERSISTENT > $F_TMP
+	vim + $FILE
+	sudo ip_tables-save > ~/tmp
+	sudo ~/tmp	$F_PERSISTENT
+}
+
