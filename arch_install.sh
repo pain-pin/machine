@@ -8,13 +8,12 @@ fi
 #MACHINE_DIR="$SUDO_HOME/machine"
 #USER=$(users | cut -d\  -f1)
 
-#FILES_TO_LINK="$MACHINE_DIR/.vim $MACHINE_DIR/.vimrc $MACHINE_DIR/.bashrc $MACHINE_DIR/.bash_aliases"
-#for F in $FILES_TO_LINK; do
-#	BASENAME=$(basename $F)
-#	mv $SUDO_HOME/$BASENAME $SUDO_HOME/$BASENAME.original
-#	ln -s $F $SUDO_HOME/$BASENAME
-#done;
-
+FILES_TO_LINK="$MACHINE_DIR/.vim $MACHINE_DIR/.vimrc $MACHINE_DIR/.bashrc $MACHINE_DIR/.bash_aliases"
+for F in $FILES_TO_LINK; do
+	BASENAME=$(basename $F)
+	mv $SUDO_HOME/$BASENAME $SUDO_HOME/$BASENAME.original
+	ln -s $F $SUDO_HOME/$BASENAME
+done;
 
 #pacman --noconfirm -Syu ulogd
 #NETWORKDIR="$MACHINE_DIR/networking"

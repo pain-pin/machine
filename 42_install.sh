@@ -1,12 +1,14 @@
 #!/usr/bin/bash
 MACHINE_DIR="$HOME/machine"
 
-rm -rf $HOME/.vim
-rm -rf $HOME/.vimrc
-ln -s $MACHINE_DIR/.bashrc $MACHINE_DIR/.vim $MACHINE_DIR/.vimrc $MACHINE_DIR/.42bashrc $MACHINE_DIR/.bash_aliases $MACHINE_DIR/.config $HOME
-for F in $(ls $MACHINE_DIR | grep "c[0-9]{2}") ; do ln -s $MACHINE_DIR/$F $HOME/$F ;done
+FILES_TO_LINK="$MACHINE_DIR/.vim $MACHINE_DIR/.vimrc $MACHINE_DIR/.bashrc $MACHINE_DIR/.bash_aliases"
+for F in $FILES_TO_LINK; do
+	BASENAME=$(basename $F)
+	mv $HOME/$BASENAME $HOME/$BASENAME.original
+	ln -s $F $HOME/$BASENAME
+done;
 
-chsh -s /usr/bin/bash
+#chsh -s /usr/bin/bash
 #echo '. ~/.bash_aliases' >> $HOME/.zshrc
 #echo '. ~/.bashrc' >> $HOME/.zshrc
 
