@@ -233,7 +233,7 @@ iptables_update () {
 	F_TMP=/etc/iptables.rules.backup
 	sudo cp $F_PERSISTENT > $F_TMP
 	vim + $FILE
-	sudo ./$FILE -f ip_to_ban.txt -r
+	sudo ./$FILE -s -f ip_to_ban.txt -r
 	sudo iptables-save > $HOME/tmp
 	sudo mv $HOME/tmp $F_PERSISTENT
 }
