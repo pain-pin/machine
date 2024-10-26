@@ -74,7 +74,9 @@ basha () {
 	vim + $FILE
 	source $SOURCE
 	cd "$F_PATH"
+	git diff
 	git pull
+	git diff
 	git add $FILE && git commit -m "something new in $(basename $FILE)" && git push
 	cd -
 }
@@ -86,15 +88,24 @@ brc () {
 	vim + $FILE
 	source $SOURCE
 	cd "$F_PATH"
+	git diff
 	git pull
+	git diff
 	git add $FILE && git commit -m "something new in $(basename $FILE)" && git push
 	cd -
 }
 
-vrc () {
-	vim + ~/.vimrc
-	source ~/.vimrc
-	#cp ~/.bash_aliases ~/machine/.bash_aliases
+brc () {
+	NAME=".vimrc"
+	FILE="$(find /home -name $NAME| head -1)"
+	F_PATH="$(dirname $FILE)"
+	vim + $FILE
+	cd "$F_PATH"
+	git diff
+	git pull
+	git diff
+	git add $FILE && git commit -m "something new in $(basename $FILE)" && git push
+	cd -
 }
 
 machine_install () {
