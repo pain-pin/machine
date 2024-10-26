@@ -224,7 +224,11 @@ sed_in_place () {
 	done
 }
 
-git@github.com:presk0/minishell42.git
+clone () {
+	PROJECT_NAME="$1"
+	git clone git@github.com:presk0/$PROJECT_NAME.git
+
+}
 
 iptables_update () {
 	F_PATH="$(dirname $FILE)"
