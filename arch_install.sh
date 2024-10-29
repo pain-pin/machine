@@ -25,6 +25,7 @@ done;
 
 pacman --noconfirm -S cherrytree
 pacman --noconfirm -S bc
+pacman --noconfirm -S ctags
 pacman --noconfirm -S firefox
 pacman --noconfirm -S unzip
 pacman --noconfirm -S redshift
