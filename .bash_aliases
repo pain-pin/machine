@@ -95,7 +95,7 @@ brc () {
 	cd -
 }
 
-brc () {
+vimrc () {
 	NAME=".vimrc"
 	FILE="$(find /home -name $NAME| head -1)"
 	F_PATH="$(dirname $FILE)"
@@ -253,3 +253,8 @@ iptables_update () {
 	sudo mv $HOME/tmp $F_PERSISTENT
 }
 
+install ()
+{
+	F_LOG="/tmp/last_pacman_output.log"
+	sudo pacman -S $@ | tee $FLOG
+}
