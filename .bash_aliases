@@ -237,3 +237,18 @@ francinette () {
 	bash $HOME/francinette/tester.sh
 }
 
+sedi () {
+	if [ $# -lt 3 ]; then
+        echo "Usage: sedi <motif> <remplacement> <fichiers...>"
+        return 1
+    fi
+	REG="$1"
+	shift
+	NEW_WD="$1"
+	shift
+	FILES="$@"
+	for FILE in ${FILES} ; do
+		sed "s/$REG/$NEW_WD/g" $FILE
+		echo "$FILE"
+	done
+}
