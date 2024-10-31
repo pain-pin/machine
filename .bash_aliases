@@ -72,8 +72,9 @@ basha () {
 	vim + ~/.bash_aliases
 	source ~/.bashrc
 	cd $MACHINE
+	git pull
 	git add .bash_aliases && git commit -m "something new in bash_aliases" && git push
-	dc -
+	cd -
 	#cp ~/.bash_aliases ~/machine/.bash_aliases
 }
 
