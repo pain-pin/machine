@@ -68,8 +68,12 @@ sphynx () {
 }
 
 basha () {
+	MACHINE=~/machine
 	vim + ~/.bash_aliases
 	source ~/.bashrc
+	cd $MACHINE
+	git add .bash_aliases && git commit -m "something new in bash_aliases" && git push
+	dc -
 	#cp ~/.bash_aliases ~/machine/.bash_aliases
 }
 
@@ -81,7 +85,7 @@ brc () {
 
 vrc () {
 	vim + ~/.vimrc
-	source ~/.vimrc
+	#source ~/.vimrc
 	#cp ~/.bash_aliases ~/machine/.bash_aliases
 }
 
@@ -192,9 +196,43 @@ ctagss () {
 	ctags -R --c-kinds=+p --fields=+S $@
 }
 
-alias ccc="cc -Wall -Wextra -Werror"
+alias ccc="cc -Wall -Wextra -Werror $@"
 
 ulog_sort () {
 	sudo grep -Eo "MAC.*DST=[^ ]*" /var/log/ulogd.syslogemu  | sort | uniq -c | sort -n
 
 }
+
+header_awk () {
+	TMP="/tmp/header.tmp"
+	echo '
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: supersko <ndionis@student.42mulhouse.fr>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/02 18:03:26 by supersko          #+#    #+#             */
+/*   Updated: 2024/10/16 15:05:56 by nidionis         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef X_H
+# define X_H
+
+# include <stdlib.h>
+# include <unistd.h>
+' >> $TMP
+	echo >> $TMP
+	awk '/^[a-z].*\)$/{ print $0";"}' *.c | grep -v main | grep -v static | sed "s/int\t/int\t\t/g" >> $TMP
+	echo >> $TMP
+	echo "#endif" >> $TMP
+	cat $TMP
+	rm $TMP
+}
+
+francinette () {
+	bash $HOME/francinette/tester.sh
+}
+
