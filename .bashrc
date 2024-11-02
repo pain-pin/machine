@@ -63,8 +63,9 @@ fi
 
 set -o vi
 
-bind 'set show-all-if-ambiguous on'
-bind 'TAB:menu-complete'
+#bind 'set show-all-if-ambiguous on'
+#bind 'TAB:menu-complete'
+
 
 #export PS1="\n\u@\H-\D{%y%m%d}-\t-\w\n=>"
 # Couleurs
@@ -77,7 +78,6 @@ RESET_COLOR="\[\e[0m\]"     # Réinitialisation des couleurs
 
 # Prompt
 PS1="${USER_COLOR}\n\u${RESET_COLOR}@${HOST_COLOR}\H${RESET_COLOR}-${DATE_COLOR}\D{%y%m%d}${RESET_COLOR}-${TIME_COLOR}\t${RESET_COLOR}-${DIR_COLOR}\w${RESET_COLOR}\n=> "
-
 #export PS1=">"
 
 export OCTET="(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)"
@@ -90,3 +90,6 @@ export YES_REG='\$y\$[./A-Za-z0-9]+\$[./A-Za-z0-9]{,86}\$[./A-Za-z0-9]{43}'
 
 # Added by LM Studio CLI tool (lms)
 export PATH="$PATH:/home/presk0/.cache/lm-studio/bin"
+
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
