@@ -258,3 +258,19 @@ install ()
 	F_LOG="/tmp/last_pacman_output.log"
 	sudo pacman -S $@ | tee $FLOG
 }
+
+save_cmd ()
+{
+	FILE=journal_$(date +%F_%T)_$1.txt
+	DIR=$HOME/machine
+	USER=$(whoami)
+	HOST=$(hostname)
+	DATETIME=$(date +"%Y%m%d-%H:%M:%S")
+
+	echo "$DATETIME-$USER@$HOST-$PWD" >> $DIR/$FILE
+	echo "" >> $DIR/$FILE
+	LAST_CMD=$(history | awk '{$1=$2=$3="" ; print $0}' | tail -2 | head -1)
+	echo "cmd: ${LAST_CMD}">> $DIR/$FILE
+	echo "" >> $DIR/$FILE
+	echo "$LAST_CMD" | bash >> $DIR/$FILE
+}
