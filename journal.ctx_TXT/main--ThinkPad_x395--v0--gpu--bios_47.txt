@@ -1,0 +1,17 @@
+##### bios
+from journalctl
+Aug 29 09:13:42 preskhost kernel: [drm] BIOS signature incorrect 0 0
+
+from chat GPT
+1. BIOS Signature Incorrect:
+• The line drm] BIOS signature incorrect 0 0 suggests that the driver is attempting to validate the GPU BIOS signature, but it encountered an unexpected or incorrect value. This may not always indicate a serious issue, but it could potentially cause problems with the GPU initialization or functionality.
+
+
+
+Possible Causes for "BIOS Signature Incorrect":
+◇ Non-critical Warning: In many cases, such a message may just be a warning indicating that the BIOS signature does not match what the driver expects. It may or may not impact functionality.
+◇ Incorrect or Corrupted GPU BIOS: If the GPU BIOS is corrupted or incompatible, the driver may not fully initialize the GPU correctly.
+◇ Driver Issue: A mismatch between the driver version and the GPU firmware could cause such a message. This could be resolved by updating the kernel and GPU drivers.
+
+
+

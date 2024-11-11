@@ -1,0 +1,12 @@
+#### vlc
+aucuns sons, 
+VLC media player 3.0.21 Vetinari (revision 3.0.21-0-gdd8bfdbabe8)
+[00005fabbcffa180] vlcpulse audio output error: PulseAudio server connection failure: Connection refused
+[00005fabbd0a22f0] dbus interface error: Failed to connect to the D-Bus session daemon: Failed to connect to socket /run/user/1000/bus: Connection refused
+[00005fabbd0a22f0] main interface error: no suitable interface module
+[00005fabbcf43520] main libvlc error: interface "dbus,none" initialization failed
+[00005fabbcf43520] main libvlc: Running vlc with the default interface. Use 'cvlc' to use vlc without interface.
+[00005fabbcffa180] alsa audio output error: cannot open ALSA device "default": Host is down
+[00005fabbcffa180] main audio output error: module not functional
+[00007abc34c15200] main decoder error: failed to create audio output
+

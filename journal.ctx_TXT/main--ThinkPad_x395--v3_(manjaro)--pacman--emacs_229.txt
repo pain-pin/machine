@@ -1,0 +1,55 @@
+##### emacs
+presk0@ordi-241031-00:19:02-~ 
+=> sudo pacman -S emacs 
+[sudo] password for presk0:  
+resolving dependencies... 
+looking for conflicting packages... 
+ 
+Packages (5) libotf-0.9.16-5  m17n-db-1.8.5-1  m17n-lib-1.8.4-3 
+             tree-sitter-0.23.0-1  emacs-29.4-2 
+ 
+Total Download Size:    46,11 MiB 
+Total Installed Size:  128,62 MiB 
+ 
+:: Proceed with installation? [Y/n] Y 
+:: Retrieving packages... 
+ tree-sitter-0.23....    99,9 KiB  22,1 KiB/s 00:05 [##########################] 100% 
+ m17n-lib-1.8.4-3-...   322,0 KiB  62,4 KiB/s 00:05 [##########################] 100% 
+ libotf-0.9.16-5-x...    84,4 KiB   164 KiB/s 00:01 [##########################] 100% 
+ m17n-db-1.8.5-1-any   1640,1 KiB   209 KiB/s 00:08 [##########################] 100% 
+ emacs-29.4-2-x86_64     44,0 MiB  1160 KiB/s 00:39 [##########################] 100% 
+ Total (5/5)             46,1 MiB  1197 KiB/s 00:39 [##########################] 100% 
+error: failed retrieving file 'tree-sitter-0.23.0-1-x86_64.pkg.tar.zst' from mirrors.
+ft.uam.es : SSL certificate problem: unable to get local issuer certificate 
+error: failed retrieving file 'emacs-29.4-2-x86_64.pkg.tar.zst' from mirrors.ft.uam.e
+s : SSL certificate problem: unable to get local issuer certificate 
+error: failed retrieving file 'm17n-lib-1.8.4-3-x86_64.pkg.tar.zst' from mirrors.ft.u
+am.es : SSL certificate problem: unable to get local issuer certificate 
+warning: too many errors from mirrors.ft.uam.es, skipping for the remainder of this t
+ransaction 
+error: failed retrieving file 'm17n-db-1.8.5-1-any.pkg.tar.zst' from mirrors.ft.uam.e
+s : SSL certificate problem: unable to get local issuer certificate 
+(5/5) checking keys in keyring                      [##########################] 100% 
+(5/5) checking package integrity                    [##########################] 100% 
+(5/5) loading package files                         [##########################] 100% 
+(5/5) checking for file conflicts                   [##########################] 100% 
+(5/5) checking available disk space                 [##########################] 100% 
+:: Processing package changes... 
+(1/5) installing libotf                             [##########################] 100% 
+(2/5) installing tree-sitter                        [##########################] 100% 
+(3/5) installing m17n-db                            [##########################] 100% 
+(4/5) installing m17n-lib                           [##########################] 100% 
+Optional dependencies for m17n-lib 
+    anthy: to use the anthy input method 
+    ispell: to use the ispell input method 
+(5/5) installing emacs                              [##########################] 100% 
+:: Running post-transaction hooks... 
+(1/5) Reloading user manager configuration... 
+(2/5) Arming ConditionNeedsUpdate... 
+(3/5) Updating icon theme caches... 
+(4/5) Updating the info directory file... 
+(5/5) Updating the desktop file MIME type cache... 
+
+ 
+
+

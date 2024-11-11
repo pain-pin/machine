@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>hack cmake 3.30.5  to 3.30.4</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>hack cmake 3.30.5  to 3.30.4</h1><br/><p>presk0@pote-241011-16:00:33-~/Downloads/cmake-3.30.5</p><p>=&gt;for F in $(find . ) ; do if [ -n &quot;$(file $F | grep &#39;ASCII text&#39;)&quot; ] ; then gawk &#39;{gsub(/3\.30\.5/, &quot;3\.30\.4&quot;) ; print $0}&#39; &quot;$F&quot; &gt; /tmp/qq ; chmod --reference=$F /tmp/qq ; mv -f /tmp/qq $F ; fi ; done</p></div>
+</body>
+</html>

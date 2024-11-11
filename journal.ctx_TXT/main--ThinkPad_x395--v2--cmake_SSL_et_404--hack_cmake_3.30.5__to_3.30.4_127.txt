@@ -1,0 +1,4 @@
+##### hack cmake 3.30.5  to 3.30.4
+presk0@pote-241011-16:00:33-~/Downloads/cmake-3.30.5
+=>for F in $(find . ) ; do if [ -n "$(file $F | grep 'ASCII text')" ] ; then gawk '{gsub(/3\.30\.5/, "3\.30\.4") ; print $0}' "$F" > /tmp/qq ; chmod --reference=$F /tmp/qq ; mv -f /tmp/qq $F ; fi ; done
+

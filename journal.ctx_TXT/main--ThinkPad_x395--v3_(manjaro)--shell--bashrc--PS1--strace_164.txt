@@ -1,0 +1,33 @@
+####### strace
+    ~  strace -e openat bash -i 2>&1 | grep "\.bash"          INT ✘  1m 10s  
+
+openat(AT_FDCWD, "/etc/bash.bashrc", O_RDONLY) = 3
+openat(AT_FDCWD, "/home/presk0/.bashrc", O_RDONLY) = 3
+openat(AT_FDCWD, "/home/presk0/.bash_history", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/home/presk0/.bash_aliases", O_RDONLY) = 3
+
+    ~  strace -e openat bash -i                             INT|0 ✔  1m 57s  
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/usr/lib/libreadline.so.8", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/usr/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/usr/lib/libncursesw.so.6", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/dev/tty", O_RDWR|O_NONBLOCK) = 3
+openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/usr/lib/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/gconv/gconv-modules", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/usr/lib/gconv/gconv-modules.d", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+openat(AT_FDCWD, "/usr/lib/gconv/gconv-modules.d/gconv-modules-extra.conf", O_RDONLY|O_CLOEXEC) = 4
+openat(AT_FDCWD, "/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/etc/passwd", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/usr/share/terminfo/x/xterm-256color", O_RDONLY) = 3
+openat(AT_FDCWD, "/etc/bash.bashrc", O_RDONLY) = 3
+openat(AT_FDCWD, "/home/presk0/.bashrc", O_RDONLY) = 3
+openat(AT_FDCWD, "/home/presk0/.bash_history", O_RDONLY) = -1 ENOENT (No such file or directory)
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=27944, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+openat(AT_FDCWD, "/home/presk0/.bash_aliases", O_RDONLY) = 3
+openat(AT_FDCWD, "/home/presk0/.history", O_RDONLY) = 3
+openat(AT_FDCWD, "/home/presk0/.history", O_RDONLY) = 3
+openat(AT_FDCWD, "/home/presk0/.inputrc", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/inputrc", O_RDONLY) = 3
+
+

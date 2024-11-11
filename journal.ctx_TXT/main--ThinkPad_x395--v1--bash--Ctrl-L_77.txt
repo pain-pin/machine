@@ -1,0 +1,7 @@
+##### Ctrl-L
+doesn't clear the terminals (terminator and the original)
+
+presk0@pote-241002-11:07:41-~/machine/networking
+=>^L^L^L
+
+

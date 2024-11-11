@@ -1,0 +1,34 @@
+##### /etc/shadow
+note passwords were:
+presk0: freRO)T
+root: GAgateu7
+
+presk0@pote-241009-14:48:34-~/.config
+=>sudo cat /etc/shadow 
+root:$y$j9T$uVAmO/Ff/tA08iOCvvqqk0$Wm.BTJcTWaoauq9/88rEJX5dM5HDEeLoU5E6AYoE.PC:20002::::::
+bin:!*:19998::::::
+daemon:!*:19998::::::
+mail:!*:19998::::::
+ftp:!*:19998::::::
+http:!*:19998::::::
+nobody:!*:19998::::::
+dbus:!*:19998::::::
+systemd-coredump:!*:19998::::::
+systemd-network:!*:19998::::::
+systemd-oom:!*:19998::::::
+systemd-journal-remote:!*:19998::::::
+systemd-resolve:!*:19998::::::
+systemd-timesync:!*:19998::::::
+tss:!*:19998::::::
+uuidd:!*:19998::::::
+alpm:!*:19998::::::
+presk0:$y$j9T$R3NrNA4/FWOPPT3QMa1AN0$ZB6wR7Gyqcik7P4.r7HJRmvCb0D52RWUGISg.E4mrkB:19998:0:99999:7:::
+avahi:!*:19998::::::
+git:!*:19998::::::
+polkitd:!*:19998::::::
+colord:!*:19998::::::
+geoclue:!*:19998::::::
+rtkit:!*:19998::::::
+lightdm:!*:19998::::::
+
+

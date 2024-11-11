@@ -1,0 +1,9 @@
+######## mo private/ public key
+presk0@ordi-241025-17:09:42-~/machine 
+=> la ~/.ssh/ 
+known_hosts 
+ 
+presk0@ordi-241025-17:10:09-~/machine 
+=> cat ~/.ssh/known_hosts 
+github.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl 
+

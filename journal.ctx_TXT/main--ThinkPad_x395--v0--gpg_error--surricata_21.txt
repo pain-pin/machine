@@ -1,0 +1,21 @@
+##### surricata
+  -> Downloading suricata-7.0.5.tar.gz.sig...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:  0     0    0     0    0     0      0      0 --:--:-- --:--:100   566  100   566    0     0    821      0 --:--:-- --:--:-- --:--:--   821
+  -> Found suricata-update.service
+  -> Found suricata-update.timer
+==> Validating source files with sha256sums...
+    suricata-7.0.5.tar.gz ... Passed
+    suricata-7.0.5.tar.gz.sig ... Skipped
+    suricata-update.service ... Passed
+    suricata-update.timer ... Passed
+==> Verifying source file signatures with gpg...
+    suricata-7.0.5.tar.gz ... FAILED (unknown public key 2BA9C98CCDF1E93A)
+==> ERROR: One or more PGP signatures could not be verified!
+[presko@preskhost suricata]$ ls
+PKGBUILD                   suricata.install
+src                        suricata-update.service
+suricata-7.0.5.tar.gz      suricata-update.timer
+suricata-7.0.5.tar.gz.sig
+

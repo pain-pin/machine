@@ -1,0 +1,21 @@
+####### mirrors
+presk0@ordi-241101-14:35:24-~ 
+=> grep -iA 1 canada /etc/pacman.d/mirrorlist  
+## Country : Canada 
+Server = https://muug.ca/mirror/manjaro/stable/$repo/$arch 
+-- 
+## Country : Canada 
+Server = https://mirror.csclub.uwaterloo.ca/manjaro/stable/$repo/$arch 
+-- 
+## Country : Canada 
+Server = https://mirror.xenyth.net/manjaro/stable/$repo/$arch 
+
+ 
+presk0@ordi-241101-14:39:33-~ 
+=> grep -iB 1 irrors2 /etc/pacman.d/mirrorlist  
+## Country : Global 
+Server = https://mirrors2.manjaro.org/stable/$repo/$arch 
+
+ 
+
+

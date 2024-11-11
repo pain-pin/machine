@@ -1,0 +1,33 @@
+##### last logs
+02:05:40 systemd: Starting systemd-suspend.service - System Suspend...
+02:05:39 rtkit-daemon: Successfully made thread 2378 of process 2365 (/usr/bin/gnome-shell) owned by '1000' RT at priority 20.
+02:05:38 NetworkManager: <info>  [1713657938.2310] manager: NetworkManager state is now ASLEEP
+02:05:38 systemd-logind: The system will suspend now!
+01:51:07 kernel: BPF prog-id=104 op=UNLOAD
+01:51:07 kernel: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-hostnamed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+01:51:07 systemd: systemd-hostnamed.service: Deactivated successfully.
+01:50:47 kernel: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=NetworkManager-dispatcher comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+01:50:47 systemd: NetworkManager-dispatcher.service: Deactivated successfully.
+01:50:42 kernel: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-rfkill comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+01:50:42 systemd: systemd-rfkill.service: Deactivated successfully.
+01:50:37 systemd-resolve: System hostname changed to 'fedora'.
+01:50:37 systemd-hostnam: Hostname set to <fedora> (transient)
+01:50:37 kernel: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-hostnamed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+01:50:37 systemd: Started systemd-hostnamed.service - Hostname Service.
+01:50:37 chronyd: Source 51.68.44.27 offline
+01:50:37 kernel: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=NetworkManager-dispatcher comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+01:50:37 systemd: Started NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service.
+01:50:37 kernel: BPF prog-id=106 op=LOAD
+01:50:37 wpa_supplicant: nl80211: deinit ifname=wlp3s0 disabled_11b_rates=0
+01:50:37 systemd: Starting NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service...
+01:50:37 wpa_supplicant: wlp3s0: CTRL-EVENT-DSCP-POLICY clear_all
+01:50:37 firewalld: NETFILTER_CFG table=firewalld:8 family=1 entries=26 op=nft_unregister_rule pid=1328 subj=system_u:system_r:firewalld_t:s0 comm="firewalld"
+01:50:37 kernel: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-rfkill comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+01:50:37 systemd: Started systemd-rfkill.service - Load/Save RF Kill Switch Status.
+01:50:37 wpa_supplicant: nl80211: deinit ifname=p2p-dev-wlp3s0 disabled_11b_rates=0
+01:50:37 NetworkManager: <info>  [1713657037.1359] device (p2p-dev-wlp3s0): state change: disconnected -> unavailable (reason 'supplicant-failed', sys-iface-state: 'managed')
+01:50:37 systemd-resolve: wlp3s0: Bus client reset DNS server list.
+01:50:37 systemd: Starting systemd-rfkill.service - Load/Save RF Kill Switch Status...
+01:50:37 systemd-resolve: wlp3s0: Bus client reset search domain list.
+
+

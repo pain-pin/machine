@@ -1,10 +1,3 @@
-compile_arduino () {
-	FQBN='arduino:avr:uno'
-	DEV='/dev/ttyACM0'
-	arduino-cli compile --fqbn $FQBN $1
-	arduino-cli upload -p $DEV --fqbn $FQBN $1
-}
-
 #convert mp3 to wav
 to_wav () {
 	OUTDIR_NAME="wav_files"
@@ -29,10 +22,6 @@ to_mp3 () {
 	done
 }
 
-install_machine () {
-	cp -ir machine/* ~
-}
-
 cexec () {
 	BASE=($@)
 	NAME="${BASE%.*}"
@@ -45,26 +34,6 @@ cdebug () {
 	NAME="${BASE%.*}"
 	FLAGS="-g3"
 	cc $BASE $FLAGS -o "$NAME" && gdb "$NAME" && rm $NAME
-}
-
-pipe () {
-	DIR=$HOME
-	for prog in "$@" ; do
-		ENV_NAME=".env_$prog"
-		python3 -m venv "$DIR/$ENV_NAME"
-		source $DIR/$ENV_NAME/bin/activate
-		pip3 install -U $prog
-	done
-	source ~/.bashrc
-}
-
-#speech to text
-sphynx () {
-	for FILE_IN in "$@" ; do
-		NAME="${FILE_IN%.*}.txt"
-		#echo $FILE_IN
-		pocketsphinx_continuous -infile $FILE_IN > $NAME #phonetics : -lm -allphone ?
-	done
 }
 
 basha () {
@@ -127,24 +96,6 @@ arch_install () {
 	git commit -m "$FILE install mofified"
 	git push
 	cd -
-}
-
-2text () {
-	if [ -z $1 ] ; then
-		echo "usage: $0 ."
-		return 1
-	fi
-	LOC=$1/
-	TEXT_FOLD="new_text"
-	mkdir "$TEXT_FOLD"
-	for FILE in $LOC*\.* ; do
-		BASE="${FILE#$LOC}"
-		BASE="${BASE%.*}"
-		whisper --language fr $FILE > "$TEXT_FOLD/$BASE.txt"
-		#cd $TEXT_FOLD
-		#rm "$BASE.json" "$BASE.srt" "$BASE.tsv" "$BASE.vtt"
-		#cd -
-	done
 }
 
 netstat_tunlp () {
@@ -238,7 +189,6 @@ sed_in_place () {
 clone () {
 	PROJECT_NAME="$1"
 	git clone git@github.com:presk0/$PROJECT_NAME.git
-
 }
 
 iptables_update () {
@@ -269,7 +219,7 @@ save_cmd ()
 
 	echo "$DATETIME-$USER@$HOST-$PWD" >> $DIR/$FILE
 	echo "" >> $DIR/$FILE
-	LAST_CMD=$(history | awk '{$1=$2=$3="" ; print $0}' | tail -2 | head -1)
+	LAST_CMD=$(history 2 | awk '{$1=$2=$3="" ; print $0}' | head -1)
 	echo "cmd: ${LAST_CMD}">> $DIR/$FILE
 	echo "" >> $DIR/$FILE
 	echo "$LAST_CMD" | bash >> $DIR/$FILE

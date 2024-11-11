@@ -1,0 +1,7 @@
+##### check256sum ok
+SHA256: b72dd6ffef7507f8b7cddd7c69966841650ba0f82c29a318cb2d182eb3fcb1db
+
+[presk0@pote Downloads]$ sha256sum archlinux-2024.10.01-x86_64.iso
+b72dd6ffef7507f8b7cddd7c69966841650ba0f82c29a318cb2d182eb3fcb1db  archlinux-2024.10.01-x86_64.iso
+
+

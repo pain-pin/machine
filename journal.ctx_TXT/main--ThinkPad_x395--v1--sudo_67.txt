@@ -1,0 +1,9 @@
+#### sudo
+bug : 
+sudo tres long (ex: sudo ls, dure plusieurs dizaines de secondes)
+mot de passe de l'utilisateur presk0 impossible a valider
+
+apres un log out, pas de fenetre pour le log in
+
+
+

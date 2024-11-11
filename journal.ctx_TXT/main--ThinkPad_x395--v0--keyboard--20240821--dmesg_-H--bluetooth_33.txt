@@ -1,0 +1,124 @@
+####### bluetooth
+[presko@preskhost ~]$ sudo dmesg | grep -i bluetooth
+[    1.200811] thinkpad_acpi: rfkill switch tpacpi_bluetooth_sw: radio is unblocked
+[    5.764100] Bluetooth: Core ver 2.22
+[    5.764132] NET: Registered PF_BLUETOOTH protocol family
+[    5.764136] Bluetooth: HCI device and connection manager initialized
+[    5.764142] Bluetooth: HCI socket layer initialized
+[    5.764146] Bluetooth: L2CAP socket layer initialized
+[    5.764152] Bluetooth: SCO socket layer initialized
+[    5.951377] Bluetooth: hci0: Bootloader revision 0.1 build 42 week 52 2015
+[    5.955395] Bluetooth: hci0: Device revision is 2
+[    5.955401] Bluetooth: hci0: Secure boot is enabled
+[    5.955403] Bluetooth: hci0: OTP lock is enabled
+[    5.955405] Bluetooth: hci0: API lock is enabled
+[    5.955406] Bluetooth: hci0: Debug lock is disabled
+[    5.955408] Bluetooth: hci0: Minimum firmware build 1 week 10 2014
+[    5.960976] Bluetooth: hci0: Found device firmware: intel/ibt-18-16-1.sfi
+[    5.960997] Bluetooth: hci0: Boot Address: 0x40800
+[    5.961000] Bluetooth: hci0: Firmware Version: 201-12.24
+[    7.262360] Bluetooth: hci0: Waiting for firmware download to complete
+[    7.263346] Bluetooth: hci0: Firmware loaded in 1271839 usecs
+[    7.263406] Bluetooth: hci0: Waiting for device to boot
+[    7.280367] Bluetooth: hci0: Device booted in 16590 usecs
+[    7.280478] Bluetooth: hci0: Malformed MSFT vendor event: 0x02
+[    7.280773] Bluetooth: hci0: Found Intel DDC parameters: intel/ibt-18-16-1.ddc
+[    7.288375] Bluetooth: hci0: Applying Intel DDC parameters completed
+[    7.292373] Bluetooth: hci0: Firmware revision 0.1 build 201 week 12 2024
+[    7.300378] Bluetooth: hci0: HCI LE Coded PHY feature bit is set, but its usage is not supported.
+[ 2823.572653] Bluetooth: hci0: Bootloader revision 0.1 build 42 week 52 2015
+[ 2823.575673] Bluetooth: hci0: Device revision is 2
+[ 2823.575682] Bluetooth: hci0: Secure boot is enabled
+[ 2823.575688] Bluetooth: hci0: OTP lock is enabled
+[ 2823.575693] Bluetooth: hci0: API lock is enabled
+[ 2823.575698] Bluetooth: hci0: Debug lock is disabled
+[ 2823.575703] Bluetooth: hci0: Minimum firmware build 1 week 10 2014
+[ 2823.576878] Bluetooth: hci0: Found device firmware: intel/ibt-18-16-1.sfi
+[ 2823.576931] Bluetooth: hci0: Boot Address: 0x40800
+[ 2823.576937] Bluetooth: hci0: Firmware Version: 201-12.24
+[ 2824.872790] Bluetooth: hci0: Waiting for firmware download to complete
+[ 2824.873606] Bluetooth: hci0: Firmware loaded in 1266348 usecs
+[ 2824.873636] Bluetooth: hci0: Waiting for device to boot
+[ 2824.890615] Bluetooth: hci0: Malformed MSFT vendor event: 0x02
+[ 2824.890618] Bluetooth: hci0: Device booted in 16607 usecs
+[ 2824.890656] Bluetooth: hci0: Found Intel DDC parameters: intel/ibt-18-16-1.ddc
+[ 2824.898627] Bluetooth: hci0: Applying Intel DDC parameters completed
+[ 2824.902630] Bluetooth: hci0: Firmware revision 0.1 build 201 week 12 2024
+[ 2824.910640] Bluetooth: hci0: HCI LE Coded PHY feature bit is set, but its usage is not supported.
+[ 2842.469329] Bluetooth: hci0: Bootloader revision 0.1 build 42 week 52 2015
+[ 2842.472314] Bluetooth: hci0: Device revision is 2
+[ 2842.472326] Bluetooth: hci0: Secure boot is enabled
+[ 2842.472332] Bluetooth: hci0: OTP lock is enabled
+[ 2842.472338] Bluetooth: hci0: API lock is enabled
+[ 2842.472343] Bluetooth: hci0: Debug lock is disabled
+[ 2842.472349] Bluetooth: hci0: Minimum firmware build 1 week 10 2014
+[ 2842.480912] Bluetooth: hci0: Found device firmware: intel/ibt-18-16-1.sfi
+[ 2842.480946] Bluetooth: hci0: Boot Address: 0x40800
+[ 2842.480952] Bluetooth: hci0: Firmware Version: 201-12.24
+[ 2843.753598] Bluetooth: hci0: Waiting for firmware download to complete
+[ 2843.754267] Bluetooth: hci0: Firmware loaded in 1258323 usecs
+[ 2843.754338] Bluetooth: hci0: Waiting for device to boot
+[ 2843.771280] Bluetooth: hci0: Device booted in 16755 usecs
+[ 2843.771284] Bluetooth: hci0: Malformed MSFT vendor event: 0x02
+[ 2843.771439] Bluetooth: hci0: Found Intel DDC parameters: intel/ibt-18-16-1.ddc
+[ 2843.779277] Bluetooth: hci0: Applying Intel DDC parameters completed
+[ 2843.783279] Bluetooth: hci0: Firmware revision 0.1 build 201 week 12 2024
+[ 2843.791290] Bluetooth: hci0: HCI LE Coded PHY feature bit is set, but its usage is not supported.
+[ 2856.723163] Bluetooth: hci0: Bootloader revision 0.1 build 42 week 52 2015
+[ 2856.726165] Bluetooth: hci0: Device revision is 2
+[ 2856.726176] Bluetooth: hci0: Secure boot is enabled
+[ 2856.726182] Bluetooth: hci0: OTP lock is enabled
+[ 2856.726188] Bluetooth: hci0: API lock is enabled
+[ 2856.726193] Bluetooth: hci0: Debug lock is disabled
+[ 2856.726199] Bluetooth: hci0: Minimum firmware build 1 week 10 2014
+[ 2856.727363] Bluetooth: hci0: Found device firmware: intel/ibt-18-16-1.sfi
+[ 2856.727418] Bluetooth: hci0: Boot Address: 0x40800
+[ 2856.727424] Bluetooth: hci0: Firmware Version: 201-12.24
+[ 2858.014470] Bluetooth: hci0: Waiting for firmware download to complete
+[ 2858.015111] Bluetooth: hci0: Firmware loaded in 1258184 usecs
+[ 2858.015142] Bluetooth: hci0: Waiting for device to boot
+[ 2858.032130] Bluetooth: hci0: Malformed MSFT vendor event: 0x02
+[ 2858.032130] Bluetooth: hci0: Device booted in 16621 usecs
+[ 2858.032182] Bluetooth: hci0: Found Intel DDC parameters: intel/ibt-18-16-1.ddc
+[ 2858.040137] Bluetooth: hci0: Applying Intel DDC parameters completed
+[ 2858.044137] Bluetooth: hci0: Firmware revision 0.1 build 201 week 12 2024
+[ 2858.052145] Bluetooth: hci0: HCI LE Coded PHY feature bit is set, but its usage is not supported.
+[ 3716.096187] Bluetooth: hci0: Bootloader revision 0.1 build 42 week 52 2015
+[ 3716.099220] Bluetooth: hci0: Device revision is 2
+[ 3716.099227] Bluetooth: hci0: Secure boot is enabled
+[ 3716.099229] Bluetooth: hci0: OTP lock is enabled
+[ 3716.099232] Bluetooth: hci0: API lock is enabled
+[ 3716.099234] Bluetooth: hci0: Debug lock is disabled
+[ 3716.099237] Bluetooth: hci0: Minimum firmware build 1 week 10 2014
+[ 3716.112183] Bluetooth: hci0: Found device firmware: intel/ibt-18-16-1.sfi
+[ 3716.112204] Bluetooth: hci0: Boot Address: 0x40800
+[ 3716.112206] Bluetooth: hci0: Firmware Version: 201-12.24
+[ 3717.419839] Bluetooth: hci0: Waiting for firmware download to complete
+[ 3717.420153] Bluetooth: hci0: Firmware loaded in 1277293 usecs
+[ 3717.420259] Bluetooth: hci0: Waiting for device to boot
+[ 3717.437155] Bluetooth: hci0: Malformed MSFT vendor event: 0x02
+[ 3717.437155] Bluetooth: hci0: Device booted in 16534 usecs
+[ 3717.444251] Bluetooth: hci0: Found Intel DDC parameters: intel/ibt-18-16-1.ddc
+[ 3717.452173] Bluetooth: hci0: Applying Intel DDC parameters completed
+[ 3717.456177] Bluetooth: hci0: Firmware revision 0.1 build 201 week 12 2024
+[ 3717.464187] Bluetooth: hci0: HCI LE Coded PHY feature bit is set, but its usage is not supported.
+[ 3810.181370] Bluetooth: hci0: Bootloader revision 0.1 build 42 week 52 2015
+[ 3810.184383] Bluetooth: hci0: Device revision is 2
+[ 3810.184392] Bluetooth: hci0: Secure boot is enabled
+[ 3810.184398] Bluetooth: hci0: OTP lock is enabled
+[ 3810.184404] Bluetooth: hci0: API lock is enabled
+[ 3810.184409] Bluetooth: hci0: Debug lock is disabled
+[ 3810.184414] Bluetooth: hci0: Minimum firmware build 1 week 10 2014
+[ 3810.185580] Bluetooth: hci0: Found device firmware: intel/ibt-18-16-1.sfi
+[ 3810.185622] Bluetooth: hci0: Boot Address: 0x40800
+[ 3810.185629] Bluetooth: hci0: Firmware Version: 201-12.24
+[ 3811.499084] Bluetooth: hci0: Waiting for firmware download to complete
+[ 3811.499336] Bluetooth: hci0: Firmware loaded in 1283472 usecs
+[ 3811.499372] Bluetooth: hci0: Waiting for device to boot
+[ 3811.516338] Bluetooth: hci0: Device booted in 16602 usecs
+[ 3811.516340] Bluetooth: hci0: Malformed MSFT vendor event: 0x02
+[ 3811.516387] Bluetooth: hci0: Found Intel DDC parameters: intel/ibt-18-16-1.ddc
+[ 3811.524352] Bluetooth: hci0: Applying Intel DDC parameters completed
+[ 3811.528369] Bluetooth: hci0: Firmware revision 0.1 build 201 week 12 2024
+[ 3811.536369] Bluetooth: hci0: HCI LE Coded PHY feature bit is set, but its usage is not supported.
+

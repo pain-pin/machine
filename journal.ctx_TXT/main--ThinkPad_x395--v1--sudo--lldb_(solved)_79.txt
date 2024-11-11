@@ -1,0 +1,40 @@
+##### lldb (solved)
+SOLVED: sudo iptables-resore => pb from the command iptables-restore
+
+=>lldb -p 26356
+(lldb) process attach --pid 26356
+error: attach failed: The current value of ptrace_scope is 1, which can cause ptrace to fail to attach to a running process. To fix this, run:
+	sudo sysctl -w kernel.yama.ptrace_scope=0
+For more information, see: https://www.kernel.org/doc/Documentation/security/Yama.txt.
+(lldb) q
+presk0@pote-241002-12:04:37-~/machine/networking
+=>sudo sysctl -w kernel.yama.ptrace_scope=0
+kernel.yama.ptrace_scope = 0
+presk0@pote-241002-12:04:59-~/machine/networking
+=>sudo lldb -p 26356
+(lldb) process attach --pid 26356
+Process 26356 stopped
+* thread #1, name = 'sudo', stop reason = signal SIGSTOP
+    frame #0: 0x000073f9d405ab5b libc.so.6`ppoll + 75
+libc.so.6`ppoll:
+->  0x73f9d405ab5b <+75>: cmpq   $-0x1000, %rax ; imm = 0xF000 
+    0x73f9d405ab61 <+81>: ja     0x73f9d405abd0 ; <+192>
+    0x73f9d405ab63 <+83>: movq   -0x18(%rbp), %rdx
+    0x73f9d405ab67 <+87>: subq   %fs:0x28, %rdx
+Executable module set to "/usr/bin/sudo".
+Architecture set to: x86_64-pc-linux-gnu.
+
+(lldb) c
+error: Process is running.  Use 'process interrupt' to pause execution.
+
+(lldb) process interrupt
+Process 26356 stopped
+* thread #1, name = 'sudo', stop reason = trace
+    frame #0: 0x000073f9d405ab5b libc.so.6`ppoll + 75
+libc.so.6`ppoll:
+->  0x73f9d405ab5b <+75>: cmpq   $-0x1000, %rax ; imm = 0xF000 
+    0x73f9d405ab61 <+81>: ja     0x73f9d405abd0 ; <+192>
+    0x73f9d405ab63 <+83>: movq   -0x18(%rbp), %rdx
+    0x73f9d405ab67 <+87>: subq   %fs:0x28, %rdx
+
+

@@ -1,0 +1,560 @@
+###### journalctl
+oct. 20 00:06:31 ordi baloo_file_extractor[1409]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/y/w" 
+oct. 20 00:15:06 ordi systemd-logind[483]: The system will suspend now! 
+oct. 20 00:15:06 ordi NetworkManager[479]: <info>  [1729376106.3740] manager: sleep: sleep requested (sleeping: no  enabled: yes) 
+oct. 20 00:15:06 ordi ModemManager[524]: <msg> [sleep-monitor-systemd] system is about to suspend 
+oct. 20 00:15:06 ordi NetworkManager[479]: <info>  [1729376106.3741] device (enp2s0f1): state change: unavailable -> unmanaged (reason 'unmanaged-sleeping', sys-iface-state:> 
+oct. 20 00:15:06 ordi NetworkManager[479]: <info>  [1729376106.3851] device (p2p-dev-wlp3s0): state change: disconnected -> unmanaged (reason 'unmanaged-sleeping', sys-iface> 
+oct. 20 00:15:06 ordi NetworkManager[479]: <info>  [1729376106.3855] manager: NetworkManager state is now ASLEEP 
+oct. 20 00:15:06 ordi NetworkManager[479]: <info>  [1729376106.3858] device (wlp3s0): state change: activated -> deactivating (reason 'sleeping', sys-iface-state: 'managed') 
+oct. 20 00:15:06 ordi kded6[988]: org.kde.plasma.nm.kded: Unhandled active connection state change:  3 
+oct. 20 00:15:06 ordi systemd[1]: Starting Network Manager Script Dispatcher Service... 
+oct. 20 00:15:06 ordi systemd[1]: Started Network Manager Script Dispatcher Service. 
+oct. 20 00:15:06 ordi kernel: wlp3s0: deauthenticating from 6c:61:f4:34:6f:be by local choice (Reason: 3=DEAUTH_LEAVING) 
+oct. 20 00:15:06 ordi wpa_supplicant[540]: nl80211: send_event_marker failed: Source based routing not supported 
+oct. 20 00:15:06 ordi wpa_supplicant[540]: wlp3s0: CTRL-EVENT-DISCONNECTED bssid=6c:61:f4:34:6f:be reason=3 locally_generated=1 
+oct. 20 00:15:06 ordi wpa_supplicant[540]: wlp3s0: CTRL-EVENT-DSCP-POLICY clear_all 
+oct. 20 00:15:06 ordi wpa_supplicant[540]: wlp3s0: CTRL-EVENT-SIGNAL-CHANGE above=0 signal=-9999 noise=9999 txrate=0 
+oct. 20 00:15:06 ordi NetworkManager[479]: <info>  [1729376106.5811] device (wlp3s0): supplicant interface state: completed -> disconnected 
+oct. 20 00:15:06 ordi NetworkManager[479]: <info>  [1729376106.5814] device (wlp3s0): state change: deactivating -> disconnected (reason 'sleeping', sys-iface-state: 'manage> 
+oct. 20 00:15:06 ordi NetworkManager[479]: <info>  [1729376106.5830] dhcp4 (wlp3s0): canceled DHCP transaction 
+oct. 20 00:15:06 ordi NetworkManager[479]: <info>  [1729376106.5831] dhcp4 (wlp3s0): activation: beginning transaction (timeout in 45 seconds) 
+oct. 20 00:15:06 ordi NetworkManager[479]: <info>  [1729376106.5831] dhcp4 (wlp3s0): state changed no lease 
+oct. 20 00:15:06 ordi NetworkManager[479]: <info>  [1729376106.6014] device (wlp3s0): set-hw-addr: set MAC address to DA:AD:79:B8:8F:C3 (scanning) 
+oct. 20 00:15:06 ordi NetworkManager[479]: <info>  [1729376106.7043] device (wlp3s0): state change: disconnected -> unmanaged (reason 'unmanaged-sleeping', sys-iface-state: > 
+oct. 20 00:15:06 ordi NetworkManager[479]: <info>  [1729376106.8410] device (wlp3s0): set-hw-addr: reset MAC address to CC:2F:71:54:47:8C (unmanage) 
+oct. 20 00:15:06 ordi wpa_supplicant[540]: p2p-dev-wlp3s0: CTRL-EVENT-DSCP-POLICY clear_all 
+oct. 20 00:15:06 ordi wpa_supplicant[540]: p2p-dev-wlp3s0: CTRL-EVENT-DSCP-POLICY clear_all 
+oct. 20 00:15:06 ordi wpa_supplicant[540]: nl80211: deinit ifname=p2p-dev-wlp3s0 disabled_11b_rates=0 
+oct. 20 00:15:06 ordi systemd[1]: Reached target Sleep. 
+oct. 20 00:15:06 ordi systemd[1]: Starting System Suspend... 
+oct. 20 00:15:06 ordi wpa_supplicant[540]: wlp3s0: CTRL-EVENT-DSCP-POLICY clear_all 
+oct. 20 00:15:06 ordi systemd-sleep[2478]: Successfully froze unit 'user.slice'. 
+oct. 20 00:15:06 ordi systemd-sleep[2478]: Performing sleep operation 'suspend'... 
+oct. 20 00:15:06 ordi kernel: PM: suspend entry (deep) 
+oct. 20 00:15:06 ordi wpa_supplicant[540]: wlp3s0: CTRL-EVENT-DSCP-POLICY clear_all 
+oct. 20 00:15:06 ordi wpa_supplicant[540]: nl80211: deinit ifname=wlp3s0 disabled_11b_rates=0 
+oct. 20 00:15:06 ordi kernel: Filesystems sync: 0.021 seconds 
+oct. 20 20:51:10 ordi kernel: Freezing user space processes 
+oct. 20 20:51:10 ordi kernel: Freezing user space processes completed (elapsed 0.001 seconds) 
+oct. 20 20:51:10 ordi kernel: OOM killer disabled. 
+oct. 20 20:51:10 ordi kernel: Freezing remaining freezable tasks 
+oct. 20 20:51:10 ordi kernel: Freezing remaining freezable tasks completed (elapsed 0.001 seconds) 
+oct. 20 20:51:10 ordi kernel: printk: Suspending console(s) (use no_console_suspend to debug) 
+oct. 20 20:51:10 ordi kernel: sd 0:0:0:0: [sda] Synchronizing SCSI cache 
+oct. 20 20:51:10 ordi kernel: ata1.00: Entering standby power mode 
+oct. 20 20:51:10 ordi kernel: ACPI: EC: interrupt blocked 
+oct. 20 20:51:10 ordi kernel: ACPI: PM: Preparing to enter system sleep state S3 
+oct. 20 20:51:10 ordi kernel: ACPI: EC: event blocked 
+oct. 20 20:51:10 ordi kernel: ACPI: EC: EC stopped 
+oct. 20 20:51:10 ordi kernel: ACPI: PM: Saving platform NVS memory 
+oct. 20 20:51:10 ordi kernel: Disabling non-boot CPUs ... 
+oct. 20 20:51:10 ordi kernel: smpboot: CPU 1 is now offline 
+oct. 20 20:51:10 ordi kernel: smpboot: CPU 2 is now offline 
+oct. 20 20:51:10 ordi kernel: smpboot: CPU 3 is now offline 
+oct. 20 20:51:10 ordi kernel: ACPI: PM: Low-level resume complete 
+oct. 20 20:51:10 ordi kernel: ACPI: EC: EC started 
+oct. 20 20:51:10 ordi kernel: ACPI: PM: Restoring platform NVS memory 
+oct. 20 20:51:10 ordi kernel: Enabling non-boot CPUs ... 
+oct. 20 20:51:10 ordi kernel: smpboot: Booting Node 0 Processor 1 APIC 0x2 
+oct. 20 20:51:10 ordi kernel: CPU1 is up 
+oct. 20 20:51:10 ordi kernel: smpboot: Booting Node 0 Processor 2 APIC 0x4 
+oct. 20 20:51:10 ordi kernel: CPU2 is up 
+oct. 20 20:51:10 ordi kernel: smpboot: Booting Node 0 Processor 3 APIC 0x6 
+oct. 20 20:51:10 ordi kernel: CPU3 is up 
+oct. 20 20:51:10 ordi kernel: ACPI: PM: Waking up from system sleep state S3 
+oct. 20 20:51:10 ordi kernel: ACPI: EC: interrupt unblocked 
+oct. 20 20:51:10 ordi kernel: ACPI: EC: event unblocked 
+oct. 20 20:51:10 ordi kernel: i915 0000:00:02.0: [drm] [ENCODER:98:DDI A/PHY A] is disabled/in DSI mode with an ungated DDI clock, gate it 
+oct. 20 20:51:10 ordi kernel: i915 0000:00:02.0: [drm] [ENCODER:106:DDI B/PHY B] is disabled/in DSI mode with an ungated DDI clock, gate it 
+oct. 20 20:51:10 ordi kernel: i915 0000:00:02.0: [drm] [ENCODER:116:DDI C/PHY C] is disabled/in DSI mode with an ungated DDI clock, gate it 
+oct. 20 20:51:10 ordi kernel: iwlwifi 0000:03:00.0: RF_KILL bit toggled to enable radio. 
+oct. 20 20:51:10 ordi kernel: i8042: failed to resume active multiplexor, mouse won't work 
+oct. 20 20:51:10 ordi kernel: iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM 
+oct. 20 20:51:10 ordi kernel: iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM 
+oct. 20 20:51:10 ordi kernel: iwlwifi 0000:03:00.0: FW already configured (0) - re-configuring 
+oct. 20 20:51:10 ordi kernel: usb 1-3: reset full-speed USB device number 3 using xhci_hcd 
+oct. 20 20:51:10 ordi kernel: ata3: SATA link down (SStatus 4 SControl 300) 
+oct. 20 20:51:10 ordi kernel: ata1: SATA link up 6.0 Gbps (SStatus 133 SControl 300) 
+oct. 20 20:51:10 ordi kernel: ata4: SATA link up 1.5 Gbps (SStatus 113 SControl 300) 
+oct. 20 20:51:10 ordi kernel: sd 0:0:0:0: [sda] Starting disk 
+oct. 20 20:51:10 ordi kernel: ata1.00: configured for UDMA/133 
+oct. 20 20:51:10 ordi kernel: ata4.00: configured for UDMA/133 
+oct. 20 20:51:10 ordi kernel: ahci 0000:00:17.0: port does not support device sleep 
+oct. 20 20:51:10 ordi kernel: usb 1-2: reset high-speed USB device number 2 using xhci_hcd 
+oct. 20 20:51:10 ordi kernel: OOM killer enabled. 
+oct. 20 20:51:10 ordi kernel: Restarting tasks ... done. 
+oct. 20 20:51:10 ordi kernel: random: crng reseeded on system resumption 
+oct. 20 20:51:10 ordi kernel: PM: suspend exit 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSource/ldac 
+oct. 20 20:51:10 ordi systemd-sleep[2478]: System returned from sleep operation 'suspend'. 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSink/aptx_hd 
+oct. 20 20:51:10 ordi systemd-sleep[2478]: Successfully thawed unit 'user.slice'. 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSource/aptx_hd 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSink/aptx 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSource/aptx 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSink/aac 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSource/aac 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSink/opus_g 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSource/opus_g 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSink/sbc 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSource/sbc 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSource/aptx_ll_1 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSource/aptx_ll_0 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSource/aptx_ll_duplex_1 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSource/aptx_ll_duplex_0 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSource/faststream 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSource/faststream_duplex 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSink/opus_05 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSource/opus_05 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSink/opus_05_duplex 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSource/opus_05_duplex 
+oct. 20 20:51:10 ordi dbus-broker[478]: A security policy denied :1.4 to send method call /midi/profile:org.bluez.GattProfile1.Release to :1.40. 
+oct. 20 20:51:10 ordi bluetoothd[481]: Battery Provider Manager destroyed 
+oct. 20 20:51:10 ordi systemd[1]: systemd-suspend.service: Deactivated successfully. 
+oct. 20 20:51:10 ordi systemd[1]: Finished System Suspend. 
+oct. 20 20:51:10 ordi systemd[1]: Stopped target Sleep. 
+oct. 20 20:51:10 ordi systemd[1]: Reached target Suspend. 
+oct. 20 20:51:10 ordi kernel: Bluetooth: hci0: Legacy ROM 2.5 revision 1.0 build 3 week 17 2014 
+oct. 20 20:51:10 ordi kernel: Bluetooth: hci0: Intel Bluetooth firmware file: intel/ibt-hw-37.8.10-fw-1.10.3.11.e.bseq 
+oct. 20 20:51:10 ordi ModemManager[524]: <msg> [sleep-monitor-systemd] system is resuming 
+oct. 20 20:51:10 ordi systemd-logind[483]: Operation 'suspend' finished. 
+oct. 20 20:51:10 ordi systemd[1]: Starting Load/Save RF Kill Switch Status... 
+oct. 20 20:51:10 ordi systemd[1]: Stopped target Suspend. 
+oct. 20 20:51:10 ordi NetworkManager[479]: <info>  [1729450270.7011] manager: sleep: wake requested (sleeping: yes  enabled: yes) 
+oct. 20 20:51:10 ordi NetworkManager[479]: <info>  [1729450270.7012] device (enp2s0f1): state change: unmanaged -> unavailable (reason 'managed', sys-iface-state: 'external') 
+oct. 20 20:51:10 ordi kdeconnectd[1267]: 2024-10-20T20:51:10 kdeconnect.core: No local bluetooth adapter found 
+oct. 20 20:51:10 ordi kdeconnectd[1267]: 2024-10-20T20:51:10 default: Error sending UDP packet: QAbstractSocket::NetworkError 
+oct. 20 20:51:10 ordi kernel: Generic FE-GE Realtek PHY r8169-0-201:00: attached PHY driver (mii_bus:phy_addr=r8169-0-201:00, irq=MAC) 
+oct. 20 20:51:10 ordi systemd[876]: Stopped target Bluetooth. 
+oct. 20 20:51:10 ordi systemd[1]: Stopped target Bluetooth Support. 
+oct. 20 20:51:10 ordi systemd[876]: Reached target Bluetooth. 
+oct. 20 20:51:10 ordi systemd[1]: Started Load/Save RF Kill Switch Status. 
+oct. 20 20:51:10 ordi systemd[1]: Reached target Bluetooth Support. 
+oct. 20 20:51:10 ordi NetworkManager[479]: <info>  [1729450270.8920] device (wlp3s0): state change: unmanaged -> unavailable (reason 'managed', sys-iface-state: 'external') 
+oct. 20 20:51:10 ordi kdeconnectd[1267]: 2024-10-20T20:51:10 kdeconnect.core: Failed to open any MDNS client sockets 
+oct. 20 20:51:10 ordi kernel: r8169 0000:02:00.1 enp2s0f1: Link is Down 
+oct. 20 20:51:10 ordi NetworkManager[479]: <info>  [1729450270.9210] device (wlp3s0): set-hw-addr: set MAC address to 16:97:8C:78:97:27 (scanning) 
+oct. 20 20:51:10 ordi kernel: iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM 
+oct. 20 20:51:10 ordi kernel: Bluetooth: hci0: Intel BT fw patch 0x32 completed & activated 
+oct. 20 20:51:11 ordi kernel: iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM 
+oct. 20 20:51:11 ordi kernel: iwlwifi 0000:03:00.0: FW already configured (0) - re-configuring 
+oct. 20 20:51:11 ordi NetworkManager[479]: <info>  [1729450271.0243] device (p2p-dev-wlp3s0): state change: unmanaged -> unavailable (reason 'managed', sys-iface-state: 'ext> 
+oct. 20 20:51:11 ordi NetworkManager[479]: <info>  [1729450271.0248] manager: NetworkManager state is now CONNECTED_LOCAL 
+oct. 20 20:51:11 ordi bluetoothd[481]: Battery Provider Manager created 
+oct. 20 20:51:11 ordi kernel: Bluetooth: MGMT ver 1.22 
+oct. 20 20:51:11 ordi bluetoothd[481]: Failed to set mode: Failed (0x03) 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSource/ldac 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSink/aptx_hd 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSource/aptx_hd 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSink/aptx 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSource/aptx 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSink/aac 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSource/aac 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSink/opus_g 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSource/opus_g 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSink/sbc 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSource/sbc 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSource/aptx_ll_1 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSource/aptx_ll_0 
+oct. 20 20:51:11 ordi NetworkManager[479]: <info>  [1729450271.0966] device (wlp3s0): supplicant interface state: internal-starting -> disconnected 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSource/aptx_ll_duplex_1 
+oct. 20 20:51:11 ordi NetworkManager[479]: <info>  [1729450271.0981] device (p2p-dev-wlp3s0): state change: unavailable -> unmanaged (reason 'unmanaged-link-not-init', sys-i> 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSource/aptx_ll_duplex_0 
+oct. 20 20:51:11 ordi NetworkManager[479]: <info>  [1729450271.0999] Wi-Fi P2P device controlled by interface wlp3s0 created 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSource/faststream 
+oct. 20 20:51:11 ordi NetworkManager[479]: <info>  [1729450271.1006] manager: (p2p-dev-wlp3s0): new 802.11 Wi-Fi P2P device (/org/freedesktop/NetworkManager/Devices/8) 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSource/faststream_duplex 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSink/opus_05 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSource/opus_05 
+oct. 20 20:51:11 ordi NetworkManager[479]: <info>  [1729450271.1030] device (p2p-dev-wlp3s0): state change: unmanaged -> unavailable (reason 'managed', sys-iface-state: 'ext> 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSink/opus_05_duplex 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSource/opus_05_duplex 
+oct. 20 20:51:11 ordi NetworkManager[479]: <info>  [1729450271.1117] device (wlp3s0): state change: unavailable -> disconnected (reason 'supplicant-available', sys-iface-sta> 
+oct. 20 20:51:11 ordi NetworkManager[479]: <info>  [1729450271.1127] device (p2p-dev-wlp3s0): state change: unavailable -> disconnected (reason 'none', sys-iface-state: 'man> 
+oct. 20 20:51:11 ordi systemd[1]: Started dbus-:1.2-org.kde.powerdevil.backlighthelper@4.service. 
+oct. 20 20:51:11 ordi org_kde_powerdevil[1094]: Sleep event. connector=card1-eDP-1, dref not set 
+oct. 20 20:51:12 ordi bluetoothd[481]: Failed to set mode: Failed (0x03) 
+oct. 20 20:51:12 ordi kded6[988]: kf.bluezqt: PendingCall Error: "Failed" 
+oct. 20 20:51:13 ordi org_kde_powerdevil[1094]: Emitting DDCA_Display_Status_Event( 76803.402:  DDCA_EVENT_DPMS_AWAKE, card1-eDP-1, dref: Display_Ref[NULL], io_path:/dev/i2c> 
+oct. 20 20:51:13 ordi org_kde_powerdevil[1094]: Executed 1 registered callbacks. 
+oct. 20 20:51:14 ordi wpa_supplicant[540]: wlp3s0: CTRL-EVENT-REGDOM-CHANGE init=DRIVER type=COUNTRY alpha2=FR 
+oct. 20 20:51:14 ordi wpa_supplicant[540]: wlp3s0: CTRL-EVENT-REGDOM-CHANGE init=DRIVER type=COUNTRY alpha2=FR 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.5236] policy: auto-activating connection 'Binder-f5d0' (75d53a67-5cd8-48b1-b77c-97521ca693b3) 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.5247] device (wlp3s0): Activation: starting connection 'Binder-f5d0' (75d53a67-5cd8-48b1-b77c-97521ca693b3) 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.5249] device (wlp3s0): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed') 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.5254] manager: NetworkManager state is now CONNECTING 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.5435] device (wlp3s0): set-hw-addr: reset MAC address to CC:2F:71:54:47:8C (preserve) 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.5465] device (wlp3s0): state change: prepare -> config (reason 'none', sys-iface-state: 'managed') 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.5470] device (wlp3s0): Activation: (wifi) access point 'Binder-f5d0' has security, but secrets are required. 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.5471] device (wlp3s0): state change: config -> need-auth (reason 'none', sys-iface-state: 'managed') 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.5474] sup-iface[fdc76a37154981d6,2,wlp3s0]: wps: type pbc start... 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.5495] device (wlp3s0): supplicant interface state: disconnected -> inactive 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.5496] device (p2p-dev-wlp3s0): supplicant management interface state: disconnected -> inactive 
+oct. 20 20:51:14 ordi wpa_supplicant[540]: wlp3s0: WPS-PBC-ACTIVE 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.5573] device (wlp3s0): supplicant interface state: inactive -> scanning 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.5574] device (p2p-dev-wlp3s0): supplicant management interface state: inactive -> scanning 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.6287] device (wlp3s0): state change: need-auth -> prepare (reason 'none', sys-iface-state: 'managed') 
+oct. 20 20:51:14 ordi kded6[988]: kf.networkmanagerqt: void NetworkManager::ConnectionPrivate::onPropertiesChanged(const QVariantMap&) Unhandled property "VersionId" 
+oct. 20 20:51:14 ordi plasmashell[1030]: kf.networkmanagerqt: void NetworkManager::ConnectionPrivate::onPropertiesChanged(const QVariantMap&) Unhandled property "VersionId" 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.6294] device (wlp3s0): state change: prepare -> config (reason 'none', sys-iface-state: 'managed') 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.6299] device (wlp3s0): Activation: (wifi) connection 'Binder-f5d0' has security, and secrets exist.  No new se> 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.6300] Config: added 'ssid' value 'Binder-f5d0' 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.6300] Config: added 'scan_ssid' value '1' 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.6300] Config: added 'bgscan' value 'simple:30:-70:86400' 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.6301] Config: added 'key_mgmt' value 'WPA-PSK WPA-PSK-SHA256 FT-PSK SAE FT-SAE' 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.6301] Config: added 'auth_alg' value 'OPEN' 
+oct. 20 20:51:14 ordi wpa_supplicant[540]: wlp3s0: WPS-CANCEL 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.6301] Config: added 'psk' value '<hidden>' 
+oct. 20 20:51:14 ordi wpa_supplicant[540]: wlp3s0: SME: Trying to authenticate with 6c:61:f4:34:6f:be (SSID='Binder-f5d0' freq=2412 MHz) 
+oct. 20 20:51:14 ordi kernel: wlp3s0: authenticate with 6c:61:f4:34:6f:be (local address=cc:2f:71:54:47:8c) 
+oct. 20 20:51:14 ordi kernel: wlp3s0: send auth to 6c:61:f4:34:6f:be (try 1/3) 
+oct. 20 20:51:14 ordi wpa_supplicant[540]: wlp3s0: Trying to associate with 6c:61:f4:34:6f:be (SSID='Binder-f5d0' freq=2412 MHz) 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.6805] device (wlp3s0): supplicant interface state: scanning -> authenticating 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.6806] device (p2p-dev-wlp3s0): supplicant management interface state: scanning -> authenticating 
+oct. 20 20:51:14 ordi kernel: wlp3s0: authenticated 
+oct. 20 20:51:14 ordi kernel: wlp3s0: associate with 6c:61:f4:34:6f:be (try 1/3) 
+oct. 20 20:51:14 ordi kernel: wlp3s0: RX AssocResp from 6c:61:f4:34:6f:be (capab=0x1411 status=0 aid=8) 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.6877] device (wlp3s0): supplicant interface state: authenticating -> associating 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.6878] device (p2p-dev-wlp3s0): supplicant management interface state: authenticating -> associating 
+oct. 20 20:51:14 ordi kernel: wlp3s0: associated 
+oct. 20 20:51:14 ordi wpa_supplicant[540]: wlp3s0: Associated with 6c:61:f4:34:6f:be 
+oct. 20 20:51:14 ordi wpa_supplicant[540]: wlp3s0: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.7040] device (wlp3s0): supplicant interface state: associating -> 4way_handshake 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.7041] device (p2p-dev-wlp3s0): supplicant management interface state: associating -> 4way_handshake 
+oct. 20 20:51:14 ordi wpa_supplicant[540]: wlp3s0: WPA: Key negotiation completed with 6c:61:f4:34:6f:be [PTK=CCMP GTK=TKIP] 
+oct. 20 20:51:14 ordi wpa_supplicant[540]: wlp3s0: CTRL-EVENT-CONNECTED - Connection to 6c:61:f4:34:6f:be completed [id=0 id_str=] 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.7592] device (wlp3s0): supplicant interface state: 4way_handshake -> completed 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.7593] device (wlp3s0): Activation: (wifi) Stage 2 of 5 (Device Configure) successful. Connected to wireless ne> 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.7594] device (p2p-dev-wlp3s0): supplicant management interface state: 4way_handshake -> completed 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.7597] device (wlp3s0): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed') 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.7620] dhcp4 (wlp3s0): activation: beginning transaction (timeout in 45 seconds) 
+oct. 20 20:51:14 ordi ModemManager[524]: <msg> [base-manager] couldn't check support for device '/sys/devices/pci0000:00/0000:00:1c.4/0000:02:00.1': not supported by any plu> 
+oct. 20 20:51:14 ordi ModemManager[524]: <msg> [base-manager] couldn't check support for device '/sys/devices/pci0000:00/0000:00:1c.6/0000:03:00.0': not supported by any plu> 
+oct. 20 20:51:14 ordi wpa_supplicant[540]: wlp3s0: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-55 noise=9999 txrate=0 
+oct. 20 20:51:14 ordi wpa_supplicant[540]: wlp3s0: CTRL-EVENT-SIGNAL-CHANGE above=0 signal=-55 noise=9999 txrate=0 
+oct. 20 20:51:15 ordi wpa_supplicant[540]: wlp3s0: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-54 noise=9999 txrate=0 
+oct. 20 20:51:15 ordi systemd[1]: systemd-rfkill.service: Deactivated successfully. 
+oct. 20 20:51:16 ordi NetworkManager[479]: <info>  [1729450276.7891] dhcp4 (wlp3s0): state changed new lease, address=192.168.1.72, acd pending 
+oct. 20 20:51:16 ordi NetworkManager[479]: <info>  [1729450276.9056] policy: set 'Binder-f5d0' (wlp3s0) as default for IPv6 routing and DNS 
+oct. 20 20:51:16 ordi NetworkManager[479]: <info>  [1729450276.9416] dhcp4 (wlp3s0): state changed new lease, address=192.168.1.72 
+oct. 20 20:51:16 ordi NetworkManager[479]: <info>  [1729450276.9427] policy: set 'Binder-f5d0' (wlp3s0) as default for IPv4 routing and DNS 
+oct. 20 20:51:16 ordi NetworkManager[479]: <info>  [1729450276.9979] device (wlp3s0): state change: ip-config -> ip-check (reason 'none', sys-iface-state: 'managed') 
+oct. 20 20:51:17 ordi NetworkManager[479]: <info>  [1729450277.0029] device (wlp3s0): state change: ip-check -> secondaries (reason 'none', sys-iface-state: 'managed') 
+oct. 20 20:51:17 ordi NetworkManager[479]: <info>  [1729450277.0034] device (wlp3s0): state change: secondaries -> activated (reason 'none', sys-iface-state: 'managed') 
+oct. 20 20:51:17 ordi NetworkManager[479]: <info>  [1729450277.0042] manager: NetworkManager state is now CONNECTED_SITE 
+oct. 20 20:51:17 ordi NetworkManager[479]: <info>  [1729450277.0055] device (wlp3s0): Activation: successful, device activated. 
+oct. 20 20:51:17 ordi NetworkManager[479]: <info>  [1729450277.0920] manager: NetworkManager state is now CONNECTED_GLOBAL 
+oct. 20 20:51:18 ordi systemd[1]: NetworkManager-dispatcher.service: Deactivated successfully. 
+oct. 20 20:51:18 ordi wpa_supplicant[540]: wlp3s0: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-48 noise=9999 txrate=0 
+oct. 20 20:51:19 ordi kded6[988]: Touchpad detached 
+oct. 20 20:51:21 ordi systemd[1]: dbus-:1.2-org.kde.powerdevil.backlighthelper@4.service: Deactivated successfully. 
+oct. 20 20:51:42 ordi systemd-logind[483]: Power key pressed short. 
+oct. 20 20:51:42 ordi systemd[876]: Created slice Slice /app/dbus-:1.2-org.kde.LogoutPrompt. 
+oct. 20 20:51:42 ordi systemd[876]: Started dbus-:1.2-org.kde.LogoutPrompt@0.service. 
+oct. 20 20:52:03 ordi systemd-logind[483]: Power key pressed short. 
+oct. 20 20:52:21 ordi systemd-logind[483]: Power key pressed short. 
+oct. 20 20:52:22 ordi systemd-logind[483]: Power key pressed short. 
+oct. 20 20:52:22 ordi systemd-logind[483]: Power key pressed short. 
+oct. 20 20:52:23 ordi systemd-logind[483]: Power key pressed short. 
+-- Boot 030b0c62099649939987df9b433155fc -- 
+oct. 20 20:52:55 ordi kernel: Linux version 6.10.13-3-MANJARO (builduser@fv-az1246-770) (gcc (GCC) 14.2.1 20240910, GNU ld (GNU Binutils) 2.43.0) #1 SMP PREEMPT_DYNAMIC Tue > 
+oct. 20 20:52:55 ordi kernel: Command line: BOOT_IMAGE=/@/boot/vmlinuz-6.10-x86_64 root=UUID=10256267-fbb1-4dbc-8727-5a025a2a1a49 rw rootflags=subvol=@ quiet splash resume=U> 
+oct. 20 20:52:55 ordi kernel: BIOS-provided physical RAM map: 
+oct. 20 20:52:55 ordi kernel: BIOS-e820: [mem 0x0000000000000000-0x0000000000057fff] usable 
+oct. 20 20:52:55 ordi kernel: BIOS-e820: [mem 0x0000000000058000-0x0000000000058fff] reserved 
+oct. 20 20:52:55 ordi kernel: BIOS-e820: [mem 0x0000000000059000-0x000000000009dfff] usable 
+oct. 20 20:52:55 ordi kernel: BIOS-e820: [mem 0x000000000009e000-0x000000000009ffff] reserved 
+oct. 20 20:52:55 ordi kernel: BIOS-e820: [mem 0x0000000000100000-0x00000000830f7fff] usable 
+oct. 20 20:52:55 ordi kernel: BIOS-e820: [mem 0x00000000830f8000-0x00000000830f8fff] ACPI NVS 
+oct. 20 20:52:55 ordi kernel: BIOS-e820: [mem 0x00000000830f9000-0x0000000083122fff] reserved 
+oct. 20 20:52:55 ordi kernel: BIOS-e820: [mem 0x0000000083123000-0x0000000086a46fff] usable 
+oct. 20 20:52:55 ordi kernel: BIOS-e820: [mem 0x0000000086a47000-0x000000008738dfff] reserved 
+oct. 20 20:52:55 ordi kernel: BIOS-e820: [mem 0x000000008738e000-0x00000000873b8fff] ACPI data 
+oct. 20 20:52:55 ordi kernel: BIOS-e820: [mem 0x00000000873b9000-0x0000000087b97fff] ACPI NVS 
+oct. 20 20:52:55 ordi kernel: BIOS-e820: [mem 0x0000000087b98000-0x0000000087ffdfff] reserved 
+oct. 20 20:52:55 ordi kernel: BIOS-e820: [mem 0x0000000087ffe000-0x0000000087ffefff] usable 
+oct. 20 20:52:55 ordi kernel: BIOS-e820: [mem 0x0000000088000000-0x00000000880fffff] reserved 
+oct. 20 20:52:55 ordi kernel: BIOS-e820: [mem 0x00000000e0000000-0x00000000efffffff] reserved 
+oct. 20 20:52:55 ordi kernel: BIOS-e820: [mem 0x00000000fe000000-0x00000000fe010fff] reserved 
+oct. 20 20:52:55 ordi kernel: BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved 
+oct. 20 20:52:55 ordi kernel: BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved 
+oct. 20 20:52:55 ordi kernel: BIOS-e820: [mem 0x00000000ff000000-0x00000000ffffffff] reserved 
+oct. 20 20:52:55 ordi kernel: BIOS-e820: [mem 0x0000000100000000-0x0000000271ffffff] usable 
+oct. 20 20:52:55 ordi kernel: NX (Execute Disable) protection: active 
+oct. 20 20:52:55 ordi kernel: APIC: Static calls initialized 
+oct. 20 20:52:55 ordi kernel: e820: update [mem 0x7ed2d018-0x7ed3d057] usable ==> usable 
+oct. 20 20:52:55 ordi kernel: e820: update [mem 0x7ed1f018-0x7ed2c857] usable ==> usable 
+oct. 20 20:52:55 ordi kernel: extended physical RAM map: 
+oct. 20 20:52:55 ordi kernel: reserve setup_data: [mem 0x0000000000000000-0x0000000000057fff] usable 
+oct. 20 20:52:55 ordi kernel: reserve setup_data: [mem 0x0000000000058000-0x0000000000058fff] reserved 
+oct. 20 20:52:55 ordi kernel: reserve setup_data: [mem 0x0000000000059000-0x000000000009dfff] usable 
+oct. 20 20:52:55 ordi kernel: reserve setup_data: [mem 0x000000000009e000-0x000000000009ffff] reserved 
+oct. 20 20:52:55 ordi kernel: reserve setup_data: [mem 0x0000000000100000-0x000000007ed1f017] usable 
+oct. 20 20:52:55 ordi kernel: reserve setup_data: [mem 0x000000007ed1f018-0x000000007ed2c857] usable 
+oct. 20 20:52:55 ordi kernel: reserve setup_data: [mem 0x000000007ed2c858-0x000000007ed2d017] usable 
+oct. 20 20:52:55 ordi kernel: reserve setup_data: [mem 0x000000007ed2d018-0x000000007ed3d057] usable 
+oct. 20 20:52:55 ordi kernel: reserve setup_data: [mem 0x000000007ed3d058-0x00000000830f7fff] usable 
+oct. 20 20:52:55 ordi kernel: reserve setup_data: [mem 0x00000000830f8000-0x00000000830f8fff] ACPI NVS 
+oct. 20 20:52:55 ordi kernel: reserve setup_data: [mem 0x00000000830f9000-0x0000000083122fff] reserved 
+oct. 20 20:52:55 ordi kernel: reserve setup_data: [mem 0x0000000083123000-0x0000000086a46fff] usable 
+oct. 20 20:52:55 ordi kernel: reserve setup_data: [mem 0x0000000086a47000-0x000000008738dfff] reserved 
+oct. 20 20:52:55 ordi kernel: reserve setup_data: [mem 0x000000008738e000-0x00000000873b8fff] ACPI data 
+oct. 20 20:52:55 ordi kernel: reserve setup_data: [mem 0x00000000873b9000-0x0000000087b97fff] ACPI NVS 
+oct. 20 20:52:55 ordi kernel: reserve setup_data: [mem 0x0000000087b98000-0x0000000087ffdfff] reserved 
+oct. 20 20:52:55 ordi kernel: reserve setup_data: [mem 0x0000000087ffe000-0x0000000087ffefff] usable 
+oct. 20 20:52:55 ordi kernel: reserve setup_data: [mem 0x0000000088000000-0x00000000880fffff] reserved 
+oct. 20 20:52:55 ordi kernel: reserve setup_data: [mem 0x00000000e0000000-0x00000000efffffff] reserved 
+oct. 20 20:52:55 ordi kernel: reserve setup_data: [mem 0x00000000fe000000-0x00000000fe010fff] reserved 
+oct. 20 20:52:55 ordi kernel: reserve setup_data: [mem 0x00000000fec00000-0x00000000fec00fff] reserved 
+oct. 20 20:52:55 ordi kernel: reserve setup_data: [mem 0x00000000fee00000-0x00000000fee00fff] reserved 
+oct. 20 20:52:55 ordi kernel: reserve setup_data: [mem 0x00000000ff000000-0x00000000ffffffff] reserved 
+oct. 20 20:52:55 ordi kernel: reserve setup_data: [mem 0x0000000100000000-0x0000000271ffffff] usable 
+oct. 20 20:52:55 ordi kernel: efi: EFI v2.4 by American Megatrends 
+oct. 20 20:52:55 ordi kernel: efi: ESRT=0x87edaf98 ACPI=0x87396000 ACPI 2.0=0x87396000 SMBIOS=0x87ed9000 SMBIOS 3.0=0x87ed8000 INITRD=0x83595e18 TPMEventLog=0x87393018  
+oct. 20 20:52:55 ordi kernel: TPM Final Events table not present 
+oct. 20 20:52:55 ordi kernel: efi: Remove mem33: MMIO range=[0xe0000000-0xefffffff] (256MB) from e820 map 
+oct. 20 20:52:55 ordi kernel: e820: remove [mem 0xe0000000-0xefffffff] reserved 
+oct. 20 20:52:55 ordi kernel: efi: Not removing mem34: MMIO range=[0xfe000000-0xfe010fff] (68KB) from e820 map 
+oct. 20 20:52:55 ordi kernel: efi: Not removing mem35: MMIO range=[0xfec00000-0xfec00fff] (4KB) from e820 map 
+oct. 20 20:52:55 ordi kernel: efi: Not removing mem36: MMIO range=[0xfee00000-0xfee00fff] (4KB) from e820 map 
+oct. 20 20:52:55 ordi kernel: efi: Remove mem37: MMIO range=[0xff000000-0xffffffff] (16MB) from e820 map 
+oct. 20 20:52:55 ordi kernel: e820: remove [mem 0xff000000-0xffffffff] reserved 
+oct. 20 20:52:55 ordi kernel: SMBIOS 3.0.0 present. 
+oct. 20 20:52:55 ordi kernel: DMI: Wortmann_AG TERRA_MOBILE_1749S/W670RZQ1, BIOS 1.05.09 05/27/2016 
+oct. 20 20:52:55 ordi kernel: DMI: Memory slots populated: 1/2 
+oct. 20 20:52:55 ordi kernel: tsc: Detected 2300.000 MHz processor 
+oct. 20 00:15:06 ordi systemd-sleep[2478]: Performing sleep operation 'suspend'... 
+oct. 20 00:15:06 ordi kernel: PM: suspend entry (deep) 
+oct. 20 00:15:06 ordi wpa_supplicant[540]: wlp3s0: CTRL-EVENT-DSCP-POLICY clear_all 
+oct. 20 00:15:06 ordi wpa_supplicant[540]: nl80211: deinit ifname=wlp3s0 disabled_11b_rates=0 
+oct. 20 00:15:06 ordi kernel: Filesystems sync: 0.021 seconds 
+oct. 20 20:51:10 ordi kernel: Freezing user space processes 
+oct. 20 20:51:10 ordi kernel: Freezing user space processes completed (elapsed 0.001 seconds) 
+oct. 20 20:51:10 ordi kernel: OOM killer disabled. 
+oct. 20 20:51:10 ordi kernel: Freezing remaining freezable tasks 
+oct. 20 20:51:10 ordi kernel: Freezing remaining freezable tasks completed (elapsed 0.001 seconds) 
+oct. 20 20:51:10 ordi kernel: printk: Suspending console(s) (use no_console_suspend to debug) 
+oct. 20 20:51:10 ordi kernel: sd 0:0:0:0: [sda] Synchronizing SCSI cache 
+oct. 20 20:51:10 ordi kernel: ata1.00: Entering standby power mode 
+oct. 20 20:51:10 ordi kernel: ACPI: EC: interrupt blocked 
+oct. 20 20:51:10 ordi kernel: ACPI: PM: Preparing to enter system sleep state S3 
+oct. 20 20:51:10 ordi kernel: ACPI: EC: event blocked 
+oct. 20 20:51:10 ordi kernel: ACPI: EC: EC stopped 
+oct. 20 20:51:10 ordi kernel: ACPI: PM: Saving platform NVS memory 
+oct. 20 20:51:10 ordi kernel: Disabling non-boot CPUs ... 
+oct. 20 20:51:10 ordi kernel: smpboot: CPU 1 is now offline 
+oct. 20 20:51:10 ordi kernel: smpboot: CPU 2 is now offline 
+oct. 20 20:51:10 ordi kernel: smpboot: CPU 3 is now offline 
+oct. 20 20:51:10 ordi kernel: ACPI: PM: Low-level resume complete 
+oct. 20 20:51:10 ordi kernel: ACPI: EC: EC started 
+oct. 20 20:51:10 ordi kernel: ACPI: PM: Restoring platform NVS memory 
+oct. 20 20:51:10 ordi kernel: Enabling non-boot CPUs ... 
+oct. 20 20:51:10 ordi kernel: smpboot: Booting Node 0 Processor 1 APIC 0x2 
+oct. 20 20:51:10 ordi kernel: CPU1 is up 
+oct. 20 20:51:10 ordi kernel: smpboot: Booting Node 0 Processor 2 APIC 0x4 
+oct. 20 20:51:10 ordi kernel: CPU2 is up 
+oct. 20 20:51:10 ordi kernel: smpboot: Booting Node 0 Processor 3 APIC 0x6 
+oct. 20 20:51:10 ordi kernel: CPU3 is up 
+oct. 20 20:51:10 ordi kernel: ACPI: PM: Waking up from system sleep state S3 
+oct. 20 20:51:10 ordi kernel: ACPI: EC: interrupt unblocked 
+oct. 20 20:51:10 ordi kernel: ACPI: EC: event unblocked 
+oct. 20 20:51:10 ordi kernel: i915 0000:00:02.0: [drm] [ENCODER:98:DDI A/PHY A] is disabled/in DSI mode with an ungated DDI clock, gate it 
+oct. 20 20:51:10 ordi kernel: i915 0000:00:02.0: [drm] [ENCODER:106:DDI B/PHY B] is disabled/in DSI mode with an ungated DDI clock, gate it 
+oct. 20 20:51:10 ordi kernel: i915 0000:00:02.0: [drm] [ENCODER:116:DDI C/PHY C] is disabled/in DSI mode with an ungated DDI clock, gate it 
+oct. 20 20:51:10 ordi kernel: iwlwifi 0000:03:00.0: RF_KILL bit toggled to enable radio. 
+oct. 20 20:51:10 ordi kernel: i8042: failed to resume active multiplexor, mouse won't work 
+oct. 20 20:51:10 ordi kernel: iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM 
+oct. 20 20:51:10 ordi kernel: iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM 
+oct. 20 20:51:10 ordi kernel: iwlwifi 0000:03:00.0: FW already configured (0) - re-configuring 
+oct. 20 20:51:10 ordi kernel: usb 1-3: reset full-speed USB device number 3 using xhci_hcd 
+oct. 20 20:51:10 ordi kernel: ata3: SATA link down (SStatus 4 SControl 300) 
+oct. 20 20:51:10 ordi kernel: ata1: SATA link up 6.0 Gbps (SStatus 133 SControl 300) 
+oct. 20 20:51:10 ordi kernel: ata4: SATA link up 1.5 Gbps (SStatus 113 SControl 300) 
+oct. 20 20:51:10 ordi kernel: sd 0:0:0:0: [sda] Starting disk 
+oct. 20 20:51:10 ordi kernel: ata1.00: configured for UDMA/133 
+oct. 20 20:51:10 ordi kernel: ata4.00: configured for UDMA/133 
+oct. 20 20:51:10 ordi kernel: ahci 0000:00:17.0: port does not support device sleep 
+oct. 20 20:51:10 ordi kernel: usb 1-2: reset high-speed USB device number 2 using xhci_hcd 
+oct. 20 20:51:10 ordi kernel: OOM killer enabled. 
+oct. 20 20:51:10 ordi kernel: Restarting tasks ... done. 
+oct. 20 20:51:10 ordi kernel: random: crng reseeded on system resumption 
+oct. 20 20:51:10 ordi kernel: PM: suspend exit 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSource/ldac 
+oct. 20 20:51:10 ordi systemd-sleep[2478]: System returned from sleep operation 'suspend'. 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSink/aptx_hd 
+oct. 20 20:51:10 ordi systemd-sleep[2478]: Successfully thawed unit 'user.slice'. 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSource/aptx_hd 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSink/aptx 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSource/aptx 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSink/aac 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSource/aac 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSink/opus_g 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSource/opus_g 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSink/sbc 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSource/sbc 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSource/aptx_ll_1 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSource/aptx_ll_0 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSource/aptx_ll_duplex_1 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSource/aptx_ll_duplex_0 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSource/faststream 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSource/faststream_duplex 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSink/opus_05 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSource/opus_05 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSink/opus_05_duplex 
+oct. 20 20:51:10 ordi bluetoothd[481]: Endpoint unregistered: sender=:1.39 path=/MediaEndpoint/A2DPSource/opus_05_duplex 
+oct. 20 20:51:10 ordi dbus-broker[478]: A security policy denied :1.4 to send method call /midi/profile:org.bluez.GattProfile1.Release to :1.40. 
+oct. 20 20:51:10 ordi bluetoothd[481]: Battery Provider Manager destroyed 
+oct. 20 20:51:10 ordi systemd[1]: systemd-suspend.service: Deactivated successfully. 
+oct. 20 20:51:10 ordi systemd[1]: Finished System Suspend. 
+oct. 20 20:51:10 ordi systemd[1]: Stopped target Sleep. 
+oct. 20 20:51:10 ordi systemd[1]: Reached target Suspend. 
+oct. 20 20:51:10 ordi kernel: Bluetooth: hci0: Legacy ROM 2.5 revision 1.0 build 3 week 17 2014 
+oct. 20 20:51:10 ordi kernel: Bluetooth: hci0: Intel Bluetooth firmware file: intel/ibt-hw-37.8.10-fw-1.10.3.11.e.bseq 
+oct. 20 20:51:10 ordi ModemManager[524]: <msg> [sleep-monitor-systemd] system is resuming 
+oct. 20 20:51:10 ordi systemd-logind[483]: Operation 'suspend' finished. 
+oct. 20 20:51:10 ordi systemd[1]: Starting Load/Save RF Kill Switch Status... 
+oct. 20 20:51:10 ordi systemd[1]: Stopped target Suspend. 
+oct. 20 20:51:10 ordi NetworkManager[479]: <info>  [1729450270.7011] manager: sleep: wake requested (sleeping: yes  enabled: yes) 
+oct. 20 20:51:10 ordi NetworkManager[479]: <info>  [1729450270.7012] device (enp2s0f1): state change: unmanaged -> unavailable (reason 'managed', sys-iface-state: 'external') 
+oct. 20 20:51:10 ordi kdeconnectd[1267]: 2024-10-20T20:51:10 kdeconnect.core: No local bluetooth adapter found 
+oct. 20 20:51:10 ordi kdeconnectd[1267]: 2024-10-20T20:51:10 default: Error sending UDP packet: QAbstractSocket::NetworkError 
+oct. 20 20:51:10 ordi kernel: Generic FE-GE Realtek PHY r8169-0-201:00: attached PHY driver (mii_bus:phy_addr=r8169-0-201:00, irq=MAC) 
+oct. 20 20:51:10 ordi systemd[876]: Stopped target Bluetooth. 
+oct. 20 20:51:10 ordi systemd[1]: Stopped target Bluetooth Support. 
+oct. 20 20:51:10 ordi systemd[876]: Reached target Bluetooth. 
+oct. 20 20:51:10 ordi systemd[1]: Started Load/Save RF Kill Switch Status. 
+oct. 20 20:51:10 ordi systemd[1]: Reached target Bluetooth Support. 
+oct. 20 20:51:10 ordi NetworkManager[479]: <info>  [1729450270.8920] device (wlp3s0): state change: unmanaged -> unavailable (reason 'managed', sys-iface-state: 'external') 
+oct. 20 20:51:10 ordi kdeconnectd[1267]: 2024-10-20T20:51:10 kdeconnect.core: Failed to open any MDNS client sockets 
+oct. 20 20:51:10 ordi kernel: r8169 0000:02:00.1 enp2s0f1: Link is Down 
+oct. 20 20:51:10 ordi NetworkManager[479]: <info>  [1729450270.9210] device (wlp3s0): set-hw-addr: set MAC address to 16:97:8C:78:97:27 (scanning) 
+oct. 20 20:51:10 ordi kernel: iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM 
+oct. 20 20:51:10 ordi kernel: Bluetooth: hci0: Intel BT fw patch 0x32 completed & activated 
+oct. 20 20:51:11 ordi kernel: iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM 
+oct. 20 20:51:11 ordi kernel: iwlwifi 0000:03:00.0: FW already configured (0) - re-configuring 
+oct. 20 20:51:11 ordi NetworkManager[479]: <info>  [1729450271.0243] device (p2p-dev-wlp3s0): state change: unmanaged -> unavailable (reason 'managed', sys-iface-state: 'ext> 
+oct. 20 20:51:11 ordi NetworkManager[479]: <info>  [1729450271.0248] manager: NetworkManager state is now CONNECTED_LOCAL 
+oct. 20 20:51:11 ordi bluetoothd[481]: Battery Provider Manager created 
+oct. 20 20:51:11 ordi kernel: Bluetooth: MGMT ver 1.22 
+oct. 20 20:51:11 ordi bluetoothd[481]: Failed to set mode: Failed (0x03) 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSource/ldac 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSink/aptx_hd 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSource/aptx_hd 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSink/aptx 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSource/aptx 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSink/aac 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSource/aac 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSink/opus_g 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSource/opus_g 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSink/sbc 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSource/sbc 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSource/aptx_ll_1 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSource/aptx_ll_0 
+oct. 20 20:51:11 ordi NetworkManager[479]: <info>  [1729450271.0966] device (wlp3s0): supplicant interface state: internal-starting -> disconnected 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSource/aptx_ll_duplex_1 
+oct. 20 20:51:11 ordi NetworkManager[479]: <info>  [1729450271.0981] device (p2p-dev-wlp3s0): state change: unavailable -> unmanaged (reason 'unmanaged-link-not-init', sys-i> 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSource/aptx_ll_duplex_0 
+oct. 20 20:51:11 ordi NetworkManager[479]: <info>  [1729450271.0999] Wi-Fi P2P device controlled by interface wlp3s0 created 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSource/faststream 
+oct. 20 20:51:11 ordi NetworkManager[479]: <info>  [1729450271.1006] manager: (p2p-dev-wlp3s0): new 802.11 Wi-Fi P2P device (/org/freedesktop/NetworkManager/Devices/8) 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSource/faststream_duplex 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSink/opus_05 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSource/opus_05 
+oct. 20 20:51:11 ordi NetworkManager[479]: <info>  [1729450271.1030] device (p2p-dev-wlp3s0): state change: unmanaged -> unavailable (reason 'managed', sys-iface-state: 'ext> 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSink/opus_05_duplex 
+oct. 20 20:51:11 ordi bluetoothd[481]: Endpoint registered: sender=:1.39 path=/MediaEndpoint/A2DPSource/opus_05_duplex 
+oct. 20 20:51:11 ordi NetworkManager[479]: <info>  [1729450271.1117] device (wlp3s0): state change: unavailable -> disconnected (reason 'supplicant-available', sys-iface-sta> 
+oct. 20 20:51:11 ordi NetworkManager[479]: <info>  [1729450271.1127] device (p2p-dev-wlp3s0): state change: unavailable -> disconnected (reason 'none', sys-iface-state: 'man> 
+oct. 20 20:51:11 ordi systemd[1]: Started dbus-:1.2-org.kde.powerdevil.backlighthelper@4.service. 
+oct. 20 20:51:11 ordi org_kde_powerdevil[1094]: Sleep event. connector=card1-eDP-1, dref not set 
+oct. 20 20:51:12 ordi bluetoothd[481]: Failed to set mode: Failed (0x03) 
+oct. 20 20:51:12 ordi kded6[988]: kf.bluezqt: PendingCall Error: "Failed" 
+oct. 20 20:51:13 ordi org_kde_powerdevil[1094]: Emitting DDCA_Display_Status_Event( 76803.402:  DDCA_EVENT_DPMS_AWAKE, card1-eDP-1, dref: Display_Ref[NULL], io_path:/dev/i2c> 
+oct. 20 20:51:13 ordi org_kde_powerdevil[1094]: Executed 1 registered callbacks. 
+oct. 20 20:51:14 ordi wpa_supplicant[540]: wlp3s0: CTRL-EVENT-REGDOM-CHANGE init=DRIVER type=COUNTRY alpha2=FR 
+oct. 20 20:51:14 ordi wpa_supplicant[540]: wlp3s0: CTRL-EVENT-REGDOM-CHANGE init=DRIVER type=COUNTRY alpha2=FR 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.5236] policy: auto-activating connection 'Binder-f5d0' (75d53a67-5cd8-48b1-b77c-97521ca693b3) 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.5247] device (wlp3s0): Activation: starting connection 'Binder-f5d0' (75d53a67-5cd8-48b1-b77c-97521ca693b3) 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.5249] device (wlp3s0): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed') 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.5254] manager: NetworkManager state is now CONNECTING 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.5435] device (wlp3s0): set-hw-addr: reset MAC address to CC:2F:71:54:47:8C (preserve) 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.5465] device (wlp3s0): state change: prepare -> config (reason 'none', sys-iface-state: 'managed') 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.5470] device (wlp3s0): Activation: (wifi) access point 'Binder-f5d0' has security, but secrets are required. 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.5471] device (wlp3s0): state change: config -> need-auth (reason 'none', sys-iface-state: 'managed') 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.5474] sup-iface[fdc76a37154981d6,2,wlp3s0]: wps: type pbc start... 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.5495] device (wlp3s0): supplicant interface state: disconnected -> inactive 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.5496] device (p2p-dev-wlp3s0): supplicant management interface state: disconnected -> inactive 
+oct. 20 20:51:14 ordi wpa_supplicant[540]: wlp3s0: WPS-PBC-ACTIVE 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.5573] device (wlp3s0): supplicant interface state: inactive -> scanning 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.5574] device (p2p-dev-wlp3s0): supplicant management interface state: inactive -> scanning 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.6287] device (wlp3s0): state change: need-auth -> prepare (reason 'none', sys-iface-state: 'managed') 
+oct. 20 20:51:14 ordi kded6[988]: kf.networkmanagerqt: void NetworkManager::ConnectionPrivate::onPropertiesChanged(const QVariantMap&) Unhandled property "VersionId" 
+oct. 20 20:51:14 ordi plasmashell[1030]: kf.networkmanagerqt: void NetworkManager::ConnectionPrivate::onPropertiesChanged(const QVariantMap&) Unhandled property "VersionId" 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.6294] device (wlp3s0): state change: prepare -> config (reason 'none', sys-iface-state: 'managed') 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.6299] device (wlp3s0): Activation: (wifi) connection 'Binder-f5d0' has security, and secrets exist.  No new se> 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.6300] Config: added 'ssid' value 'Binder-f5d0' 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.6300] Config: added 'scan_ssid' value '1' 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.6300] Config: added 'bgscan' value 'simple:30:-70:86400' 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.6301] Config: added 'key_mgmt' value 'WPA-PSK WPA-PSK-SHA256 FT-PSK SAE FT-SAE' 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.6301] Config: added 'auth_alg' value 'OPEN' 
+oct. 20 20:51:14 ordi wpa_supplicant[540]: wlp3s0: WPS-CANCEL 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.6301] Config: added 'psk' value '<hidden>' 
+oct. 20 20:51:14 ordi wpa_supplicant[540]: wlp3s0: SME: Trying to authenticate with 6c:61:f4:34:6f:be (SSID='Binder-f5d0' freq=2412 MHz) 
+oct. 20 20:51:14 ordi kernel: wlp3s0: authenticate with 6c:61:f4:34:6f:be (local address=cc:2f:71:54:47:8c) 
+oct. 20 20:51:14 ordi kernel: wlp3s0: send auth to 6c:61:f4:34:6f:be (try 1/3) 
+oct. 20 20:51:14 ordi wpa_supplicant[540]: wlp3s0: Trying to associate with 6c:61:f4:34:6f:be (SSID='Binder-f5d0' freq=2412 MHz) 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.6805] device (wlp3s0): supplicant interface state: scanning -> authenticating 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.6806] device (p2p-dev-wlp3s0): supplicant management interface state: scanning -> authenticating 
+oct. 20 20:51:14 ordi kernel: wlp3s0: authenticated 
+oct. 20 20:51:14 ordi kernel: wlp3s0: associate with 6c:61:f4:34:6f:be (try 1/3) 
+oct. 20 20:51:14 ordi kernel: wlp3s0: RX AssocResp from 6c:61:f4:34:6f:be (capab=0x1411 status=0 aid=8) 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.6877] device (wlp3s0): supplicant interface state: authenticating -> associating 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.6878] device (p2p-dev-wlp3s0): supplicant management interface state: authenticating -> associating 
+oct. 20 20:51:14 ordi kernel: wlp3s0: associated 
+oct. 20 20:51:14 ordi wpa_supplicant[540]: wlp3s0: Associated with 6c:61:f4:34:6f:be 
+oct. 20 20:51:14 ordi wpa_supplicant[540]: wlp3s0: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.7040] device (wlp3s0): supplicant interface state: associating -> 4way_handshake 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.7041] device (p2p-dev-wlp3s0): supplicant management interface state: associating -> 4way_handshake 
+oct. 20 20:51:14 ordi wpa_supplicant[540]: wlp3s0: WPA: Key negotiation completed with 6c:61:f4:34:6f:be [PTK=CCMP GTK=TKIP] 
+oct. 20 20:51:14 ordi wpa_supplicant[540]: wlp3s0: CTRL-EVENT-CONNECTED - Connection to 6c:61:f4:34:6f:be completed [id=0 id_str=] 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.7592] device (wlp3s0): supplicant interface state: 4way_handshake -> completed 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.7593] device (wlp3s0): Activation: (wifi) Stage 2 of 5 (Device Configure) successful. Connected to wireless ne> 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.7594] device (p2p-dev-wlp3s0): supplicant management interface state: 4way_handshake -> completed 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.7597] device (wlp3s0): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed') 
+oct. 20 20:51:14 ordi NetworkManager[479]: <info>  [1729450274.7620] dhcp4 (wlp3s0): activation: beginning transaction (timeout in 45 seconds) 
+oct. 20 20:51:14 ordi ModemManager[524]: <msg> [base-manager] couldn't check support for device '/sys/devices/pci0000:00/0000:00:1c.4/0000:02:00.1': not supported by any plu> 
+oct. 20 20:51:14 ordi ModemManager[524]: <msg> [base-manager] couldn't check support for device '/sys/devices/pci0000:00/0000:00:1c.6/0000:03:00.0': not supported by any plu> 
+oct. 20 20:51:14 ordi wpa_supplicant[540]: wlp3s0: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-55 noise=9999 txrate=0 
+oct. 20 20:51:14 ordi wpa_supplicant[540]: wlp3s0: CTRL-EVENT-SIGNAL-CHANGE above=0 signal=-55 noise=9999 txrate=0 
+oct. 20 20:51:15 ordi wpa_supplicant[540]: wlp3s0: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-54 noise=9999 txrate=0 
+oct. 20 20:51:15 ordi systemd[1]: systemd-rfkill.service: Deactivated successfully. 
+oct. 20 20:51:16 ordi NetworkManager[479]: <info>  [1729450276.7891] dhcp4 (wlp3s0): state changed new lease, address=192.168.1.72, acd pending 
+oct. 20 20:51:16 ordi NetworkManager[479]: <info>  [1729450276.9056] policy: set 'Binder-f5d0' (wlp3s0) as default for IPv6 routing and DNS 
+oct. 20 20:51:16 ordi NetworkManager[479]: <info>  [1729450276.9416] dhcp4 (wlp3s0): state changed new lease, address=192.168.1.72 
+oct. 20 20:51:16 ordi NetworkManager[479]: <info>  [1729450276.9427] policy: set 'Binder-f5d0' (wlp3s0) as default for IPv4 routing and DNS 
+oct. 20 20:51:16 ordi NetworkManager[479]: <info>  [1729450276.9979] device (wlp3s0): state change: ip-config -> ip-check (reason 'none', sys-iface-state: 'managed') 
+oct. 20 20:51:17 ordi NetworkManager[479]: <info>  [1729450277.0029] device (wlp3s0): state change: ip-check -> secondaries (reason 'none', sys-iface-state: 'managed') 
+oct. 20 20:51:17 ordi NetworkManager[479]: <info>  [1729450277.0034] device (wlp3s0): state change: secondaries -> activated (reason 'none', sys-iface-state: 'managed') 
+oct. 20 20:51:17 ordi NetworkManager[479]: <info>  [1729450277.0042] manager: NetworkManager state is now CONNECTED_SITE 
+oct. 20 20:51:17 ordi NetworkManager[479]: <info>  [1729450277.0055] device (wlp3s0): Activation: successful, device activated. 
+oct. 20 20:51:17 ordi NetworkManager[479]: <info>  [1729450277.0920] manager: NetworkManager state is now CONNECTED_GLOBAL 
+oct. 20 20:51:18 ordi systemd[1]: NetworkManager-dispatcher.service: Deactivated successfully. 
+oct. 20 20:51:18 ordi wpa_supplicant[540]: wlp3s0: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-48 noise=9999 txrate=0 
+oct. 20 20:51:19 ordi kded6[988]: Touchpad detached 
+oct. 20 20:51:21 ordi systemd[1]: dbus-:1.2-org.kde.powerdevil.backlighthelper@4.service: Deactivated successfully. 
+oct. 20 20:51:42 ordi systemd-logind[483]: Power key pressed short. 
+oct. 20 20:51:42 ordi systemd[876]: Created slice Slice /app/dbus-:1.2-org.kde.LogoutPrompt. 
+oct. 20 20:51:42 ordi systemd[876]: Started dbus-:1.2-org.kde.LogoutPrompt@0.service. 
+oct. 20 20:52:03 ordi systemd-logind[483]: Power key pressed short. 
+oct. 20 20:52:21 ordi systemd-logind[483]: Power key pressed short. 
+oct. 20 20:52:22 ordi systemd-logind[483]: Power key pressed short. 
+oct. 20 20:52:22 ordi systemd-logind[483]: Power key pressed short. 
+oct. 20 20:52:23 ordi systemd-logind[483]: Power key pressed short. 
+-- Boot 030b0c62099649939987df9b433155fc -- 
+oct. 20 20:52:55 ordi kernel: Linux version 6.10.13-3-MANJARO (builduser@fv-az1246-770) (gcc (GCC) 14.2.1 20240910, GNU ld (GNU Binutils) 2.43.0) #1 SMP PREEMPT_DYNAMIC Tue > 
+oct. 20 20:52:55 ordi kernel: Command line: BOOT_IMAGE=/@/boot/vmlinuz-6.10-x86_64 root=UUID=10256267-fbb1-4dbc-8727-5a025a2a1a49 rw rootflags=subvol=@ quiet splash resume=U> 
+oct. 20 20:52:55 ordi kernel: BIOS-provided physical RAM map:
+ 
+
+

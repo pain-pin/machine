@@ -1,0 +1,33 @@
+##### pacman
+
+presk0@pote-241010-20:35:40-~/machine/networking
+=>sudo pacman -S cmake
+[sudo] password for presk0: 
+resolving dependencies...
+looking for conflicting packages...
+
+Packages (5) cppdap-1.58.0-2  jsoncpp-1.9.6-3  libuv-1.49.0-1  rhash-1.4.4-1
+             cmake-3.30.4-1
+
+Total Download Size:   12.48 MiB
+Total Installed Size:  78.90 MiB
+
+:: Proceed with installation? [Y/n] 
+:: Retrieving packages...
+ cmake-3.30.4-1-x86_64.pkg.tar.zst failed to download
+ Total (1/5)            12.5 MiB  2.15 MiB/s 00:06 [#######################] 100%
+error: failed retrieving file 'cmake-3.30.4-1-x86_64.pkg.tar.zst' from mirror.ubrco.de : The requested URL returned error: 404
+error: failed retrieving file 'cmake-3.30.4-1-x86_64.pkg.tar.zst' from america.mirror.pkgbuild.com : The requested URL returned error: 404
+error: failed retrieving file 'cmake-3.30.4-1-x86_64.pkg.tar.zst' from sydney.mirror.pkgbuild.com : The requested URL returned error: 404
+error: failed retrieving file 'cmake-3.30.4-1-x86_64.pkg.tar.zst' from arch.niranjan.co : SSL: no alternative certificate subject name matches target hostname 'arch.niranjan.co'
+error: failed retrieving file 'cmake-3.30.4-1-x86_64.pkg.tar.zst' from asia.mirror.pkgbuild.com : The requested URL returned error: 404
+error: failed retrieving file 'cmake-3.30.4-1-x86_64.pkg.tar.zst' from seoul.mirror.pkgbuild.com : The requested URL returned error: 404
+error: failed retrieving file 'cmake-3.30.4-1-x86_64.pkg.tar.zst' from is.mirror.flokinet.net : The requested URL returned error: 404
+error: failed retrieving file 'cmake-3.30.4-1-x86_64.pkg.tar.zst' from mirror.system.is : The requested URL returned error: 404
+error: failed retrieving file 'cmake-3.30.4-1-x86_64.pkg.tar.zst' from is.mirror.flokinet.net : The requested URL returned error: 404
+warning: failed to retrieve some files
+error: failed to commit transaction (failed to retrieve some files)
+Errors occurred, no packages were upgraded.
+
+
+

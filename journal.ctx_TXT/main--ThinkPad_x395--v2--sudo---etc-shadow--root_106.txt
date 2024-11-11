@@ -1,0 +1,12 @@
+###### root
+root backup shadow has no password
+
+sudo diff /etc/shadow* 
+1c1
+< root:$y$j9T$uVAmO/Ff/tA08iOCvvqqk0$Wm.BTJcTWaoauq9/88rEJX5dM5HDEeLoU5E6AYoE.PC:20002::::::
+---
+> root:*:14871::::::
+25d24
+< lightdm:!*:19998::::::
+
+

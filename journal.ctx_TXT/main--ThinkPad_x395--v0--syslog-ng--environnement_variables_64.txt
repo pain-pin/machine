@@ -1,0 +1,56 @@
+##### environnement variables
+le jour de la premiere intallation de syslog-ng
+Fonctionnel plusieurs heures
+
+[presko@preskhost ~]$ journalctl -xeu syslog-ng@service.service | tail -50
+░░
+░░ A start job for unit syslog-ng@service.service has begun execution.
+░░
+░░ The job identifier is 3739.
+Aug 31 21:31:49 preskhost (yslog-ng)[5175]: syslog-ng@service.service: Referenced but unset environment variable evaluates to an empty string: CONFIG_FILE, CONTROL_FILE, OTHER_OPTIONS, PERSIST_FILE, PID_FILE
+Aug 31 21:31:49 preskhost syslog-ng[5175]: [2024-08-31T21:31:49.316975] Error opening configuration file; filename='--control', error='No such file or directory (2)'
+Aug 31 21:31:49 preskhost systemd[1]: syslog-ng@service.service: Main process exited, code=exited, status=1/FAILURE
+░░ Subject: Unit process exited
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░
+░░ An ExecStart= process belonging to unit syslog-ng@service.service has exited.
+░░
+░░ The process' exit code is 'exited' and its exit status is 1.
+Aug 31 21:31:49 preskhost systemd[1]: syslog-ng@service.service: Failed with result 'exit-code'.
+░░ Subject: Unit failed
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░
+░░ The unit syslog-ng@service.service has entered the 'failed' state with result 'exit-code'.
+Aug 31 21:31:49 preskhost systemd[1]: Failed to start System Logger Daemon "service" instance.
+░░ Subject: A start job for unit syslog-ng@service.service has failed
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░
+░░ A start job for unit syslog-ng@service.service has finished with a failure.
+░░
+░░ The job identifier is 3739 and the job result is failed.
+Aug 31 21:31:49 preskhost systemd[1]: syslog-ng@service.service: Scheduled restart job, restart counter is at 5.
+░░ Subject: Automatic restarting of a unit has been scheduled
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░
+░░ Automatic restarting of the unit syslog-ng@service.service has been scheduled, as the result for
+░░ the configured Restart= setting for the unit.
+Aug 31 21:31:49 preskhost systemd[1]: syslog-ng@service.service: Start request repeated too quickly.
+Aug 31 21:31:49 preskhost systemd[1]: syslog-ng@service.service: Failed with result 'exit-code'.
+░░ Subject: Unit failed
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░
+░░ The unit syslog-ng@service.service has entered the 'failed' state with result 'exit-code'.
+Aug 31 21:31:49 preskhost systemd[1]: Failed to start System Logger Daemon "service" instance.
+░░ Subject: A start job for unit syslog-ng@service.service has failed
+░░ Defined-By: systemd
+░░ Support: https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+░░
+░░ A start job for unit syslog-ng@service.service has finished with a failure.
+░░
+░░ The job identifier is 3865 and the job result is failed.
+

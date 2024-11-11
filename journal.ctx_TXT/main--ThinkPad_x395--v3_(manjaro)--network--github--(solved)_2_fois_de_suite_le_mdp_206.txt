@@ -1,0 +1,51 @@
+###### (solved) 2 fois de suite le mdp
+a chaque fois apres la commande basha
+peut etre du a des scripts imbiques:
+
+presk0@ordi-241025-23:47:58-~/machine 
+=> basha 
+bash: git@github.com:presk0/minishell42.git: No such file or directory 
+Enter passphrase for key '/home/presk0/.ssh/id_ed25519':  
+Already up to date. 
+[main e12643e] something new in .bash_aliases 
+ 1 file changed, 1 insertion(+), 1 deletion(-) 
+Enter passphrase for key '/home/presk0/.ssh/id_ed25519':  
+Enumerating objects: 5, done. 
+Counting objects: 100% (5/5), done. 
+Delta compression using up to 4 threads 
+Compressing objects: 100% (3/3), done. 
+Writing objects: 100% (3/3), 298 bytes | 298.00 KiB/s, done. 
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0) 
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects. 
+To github.com:presk0/machine.git 
+   3508252..e12643e  main -> main 
+/home/presk0/machine
+ 
+ 
+iptables_update () { 
+        F_PATH="$(dirname $FILE)" 
+        F_PERSISTENT="/etc/iptables.rules" 
+        FILE="$(find /home -name 'iptables_script.sh' | head -1)" 
+        F_TMP=/etc/iptables.rules.backup 
+        sudo cp $F_PERSISTENT > $F_TMP 
+        vim + $FILE 
+        sudo ./$FILE -s -f ip_to_ban.txt -r 
+        sudo iptables-save > $HOME/tmp 
+        sudo mv $HOME/tmp $F_PERSISTENT 
+}
+ 
+basha () { 
+        SOURCE="$HOME/.bashrc" 
+        FILE="$(find /home -name '.bash_aliases'| head -1)" 
+        F_PATH="$(dirname $FILE)" 
+        vim + $FILE 
+        source $SOURCE 
+        cd "$F_PATH" 
+        git pull 
+        git add $FILE && git commit -m "something new in $(basename $FILE)" && git pu
+sh 
+        cd - 
+}
+ 
+
+

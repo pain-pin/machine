@@ -1,0 +1,13 @@
+#### telechargement echoue
+ 
+presk0@ordi-241030-23:58:29-~ 
+=> file Downloads/al* 
+Downloads/alpine-standard-3.20.3-aarch64(1).iso:               empty 
+Downloads/alpine-standard-3.20.3-aarch64(2).iso:               ISO 9660 CD-ROM filesystem data (DOS/MBR boot sector) 'alpine-std 3.20.3 aarch64' (bootable) 
+Downloads/alpine-standard-3.20.3-aarch64.iso:                  empty 
+Downloads/alpine-standard-3.X36JLGxn.20.3-aarch64.iso.part:    ISO 9660 CD-ROM filesystem data (DOS/MBR boot sector) 'alpine-std 3.20.3 aarch64' (bootable) 
+Downloads/alpine-standard-3.Y9-Et1RZ.20.3-aarch64(1).iso.part: ISO 9660 CD-ROM filesystem data (DOS/MBR boot sector) 'alpine-std 3.20.3 aarch64' (bootable) 
+
+ 
+
+

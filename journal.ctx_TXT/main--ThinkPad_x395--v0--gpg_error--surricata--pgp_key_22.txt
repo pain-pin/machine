@@ -1,0 +1,36 @@
+###### pgp key
+[presko@preskhost suricata]$ gpg --recv-keys 2BA9C98CCDF1E93A
+gpg: /home/presko/.gnupg/trustdb.gpg: trustdb created
+gpg: key 2BA9C98CCDF1E93A: public key "Open Information Security Foundation (OISF) <releases@openinfosecfoundation.org>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1
+[presko@preskhost suricata]$ la
+.git        suricata-7.0.5.tar.gz
+.gitignore  suricata-7.0.5.tar.gz.sig
+PKGBUILD    suricata.install
+src         suricata-update.service
+.SRCINFO    suricata-update.timer
+[presko@preskhost suricata]$ gpg --list-key
+[keyboxd]
+---------
+pub   rsa4096 2020-08-07 [SC] [expires: 2025-08-06]
+      B36FDAF2607E10E8FFA89E5E2BA9C98CCDF1E93A
+uid           [ unknown] Open Information Security Foundation (OISF) <releases@openinfosecfoundation.org>
+sub   rsa4096 2020-08-07 [E] [expires: 2025-08-06]
+
+[presko@preskhost suricata]$ gpg --delete-keys 2BA9C98CCDF1E93A
+gpg (GnuPG) 2.4.5; Copyright (C) 2024 g10 Code GmbH
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+
+pub  rsa4096/2BA9C98CCDF1E93A 2020-08-07 Open Information Security Foundation (OISF) <releases@openinfosecfoundation.org>
+
+Delete this key from the keyring? (y/N) N
+
+apres echec de l'installation (avec yay)
+gpg --delete-keys 2BA9C98CCDF1E93A
+
+
+
+

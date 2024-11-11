@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>fdisk</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>fdisk</h1><br/><p>le premier essai de boot sur le thinkpad a echoue (<a href="main--ThinkPad_x395--alpine--installation_sur_x395_227.html">installation sur x395</a>)</p><p>verification de la clef avec fdisc (et ecrasement de la clef):</p><p></p><p>Command (m for help): p </p><p> </p><p><strong>Disk /dev/sdb: 14,32 GiB, 15376318464 bytes, 30031872 sectors</strong> </p><p>Disk model: Ultra            </p><p>Units: sectors of 1 * 512 = 512 bytes </p><p>Sector size (logical/physical): 512 bytes / 512 bytes </p><p>I/O size (minimum/optimal): 512 bytes / 512 bytes </p><p>Disklabel type: gpt </p><p>Disk identifier: 34323032-3630-4831-B130-303234343131 </p><p> </p><p><strong>Device    </strong> <strong>Start</strong> <strong>   End</strong> <strong>Sectors</strong> <strong>  Size</strong> <strong>Type</strong> </p><p>/dev/sdb1     64    603     540   270K Microsoft basic data </p><p>/dev/sdb2    604   3483    2880   1,4M EFI System </p><p>/dev/sdb3   3484 434051  430568 210,2M Microsoft basic data </p><p> </p><p>Command (m for help): g </p><p>Created a new GPT disklabel (GUID: CA07B0FC-5382-4843-BB9B-1188F81841C8). </p><p> </p><p>Command (m for help): p </p><p><strong>Disk /dev/sdb: 14,32 GiB, 15376318464 bytes, 30031872 sectors</strong> </p><p>Disk model: Ultra            </p><p>Units: sectors of 1 * 512 = 512 bytes </p><p>Sector size (logical/physical): 512 bytes / 512 bytes </p><p>I/O size (minimum/optimal): 512 bytes / 512 bytes </p><p>Disklabel type: gpt </p><p>Disk identifier: CA07B0FC-5382-4843-BB9B-1188F81841C8 </p><p> </p><p>Command (m for help): w </p><p>The partition table has been altered. </p><p>Calling ioctl() to re-read partition table. </p><p>Syncing disks. </p><p> </p><p> puis <a href="main--ThinkPad_x395--alpine--telechargement_echoue--dd_2eme_essai---dev-zero_235.html">/dev/zero</a></p></div>
+</body>
+</html>

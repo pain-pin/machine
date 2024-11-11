@@ -1,0 +1,37 @@
+##### shadow
+presko@preskhost:/etc$ sudo diff shadow*
+[sudo] password for presko:
+23d22
+< _apt:!*:19961::::::
+
+presko@preskhost:/etc$ sudo cat shadow
+root:$y$j9T$wl2.kx.20uKYA.w2SN82C0$DICEPSBQaOOjX3OeWxn5hg3IiaNAWuy3ugt8Cfv2m.2:19928::::::
+bin:!*:19928::::::
+daemon:!*:19928::::::
+mail:!*:19928::::::
+ftp:!*:19928::::::
+http:!*:19928::::::
+nobody:!*:19928::::::
+dbus:!*:19928::::::
+systemd-coredump:!*:19928::::::
+systemd-network:!*:19928::::::
+systemd-oom:!*:19928::::::
+systemd-journal-remote:!*:19928::::::
+systemd-resolve:!*:19928::::::
+systemd-timesync:!*:19928::::::
+tss:!*:19928::::::
+uuidd:!*:19928::::::
+presko:$y$j9T$o5jRxK/eiKbhuc3mU6li/.$9BztZkrdsAcTyBC.J9.hVTInu9.Vw/q44xfnBdjxWlD:19928:0:99999:7:::
+avahi:!*:19928::::::
+polkitd:!*:19928::::::
+lightdm:!*:19928::::::
+git:!*:19929::::::
+snort:!*:19956::::::
+_apt:!*:19961::::::
+
+note :
+• regex tire de man crypt
+echo $YES_REG
+$y$[./A-Za-z0-9]+$[./A-Za-z0-9]{,86}$[./A-Za-z0-9]{43}
+presko@preskhost:~$ echo '$y$j9T$o5jRxK/eiKbhuc3mU6li/.$9BztZkrdsAcTyBC.J9.hVTInu9.Vw/q44xfnBdjxWlD:19928:0:99999:7:::' | grep -E "$YES_REG"
+

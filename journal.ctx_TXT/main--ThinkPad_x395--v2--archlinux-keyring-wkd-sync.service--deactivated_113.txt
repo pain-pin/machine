@@ -1,0 +1,6 @@
+##### deactivated
+presk0@pote-241009-16:45:16-~/machine
+=>journalctl -u archlinux-keyring-wkd-sync.service | grep -iv skipping | grep Deactivated
+Oct 08 11:08:31 pote systemd[1]: archlinux-keyring-wkd-sync.service: Deactivated successfully.
+
+

@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>iptablessimple</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>iptablessimple</h1><br/><p>apres un </p><p>[root@pote log]# cat /etc/iptables/iptables.rules </p><p>*filter</p><p>:INPUT DROP [0:0]</p><p>:FORWARD DROP [0:0]</p><p>:OUTPUT ACCEPT [0:0]</p><p>-A INPUT -p icmp -j ACCEPT </p><p>-A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT </p><p>-A INPUT -i lo -j ACCEPT </p><p>-A INPUT -p tcp -j REJECT --reject-with tcp-reset </p><p>-A INPUT -p udp -j REJECT --reject-with icmp-port-unreachable </p><p>-A INPUT -j REJECT --reject-with icmp-proto-unreachable </p><p>COMMIT</p></div>
+</body>
+</html>

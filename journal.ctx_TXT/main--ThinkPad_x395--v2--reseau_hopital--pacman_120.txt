@@ -1,0 +1,6 @@
+##### pacman
+error: failed retrieving file 'lynx-2.9.2-1-x86_64.pkg.tar.zst' from mirror.system.is : SSL certificate problem: certificate has expired
+error: failed retrieving file 'lynx-2.9.2-1-x86_64.pkg.tar.zst' from is.mirror.flokinet.net : SSL certificate problem: certificate has expired
+warning: failed to retrieve some files
+
+
