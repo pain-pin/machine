@@ -1,0 +1,55 @@
+###### nmap
+ 
+ scan de 3 jours 0.60 % done
+ 
+presk0@ordi-241025-11:54:59-~/machine 
+=> IP=162.4.128.77 ; NAME_OUT=nmap_$IP_marne; sudo nmap -T sneaky --privileged -Pn -s
+U -sS $NAME_OUT -v3 -p 1-65535 $IP | tee /tmp/nmap.log 
+Starting Nmap 7.95 ( https://nmap.org ) at 2024-10-25 11:55 CEST 
+Failed to resolve "nmap_". 
+Initiating Parallel DNS resolution of 1 host. at 11:55 
+Completed Parallel DNS resolution of 1 host. at 11:55, 0.03s elapsed 
+DNS resolution of 1 IPs took 0.03s. Mode: Async [#: 2, OK: 0, NX: 1, DR: 0, SF: 0, TR
+: 1, CN: 0] 
+Initiating SYN Stealth Scan at 11:55 
+^[[1;3DScanning 162.4.128.77 [65535 ports]
+ 
+
+ven. 25 oct. 2024 11:55:32 CEST 
+IP=162.4.128.77 ; NAME_OUT=nmap_$IP_marne; sudo nmap -T sneaky --privileged -Pn -sU -
+sS $NAME_OUT -v3 -p 1-65535 $IP | tee /tmp/nmap.log
+
+SYN Stealth Scan Timing: About 0.60% done 
+SYN Stealth Scan Timing: About 0.60% done 
+SYN Stealth Scan Timing: About 0.60% done 
+^C 
+ 
+ #############################3 
+=> IP=162.4.128.77 ; NAME_OUT=nmap_mainon_$IP_marne; sudo nmap -T sneaky --privileged
+ -Pn -sM -oA $NAME_OUT -v3 -p 1-65535 $IP 
+[sudo] password for presk0:  
+Starting Nmap 7.95 ( https://nmap.org ) at 2024-10-25 16:26 CEST 
+Initiating Parallel DNS resolution of 1 host. at 16:26 
+Completed Parallel DNS resolution of 1 host. at 16:26, 0.03s elapsed 
+DNS resolution of 1 IPs took 0.03s. Mode: Async [#: 2, OK: 0, NX: 1, DR: 0, SF: 0, TR
+: 1, CN: 0] 
+Initiating Maimon Scan at 16:26 
+Scanning 162.4.128.77 [65535 ports] 
+Maimon Scan Timing: About 0.30% done 
+Maimon Scan Timing: About 0.30% done 
+Maimon Scan Timing: About 0.30% done 
+Maimon Scan Timing: About 0.31% done 
+...
+Maimon Scan Timing: About 0.56% done 
+Maimon Scan Timing: About 0.57% done 
+Maimon Scan Timing: About 0.57% done 
+Maimon Scan Timing: About 0.57% done 
+Maimon Scan Timing: About 0.57% done 
+Maimon Scan Timing: About 0.57% done 
+ 
+ 
+presk0@ordi-241028-09:24:27-~/machine
+ 
+
+
+

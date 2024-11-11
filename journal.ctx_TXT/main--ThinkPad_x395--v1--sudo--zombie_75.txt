@@ -1,0 +1,5 @@
+##### zombie
+lors du bug, un processus zombie de sudo etait present
+commande non gardee, aucune idee de quel processus a ete tue
+j'ai experimente la commande killall sur des procecssus type "sudo ls"
+

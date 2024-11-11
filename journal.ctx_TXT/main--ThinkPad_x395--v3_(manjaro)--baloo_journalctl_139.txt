@@ -1,0 +1,175 @@
+#### baloo_journalctl
+oct. 16 09:26:39 ordi baloo_file[783]: qt.dbus.integration: QDBusConnection: name 'org.freedesktop.UDisks2' had owner '' but we thought it was ':1.21'
+oct. 16 09:26:39 ordi baloo_file[783]: qt.dbus.integration: QDBusConnection: name 'org.freedesktop.UPower' had owner '' but we thought it was ':1.24'
+oct. 16 09:32:48 ordi baloo_file[2062]: TagLib: RIFF::File::read() -- Chunk 'data' has invalid size (larger than the file size)
+oct. 16 09:32:48 ordi baloo_file[2062]: TagLib: RIFF::WAV::Properties::read() - 'data' chunk not found.
+oct. 16 09:33:46 ordi baloo_file_extractor[2093]: kf.baloo: Not busy, fast indexing
+oct. 16 09:33:48 ordi baloo_file_extractor[2108]: kf.baloo: Not busy, fast indexing
+oct. 16 09:34:02 ordi baloo_file_extractor[2121]: kf.baloo: Not busy, fast indexing
+oct. 16 09:34:03 ordi baloo_file[2121]: TagLib: RIFF::File::read() -- Chunk 'data' has invalid size (larger than the file size)
+oct. 16 09:34:03 ordi baloo_file[2121]: TagLib: RIFF::WAV::Properties::read() - 'data' chunk not found.
+oct. 16 09:34:24 ordi baloo_file_extractor[2137]: kf.baloo: Not busy, fast indexing
+oct. 16 09:35:02 ordi baloo_file_extractor[2152]: kf.baloo: Not busy, fast indexing
+oct. 16 09:35:03 ordi baloo_file_extractor[2167]: kf.baloo: Not busy, fast indexing
+oct. 16 09:35:04 ordi baloo_file_extractor[2180]: kf.baloo: Not busy, fast indexing
+oct. 16 09:35:07 ordi baloo_file_extractor[2193]: kf.baloo: Not busy, fast indexing
+oct. 16 09:35:36 ordi baloo_file_extractor[2211]: kf.baloo: Not busy, fast indexing
+oct. 16 09:35:37 ordi baloo_file_extractor[2224]: kf.baloo: Not busy, fast indexing
+oct. 16 09:35:38 ordi baloo_file_extractor[2237]: kf.baloo: Not busy, fast indexing
+oct. 16 09:35:38 ordi baloo_file[2237]: TagLib: RIFF::File::read() -- Chunk 'data' has invalid size (larger than the file size)
+oct. 16 09:35:38 ordi baloo_file[2237]: TagLib: RIFF::WAV::Properties::read() - 'data' chunk not found.
+oct. 16 09:35:39 ordi baloo_file_extractor[2250]: kf.baloo: Not busy, fast indexing
+oct. 16 09:35:40 ordi baloo_file_extractor[2263]: kf.baloo: Not busy, fast indexing
+oct. 16 09:35:41 ordi baloo_file_extractor[2276]: kf.baloo: Not busy, fast indexing
+oct. 16 09:35:42 ordi baloo_file_extractor[2289]: kf.baloo: Not busy, fast indexing
+oct. 16 09:35:43 ordi baloo_file_extractor[2302]: kf.baloo: Not busy, fast indexing
+oct. 16 09:35:44 ordi baloo_file_extractor[2315]: kf.baloo: Not busy, fast indexing
+oct. 16 09:35:45 ordi baloo_file_extractor[2328]: kf.baloo: Not busy, fast indexing
+oct. 16 09:35:46 ordi baloo_file_extractor[2341]: kf.baloo: Not busy, fast indexing
+oct. 16 09:35:47 ordi baloo_file_extractor[2354]: kf.baloo: Not busy, fast indexing
+oct. 16 09:35:51 ordi baloo_file_extractor[2367]: kf.baloo: Not busy, fast indexing
+oct. 16 09:35:52 ordi baloo_file_extractor[2380]: kf.baloo: Not busy, fast indexing
+oct. 16 09:35:54 ordi baloo_file_extractor[2393]: kf.baloo: Not busy, fast indexing
+oct. 16 09:35:55 ordi baloo_file_extractor[2406]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:00 ordi baloo_file_extractor[2419]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:01 ordi baloo_file_extractor[2432]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:02 ordi baloo_file_extractor[2445]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:03 ordi baloo_file_extractor[2470]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:04 ordi baloo_file_extractor[2483]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:05 ordi baloo_file_extractor[2496]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:06 ordi baloo_file_extractor[2509]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:08 ordi baloo_file_extractor[2524]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:09 ordi baloo_file_extractor[2537]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:10 ordi baloo_file_extractor[2550]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:11 ordi baloo_file_extractor[2563]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:17 ordi baloo_file_extractor[2578]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:25 ordi baloo_file_extractor[2591]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:26 ordi baloo_file_extractor[2604]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:28 ordi baloo_file_extractor[2617]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:29 ordi baloo_file_extractor[2630]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:30 ordi baloo_file_extractor[2643]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:31 ordi baloo_file_extractor[2656]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:32 ordi baloo_file_extractor[2669]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:33 ordi baloo_file_extractor[2682]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:34 ordi baloo_file_extractor[2695]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:35 ordi baloo_file_extractor[2708]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:36 ordi baloo_file_extractor[2721]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:37 ordi baloo_file_extractor[2734]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:39 ordi baloo_file_extractor[2747]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:40 ordi baloo_file_extractor[2761]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:43 ordi baloo_file_extractor[2774]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:44 ordi baloo_file_extractor[2787]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:51 ordi baloo_file_extractor[2800]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:52 ordi baloo_file_extractor[2813]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:53 ordi baloo_file_extractor[2826]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:56 ordi baloo_file_extractor[2839]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:57 ordi baloo_file_extractor[2852]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:58 ordi baloo_file_extractor[2865]: kf.baloo: Not busy, fast indexing
+oct. 16 09:36:59 ordi baloo_file_extractor[2879]: kf.baloo: Not busy, fast indexing
+oct. 16 09:37:00 ordi baloo_file_extractor[2892]: kf.baloo: Not busy, fast indexing
+oct. 16 09:37:01 ordi baloo_file_extractor[2905]: kf.baloo: Not busy, fast indexing
+oct. 16 09:37:02 ordi baloo_file_extractor[2918]: kf.baloo: Not busy, fast indexing
+oct. 16 09:52:19 ordi baloo_file_extractor[3148]: Invalid encoding. Ignoring "/home/presk0/machine/last_install/pacman_debug.txt"
+oct. 16 09:55:07 ordi baloo_file_extractor[3264]: kf.baloo: Not busy, fast indexing
+oct. 16 09:55:08 ordi baloo_file_extractor[3279]: kf.baloo: Not busy, fast indexing
+oct. 16 09:55:09 ordi baloo_file_extractor[3292]: kf.baloo: Not busy, fast indexing
+oct. 16 09:55:10 ordi baloo_file_extractor[3305]: kf.baloo: Not busy, fast indexing
+oct. 16 09:55:19 ordi baloo_file_extractor[3318]: kf.baloo: Not busy, fast indexing
+oct. 16 09:55:45 ordi baloo_file_extractor[3333]: kf.baloo: Not busy, fast indexing
+oct. 16 09:55:46 ordi baloo_file_extractor[3348]: kf.baloo: Not busy, fast indexing
+oct. 16 09:55:47 ordi baloo_file_extractor[3361]: kf.baloo: Not busy, fast indexing
+oct. 16 09:55:48 ordi baloo_file_extractor[3374]: kf.baloo: Not busy, fast indexing
+oct. 16 09:55:56 ordi baloo_file_extractor[3390]: kf.baloo: Not busy, fast indexing
+oct. 16 09:55:57 ordi baloo_file_extractor[3390]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/c/v"
+oct. 16 09:56:00 ordi baloo_file_extractor[3403]: kf.baloo: Not busy, fast indexing
+oct. 16 09:56:01 ordi baloo_file_extractor[3403]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/c/4"
+oct. 16 09:56:02 ordi baloo_file_extractor[3403]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/c/n"
+oct. 16 09:56:02 ordi baloo_file_extractor[3403]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/c/z"
+oct. 16 09:56:06 ordi baloo_file_extractor[3416]: kf.baloo: Not busy, fast indexing
+oct. 16 09:56:07 ordi baloo_file_extractor[3416]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/5/5"
+oct. 16 09:56:07 ordi baloo_file_extractor[3416]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/5/u"
+oct. 16 09:56:07 ordi baloo_file_extractor[3416]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/5/7"
+oct. 16 09:56:07 ordi baloo_file_extractor[3416]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/5/v"
+oct. 16 09:56:09 ordi baloo_file_extractor[3416]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/5/3"
+oct. 16 09:56:10 ordi baloo_file_extractor[3416]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/5/f"
+oct. 16 09:56:10 ordi baloo_file_extractor[3416]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/5/8"
+oct. 16 09:56:11 ordi baloo_file_extractor[3416]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/5/4"
+oct. 16 09:56:11 ordi baloo_file_extractor[3416]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/5/m"
+oct. 16 09:56:11 ordi baloo_file_extractor[3416]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/5/1"
+oct. 16 09:56:11 ordi baloo_file_extractor[3416]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/5/6"
+oct. 16 09:56:12 ordi baloo_file_extractor[3416]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/5/symbols"
+oct. 16 09:56:12 ordi baloo_file_extractor[3416]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/5/2"
+oct. 16 09:56:13 ordi baloo_file_extractor[3416]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/5/0"
+oct. 16 09:57:05 ordi baloo_file_extractor[3441]: kf.baloo: Not busy, fast indexing
+oct. 16 09:57:07 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/w/x"
+oct. 16 09:57:08 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/w/t"
+oct. 16 09:57:09 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/w/f"
+oct. 16 09:57:09 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/w/8"
+oct. 16 09:57:09 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/w/m"
+oct. 16 09:57:10 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/w/p"
+oct. 16 09:57:11 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/w/1"
+oct. 16 09:57:11 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/w/b"
+oct. 16 09:57:12 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/w/k"
+oct. 16 09:57:13 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/w/d"
+oct. 16 09:57:14 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/w/z"
+oct. 16 10:01:09 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/w/g"
+oct. 16 10:01:09 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/w/q"
+oct. 16 10:01:10 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/w/l"
+oct. 16 10:01:12 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/w/j"
+oct. 16 10:01:13 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/x/c"
+oct. 16 10:01:16 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/x/v"
+oct. 16 10:01:16 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/x/s"
+oct. 16 10:01:17 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/x/y"
+oct. 16 10:01:18 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/x/t"
+oct. 16 10:01:19 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/x/3"
+oct. 16 10:01:20 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/x/r"
+oct. 16 10:01:23 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/x/4"
+oct. 16 10:01:23 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/x/m"
+oct. 16 10:01:24 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/x/p"
+oct. 16 10:01:24 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/x/1"
+oct. 16 10:01:24 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/x/6"
+oct. 16 10:01:25 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/x/b"
+oct. 16 10:01:26 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/x/k"
+oct. 16 10:01:26 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/x/n"
+oct. 16 10:01:27 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/x/d"
+oct. 16 10:01:27 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/x/2"
+oct. 16 10:01:32 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/x/z"
+oct. 16 10:01:33 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/x/g"
+oct. 16 10:01:35 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/x/l"
+oct. 16 10:04:58 ordi systemd[728]: Starting KRunner provider for baloo file indexer...
+oct. 16 10:04:58 ordi systemd[728]: Started KRunner provider for baloo file indexer.
+oct. 16 10:15:04 ordi baloo_file_extractor[3441]: kf.baloo: Busy, paced indexing
+oct. 16 10:15:04 ordi baloo_file[783]: kf.baloo: Inotify - too many event - Overflowed
+oct. 16 10:15:06 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/x/j"
+oct. 16 10:15:09 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/u/c"
+oct. 16 10:15:11 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/u/u"
+oct. 16 10:15:12 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/u/w"
+oct. 16 10:15:13 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/u/e"
+oct. 16 10:15:16 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/u/y"
+oct. 16 10:15:16 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/u/t"
+oct. 16 10:15:19 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/u/9"
+oct. 16 10:15:19 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/u/o"
+oct. 16 10:15:20 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/u/f"
+oct. 16 10:15:20 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/u/p"
+oct. 16 10:15:20 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/u/1"
+oct. 16 10:15:23 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/u/symbols"
+oct. 16 10:15:23 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/u/b"
+oct. 16 10:15:25 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/u/k"
+oct. 16 10:15:25 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/u/d"
+oct. 16 10:15:25 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/u/2"
+oct. 16 10:15:26 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/u/h"
+oct. 16 10:15:26 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/u/z"
+oct. 16 10:15:26 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/u/g"
+oct. 16 10:15:27 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/u/j"
+oct. 16 10:15:27 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/u/i"
+oct. 16 10:15:27 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/u/0"
+oct. 16 10:26:56 ordi baloo_file[783]: kf.solid.backends.udisks2: Error getting props: "org.freedesktop.DBus.Error.UnknownMethod" "Object does not exist at path “/org/freedesktop/UDisks2/drives/WDC_WD10JMVW_11AJGS3_WD_WXW1E742JC8Y”" for "/org/freedesktop/UDisks2/drives/WDC_WD10JMVW_11AJGS3_WD_WXW1E742JC8Y"
+oct. 16 10:26:56 ordi baloo_file_extractor[3441]: kf.solid.backends.udisks2: Error getting props: "org.freedesktop.DBus.Error.UnknownMethod" "Object does not exist at path “/org/freedesktop/UDisks2/drives/WDC_WD10JMVW_11AJGS3_WD_WXW1E742JC8Y”" for "/org/freedesktop/UDisks2/drives/WDC_WD10JMVW_11AJGS3_WD_WXW1E742JC8Y"
+oct. 16 10:26:57 ordi baloo_file_extractor[3441]: kf.baloo: Not busy, fast indexing
+oct. 16 10:26:57 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/e/5"
+oct. 16 10:26:57 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/e/7"
+oct. 16 10:26:59 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/e/o"
+oct. 16 10:27:00 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/e/1"
+oct. 16 10:27:01 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/e/6"
+oct. 16 10:27:04 ordi baloo_file_extractor[3441]: Invalid encoding. Ignoring "/home/presk0/passwd_gen/study/data/7/5"
+

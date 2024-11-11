@@ -1,0 +1,16 @@
+##### whisper
+cree il y a 3 jours, telecharge la veille et certificat invalide
+
+presk0@pote-241010-11:32:48-~
+=>sudo docker images
+REPOSITORY                                TAG          IMAGE ID       CREATED      SIZE
+onerahmet/openai-whisper-asr-webservice   latest-gpu   51979ee9f5b7   3 days ago   11.8GB
+
+presk0@pote-241010-11:32:52-~
+=>sudo docker run onerahmet/openai-whisper-asr-webservice
+Unable to find image 'onerahmet/openai-whisper-asr-webservice:latest' locally
+docker: Error response from daemon: Get "https://registry-1.docker.io/v2/": tls: failed to verify certificate: x509: certificate has expired or is not yet valid: current time 2024-10-10T11:33:05+02:00 is after 2024-06-23T23:59:59Z.
+See 'docker run --help'.
+
+
+

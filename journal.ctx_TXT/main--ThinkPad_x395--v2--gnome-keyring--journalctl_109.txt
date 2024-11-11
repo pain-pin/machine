@@ -1,0 +1,52 @@
+##### journalctl
+journalctl | grep gnome-keyring
+Oct 02 18:16:30 pote gnome-keyring-daemon[1333]: GNOME_KEYRING_CONTROL=/run/user/1000/keyring
+Oct 02 18:16:30 pote gnome-keyring-daemon[1375]: discover_other_daemon: 1
+Oct 02 18:16:30 pote gnome-keyring-daemon[1333]: The PKCS#11 component was already initialized
+Oct 02 18:16:30 pote gnome-keyring-d[1333]: The PKCS#11 component was already initialized
+Oct 02 18:16:30 pote gnome-keyring-daemon[1376]: discover_other_daemon: 1
+Oct 02 18:16:30 pote gnome-keyring-daemon[1333]: The Secret Service was already initialized
+Oct 02 18:16:30 pote gnome-keyring-d[1333]: The Secret Service was already initialized
+Oct 02 18:16:30 pote gnome-keyring-daemon[1377]: discover_other_daemon: 1
+Oct 02 20:51:43 pote gnome-keyring-daemon[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 02 20:51:43 pote gnome-keyring-d[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 02 23:35:05 pote gnome-keyring-daemon[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 02 23:35:05 pote gnome-keyring-d[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 03 11:43:18 pote gnome-keyring-daemon[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 03 11:43:18 pote gnome-keyring-d[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 03 13:49:28 pote gnome-keyring-daemon[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 03 13:49:28 pote gnome-keyring-d[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 03 16:15:28 pote gnome-keyring-daemon[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 03 16:15:28 pote gnome-keyring-d[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 03 17:28:44 pote gnome-keyring-daemon[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 03 17:28:44 pote gnome-keyring-d[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 03 18:51:27 pote gnome-keyring-daemon[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 03 18:51:27 pote gnome-keyring-d[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 04 14:26:06 pote gnome-keyring-daemon[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 04 14:26:06 pote gnome-keyring-d[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 04 16:44:17 pote gnome-keyring-daemon[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 04 16:44:17 pote gnome-keyring-d[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 04 18:19:49 pote gnome-keyring-daemon[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 04 18:19:49 pote gnome-keyring-d[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 04 20:17:49 pote gnome-keyring-daemon[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 04 20:17:49 pote gnome-keyring-d[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 04 20:55:19 pote gnome-keyring-daemon[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 04 20:55:19 pote gnome-keyring-d[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 04 22:16:19 pote gnome-keyring-daemon[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 04 22:16:19 pote gnome-keyring-d[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 04 23:00:16 pote gnome-keyring-daemon[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 04 23:00:16 pote gnome-keyring-d[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 06 21:05:13 pote gnome-keyring-daemon[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 06 21:05:13 pote gnome-keyring-d[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 07 11:45:13 pote gnome-keyring-daemon[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 07 11:45:13 pote gnome-keyring-d[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 07 12:43:58 pote gnome-keyring-daemon[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 07 12:43:58 pote gnome-keyring-d[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 07 14:00:42 pote gnome-keyring-daemon[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 07 14:00:42 pote gnome-keyring-d[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 07 15:05:52 pote gnome-keyring-daemon[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 07 15:05:52 pote gnome-keyring-d[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 08 11:06:15 pote gnome-keyring-daemon[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+Oct 08 11:06:15 pote gnome-keyring-d[1333]: couldn't initialize slot with master password: The password or PIN is incorrect
+
+

@@ -1,0 +1,18 @@
+###### already used
+ 
+presk0@ordi-241025-17:07:27-~/machine 
+=> git pull 
+git@github.com: Permission denied (publickey). 
+fatal: Could not read from remote repository. 
+ 
+Please make sure you have the correct access rights 
+and the repository exists. 
+ 
+presk0@ordi-241025-17:07:44-~/machine 
+=> find ~ -name '.git' 
+/home/presk0/machine/.git 
+/home/presk0/passwd_gen/.git 
+/home/presk0/getting-started-app/.git
+ 
+
+

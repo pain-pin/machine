@@ -1,0 +1,30 @@
+####### dd && lsblk
+presk0@ordi-241107-13:46:13-~/Downloads 
+=> sudo dd of=/dev/sdb if=debian-live-12.7.0-amd64-cinnamon\(1\).iso  
+[sudo] password for presk0:  
+6619136+0 records in 
+6619136+0 records out 
+3388997632 bytes (3,4 GB, 3,2 GiB) copied, 969,331 s, 3,5 MB/s 
+ 
+presk0@ordi-241107-14:03:17-~/Downloads 
+=> lsblk 
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS 
+sda      8:0    0 238,5G  0 disk  
+├─sda1   8:1    0   300M  0 part /boot/efi 
+├─sda2   8:2    0 229,4G  0 part /var/log 
+│                                /var/cache 
+│                                /home 
+│                                / 
+└─sda3   8:3    0   8,8G  0 part [SWAP] 
+sr0     11:0    1  1024M  0 rom   
+
+ 
+sdb non repertorie
+
+presk0@ordi-241111-12:22:33-~/Downloads 
+=> ls /dev/sd* 
+/dev/sda  /dev/sda1  /dev/sda2  /dev/sda3 
+
+ 
+
+

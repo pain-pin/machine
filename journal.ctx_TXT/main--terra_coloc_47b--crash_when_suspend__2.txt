@@ -1,0 +1,9 @@
+### crash when suspend ?
+Ecran noir, impossible de revenir du mode veille
+
+Last logs:
+	systemd: Starting systemd-suspend.service - System Suspend...
+	rtkit-daemon: Successfully made thread 2XXX of process 2YYYY (/usr/bin/gnome-shell) owned by '1000' RT at priority 20.
+	NetworkManager: <info>  [1713657938.2310] manager: NetworkManager state is now ASLEEP
+	systemd-logind: The system will suspend now!
+

@@ -1,0 +1,7 @@
+##### 20240821
+les touches q d b k p s ne repondent plus, le 4 met l'ordinateur en veille
+cherrytree s'ouvre, mais impossible  d'entrer le mot de passe, ni d'ouvrir les onglets (type “fichier” “edition” ...
+le bug s'arrete
+
+puis tout le clavier ne repond plus, resolu en appuyant sur mod4
+

@@ -1,0 +1,10 @@
+##### bigbro folder empty
+
+presk0@pote-241012-16:51:44-/run/media/presk0/My Passport/Documents
+=>ll bigbro/
+total 8
+drwxr-xr-x 1 presk0 presk0 4096 Nov  4  2020 ./
+drwxr-xr-x 1 presk0 presk0 4096 Nov  3  2020 ../
+
+(contenait la breche de mdp ?)
+

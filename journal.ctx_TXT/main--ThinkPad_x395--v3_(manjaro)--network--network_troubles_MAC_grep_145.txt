@@ -1,0 +1,27 @@
+##### network_troubles_MAC_grep
+sudo grep -Ei "network" /root/journalctl.txt | grep -v QUrl | grep -Eo "(([0-9A-F]{2}):){5}[0-9A-F]{2}" | sort | uniq -c | sort -n
+      1 36:DE:0E:AE:0E:14
+      1 42:33:9A:62:20:7D
+      1 42:E9:7A:17:5B:D0
+      1 4A:8C:97:D2:93:D6
+      1 52:24:A9:06:5C:D9
+      1 66:0F:88:91:49:5D
+      1 6A:33:A8:A3:86:C3
+      1 7E:64:94:AB:18:05
+      1 7E:72:F5:44:5A:77
+      1 82:40:E3:2C:FB:FF
+      1 A6:FD:4F:8C:5F:47
+      1 AA:C4:1B:69:08:DC
+      1 BA:C5:89:7E:95:19
+      1 C2:6D:AB:3C:91:6A
+      1 C2:6F:AB:E4:C5:07
+      1 C2:DE:1C:97:BD:D0
+      1 D2:E4:23:F4:5C:FE
+      1 DA:B9:13:51:9D:00
+      1 EA:7D:1A:C1:C7:C7
+      1 F2:98:B6:99:F6:C0
+      1 F2:E5:EF:3A:52:4D
+      1 F2:E9:0A:4A:1A:61
+      1 FE:59:D8:3E:80:35
+     16 0C:7A:15:CB:45:FD
+

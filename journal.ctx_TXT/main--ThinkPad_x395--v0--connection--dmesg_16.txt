@@ -1,0 +1,263 @@
+##### dmesg
+[presko@preskhost perso]$ sudo dmesg -H -l err
+[Aug19 17:16] amdgpu 0000:05:00.0: amdgpu: Secure display: Generic Failure.
+[  +0.000010] amdgpu 0000:05:00.0: amdgpu: SECUREDISPLAY: query securedisplay TA failed. ret 0x0
+[  +0.000005] Bluetooth: hci0: Malformed MSFT vendor event: 0x02
+[Aug19 17:23] Out of memory: Killed process 1477 (pt_main_thread) total-vm:8806080kB, anon-rss:3191328kB, file-rss:232kB, s>
+[presko@preskhost perso]$ sudo dmesg -H -l warn
+[Aug19 17:16] amd_pstate: the _CPC object is not present in SBIOS or ACPI disabled
+[  +0.009958] nvme nvme0: missing or invalid SUBNQN field.
+[  +0.005633] amdgpu 0000:05:00.0: amdgpu: psp gfx command LOAD_TA(0x1) failed and response status is (0x7)
+[  +0.000118] amdgpu 0000:05:00.0: amdgpu: psp gfx command INVOKE_CMD(0x3) failed and response status is (0x4)
+[  +0.000293] ipmi_si: Unable to find any System Interface(s)
+[  +0.000385] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[  +0.034295] r8169 0000:03:00.0: can't disable ASPM; OS doesn't have ASPM control
+[  +0.008386] iwlwifi 0000:01:00.0: WRT: Overriding region id 0
+[  +0.000015] iwlwifi 0000:01:00.0: WRT: Overriding region id 1
+[  +0.000007] iwlwifi 0000:01:00.0: WRT: Overriding region id 2
+[  +0.000005] iwlwifi 0000:01:00.0: WRT: Overriding region id 3
+[  +0.000005] iwlwifi 0000:01:00.0: WRT: Overriding region id 4
+[  +0.000005] iwlwifi 0000:01:00.0: WRT: Overriding region id 6
+[  +0.000005] iwlwifi 0000:01:00.0: WRT: Overriding region id 8
+[  +0.000004] iwlwifi 0000:01:00.0: WRT: Overriding region id 9
+[  +0.000005] iwlwifi 0000:01:00.0: WRT: Overriding region id 10
+[  +0.000005] iwlwifi 0000:01:00.0: WRT: Overriding region id 11
+[  +0.000004] iwlwifi 0000:01:00.0: WRT: Overriding region id 15
+[  +0.000005] iwlwifi 0000:01:00.0: WRT: Overriding region id 16
+[  +0.000004] iwlwifi 0000:01:00.0: WRT: Overriding region id 18
+[  +0.000005] iwlwifi 0000:01:00.0: WRT: Overriding region id 19
+[  +0.000005] iwlwifi 0000:01:00.0: WRT: Overriding region id 20
+[  +0.000005] iwlwifi 0000:01:00.0: WRT: Overriding region id 21
+[  +0.000005] iwlwifi 0000:01:00.0: WRT: Overriding region id 28
+[  +0.141206] FAT-fs (nvme0n1p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+[  +0.002523] systemd-journald[332]: File /var/log/journal/573a5841725c4155900a7431723084c7/system.journal corrupted or unc>
+[  +0.008003] Bluetooth: hci0: HCI LE Coded PHY feature bit is set, but its usage is not supported.
+[Aug19 17:23] mandb invoked oom-killer: gfp_mask=0x140cc0(GFP_USER|__GFP_COMP), order=0, oom_score_adj=0
+[  +0.000020] CPU: 0 PID: 1490 Comm: mandb Not tainted 6.10.4-arch2-1 #1 517ed45cc9c4492ee5d5bfc2d2fe6ef1f2e7a8eb
+[  +0.000012] Hardware name: LENOVO 20NMS0C901/20NMS0C901, BIOS R13ET54W(1.28 ) 01/12/2023
+[  +0.000006] Call Trace:
+[  +0.000008]  <TASK>
+[  +0.000009]  dump_stack_lvl+0x5d/0x80
+[  +0.000017]  dump_header+0x44/0x18d
+[  +0.000014]  oom_kill_process.cold+0x8/0x8a
+[  +0.000014]  out_of_memory+0x209/0x500
+[  +0.000016]  __alloc_pages_slowpath.constprop.0+0xb0a/0xd70
+[  +0.000028]  __alloc_pages_noprof+0x31f/0x350
+ ESCOC
+IOS or ACPI disabled
+
+D_TA(0x1) failed and response status is (0x7)
+OKE_CMD(0x3) failed and response status is (0x4)
+
+regulatory.db failed with error -2
+'t have ASPM control
+0
+1
+2
+3
+4
+6
+8
+9
+10
+11
+15
+16
+18
+19
+20
+21
+28
+unted. Some data may be corrupt. Please run fsck.
+a5841725c4155900a7431723084c7/system.journal corrupted or uncleanly shut down, renaming and replacing.
+ set, but its usage is not supported.
+USER|__GFP_COMP), order=0, oom_score_adj=0
+arch2-1 #1 517ed45cc9c4492ee5d5bfc2d2fe6ef1f2e7a8eb
+S R13ET54W(1.28 ) 01/12/2023
+
+
+
+
+
+
+
+
+ ESCOD
+[Aug19 17:16] amd_pstate: the _CPC object is not present in SBIOS or ACPI disabled
+[  +0.009958] nvme nvme0: missing or invalid SUBNQN field.
+[  +0.005633] amdgpu 0000:05:00.0: amdgpu: psp gfx command LOAD_TA(0x1) failed and response status is (0x7)
+[  +0.000118] amdgpu 0000:05:00.0: amdgpu: psp gfx command INVOKE_CMD(0x3) failed and response status is (0x4)
+[  +0.000293] ipmi_si: Unable to find any System Interface(s)
+[  +0.000385] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[  +0.034295] r8169 0000:03:00.0: can't disable ASPM; OS doesn't have ASPM control
+[  +0.008386] iwlwifi 0000:01:00.0: WRT: Overriding region id 0
+[  +0.000015] iwlwifi 0000:01:00.0: WRT: Overriding region id 1
+[  +0.000007] iwlwifi 0000:01:00.0: WRT: Overriding region id 2
+[  +0.000005] iwlwifi 0000:01:00.0: WRT: Overriding region id 3
+[  +0.000005] iwlwifi 0000:01:00.0: WRT: Overriding region id 4
+[  +0.000005] iwlwifi 0000:01:00.0: WRT: Overriding region id 6
+[  +0.000005] iwlwifi 0000:01:00.0: WRT: Overriding region id 8
+[  +0.000004] iwlwifi 0000:01:00.0: WRT: Overriding region id 9
+[  +0.000005] iwlwifi 0000:01:00.0: WRT: Overriding region id 10
+[  +0.000005] iwlwifi 0000:01:00.0: WRT: Overriding region id 11
+[  +0.000004] iwlwifi 0000:01:00.0: WRT: Overriding region id 15
+[  +0.000005] iwlwifi 0000:01:00.0: WRT: Overriding region id 16
+[  +0.000004] iwlwifi 0000:01:00.0: WRT: Overriding region id 18
+[  +0.000005] iwlwifi 0000:01:00.0: WRT: Overriding region id 19
+[  +0.000005] iwlwifi 0000:01:00.0: WRT: Overriding region id 20
+[  +0.000005] iwlwifi 0000:01:00.0: WRT: Overriding region id 21
+[  +0.000005] iwlwifi 0000:01:00.0: WRT: Overriding region id 28
+[  +0.141206] FAT-fs (nvme0n1p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+[  +0.002523] systemd-journald[332]: File /var/log/journal/573a5841725c4155900a7431723084c7/system.journal corrupted or unc>
+[  +0.008003] Bluetooth: hci0: HCI LE Coded PHY feature bit is set, but its usage is not supported.
+[Aug19 17:23] mandb invoked oom-killer: gfp_mask=0x140cc0(GFP_USER|__GFP_COMP), order=0, oom_score_adj=0
+[  +0.000020] CPU: 0 PID: 1490 Comm: mandb Not tainted 6.10.4-arch2-1 #1 517ed45cc9c4492ee5d5bfc2d2fe6ef1f2e7a8eb
+[  +0.000012] Hardware name: LENOVO 20NMS0C901/20NMS0C901, BIOS R13ET54W(1.28 ) 01/12/2023
+[  +0.000006] Call Trace:
+[  +0.000008]  <TASK>
+[  +0.000009]  dump_stack_lvl+0x5d/0x80
+[  +0.000017]  dump_header+0x44/0x18d
+[  +0.000014]  oom_kill_process.cold+0x8/0x8a
+[  +0.000014]  out_of_memory+0x209/0x500
+[  +0.000016]  __alloc_pages_slowpath.constprop.0+0xb0a/0xd70
+[  +0.000028]  __alloc_pages_noprof+0x31f/0x350
+[  +0.000019]  alloc_pages_mpol_noprof+0xd7/0x1c0
+[  +0.000017]  ? __pfx_btrfs_read_folio+0x10/0x10 [btrfs c945ab9485a1af85445044c7bbdcebf26d7f2e63]
+[  +0.000214]  folio_alloc_noprof+0x5b/0xa0
+[  +0.000009]  do_read_cache_folio+0xda/0x190
+[  +0.000012]  read_cache_page+0x16/0x40
+[  +0.000009]  page_get_link+0x2c/0x160
+[  +0.000013]  vfs_readlink+0xb0/0x120
+[  +0.000013]  do_readlinkat+0x105/0x140
+[  +0.000018]  __x64_sys_readlink+0x1e/0x30
+[  +0.000008]  do_syscall_64+0x82/0x190
+[  +0.000020]  ? srso_return_thunk+0x5/0x5f
+[  +0.000008]  ? syscall_exit_to_user_mode+0x72/0x200
+[  +0.000012]  ? srso_return_thunk+0x5/0x5f
+[  +0.000007]  ? do_syscall_64+0x8e/0x190
+[  +0.000009]  ? srso_return_thunk+0x5/0x5f
+[  +0.000007]  ? irqtime_account_irq+0x3e/0xc0
+[  +0.000013]  ? srso_return_thunk+0x5/0x5f
+[  +0.000007]  ? __irq_exit_rcu+0x4a/0xb0
+[  +0.000011]  ? srso_return_thunk+0x5/0x5f
+[  +0.000009]  entry_SYSCALL_64_after_hwframe+0x76/0x7e
+[  +0.000012] RIP: 0033:0x70b742c24cbb
+[  +0.000051] Code: 8b 15 59 b0 0d 00 f7 d8 64 89 02 48 c7 c0 ff ff ff ff eb bd 66 2e 0f 1f 84 00 00 00 00 00 90 f3 0f 1e f>
+[  +0.000008] RSP: 002b:00007ffe5a3f2a58 EFLAGS: 00000202 ORIG_RAX: 0000000000000059
+[  +0.000012] RAX: ffffffffffffffda RBX: 00007ffe5a3f32e0 RCX: 000070b742c24cbb
+[  +0.000007] RDX: 00000000000003ff RSI: 00007ffe5a3f32e0 RDI: 00007ffe5a3f2ac0
+[  +0.000006] RBP: 00007ffe5a3f3720 R08: 0000000000000001 R09: 00007ffe5a3f2ad4
+[  +0.000006] R10: 00005ed4592252a0 R11: 0000000000000202 R12: 00007ffe5a3f2ac0
+[  +0.000006] R13: 00007ffe5a3f32d0 R14: 00000000000003ff R15: 00005ed45920e631
+[  +0.000020]  </TASK>
+[  +0.000005] Mem-Info:
+[  +0.000006] active_anon:563557 inactive_anon:262102 isolated_anon:0
+               active_file:4397 inactive_file:2507 isolated_file:0
+               unevictable:8 dirty:50 writeback:0
+               slab_reclaimable:12715 slab_unreclaimable:29773
+               mapped:1211 shmem:663 pagetables:6736
+               sec_pagetables:985 bounce:0
+               kernel_misc_reclaimable:0
+               free:17826 free_pcp:395 free_cma:0
+[  +0.000019] Node 0 active_anon:2254228kB inactive_anon:1048408kB active_file:17588kB inactive_file:10028kB unevictable:32>
+[  +0.000019] Node 0 DMA free:668kB boost:2048kB min:2220kB low:2260kB high:2300kB reserved_highatomic:0KB active_anon:3012>
+[  +0.000020] lowmem_reserve[]: 0 2840 5783 0 0
+[  +0.000020] Node 0 DMA32 free:37252kB boost:0kB min:33104kB low:41380kB high:49656kB reserved_highatomic:0KB active_anon:>
+[  +0.000021] lowmem_reserve[]: 0 0 2942 0 0
+[  +0.000019] Node 0 Normal free:31800kB boost:0kB min:34300kB low:42872kB high:51444kB reserved_highatomic:0KB active_anon>
+[  +0.000020] lowmem_reserve[]: 0 0 0 0 0
+[  +0.000019] Node 0 DMA: 8*4kB (M) 4*8kB (UM) 8*16kB (U) 15*32kB (U) 0*64kB 0*128kB 0*256kB 0*512kB 0*1024kB 0*2048kB 0*40>
+[  +0.000060] Node 0 DMA32: 111*4kB (UME) 202*8kB (UME) 276*16kB (UME) 184*32kB (UME) 96*64kB (UME) 59*128kB (UME) 18*256kB>
+[  +0.000072] Node 0 Normal: 229*4kB (UE) 323*8kB (UE) 91*16kB (UE) 42*32kB (UME) 32*64kB (UME) 28*128kB (UME) 28*256kB (UM>
+[  +0.000206] Node 0 hugepages_total=0 hugepages_free=0 hugepages_surp=0 hugepages_size=1048576kB
+[  +0.000007] Node 0 hugepages_total=0 hugepages_free=0 hugepages_surp=0 hugepages_size=2048kB
+[  +0.000006] 8788 total pagecache pages
+[  +0.000005] 1167 pages in swap cache
+[  +0.000003] Free swap  = 240kB
+[  +0.000004] Total swap = 2989052kB
+[  +0.000005] 1550405 pages RAM
+[  +0.000003] 0 pages HighMem/MovableOnly
+[  +0.000004] 55662 pages reserved
+[  +0.000003] 0 pages cma reserved
+[  +0.000004] 0 pages hwpoisoned
+[Aug19 18:06] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000015] iwlwifi 0000:01:00.0: missed_beacons:19, missed_beacons_since_rx:1
+[  +0.102675] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000015] iwlwifi 0000:01:00.0: missed_beacons:20, missed_beacons_since_rx:2
+[  +0.102251] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000014] iwlwifi 0000:01:00.0: missed_beacons:21, missed_beacons_since_rx:3
+[  +3.853816] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000015] iwlwifi 0000:01:00.0: missed_beacons:19, missed_beacons_since_rx:3
+[  +0.222159] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000013] iwlwifi 0000:01:00.0: missed_beacons:21, missed_beacons_since_rx:1
+[Aug19 18:07] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000014] iwlwifi 0000:01:00.0: missed_beacons:19, missed_beacons_since_rx:1
+[  +0.102381] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000013] iwlwifi 0000:01:00.0: missed_beacons:20, missed_beacons_since_rx:2
+[  +0.101993] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000014] iwlwifi 0000:01:00.0: missed_beacons:21, missed_beacons_since_rx:3
+[  +0.213574] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000013] iwlwifi 0000:01:00.0: missed_beacons:23, missed_beacons_since_rx:1
+[Aug19 18:10] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000014] iwlwifi 0000:01:00.0: missed_beacons:19, missed_beacons_since_rx:1
+[  +0.102401] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000015] iwlwifi 0000:01:00.0: missed_beacons:20, missed_beacons_since_rx:2
+[  +0.102219] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000017] iwlwifi 0000:01:00.0: missed_beacons:21, missed_beacons_since_rx:3
+[Aug19 18:13] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000014] iwlwifi 0000:01:00.0: missed_beacons:19, missed_beacons_since_rx:1
+[  +0.102567] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000014] iwlwifi 0000:01:00.0: missed_beacons:20, missed_beacons_since_rx:2
+[  +0.102356] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000014] iwlwifi 0000:01:00.0: missed_beacons:21, missed_beacons_since_rx:3
+[Aug19 18:25] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000013] iwlwifi 0000:01:00.0: missed_beacons:19, missed_beacons_since_rx:1
+[  +0.102510] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000014] iwlwifi 0000:01:00.0: missed_beacons:20, missed_beacons_since_rx:2
+[  +0.102534] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000015] iwlwifi 0000:01:00.0: missed_beacons:21, missed_beacons_since_rx:3
+[Aug19 18:27] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000015] iwlwifi 0000:01:00.0: missed_beacons:19, missed_beacons_since_rx:1
+[  +0.104079] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000015] iwlwifi 0000:01:00.0: missed_beacons:20, missed_beacons_since_rx:2
+[  +0.100245] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000014] iwlwifi 0000:01:00.0: missed_beacons:21, missed_beacons_since_rx:1
+[  +0.102942] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000014] iwlwifi 0000:01:00.0: missed_beacons:22, missed_beacons_since_rx:2
+[  +0.102184] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000015] iwlwifi 0000:01:00.0: missed_beacons:23, missed_beacons_since_rx:3
+[Aug19 18:30] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000015] iwlwifi 0000:01:00.0: missed_beacons:19, missed_beacons_since_rx:1
+[  +0.102189] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000016] iwlwifi 0000:01:00.0: missed_beacons:20, missed_beacons_since_rx:2
+[  +0.101992] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000018] iwlwifi 0000:01:00.0: missed_beacons:21, missed_beacons_since_rx:3
+[Aug19 18:31] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000014] iwlwifi 0000:01:00.0: missed_beacons:19, missed_beacons_since_rx:1
+[  +0.102239] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000014] iwlwifi 0000:01:00.0: missed_beacons:20, missed_beacons_since_rx:2
+[  +0.102053] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000013] iwlwifi 0000:01:00.0: missed_beacons:21, missed_beacons_since_rx:3
+[Aug19 18:49] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000010] iwlwifi 0000:01:00.0: missed_beacons:19, missed_beacons_since_rx:1
+[  +0.102423] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000010] iwlwifi 0000:01:00.0: missed_beacons:20, missed_beacons_since_rx:1
+[  +0.103039] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000034] iwlwifi 0000:01:00.0: missed_beacons:21, missed_beacons_since_rx:2
+[  +0.101650] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000008] iwlwifi 0000:01:00.0: missed_beacons:22, missed_beacons_since_rx:3
+[Aug19 18:50] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000010] iwlwifi 0000:01:00.0: missed_beacons:19, missed_beacons_since_rx:1
+[  +0.102257] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000010] iwlwifi 0000:01:00.0: missed_beacons:20, missed_beacons_since_rx:2
+[  +0.102404] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000010] iwlwifi 0000:01:00.0: missed_beacons:21, missed_beacons_since_rx:3
+[Aug19 19:33] iwlwifi 0000:01:00.0: Unhandled alg: 0xc0400707
+[  +0.000710] iwlwifi 0000:01:00.0: Unhandled alg: 0xc0400707
+[Aug19 20:04] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000014] iwlwifi 0000:01:00.0: missed_beacons:19, missed_beacons_since_rx:1
+[  +0.102265] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000014] iwlwifi 0000:01:00.0: missed_beacons:20, missed_beacons_since_rx:2
+[  +0.102347] iwlwifi 0000:01:00.0: missed beacons exceeds threshold, but receiving data. Stay connected, Expect bugs.
+[  +0.000015] iwlwifi 0000:01:00.0: missed_beacons:21, missed_beacons_since_rx:3
+

@@ -1,0 +1,12 @@
+##### grep addr
+[presk0@pote ~]$ grep -Eo "(\w|\.)+\.com" /tmp/tcpdump_offline.txt | sort | uniq -c | sort -n
+      2 firefox.settings.services.mozilla.com
+      4 contile.services.mozilla.com
+      4 dns.com
+      6 i.ytimg.com
+      8 identity.bitwarden.com
+     10 spocs.getpocket.com
+     66 play.google.com
+     78 www.youtube.com
+
+

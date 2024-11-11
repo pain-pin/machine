@@ -1,0 +1,26 @@
+##### modification des mpd
+sudo diff /etc/shadow* 
+1c1
+< root:$y$j9T$wursDaoR8dK2eIItHyOnF1$6HqoWSMqwDUJEstU7yjOZfI1NIO9LywOPwZSAajb4t1:20005::::::
+---
+> root:*:14871::::::
+18c18
+< presk0:$y$j9T$seo612AI32T1zQapJx5S/.$l50vkYLUWsPaptURoPFpq6ag5ii0hX5mWdhcOUnKyLA:20005:0:99999:7:::
+---
+> presk0:$y$j9T$R3NrNA4/FWOPPT3QMa1AN0$ZB6wR7Gyqcik7P4.r7HJRmvCb0D52RWUGISg.E4mrkB:19998:0:99999:7:::
+25d24
+< lightdm:!*:19998::::::
+
+presk0@pote-241009-15:02:17-~/.config
+=>sudo grep presk0 /etc/shadow
+presk0:$y$j9T$seo612AI32T1zQapJx5S/.$l50vkYLUWsPaptURoPFpq6ag5ii0hX5mWdhcOUnKyLA:20005:0:99999:7:::
+
+presk0@pote-241009-15:03:47-~/.config
+=>sudo grep root /etc/shadow
+root:$y$j9T$wursDaoR8dK2eIItHyOnF1$6HqoWSMqwDUJEstU7yjOZfI1NIO9LywOPwZSAajb4t1:20005::::::
+
+presk0@pote-241009-15:03:54-~/.config
+=>sudo rm /etc/shadow-
+presk0@pote-241009-15:04:15-~/.config
+
+

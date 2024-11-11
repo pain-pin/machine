@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>pam</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>pam</h1><br/><p>presko@preskhost:/etc$ cat pam.d/passwd</p><p>#%PAM-1.0</p><p>auth		include		system-auth</p><p>account		include		system-auth</p><p>password	include		system-auth</p><p></p><p>selon <a href="https://wiki.archlinux.org/title/SHA_hashes">https://wiki.archlinux.org/title/SHA_hashes</a></p><p>For example: </p><p>/etc/pam.d/passwd</p><p>password	required	pam_unix.so sha512 shadow nullok <strong>rounds=65536</strong></p><p></p><p>selon le man de pam_unix</p><p></p><p><h1>EXAMPLES</h1></p><p>An example usage for /etc/pam.d/login would be:</p><p># Authenticate the user</p><p>auth       required   pam_unix.so</p><p># Ensure user&#39;s account and password are still active</p><p>account    required   pam_unix.so</p><p># Change the user&#39;s password, but at first check the strength</p><p># with pam_passwdqc(8)</p><p>password   required   pam_passwdqc.so config=/etc/passwdqc.conf</p><p>password   required   pam_unix.so use_authtok nullok yescrypt</p><p>session    required   pam_unix.so</p><p></p><p></p></div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+##### dhcp
+impossible de se connecter au telephone Y80
+
+[iwd]# station wlan0 show
+                                 Station: wlan0              
+--------------------------------------------------------------------------------
+  Settable  Property              Value                      
+--------------------------------------------------------------------------------
+            Scanning              no
+            State                 connecting
+            Connected network     Y80
+            No IP addresses       Is DHCP client configured?
+            
+            
+(derniere ligne “clignotante”)
+

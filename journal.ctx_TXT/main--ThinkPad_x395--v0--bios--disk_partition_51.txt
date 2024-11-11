@@ -1,0 +1,67 @@
+##### disk partition
+note /boot = 1G + en vfat
+presko@preskhost:~$ lsblk
+NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+zram0       254:0    0  11.4G  0 disk [SWAP]
+nvme0n1     259:0    0 238.5G  0 disk
+├─nvme0n1p1 259:1    0     1G  0 part /boot
+└─nvme0n1p2 259:2    0 237.5G  0 part /var/log
+                                      /var/cache/pacman/pkg
+                                      /home
+                                      /.snapshots
+                                      /
+
+sudo strings /dev/nvme0n1p1 | head -50
+mkfs.fat
+NO NAME    FAT32
+This is not a bootable disk.  Please insert a bootable floppy and
+press any key to try again ...
+RRaA
+rrAa
+mkfs.fat
+NO NAME    FAT32
+This is not a bootable disk.  Please insert a bootable floppy and
+press any key to try again ...
+RRaA
+rrAa
+AMD-UC~1IMG
+VMLINU~1
+INITRA~1IMG
+INITRA~2IMG
+EFI
+LOADER     0
+NITRA~1TMP
+8(ez
+h*?j
+"q\{
++t'#
+?%9b
+xS7gQ
+z{_Q
+_gv]T
+4X`!
+CK+sQ
+Po{g
+&]fKAy
+(.C2
+d'GHqK
+070701000005e7000041c00000000000000000000000000000000000000000000000000000000100000000000000000000003300000000usr/lib/modules/6.10.6-arch1-1/kernel/drivers/mtd/
+070701000005e8000081a4000000000000000000000000000000000000a2f1000000000000000100000000000000000000003d00000000usr/lib/modules/6.10.6-arch1-1/kernel/drivers/mtd/mtd.ko.zst
+@3!R
+Zn/.
+5?tj
+e3@X3
+ywL/r
+w~M|<,
+~xB'%
+r+.@
+N][l
+%tvIk,},
+2[]8Zmip
+aac3/
+s&e:
+uBJnTWL8p
+R^6*z
+
+
+

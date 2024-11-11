@@ -1,0 +1,10 @@
+######## dmesd | grep -i journal
+[    5.078083] systemd[1]: Listening on Journal Socket (/dev/log).
+[    5.078246] systemd[1]: Listening on Journal Sockets.
+[    5.102742] systemd[1]: Starting Journal Service...
+[    5.128840] systemd-journald[339]: Collecting audit messages is disabled.
+[    5.204792] systemd[1]: Started Journal Service.
+[    6.187992] systemd-journald[339]: Received client request to flush runtime journal.
+[    6.190734] systemd-journald[339]: File /var/log/journal/573a5841725c4155900a7431723084c7/system.journal corrupted or uncleanly shut down, renaming and replacing.
+[   16.882639] systemd-journald[339]: File /var/log/journal/573a5841725c4155900a7431723084c7/user-1000.journal corrupted or uncleanly shut down, renaming and replacing.
+

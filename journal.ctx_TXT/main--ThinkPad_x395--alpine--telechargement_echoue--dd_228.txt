@@ -1,0 +1,47 @@
+##### dd
+presk0@ordi-241031-00:18:15-~ 
+=> sudo dd of=/dev/sdb if=alpine-standard-3.20.3-aarch64.iso 
+[sudo] password for presk0:  
+^E434116+0 records in 
+434116+0 records out 
+222267392 bytes (222 MB, 212 MiB) copied, 37,7325 s, 5,9 MB/s 
+ 
+presk0@ordi-241031-00:19:12-~ 
+=> lsblk 
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS 
+sda      8:0    0 238,5G  0 disk  
+├─sda1   8:1    0   300M  0 part /boot/efi 
+├─sda2   8:2    0 229,4G  0 part /home 
+│                                /var/log 
+│                                /var/cache 
+│                                / 
+└─sda3   8:3    0   8,8G  0 part [SWAP] 
+sdb      8:16   1  14,3G  0 disk  
+├─sdb1   8:17   1   270K  0 part  
+├─sdb2   8:18   1   1,4M  0 part  
+└─sdb3   8:19   1 210,2M  0 part  
+sr0     11:0    1  1024M  0 rom   
+ 
+presk0@ordi-241031-00:52:13-~ 
+=> fdisc /dev/sdb 
+bash: fdisc: command not found 
+ 
+presk0@ordi-241031-00:52:40-~ 
+=> sudo fdisk /dev/sdb 
+[sudo] password for presk0:  
+Sorry, try again. 
+[sudo] password for presk0:  
+ 
+Welcome to fdisk (util-linux 2.40.2). 
+Changes will remain in memory only, until you decide to write them. 
+Be careful before using the write command. 
+ 
+GPT PMBR size mismatch (434115 != 30031871) will be corrected by write. 
+The backup GPT table is not on the end of the device. This problem will be corrected 
+by write. 
+The device contains 'iso9660' signature and it will be removed by a write command. Se
+e fdisk(8) man page and --wipe option for more details. 
+
+ 
+
+

@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>modification des mpd</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>modification des mpd</h1><br/><p>sudo diff /etc/shadow* </p><p>1c1</p><p>&lt; root:$y$j9T$wursDaoR8dK2eIItHyOnF1$6HqoWSMqwDUJEstU7yjOZfI1NIO9LywOPwZSAajb4t1:20005::::::</p><p>---</p><p>&gt; root:*:14871::::::</p><p>18c18</p><p>&lt; presk0:$y$j9T$seo612AI32T1zQapJx5S/.$l50vkYLUWsPaptURoPFpq6ag5ii0hX5mWdhcOUnKyLA:20005:0:99999:7:::</p><p>---</p><p>&gt; presk0:$y$j9T$R3NrNA4/FWOPPT3QMa1AN0$ZB6wR7Gyqcik7P4.r7HJRmvCb0D52RWUGISg.E4mrkB:19998:0:99999:7:::</p><p>25d24</p><p>&lt; lightdm:!*:19998::::::</p><p></p><p>presk0@pote-241009-15:02:17-~/.config</p><p>=&gt;sudo grep presk0 /etc/shadow</p><p>presk0:$y$j9T$seo612AI32T1zQapJx5S/.$l50vkYLUWsPaptURoPFpq6ag5ii0hX5mWdhcOUnKyLA:20005:0:99999:7:::</p><p></p><p>presk0@pote-241009-15:03:47-~/.config</p><p>=&gt;sudo grep root /etc/shadow</p><p>root:$y$j9T$wursDaoR8dK2eIItHyOnF1$6HqoWSMqwDUJEstU7yjOZfI1NIO9LywOPwZSAajb4t1:20005::::::</p><p></p><p>presk0@pote-241009-15:03:54-~/.config</p><p>=&gt;sudo rm /etc/shadow-</p><p>presk0@pote-241009-15:04:15-~/.config</p></div>
+</body>
+</html>

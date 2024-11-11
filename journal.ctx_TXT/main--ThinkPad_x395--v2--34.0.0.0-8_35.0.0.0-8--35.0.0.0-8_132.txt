@@ -1,0 +1,12 @@
+##### 35.0.0.0/8
+
+presk0@pote-241011-21:29:34-~/machine/networking
+=>grep -E '35\.' /tmp/3435.txt 
+    pote.home.41634 > livebox.home.domain: [bad udp cksum 0x83af -> 0x789b!] 55542+ [1au] PTR? 35.1.168.192.in-addr.arpa. ar: . OPT UDPsize=1472 (54)
+    pote.home.mdns > mdns.mcast.net.mdns: [bad udp cksum 0xa2f6 -> 0xb245!] 0 PTR (QM)? 35.1.168.192.in-addr.arpa. (43)
+    livebox.home.domain > pote.home.41634: [udp sum ok] 55542 NXDomain* q: PTR? 35.1.168.192.in-addr.arpa. 0/0/1 ar: . OPT UDPsize=1232 (54)
+    pote.home.mdns > mdns.mcast.net.mdns: [bad udp cksum 0xa2f6 -> 0xb245!] 0 PTR (QM)? 35.1.168.192.in-addr.arpa. (43)
+    pote.home.mdns > mdns.mcast.net.mdns: [bad udp cksum 0xa2f6 -> 0xb245!] 0 PTR (QM)? 35.1.168.192.in-addr.arpa. (43)
+    livebox.home.domain > pote.home.36108: [udp sum ok] 18226 q: A? aus5.mozilla.org. 3/0/1 aus5.mozilla.org. CNAME balrog-aus5.r53-2.services.mozilla.com., balrog-aus5.r53-2.services.mozilla.com. CNAME prod.balrog.prod.cloudops.mozgcp.net., prod.balrog.prod.cloudops.mozgcp.net. A 35.244.181.201 ar: . OPT UDPsize=1232 (163)
+
+

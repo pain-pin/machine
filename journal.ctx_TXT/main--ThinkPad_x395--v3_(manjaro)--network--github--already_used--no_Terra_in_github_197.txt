@@ -1,0 +1,12 @@
+####### no Terra in github
+
+              SSH    
+          chromeos               SHA256:2eTPa0KeX1o2uiv0iZ97iRNutIXmokB88WJwASyPaQ4                      Added Jun 18, 2024                        Last used within the last 4 months          — Read/write           
+   
+              SSH    
+          think               SHA256:oGZYEddjZQoe2HrII9BRwZ3GkEsGPy/uG99w93YwMSA                      Added Oct 3, 2024                        Last used within the last 3 weeks          — Read/write           
+  
+              SSH    
+          school               SHA256:tHNOmv1ALw2gYem2SDR6Mq7H44/QkNLGoruqCAQXUkM                      Added Oct 14, 2024                        Last used within the last week          — Read/write           
+ 
+

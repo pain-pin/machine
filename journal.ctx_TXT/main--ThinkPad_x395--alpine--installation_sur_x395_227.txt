@@ -1,0 +1,15 @@
+#### installation sur x395
+Boot Menu:
+Manjaro
+Linux Boot Manager => rien
+Linux Boot Manager => rien
+Linux Boot Manager => rien
+Linux Boot Manager => rien
+Linux Boot Manager => rien
+Linux Boot Manager => rien
+Windows Boot Manager => rien
+NVMe0 Samsung ... => renvoit sur Manjaro
+USB HDD: sandisk ultra
+
+
+

@@ -1,0 +1,15 @@
+##### wall message
+    /run/media/presk0/H2N_SD  ------------------------------------------------------------------------------                                                        1 ✘  
+Generating grub configuration file ... 
+-- 
+Adding boot menu entry for UEFI Firmware Settings ... 
+Detecting snapshots ... 
+Found 2 snapshot(s) 
+Unmount /tmp/grub-btrfs.P5c5tDOOCB .. Success 
+-- 
+Created control file: /run/timeshift/8146/backup/timeshift-btrfs/snapshots/2024-10-16_22-47-41/info.json 
+BTRFS Snapshot saved successfully (0s) 
+
+ 
+
+

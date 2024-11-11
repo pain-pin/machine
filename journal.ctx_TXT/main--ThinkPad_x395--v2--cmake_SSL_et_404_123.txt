@@ -1,0 +1,59 @@
+#### cmake SSL et 404
+note : aucus pb pour telecharger d'autres paquets
+
+=>yay -S rocm-hip-sdk rocm-opencl-sdkk
+ -> No AUR package found for rocm-opencl-sdkk
+Sync Explicit (1): rocm-hip-sdk-6.0.2-1
+[sudo] password for presk0: 
+resolving dependencies...
+looking for conflicting packages...
+
+Packages (42) cmake-3.30.4-1  comgr-6.0.2-1  composable-kernel-6.0.2-1
+              cppdap-1.58.0-2  hip-runtime-amd-6.0.2-4  hipblas-6.0.2-1
+              hipcub-6.0.2-1  hipfft-6.0.2-1  hiprand-6.0.2-1  hipsolver-6.0.2-1
+              hipsparse-6.0.2-1  hsa-rocr-6.0.2-2  hsakmt-roct-6.0.0-2
+              jsoncpp-1.9.6-3  libuv-1.49.0-1  miopen-hip-6.0.2-1
+              numactl-2.0.18-1  opencl-headers-2:2024.05.08-1  openmp-18.1.8-1
+              rccl-6.0.2-1  rhash-1.4.4-1  rocalution-6.0.2-2  rocblas-6.0.2-1
+              rocfft-6.0.2-1  rocm-clang-ocl-6.0.2-1  rocm-cmake-6.0.2-1
+              rocm-core-6.0.2-2  rocm-device-libs-6.0.2-1
+              rocm-hip-libraries-6.0.2-1  rocm-hip-runtime-6.0.2-1
+              rocm-language-runtime-6.0.2-1  rocm-llvm-6.0.2-1
+              rocm-opencl-runtime-6.0.2-1  rocm-smi-lib-6.0.2-1
+              rocminfo-6.0.2-1  rocprim-6.0.2-1  rocrand-6.0.2-1
+              rocsolver-6.0.2-3  rocsparse-6.0.2-2  rocthrust-6.0.2-1
+              roctracer-6.0.2-1  rocm-hip-sdk-6.0.2-1
+
+Total Download Size:    1405.98 MiB
+Total Installed Size:  20221.14 MiB
+
+:: Proceed with installation? [Y/n] y
+:: Retrieving packages...
+ rocm-llvm-6.0.2-...   783.4 MiB  49.5 MiB/s 00:16 [#######################] 100%
+ rocblas-6.0.2-1-...   101.5 MiB  48.6 MiB/s 00:02 [#######################] 100%
+ miopen-hip-6.0.2...   100.7 MiB  47.8 MiB/s 00:02 [#######################] 100%
+ rocfft-6.0.2-1-x...    99.5 MiB  32.8 MiB/s 00:03 [#######################] 100%
+ composable-kerne...    91.6 MiB  42.1 MiB/s 00:02 [#######################] 100%
+ rocsolver-6.0.2-...    66.0 MiB  43.9 MiB/s 00:02 [#######################] 100%
+ rccl-6.0.2-1-x86_64    49.0 MiB  43.7 MiB/s 00:01 [#######################] 100%
+ comgr-6.0.2-1-x86_64   42.1 MiB  44.7 MiB/s 00:01 [#######################] 100%
+ rocsparse-6.0.2-...    26.4 MiB  42.6 MiB/s 00:01 [#######################] 100%
+ rocrand-6.0.2-1-...    17.2 MiB  40.7 MiB/s 00:00 [#######################] 100%
+ cmake-3.30.4-1-x86_64.pkg.tar.zst failed to download
+ Total (11/42)        1406.0 MiB  38.7 MiB/s 00:36 [#######################] 100%
+error: failed retrieving file 'cmake-3.30.4-1-x86_64.pkg.tar.zst' from mirror.ubrco.de : The requested URL returned error: 404
+error: failed retrieving file 'cmake-3.30.4-1-x86_64.pkg.tar.zst' from america.mirror.pkgbuild.com : The requested URL returned error: 404
+error: failed retrieving file 'cmake-3.30.4-1-x86_64.pkg.tar.zst' from sydney.mirror.pkgbuild.com : The requested URL returned error: 404
+error: failed retrieving file 'cmake-3.30.4-1-x86_64.pkg.tar.zst' from arch.niranjan.co : SSL: no alternative certificate subject name matches target hostname 'arch.niranjan.co'
+error: failed retrieving file 'cmake-3.30.4-1-x86_64.pkg.tar.zst' from asia.mirror.pkgbuild.com : The requested URL returned error: 404
+error: failed retrieving file 'cmake-3.30.4-1-x86_64.pkg.tar.zst' from seoul.mirror.pkgbuild.com : The requested URL returned error: 404
+error: failed retrieving file 'cmake-3.30.4-1-x86_64.pkg.tar.zst' from is.mirror.flokinet.net : The requested URL returned error: 404
+error: failed retrieving file 'cmake-3.30.4-1-x86_64.pkg.tar.zst' from mirror.system.is : The requested URL returned error: 404
+error: failed retrieving file 'cmake-3.30.4-1-x86_64.pkg.tar.zst' from is.mirror.flokinet.net : The requested URL returned error: 404
+warning: failed to retrieve some files
+error: failed to commit transaction (failed to retrieve some files)
+Errors occurred, no packages were upgraded.
+ -> error installing repo packages
+
+
+

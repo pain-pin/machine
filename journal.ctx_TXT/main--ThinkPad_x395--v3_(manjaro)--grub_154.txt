@@ -1,0 +1,5 @@
+#### grub
+check dmesg -H -l1,2,3,4 too
+ 
+
+
