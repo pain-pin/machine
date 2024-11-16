@@ -1,0 +1,78 @@
+% This is the RIPE Database query service.
+% The objects are in RPSL format.
+%
+% The RIPE Database is subject to Terms and Conditions.
+% See https://docs.db.ripe.net/terms-conditions.html
+
+% Note: this output has been filtered.
+%       To receive output for a database update, use the "-B" flag.
+
+% Information related to '212.85.152.0 - 212.85.159.255'
+
+% Abuse contact for '212.85.152.0 - 212.85.159.255' is 'abuse@ielo.net'
+
+inetnum:        212.85.152.0 - 212.85.159.255
+netname:        LOST-OASIS
+descr:          Ielo Assignation to Customer
+descr:          Lost Oasis Hosting Network
+country:        FR
+admin-c:        IELO
+tech-c:         IELO
+status:         ASSIGNED PA
+mnt-by:         IELO-MNT
+org:            ORG-LOS3-RIPE
+created:        2004-01-19T18:21:21Z
+last-modified:  2013-05-30T09:32:12Z
+source:         RIPE
+
+organisation:   ORG-LOS3-RIPE
+org-name:       Lost Oasis SARL
+org-type:       OTHER
+descr:          http://www.ielo.net/
+address:        42 rue Liandier
+address:        13008
+address:        Marseille
+address:        FRANCE
+phone:          +33491296850
+fax-no:         +33491296851
+admin-c:        PNL-FR
+admin-c:        IELO
+tech-c:         IELO
+abuse-c:        IELO
+mnt-ref:        IELO-MNT
+mnt-by:         IELO-MNT
+created:        2010-03-05T13:11:19Z
+last-modified:  2018-05-24T08:43:00Z
+source:         RIPE # Filtered
+
+role:           IELO NOC
+address:        42 rue Liandier
+address:        13008 Marseille
+address:        France
+phone:          +33 491296858
+fax-no:         +33 491296851
+org:            ORG-LOS3-RIPE
+admin-c:        PNL-FR
+admin-c:        JUL-FR
+tech-c:         PNL-FR
+tech-c:         JUL-FR
+nic-hdl:        IELO
+abuse-mailbox:  abuse@ielo.net
+mnt-by:         IELO-MNT
+created:        2012-10-08T14:00:24Z
+last-modified:  2021-02-28T21:21:45Z
+source:         RIPE # Filtered
+
+% Information related to '212.85.144.0/20AS29075'
+
+route:          212.85.144.0/20
+descr:          Ielo first Route
+origin:         AS29075
+mnt-by:         IELO-MNT
+created:        2003-10-27T16:57:11Z
+last-modified:  2004-01-19T14:07:52Z
+source:         RIPE
+
+% This query was served by the RIPE Database Query Service version 1.114 (DEXTER)
+
+

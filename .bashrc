@@ -37,8 +37,8 @@ HISTFILE=~/.history
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
 
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
@@ -66,7 +66,13 @@ set -o vi
 #bind 'set show-all-if-ambiguous on'
 #bind 'TAB:menu-complete'
 
-
+# Définir les couleurs
+GREEN='\[\e[32m\]'
+YELLOW='\[\e[33m\]'
+ORANGE='\[\e[38;5;214m\]'  # Il n'y a pas de code direct pour l'orange, mais ce code ANSI s'en approche
+RED='\[\e[31m\]'
+NO_COLOR='\[\e[0m\]'  # Réinitialiser la couleur
+# Définir PS1 avec les couleurs
 #export PS1="\n\u@\H-\D{%y%m%d}-\t-\w\n=>"
 # Couleurs
 USER_COLOR="\[\e[1;32m\]"   # Vert clair pour l'utilisateur
@@ -74,11 +80,10 @@ HOST_COLOR="\[\e[1;34m\]"   # Bleu clair pour l'hôte
 DATE_COLOR="\[\e[1;33m\]"   # Jaune pour la date
 TIME_COLOR="\[\e[1;36m\]"   # Cyan pour l'heure
 DIR_COLOR="\[\e[1;35m\]"    # Magenta clair pour le répertoire
-RESET_COLOR="\[\e[0m\]"     # Réinitialisation des couleurs
+RESET_COLOR="$NO_COLOR"
 
 # Prompt
 PS1="${USER_COLOR}\n\u${RESET_COLOR}@${HOST_COLOR}\H${RESET_COLOR}-${DATE_COLOR}\D{%y%m%d}${RESET_COLOR}-${TIME_COLOR}\t${RESET_COLOR}-${DIR_COLOR}\w${RESET_COLOR}\n=> "
-#export PS1=">"
 
 export OCTET="(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)"
 export OCTET="(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)"
@@ -86,10 +91,4 @@ export IPV4_REG="($OCTET\.){3}$OCTET"
 export IPV6_REG="(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))"
 export IP_REG="($IPV4_REG)|($IPV6_REG)"
 export YES_REG='\$y\$[./A-Za-z0-9]+\$[./A-Za-z0-9]{,86}\$[./A-Za-z0-9]{43}'
-#export OPENAI_API_KEY="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"
 
-# Added by LM Studio CLI tool (lms)
-export PATH="$PATH:/home/presk0/.cache/lm-studio/bin"
-
-bind '"\e[A": history-search-backward'
-bind '"\e[B": history-search-forward'
