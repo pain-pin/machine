@@ -1,9 +1,3 @@
-compile_arduino () {
-	FQBN='arduino:avr:uno'
-	DEV='/dev/ttyACM0'
-	arduino-cli compile --fqbn $FQBN $1
-	arduino-cli upload -p $DEV --fqbn $FQBN $1
-}
 
 #convert mp3 to wav
 to_wav () {
@@ -68,26 +62,44 @@ sphynx () {
 }
 
 basha () {
-	MACHINE=~/machine
-	vim + ~/.bash_aliases
-	source ~/.bashrc
-	cd $MACHINE
+	SOURCE="$HOME/.bashrc"
+	FILE="$(find /home -name '.bash_aliases'| head -1)"
+	F_PATH="$(dirname $FILE)"
+	vim + $FILE
+	source $SOURCE
+	cd "$F_PATH"
+	git diff
 	git pull
-	git add .bash_aliases && git commit -m "something new in bash_aliases" && git push
+	git diff
+	git add $FILE && git commit -m "something new in $(basename $FILE)" && git push
 	cd -
-	#cp ~/.bash_aliases ~/machine/.bash_aliases
 }
 
 brc () {
-	vim + ~/.bashrc
-	source ~/.bashrc
-	#cp ~/.bash_aliases ~/machine/.bash_aliases
+	SOURCE="$HOME/.bashrc"
+	FILE="$(find /home -name '.bashrc'| head -1)"
+	F_PATH="$(dirname $FILE)"
+	vim + $FILE
+	source $SOURCE
+	cd "$F_PATH"
+	git diff
+	git pull
+	git diff
+	git add $FILE && git commit -m "something new in $(basename $FILE)" && git push
+	cd -
 }
 
 vrc () {
-	vim + ~/.vimrc
-	#source ~/.vimrc
-	#cp ~/.bash_aliases ~/machine/.bash_aliases
+	NAME=".vimrc"
+	FILE="$(find /home -name $NAME| head -1)"
+	F_PATH="$(dirname $FILE)"
+	vim + $FILE
+	cd "$F_PATH"
+	git diff
+	git pull
+	git diff
+	git add $FILE && git commit -m "something new in $(basename $FILE)" && git push
+	cd -
 }
 
 machine_install () {
@@ -251,4 +263,57 @@ sedi () {
 		sed "s/$REG/$NEW_WD/g" $FILE
 		echo "$FILE"
 	done
+}
+
+sed_in_place () {
+	TMP="/tmp/sed_in_place.tmp"
+	REG=$1
+	CHANGE=$2
+	for F in $(find . ) ; do
+		if [ -n "$(file $F | grep 'ASCII text')" ] ; then
+			gawk -v reg="$REG" -v change="$CHANGE" '{gsub(reg, change); print $0}' "$F" > $TMP
+			chmod --reference=$F $TMP
+			mv -f TMP $F
+		fi
+	done
+}
+
+clone () {
+	PROJECT_NAME="$1"
+	git clone git@github.com:presk0/$PROJECT_NAME.git
+
+}
+
+iptables_update () {
+	F_PATH="$(dirname $FILE)"
+	F_PERSISTENT="/etc/iptables.rules"
+	FILE="$(find /home -name 'iptables_script.sh' | head -1)"
+	F_TMP=/etc/iptables.rules.backup
+	sudo cp $F_PERSISTENT > $F_TMP
+	vim + $FILE
+	sudo ./$FILE -s -f ip_to_ban.txt -r
+	sudo iptables-save > $HOME/tmp
+	sudo mv $HOME/tmp $F_PERSISTENT
+}
+
+install ()
+{
+	F_LOG="/tmp/last_pacman_output.log"
+	sudo pacman -S $@ | tee $FLOG
+}
+
+save_cmd ()
+{
+	FILE=journal_$(date +%F_%T)_$1.txt
+	DIR=$HOME/machine
+	USER=$(whoami)
+	HOST=$(hostname)
+	DATETIME=$(date +"%Y%m%d-%H:%M:%S")
+
+	echo "$DATETIME-$USER@$HOST-$PWD" >> $DIR/$FILE
+	echo "" >> $DIR/$FILE
+	LAST_CMD=$(history | awk '{$1=$2=$3="" ; print $0}' | tail -2 | head -1)
+	echo "cmd: ${LAST_CMD}">> $DIR/$FILE
+	echo "" >> $DIR/$FILE
+	echo "$LAST_CMD" | bash >> $DIR/$FILE
 }
