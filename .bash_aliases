@@ -38,7 +38,7 @@ cdebug () {
 
 basha () {
 	SOURCE="$HOME/.bashrc"
-	FILE="$(find /home -name '.bash_aliases'| head -1)"
+	FILE="$(find /home -name '.bash_aliases' 2>/dev/null | head -1)"
 	F_PATH="$(dirname $FILE)"
 	vim + $FILE
 	source $SOURCE
@@ -212,7 +212,7 @@ install ()
 save_cmd ()
 {
 	FILE=journal_$(date +%F_%T)_$1.txt
-	DIR=$HOME/machine
+	DIR=$HOME/machine/journal
 	USER=$(whoami)
 	HOST=$(hostname)
 	DATETIME=$(date +"%Y%m%d-%H:%M:%S")
