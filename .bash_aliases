@@ -51,12 +51,13 @@ basha () {
 }
 
 brc () {
-	SOURCE="$HOME/.bashrc"
-	FILE="$(find $HOME -name '.bashrc'| head -1)"
-	F_PATH="$(dirname $FILE)"
+	FILE_NAME='.bashrc'
+	SOURCE_PATH="$(find $HOME -type d -name machine)"
+	SOURCE="$SOURCE_PATH/.bashrc"
+	FILE="$(find $SOURCE -name "$FILE_NAME" | head -1)"
 	vim + $FILE
 	source $SOURCE
-	cd "$F_PATH"
+	cd "$SOURCE_PATH"
 	git diff
 	git pull
 	git diff
