@@ -52,7 +52,7 @@ basha () {
 
 brc () {
 	SOURCE="$HOME/.bashrc"
-	FILE="$(find /home -name '.bashrc'| head -1)"
+	FILE="$(find $HOME -name '.bashrc'| head -1)"
 	F_PATH="$(dirname $FILE)"
 	vim + $FILE
 	source $SOURCE
