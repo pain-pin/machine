@@ -275,8 +275,3 @@ set rnu
 
 "set backupdir=/tmp/
 set directory=/tmp
-
-call plug#begin('~/.vim/plugged')
-Plug 'github_username/chatgpt-vim-plugin'
-call plug#end()
-
