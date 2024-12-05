@@ -92,3 +92,4 @@ export IP_REG="($IPV4_REG)|($IPV6_REG)"
 export YES_REG="\$y\$[./A-Za-z0-9]+\$[./A-Za-z0-9]{,86}\$[./A-Za-z0-9]{43}"
 export FILE_REG="[a-zA-Z0-9]+\.[a-zA-Z0-9]+"
 
+PATH+=":$HOME/.local/bin/lvim"
