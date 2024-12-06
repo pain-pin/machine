@@ -274,3 +274,5 @@ save_cmd ()
 	echo "" >> $DIR/$FILE
 	echo "$LAST_CMD" | bash >> $DIR/$FILE
 }
+
+alias v="nvim"
