@@ -276,4 +276,4 @@ set rnu
 "set backupdir=/tmp/
 set directory=/tmp
 
-set colorscheme koehler
+colorscheme koehler
