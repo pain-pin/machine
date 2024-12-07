@@ -1,0 +1,1 @@
+# Nmap 7.95 scan initiated Fri Oct 25 16:26:35 2024 as: nmap -T sneaky --privileged -Pn -sM -oA nmap_mainon_ -v3 -p 1-65535 162.4.128.77
