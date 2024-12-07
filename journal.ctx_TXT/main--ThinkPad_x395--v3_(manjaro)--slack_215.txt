@@ -1,4 +1,0 @@
-#### slack
-code de confirmation pour verification d'identite non recu
-
-

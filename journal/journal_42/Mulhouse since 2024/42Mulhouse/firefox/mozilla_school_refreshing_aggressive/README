@@ -1,0 +1,6 @@
+for F in (find ~/.mozilla/ -regex ".*42.*" | grep -i profile) ; do cp $F $DIR ;done
+
+impossible d'ouvrir un slot sur 42 intra la veille
+
+42 intra redirige vers, et rafraichit plusieurs fois par seconde
+https://profile.intra.42.fr/users/auth/keycloak_student

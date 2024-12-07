@@ -1,9 +1,0 @@
-##### no available version of cmake
-from  https://cmake.org/download/
-
-Latest Release (3.30.5)
-
-Previous Release (3.29.8)
-
-version demmandee: cmake-3.30.4-1-x86_64
-

@@ -38,7 +38,7 @@ cdebug () {
 
 basha () {
 	SOURCE="$HOME/.bashrc"
-	FILE="$(find /home -name '.bash_aliases'| head -1)"
+	FILE="$(find /home -name '.bash_aliases' 2>/dev/null | head -1)"
 	F_PATH="$(dirname $FILE)"
 	vim + $FILE
 	source $SOURCE
@@ -51,12 +51,13 @@ basha () {
 }
 
 brc () {
-	SOURCE="$HOME/.bashrc"
-	FILE="$(find /home -name '.bashrc'| head -1)"
-	F_PATH="$(dirname $FILE)"
+	FILE_NAME='.bashrc'
+	SOURCE_PATH="$(find $HOME -type d -name machine)"
+	SOURCE="$SOURCE_PATH/.bashrc"
+	FILE="$(find $SOURCE -name "$FILE_NAME" | head -1)"
 	vim + $FILE
 	source $SOURCE
-	cd "$F_PATH"
+	cd "$SOURCE_PATH"
 	git diff
 	git pull
 	git diff
@@ -64,7 +65,7 @@ brc () {
 	cd -
 }
 
-vimrc () {
+vrc () {
 	NAME=".vimrc"
 	FILE="$(find /home -name $NAME| head -1)"
 	F_PATH="$(dirname $FILE)"
@@ -166,11 +167,60 @@ ctagss () {
 	ctags -R --c-kinds=+p --fields=+S $@
 }
 
-alias ccc="cc -Wall -Wextra -Werror"
+alias ccc="cc -Wall -Wextra -Werror $@"
 
 ulog_sort () {
 	sudo grep -Eo "MAC.*DST=[^ ]*" /var/log/ulogd.syslogemu  | sort | uniq -c | sort -n
 
+}
+
+header_awk () {
+	TMP="/tmp/header.tmp"
+	echo '
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: supersko <ndionis@student.42mulhouse.fr>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/02 18:03:26 by supersko          #+#    #+#             */
+/*   Updated: 2024/10/16 15:05:56 by nidionis         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef X_H
+# define X_H
+
+# include <stdlib.h>
+# include <unistd.h>
+' >> $TMP
+	echo >> $TMP
+	awk '/^[a-z].*\)$/{ print $0";"}' *.c | grep -v main | grep -v static | sed "s/int\t/int\t\t/g" >> $TMP
+	echo >> $TMP
+	echo "#endif" >> $TMP
+	cat $TMP
+	rm $TMP
+}
+
+francinette () {
+	bash $HOME/francinette/tester.sh
+}
+
+sedi () {
+	if [ $# -lt 3 ]; then
+        echo "Usage: sedi <motif> <remplacement> <fichiers...>"
+        return 1
+    fi
+	REG="$1"
+	shift
+	NEW_WD="$1"
+	shift
+	FILES="$@"
+	for FILE in ${FILES} ; do
+		sed "s/$REG/$NEW_WD/g" $FILE
+		echo "$FILE"
+	done
 }
 
 sed_in_place () {
@@ -212,7 +262,7 @@ install ()
 save_cmd ()
 {
 	FILE=journal_$(date +%F_%T)_$1.txt
-	DIR=$HOME/machine
+	DIR=$HOME/machine/journal
 	USER=$(whoami)
 	HOST=$(hostname)
 	DATETIME=$(date +"%Y%m%d-%H:%M:%S")
@@ -224,3 +274,5 @@ save_cmd ()
 	echo "" >> $DIR/$FILE
 	echo "$LAST_CMD" | bash >> $DIR/$FILE
 }
+
+alias v="nvim"

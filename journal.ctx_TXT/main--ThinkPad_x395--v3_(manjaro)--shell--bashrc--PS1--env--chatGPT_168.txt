@@ -1,7 +1,0 @@
-######## chatGPT
-    Empty Output for echo $BASH_VERSION: It appears you did not get any output for echo $BASH_VERSION. This could indicate that the variable is unset, which is unusual. It should display the version of Bash you're using.
-
-    Attempt to Set PS1: Your command export PS1='>' returned an error (0|1 ✘), which indicates there might be an issue with how the shell is processing the command.
-
-
-

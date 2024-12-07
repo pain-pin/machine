@@ -1,6 +1,0 @@
-#### sudo
-le mot de passe a l'utilisation de sudo ne fonctionne pas durant 20 min
-retablis alors que le PC etait hors ligne
-
-
-

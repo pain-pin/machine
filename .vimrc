@@ -61,6 +61,7 @@ set ignorecase
 
 " Override the ignorecase option if searching for capital letters.
 " This will allow you to search specifically for capital letters.
+
 set smartcase
 
 " Show partial command you type in the last line of the screen.
@@ -82,7 +83,7 @@ set history=1000
 set wildmenu
 
 " Make wildmenu behave like similar to Bash completion.
-set wildmode=list:longest
+"set wildmode=list:longest
 
 " There are certain files that we would never want to edit with Vim.
 " Wildmenu will ignore files with these extensions.
@@ -159,7 +160,7 @@ set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 "nnoremap <F3> :NERDTreeToggle<cr>
 
 " Have nerdtree ignore certain files and directories.
-let NERDTreeIgnore=['\.git$', '\.jpg$', '\.mp4$', '\.ogg$', '\.iso$', '\.pdf$', '\.pyc$', '\.odt$', '\.png$', '\.gif$', '\.db$']
+"let NERDTreeIgnore=['\.git$', '\.jpg$', '\.mp4$', '\.ogg$', '\.iso$', '\.pdf$', '\.pyc$', '\.odt$', '\.png$', '\.gif$', '\.db$']
 
 "" }}}
 "
@@ -235,25 +236,25 @@ let NERDTreeIgnore=['\.git$', '\.jpg$', '\.mp4$', '\.ogg$', '\.iso$', '\.pdf$', 
 " STATUS LINE ------------------------------------------------------------ {{{
 
 " Clear status line when vimrc is reloaded.
-set statusline=
+"set statusline=
 
 " Status line left side.
-set statusline+=\ %F\ %M\ %Y\ %R
+"set statusline+=\ %F\ %M\ %Y\ %R
 
 " Use a divider to separate the left side from the right side.
-set statusline+=%=
+"set statusline+=%=
 
 " Status line right side.
 "set statusline+=\ ascii:\ %b\ hex:\ 0x%B\ row:\ %l\ col:\ %c\ percent:\ %p%%
 
 " Show the status on the second to last line.
-set laststatus=2
+"set laststatus=2
 
 " }}}
 
 
 " skeletons
-autocmd BufNewFile readme.md 0r ~/.vim/templates/template.md
+autocmd BufNewFile *.md 0r ~/.vim/templates/template.md
 autocmd BufNewFile *.sh 0r ~/.vim/templates/template.sh
 autocmd BufNewFile *.py 0r ~/.vim/templates/template.py
 autocmd BufNewFile *.c 0r ~/.vim/templates/template.c
@@ -261,12 +262,18 @@ autocmd BufNewFile *.c 0r ~/.vim/templates/template.c
 set mouse=a
 
 "https://stackoverflow.com/questions/21316727/automatic-closing-brackets-for-vim#34992101
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
+"inoremap " ""<left>
+"inoremap ' ''<left>
+"inoremap ( ()<left>
+"inoremap [ []<left>
+"inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 
 set rnu
+
+"set backupdir=/tmp/
+set directory=/tmp
+
+colorscheme koehler

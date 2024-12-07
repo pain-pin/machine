@@ -1,8 +1,0 @@
-#### manjaro iso ok
-sha256sum manjaro-kde-24.1.0-241001-linux610.iso 
-e839f496181159bfcfa81524a4c4ec839e4ee7ab2788db7467db15a7860d5be1  manjaro-kde-24.1.0-241001-linux610.iso
-
-
-https://download.manjaro.org/kde/24.1.0/manjaro-kde-24.1.0-241001-linux610.iso.sha256
-e839f496181159bfcfa81524a4c4ec839e4ee7ab2788db7467db15a7860d5be1  manjaro-kde-24.1.0-241001-linux610.iso
-

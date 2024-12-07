@@ -1,31 +1,57 @@
-#@/usr/bin/bash
+#!/usr/bin/bash
 
-cp -r .vim .bashrc .bash_aliases ..
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get dist-upgrade
-#dns over TSL
-#https://www.techrepublic.com/article/how-to-use-dns-over-tls-on-ubuntu-linux/
-#IPv4 tab and set DNS Automatic to OFF. Next, in the DNS textarea, enter 127.0.0.1
-sudo apt install stubby
-sudo systemctl start stubby
-sudo systemctl enable stubby
-#
-sudo apt install vim -y
-sudo apt install gcc -y
-sudo apt install make -y
-sudo apt install pip -y
-sudo apt install vlc -y
-sudo apt install curl -y
-sudo apt install tmux -y
-sudo apt install tree -y
-sudo apt install python3.11-venv -y
-#installation de whisper
-sudo apt install ffmpeg -y
-python3 -m venv ~/.venv
-source ~/.venv/bin/activate
-mkdir pip_cache
-TMP=$HOME/pip_cache/ ; TMPDIR=$TMP pip install --cache-dir=$TMP openai-whisper
-rm -rf ~/pip_cache/
-source ~/.bashrc
-# fin installation de whisper
+#sudo apt-get update
+#sudo apt-get upgrade
+#sudo apt-get dist-upgrade
+
+
+if [[ $EUID -ne 0 ]]; then
+   echo "This script must be run as root"
+   exit 1
+fi
+
+SUDO_HOME="/home/presko"
+MACHINE_DIR="$SUDO_HOME/machine"
+
+FILES_TO_LINK="$MACHINE_DIR/.vim $MACHINE_DIR/.vimrc $MACHINE_DIR/.bashrc $MACHINE_DIR/.bash_aliases"
+for F in $FILES_TO_LINK; do
+	BASENAME=$(basename $F)
+	mv $SUDO_HOME/$BASENAME $SUDO_HOME/$BASENAME.original
+	ln -s $F $SUDO_HOME/$BASENAME
+done;
+
+apt instll -y  ulogd
+NETWORKDIR="$MACHINE_DIR/networking"
+systemctl enable ulogd
+systemctl start ulogd
+bash $NETWORKDIR/iptables_script.sh -f $NETWORKDIR/ip_to_ban.txt -r
+
+apt install -y  cherrytree
+apt install -y  bc
+apt install -y  ctags
+apt install -y firefox
+apt install -y unzip
+apt install -y redshift
+apt install -y tcpdump
+apt install -y moreutils
+apt install -y net-tools
+apt install -y make
+apt install -y whois
+apt install -y nmap
+apt install -y lldb
+apt install -y terminator
+apt install -y man-db
+apt install -y apropos
+apt install -y gdb
+apt install -y docker
+apt install -y go
+apt install -y makepkg
+apt install -y vim
+apt install -y iwctl
+apt install -y gcc
+apt install -y make
+apt install -y pip
+apt install -y vlc
+apt install -y curl
+apt install -y tree
+apt install -y ffmpeg
