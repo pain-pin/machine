@@ -1,8 +1,0 @@
-###### language server
-suppose etre utilise pour codium 
-normalement 
-
-178.238.223.0/24
-178.238.224.0/19
- et non  les addresse 35.223.X.X ... (bloquees par mes regles iptables)
-

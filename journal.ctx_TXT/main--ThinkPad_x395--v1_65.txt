@@ -1,4 +1,0 @@
-### v1
-pb d'acces root la journee meme de l'installation (derrire le pare feu de Diazocopy)
-
-

@@ -1,8 +1,0 @@
-#### logs during install
-installation terminee avec
-
-root has loggged on 2 from .
-root has loggged on 3 from .
-
-(rien trouve sur internet a ce propos)
-

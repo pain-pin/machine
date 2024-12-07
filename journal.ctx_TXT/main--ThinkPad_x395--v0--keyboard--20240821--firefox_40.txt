@@ -1,3 +1,0 @@
-###### firefox
-rend le clavier indisponible au demarage lorsqu'il y a une connection
-
