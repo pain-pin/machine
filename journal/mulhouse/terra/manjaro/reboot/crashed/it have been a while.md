@@ -1,0 +1,1 @@
+and were connected to internet when fall asleep, where running gen_passwd the last days
