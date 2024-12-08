@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "9613ec012cabfb7b",
+        "id": "e60e010807330eb2",
         "type": "tabs",
         "children": [
           {
-            "id": "ea2f1580f387bd54",
+            "id": "29729e7d150825f7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2024-12-08.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "2024-12-08"
+              "title": "New tab"
             }
           }
         ]
@@ -162,11 +158,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ea2f1580f387bd54",
+  "active": "29729e7d150825f7",
   "lastOpenFiles": [
+    "2024-12-08.md",
+    "Root/Gambrinus/2024-12-06-7/Untitled.md",
+    "Root/Gambrinus/2024-12-06-7/Flash.md",
     "Root/Gambrinus/2024-12-06-7/nRT?.md",
     "Root/Gambrinus/2024-12-06-7/J'ai oublie le nom.md",
-    "2024-12-08.md",
     "J'ai oublie le nom.md",
     "2024-12-07.md",
     "Root/rafales",
