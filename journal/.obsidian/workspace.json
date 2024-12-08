@@ -4,81 +4,37 @@
     "type": "split",
     "children": [
       {
-        "id": "7beee2328971bff3",
+        "id": "559ade46af2202cf",
         "type": "tabs",
         "children": [
           {
-            "id": "d180f379aadc2d5f",
+            "id": "9c4f97d400a8ccb8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "mulhouse/terra/manjaro/login/bitwarden/replaypocker/password.md",
-                "mode": "source",
+                "file": "pberso/Root/Gambrinus/2024-12-06-7/nRT?.md",
+                "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "password"
+              "title": "nRT?"
             }
           },
           {
-            "id": "ff6794ad2a604db6",
+            "id": "38d9b15196bd3af9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "release-notes",
               "state": {
-                "file": "mulhouse/terra/manjaro/login/Confirmation/Facebook/other device.md",
-                "mode": "source",
-                "source": true
+                "currentVersion": "1.7.7"
               },
               "icon": "lucide-file",
-              "title": "other device"
-            }
-          },
-          {
-            "id": "11e90a134ef1cbc4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "mulhouse/terra/manjaro/reboot/crashed/it have been a while.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "it have been a while"
-            }
-          },
-          {
-            "id": "55daf8a49edecff9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "mulhouse/terra/manjaro/reboot/crashed/journalctl.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "journalctl"
-            }
-          },
-          {
-            "id": "0b4ba59f37cf9835",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "mulhouse/terra/manjaro/reboot/crashed/it have been a while.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "it have been a while"
+              "title": "Release Notes 1.7.7"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -150,7 +106,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "mulhouse/terra/manjaro/login/Confirmation/Facebook/[solved] SMS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -160,7 +115,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for [solved] SMS"
+              "title": "Backlinks"
             }
           },
           {
@@ -169,12 +124,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "mulhouse/terra/manjaro/login/Confirmation/Facebook/[solved] SMS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from [solved] SMS"
+              "title": "Outgoing links"
             }
           },
           {
@@ -195,11 +149,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "mulhouse/terra/manjaro/login/Confirmation/Facebook/[solved] SMS.md"
-              },
+              "state": {},
               "icon": "lucide-list",
-              "title": "Outline of [solved] SMS"
+              "title": "Outline"
             }
           }
         ]
@@ -219,8 +171,36 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0b4ba59f37cf9835",
+  "active": "48583a757a5e68c7",
   "lastOpenFiles": [
+    "pberso/2024-12-08.md",
+    "Domains/Facebook/connections/empeches/second connection.md",
+    "Domains/Facebook/connections/empeches/first connection/whois/42marseille.md",
+    "Domains/Facebook/connections/empeches/first connection/whois/45.148.156.204.md",
+    "Domains/Facebook/connections/empeches/first connection/First connection.md",
+    "Domains/Facebook/connections/empeches/first connection/whois/Notre-Dame.md",
+    "Domains/42Marseille/unexistent/dig.md",
+    "Domains/42Marseille/unexistent/Campus in france 2024.md",
+    "Domains/42Marseille/found.md",
+    "Domains/42Marseille/unexistent",
+    "[Domains/Facebook/connections/empeches/first connection/whois/42marseille.md",
+    "[Domains/Facebook/connections/empeches/first connection/whois",
+    "[Domains/Facebook/connections/empeches/first connection",
+    "[Domains/Facebook/connections/empeches",
+    "[Domains/Facebook/connections",
+    "[Domains/Facebook",
+    "[Domains",
+    "Domains/42Marseille",
+    "Domains",
+    "Systems",
+    "pberso/Root/Gambrinus/2024-12-06-7/nRT?.md",
+    "pberso/Root/Gambrinus/2024-12-06-7/J'ai oublie le nom.md",
+    "pberso/2024-12-07.md",
+    "Systems/debian/Au lendemain de xXX.md",
+    "Systems/debian/Readme.md",
+    "journal_42/Untitled.md",
+    "Systems/manjaro/readme.md",
+    "Systems/manjaro/reboot/crashed/it have been a while.md",
     "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Geoffrey/Max/mot australie.md",
     "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Commanderie/Théo/mot Australie.md",
     "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Commanderie/Marina/mot autralie.md",
@@ -229,35 +209,7 @@
     "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Commanderie/Anne-Laure M/mot Australie.md",
     "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Boudonville/Jordan/mot australie.md",
     "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Boudonville/Ali/Mot Australie.md",
-    "clarif_vault/Root/relations/Femmes/Flirts/Amelie/Relecture d'emails/Harcelement_delire/Diagnostique.md",
-    "clarif_vault/Root/relations/Famille/Maternelle/Grand mere/Mère/Père/Père.md",
-    "clarif_vault/Root/relations/Famille/Maternelle/Grand mere/Mère/Mère/Grand père.md",
     "clarif_vault/Root/anamnese/Auto-diagnostique/Emotions/empathie/psychopatie/PCL-R/unnamed_2279f51356e14e77a0cf680e7b389fb4.png",
-    "clarif_vault/Root/anamnese/Auto-diagnostique/Emotions/empathie/psychopatie/PCL-R/Resultat.md",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Caire/Abel/Devolus Velus.md",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Geoffrey/Mot australie.md",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Geoffrey/Max",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Commanderie/Théo.md",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Commanderie/Théo",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Commanderie/Marina.md",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Commanderie/Marina",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Commanderie/Dimitri.md",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Commanderie/Dimitri",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Commanderie/Cecile.md",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Commanderie/Cecile",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Commanderie/Anne-Laure M.md",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Commanderie/Anne-Laure M",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Boudonville/Xavier.md",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Boudonville/Laurent.md",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Boudonville/Jordan.md",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Boudonville/Jordan",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Boudonville/Joanne S.md",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Boudonville/Ali.md",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Boudonville/Ali",
-    "clarif_vault/Root/relations/Femmes/Flirts/Amelie/Relecture d'emails/post.md",
-    "clarif_vault/Root/relations/Femmes/Flirts/Amelie/Relecture d'emails/Me fait comprendre que c'est mort.md",
-    "clarif_vault/Root/relations/Femmes/Flirts/Amelie/Relecture d'emails/Harcelement_delire",
-    "clarif_vault/Root/relations/Famille/Maternelle/Grand mere/Mère/Père",
     "journal.ctx_HTML/images/home.svg"
   ]
 }
