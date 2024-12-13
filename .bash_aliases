@@ -282,17 +282,13 @@ diariz ()
 	if [ "$#" -ne 1 ]; then
 	    echo "Usage: $0 <path/to/file>
 	    (without .md extention)"
-	    exit 1
+	    return 1
 	fi
 	DATE=$(date +%Y-%m-%d)
 	TIME=$(date +%H-%M)
-	DIR_JOURNAL=$($HOME/machine/journal)
+	DIR_JOURNAL="$HOME/machine/journal"
+	FILE=$1
 	NEW_DIARY="$DIR_JOURNAL/$FILE.md"
-	DIARY_PATH=$(find ~ -type d -name "$DIARY_NAME" 2>/dev/null)
-	if [ -z "$DIARY_PATH" ]; then
-	    echo "Dossier de journaux '$DIARY_NAME' introuvable dans votre répertoire personnel."
-	    exit 1
-	fi
 	mkdir -p "$DIR_JOURNAL/$(dirname "$FILE")"
 	{
 	    echo "# Journal du $DATE à $TIME"
