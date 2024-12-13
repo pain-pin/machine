@@ -39,7 +39,7 @@ set number
 set shiftwidth=4
 
 " Set tab width to 4 columns.
-set tabstop=4
+"set tabstop=4
 
 " Use space characters instead of tabs.
 "set expandtab
@@ -275,3 +275,5 @@ set rnu
 
 "set backupdir=/tmp/
 set directory=/tmp
+
+colorscheme koehler
