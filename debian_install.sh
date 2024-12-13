@@ -20,11 +20,11 @@ for F in $FILES_TO_LINK; do
 	ln -s $F $SUDO_HOME/$BASENAME
 done;
 
-apt instll -y  ulogd
-NETWORKDIR="$MACHINE_DIR/networking"
-systemctl enable ulogd
-systemctl start ulogd
-bash $NETWORKDIR/iptables_script.sh -f $NETWORKDIR/ip_to_ban.txt -r
+#apt instll -y  ulogd
+#NETWORKDIR="$MACHINE_DIR/networking"
+#systemctl enable ulogd
+#systemctl start ulogd
+#bash $NETWORKDIR/iptables_script.sh -f $NETWORKDIR/ip_to_ban.txt -r
 
 apt install -y  cherrytree
 apt install -y  bc
