@@ -10,21 +10,12 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-SUDO_HOME="/home/presko"
-MACHINE_DIR="$SUDO_HOME/machine"
-
-FILES_TO_LINK="$MACHINE_DIR/.vim $MACHINE_DIR/.vimrc $MACHINE_DIR/.bashrc $MACHINE_DIR/.bash_aliases"
-for F in $FILES_TO_LINK; do
-	BASENAME=$(basename $F)
-	mv $SUDO_HOME/$BASENAME $SUDO_HOME/$BASENAME.original
-	ln -s $F $SUDO_HOME/$BASENAME
-done;
-
-#apt instll -y  ulogd
-#NETWORKDIR="$MACHINE_DIR/networking"
-#systemctl enable ulogd
-#systemctl start ulogd
-#bash $NETWORKDIR/iptables_script.sh -f $NETWORKDIR/ip_to_ban.txt -r
+./config_install.sh
+apt instll -y  ulogd
+NETWORKDIR="$MACHINE_DIR/networking"
+systemctl enable ulogd
+systemctl start ulogd
+bash $NETWORKDIR/iptables_script.sh -f $NETWORKDIR/ip_to_ban.txt -r
 
 apt install -y  cherrytree
 apt install -y  bc

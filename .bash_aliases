@@ -51,12 +51,13 @@ basha () {
 }
 
 brc () {
-	SOURCE="$HOME/.bashrc"
-	FILE="$(find /home -name '.bashrc'| head -1)"
-	F_PATH="$(dirname $FILE)"
+	FILE_NAME='.bashrc'
+	SOURCE_PATH="$(find $HOME -type d -name machine)"
+	SOURCE="$SOURCE_PATH/.bashrc"
+	FILE="$(find $SOURCE -name "$FILE_NAME" | head -1)"
 	vim + $FILE
 	source $SOURCE
-	cd "$F_PATH"
+	cd "$SOURCE_PATH"
 	git diff
 	git pull
 	git diff
@@ -273,3 +274,39 @@ save_cmd ()
 	echo "" >> $DIR/$FILE
 	echo "$LAST_CMD" | bash >> $DIR/$FILE
 }
+
+alias v="nvim"
+
+diariz ()
+{
+	if [ "$#" -ne 1 ]; then
+	    echo "Usage: $0 <path/to/file>
+	    (without .md extention)"
+	    exit 1
+	fi
+	DATE=$(date +%Y-%m-%d)
+	TIME=$(date +%H-%M)
+	DIR_JOURNAL=$($HOME/machine/journal)
+	NEW_DIARY="$DIR_JOURNAL/$FILE.md"
+	DIARY_PATH=$(find ~ -type d -name "$DIARY_NAME" 2>/dev/null)
+	if [ -z "$DIARY_PATH" ]; then
+	    echo "Dossier de journaux '$DIARY_NAME' introuvable dans votre répertoire personnel."
+	    exit 1
+	fi
+	mkdir -p "$DIR_JOURNAL/$(dirname "$FILE")"
+	{
+	    echo "# Journal du $DATE à $TIME"
+	    echo "## Thème : $THEME"
+	    echo ""
+	    echo "### Réflexions"
+	    echo "- "
+	    echo ""
+	    echo "### Événements marquants"
+	    echo "- "
+	    echo ""
+	    echo "### Notes supplémentaires"
+	    echo "- "
+	} > "$NEW_DIARY"
+	vim + "$NEW_DIARY"
+}
+

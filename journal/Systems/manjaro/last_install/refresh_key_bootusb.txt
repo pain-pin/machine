@@ -1,0 +1,840 @@
+pub   rsa2048 2011-08-12 [SC]
+      02FD1C7A934E614545849F19A6234074498E9CEE
+uid           [  full  ] Christian Hesse <eworm@archlinux.org>
+sub   rsa2048 2011-08-12 [E]
+sub   ed25519 2019-08-29 [S]
+sub   cv25519 2019-08-29 [E]
+
+pub   ed25519 2016-11-03 [C]
+      034D823DA2055BEE6A6BF0BB25EA6900D9EA5EBC
+uid           [ unknown] George Rawlinson <george@rawlinson.net.nz>
+uid           [  full  ] George Rawlinson <grawlinson@archlinux.org>
+sub   ed25519 2016-11-04 [A]
+sub   ed25519 2016-11-03 [S]
+sub   cv25519 2016-11-04 [E]
+
+pub   ed25519 2022-12-07 [SC] [expires: 2025-12-31]
+      04CF0CD6F6EE93AE1896F58407D06351CA5B31BE
+uid           [  full  ] Torsten Keßler <tpkessler@archlinux.org>
+sub   cv25519 2022-12-07 [E] [expires: 2025-12-31]
+
+pub   ed25519 2024-02-02 [C] [expires: 2027-02-02]
+      44A62127789A949F2F082ED429C71CE612B57264
+uid           [  full  ] Daniel M. Capella <polyzen@archlinux.org>
+sub   ed25519 2024-02-02 [S] [expires: 2027-02-02]
+sub   ed25519 2024-02-02 [A] [expires: 2027-02-02]
+sub   cv25519 2024-02-02 [E] [expires: 2027-02-02]
+
+pub   rsa4096 2015-06-08 [SC]
+      04F7A0E31E08D3E08D39AFEBD147F94364295E8C
+uid           [  full  ] Carsten Haitzler <raster@archlinux.org>
+uid           [ unknown] Carsten Haitzler <raster@rasterman.com>
+sub   rsa4096 2015-06-08 [E]
+
+pub   rsa4096 2017-05-22 [SC]
+      051EAD6A6155389D69DA02E5EB763B4E9DB887A6
+uid           [  full  ] Thore Bödecker <foxxx0@archlinux.org>
+sub   rsa4096 2017-05-22 [E]
+
+pub   ed25519 2018-10-31 [SC] [expires: 2025-12-21]
+      05C7775A9E8B977407FE08E69D4C5AA15426DA0A
+uid           [ unknown] Frederik Schwan <frederik.schwan@linux.com>
+uid           [ unknown] Frederik Schwan <frederik.schwan@mailbox.org>
+uid           [ unknown] Frederik Schwan <frederik@schw4n.de>
+uid           [ unknown] Frederik Schwan <frederik@schwan.it>
+uid           [ unknown] Frederik Schwan <frederik@tty42.de>
+uid           [  full  ] Frederik Schwan <freswa@archlinux.org>
+sub   ed25519 2020-04-18 [A] [expires: 2025-12-21]
+sub   cv25519 2018-10-31 [E] [expires: 2025-12-21]
+
+pub   ed25519 2019-04-12 [SC] [expires: 2026-03-13]
+      0A9DDABB64B993D82AD45E4F32EAB0A976938292
+uid           [  full  ] Konstantin Gizdov (Arch Linux) <kgizdov@archlinux.org>
+uid           [ unknown] Konstantin Gizdov <arch@kge.pw>
+uid           [ unknown] Konstantin Gizdov <kgizdov@gmail.com>
+uid           [ unknown] keybase.io/kgizdov (Keybase) <kgizdov@keybase.io>
+sub   rsa4096 2021-04-15 [] [expires: 2026-04-14]
+sub   ed25519 2019-04-12 [A] [expires: 2026-03-13]
+sub   ed25519 2019-04-12 [S] [expires: 2026-03-13]
+sub   cv25519 2019-04-12 [E] [expires: 2026-03-13]
+
+pub   ed25519 2017-12-20 [SC] [expires: 2026-10-21]
+      0CADAACF70F64C654E131B3111675C743429DDEF
+uid           [  full  ] Massimiliano Torromeo <mtorromeo@archlinux.org>
+uid           [ unknown] Massimiliano Torromeo <massimiliano.torromeo@gmail.com>
+sub   ed25519 2017-12-20 [A] [expires: 2026-10-21]
+sub   cv25519 2017-12-20 [E] [expires: 2026-10-21]
+
+pub   ed25519 2021-10-31 [SC] [expires: 2025-12-31]
+      60939E55F6D5ABF7EE419F08B1A1D3C5F2DF9BC5
+uid           [ unknown] Dan Printzell <me@vild.io>
+uid           [ unknown] Dan Printzell <arch@vild.io>
+uid           [ unknown] Dan Printzell <dan@mutate.se>
+uid           [  full  ] Dan Printzell <wild@archlinux.org>
+uid           [ unknown] Dan Printzell <xwildn00bx@gmail.com>
+sub   ed25519 2021-10-31 [A] [expires: 2025-12-31]
+sub   cv25519 2021-10-31 [E] [expires: 2025-12-31]
+
+pub   rsa3072 2011-11-18 [SC] [revoked: 2018-10-07]
+      0E8B644079F599DFC1DDC3973348882F6AC6A4C2
+uid           [ revoked] Pierre Schmitz (Arch Linux Master Key) <pierre@master-key.archlinux.org>
+
+pub   ed25519 2023-12-05 [SC] [expires: 2025-12-30]
+      109415E692007609CA7EBFE4001CF4810BE8D911
+uid           [  full  ] Jakub Klinkovský <lahwaacz@archlinux.org>
+sub   cv25519 2023-12-05 [E] [expires: 2025-12-30]
+
+pub   rsa4096 2022-12-09 [SC] [expires: 2025-01-01]
+      14E46FE5FD69F2E287E244DB632C3CC0D1C9CAF6
+uid           [  full  ] Balló György <bgyorgy@archlinux.org>
+sub   rsa4096 2022-12-09 [A] [expires: 2025-01-01]
+sub   rsa4096 2022-12-09 [E] [expires: 2025-01-01]
+
+pub   rsa4096 2022-02-13 [SC] [revoked: 2022-02-13]
+      159F3A43AEB246C5746C033814BC4F30B3B92EBA
+uid           [ revoked] Giancarlo Razzolini (Arch Linux Master Key) <grazzolini@master-key.archlinux.org>
+
+pub   rsa4096 2021-01-03 [SC]
+      165E0FF7C48C226E1EC363A7F83424824B3E4B90
+uid           [  full  ] Orhun Parmaksız <orhun@archlinux.org>
+uid           [ unknown] Orhun Parmaksız <orhunparmaksiz@gmail.com>
+sub   rsa4096 2021-01-03 [E]
+
+pub   rsa4096 2013-10-16 [SC] [expires: 2025-01-01]
+      169704C6FB490C6892C7F23C37E0AF1FDA48F373
+uid           [marginal] Jerome Leclanche <jerome@leclan.ch>
+uid           [marginal] Jerome Leclanche <jleclanche@archlinux.org>
+sub   rsa4096 2013-10-16 [E] [expires: 2025-01-01]
+
+pub   ed25519 1998-03-24 [SCA]
+      1A60DC44245D06FEF90623D6EEEEE2EEEE2EEEEE
+uid           [  undef ] Gaetan Bisson <gaetan@fenua.org>
+uid           [  undef ] Gaetan Bisson <bisson@gaati.org>
+sub   cv25519 2017-08-27 [E]
+
+pub   rsa4096 2014-10-22 [SC] [revoked: 2021-01-31]
+      A4CBEA7974898599195E4FEC46EC46F39F3E2EF1
+uid           [ revoked] Remi Gacogne <rgacogne@archlinux.org>
+
+pub   ed25519 2021-10-29 [SC] [expires: 2025-10-28]
+      209A36D43CE2E87DA861FC58539DFD48135182EF
+uid           [  full  ] Jürgen Hötzel (Arch Linux Developer Key) <juergen@archlinux.org>
+sub   cv25519 2021-10-29 [E] [expires: 2025-10-28]
+
+pub   rsa4096 2017-06-18 [SC] [expires: 2025-07-18]
+      B4B759625D4633430B74877059E43E106B247368
+uid           [  full  ] Leonidas Spyropoulos <artafinde@archlinux.org>
+uid           [ unknown] Leonidas Spyropoulos <artafinde@gmail.com>
+sub   rsa4096 2022-01-11 [A]
+sub   rsa4096 2017-06-18 [E]
+
+pub   ed25519 2021-10-25 [SC]
+      25ACE777F62C5E5ACBF2C0474E532176DBAD6F47
+uid           [  full  ] Connor Behan <cbehan@archlinux.org>
+sub   cv25519 2021-10-25 [E]
+
+pub   rsa4096 2023-01-25 [SC] [expires: 2026-01-24]
+      262A58EC6C51F7EA395B2E2DFDC3040B92ACA748
+uid           [  full  ] Robin Candau <antiz@archlinux.org>
+sub   rsa4096 2023-01-25 [E] [expires: 2026-01-24]
+
+pub   ed25519 2021-04-26 [SC]
+      2AC0A42EFB0B5CBC7A0402ED4DC95B6D7BE9892E
+uid           [  full  ] David Runge (Arch Linux Master Key) <dvzrv@master-key.archlinux.org>
+sub   cv25519 2021-04-26 [E]
+
+pub   rsa4096 2011-10-12 [SC]
+      2E36D8620221482FC45CB7F2A91764759326B440
+uid           [marginal] Lukas Fleischer <lfleischer@lfos.de>
+uid           [  full  ] Lukas Fleischer (Arch Linux) <lfleischer@archlinux.org>
+uid           [marginal] Lukas Fleischer (calcurse) <lfleischer@calcurse.org>
+sub   rsa4096 2011-10-12 [E]
+
+pub   ed25519 2021-10-29 [SC] [expires: 2025-10-28]
+      209A36D43CE2E87DA861FC58539DFD48135182EF
+uid           [  full  ] Jürgen Hötzel (Arch Linux Developer Key) <juergen@archlinux.org>
+sub   cv25519 2021-10-29 [E] [expires: 2025-10-28]
+
+pub   ed25519 2023-10-12 [SC]
+      3572FA2A1B067F22C58AF155F8B821B42A6FDCD7
+uid           [  full  ] Leonidas Spyropoulos (Arch Linux Master Key) <artafinde@master-key.archlinux.org>
+sub   cv25519 2023-10-12 [E]
+
+pub   rsa4096 2011-10-23 [SC] [expires: 2027-12-08]
+      38EDD1886756924E1224E49524E4CDB0013C2580
+uid           [  full  ] Jaroslav Lichtblau <svetlemodry@archlinux.org>
+uid           [marginal] Jaroslav Lichtblau (trusted user) <dragonlord@aur.archlinux.org>
+uid           [marginal] Jaroslav Lichtblau <dragonlord@aur.archlinux.org>
+sub   rsa4096 2011-10-23 [E] [expires: 2027-12-08]
+
+pub   rsa4096 2018-04-18 [SC] [expires: 2027-04-21]
+      3DCE51D60930EBA47858BA4146F633CBB0EB4BF2
+uid           [  full  ] Filipe Laíns (FFY00) <lains@archlinux.org>
+uid           [marginal] Filipe Laíns (FFY00) <filipe.lains@gmail.com>
+uid           [marginal] Filipe Laíns (FFY00) <lains@aurorafoss.org>
+uid           [ unknown] Filipe Laíns (FFY00) <lains@riseup.net>
+sub   rsa4096 2019-10-13 [A] [expires: 2027-04-21]
+sub   rsa4096 2022-10-18 [S] [expires: 2027-10-17]
+sub   rsa4096 2018-07-27 [S] [expires: 2027-04-21]
+sub   rsa4096 2018-04-18 [E] [expires: 2027-04-21]
+sub   rsa4096 2018-07-27 [E] [expires: 2027-04-21]
+
+pub   rsa2048 2011-04-10 [SC]
+      4AA4767BBC9C4B1D18AE28B77F2D434B9741E8AC
+uid           [marginal] Pierre Schmitz <pierre@archlinux.de>
+uid           [marginal] Pierre Schmitz <pierre@archlinux.org>
+sub   rsa2048 2011-04-10 [E]
+
+pub   ed25519 2021-10-30 [SC] [expires: 2026-10-29]
+      80247D99EABD3A4D1E3A1836E85B8683EB48BC95
+uid           [  full  ] Daniel Bermond <dbermond@archlinux.org>
+sub   cv25519 2021-10-30 [E] [expires: 2026-10-29]
+
+pub   rsa4096 2022-05-01 [SCEA] [expires: 2025-12-31]
+      42DFAFB7C03B2E4E7BBDBA69930B82BFC2BDA011
+uid           [  full  ] Fabio Castelli (Muflone) (Arch Linux) <muflone@archlinux.org>
+uid           [ unknown] Fabio Castelli (Muflone) (Primary) <muflone@muflone.com>
+uid           [ unknown] Fabio Castelli (Muflone) (VBSimple) <muflone@vbsimple.net>
+sub   rsa4096 2022-05-01 [A] [expires: 2025-12-31]
+
+pub   ed25519 2024-02-02 [C] [expires: 2027-02-02]
+      44A62127789A949F2F082ED429C71CE612B57264
+uid           [  full  ] Daniel M. Capella <polyzen@archlinux.org>
+sub   ed25519 2024-02-02 [S] [expires: 2027-02-02]
+sub   ed25519 2024-02-02 [A] [expires: 2027-02-02]
+sub   cv25519 2024-02-02 [E] [expires: 2027-02-02]
+
+pub   rsa4096 2011-02-16 [SC]
+      44EA62ACDBC81B6A0D1FD267206CBC892D1493D2
+uid           [marginal] Rémy Oudompheng <oudomphe@phare.normalesup.org>
+uid           [marginal] Rémy Oudompheng <remy@archlinux.org>
+sub   rsa4096 2011-02-16 [E]
+
+pub   dsa3072 2016-04-05 [SC] [revoked: 2022-12-10]
+      481C4474AF1572165AE4C6AF3FDDD575826C5C30
+uid           [ revoked] Chih-Hsuan Yen <yan12125@archlinux.org>
+uid           [ revoked] Chih-Hsuan Yen <d06922023@ntu.edu.tw>
+uid           [ revoked] Chih-Hsuan Yen <yan12125@gmail.com>
+uid           [ revoked] Chih-Hsuan Yen <yan12125@macports.org>
+uid           [ revoked] Chih-Hsuan Yen <yan16037741@hotmail.com.tw>
+uid           [ revoked] Yen Chi Hsuan <yan12125@gmail.com>
+
+pub   rsa2048 2011-04-10 [SC]
+      4AA4767BBC9C4B1D18AE28B77F2D434B9741E8AC
+uid           [marginal] Pierre Schmitz <pierre@archlinux.de>
+uid           [marginal] Pierre Schmitz <pierre@archlinux.org>
+sub   rsa2048 2011-04-10 [E]
+
+pub   dsa2048 2010-02-15 [SC]
+      4D913AECD81726D9A6C74F0ADA6426DD215B37AD
+uid           [ unknown] Guillaume ALAUX <guillaume@archlinux.org>
+uid           [ unknown] Guillaume ALAUX <guillaume@alaux.net>
+uid           [ unknown] Guillaume ALAUX <guillaume@linux.com>
+sub   elg2048 2010-02-15 [E]
+
+pub   rsa8192 2014-01-14 [SC] [expires: 2025-10-25]
+      5134EF9EAF65F95B6BB1608E50FB9B273A9D0BB5
+uid           [marginal] Johannes Löthberg <johannes@kyriasis.com>
+uid           [  full  ] Johannes Löthberg <demize@archlinux.org>
+sub   rsa8192 2014-01-14 [E] [expires: 2025-10-25]
+sub   rsa8192 2014-09-21 [S] [expires: 2025-10-25]
+
+pub   ed25519 2021-10-30 [SC] [expires: 2025-12-31]
+      531ECF3644A44FEA0B47DBCDE1E3CF0539448BFF
+uid           [  full  ] Ike Devolder <ike.devolder@archlinux.org>
+sub   cv25519 2021-10-30 [E] [expires: 2025-12-31]
+
+pub   rsa2048 2011-10-30 [SC]
+      535F8C0339450F054A4D282706096A6AD1CEDDAC
+uid           [marginal] Laurent Carlier <lordheavym@gmail.com>
+uid           [  full  ] Laurent Carlier <lordheavym@archlinux.org>
+sub   rsa2048 2011-10-30 [E]
+
+pub   ed25519 2022-08-08 [SC]
+      54C1FD273361EA514A237793F296BDE50368C6CE
+uid           [  full  ] T.J. Townsend <blakkheim@archlinux.org>
+uid           [ unknown] T.J. Townsend <tj@mrsk.me>
+sub   ed25519 2022-09-04 [SA]
+sub   cv25519 2022-08-08 [E]
+
+pub   rsa4096 2015-12-29 [SC] [expires: 2024-11-18]
+      54EB4D6DB209862C8945CACCED84945B35B2555C
+uid           [marginal] Robin Broda <robin@broda.me>
+uid           [  full  ] Robin Broda (Arch Linux) <coderobe@archlinux.org>
+uid           [  undef ] Robin Broda (Milliways) <coderobe@milliways.info>
+uid           [marginal] Robin Broda <rob@coderobe.net>
+sub   rsa2048 2015-12-29 [E] [expires: 2024-11-18]
+sub   rsa2048 2015-12-29 [SA] [expires: 2024-11-18]
+
+pub   ed25519 2021-10-24 [SC]
+      56C3E775E72B0C8B1C0C1BD0B5DB77409B11B601
+uid           [ unknown] Maxim Baz <pgp@maximbaz.com>
+uid           [ unknown] Maxim Baz <git@maximbaz.com>
+uid           [  full  ] Maxim Baz <maximbaz@archlinux.org>
+sub   ed25519 2021-10-24 [S]
+sub   ed25519 2021-10-24 [A]
+sub   cv25519 2021-10-24 [E]
+
+pub   ed25519 1998-03-24 [SCA]
+      1A60DC44245D06FEF90623D6EEEEE2EEEE2EEEEE
+uid           [  undef ] Gaetan Bisson <gaetan@fenua.org>
+uid           [  undef ] Gaetan Bisson <bisson@gaati.org>
+sub   cv25519 2017-08-27 [E]
+
+pub   rsa2048 2011-07-18 [SC]
+      5B7E3FB71B7F10329A1C03AB771DF6627EDF681F
+uid           [marginal] Tobias Powalowski <tobias.powalowski@googlemail.com>
+uid           [  full  ] Tobias Powalowski <tpowa@archlinux.org>
+sub   rsa2048 2011-07-18 [E]
+
+pub   rsa4096 2014-11-04 [SC]
+      5C81C9D6C8D7475DF65A0C884FE7F4FEAC8EBE67
+uid           [ unknown] Justin Kromlinger <justin@kromlinger.eu>
+uid           [  full  ] Justin Kromlinger <hashworks@archlinux.org>
+uid           [ unknown] Justin Kromlinger <jk@hash.works>
+uid           [ unknown] Justin Kromlinger <jk@hashworks.net>
+uid           [ unknown] Justin Kromlinger <jkromlinger@hashworks.net>
+uid           [ unknown] Justin Kromlinger <justin.kromlinger@streamonkey.de>
+uid           [ unknown] Justin Kromlinger <justin.kromlinger@stud.htwk-leipzig.de>
+uid           [ unknown] hashworks <mail@hash.works>
+uid           [ unknown] hashworks <mail@hashworks.net>
+sub   rsa4096 2020-07-12 [E] [expires: 2025-06-27]
+sub   rsa4096 2020-07-12 [S] [expires: 2025-06-27]
+sub   rsa4096 2020-07-12 [A] [expires: 2025-06-27]
+
+pub   ed25519 2023-09-03 [SC] [expires: 2028-09-01]
+      5E6D49448958B384301F1F22498EF247F340C1E0
+uid           [  full  ] Fabian Bornschein <fabiscafe@archlinux.org>
+sub   cv25519 2023-09-03 [E] [expires: 2028-09-01]
+
+pub   rsa2048 2017-11-17 [SC] [expires: 2025-11-16]
+      601F20F1D1BBBF4A78CF5B6DF6B1610B3ECDBC9F
+uid           [marginal] Andrew Crerar <andrew@crerar.io>
+uid           [  full  ] Andrew Crerar <crerar@archlinux.org>
+sub   rsa2048 2017-11-17 [E] [expires: 2025-11-16]
+
+pub   ed25519 2021-10-31 [SC] [expires: 2025-12-31]
+      60939E55F6D5ABF7EE419F08B1A1D3C5F2DF9BC5
+uid           [ unknown] Dan Printzell <me@vild.io>
+uid           [ unknown] Dan Printzell <arch@vild.io>
+uid           [ unknown] Dan Printzell <dan@mutate.se>
+uid           [  full  ] Dan Printzell <wild@archlinux.org>
+uid           [ unknown] Dan Printzell <xwildn00bx@gmail.com>
+sub   ed25519 2021-10-31 [A] [expires: 2025-12-31]
+sub   cv25519 2021-10-31 [E] [expires: 2025-12-31]
+
+pub   rsa4096 2018-10-16 [SC] [expires: 2025-08-18]
+      64B13F7117D6E07D661BBCE0FE763A64F5E54FD6
+uid           [marginal] kpcyrd <git@rxv.cc>
+uid           [  full  ] kpcyrd <kpcyrd@archlinux.org>
+sub   rsa4096 2019-02-07 [S] [expires: 2025-08-18]
+sub   rsa4096 2018-10-16 [E] [expires: 2025-08-18]
+
+pub   rsa2048 2011-06-03 [SC]
+      6645B0A8C7005E78DB1D7864F99FFE0FEAE999BD
+uid           [marginal] Allan McRae <me@allanmcrae.com>
+uid           [marginal] Allan McRae (Developer) <allan@archlinux.org>
+sub   rsa2048 2011-06-03 [E]
+
+pub   ed25519 2020-10-08 [SC]
+      C57F35931F317BF9058F834F682758BC60D8F87A
+uid           [ unknown] Christopher Brannon <chris@the-brannons.com>
+sub   cv25519 2020-10-08 [E]
+
+pub   rsa2048 2011-08-22 [SC]
+      69DA34D78FE0EFD596AC6D049D893EC4DAAF9129
+uid           [ unknown] Bruno Pagani <bruno.pagani@astrophysics.eu>
+uid           [marginal] Bruno Pagani (Key for Launchpad) <bruno.n.pagani@gmail.com>
+uid           [  full  ] Bruno Pagani <archange@archlinux.org>
+uid           [ unknown] Bruno Pagani <bruno.pagani@ac-reunion.fr>
+uid           [ unknown] Bruno Pagani <bruno.pagani@ac-versailles.fr>
+uid           [ unknown] Bruno Pagani <bruno.pagani@cea.fr>
+uid           [marginal] Bruno Pagani <bruno.pagani@ens-lyon.fr>
+uid           [marginal] Bruno Pagani <bruno.pagani@ens-lyon.org>
+uid           [marginal] Bruno Pagani <bruno.pagani@obspm.fr>
+uid           [ unknown] Bruno Pagani <bruno.pagani@u-psud.fr>
+uid           [ unknown] Bruno Pagani <bruno.pagani@universite-paris-saclay.fr>
+uid           [marginal] Bruno Pagani <pagani@iap.fr>
+sub   rsa2048 2011-08-22 [E]
+
+pub   ed25519 2022-10-24 [SC]
+      69E6471E3AE065297529832E6BA0F5A2037F4F41
+uid           [  full  ] Johannes Löthberg (Arch Linux Master Key) <demize@master-key.archlinux.org>
+sub   cv25519 2022-10-24 [E]
+
+pub   ed25519 2024-04-01 [C] [expires: 2027-04-02]
+      69F8E5E5E85F771020A0777C3D309011083BA25E
+uid           [  full  ] Carl Smedstad <carsme@archlinux.org>
+sub   ed25519 2024-04-01 [S]
+sub   ed25519 2024-04-01 [A]
+sub   cv25519 2024-04-01 [E]
+
+pub   rsa4096 2020-03-04 [SC] [expires: 2025-01-25]
+      6C7F7F22E0152A6FD5728592DAD6F3056C897266
+uid           [ unknown] Alexander Epaneshnikov <email@alex19ep.me>
+uid           [ unknown] Alexander Epaneshnikov <aarnaarn2@gmail.com>
+uid           [  full  ] Alexander Epaneshnikov <alex19ep@archlinux.org>
+sub   rsa4096 2020-03-04 [E] [expires: 2025-01-25]
+sub   rsa4096 2020-03-04 [A] [expires: 2025-01-25]
+sub   rsa4096 2020-03-04 [S] [expires: 2025-01-25]
+
+pub   rsa4096 2015-07-16 [SC]
+      6DAF7B808F9DF25139620000D21461E3DFE2060D
+uid           [marginal] Christian Rebischke (Archlinux Security Team-Member) <chris.rebischke@archlinux.org>
+uid           [  full  ] Christian Rebischke (Arch Linux Security Team-Member) <Chris.Rebischke@archlinux.org>
+uid           [marginal] Christian Rebischke (TU-Clausthal) <christian.rebischke@tu-clausthal.de>
+uid           [marginal] Christian Rebischke (www.nullday.de) <Chris.Rebischke@gmail.com>
+uid           [marginal] Christian Rebischke / Shibumi (Milliways) <shibumi@milliways.info>
+uid           [marginal] Christian Rebischke <Chris.Rebischke@posteo.de>
+uid           [marginal] Christian Rebischke <chris@nullday.de>
+uid           [ unknown] Christian Rebischke <chris@shibumi.dev>
+uid           [ unknown] Christian Rebischke <christian.rebischke@mailbox.org>
+sub   rsa4096 2015-07-16 [E]
+sub   rsa4096 2019-04-12 [A]
+
+pub   rsa4096 2022-06-30 [SC] [revoked: 2022-06-30]
+      75BD80E4D834509F6E740257B1B73B02CC52A02A
+uid           [ revoked] Jonas Witschel (Arch Linux Master Key) <diabonas@master-key.archlinux.org>
+
+pub   ed25519 2021-10-30 [SC] [expires: 2026-10-29]
+      80247D99EABD3A4D1E3A1836E85B8683EB48BC95
+uid           [  full  ] Daniel Bermond <dbermond@archlinux.org>
+sub   cv25519 2021-10-30 [E] [expires: 2026-10-29]
+
+pub   ed25519 2020-05-11 [SC]
+      A2FF3A36AAA56654109064AB19802F8B0D70FC30
+uid           [ unknown] Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
+uid           [  full  ] Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+uid           [ unknown] Jan Alexander Steffens (heftig) <jan.steffens@ltnglobal.com>
+sub   ed25519 2020-05-11 [A]
+sub   ed25519 2020-05-11 [S]
+sub   cv25519 2020-05-11 [E]
+
+pub   rsa2048 2010-11-12 [SC]
+      86CFFCA918CF3AF47147588051E8B148A9999C34
+uid           [  full  ] Evangelos Foutras <foutrelis@archlinux.org>
+uid           [marginal] Evangelos Foutras <foutrelis@gmail.com>
+sub   rsa2048 2010-11-12 [E]
+
+pub   rsa2048 2012-08-12 [SC]
+      8742F7535E7B394A1B048163332C9C40F40D2072
+uid           [marginal] Jonathan Steel <jsteel@aur.archlinux.org>
+uid           [  full  ] Jonathan Steel <jsteel@archlinux.org>
+uid           [marginal] Jonathan Steel <mail@jsteel.org>
+sub   rsa2048 2012-08-12 [E]
+
+pub   rsa4096 2021-10-22 [SC] [expires: 2031-10-20]
+      89E7B9331C4AE7D7FAF7D305C132293954BBE4AD
+uid           [  full  ] Sergej Pupykin <spupykin@archlinux.org>
+sub   rsa4096 2021-10-22 [E] [expires: 2031-10-20]
+
+pub   rsa4096 2022-05-30 [SC] [expires: 2064-05-19]
+      8A9BC5819C54FEB3DC2A9B48C32217F6F13FF192
+uid           [  full  ] Alexander F. Rødseth <xyproto@archlinux.org>
+sub   rsa4096 2022-05-30 [A] [expires: 2064-05-19]
+sub   rsa4096 2022-05-30 [E] [expires: 2064-05-19]
+
+pub   ed25519 2023-04-13 [SC]
+      8AA2213C8464C82D879C8127D4B58E897A929F2E
+uid           [  full  ] Anton Hvornum <torxed@archlinux.org>
+sub   rsa4096 2023-05-01 [A] [expires: 2025-04-30]
+sub   rsa4096 2023-05-01 [E] [expires: 2025-04-30]
+
+pub   rsa4096 2014-02-04 [SC] [expires: 2026-10-25]
+      8E1992167465DB5FB045557CB02854ED753E0F1F
+uid           [  full  ] Anatol Pomozov (Arch Linux developer account) <anatolik@archlinux.org>
+uid           [marginal] Anatol Pomozov <anatol.pomozov@gmail.com>
+sub   rsa4096 2014-02-04 [E] [expires: 2026-10-25]
+
+pub   rsa4096 2011-09-10 [SC]
+      8FC15A064950A99DD1BD14DD39E4B877E62EB915
+uid           [marginal] Sven-Hendrik Haase <sh@lutzhaase.com>
+uid           [  full  ] Sven-Hendrik Haase <svenstaro@archlinux.org>
+uid           [marginal] Sven-Hendrik Haase <svenstaro@gmail.com>
+sub   rsa4096 2022-07-10 [A]
+sub   rsa4096 2011-09-10 [E]
+
+pub   ed25519 2023-11-22 [SC] [expires: 2027-11-21]
+      8FE6A7D4CC42C83C9BCCA8E32DA2ACC3ECE4DCE6
+uid           [  full  ] Tomaz Canabrava <tcanabrava@archlinux.org>
+sub   ed25519 2023-11-22 [A]
+sub   cv25519 2023-11-22 [E] [expires: 2027-11-21]
+
+pub   rsa4096 2014-05-22 [SC] [expires: 2025-10-10]
+      903BAB73640EB6D65533EFF3468F122CE8162295
+uid           [  full  ] Santiago Torres-Arias <santiago@archlinux.org>
+uid           [marginal] Santiago Torres <torresariass@gmail.com>
+uid           [ unknown] Santiago Torres-Arias (Academic profile) <santiagotorres@purdue.edu>
+uid           [marginal] Santiago Torres-Arias <santiago@nyu.edu>
+sub   rsa4096 2014-05-22 [E]
+
+pub   rsa4096 2012-05-06 [SCA] [revoked: 2022-05-09]
+      91BD8815FE0040FA7FF5D68754C28F4FF5A1A949
+uid           [ revoked] David Runge <dave@sleepmap.de>
+uid           [ revoked] David Runge <dave@c-base.org>
+uid           [ revoked] David Runge <david.runge@campus.tu-berlin.de>
+uid           [ revoked] David Runge <runge@pool.math.tu-berlin.de>
+
+pub   rsa4096 2015-12-17 [SC]
+      91FFE0700E80619CEB73235CA88E23E377514E00
+uid           [  full  ] Florian Pritz (Arch Linux Master Key) <florian@master-key.archlinux.org>
+sub   rsa4096 2015-12-17 [E]
+
+pub   rsa4096 2022-01-30 [SC]
+      95220BE99CE6FF778AE0DC670F65C7D881506130
+uid           [ unknown] Maxime Gauduin <alucryd@gmail.com>
+uid           [ unknown] Maxime Gauduin <alucryd@alucryd.xyz>
+uid           [  full  ] Maxime Gauduin <alucryd@archlinux.org>
+sub   rsa4096 2022-01-30 [E]
+sub   rsa4096 2022-01-30 [A]
+
+pub   rsa4096 2022-01-30 [SC]
+      95220BE99CE6FF778AE0DC670F65C7D881506130
+uid           [ unknown] Maxime Gauduin <alucryd@gmail.com>
+uid           [ unknown] Maxime Gauduin <alucryd@alucryd.xyz>
+uid           [  full  ] Maxime Gauduin <alucryd@archlinux.org>
+sub   rsa4096 2022-01-30 [E]
+sub   rsa4096 2022-01-30 [A]
+
+pub   rsa4096 2015-01-25 [SC] [expires: 2025-07-01]
+      954A3772D62EF90E4B31FBC6C91A9911192C187A
+uid           [  full  ] Daurnimator <daurnimator@archlinux.org>
+uid           [marginal] Daurnimator <quae@daurnimator.com>
+sub   rsa4096 2016-04-06 [S] [expires: 2025-07-01]
+sub   rsa4096 2016-04-06 [A] [expires: 2025-07-01]
+sub   rsa4096 2015-01-25 [E] [expires: 2025-07-01]
+
+pub   rsa4096 2021-12-10 [SC]
+      9674D4ED3DFB6ADCC4F9F1EA1C736AEF96402E7C
+uid           [  full  ] Andreas Schleifer <segaja@archlinux.org>
+sub   rsa4096 2021-12-10 [E]
+
+pub   rsa4096 2015-06-17 [SCA] [expires: 2026-01-30]
+      97312D5EB9D7AE7D0BD4307351DAE9B7C1AE9161
+uid           [ unknown] NicoHood <pgp@nicohood.de>
+uid           [marginal] N <mail@nicohood.de>
+uid           [marginal] NNNNN <blog@nicohood.de>
+uid           [marginal] NNNNN <nico-2006@nicohood.de>
+uid           [marginal] NNNNN <shop@nicohood.de>
+uid           [ unknown] Nico Schulz <info@bikefittingfinder.de>
+uid           [ unknown] NicoHood <archlinux@nicohood.de>
+uid           [ unknown] NicoHood <aur@nicohood.de>
+uid           [ unknown] NicoHood <blog@nicohood.de>
+uid           [ unknown] NicoHood <git@nicohood.de>
+uid           [ unknown] NicoHood <info@nicohood.de>
+uid           [marginal] NicoHood <mooltipass@nicohood.de>
+uid           [marginal] NicoHood <nicohood@archlinux.org>
+uid           [marginal] _____ <Wohnung@nicohood.de>
+uid           [marginal] _____ <inbox@nicohood.de>
+uid           [marginal] _____ <outbox@nicohood.de>
+sub   rsa4096 2015-06-17 [E] [expires: 2026-01-30]
+
+pub   ed25519 2022-05-10 [SC] [expires: 2026-05-09]
+      991F6E3F0765CF6295888586139B09DA5BF0D338
+uid           [  full  ] David Runge <dvzrv@archlinux.org>
+sub   ed25519 2022-05-10 [A] [expires: 2026-05-09]
+sub   ed25519 2023-08-12 [S]
+sub   cv25519 2022-05-10 [E] [expires: 2026-05-09]
+
+pub   rsa4096 2014-10-21 [SC]
+      9D74DF6F91B7BDABD5815CA84AC5588F941C2A25
+uid           [  full  ] Antonio Rojas <arojas@archlinux.org>
+uid           [marginal] Antonio Rojas <arojas@us.es>
+uid           [marginal] Antonio Rojas <nqn1976@gmail.com>
+uid           [marginal] Antonio Rojas <nqn76sw@gmail.com>
+sub   rsa2048 2014-11-07 [S]
+sub   rsa2048 2014-11-07 [E]
+
+pub   ed25519 2020-05-11 [SC]
+      A2FF3A36AAA56654109064AB19802F8B0D70FC30
+uid           [ unknown] Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
+uid           [  full  ] Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+uid           [ unknown] Jan Alexander Steffens (heftig) <jan.steffens@ltnglobal.com>
+sub   ed25519 2020-05-11 [A]
+sub   ed25519 2020-05-11 [S]
+sub   cv25519 2020-05-11 [E]
+
+pub   rsa4096 2014-10-22 [SC] [revoked: 2021-01-31]
+      A4CBEA7974898599195E4FEC46EC46F39F3E2EF1
+uid           [ revoked] Remi Gacogne <rgacogne@archlinux.org>
+
+pub   ed25519 2021-11-01 [SC] [revoked: 2022-08-14]
+      A667E8A1B61D07A50FC430DF69DF1F2EB44B05BE
+uid           [ revoked] Nicola Squartini <tensor5@archlinux.org>
+
+pub   rsa4096 2011-11-29 [SC] [revoked: 2022-05-10]
+      AB19265E5D7D20687D303246BA1DFB64FFF979E7
+uid           [ revoked] Allan McRae (Arch Linux Master Key) <allan@master-key.archlinux.org>
+
+pub   rsa2048 2011-05-14 [SC]
+      ADC8A1FCC15E01D45310419E94657AB20F2A092B
+uid           [  full  ] Andreas Radke <andyrtr@archlinux.org>
+uid           [  undef ] Andreas Radke <andreas.radke@mailbox.org>
+uid           [  undef ] Andreas Radke <andyrtr@mailbox.org>
+sub   rsa2048 2011-05-14 [E]
+
+pub   rsa4096 2017-06-18 [SC] [expires: 2025-07-18]
+      B4B759625D4633430B74877059E43E106B247368
+uid           [  full  ] Leonidas Spyropoulos <artafinde@archlinux.org>
+uid           [ unknown] Leonidas Spyropoulos <artafinde@gmail.com>
+sub   rsa4096 2022-01-11 [A]
+sub   rsa4096 2017-06-18 [E]
+
+pub   rsa4096 2012-01-20 [SC]
+      B5971F2C5C10A9A08C60030F786C63F330D7CB92
+uid           [  full  ] Felix Yan <felixonmars@archlinux.org>
+uid           [marginal] Felix Yan <felixonmars@163.com>
+uid           [ unknown] Felix Yan <felixonmars@189.cn>
+uid           [marginal] Felix Yan <felixonmars@archlinuxcn.org>
+uid           [  undef ] Felix Yan <felixonmars@fedoraproject.org>
+uid           [marginal] Felix Yan <felixonmars@gmail.com>
+uid           [  undef ] Felix Yan <felixonmars@member.fsf.org>
+uid           [marginal] Felix Yan <felixonmars@nyaa.cat>
+uid           [  undef ] Felix Yan <felixonmars@qq.com>
+uid           [ unknown] Felix Yan <felixonmars@ubuntukylin.com>
+uid           [marginal] Felix Yan <felixyan@bbtechgroup.com>
+uid           [marginal] Felix Yan <i@felixc.at>
+uid           [  undef ] Felix Yan <yanran@deepin.com>
+uid           [ unknown] Felix Yan <yanran@uniontech.com>
+uid           [marginal] Yan, Ran (Name on Passport) <felixonmars@gmail.com>
+uid           [marginal] keybase.io/felixonmars <felixonmars@keybase.io>
+sub   rsa4096 2012-01-20 [E]
+
+pub   rsa4096 2011-11-11 [SC]
+      B81B051F2D7FC867AAFF35A58DBD63B82072D77A
+uid           [marginal] Sébastien Luttringer <seblu@seblu.net>
+uid           [marginal] Sébastien Luttringer <root@seblu.net>
+uid           [marginal] Sébastien Luttringer <sebastien.luttringer@gmail.com>
+uid           [marginal] Sébastien Luttringer <sebastien@luttringer.net>
+uid           [  full  ] Sébastien Luttringer <seblu@archlinux.org>
+sub   rsa4032 2014-03-30 [E]
+sub   rsa4032 2017-07-07 [S]
+sub   rsa4032 2017-07-07 [E]
+sub   rsa4032 2014-03-30 [S]
+sub   rsa4096 2013-03-30 [S]
+sub   rsa4096 2013-03-30 [E]
+sub   rsa4096 2011-11-11 [E]
+sub   ed25519 2019-10-10 [S]
+sub   cv25519 2019-10-10 [E]
+sub   rsa4064 2012-12-12 [S]
+
+pub   rsa4096 2016-05-04 [SC] [expired: 2022-07-10]
+      BD27B07A5EF45C2ADAF70E0484818A6819AF4A9B
+uid           [ expired] Eli Schwartz <eschwartz@archlinux.org>
+uid           [ expired] Eli Schwartz <eschwartz93@gmail.com>
+
+pub   ed25519 2018-10-03 [SC] [expires: 2026-06-08]
+      BE2DBCF2B1E3E588AC325AEAA06B49470F8E620A
+uid           [marginal] Brett Cornwall <brett@i--b.com>
+uid           [  full  ] Brett Cornwall <ainola@archlinux.org>
+sub   ed25519 2021-11-18 [A] [expires: 2026-06-08]
+sub   ed25519 2021-11-18 [S] [expires: 2026-06-08]
+sub   cv25519 2021-11-18 [E] [expires: 2026-06-08]
+
+pub   rsa4096 2014-09-05 [SC]
+      C100346676634E80C940FB9E9C02FF419FECBE16
+uid           [marginal] Morten Linderud <morten@linderud.pw>
+uid           [  full  ] Morten Linderud <foxboron@archlinux.org>
+uid           [marginal] Morten Linderud <mcfoxax@gmail.com>
+uid           [marginal] Morten Linderud <morten.linderud@fribyte.uib.no>
+sub   rsa4096 2018-11-26 [A]
+sub   rsa4096 2014-09-05 [E]
+sub   rsa4096 2018-11-13 [S]
+
+pub   rsa4096 2022-05-01 [SCEA] [expires: 2025-12-31]
+      42DFAFB7C03B2E4E7BBDBA69930B82BFC2BDA011
+uid           [  full  ] Fabio Castelli (Muflone) (Arch Linux) <muflone@archlinux.org>
+uid           [ unknown] Fabio Castelli (Muflone) (Primary) <muflone@muflone.com>
+uid           [ unknown] Fabio Castelli (Muflone) (VBSimple) <muflone@vbsimple.net>
+sub   rsa4096 2022-05-01 [A] [expires: 2025-12-31]
+
+pub   ed25519 2022-05-10 [SC] [expires: 2026-05-09]
+      991F6E3F0765CF6295888586139B09DA5BF0D338
+uid           [  full  ] David Runge <dvzrv@archlinux.org>
+sub   ed25519 2022-05-10 [A] [expires: 2026-05-09]
+sub   ed25519 2023-08-12 [S]
+sub   cv25519 2022-05-10 [E] [expires: 2026-05-09]
+
+pub   rsa4096 2022-05-01 [SCEA] [expires: 2025-12-31]
+      42DFAFB7C03B2E4E7BBDBA69930B82BFC2BDA011
+uid           [  full  ] Fabio Castelli (Muflone) (Arch Linux) <muflone@archlinux.org>
+uid           [ unknown] Fabio Castelli (Muflone) (Primary) <muflone@muflone.com>
+uid           [ unknown] Fabio Castelli (Muflone) (VBSimple) <muflone@vbsimple.net>
+sub   rsa4096 2022-05-01 [A] [expires: 2025-12-31]
+
+pub   ed25519 2023-10-03 [SC] [expires: 2031-10-01]
+      E87E5B39F04A5D889D8C0147F6D84143496F6680
+uid           [  full  ] Campbell Jones <serebit@archlinux.org>
+sub   cv25519 2023-10-03 [E] [expires: 2031-10-01]
+
+pub   ed25519 2021-10-27 [SC] [expires: 2026-10-26]
+      DB5B4A9546601F945389C66940AC6F48D55AB11D
+uid           [ unknown] Ivy Foster <i@iff.ink>
+uid           [ unknown] Ivy Foster <code@iff.ink>
+uid           [ unknown] Ivy Foster <dev@iff.ink>
+uid           [ unknown] Ivy Foster <escondida@iff.ink>
+uid           [ unknown] Ivy Foster <f@iff.ink>
+uid           [ unknown] Ivy Foster <if@iff.ink>
+uid           [  full  ] Ivy Foster <iff@archlinux.org>
+uid           [ unknown] Ivy Foster <iff@iff.ink>
+uid           [ unknown] Ivy Foster <ivy.foster@gmail.com>
+uid           [ unknown] Ivy Foster <lists@iff.ink>
+uid           [ unknown] Ivy Foster <r@iff.ink>
+sub   cv25519 2021-10-27 [E] [expires: 2026-10-26]
+
+pub   rsa2048 2018-03-02 [SC]
+      CC5967D4095B4F3B42D45FA081A402D4F382BBBD
+uid           [ unknown] Brad Fanella <cesura@archlinux.org>
+uid           [ unknown] Brad Fanella <bradfanella@gmail.com>
+uid           [ unknown] Brad Fanella <cesura@aur.archlinux.org>
+sub   rsa2048 2018-03-02 [E]
+
+pub   ed25519 2021-07-12 [SC] [expires: 2026-12-31]
+      CCB34EBBB9541EF3F7B366C1D4A753468A5A5B67
+uid           [  full  ] Caleb Maclennan <alerque@archlinux.org>
+sub   rsa4096 2021-07-12 [S] [expires: 2026-12-31]
+sub   cv25519 2021-07-12 [E] [expires: 2026-12-31]
+
+pub   ed25519 2022-05-07 [SC] [expires: 2026-05-06]
+      CE536327AED18EABC3B99A17F4AA4E0ED2568E87
+uid           [marginal] Jiachen YANG (Arch Linux Packager Signing Key) <farseerfc@archlinux.org>
+sub   cv25519 2022-05-07 [E] [expires: 2026-05-06]
+
+pub   rsa4096 2008-08-01 [SCA]
+      CFA6AF15E5C74149FC1D8C086D1655C14CE1C13E
+uid           [marginal] Florian Pritz <bluewind@xinu.at>
+uid           [  full  ] Florian Pritz <bluewind@archlinux.org>
+uid           [marginal] Florian Pritz <flo@xinu.at>
+sub   rsa4096 2008-08-01 [E]
+
+pub   ed25519 2021-11-12 [SC]
+      D89FAAEB4CECAFD199A2F5E612C6F735F7A9A519
+uid           [  full  ] Xyne. (Replaces EC3CBE7F607D11E663149E811D1F0DC78F173680.) <xyne@archlinux.org>
+sub   cv25519 2021-11-12 [E]
+
+pub   rsa4096 2018-11-08 [SC]
+      D8AFDDA07A5B6EDFA7D8CCDAD6D055F927843F1C
+uid           [  full  ] Levente Polyak (Arch Linux Master Key) <anthraxx@master-key.archlinux.org>
+sub   rsa4096 2018-11-08 [E]
+sub   rsa4096 2018-11-08 [A]
+
+pub   ed25519 2021-10-27 [SC] [expires: 2026-10-26]
+      DB5B4A9546601F945389C66940AC6F48D55AB11D
+uid           [ unknown] Ivy Foster <i@iff.ink>
+uid           [ unknown] Ivy Foster <code@iff.ink>
+uid           [ unknown] Ivy Foster <dev@iff.ink>
+uid           [ unknown] Ivy Foster <escondida@iff.ink>
+uid           [ unknown] Ivy Foster <f@iff.ink>
+uid           [ unknown] Ivy Foster <if@iff.ink>
+uid           [  full  ] Ivy Foster <iff@archlinux.org>
+uid           [ unknown] Ivy Foster <iff@iff.ink>
+uid           [ unknown] Ivy Foster <ivy.foster@gmail.com>
+uid           [ unknown] Ivy Foster <lists@iff.ink>
+uid           [ unknown] Ivy Foster <r@iff.ink>
+sub   cv25519 2021-10-27 [E] [expires: 2026-10-26]
+
+pub   ed25519 2017-09-07 [SC] [expired: 2022-11-16]
+      DBE7D3DD8C81D58D0A13D0E76BC26A17B9B7018A
+uid           [ expired] Alad Wenter <alad@archlinux.org>
+
+pub   rsa4096 2017-05-15 [SC] [revoked: 2017-05-15]
+      DDB867B92AA789C165EEFA799B729B06A680C281
+uid           [ revoked] Bartłomiej Piotrowski (Arch Linux Master Key) <bpiotrowski@master-key.archlinux.org>
+
+pub   rsa4096 2011-11-07 [SC] [expires: 2025-12-31]
+      E240B57E2C4630BA768E2F26FC1B547C8D8172C8
+uid           [marginal] Levente Polyak (anthraxx) <levente@leventepolyak.net>
+uid           [marginal] Levente Polyak (Jabber/XMPP only) <anthraxx@jabber.ccc.de>
+uid           [marginal] Levente Polyak <Z3r0.0x00@gmail.com>
+uid           [  full  ] Levente Polyak <anthraxx@archlinux.org>
+uid           [marginal] Levente Polyak <anthraxx@hamburg.ccc.de>
+uid           [marginal] Levente Polyak <levente@leventepolyak.de>
+sub   rsa4096 2023-12-26 [A]
+sub   rsa4096 2011-11-07 [E]
+
+pub   rsa2048 2011-10-08 [SC]
+      E499C79F53C96A54E572FEE1C06086337C50773E
+uid           [marginal] Jelle van der Waa <jelle@vdwaa.nl>
+uid           [  full  ] Jelle van der Waa <jelle@archlinux.org>
+sub   rsa2048 2011-10-08 [E]
+
+pub   dsa3072 2016-04-05 [SC] [revoked: 2022-12-10]
+      481C4474AF1572165AE4C6AF3FDDD575826C5C30
+uid           [ revoked] Chih-Hsuan Yen <yan12125@archlinux.org>
+uid           [ revoked] Chih-Hsuan Yen <d06922023@ntu.edu.tw>
+uid           [ revoked] Chih-Hsuan Yen <yan12125@gmail.com>
+uid           [ revoked] Chih-Hsuan Yen <yan12125@macports.org>
+uid           [ revoked] Chih-Hsuan Yen <yan16037741@hotmail.com.tw>
+uid           [ revoked] Yen Chi Hsuan <yan12125@gmail.com>
+
+pub   ed25519 2023-10-03 [SC] [expires: 2031-10-01]
+      E87E5B39F04A5D889D8C0147F6D84143496F6680
+uid           [  full  ] Campbell Jones <serebit@archlinux.org>
+sub   cv25519 2023-10-03 [E] [expires: 2031-10-01]
+
+pub   ed25519 2021-10-24 [SC]
+      56C3E775E72B0C8B1C0C1BD0B5DB77409B11B601
+uid           [ unknown] Maxim Baz <pgp@maximbaz.com>
+uid           [ unknown] Maxim Baz <git@maximbaz.com>
+uid           [  full  ] Maxim Baz <maximbaz@archlinux.org>
+sub   ed25519 2021-10-24 [S]
+sub   ed25519 2021-10-24 [A]
+sub   cv25519 2021-10-24 [E]
+
+pub   rsa4096 2016-11-11 [SC]
+      ECCAC84C1BA08A6CC8E63FBBF22FB1D78A77AEAB
+uid           [  full  ] Giancarlo Razzolini (grazzolini) <grazzolini@archlinux.org>
+sub   rsa4096 2016-11-11 [E]
+
+pub   rsa4096 2023-04-30 [SC] [expires: 2028-04-28]
+      F00B96D15228013FFC9C9D0393B11DAA4C197E3D
+uid           [  full  ] Christian Heusel (gromit packager key) <gromit@archlinux.org>
+sub   rsa4096 2023-04-30 [E] [expires: 2028-04-28]
+
+pub   rsa4096 2021-07-10 [SC]
+      F850562FCDA369F80D33000AE48D0A8326DE47C5
+uid           [  full  ] Morgan Adamiec <morganamilo@archlinux.org>
+uid           [ unknown] Morgan Adamiec <morgan@grdigital.co.uk>
+uid           [ unknown] Morgan Adamiec <morganamilo@gmail.com>
+sub   rsa4096 2021-07-29 [A]
+sub   rsa4096 2021-07-10 [E]
+
+pub   ed25519 2022-06-09 [C] [expires: 2025-01-31]
+      FAD824618B562B99CCCE05FB905A8C3700E16349
+uid           [ unknown] sudoforge <sudoforge@archlinux.org>
+sub   ed25519 2022-06-09 [A] [expires: 2025-01-31]
+sub   ed25519 2022-06-09 [S] [expires: 2025-01-31]
+sub   cv25519 2022-06-09 [E] [expires: 2025-01-31]
+
+pub   rsa4096 2019-09-04 [C] [expired: 2024-06-29]
+      FE2E6249201CA54A4FB90D066E80CA1446879D04
+uid           [ expired] Jonas Witschel <jonas.witschel@diabonas.de>
+uid           [ expired] Jonas Witschel <diabonas@archlinux.org>
+uid           [ expired] Jonas Witschel <diabonas@gmx.de>
+uid           [ expired] Jonas Witschel <git@diabonas.de>
+
+pub   ed25519 2020-11-15 [SC] [expires: 2025-11-14]
+      FE5AFA6D5DE0070ADFA21BC5E074B83653CBB7BA
+uid           [  full  ] Tim Meusel <bastelfreak@archlinux.org>
+sub   rsa4096 2020-11-16 [S] [expires: 2025-11-15]
+sub   cv25519 2020-11-15 [E] [expires: 2025-11-14]
+
+pub   rsa8192 2014-01-14 [SC] [expires: 2025-10-25]
+      5134EF9EAF65F95B6BB1608E50FB9B273A9D0BB5
+uid           [marginal] Johannes Löthberg <johannes@kyriasis.com>
+uid           [  full  ] Johannes Löthberg <demize@archlinux.org>
+sub   rsa8192 2014-01-14 [E] [expires: 2025-10-25]
+sub   rsa8192 2014-09-21 [S] [expires: 2025-10-25]
+
+pub   ed25519 2020-10-08 [SC]
+      C57F35931F317BF9058F834F682758BC60D8F87A
+uid           [ unknown] Christopher Brannon <chris@the-brannons.com>
+sub   cv25519 2020-10-08 [E]
+
+pub   rsa4096 2012-05-06 [SCA] [revoked: 2022-05-09]
+      91BD8815FE0040FA7FF5D68754C28F4FF5A1A949
+uid           [ revoked] David Runge <dave@sleepmap.de>
+uid           [ revoked] David Runge <dave@c-base.org>
+uid           [ revoked] David Runge <david.runge@campus.tu-berlin.de>
+uid           [ revoked] David Runge <runge@pool.math.tu-berlin.de>
+
