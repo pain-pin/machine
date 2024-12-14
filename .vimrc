@@ -277,3 +277,5 @@ set rnu
 set directory=/tmp
 
 colorscheme koehler
+
+set tags=./tags;,tags;
