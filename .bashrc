@@ -91,7 +91,7 @@ parse_git_branch() {
 }
 
 # Prompt
-PS1="\n${DATE_COLOR}\D{%y%m%d}${RESET_COLOR}-${TIME_COLOR}\t${RESET_COLOR}-${USER_COLOR}\u${RESET_COLOR}@${HOST_COLOR}\H${RESET_COLOR}-${DIR_COLOR}\w\-$(parse_git_branch)${RESET_COLORv}\n=> "
+PS1="\n${DATE_COLOR}\D{%y%m%d}${RESET_COLOR}-${TIME_COLOR}\t${RESET_COLOR}-${USER_COLOR}\u${RESET_COLOR}@${HOST_COLOR}\H${RESET_COLOR}-${DIR_COLOR}\w\${RESET_COLOR}-${RED}$(parse_git_branch)${RESET_COLOR}\n=> "
 
 export OCTET="(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)"
 export IPV4_REG="($OCTET\.){3}$OCTET"
