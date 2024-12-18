@@ -308,5 +308,10 @@ diariz ()
 
 bash_aliases ()
 {
+	vim ~/.bash_aliases
+}
+
+bashrc ()
+{
 	vim ~/.bashrc
 }
