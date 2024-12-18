@@ -306,3 +306,7 @@ diariz ()
 	vim + "$NEW_DIARY"
 }
 
+bash_aliases ()
+{
+	vim ~/.bashrc
+}
