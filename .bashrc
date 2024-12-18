@@ -87,7 +87,7 @@ DIR_COLOR="\[\e[1;35m\]"    # Magenta clair pour le répertoire
 RESET_COLOR="$NO_COLOR"
 
 parse_git_branch() {
-     git branch 2> /dev/null | sed -e ‘/^[^*]/d‘ -e ‘s/* \(.*\)/(\1)/‘
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
 PS1="\n${DATE_COLOR}\D{%y%m%d}${RESET_COLOR}-${TIME_COLOR}\t${RESET_COLOR}-${USER_COLOR}\u${RESET_COLOR}@${HOST_COLOR}\H${RESET_COLOR}-${DIR_COLOR}\w${RESET_COLOR}-${RED}$(parse_git_branch)${RESET_COLOR}\n=> "
