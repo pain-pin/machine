@@ -22,49 +22,33 @@
             }
           },
           {
-            "id": "3adb7292b9433642",
+            "id": "d847ac498d5779da",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Domains/Linkedin/Identification/ip.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "ip"
-            }
-          },
-          {
-            "id": "f82efd1b1ef870ff",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Domains/Linkedin/Identification/localisation.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "localisation"
-            }
-          },
-          {
-            "id": "8dfb47476f13d693",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Systems/journal_42/Mulhouse since 2024/42Mulhouse/virtualbox/virtualbox 1.md",
+                "file": "Systems/journal_42/Mulhouse since 2024/42Mulhouse/obsidian/reinstalled.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "virtualbox 1"
+              "title": "reinstalled"
+            }
+          },
+          {
+            "id": "abcaa7977e871e52",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Systems/journal_42/Mulhouse since 2024/42Mulhouse/obsidian/Pasted image 20241218110503.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20241218110503"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -205,8 +189,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8dfb47476f13d693",
+  "active": "abcaa7977e871e52",
   "lastOpenFiles": [
+    "Systems/journal_42/Mulhouse since 2024/42Mulhouse/obsidian/Pasted image 20241218110833.png",
+    "Systems/journal_42/Mulhouse since 2024/42Mulhouse/obsidian/reinstalled.md",
+    "Systems/journal_42/Mulhouse since 2024/42Mulhouse/obsidian/ticket.md",
+    "Systems/journal_42/Mulhouse since 2024/42Mulhouse/obsidian/Pasted image 20241218110503.png",
+    "test.md",
+    "Systems/journal_42/Mulhouse since 2024/42Mulhouse/virtualbox/virtualbox 1.md",
     "Systems/journal_42/Mulhouse since 2024/42Mulhouse/virtualbox/virtualbox.md",
     "Systems/journal_42/Mulhouse since 2024/42Mulhouse/virtualbox/setting memory.md",
     "Systems/journal_42/Mulhouse since 2024/42Mulhouse/virtualbox/domain name.md",
@@ -240,11 +230,6 @@
     "Domains/Facebook/connections/empeches/first connection/whois/42marseille.md",
     "Domains/Facebook/connections/empeches/first connection/whois/45.148.156.204.md",
     "Domains/Facebook/connections/empeches/first connection/First connection.md",
-    "Domains/Facebook/connections/empeches/first connection/whois/Notre-Dame.md",
-    "Domains/42Marseille/unexistent/dig.md",
-    "Domains/42Marseille/unexistent/Campus in france 2024.md",
-    "Domains/42Marseille/found.md",
-    "[Domains/Facebook/connections/empeches/first connection/whois/42marseille.md",
     "clarif_vault/Root/anamnese/Auto-diagnostique/Emotions/empathie/psychopatie/PCL-R/unnamed_2279f51356e14e77a0cf680e7b389fb4.png",
     "journal.ctx_HTML/images/home.svg"
   ]
