@@ -231,7 +231,7 @@ sed_in_place () {
 		if [ -n "$(file $F | grep 'ASCII text')" ] ; then
 			gawk -v reg="$REG" -v change="$CHANGE" '{gsub(reg, change); print $0}' "$F" > $TMP
 			chmod --reference=$F $TMP
-			mv -f TMP $F
+			mv -f $TMP $F
 		fi
 	done
 }
@@ -315,3 +315,4 @@ bashrc ()
 {
 	vim ~/.bashrc
 }
+
