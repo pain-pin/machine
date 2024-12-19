@@ -4,81 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "7beee2328971bff3",
+        "id": "bc2227b48cba88af",
         "type": "tabs",
         "children": [
           {
-            "id": "d180f379aadc2d5f",
+            "id": "b0331425eef09d18",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "mulhouse/terra/manjaro/login/bitwarden/replaypocker/password.md",
+                "file": "perso/pocker/statistiques.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "password"
-            }
-          },
-          {
-            "id": "ff6794ad2a604db6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "mulhouse/terra/manjaro/login/Confirmation/Facebook/other device.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "other device"
-            }
-          },
-          {
-            "id": "11e90a134ef1cbc4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "mulhouse/terra/manjaro/reboot/crashed/it have been a while.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "it have been a while"
-            }
-          },
-          {
-            "id": "55daf8a49edecff9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "mulhouse/terra/manjaro/reboot/crashed/journalctl.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "journalctl"
-            }
-          },
-          {
-            "id": "0b4ba59f37cf9835",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "mulhouse/terra/manjaro/reboot/crashed/it have been a while.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "it have been a while"
+              "title": "statistiques"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -219,8 +162,37 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0b4ba59f37cf9835",
+  "active": "48583a757a5e68c7",
   "lastOpenFiles": [
+    "perso/pocker/statistiques.md",
+    "wiko/absence/Frangin/201408012.md",
+    "wiko/absence/Frangin/Untitled.md",
+    "perso/pocker/1200-1800_games.png",
+    "perso/pocker/700-1200_games.png",
+    "perso/pocker/0-700_games.png",
+    "perso/pocker/graph_general.png",
+    "perso/pocker",
+    "perso/Aux des otez.md",
+    "perso",
+    "journal_2024-12-15_01:21:32_.txt",
+    "mulhouse/terra/manjaro/baloo/objdump/command not foun.md",
+    "mulhouse/terra/manjaro/baloo/objdump/Untitled.md",
+    "wiko/absence/Frangin",
+    "wiko/absence",
+    "wiko",
+    "mulhouse/terra/manjaro/baloo/objdump/objdump.md",
+    "command not found",
+    "mulhouse/terra/manjaro/apt",
+    "mulhouse/terra/manjaro/baloo/file/file.md",
+    "mulhouse/terra/manjaro/baloo/ps aux/ps aux.md",
+    "mulhouse/terra/manjaro/baloo/top/top.md",
+    "mulhouse/terra/manjaro/reboot/crashed/it have been a while.md",
+    "mulhouse/terra/manjaro/reboot/crashed/journalctl.md",
+    "mulhouse/terra/manjaro/login/Confirmation/Facebook/other device.md",
+    "mulhouse/terra/manjaro/login/bitwarden/replaypocker/password.md",
+    "mulhouse/terra/manjaro/reboot/crashed/Untitled.md",
+    "mulhouse/terra/manjaro/baloo/top",
+    "mulhouse/terra/manjaro/baloo/file",
     "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Geoffrey/Max/mot australie.md",
     "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Commanderie/Théo/mot Australie.md",
     "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Commanderie/Marina/mot autralie.md",
@@ -233,31 +205,6 @@
     "clarif_vault/Root/relations/Famille/Maternelle/Grand mere/Mère/Père/Père.md",
     "clarif_vault/Root/relations/Famille/Maternelle/Grand mere/Mère/Mère/Grand père.md",
     "clarif_vault/Root/anamnese/Auto-diagnostique/Emotions/empathie/psychopatie/PCL-R/unnamed_2279f51356e14e77a0cf680e7b389fb4.png",
-    "clarif_vault/Root/anamnese/Auto-diagnostique/Emotions/empathie/psychopatie/PCL-R/Resultat.md",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Caire/Abel/Devolus Velus.md",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Geoffrey/Mot australie.md",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Geoffrey/Max",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Commanderie/Théo.md",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Commanderie/Théo",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Commanderie/Marina.md",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Commanderie/Marina",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Commanderie/Dimitri.md",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Commanderie/Dimitri",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Commanderie/Cecile.md",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Commanderie/Cecile",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Commanderie/Anne-Laure M.md",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Commanderie/Anne-Laure M",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Boudonville/Xavier.md",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Boudonville/Laurent.md",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Boudonville/Jordan.md",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Boudonville/Jordan",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Boudonville/Joanne S.md",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Boudonville/Ali.md",
-    "clarif_vault/Root/relations/Vecu avec/Nancy/Pre-Australie/Boudonville/Ali",
-    "clarif_vault/Root/relations/Femmes/Flirts/Amelie/Relecture d'emails/post.md",
-    "clarif_vault/Root/relations/Femmes/Flirts/Amelie/Relecture d'emails/Me fait comprendre que c'est mort.md",
-    "clarif_vault/Root/relations/Femmes/Flirts/Amelie/Relecture d'emails/Harcelement_delire",
-    "clarif_vault/Root/relations/Famille/Maternelle/Grand mere/Mère/Père",
     "journal.ctx_HTML/images/home.svg"
   ]
 }
