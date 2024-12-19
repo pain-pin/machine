@@ -1,0 +1,1 @@
+![[Systems/journal_42/Mulhouse since 2024/42Mulhouse/obsidian/Pasted image 20241218110503.png]]

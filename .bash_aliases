@@ -231,7 +231,7 @@ sed_in_place () {
 		if [ -n "$(file $F | grep 'ASCII text')" ] ; then
 			gawk -v reg="$REG" -v change="$CHANGE" '{gsub(reg, change); print $0}' "$F" > $TMP
 			chmod --reference=$F $TMP
-			mv -f TMP $F
+			mv -f $TMP $F
 		fi
 	done
 }
@@ -276,3 +276,43 @@ save_cmd ()
 }
 
 alias v="nvim"
+
+diariz ()
+{
+	if [ "$#" -ne 1 ]; then
+	    echo "Usage: $0 <path/to/file>
+	    (without .md extention)"
+	    return 1
+	fi
+	DATE=$(date +%Y-%m-%d)
+	TIME=$(date +%H-%M)
+	DIR_JOURNAL="$HOME/machine/journal"
+	FILE=$1
+	NEW_DIARY="$DIR_JOURNAL/$FILE.md"
+	mkdir -p "$DIR_JOURNAL/$(dirname "$FILE")"
+	{
+	    echo "# Journal du $DATE à $TIME"
+	    echo "## Thème : $THEME"
+	    echo ""
+	    echo "### Réflexions"
+	    echo "- "
+	    echo ""
+	    echo "### Événements marquants"
+	    echo "- "
+	    echo ""
+	    echo "### Notes supplémentaires"
+	    echo "- "
+	} > "$NEW_DIARY"
+	vim + "$NEW_DIARY"
+}
+
+bash_aliases ()
+{
+	vim ~/.bash_aliases
+}
+
+bashrc ()
+{
+	vim ~/.bashrc
+}
+
