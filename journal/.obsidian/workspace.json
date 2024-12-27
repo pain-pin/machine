@@ -62,9 +62,37 @@
               "icon": "lucide-file",
               "title": "virtualbox 1"
             }
+          },
+          {
+            "id": "656009fe664fb36d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "perso/apo/lorem ipsum.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "lorem ipsum"
+            }
+          },
+          {
+            "id": "c7e71d051b2b8878",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "perso/cb bitwarden.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "cb bitwarden"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -205,8 +233,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8dfb47476f13d693",
+  "active": "c7e71d051b2b8878",
   "lastOpenFiles": [
+    "perso/apo/gambri.md",
+    "perso/cb bitwarden.md",
+    "perso/apo/lorem ipsum.md",
+    "Systems/journal_42/Mulhouse since 2024/42Mulhouse/virtualbox/virtualbox 1.md",
+    "perso/apo",
+    "Systems/debian/time.md",
     "Systems/journal_42/Mulhouse since 2024/42Mulhouse/virtualbox/virtualbox.md",
     "Systems/journal_42/Mulhouse since 2024/42Mulhouse/virtualbox/setting memory.md",
     "Systems/journal_42/Mulhouse since 2024/42Mulhouse/virtualbox/domain name.md",
@@ -227,24 +261,18 @@
     "Domains/Linkedin/Compte duplique",
     "Domains/Linkedin",
     "Domains/Bouygue/connection/improbable/Appareil autorise (poste de 42).md",
-    "pberso/Root/Gambrinus/2024-12-06-7/Flash.md",
-    "pberso/Root/Gambrinus/2024-12-06-7/nRT?.md",
-    "pberso/Root/Gambrinus/2024-12-06-7/J'ai oublie le nom.md",
-    "pberso/2024-12-08.md",
+    "perso/divers/Gambrinus/2024-12-06-7/Flash.md",
+    "perso/divers/Gambrinus/2024-12-06-7/nRT?.md",
+    "perso/divers/Gambrinus/2024-12-06-7/J'ai oublie le nom.md",
+    "perso/2024-12-08.md",
     "Domains/Bouygue/connection/improbable/tentatives de connection.md",
     "Domains/Bouygue/connection/improbable/dionisnicolas@gmail.com.md",
     "Domains/Bouygue/connection/improbable",
     "Domains/Bouygue/connection",
-    "Domains/Bouygue",
     "Domains/Facebook/connections/empeches/second connection.md",
     "Domains/Facebook/connections/empeches/first connection/whois/42marseille.md",
     "Domains/Facebook/connections/empeches/first connection/whois/45.148.156.204.md",
     "Domains/Facebook/connections/empeches/first connection/First connection.md",
-    "Domains/Facebook/connections/empeches/first connection/whois/Notre-Dame.md",
-    "Domains/42Marseille/unexistent/dig.md",
-    "Domains/42Marseille/unexistent/Campus in france 2024.md",
-    "Domains/42Marseille/found.md",
-    "[Domains/Facebook/connections/empeches/first connection/whois/42marseille.md",
     "clarif_vault/Root/anamnese/Auto-diagnostique/Emotions/empathie/psychopatie/PCL-R/unnamed_2279f51356e14e77a0cf680e7b389fb4.png",
     "journal.ctx_HTML/images/home.svg"
   ]
