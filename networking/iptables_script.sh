@@ -72,5 +72,6 @@ if [ -f "$FILE_IN" ]; then
 fi
 
 if [ -n "$UPDATE" ] ; then
+	mv "$IPTABLES_FILE" /tmp/"$(basename IPTABLES_FILE)".tmp
     iptables-save > "$IPTABLES_FILE"
 fi
