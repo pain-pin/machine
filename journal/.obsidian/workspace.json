@@ -1,74 +1,70 @@
 {
   "main": {
-    "id": "4e86b9072af373ca",
+    "id": "d86a849090ab7760",
     "type": "split",
     "children": [
       {
-        "id": "bc2227b48cba88af",
+        "id": "d26e494e2724bc8a",
         "type": "tabs",
         "children": [
           {
-            "id": "b0331425eef09d18",
+            "id": "a956e250b58618e8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "perso/pocker/statistiques.md",
+                "file": "perso/divers/yiking/001 20241219.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "statistiques"
+              "title": "001 20241219"
             }
           },
           {
-            "id": "656009fe664fb36d",
+            "id": "34c398b0184f070b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "perso/apo/lorem ipsum.md",
+                "file": "perso/divers/yiking/001 20241219.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "lorem ipsum"
+              "title": "001 20241219"
             }
           },
           {
-            "id": "c7e71d051b2b8878",
+            "id": "9992739803f6f4c2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "perso/cb bitwarden.md",
+                "file": "perso/divers/Gambrinus/2024-12-06-7/nRT?.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "cb bitwarden"
+              "title": "nRT?"
             }
           }
-<<<<<<< HEAD
         ],
-        "currentTab": 5
-=======
-        ]
->>>>>>> c3646c16a2ea5ff836e0f46865e60820dbe26045
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "4bc037f95357459f",
+    "id": "44941ff0123b7905",
     "type": "split",
     "children": [
       {
-        "id": "66bc5fe4c431c13c",
+        "id": "95fe52d5c26f0c9c",
         "type": "tabs",
         "children": [
           {
-            "id": "48583a757a5e68c7",
+            "id": "510cdf822e481a4c",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -80,7 +76,7 @@
             }
           },
           {
-            "id": "afccedab3ef8914d",
+            "id": "fefceaa00a9633b7",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -97,7 +93,7 @@
             }
           },
           {
-            "id": "71b52cee53ede3ed",
+            "id": "2732a2f303110f97",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -113,20 +109,20 @@
     "width": 300
   },
   "right": {
-    "id": "16552c474ddcab94",
+    "id": "656670a9d0f85aad",
     "type": "split",
     "children": [
       {
-        "id": "5ad0d27c536239e4",
+        "id": "faef2d75c6248a2c",
         "type": "tabs",
         "children": [
           {
-            "id": "d8e939aac0a354ac",
+            "id": "ffb80911c563b34e",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "mulhouse/terra/manjaro/login/Confirmation/Facebook/[solved] SMS.md",
+                "file": "perso/divers/Gambrinus/2024-12-06-7/nRT?.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,25 +132,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for [solved] SMS"
+              "title": "Backlinks for nRT?"
             }
           },
           {
-            "id": "8720e69338a9904d",
+            "id": "68ec1ab44f776ecd",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "mulhouse/terra/manjaro/login/Confirmation/Facebook/[solved] SMS.md",
+                "file": "perso/divers/Gambrinus/2024-12-06-7/nRT?.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from [solved] SMS"
+              "title": "Outgoing links from nRT?"
             }
           },
           {
-            "id": "8c6f77409685554f",
+            "id": "c2faf2dad3cca88f",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -167,15 +163,15 @@
             }
           },
           {
-            "id": "e7b72d8cdbd25dfb",
+            "id": "e22f04cea33840ed",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "mulhouse/terra/manjaro/login/Confirmation/Facebook/[solved] SMS.md"
+                "file": "perso/divers/Gambrinus/2024-12-06-7/nRT?.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of [solved] SMS"
+              "title": "Outline of nRT?"
             }
           }
         ]
@@ -195,94 +191,17 @@
       "command-palette:Open command palette": false
     }
   },
-<<<<<<< HEAD
-  "active": "c7e71d051b2b8878",
+  "active": "510cdf822e481a4c",
   "lastOpenFiles": [
-    "perso/apo/gambri.md",
-    "perso/cb bitwarden.md",
-    "perso/apo/lorem ipsum.md",
-    "Systems/journal_42/Mulhouse since 2024/42Mulhouse/virtualbox/virtualbox 1.md",
-    "perso/apo",
-    "Systems/debian/time.md",
-=======
-  "active": "b0331425eef09d18",
-  "lastOpenFiles": [
-    "test.md",
-    "perso/yiaho/2024-12-12_yiaho_humour.md",
-    "perso/yiaho/2024-12-12_yiaho.md",
-    "perso/yiaho",
-    "perso/Root/Gambrinus/2024-12-06-7/nRT?.md",
-    "perso/Root/Gambrinus/2024-12-06-7/J'ai oublie le nom.md",
-    "perso/Root/Gambrinus/2024-12-06-7/Flash.md",
-    "perso/Root/Gambrinus/2024-12-06-7",
-    "perso/Root/Gambrinus",
-    "perso/Root",
-    "perso/2024-12-12.md",
-    "perso/2024-12-08.md",
-    "Systems/journal_42/Mulhouse since 2024/42Mulhouse/firefox/Actualisation/mozilla_school_refreshing_aggressive/https+++profile.intra.42.fr/ls/usage",
-    "Systems/journal_42/Mulhouse since 2024/42Mulhouse/firefox/Actualisation/mozilla_school_refreshing_aggressive/https+++profile.intra.42.fr/ls/data.sqlite",
-    "Systems/journal_42/Mulhouse since 2024/42Mulhouse/firefox/Actualisation/mozilla_school_refreshing_aggressive/ls/usage",
-    "Systems/journal_42/Mulhouse since 2024/42Mulhouse/firefox/Actualisation/mozilla_school_refreshing_aggressive/ls/data.sqlite",
-    "Systems/journal_42/Mulhouse since 2024/42Mulhouse/firefox/Actualisation/mozilla_school_refreshing_aggressive/https+++profile.intra.42.fr/ls",
-    "Systems/journal_42/Mulhouse since 2024/42Mulhouse/firefox/Actualisation/mozilla_school_refreshing_aggressive/usage",
-    "Systems/journal_42/Mulhouse since 2024/42Mulhouse/terminal/bind history/arrow.md",
-    "Systems/journal_42/Mulhouse since 2024/42Mulhouse/firefox/mise a jour/ugrade.md",
-    "Systems/journal_42/Mulhouse since 2024/42Mulhouse/firefox/Actualisation/keep refreshing.md",
-    "Systems/manjaro/login/bitwarden/replaypocker/password.md",
-    "Systems/manjaro/login/Confirmation/Facebook/other device.md",
-    "Systems/manjaro/login/Confirmation/Facebook/[solved] SMS.md",
->>>>>>> c3646c16a2ea5ff836e0f46865e60820dbe26045
-    "Systems/journal_42/Mulhouse since 2024/42Mulhouse/virtualbox/virtualbox.md",
-    "Systems/journal_42/Mulhouse since 2024/42Mulhouse/virtualbox/virtualbox 1.md",
-    "Systems/journal_42/Mulhouse since 2024/42Mulhouse/virtualbox/setting memory.md",
-    "Systems/journal_42/Mulhouse since 2024/42Mulhouse/virtualbox/domain name.md",
-    "Systems/journal_42/Mulhouse since 2024/42Mulhouse/obsidian/ticket.md",
-    "Systems/journal_42/Mulhouse since 2024/42Mulhouse/obsidian/reinstalled.md",
-    "Systems/journal_42/Mulhouse since 2024/42Mulhouse/obsidian/Pasted image 20241218110833.png",
-    "Systems/journal_42/Mulhouse since 2024/42Mulhouse/obsidian/Pasted image 20241218110503.png",
-    "Systems/journal_42/Mulhouse since 2024/42Mulhouse/medium/signup.md",
-    "Systems/journal_42/Mulhouse since 2024/42Mulhouse/medium/help.md",
-    "Systems/journal_42/Mulhouse since 2024/42Mulhouse/go_online/popup_bounty.md",
-    "Systems/journal_42/Mulhouse since 2024/42Mulhouse/discord/new_connection.md",
-    "Systems/debian/wifi/42/ss-E/ss -E.md",
-    "Systems/journal_42/Mulhouse since 2024/42Mulhouse/connection improbable/ip_connection_improbable.md",
-    "Domains/Linkedin/Identification/screeshot_suivi.png",
-<<<<<<< HEAD
-    "Domains/Linkedin/Identification/suivi.md",
-    "Screenshot from 2024-12-08 17-48-15 1.png",
-    "Domains/Linkedin/Identification/localisation.md",
-    "Domains/Linkedin/Identification/ip.md",
-    "Domains/Linkedin/Compte duplique/Echanges/réponse reçue sur mon compte officielle.md",
-    "Domains/Linkedin/Compte duplique/Echanges/message envoye.md",
-    "Domains/Linkedin/Identification",
-    "Domains/Linkedin/Compte duplique/visite depuis l'autre compte/Chaumont.md",
-    "Domains/Linkedin/Compte duplique/Echanges",
-    "Domains/Linkedin/Compte duplique/visite depuis l'autre compte/20241208.md",
-    "Domains/Linkedin/Compte duplique/enregistrement PDF/Profile.pdf",
-    "Domains/Linkedin/Compte duplique/enregistrement PDF",
-    "Domains/Linkedin/Compte duplique/visite depuis l'autre compte",
-    "Domains/Linkedin/Compte duplique",
-    "Domains/Linkedin",
-    "Domains/Bouygue/connection/improbable/Appareil autorise (poste de 42).md",
-    "perso/divers/Gambrinus/2024-12-06-7/Flash.md",
+    "Systems/ch-gokyoshumyo.pdf",
     "perso/divers/Gambrinus/2024-12-06-7/nRT?.md",
     "perso/divers/Gambrinus/2024-12-06-7/J'ai oublie le nom.md",
-    "perso/2024-12-08.md",
-    "Domains/Bouygue/connection/improbable/tentatives de connection.md",
-    "Domains/Bouygue/connection/improbable/dionisnicolas@gmail.com.md",
-    "Domains/Bouygue/connection/improbable",
-    "Domains/Bouygue/connection",
-    "Domains/Facebook/connections/empeches/second connection.md",
-    "Domains/Facebook/connections/empeches/first connection/whois/42marseille.md",
-    "Domains/Facebook/connections/empeches/first connection/whois/45.148.156.204.md",
-    "Domains/Facebook/connections/empeches/first connection/First connection.md",
-=======
-    "perso/pocker/1200-1800_games.png",
-    "perso/pocker/700-1200_games.png",
-    "perso/pocker/0-700_games.png",
-    "perso/pocker/graph_general.png",
->>>>>>> c3646c16a2ea5ff836e0f46865e60820dbe26045
-    "clarif_vault/Root/anamnese/Auto-diagnostique/Emotions/empathie/psychopatie/PCL-R/unnamed_2279f51356e14e77a0cf680e7b389fb4.png",
-    "journal.ctx_HTML/images/home.svg"
+    "perso/divers/Gambrinus/2024-12-06-7/Flash.md",
+    "perso/divers/yiking/002 20241227.md",
+    "perso/divers/yiking/001 20241219.md",
+    "perso/divers/yiking/000 (nov 2024).md",
+    "perso/divers/yiking",
+    "perso/cb bitwarden.md",
+    "perso/apo/Aux des otez.md"
   ]
 }

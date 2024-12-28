@@ -23,7 +23,7 @@ Qui avait tout ce que certains esperent
 De la coke et des putes a ne plus en pouvoir
 
 Ou bien tuer Quelqu'un ?
-J'etais certain qu'il pourrait me tuer
+J'etais certain qu'il pouvait me tuer
 Et il le voulais
 
 T'etais pas au cou?rant
