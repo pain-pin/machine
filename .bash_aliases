@@ -135,6 +135,10 @@ gitRoot () {
 	git push
 }
 
+gitlog () {
+	git log --oneline --decorate --graph --all
+}
+
 aur () {
 	git clone https://aur.archlinux.org/$1.git
 }
