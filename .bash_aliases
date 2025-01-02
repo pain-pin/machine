@@ -321,3 +321,10 @@ bashrc ()
 }
 
 alias val="valgrind --leak-check=full --show-leak-kinds=all"
+
+uniqq ()
+{
+	for F in $@ ; do
+		sort $F | uniq -c | sort -nr
+	done
+}
