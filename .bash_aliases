@@ -320,3 +320,4 @@ bashrc ()
 	vim ~/.bashrc
 }
 
+alias val="valgrind --leak-check=full --show-leak-kinds=all"
