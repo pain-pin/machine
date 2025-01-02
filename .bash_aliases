@@ -316,3 +316,9 @@ bashrc ()
 	vim ~/.bashrc
 }
 
+uniqq ()
+{
+	for F in $@ ; do
+		sort $F | uniq -c | sort -nr
+	done
+}
