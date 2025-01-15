@@ -241,8 +241,14 @@ sed_in_place () {
 }
 
 clone () {
-	PROJECT_NAME="$1"
-	git clone git@github.com:presk0/$PROJECT_NAME.git
+	if [ $# -eg "3" ] ; then 
+		PROFIL_NAME="$1"
+		PROJECT_NAME="$2"
+		git clone git@github.com:$PROJECT_NAME/$PROJECT_NAME.git
+	else
+		PROJECT_NAME="$1"
+		git clone git@github.com:presk0/$PROJECT_NAME.git
+	fi
 }
 
 iptables_update () {
