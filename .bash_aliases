@@ -126,6 +126,7 @@ nmap_ssh_brute () {
 }
 
 gitadd () {
+	make fclean
 	git add $(git status | grep -P '\t' | awk '{print $NF}' | xargs)
 }
 
