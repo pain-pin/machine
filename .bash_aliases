@@ -130,6 +130,25 @@ gitadd () {
 	git add $(git status | grep -P '\t' | awk '{print $NF}' | xargs)
 }
 
+gitaddcommit () {
+	gitadd
+	if [ -z "$1" ]; then
+		git commit -m "$1"
+	else
+		echo 'need an arg as commmit:'
+		echo 'gitaddcommit "je suis un commit"'
+		echo '(or use gitadd)'
+	fi
+}
+
+gitotal () {
+	gitaddcommit $@
+	git pull
+	if [ -n "$?" ] ; then
+		git push origin HEAD
+	fi
+}
+
 gitRoot () {
 	git add Root.*
 	git commit -m "Root database update"
