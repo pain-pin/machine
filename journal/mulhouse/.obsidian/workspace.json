@@ -11,10 +11,10 @@
             "id": "4b55824ca4446416",
             "type": "leaf",
             "state": {
-              "type": "empty",
+              "type": "graph",
               "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -155,5 +155,7 @@
     }
   },
   "active": "4b55824ca4446416",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "terra/manjaro/fsck_backup.md"
+  ]
 }
