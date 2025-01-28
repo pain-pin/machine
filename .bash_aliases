@@ -135,7 +135,7 @@ gitmain () {
 
 gitadd () {
 	make fclean
-	git add
+	git add .
 }
 
 gitaddcommit () {
