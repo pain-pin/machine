@@ -135,7 +135,7 @@ gitmain () {
 
 gitadd () {
 	make fclean
-	git add $(git status | grep -P '\t' | awk '{print $NF}' | xargs)
+	git add
 }
 
 gitaddcommit () {
