@@ -125,6 +125,14 @@ nmap_ssh_brute () {
 	nmap --script "ssh-brute" $1 #--script-args userdb=user_list.txt,passdb=passwd_list.txt
 }
 
+gitmain () {
+	if [ -z "$1" ]; then
+		git checkout main
+		git reset --hard "$1"
+		git push origin main --force
+	fi
+}
+
 gitadd () {
 	make fclean
 	git add $(git status | grep -P '\t' | awk '{print $NF}' | xargs)
