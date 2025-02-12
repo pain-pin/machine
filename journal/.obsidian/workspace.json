@@ -55,16 +55,56 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "perso/divers/yiking/001 20241219.md",
+                "file": "perso/divers/yiking/002 20241227.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "001 20241219"
+              "title": "002 20241227"
+            }
+          },
+          {
+            "id": "58517217a394798e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Domains/dionis.com/Not secure.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Not secure"
+            }
+          },
+          {
+            "id": "8cde11445444503d",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Domains/dionis.com/maxhealthrecipies/R11/Screenshot 2025-02-12 at 03-32-57 Certificate for maxhealthrecipes.com.png"
+              },
+              "icon": "lucide-image",
+              "title": "Screenshot 2025-02-12 at 03-32-57 Certificate for maxhealthrecipes.com"
+            }
+          },
+          {
+            "id": "ed0dbc5696439e1e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Domains/dionis.com/maxhealthrecipies/R11/PEM idem.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "PEM idem"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -205,15 +245,26 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3ee54552dc77e315",
+  "active": "ed0dbc5696439e1e",
   "lastOpenFiles": [
-    "mulhouse/terra/manjaro/fsck_backup.md",
-    "perso/divers/yiking/000 (nov 2024).md",
+    "Domains/dionis.com/maxhealthrecipies/R11/Screenshot 2025-02-12 at 03-32-57 Certificate for maxhealthrecipes.com.png",
+    "Domains/dionis.com/maxhealthrecipies/R11/PEM idem.md",
+    "Domains/dionis.com/maxhealthrecipies/R11",
+    "Domains/dionis.com/maxhealthrecipies/maxhealthrecipes.md",
+    "Domains/dionis.com/maxhealthrecipies/Screenshot 2025-02-12 at 03-32-39 Certificate for maxhealthrecipes.com.png",
+    "Domains/dionis.com/maxhealthrecipies/maxhealthrecipes-com-chain.pem",
+    "Domains/dionis.com/maxhealthrecipies/maxhealthrecipes-com.pem",
+    "Domains/dionis.com/maxhealthrecipies",
+    "Domains/dionis.com/Not secure.md",
     "perso/divers/yiking/Untitled.md",
-    "perso/divers/yiking/004 20250105.md",
-    "perso/divers/yiking/003 20250102.md",
     "perso/divers/yiking/002 20241227.md",
+    "Domains/dionis.com",
     "perso/divers/yiking/001 20241219.md",
+    "perso/divers/yiking/000 (nov 2024).md",
+    "perso/divers/yiking/004 20250105.md",
+    "perso/divers/yiking/005.md",
+    "mulhouse/terra/manjaro/fsck_backup.md",
+    "perso/divers/yiking/003 20250102.md",
     "Domains/Facebook/new_publication/bug_screenshot.png",
     "Systems/manjaro/hibernate",
     "perso/passwd_gen/curiosites/003 20240102.md",
@@ -221,15 +272,12 @@
     "perso/passwd_gen/curiosites/(pre)(post)fixes.md",
     "perso/divers/Gambrinus/2024-12-06-7/nRT?.md",
     "perso/passwd_gen/curiosites",
-    "Untitled",
     "perso/passwd_gen",
     "perso/divers/Gambrinus/2024-12-06-7/Amitee Lesage.md",
     "Domains/Facebook/intermitent du spectacle/Pasted image 20241230235604.png",
     "Domains/Facebook/intermitent du spectacle",
-    "Systems/ch-gokyoshumyo.pdf",
     "perso/divers/Gambrinus/2024-12-06-7/J'ai oublie le nom.md",
     "perso/divers/Gambrinus/2024-12-06-7/Flash.md",
-    "perso/divers/yiking",
     "perso/cb bitwarden.md",
     "perso/apo/Aux des otez.md"
   ]
