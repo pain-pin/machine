@@ -261,10 +261,10 @@ sed_in_place () {
 }
 
 clone () {
-	if [ $# -eg "3" ] ; then 
+	if [ $# -eq "3" ] ; then 
 		PROFIL_NAME="$1"
 		PROJECT_NAME="$2"
-		git clone https://github.com$PROJECT_NAME/$PROJECT_NAME.git
+		git clone https://github.com/$PROFIL_NAME/$PROJECT_NAME.git
 	else
 		PROJECT_NAME="$1"
 		git clone git@github.com:presk0/$PROJECT_NAME.git
