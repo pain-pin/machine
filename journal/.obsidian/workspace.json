@@ -102,9 +102,21 @@
               "icon": "lucide-file",
               "title": "PEM idem"
             }
+          },
+          {
+            "id": "b3307e4020b471ce",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.4"
+            }
           }
         ],
-        "currentTab": 6
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -123,7 +135,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -245,20 +258,40 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ed0dbc5696439e1e",
+  "active": "b3307e4020b471ce",
   "lastOpenFiles": [
+    "mulhouse/terra/manjaro/apparmor/snap_systemctl_status.txt",
+    "mulhouse/terra/manjaro/pacman/btrfs/Untitled.md",
+    "mulhouse/terra/manjaro/pacman/btrfs",
+    "mulhouse/terra/manjaro/pacman/Untitled",
+    "mulhouse/terra/manjaro/pacman",
+    "mulhouse/terra/manjaro/Untitled",
+    "mulhouse/terra/manjaro/snapd/install/skype.md",
+    "mulhouse/terra/manjaro/snapd/install/Untitled.md",
+    "mulhouse/terra/manjaro/snapd/install",
+    "mulhouse/install",
+    "mulhouse/Untitled 1",
+    "mulhouse/terra/manjaro/mouse/isa0060 serio2 input0/dmesg.md",
+    "mulhouse/terra/manjaro/mouse/isa0060 serio2 input0/Untitled.md",
+    "mulhouse/terra/manjaro/mouse/isa0060 serio2 input0",
+    "mulhouse/terra/manjaro/mouse/Untitled",
+    "mulhouse/Untitled",
+    "mulhouse/terra/manjaro/snapd/journalctl.md",
+    "mulhouse/terra/manjaro/snapd/Untitled.md",
+    "mulhouse/terra/manjaro/skype/snapd.md",
+    "mulhouse/terra/skype/snapd.md",
+    "mulhouse/snapd.md",
+    "mulhouse/Untitled.md",
+    "mulhouse/terra/manjaro/apparmor/snapd.md",
+    "mulhouse/terra/manjaro/snapd.md",
+    "mulhouse/terra/manjaro/Untitled.md",
     "Domains/dionis.com/maxhealthrecipies/R11/Screenshot 2025-02-12 at 03-32-57 Certificate for maxhealthrecipes.com.png",
     "Domains/dionis.com/maxhealthrecipies/R11/PEM idem.md",
-    "Domains/dionis.com/maxhealthrecipies/R11",
     "Domains/dionis.com/maxhealthrecipies/maxhealthrecipes.md",
     "Domains/dionis.com/maxhealthrecipies/Screenshot 2025-02-12 at 03-32-39 Certificate for maxhealthrecipes.com.png",
-    "Domains/dionis.com/maxhealthrecipies/maxhealthrecipes-com-chain.pem",
-    "Domains/dionis.com/maxhealthrecipies/maxhealthrecipes-com.pem",
-    "Domains/dionis.com/maxhealthrecipies",
     "Domains/dionis.com/Not secure.md",
     "perso/divers/yiking/Untitled.md",
     "perso/divers/yiking/002 20241227.md",
-    "Domains/dionis.com",
     "perso/divers/yiking/001 20241219.md",
     "perso/divers/yiking/000 (nov 2024).md",
     "perso/divers/yiking/004 20250105.md",
@@ -266,19 +299,6 @@
     "mulhouse/terra/manjaro/fsck_backup.md",
     "perso/divers/yiking/003 20250102.md",
     "Domains/Facebook/new_publication/bug_screenshot.png",
-    "Systems/manjaro/hibernate",
-    "perso/passwd_gen/curiosites/003 20240102.md",
-    "Domains/Facebook/new_publication",
-    "perso/passwd_gen/curiosites/(pre)(post)fixes.md",
-    "perso/divers/Gambrinus/2024-12-06-7/nRT?.md",
-    "perso/passwd_gen/curiosites",
-    "perso/passwd_gen",
-    "perso/divers/Gambrinus/2024-12-06-7/Amitee Lesage.md",
-    "Domains/Facebook/intermitent du spectacle/Pasted image 20241230235604.png",
-    "Domains/Facebook/intermitent du spectacle",
-    "perso/divers/Gambrinus/2024-12-06-7/J'ai oublie le nom.md",
-    "perso/divers/Gambrinus/2024-12-06-7/Flash.md",
-    "perso/cb bitwarden.md",
-    "perso/apo/Aux des otez.md"
+    "Domains/Facebook/intermitent du spectacle/Pasted image 20241230235604.png"
   ]
 }
