@@ -107,12 +107,14 @@
             "id": "b3307e4020b471ce",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.8.4"
+                "file": "mulhouse/terra/manjaro/shasum os.md",
+                "mode": "source",
+                "source": true
               },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.8.4"
+              "icon": "lucide-file",
+              "title": "shasum os"
             }
           }
         ],
@@ -260,6 +262,11 @@
   },
   "active": "b3307e4020b471ce",
   "lastOpenFiles": [
+    "Domains/debian/pgp gpg/versions.md",
+    "mulhouse/terra/manjaro/shasum os.md",
+    "Domains/debian/pgp gpg/Screenshot 2025-02-13 at 22-04-38 Debian -- Package Search Results -- gnupg.png",
+    "Domains/debian/pgp gpg",
+    "Domains/debian",
     "mulhouse/terra/manjaro/apparmor/snap_systemctl_status.txt",
     "mulhouse/terra/manjaro/pacman/btrfs/Untitled.md",
     "mulhouse/terra/manjaro/pacman/btrfs",
@@ -273,9 +280,6 @@
     "mulhouse/Untitled 1",
     "mulhouse/terra/manjaro/mouse/isa0060 serio2 input0/dmesg.md",
     "mulhouse/terra/manjaro/mouse/isa0060 serio2 input0/Untitled.md",
-    "mulhouse/terra/manjaro/mouse/isa0060 serio2 input0",
-    "mulhouse/terra/manjaro/mouse/Untitled",
-    "mulhouse/Untitled",
     "mulhouse/terra/manjaro/snapd/journalctl.md",
     "mulhouse/terra/manjaro/snapd/Untitled.md",
     "mulhouse/terra/manjaro/skype/snapd.md",
@@ -284,7 +288,6 @@
     "mulhouse/Untitled.md",
     "mulhouse/terra/manjaro/apparmor/snapd.md",
     "mulhouse/terra/manjaro/snapd.md",
-    "mulhouse/terra/manjaro/Untitled.md",
     "Domains/dionis.com/maxhealthrecipies/R11/Screenshot 2025-02-12 at 03-32-57 Certificate for maxhealthrecipes.com.png",
     "Domains/dionis.com/maxhealthrecipies/R11/PEM idem.md",
     "Domains/dionis.com/maxhealthrecipies/maxhealthrecipes.md",
@@ -297,7 +300,6 @@
     "perso/divers/yiking/004 20250105.md",
     "perso/divers/yiking/005.md",
     "mulhouse/terra/manjaro/fsck_backup.md",
-    "perso/divers/yiking/003 20250102.md",
     "Domains/Facebook/new_publication/bug_screenshot.png",
     "Domains/Facebook/intermitent du spectacle/Pasted image 20241230235604.png"
   ]
