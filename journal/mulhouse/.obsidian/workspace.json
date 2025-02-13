@@ -186,6 +186,8 @@
   },
   "active": "c60305a1f570739a",
   "lastOpenFiles": [
+    "terra/manjaro/shasum os.md",
+    "terra/manjaro/Untitled.md",
     "terra/manjaro/apparmor/snap_systemctl_status.txt",
     "terra/manjaro/snapd/install/skype.md",
     "terra/manjaro/pacman/btrfs/Untitled.md",
@@ -202,7 +204,6 @@
     "terra/manjaro/snapd",
     "terra/manjaro/apparmor/snapd.md",
     "terra/manjaro/skype",
-    "terra/manjaro/apparmor",
     "terra/manjaro/fsck_backup.md"
   ]
 }
