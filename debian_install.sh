@@ -1,8 +1,8 @@
 #!/usr/bin/bash
 
-#sudo apt-get update
-#sudo apt-get upgrade
-#sudo apt-get dist-upgrade
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get dist-upgrade
 
 
 if [[ $EUID -ne 0 ]]; then

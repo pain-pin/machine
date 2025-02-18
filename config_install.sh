@@ -10,5 +10,5 @@ for F in $FILES_TO_LINK; do
 	ln -s $F $SUDO_HOME/$BASENAME
 done
 
-mkdir -p ~/.config/nvim
-ln -s ~/.vimrc ~/.config/nvim/init.vim
+#mkdir -p ~/.config/nvim
+#ln -s ~/.vimrc ~/.config/nvim/init.vim
