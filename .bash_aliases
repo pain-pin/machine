@@ -362,3 +362,23 @@ uniqq ()
 		sort $F | uniq -c | sort -nr
 	done
 }
+
+journal ()
+{
+	FILE=$1
+	local DATE_STRING=$(date +"%y%m%d")      # Récupère la date au format yymmdd
+    local TIME_STRING=$(date +"%T")           # Récupère l'heure au format hh:mm:ss
+    local USER=$(whoami)                       # Récupère le nom d'utilisateur courant
+    local HOST=$(hostname -s)                  # Récupère le nom d'hôte court
+    local PWD=$(pwd)                           # Récupère le répertoire de travail actuel
+
+	echo "$DATE_STRING" > $FILE
+    echo "$TIME_STRING" >> $FILE
+    echo "$USER" >> $FILE
+    echo "$HOST" >> $FILE
+    echo "$PWD" >> $FILE
+	vim + $FILE
+	git add $FILE
+	git commit -m "[journal] $FILE"
+	git push
+}
