@@ -344,7 +344,7 @@ diariz ()
 	vim + "$NEW_DIARY"
 }
 
-bashaliases ()
+bashalias ()
 {
 	vim ~/.bash_aliases
 }
