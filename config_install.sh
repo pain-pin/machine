@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-SUDO_HOME="/home/presko"
+SUDO_HOME=$HOME
 MACHINE_DIR="$SUDO_HOME/machine"
 
 FILES_TO_LINK="$MACHINE_DIR/.vim $MACHINE_DIR/.vimrc $MACHINE_DIR/.bashrc $MACHINE_DIR/.bash_aliases"
