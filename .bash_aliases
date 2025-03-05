@@ -365,12 +365,18 @@ uniqq ()
 
 journal ()
 {
-	FILE=$1
-	local DATE_STRING=$(date +"%y%m%d")      # Récupère la date au format yymmdd
-    local TIME_STRING=$(date +"%T")           # Récupère l'heure au format hh:mm:ss
-    local USER=$(whoami)                       # Récupère le nom d'utilisateur courant
-    local HOST=$(hostname -s)                  # Récupère le nom d'hôte court
-    local PWD=$(pwd)                           # Récupère le répertoire de travail actuel
+	FOLDER=journal/$(uname -a | cut -d\  -f 7)
+	if [ 
+	if [ -n FILE ] ; then
+		FILE=$1
+	else
+		FILE=
+	fi
+	local DATE_STRING=$(date +"%y%m%d")
+    local TIME_STRING=$(date +"%T")
+    local USER=$(whoami)
+    local HOST=$(hostname -s)
+    local PWD=$(pwd)
 
 	echo "$DATE_STRING" > $FILE
     echo "$TIME_STRING" >> $FILE
