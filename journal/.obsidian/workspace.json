@@ -273,7 +273,7 @@
     "mulhouse/terra/debian250214/Untitled/Untitled",
     "mulhouse/terra/debian250214/Untitled",
     "mulhouse/terra/debian250214/Untitled.md",
-    "Domains/debian/pgp gpg/versions.md",
+    "Domains/debian/pgp gpg/versions.md"
     "Domains/debian/pgp gpg/Screenshot 2025-02-13 at 22-04-38 Debian -- Package Search Results -- gnupg.png",
     "Domains/debian/pgp gpg",
     "Domains/debian",
@@ -281,8 +281,18 @@
     "mulhouse/terra/manjaro/pacman/btrfs/Untitled.md",
     "mulhouse/terra/manjaro/pacman/btrfs",
     "mulhouse/terra/manjaro/pacman/Untitled",
+<<<<<<< HEAD
     "mulhouse/terra/manjaro/snapd/install/skype.md",
     "mulhouse/terra/manjaro/snapd/install/Untitled.md",
+=======
+    "mulhouse/terra/manjaro/pacman",
+    "mulhouse/terra/manjaro/Untitled",
+    "mulhouse/terra/manjaro/snapd/install/skype.md",
+    "mulhouse/terra/manjaro/snapd/install/Untitled.md",
+    "mulhouse/terra/manjaro/snapd/install",
+    "mulhouse/install",
+    "mulhouse/Untitled 1",
+>>>>>>> e25ebc0ce9d65059a6167f2d10dbb366896fbe61
     "mulhouse/terra/manjaro/mouse/isa0060 serio2 input0/dmesg.md",
     "mulhouse/terra/manjaro/mouse/isa0060 serio2 input0/Untitled.md",
     "mulhouse/terra/manjaro/snapd/journalctl.md",
@@ -301,6 +311,7 @@
     "perso/divers/yiking/Untitled.md",
     "perso/divers/yiking/002 20241227.md",
     "perso/divers/yiking/001 20241219.md",
+
     "Domains/Facebook/new_publication/bug_screenshot.png",
     "Domains/Facebook/intermitent du spectacle/Pasted image 20241230235604.png"
   ]
