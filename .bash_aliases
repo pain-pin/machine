@@ -363,15 +363,23 @@ uniqq ()
 	done
 }
 
+# open a file ready to paste (probably a command with its output)
+# create a file in the folder of the day (create it if it does not exist)
+# create a subfoler if passed as argument
+# name the file with an argument
+# open the file in vim +
 journal ()
 {
-	FOLDER=journal/$(uname -a | cut -d\  -f 7)
-	if [ 
-	if [ -n FILE ] ; then
-		FILE=$1
-	else
-		FILE=
+	if [ "$#" -ne 1 ]; then
+	    echo "Usage: $0 <path/to/file>
+	    (without .md extention)"
+	    return 1
 	fi
+	cd ~/machine
+	mkdir -p journal/not_sorted
+	FOLDER=journal/not_sorted/$(date +%F)
+	mkdir -p $FOLDER
+	FILE=$FOLDER/$1
 	local DATE_STRING=$(date +"%y%m%d")
     local TIME_STRING=$(date +"%T")
     local USER=$(whoami)
@@ -387,4 +395,5 @@ journal ()
 	git add $FILE
 	git commit -m "[journal] $FILE"
 	git push
+	cd -
 }
