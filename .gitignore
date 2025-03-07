@@ -44,3 +44,5 @@ hello_makefile
 *.swo
 
 .*~
+.vscode/extensions/
+*mp4
