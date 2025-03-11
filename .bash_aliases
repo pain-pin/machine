@@ -370,14 +370,20 @@ uniqq ()
 # open the file in vim +
 journal ()
 {
-	if [ "$#" -ne 1 ]; then
-	    echo "Usage: $0 <path/to/file>
-	    (without .md extention)"
+	DEFAULT_DIR="$HOME/machine/journal/not_sorted/"
+	if [ "$#" -gt 2 -or "$#" -eq 0 ]; then
+	    echo "Usage: $0 [path/to] <file>"
+		echo "default file path is journal/not_sorted/$(date +%F)_$($USER)_$($HOST)_$($PWD).txt"
 	    return 1
 	fi
-	cd ~/machine
-	mkdir -p journal/not_sorted
-	FOLDER=journal/not_sorted/$(date +%F)
+	cd $DEFAULT_DIR
+	mkdir -p $DEFAULT_DIR
+	FILE=$1
+	if [ "$#" -eq 1 ]; then
+		FILE="$(date +%F)_$($USER)_$($HOST)_$($PWD).txt"
+	else
+		FOLDER=$2
+	fi
 	mkdir -p $FOLDER
 	FILE=$FOLDER/$1
 	local DATE_STRING=$(date +"%y%m%d")
