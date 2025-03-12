@@ -228,7 +228,7 @@ header_awk () {
 # include <unistd.h>
 ' >> $TMP
 	echo >> $TMP
-	awk '/^[a-z].*\)$/{ print $0";"}' *.c | grep -v main | grep -v static | sed "s/int\t/int\t\t/g" >> $TMP
+	awk '/^[a-z].*\)$/{ print $0";"}' $1 | grep -v main | grep -v static | sed "s/int\t/int\t\t/g" >> $TMP
 	echo >> $TMP
 	echo "#endif" >> $TMP
 	cat $TMP
@@ -381,4 +381,9 @@ journal ()
 	git add $FILE
 	git commit -m "[journal] $FILE"
 	git push
+}
+
+printcouou ()
+{
+	echo coucou
 }
