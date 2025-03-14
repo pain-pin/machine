@@ -363,6 +363,15 @@ uniqq ()
 	done
 }
 
+testee ()
+{
+	if [ "$#" -gt 2 -o "$#" -eq 0 ]; then
+	    echo "Usage: $0 [path/to] <file>"
+		echo "default file path is journal/not_sorted/$(date +%F)_${USER}_${$HOST}_${$PWD}.txt"
+	    return 1
+	fi
+}
+
 # open a file ready to paste (probably a command with its output)
 # create a file in the folder of the day (create it if it does not exist)
 # create a subfoler if passed as argument
@@ -370,27 +379,28 @@ uniqq ()
 # open the file in vim +
 journal ()
 {
-	DEFAULT_DIR="$HOME/machine/journal/not_sorted/"
-	if [ "$#" -gt 2 -or "$#" -eq 0 ]; then
+	if [ "$#" -gt 2 -o "$#" -eq 0 ]; then
 	    echo "Usage: $0 [path/to] <file>"
-		echo "default file path is journal/not_sorted/$(date +%F)_$($USER)_$($HOST)_$($PWD).txt"
+		echo "default file path is journal/not_sorted/$(date +%F)_${USER}_${HOST}_${PWD}.txt"
 	    return 1
 	fi
-	cd $DEFAULT_DIR
-	mkdir -p $DEFAULT_DIR
-	FILE=$1
-	if [ "$#" -eq 1 ]; then
-		FILE="$(date +%F)_$($USER)_$($HOST)_$($PWD).txt"
-	else
-		FOLDER=$2
-	fi
-	mkdir -p $FOLDER
-	FILE=$FOLDER/$1
 	local DATE_STRING=$(date +"%y%m%d")
     local TIME_STRING=$(date +"%T")
     local USER=$(whoami)
     local HOST=$(hostname -s)
-    local PWD=$(pwd)
+    local PWD_=$(pwd)
+	F_NAME="${DATE_STRING}_${USER}_${HOST}.txt"
+	FOLDER="$HOME/machine/journal/not_sorted"
+	if [ "$#" -eq 1 ]; then
+		FOLDER=$HOME/machine/journal/not_sorted/$HOST/$USER
+		F_NAME=$1
+	fi
+	if [ "$#" -eq 2 ]; then
+		FOLDER=$2
+	fi
+	mkdir -p $FOLDER
+	cd $FOLDER
+	FILE=$FOLDER/$F_NAME
 
 	echo "$DATE_STRING" > $FILE
     echo "$TIME_STRING" >> $FILE
