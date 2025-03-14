@@ -1,0 +1,8 @@
+250314
+12:16:46
+n
+computer
+/home/n/machine/journal/not_sorted
+
+Bitwarden disabled, needs to display notifications to work
+
