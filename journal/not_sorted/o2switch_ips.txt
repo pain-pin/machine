@@ -1,0 +1,14 @@
+250314
+12:44:11
+n
+computer
+/home/n/machine/journal/not_sorted
+
+2 first connections from same computer, some minutes of interval
+
+Shared IP Address
+109.234.164.182
+Répertoire de base
+/home/rala3584
+Last Login IP Address
+88.138.73.173

@@ -107,8 +107,6 @@ export DDMMYYYY_REG="$DD_REG$MM_REG$YYYY_REG"
 export CFUNCTION="^[a-z].*\)$"
 
 
-PATH+=":$HOME/.local/bin/"
-
 __conda_setup="$('/home/presko/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
@@ -122,3 +120,7 @@ fi
 unset __conda_setup
 
 export HISTCONTROL=ignorespace
+
+PATH+=":$HOME/.local/bin/"
+PATH+=':/var/lib/flatpak/exports/share'
+PATH+=':/home/n/.local/share/flatpak/exports/share'

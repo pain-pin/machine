@@ -1,0 +1,5 @@
+form[action*="-xmas"] .sheet {
+    background-image: url(https://ias.uicdn.net/fileadmin/IONOS/other/snowflakes-lightblue.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}

@@ -1,0 +1,159 @@
+
+blockquote { margin-top:2px; margin-bottom:6px; }
+h1,h2,h3,h4,h5{ margin:0px; font-size:100%; }
+h1{ clear:both;font-size:110%; font-weight:bold; font-variant: small-caps; text-align:center;}
+.sous_titre_desc{margin:0px; font-weight:normal;font-size:80%; width:450px; margin:0 auto 5px auto;  }
+h2{ font-weight:bold; }
+h3{ font-weight:bold; }
+p { margin-top:5px; margin-bottom:10px; }
+
+ol { margin-top:0px;}
+ul li {padding-bottom:0.5em;}
+ul {margin:0.5em 0 0 1em;padding:0}
+.bibliographie {margin:0.5em 0 0 2em;font-size:80%}
+
+a { text-decoration: none; color:#0066ff}
+a:visited { text-decoration: none; color:#9900AA; }
+a:hover { text-decoration: underline;  }
+em { font-style:normal; color:#FF0000 }
+
+div#dict {display:none; position:absolute; text-align:left;
+	padding:4px; font-size:80%; max-width: 300px;
+	background-color:#ffffe3; border:1px solid #aaaa40; z-index:1}
+	
+div.dict_car {float:left; font-size:230%; background-color:#ffffff;
+	border:1px solid #cccc60; padding:2px 2px 0 2px; margin-right:4px}
+
+.py { color:#009933;font-weight:bold;
+	font-family: "arial unicode ms", "lucida sans unicode", sans-serif;}
+img { border: 0 solid white; }
+
+form { margin:0; padding:0; }
+input,select,textarea { font-family: "Times New Roman", Times, serif; }
+.fleche { border: 0px solid white; vertical-align:middle;}
+
+.toit { height: 70px; width: 100%; 
+	text-align: center; 
+	margin: 0px; }
+.annonce {float:left;margin:0.5em;color:red;font-size:80%;text-align:left}
+.tm1 { margin:0;font-variant: small-caps;}
+.tm2 { font-weight: bold;}
+.nav { clear:right; width:500px; font-size:80%;
+	text-align: right; vertical-align: bottom;
+	padding : 0; margin:0.5em auto -0.5em auto; }
+.separateur { clear:right; height: 22px; width:500px;  
+	text-align: center; vertical-align: bottom;
+	padding : 0; margin: 0.5em auto 0.5em auto; }
+.sepGauche { float:left; padding-top:5px;  }
+.sepDroite { float:right; padding-top:5px;  }
+.corps,.tm {width:500px; 
+	margin-left: auto; margin-right: auto; padding:0px; 
+	text-align: left; }
+.sousTitre { font-variant: small-caps; text-align: center; }
+.prose,.prose_comment,.prose_petit { text-align:justify;  }
+.poesie { text-align:left;}
+.poesieRetour { text-align:left; margin-left:3em;text-indent:-3em;}
+.poesieRetrait { text-align:left; margin-left:50px; margin-right:50px;}
+
+.comment,.prose_comment,.ref,.uNotes { color:#444444; }
+.comment,.prose_comment,.prose_petit,.uNoteTitre,.petit { font-size: 80%; }
+.Zhu_comment {font-style:italic;}
+.Zhu_comment i {font-style:normal;}
+.notes { font-size:80%; margin-top: 0px; text-align: justify; 
+	margin-left: 10%; margin-bottom: 4px; }
+.appelDeNote,.exp { font-size: 60%; vertical-align: top; 
+	padding-left: 2px; margin-top: 0px; }
+
+div.uNote_lien_ajout {float:right; clear:right; margin: 0 0 5px 0;}
+div.uNote {clear:right; font-size:80%; 
+    padding:2px 4px 0 4px; margin: 0 0 5px 10%;
+    background-color:#e3e3e3; border:2px dotted white}
+div.uNote_titre { text-align:right; }
+div.uNote_ajout {display:none;}
+input.uNote, select.uNote {margin:2px;padding:0px}
+textarea.uNote {margin:2px;width:425px}
+div.uNote_aide {font-size:80%;text-align:left;margin-bottom:0px}
+
+a.ajax {cursor:pointer}
+
+
+.affXref {font-size:80%;text-align:left;}
+.reference { margin: -0.7em 0 1em 0; padding-top:0;
+	color:#555555; font-size:80%; text-align:right; 
+	border-width: 0 0 2px 0; border-style: dotted; }
+.debug { font-size: 9px; background-color: #ffff66 ; text-align:right }
+
+.chinois { font-family: MingLiU, "Arial Unicode MS"; 
+	font-weight:normal; font-size: 60%; }
+.chinois a {font-size: 200%; }
+.chinois a:hover { text-decoration: none; }
+.chinois a:visited { text-decoration: none; }
+.chinois p {text-indent:0px;}
+
+.sousTOC { clear:right; width:500px; text-align: right; margin: 1em auto 2em auto; }
+.lienSuite { clear:right; width:500px; text-align: right; margin: 0px; }
+.liensDansPage {padding:0; text-align: right; margin: 0px;  font-size: 80%; }
+.lienRef { border:0 solid white ; vertical-align:text-bottom;
+	margin-left: 5px; }
+	
+	
+	
+.logolien {vertical-align:middle }
+
+.pied { width: 500px; margin-left: auto; margin-right: auto; 
+	font-size:80%; text-align: center;
+	border-style : dotted; border-color : black; border-width : 2px 0 0 0; }
+
+.chinoisVertical  { font-size: 150%;  font-family: MingLiU, "Arial Unicode MS";}
+.chinoisVertical a:hover { text-decoration: none; }
+.chinoisVertical td {  vertical-align: top}
+
+.cvT00 {  background-image: url(../img/ct/T_00.gif) }
+.cvTF02 {  background-image: url(../img/ct/TF_02.gif) }
+.cvTF03 {  background-image: url(../img/ct/TF_03.gif) }
+.cvTFx4 {  background-image: url(../img/ct/TF_x4.gif) }
+.cvTF12 {  background-image: url(../img/ct/TF_12.gif) }
+.cvTF13 {  background-image: url(../img/ct/TF_13.gif) }
+.cvCOL {  width: 30px; text-align: center;
+	border: #CCCCFF solid; border-width: 0px 0px 0px 1px}
+.cvCOL a:hover { text-decoration: none; }
+.cvCOL a:visited { text-decoration: none; }
+
+/* Nouveau design des textes chinois en colonnes */
+.b_ht,.b_mt,.b_bt,.b_hd,.b_md,.b_bd { background-color:#eeeeee; }
+.b_hg,.b_hm,.b_ht,.b_hd,.b_bg,.b_bm,.b_bt,.b_bd {font-size: 1%;height:25px}
+.b_hg,.b_hd,.b_bg,.b_bd {width:19px;height:25px}
+
+.b_hm,.b_ht,.b_bm,.b_bt { background-position : center; background-repeat: no-repeat; }
+.b_hm,.b_bm {  text-align:left; }
+
+.b_hg { background-image: url(../img/ct/b_haut_gauche_bout.gif) }
+.b_hm { background-image: url(../img/ct/b_haut_demicorde.gif); }
+.b_ht { background-image: url(../img/ct/b_haut_demicorde.gif); }
+.b_hd { background-image: url(../img/ct/b_haut_droite_bout.gif) }
+.b_bg { background-image: url(../img/ct/b_bas_gauche_bout.gif) }
+.b_bm { background-image: url(../img/ct/b_bas_demicorde.gif); }
+.b_bt { background-image: url(../img/ct/b_bas_demicorde.gif); }
+.b_bd { background-image: url(../img/ct/b_bas_droite_bout.gif) }
+.b_md { background-image: url(../img/ct/b_milieu_droite.gif);
+ 	background-position : left; 
+	background-repeat: repeat; }
+div .b_hr {background-image: url(../img/ct/b_haut_bord.gif);width:5px;height:25px;}
+div .b_br {background-image: url(../img/ct/b_bas_bord.gif);width:5px;height:25px;}
+div .b_h1r {background-image: url(../img/ct/b_haut_premier_bord.gif);width:5px;height:25px;}
+div .b_b1r {background-image: url(../img/ct/b_bas_premier_bord.gif);width:5px;height:25px;}
+
+.b_mm,.b_mt { width:1.4em;  text-align: left; padding:0 0 0 0.2em; 
+	border: #CCCCCC solid; border-width: 0px 0px 0px 1px}
+	
+.b_virgule {background-image: url(../img/ct/cv_v.gif);background-repeat: no-repeat;}
+.b_point {background-image: url(../img/ct/cv_p.gif);background-repeat: no-repeat;}
+.b_point,.b_virgule { width:4px; height:1em; position: absolute; margin: 0 0; font-size: 100%; 
+	background-position: center bottom; background-repeat: no-repeat}
+
+
+.YjHexag { float:left; width: 20px; padding: 3px; text-align: center; background-color:#ffffff}
+.YjHexagSel { float:left; width: 20px; padding: 3px; text-align: center; background-color:#ffdddd}
+
+.YJinput {  border-color: #0099CC #33CCCC #CCCCFF #99CCCC; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; font-size: 6px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px}
+.YJno {  font-size: 10px; font-family: Arial, Helvetica, sans-serif; color: #666666; padding-left: 2px}

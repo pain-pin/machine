@@ -262,8 +262,18 @@
   },
   "active": "b3307e4020b471ce",
   "lastOpenFiles": [
-    "Domains/debian/pgp gpg/versions.md",
+    "mulhouse/terra/debian250214/Untitled/Untitled/Untitled.md",
+    "mulhouse/terra/debian250214/reboot/absent du 22 matin au 27 19h30/sudo cat _var_log_boot.log.1.md",
+    "mulhouse/terra/debian250214/reboot/absent du 22 matin au 27 19h30/sudo",
+    "mulhouse/terra/debian250214/reboot/absent du 22 matin au 27 19h30/journalctl.md",
+    "mulhouse/terra/debian250214/reboot/absent du 22 matin au 27 19h30/dmesg_H.md",
+    "mulhouse/terra/debian250214/reboot/absent du 22 matin au 27 19h30",
+    "mulhouse/terra/debian250214/reboot",
     "mulhouse/terra/manjaro/shasum os.md",
+    "mulhouse/terra/debian250214/Untitled/Untitled",
+    "mulhouse/terra/debian250214/Untitled",
+    "mulhouse/terra/debian250214/Untitled.md",
+    "Domains/debian/pgp gpg/versions.md"
     "Domains/debian/pgp gpg/Screenshot 2025-02-13 at 22-04-38 Debian -- Package Search Results -- gnupg.png",
     "Domains/debian/pgp gpg",
     "Domains/debian",
@@ -271,6 +281,10 @@
     "mulhouse/terra/manjaro/pacman/btrfs/Untitled.md",
     "mulhouse/terra/manjaro/pacman/btrfs",
     "mulhouse/terra/manjaro/pacman/Untitled",
+<<<<<<< HEAD
+    "mulhouse/terra/manjaro/snapd/install/skype.md",
+    "mulhouse/terra/manjaro/snapd/install/Untitled.md",
+=======
     "mulhouse/terra/manjaro/pacman",
     "mulhouse/terra/manjaro/Untitled",
     "mulhouse/terra/manjaro/snapd/install/skype.md",
@@ -278,6 +292,7 @@
     "mulhouse/terra/manjaro/snapd/install",
     "mulhouse/install",
     "mulhouse/Untitled 1",
+>>>>>>> e25ebc0ce9d65059a6167f2d10dbb366896fbe61
     "mulhouse/terra/manjaro/mouse/isa0060 serio2 input0/dmesg.md",
     "mulhouse/terra/manjaro/mouse/isa0060 serio2 input0/Untitled.md",
     "mulhouse/terra/manjaro/snapd/journalctl.md",
@@ -296,10 +311,7 @@
     "perso/divers/yiking/Untitled.md",
     "perso/divers/yiking/002 20241227.md",
     "perso/divers/yiking/001 20241219.md",
-    "perso/divers/yiking/000 (nov 2024).md",
-    "perso/divers/yiking/004 20250105.md",
-    "perso/divers/yiking/005.md",
-    "mulhouse/terra/manjaro/fsck_backup.md",
+
     "Domains/Facebook/new_publication/bug_screenshot.png",
     "Domains/Facebook/intermitent du spectacle/Pasted image 20241230235604.png"
   ]

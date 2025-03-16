@@ -228,7 +228,7 @@ header_awk () {
 # include <unistd.h>
 ' >> $TMP
 	echo >> $TMP
-	awk '/^[a-z].*\)$/{ print $0";"}' $1 | grep -v main | grep -v static | sed "s/int\t/int\t\t/g" >> $TMP
+	awk '/^[a-z].*\)$/{ print $0";"}' *.c | grep -v main | grep -v static | sed "s/int\t/int\t\t/g" >> $TMP
 	echo >> $TMP
 	echo "#endif" >> $TMP
 	cat $TMP
@@ -363,15 +363,7 @@ uniqq ()
 	done
 }
 
-testee ()
-{
-	if [ "$#" -gt 2 -o "$#" -eq 0 ]; then
-	    echo "Usage: $0 [path/to] <file>"
-		echo "default file path is journal/not_sorted/$(date +%F)_${USER}_${$HOST}_${$PWD}.txt"
-	    return 1
-	fi
-}
-
+<<<<<<< HEAD
 # open a file ready to paste (probably a command with its output)
 # create a file in the folder of the day (create it if it does not exist)
 # create a subfoler if passed as argument
@@ -379,28 +371,31 @@ testee ()
 # open the file in vim +
 journal ()
 {
-	if [ "$#" -gt 2 -o "$#" -eq 0 ]; then
-	    echo "Usage: $0 [path/to] <file>"
-		echo "default file path is journal/not_sorted/$(date +%F)_${USER}_${HOST}_${PWD}.txt"
+	if [ "$#" -ne 1 ]; then
+	    echo "Usage: $0 <path/to/file>
+	    (without .md extention)"
 	    return 1
 	fi
+	cd ~/machine
+	mkdir -p journal/not_sorted
+	FOLDER=journal/not_sorted/$(date +%F)
+	mkdir -p $FOLDER
+	FILE=$FOLDER/$1
 	local DATE_STRING=$(date +"%y%m%d")
     local TIME_STRING=$(date +"%T")
     local USER=$(whoami)
     local HOST=$(hostname -s)
-    local PWD_=$(pwd)
-	F_NAME="${DATE_STRING}_${USER}_${HOST}.txt"
-	FOLDER="$HOME/machine/journal/not_sorted"
-	if [ "$#" -eq 1 ]; then
-		FOLDER=$HOME/machine/journal/not_sorted/$HOST/$USER
-		F_NAME=$1
-	fi
-	if [ "$#" -eq 2 ]; then
-		FOLDER=$2
-	fi
-	mkdir -p $FOLDER
-	cd $FOLDER
-	FILE=$FOLDER/$F_NAME
+    local PWD=$(pwd)
+=======
+journal ()
+{
+	FILE=$1
+	local DATE_STRING=$(date +"%y%m%d")      # Récupère la date au format yymmdd
+    local TIME_STRING=$(date +"%T")           # Récupère l'heure au format hh:mm:ss
+    local USER=$(whoami)                       # Récupère le nom d'utilisateur courant
+    local HOST=$(hostname -s)                  # Récupère le nom d'hôte court
+    local PWD=$(pwd)                           # Récupère le répertoire de travail actuel
+>>>>>>> e25ebc0ce9d65059a6167f2d10dbb366896fbe61
 
 	echo "$DATE_STRING" > $FILE
     echo "$TIME_STRING" >> $FILE
@@ -411,10 +406,8 @@ journal ()
 	git add $FILE
 	git commit -m "[journal] $FILE"
 	git push
+<<<<<<< HEAD
 	cd -
-}
-
-printcouou ()
-{
-	echo coucou
+=======
+>>>>>>> e25ebc0ce9d65059a6167f2d10dbb366896fbe61
 }
