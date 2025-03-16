@@ -11,6 +11,6 @@ done;
 #chsh -s /usr/bin/bash
 #echo '. ~/.bash_aliases' >> $HOME/.zshrc
 #echo '. ~/.bashrc' >> $HOME/.zshrc
-
+bash apt_install.sh
 python3 -m pip install --upgrade pip setuptools
 python3 -m pip install norminette
