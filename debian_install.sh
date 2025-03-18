@@ -16,5 +16,5 @@ NETWORKDIR="$MACHINE_DIR/networking"
 systemctl enable ulogd
 systemctl start ulogd
 bash $NETWORKDIR/iptables_script.sh -f $NETWORKDIR/ip_to_ban.txt -r
+
 bash apt_install.sh
->>>>>>> e25ebc0ce9d65059a6167f2d10dbb366896fbe61

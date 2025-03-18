@@ -104,6 +104,8 @@ export DD_REG="(0?[1-9])|([1-2][0-9])|(3[0-1])"
 export DATE_REG="($YYYY_REG$MM_REGc$DD_REG)|($DD_REGMM_REG$YYYY_REG)"
 export YYYYMMDD_REG="$YYYY_REG$MM_REG$DD_REG"
 export DDMMYYYY_REG="$DD_REG$MM_REG$YYYY_REG"
+export CFUNCTION="^[a-z].*\)$"
+
 
 __conda_setup="$('/home/presko/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then

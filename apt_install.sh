@@ -1,13 +1,13 @@
 #!/usr/bin/bash
 
 curl -fsS https://dl.brave.com/install.sh | sh
+
+apt install -y  bc
+apt install -y  ctags
+apt install -y firefox
 apt install python3.11-venv
 apt install -y  cmake
 apt install -y  gimp
-#apt install -y  cherrytree
-apt install -y  bc
-apt install -y  ctags
-#apt install -y firefox
 apt install -y unzip
 apt install -y redshift
 apt install -y tcpdump
