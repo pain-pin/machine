@@ -1,0 +1,60 @@
+250318
+18:55:58
+nidionis
+k0r3p12
+/home/nidionis/machine/journal/not_sorted/k0r3p12/nidionis
+
+
+En ecrivant un ticket a 42
+A la validation, je suis dirige vers:
+https://meta.intra.42.fr/issues
+
+Bad gateway Error code 502
+Visit cloudflare.com for more information.
+2025-03-18 17:55:27 UTC
+You
+Browser
+Working
+Paris
+Cloudflare
+Working
+meta.intra.42.fr
+Host
+Error
+What happened?
+The web server reported a bad gateway error.
+
+What can I do?
+Please try again in a few minutes.
+
+Cloudflare Ray ID: 92269996a8d89ecc • Your IP: Click to reveal • Performance & security by Cloudflare
+
+
+
+
+Le ticket que je souhaitais transmettre:
+Comportement different au login, je remonte l'info au cas ou:
+
+Ecran noir et les logs defilent au milieu de l'ecran d'une maniere peu courante
+
+250318-18:52:48-nidionis@k0r3p12.42mulhouse.fr-~-
+=> journalctl | head -15
+Hint: You are currently not seeing messages from other users and the system.
+      Users in groups 'adm', 'systemd-journal' can see all messages.
+      Pass -q to turn off this notice.
+mars 18 16:08:44 k0r3p12.42mulhouse.fr systemd-xdg-autostart-generator[487965]: Exec binary '/usr/share/ibus-mozc/ibus-mozc-gnome-initial-setup.sh' does not exist: No such file or directory
+mars 18 16:08:44 k0r3p12.42mulhouse.fr systemd-xdg-autostart-generator[487965]: Not generating service for XDG autostart app-ibus\x2dmozc\x2dgnome\x2dinitial\x2dsetup@autostart.service, error parsing Exec= line: No such file or directory
+mars 18 16:08:44 k0r3p12.42mulhouse.fr systemd-xdg-autostart-generator[487965]: Exec binary '/usr/libexec/gnome-initial-setup-copy-worker' does not exist: No such file or directory
+mars 18 16:08:44 k0r3p12.42mulhouse.fr systemd-xdg-autostart-generator[487965]: Not generating service for XDG autostart app-gnome\x2dinitial\x2dsetup\x2dcopy\x2dworker@autostart.service, error parsing Exec= line: No such file or directory
+mars 18 16:08:44 k0r3p12.42mulhouse.fr systemd-xdg-autostart-generator[487965]: Exec binary 'update-notifier' does not exist: No such file or directory
+mars 18 16:08:44 k0r3p12.42mulhouse.fr systemd-xdg-autostart-generator[487965]: Not generating service for XDG autostart app-update\x2dnotifier@autostart.service, error parsing Exec= line: No such file or directory
+mars 18 16:08:44 k0r3p12.42mulhouse.fr systemd-xdg-autostart-generator[487965]: Exec binary '/usr/lib/update-notifier/ubuntu-advantage-notification' does not exist: No such file or directory
+mars 18 16:08:44 k0r3p12.42mulhouse.fr systemd-xdg-autostart-generator[487965]: Not generating service for XDG autostart app-ubuntu\x2dadvantage\x2dnotification@autostart.service, error parsing Exec= line: No such file or directory
+mars 18 16:08:44 k0r3p12.42mulhouse.fr systemd-xdg-autostart-generator[487965]: Exec binary '/usr/libexec/gnome-initial-setup' does not exist: No such file or directory
+mars 18 16:08:44 k0r3p12.42mulhouse.fr systemd-xdg-autostart-generator[487965]: Not generating service for XDG autostart app-gnome\x2dinitial\x2dsetup\x2dfirst\x2dlogin@autostart.service, error parsing Exec= line: No such file or directory
+mars 18 16:08:44 k0r3p12.42mulhouse.fr systemd[487959]: Queued start job for default target Main User Target.
+mars 18 16:08:44 k0r3p12.42mulhouse.fr systemd[487959]: Created slice User Application Slice.
+mars 18 16:08:44 k0r3p12.42mulhouse.fr systemd[487959]: Created slice User Core Session Slice.
+mars 18 16:08:44 k0r3p12.42mulhouse.fr systemd[487959]: Started Pending report trigger for Ubuntu Report.
+mars 18 16:08:44 k0r3p12.42mulhouse.fr systemd[487959]: Reached target Paths.
+
