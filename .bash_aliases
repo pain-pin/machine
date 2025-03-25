@@ -140,7 +140,8 @@ gitadd () {
 
 gitaddcommit () {
 	gitadd
-	if [ -z "$1" ]; then
+	echo "\$1: $1"
+	if [ -n "$1" ]; then
 		git commit -m "$1"
 	else
 		echo 'need an arg as commmit:'
