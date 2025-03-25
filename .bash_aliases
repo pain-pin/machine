@@ -418,3 +418,8 @@ printcouou ()
 {
 	echo coucou
 }
+
+print_c_files ()
+{
+	find . -regex ".+\.[^o]+" -exec cat {} \;
+}
