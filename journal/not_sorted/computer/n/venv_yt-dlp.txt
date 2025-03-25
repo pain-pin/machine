@@ -1,0 +1,56 @@
+250319
+00:07:54
+n
+computer
+/home/n/machine/journal/not_sorted/computer/n
+
+Realise sans trucages
+
+250319-00:01:30-n@computer-~/machine-(main)
+=> which yt-dlp
+/home/n/machine/pip_env/bin/yt-dlp
+(pip_env) 
+250319-00:01:43-n@computer-~/machine-(main)
+=> yt-dlp
+bash: /usr/bin/yt-dlp: No such file or directory
+(pip_env) 
+250319-00:02:02-n@computer-~/machine-(main)
+=> echo $PATH
+/home/n/machine/pip_env/bin:/home/presko/miniconda3/bin:/home/presko/miniconda3/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/n/.local/bin/:/var/lib/flatpak/exports/share:/home/n/.local/share/flatpak/exports/share:/home/n/.local/bin/:/var/lib/flatpak/exports/share:/home/n/.local/share/flatpak/exports/share
+(pip_env) 
+250319-00:02:24-n@computer-~/machine-(main)
+=> ./pip_env/bin/y
+youtube-dl  yt-dlp      
+(pip_env) 
+250319-00:02:24-n@computer-~/machine-(main)
+=> ./pip_env/bin/y
+youtube-dl  yt-dlp      
+(pip_env) 
+250319-00:02:24-n@computer-~/machine-(main)
+=> ./pip_env/bin/yt-dlp 
+
+Usage: yt-dlp [OPTIONS] URL [URL...]
+
+yt-dlp: error: You must provide at least one URL.
+Type yt-dlp --help to see a list of all options.
+(pip_env) 
+250319-00:05:47-n@computer-~/machine-(main)
+=> yt-dlp 
+bash: /usr/bin/yt-dlp: No such file or directory
+(pip_env) 
+250319-00:06:08-n@computer-~/machine-(main)
+=> source .bash
+.bash_aliases         .bash_aliases.backup  .bashrc               
+(pip_env) 
+250319-00:06:08-n@computer-~/machine-(main)
+=> source .bashrc 
+(pip_env) 
+250319-00:06:37-n@computer-~/machine-(main)
+=> yt-dlp 
+
+Usage: yt-dlp [OPTIONS] URL [URL...]
+
+yt-dlp: error: You must provide at least one URL.
+Type yt-dlp --help to see a list of all options.
+(pip_env) 
+

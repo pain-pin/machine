@@ -207,32 +207,7 @@ ulog_sort () {
 }
 
 header_awk () {
-	TMP="/tmp/header.tmp"
-	echo '
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: supersko <ndionis@student.42mulhouse.fr>   +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/02 18:03:26 by supersko          #+#    #+#             */
-/*   Updated: 2024/10/16 15:05:56 by nidionis         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-#ifndef X_H
-# define X_H
-
-# include <stdlib.h>
-# include <unistd.h>
-' >> $TMP
-	echo >> $TMP
-	awk '/^[a-z].*\)$/{ print $0";"}' $1 | grep -v main | grep -v static | sed "s/int\t/int\t\t/g" >> $TMP
-	echo >> $TMP
-	echo "#endif" >> $TMP
-	cat $TMP
-	rm $TMP
+	grep -RE $CFUNCTION src | cut -d: -f2 | sed s/\$/';'/g
 }
 
 francinette () {
