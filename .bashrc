@@ -125,4 +125,6 @@ PATH+=":$HOME/.local/bin/"
 PATH+=':/var/lib/flatpak/exports/share'
 PATH+=':/home/n/.local/share/flatpak/exports/share'
 
+export LESS=-R
+
 source $HOME/machine/pip_env/bin/activate
