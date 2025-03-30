@@ -1,0 +1,30 @@
+250327
+23:44:22
+n
+computer
+/home/n/machine/journal/not_sorted/computer/n
+
+250327-23:41:38-n@computer-~/handy_speech2text-
+=> lsof -i :5000
+COMMAND     PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+pt_main_t 12227    n    3u  IPv4  83702      0t0  TCP *:5000 (LISTEN)
+pt_main_t 12265    n    3u  IPv4  83702      0t0  TCP *:5000 (LISTEN)
+pt_main_t 12265    n    4u  IPv4  83702      0t0  TCP *:5000 (LISTEN)
+(pip_env) 
+250327-23:41:53-n@computer-~/handy_speech2text-
+=> killall 12227 
+12227: no process found
+(pip_env) 
+250327-23:42:58-n@computer-~/handy_speech2text-
+=> kill -9 12227 
+(pip_env) 
+250327-23:43:06-n@computer-~/handy_speech2text-
+=> lsof -i :5000
+COMMAND     PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+pt_main_t 12265    n    3u  IPv4  83702      0t0  TCP *:5000 (LISTEN)
+pt_main_t 12265    n    4u  IPv4  83702      0t0  TCP *:5000 (LISTEN)
+(pip_env) 
+250327-23:43:10-n@computer-~/handy_speech2text-
+=> kill -9 12265
+(pip_env) 
+
