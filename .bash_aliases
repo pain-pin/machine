@@ -250,7 +250,7 @@ clone () {
 		git clone https://github.com/$PROFIL_NAME/$PROJECT_NAME.git
 	else
 		PROJECT_NAME="$1"
-		git clone git@github.com:presk0/$PROJECT_NAME.git
+		git clone git@github.com:nidionis/$PROJECT_NAME.git
 	fi
 }
 
