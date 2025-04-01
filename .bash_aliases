@@ -398,3 +398,14 @@ print_c_files ()
 {
 	find . -regex ".+\.[^o]+" -exec cat {} \;
 }
+
+kill_all ()
+{
+	if [ -z "$1" ]; then
+		echo "Usage: $0 <keyword>"
+		exit 1
+	fi
+
+	KEYWORD="$1"
+	ps aux | grep "$KEYWORD" | grep -v "grep" | awk '{print $2}' | xargs -r kill -9
+}
