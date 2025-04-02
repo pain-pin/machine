@@ -22,9 +22,8 @@ HISTSIZE=1000
 HISTFILESIZE=2000
 HISTFILE=~/.history
 
-# Active la recherche incrémentale dans l'historique
-bind '"\e[A": history-search-backward'
-bind '"\e[B": history-search-forward'
+bind -f ~/.inputrc
+
 
 ## check the window size after each command and, if necessary,
 ## update the values of LINES and COLUMNS.
@@ -128,3 +127,5 @@ PATH+=':/home/n/.local/share/flatpak/exports/share'
 export LESS=-R
 
 source $HOME/machine/pip_env/bin/activate
+
+bind -f  ~/.inputrc
