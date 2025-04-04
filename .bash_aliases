@@ -399,3 +399,17 @@ print_c_files ()
 {
 	find . -regex ".+\.[^o]+" -exec cat {} \;
 }
+
+ps_parents ()
+{
+	if [ "$#" -ne 1 ]; then
+	    echo "Usage: $0 <pid>"
+	    return 1
+	fi
+	pid=$1
+	while [ "$pid" -ne 1 ]; do
+		ps -p $pid -o pid=,ppid=,cmd=;
+		pid=$(ps -p $pid -o ppid= --no-headers);
+	done
+}
+
