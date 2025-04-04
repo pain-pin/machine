@@ -251,7 +251,7 @@ clone () {
 		git clone https://github.com/$PROFIL_NAME/$PROJECT_NAME.git
 	else
 		PROJECT_NAME="$1"
-		git clone git@github.com:presk0/$PROJECT_NAME.git
+		git clone git@github.com:nidionis/$PROJECT_NAME.git
 	fi
 }
 
@@ -413,3 +413,13 @@ ps_parents ()
 	done
 }
 
+kill_all ()
+{
+	if [ -z "$1" ]; then
+		echo "Usage: $0 <keyword>"
+		exit 1
+	fi
+
+	KEYWORD="$1"
+	ps aux | grep "$KEYWORD" | grep -v "grep" | awk '{print $2}' | xargs -r kill -9
+}
