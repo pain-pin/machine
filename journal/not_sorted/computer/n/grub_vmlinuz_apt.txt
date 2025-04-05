@@ -1,0 +1,39 @@
+250405
+23:55:15
+n
+computer
+/home/n/machine/journal/not_sorted/computer/n
+
+250405-23:52:24-n@computer-~/Videos-
+=> sudo apt autoremove
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following packages will be REMOVED:
+  linux-compiler-gcc-12-x86 linux-headers-6.1.0-25-amd64
+  linux-headers-6.1.0-25-common linux-image-6.1.0-25-amd64
+  linux-kbuild-6.1
+0 upgraded, 0 newly installed, 5 to remove and 0 not upgraded.
+After this operation, 473 MB disk space will be freed.
+Do you want to continue? [Y/n] 
+(Reading database ... 345728 files and directories currently installed.)
+Removing linux-headers-6.1.0-25-amd64 (6.1.106-3) ...
+Removing linux-compiler-gcc-12-x86 (6.1.129-1) ...
+Removing linux-headers-6.1.0-25-common (6.1.106-3) ...
+Removing linux-image-6.1.0-25-amd64 (6.1.106-3) ...
+/etc/kernel/postrm.d/initramfs-tools:
+update-initramfs: Deleting /boot/initrd.img-6.1.0-25-amd64
+/etc/kernel/postrm.d/zz-update-grub:
+Generating grub configuration file ...
+Found background image: /usr/share/images/desktop-base/desktop-grub.png
+Found linux image: /boot/vmlinuz-6.1.0-32-amd64
+Found initrd image: /boot/initrd.img-6.1.0-32-amd64
+Found linux image: /boot/vmlinuz-6.1.0-31-amd64
+Found initrd image: /boot/initrd.img-6.1.0-31-amd64
+Warning: os-prober will be executed to detect other bootable partitions.
+Its output will be used to detect bootable binaries on them and create ne
+w boot entries.
+Adding boot menu entry for UEFI Firmware Settings ...
+done
+Removing linux-kbuild-6.1 (6.1.129-1) ...
+
