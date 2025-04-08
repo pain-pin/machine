@@ -46,3 +46,4 @@ hello_makefile
 .*~
 .vscode/extensions/
 *mp4
+pip_env

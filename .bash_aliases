@@ -140,7 +140,8 @@ gitadd () {
 
 gitaddcommit () {
 	gitadd
-	if [ -z "$1" ]; then
+	echo "\$1: $1"
+	if [ -n "$1" ]; then
 		git commit -m "$1"
 	else
 		echo 'need an arg as commmit:'
@@ -397,6 +398,19 @@ printcouou ()
 print_c_files ()
 {
 	find . -regex ".+\.[^o]+" -exec cat {} \;
+}
+
+ps_parents ()
+{
+	if [ "$#" -ne 1 ]; then
+	    echo "Usage: $0 <pid>"
+	    return 1
+	fi
+	pid=$1
+	while [ "$pid" -ne 1 ]; do
+		ps -p $pid -o pid=,ppid=,cmd=;
+		pid=$(ps -p $pid -o ppid= --no-headers);
+	done
 }
 
 kill_all ()
