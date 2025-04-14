@@ -423,3 +423,8 @@ kill_all ()
 	KEYWORD="$1"
 	ps aux | grep "$KEYWORD" | grep -v "grep" | awk '{print $2}' | xargs -r kill -9
 }
+
+gcl ()
+{
+	git clone $1 $2
+}
