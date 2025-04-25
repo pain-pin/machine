@@ -1,0 +1,39 @@
+250425
+20:32:18
+n
+computer
+/home/n/machine/journal/not_sorted/computer/n
+
+en rentrant de 42
+250425-20:29:09-n@computer-~-
+=> sudo journalctl -b 0 | grep -i wifi
+avril 24 12:00:03 computer kernel: Intel(R) Wireless WiFi driver for Linux
+avril 24 12:00:03 computer kernel: iwlwifi 0000:03:00.0: enabling device (0000 -> 0002)
+avril 24 12:00:03 computer kernel: iwlwifi 0000:03:00.0: firmware: direct-loading firmware iwlwifi-7265D-29.ucode
+avril 24 12:00:03 computer kernel: iwlwifi 0000:03:00.0: Found debug destination: EXTERNAL_DRAM
+avril 24 12:00:03 computer kernel: iwlwifi 0000:03:00.0: Found debug configuration: 0
+avril 24 12:00:03 computer kernel: iwlwifi 0000:03:00.0: loaded firmware version 29.4063824552.0 7265D-29.ucode op_mode iwlmvm
+avril 24 12:00:03 computer kernel: iwlwifi 0000:03:00.0: Detected Intel(R) Dual Band Wireless AC 3165, REV=0x210
+avril 24 12:00:03 computer kernel: iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM
+avril 24 12:00:03 computer kernel: iwlwifi 0000:03:00.0: Allocated 0x00400000 bytes for firmware monitor.
+avril 24 12:00:03 computer kernel: iwlwifi 0000:03:00.0: base HW address: cc:2f:71:54:47:8c, OTP minor version: 0x0
+avril 24 12:00:03 computer kernel: iwlwifi 0000:03:00.0 wlp3s0: renamed from wlan0
+avril 24 12:00:04 computer sensors[800]: iwlwifi_1-virtual-0
+avril 24 12:00:04 computer NetworkManager[816]: <info>  [1745488804.7008] rfkill0: found Wi-Fi radio killswitch (at /sys/devices/pci0000:00/0000:00:1c.6/0000:03:00.0/ieee80211/phy0/rfkill0) (driver iwlwifi)
+avril 24 12:00:04 computer NetworkManager[816]: <info>  [1745488804.7507] Loaded device plugin: NMWifiFactory (/usr/lib/x86_64-linux-gnu/NetworkManager/1.42.4/libnm-device-plugin-wifi.so)
+avril 24 12:00:05 computer kernel: iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM
+avril 24 12:00:05 computer kernel: iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM
+avril 24 12:00:05 computer kernel: iwlwifi 0000:03:00.0: FW already configured (0) - re-configuring
+avril 24 12:00:05 computer kernel: iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM
+avril 24 12:00:05 computer kernel: iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM
+avril 24 12:00:05 computer kernel: iwlwifi 0000:03:00.0: FW already configured (0) - re-configuring
+avril 24 12:00:08 computer NetworkManager[816]: <info>  [1745488808.7335] device (wlp3s0): Activation: (wifi) access point 'Auto Binder-f5d0' has security, but secrets are required.
+avril 24 12:00:08 computer NetworkManager[816]: <info>  [1745488808.7345] device (wlp3s0): Activation: (wifi) connection 'Auto Binder-f5d0' has security, and secrets exist.  No new secrets needed.
+avril 24 12:00:08 computer NetworkManager[816]: <info>  [1745488808.8688] device (wlp3s0): Activation: (wifi) Stage 2 of 5 (Device Configure) successful. Connected to wireless network "Binder-f5d0"
+avril 25 20:28:25 computer kernel: iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM
+avril 25 20:28:25 computer kernel: iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM
+avril 25 20:28:25 computer kernel: iwlwifi 0000:03:00.0: FW already configured (0) - re-configuring
+avril 25 20:28:29 computer NetworkManager[816]: <info>  [1745605709.2028] device (wlp3s0): Activation: (wifi) access point 'Auto Binder-f5d0' has security, but secrets are required.
+avril 25 20:28:29 computer NetworkManager[816]: <info>  [1745605709.2057] device (wlp3s0): Activation: (wifi) connection 'Auto Binder-f5d0' has security, and secrets exist.  No new secrets needed.
+avril 25 20:28:29 computer NetworkManager[816]: <info>  [1745605709.3214] device (wlp3s0): Activation: (wifi) Stage 2 of 5 (Device Configure) successful. Connected to wireless network "Binder-f5d0"
+
