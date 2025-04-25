@@ -1,0 +1,68 @@
+250331
+11:56:54
+n
+computer
+/home/n/machine/journal/not_sorted/computer/n
+
+l'ordinateur ne sortait pas de veille (ou hibernation)
++ login keyring didn't unlock au redemmarrage
+
+mars 31 08:30:01 computer CRON[132594]: pam_unix(cron:session): session closed for user root
+mars 31 08:34:06 computer systemd[1]: Started anacron.service - Run anacron jobs.
+mars 31 08:34:06 computer anacron[132626]: Anacron 2.3 started on 2025-03-31
+mars 31 08:34:06 computer anacron[132626]: Normal exit (0 jobs run)
+mars 31 08:34:06 computer systemd[1]: anacron.service: Deactivated successfully.
+mars 31 09:17:01 computer CRON[132955]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+mars 31 09:17:01 computer CRON[132956]: (root) CMD (cd / && run-parts --report /etc/cron.hourly)
+mars 31 09:17:01 computer CRON[132955]: pam_unix(cron:session): session closed for user root
+mars 31 09:30:01 computer CRON[133052]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+mars 31 09:30:01 computer CRON[133053]: (root) CMD ([ -x /etc/init.d/anacron ] && if [ ! -d /run/systemd/system ]; then /usr/sbin/invoke-rc.d anacron start >/dev/null; fi)
+mars 31 09:30:01 computer CRON[133052]: pam_unix(cron:session): session closed for user root
+mars 31 09:33:51 computer systemd[1]: Started anacron.service - Run anacron jobs.
+mars 31 09:33:51 computer anacron[133081]: Anacron 2.3 started on 2025-03-31
+mars 31 09:33:51 computer anacron[133081]: Normal exit (0 jobs run)
+mars 31 09:33:51 computer systemd[1]: anacron.service: Deactivated successfully.
+mars 31 09:34:41 computer systemd[1]: Starting fwupd-refresh.service - Refresh fwupd metadata and update motd...
+mars 31 09:34:41 computer dbus-daemon[788]: [system] Activating via systemd: service name='org.freedesktop.fwupd' unit='fwupd.service' requested by ':1.329' (uid=109 pid=133086 comm="/usr/bin/fwupdmgr refresh")
+mars 31 09:34:41 computer systemd[1]: Starting fwupd.service - Firmware update daemon...
+mars 31 09:34:42 computer fwupd[133091]: 07:34:42.515 FuPluginIntelMe      failed to get public key using /fpf/OemCred: generic failure [0xb]
+mars 31 09:34:42 computer dbus-daemon[788]: [system] Successfully activated service 'org.freedesktop.fwupd'
+mars 31 09:34:42 computer systemd[1]: Started fwupd.service - Firmware update daemon.
+mars 31 09:34:43 computer systemd[1]: fwupd-refresh.service: Deactivated successfully.
+mars 31 09:34:43 computer systemd[1]: Finished fwupd-refresh.service - Refresh fwupd metadata and update motd.
+mars 31 10:17:01 computer CRON[133424]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+mars 31 10:17:01 computer CRON[133425]: (root) CMD (cd / && run-parts --report /etc/cron.hourly)
+mars 31 10:17:01 computer CRON[133424]: pam_unix(cron:session): session closed for user root
+mars 31 10:30:01 computer CRON[133525]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+mars 31 10:30:01 computer CRON[133526]: (root) CMD ([ -x /etc/init.d/anacron ] && if [ ! -d /run/systemd/system ]; then /usr/sbin/invoke-rc.d anacron start >/dev/null; fi)
+mars 31 10:30:01 computer CRON[133525]: pam_unix(cron:session): session closed for user root
+mars 31 10:33:35 computer systemd[1]: Started anacron.service - Run anacron jobs.
+mars 31 10:33:35 computer anacron[133554]: Anacron 2.3 started on 2025-03-31
+mars 31 10:33:35 computer anacron[133554]: Normal exit (0 jobs run)
+mars 31 10:33:35 computer systemd[1]: anacron.service: Deactivated successfully.
+mars 31 11:17:01 computer CRON[133877]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+mars 31 11:17:01 computer CRON[133878]: (root) CMD (cd / && run-parts --report /etc/cron.hourly)
+mars 31 11:17:01 computer CRON[133877]: pam_unix(cron:session): session closed for user root
+mars 31 11:30:01 computer CRON[133977]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+mars 31 11:30:01 computer CRON[133978]: (root) CMD ([ -x /etc/init.d/anacron ] && if [ ! -d /run/systemd/system ]; then /usr/sbin/invoke-rc.d anacron start >/dev/null; fi)
+mars 31 11:30:01 computer CRON[133977]: pam_unix(cron:session): session closed for user root
+mars 31 11:34:06 computer systemd[1]: Started anacron.service - Run anacron jobs.
+mars 31 11:34:06 computer anacron[134005]: Anacron 2.3 started on 2025-03-31
+mars 31 11:34:06 computer anacron[134005]: Normal exit (0 jobs run)
+mars 31 11:34:06 computer systemd[1]: anacron.service: Deactivated successfully.
+mars 31 11:34:43 computer systemd[1]: fwupd.service: Deactivated successfully.
+mars 31 11:34:43 computer systemd[1]: fwupd.service: Consumed 1.524s CPU time.
+mars 31 11:51:22 computer cinnamon-screensaver-pam-helper[134132]: pam_unix(cinnamon-screensaver:auth): conversation failed
+mars 31 11:51:22 computer cinnamon-screensaver-pam-helper[134132]: pam_unix(cinnamon-screensaver:auth): auth could not identify password for [n]
+mars 31 11:53:08 computer systemd-logind[795]: Power key pressed short.
+mars 31 11:53:08 computer systemd-logind[795]: The system will suspend now!
+mars 31 11:53:08 computer NetworkManager[811]: <info>  [1743414788.4588] manager: sleep: sleep requested (sleeping: no  enabled: yes)
+mars 31 11:53:08 computer NetworkManager[811]: <info>  [1743414788.4589] device (enp2s0f1): state change: unavailable -> unmanaged (reason 'sleeping', sys-iface-state: 'managed')
+mars 31 11:53:08 computer NetworkManager[811]: <info>  [1743414788.4674] device (wlp3s0): state change: unavailable -> unmanaged (reason 'sleeping', sys-iface-state: 'managed')
+mars 31 11:53:08 computer NetworkManager[811]: <info>  [1743414788.4678] device (wlp3s0): set-hw-addr: reset MAC address to CC:2F:71:54:47:8C (unmanage)
+mars 31 11:53:08 computer NetworkManager[811]: <info>  [1743414788.4682] device (p2p-dev-wlp3s0): state change: unavailable -> unmanaged (reason 'sleeping', sys-iface-state: 'managed')
+mars 31 11:53:08 computer NetworkManager[811]: <info>  [1743414788.4684] manager: NetworkManager state is now ASLEEP
+mars 31 11:53:08 computer ModemManager[832]: <info>  [sleep-monitor-systemd] system is about to suspend
+mars 31 11:53:08 computer systemd[1]: Reached target sleep.target - Sleep.
+mars 31 11:53:08 computer systemd[1]: Starting systemd-suspend.service - System Suspend...
+

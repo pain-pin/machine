@@ -33,3 +33,6 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDHwqLAqU9Zm8oQR3lQWFMDCePPwpo0n87DOKUbggur
 => ls -a .ssh/
 .  ..  id_rsa  id_rsa.pub  known_hosts  known_hosts.old
 
+250405-00:03:54-n@computer-~-
+=> rm .ssh/id_rsa*
+

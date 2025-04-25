@@ -7,3 +7,8 @@ computer
 Le QRcode de thunderbird n'import rien:
 via l'application de scan du second oneplus
 l'application du telephone (appereil photo direct ou via une photo separee)
+
+
+Un furtif bug quand l'image etait aligee: fenetre avec une barre rouge
+
+SOLVED: 3 QRcodes devaient etre passes et "next" n'etait pas visible
