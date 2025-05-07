@@ -20,3 +20,4 @@ E: Unable to locate package svc
 250404-23:06:20-n@computer-~-
 => journal passwd_installing_svc.txt
 
+ps : pour recherecher le pbm brave est reinitialise et ne propose pas de restore la session
