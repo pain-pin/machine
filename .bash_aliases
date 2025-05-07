@@ -428,3 +428,8 @@ gcl ()
 {
 	git clone $1 $2
 }
+
+makere ()
+{
+	source $HOME
+}
