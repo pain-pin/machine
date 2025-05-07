@@ -15,3 +15,8 @@ cp -R bin/* $SUDO_HOME/.local/bin
 git clone https://github.com/Exafunction/codeium.vim ~/.vim/pack/Exafunction/start/codeium.vim
 #mkdir -p ~/.config/nvim
 #ln -s ~/.vimrc ~/.config/nvim/init.vim
+
+cat >> ~/.inputrc <<'EOF'
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+EOF
