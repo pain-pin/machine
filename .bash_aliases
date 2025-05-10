@@ -136,6 +136,7 @@ gitmain () {
 gitadd () {
 	make fclean
 	git add .
+	git status
 }
 
 gitaddcommit () {
@@ -470,4 +471,9 @@ kill_all ()
 gcl ()
 {
 	git clone $1 $2
+}
+
+makere ()
+{
+	source $HOME
 }
