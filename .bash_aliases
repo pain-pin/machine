@@ -173,8 +173,13 @@ aur () {
 	git clone https://aur.archlinux.org/$1.git
 }
 
-hist () {
+history_full () {
     HIST_FILE=~/.history
+	#  => cat ~/.history | head -4
+	#  git diff
+	#  #1741473628
+	#  make && lldb ./push_swap
+	#  #1741474988
     while read LINE; do
         if [ -n "$(echo "$LINE" | grep '^#')" ]; then
             date -d "$(echo $LINE | sed 's/\#/@/g')"
