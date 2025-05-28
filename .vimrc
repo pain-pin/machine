@@ -271,6 +271,8 @@ inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 
+:nnoremap <Space> @q
+
 set rnu
 
 "set backupdir=/tmp/

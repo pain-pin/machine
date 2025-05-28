@@ -3,7 +3,6 @@
 .DocumentRevisions-V100
 .TemporaryItems
 .Trash
-.bash_history
 .config
 .fseventsd
 .lesshst
@@ -47,3 +46,7 @@ hello_makefile
 .vscode/extensions/
 *mp4
 pip_env
+
+bin/*clion*
+
+*.backup
