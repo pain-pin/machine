@@ -50,3 +50,5 @@ pip_env
 bin/*clion*
 
 *.backup
+.idea
+.idea/*
