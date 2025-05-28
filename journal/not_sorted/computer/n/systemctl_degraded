@@ -1,0 +1,18 @@
+250525
+17:32:33
+n
+computer
+/home/n/machine/journal/not_sorted/computer/n
+
+systemctl degraded
+
+250525-17:32:01-n@computer-~-
+=> sudo systemctl --failed
+  UNIT                  LOAD   ACTIVE SUB    DESCRIPTION                           
+● fwupd-refresh.service loaded failed failed Refresh fwupd metadata and update motd
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+1 loaded units listed.
+

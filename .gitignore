@@ -48,6 +48,7 @@ hello_makefile
 pip_env
 
 bin/*clion*
+bin
 
 *.backup
 .idea

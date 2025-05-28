@@ -1,0 +1,1000 @@
+[    6.376663] hid-generic 0003:0000:3825.0001: input,hidraw0: USB HID v1.11 Mouse [ USB OPTICAL MOUSE] on usb-0000:00:14.0-6/input0
+[    6.512444] raid6: avx2x4   gen() 24034 MB/s
+[    6.580460] raid6: avx2x2   gen() 34639 MB/s
+[    6.648445] raid6: avx2x1   gen() 29423 MB/s
+[    6.648446] raid6: using algorithm avx2x2 gen() 34639 MB/s
+[    6.716441] raid6: .... xor() 20390 MB/s, rmw enabled
+[    6.716443] raid6: using avx2x2 recovery algorithm
+[    6.717416] xor: automatically using best checksumming function   avx       
+[    6.718179] async_tx: api initialized (async)
+[    6.978964] device-mapper: core: CONFIG_IMA_DISABLE_HTABLE is disabled. Duplicate IMA measurements will not be recorded in the IMA log.
+[    6.978994] device-mapper: uevent: version 1.0.3
+[    6.979189] device-mapper: ioctl: 4.47.0-ioctl (2022-07-28) initialised: dm-devel@redhat.com
+[   15.609160] Btrfs loaded, crc32c=crc32c-intel, zoned=yes, fsverity=yes
+[   15.796807] PM: Image not found (code -22)
+[   18.082691] EXT4-fs (dm-0): mounted filesystem with ordered data mode. Quota mode: none.
+[   18.197909] Not activating Mandatory Access Control as /sbin/tomoyo-init does not exist.
+[   18.324077] systemd[1]: Inserted module 'autofs4'
+[   18.365018] systemd[1]: systemd 252.36-1~deb12u1 running in system mode (+PAM +AUDIT +SELINUX +APPARMOR +IMA +SMACK +SECCOMP +GCRYPT -GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBFDISK +PCRE2 -PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD -BPF_FRAMEWORK -XKBCOMMON +UTMP +SYSVINIT default-hierarchy=unified)
+[   18.365027] systemd[1]: Detected architecture x86-64.
+[   18.366231] systemd[1]: Hostname set to <computer>.
+[   18.758757] systemd[1]: Queued start job for default target graphical.target.
+[   18.777639] systemd[1]: Created slice system-getty.slice - Slice /system/getty.
+[   18.778102] systemd[1]: Created slice system-modprobe.slice - Slice /system/modprobe.
+[   18.778437] systemd[1]: Created slice system-systemd\x2dcryptsetup.slice - Cryptsetup Units Slice.
+[   18.778791] systemd[1]: Created slice system-systemd\x2dfsck.slice - Slice /system/systemd-fsck.
+[   18.779057] systemd[1]: Created slice user.slice - User and Session Slice.
+[   18.779146] systemd[1]: Started systemd-ask-password-wall.path - Forward Password Requests to Wall Directory Watch.
+[   18.779335] systemd[1]: Set up automount proc-sys-fs-binfmt_misc.automount - Arbitrary Executable File Formats File System Automount Point.
+[   18.779364] systemd[1]: Expecting device dev-disk-by\x2duuid-04d06edc\x2dabb2\x2d4c09\x2da9e0\x2d7c14c01b021c.device - /dev/disk/by-uuid/04d06edc-abb2-4c09-a9e0-7c14c01b021c...
+[   18.779374] systemd[1]: Expecting device dev-disk-by\x2duuid-89741473\x2d61f8\x2d4a2a\x2da51d\x2d5706f262feb8.device - /dev/disk/by-uuid/89741473-61f8-4a2a-a51d-5706f262feb8...
+[   18.779383] systemd[1]: Expecting device dev-disk-by\x2duuid-ADC1\x2dCD1B.device - /dev/disk/by-uuid/ADC1-CD1B...
+[   18.779392] systemd[1]: Expecting device dev-mapper-luks\x2d04d06edc\x2dabb2\x2d4c09\x2da9e0\x2d7c14c01b021c.device - /dev/mapper/luks-04d06edc-abb2-4c09-a9e0-7c14c01b021c...
+[   18.779424] systemd[1]: Reached target integritysetup.target - Local Integrity Protected Volumes.
+[   18.779449] systemd[1]: Reached target nss-user-lookup.target - User and Group Name Lookups.
+[   18.779464] systemd[1]: Reached target remote-fs.target - Remote File Systems.
+[   18.779477] systemd[1]: Reached target slices.target - Slice Units.
+[   18.779504] systemd[1]: Reached target time-set.target - System Time Set.
+[   18.779537] systemd[1]: Reached target veritysetup.target - Local Verity Protected Volumes.
+[   18.779690] systemd[1]: Listening on systemd-fsckd.socket - fsck to fsckd communication Socket.
+[   18.779760] systemd[1]: Listening on systemd-initctl.socket - initctl Compatibility Named Pipe.
+[   18.780247] systemd[1]: Listening on systemd-journald-audit.socket - Journal Audit Socket.
+[   18.780413] systemd[1]: Listening on systemd-journald-dev-log.socket - Journal Socket (/dev/log).
+[   18.780583] systemd[1]: Listening on systemd-journald.socket - Journal Socket.
+[   18.780977] systemd[1]: Listening on systemd-udevd-control.socket - udev Control Socket.
+[   18.781104] systemd[1]: Listening on systemd-udevd-kernel.socket - udev Kernel Socket.
+[   18.782038] systemd[1]: Mounting dev-hugepages.mount - Huge Pages File System...
+[   18.782986] systemd[1]: Mounting dev-mqueue.mount - POSIX Message Queue File System...
+[   18.784028] systemd[1]: Mounting sys-kernel-debug.mount - Kernel Debug File System...
+[   18.785015] systemd[1]: Mounting sys-kernel-tracing.mount - Kernel Trace File System...
+[   18.786344] systemd[1]: Starting keyboard-setup.service - Set the console keyboard layout...
+[   18.787370] systemd[1]: Starting kmod-static-nodes.service - Create List of Static Device Nodes...
+[   18.788441] systemd[1]: Starting modprobe@configfs.service - Load Kernel Module configfs...
+[   18.789547] systemd[1]: Starting modprobe@dm_mod.service - Load Kernel Module dm_mod...
+[   18.790639] systemd[1]: Starting modprobe@drm.service - Load Kernel Module drm...
+[   18.791980] systemd[1]: Starting modprobe@efi_pstore.service - Load Kernel Module efi_pstore...
+[   18.793103] systemd[1]: Starting modprobe@fuse.service - Load Kernel Module fuse...
+[   18.794188] systemd[1]: Starting modprobe@loop.service - Load Kernel Module loop...
+[   18.794354] systemd[1]: systemd-fsck-root.service - File System Check on Root Device was skipped because of an unmet condition check (ConditionPathExists=!/run/initramfs/fsck-root).
+[   18.796109] systemd[1]: Starting systemd-journald.service - Journal Service...
+[   18.798895] systemd[1]: Starting systemd-modules-load.service - Load Kernel Modules...
+[   18.799916] systemd[1]: Starting systemd-remount-fs.service - Remount Root and Kernel File Systems...
+[   18.800346] pstore: Using crash dump compression: deflate
+[   18.801021] systemd[1]: Starting systemd-udev-trigger.service - Coldplug All udev Devices...
+[   18.802735] systemd[1]: Mounted dev-hugepages.mount - Huge Pages File System.
+[   18.803046] systemd[1]: Mounted dev-mqueue.mount - POSIX Message Queue File System.
+[   18.803329] systemd[1]: Mounted sys-kernel-debug.mount - Kernel Debug File System.
+[   18.803585] systemd[1]: Mounted sys-kernel-tracing.mount - Kernel Trace File System.
+[   18.803958] systemd[1]: Finished keyboard-setup.service - Set the console keyboard layout.
+[   18.804460] systemd[1]: Finished kmod-static-nodes.service - Create List of Static Device Nodes.
+[   18.804868] fuse: init (API version 7.38)
+[   18.805036] systemd[1]: modprobe@configfs.service: Deactivated successfully.
+[   18.805187] systemd[1]: Finished modprobe@configfs.service - Load Kernel Module configfs.
+[   18.805511] systemd[1]: modprobe@dm_mod.service: Deactivated successfully.
+[   18.805657] systemd[1]: Finished modprobe@dm_mod.service - Load Kernel Module dm_mod.
+[   18.805973] systemd[1]: modprobe@drm.service: Deactivated successfully.
+[   18.806129] systemd[1]: Finished modprobe@drm.service - Load Kernel Module drm.
+[   18.806439] systemd[1]: modprobe@fuse.service: Deactivated successfully.
+[   18.806586] systemd[1]: Finished modprobe@fuse.service - Load Kernel Module fuse.
+[   18.807823] systemd[1]: Mounting sys-fs-fuse-connections.mount - FUSE Control File System...
+[   18.808918] systemd[1]: Mounting sys-kernel-config.mount - Kernel Configuration File System...
+[   18.809193] pstore: Registered efi as persistent store backend
+[   18.809943] systemd[1]: modprobe@efi_pstore.service: Deactivated successfully.
+[   18.810105] systemd[1]: Finished modprobe@efi_pstore.service - Load Kernel Module efi_pstore.
+[   18.813737] systemd[1]: Mounted sys-fs-fuse-connections.mount - FUSE Control File System.
+[   18.815417] systemd[1]: Mounted sys-kernel-config.mount - Kernel Configuration File System.
+[   18.817674] loop: module loaded
+[   18.818375] systemd[1]: modprobe@loop.service: Deactivated successfully.
+[   18.818578] systemd[1]: Finished modprobe@loop.service - Load Kernel Module loop.
+[   18.818801] systemd[1]: systemd-repart.service - Repartition Root Disk was skipped because no trigger condition checks were met.
+[   18.821405] EXT4-fs (dm-0): re-mounted. Quota mode: none.
+[   18.823233] systemd[1]: Finished systemd-remount-fs.service - Remount Root and Kernel File Systems.
+[   18.823577] systemd[1]: systemd-firstboot.service - First Boot Wizard was skipped because of an unmet condition check (ConditionFirstBoot=yes).
+[   18.823615] systemd[1]: systemd-pstore.service - Platform Persistent Storage Archival was skipped because of an unmet condition check (ConditionDirectoryNotEmpty=/sys/fs/pstore).
+[   18.824593] systemd[1]: Starting systemd-random-seed.service - Load/Save Random Seed...
+[   18.825640] systemd[1]: Starting systemd-sysusers.service - Create System Users...
+[   18.827243] lp: driver loaded but no devices found
+[   18.831270] ppdev: user-space parallel port driver
+[   18.839072] systemd[1]: Finished systemd-modules-load.service - Load Kernel Modules.
+[   18.840343] systemd[1]: Starting systemd-sysctl.service - Apply Kernel Variables...
+[   18.849609] systemd[1]: Finished systemd-random-seed.service - Load/Save Random Seed.
+[   18.849921] systemd[1]: first-boot-complete.target - First Boot Complete was skipped because of an unmet condition check (ConditionFirstBoot=yes).
+[   18.851481] systemd[1]: Finished systemd-sysctl.service - Apply Kernel Variables.
+[   18.852040] systemd[1]: Finished systemd-sysusers.service - Create System Users.
+[   18.853262] systemd[1]: Starting systemd-tmpfiles-setup-dev.service - Create Static Device Nodes in /dev...
+[   18.869111] systemd[1]: Finished systemd-tmpfiles-setup-dev.service - Create Static Device Nodes in /dev.
+[   18.869430] systemd[1]: Reached target local-fs-pre.target - Preparation for Local File Systems.
+[   18.870540] systemd[1]: Starting systemd-udevd.service - Rule-based Manager for Device Events and Files...
+[   18.878047] systemd[1]: Started systemd-journald.service - Journal Service.
+[   18.894137] systemd-journald[476]: Received client request to flush runtime journal.
+[   19.046688] sd 0:0:0:0: Attached scsi generic sg0 type 0
+[   19.047921] sr 3:0:0:0: Attached scsi generic sg1 type 5
+[   19.098993] ACPI: AC: AC Adapter [AC] (on-line)
+[   19.111185] intel_pmc_core INT33A1:00:  initialized
+[   19.194075] mc: Linux media interface: v0.10
+[   19.194129] mei_me 0000:00:16.0: enabling device (0000 -> 0002)
+[   19.196008] input: PC Speaker as /devices/platform/pcspkr/input/input15
+[   19.234128] alg: No test for fips(ansi_cprng) (fips_ansi_cprng)
+[   19.237949] videodev: Linux video capture interface: v2.00
+[   19.267873] RAPL PMU: API unit is 2^-32 Joules, 4 fixed counters, 655360 ms ovfl timer
+[   19.267876] RAPL PMU: hw unit of domain pp0-core 2^-14 Joules
+[   19.267878] RAPL PMU: hw unit of domain package 2^-14 Joules
+[   19.267879] RAPL PMU: hw unit of domain dram 2^-14 Joules
+[   19.267880] RAPL PMU: hw unit of domain pp1-gpu 2^-14 Joules
+[   19.274343] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[   19.274530] cfg80211: Loaded X.509 cert 'benh@debian.org: 577e021cb980e0e820821ba7b54b4961b8b4fadf'
+[   19.274697] cfg80211: Loaded X.509 cert 'romain.perier@gmail.com: 3abbc6ec146e09d1b6016ab9d6cf71dd233f0328'
+[   19.274867] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[   19.275031] cfg80211: Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'
+[   19.278738] iTCO_vendor_support: vendor-support=0
+[   19.282801] usb 1-2: Found UVC 1.00 device Chicony USB 2.0 Camera (04f2:b5b0)
+[   19.315177] platform regulatory.0: firmware: direct-loading firmware regulatory.db
+[   19.318004] platform regulatory.0: firmware: direct-loading firmware regulatory.db.p7s
+[   19.318210] iTCO_wdt iTCO_wdt: Found a Intel PCH TCO device (Version=4, TCOBASE=0x0400)
+[   19.319032] Adding 9225416k swap on /dev/mapper/luks-04d06edc-abb2-4c09-a9e0-7c14c01b021c.  Priority:-2 extents:1 across:9225416k SSFS
+[   19.323558] iTCO_wdt iTCO_wdt: initialized. heartbeat=30 sec (nowayout=0)
+[   19.324339] Intel(R) Wireless WiFi driver for Linux
+[   19.337926] iwlwifi 0000:03:00.0: enabling device (0000 -> 0002)
+[   19.346834] input: Chicony USB 2.0 Camera: Chicony as /devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2:1.0/input/input16
+[   19.348225] usbcore: registered new interface driver uvcvideo
+[   19.348733] iwlwifi 0000:03:00.0: firmware: direct-loading firmware iwlwifi-7265D-29.ucode
+[   19.348745] iwlwifi 0000:03:00.0: Found debug destination: EXTERNAL_DRAM
+[   19.348746] iwlwifi 0000:03:00.0: Found debug configuration: 0
+[   19.348924] iwlwifi 0000:03:00.0: loaded firmware version 29.4063824552.0 7265D-29.ucode op_mode iwlmvm
+[   19.441833] usbcore: registered new interface driver snd-usb-audio
+[   19.456268] snd_hda_intel 0000:00:1f.3: enabling device (0000 -> 0002)
+[   19.463487] snd_hda_intel 0000:00:1f.3: bound 0000:00:02.0 (ops i915_audio_component_bind_ops [i915])
+[   19.482214] Bluetooth: Core ver 2.22
+[   19.482239] NET: Registered PF_BLUETOOTH protocol family
+[   19.482240] Bluetooth: HCI device and connection manager initialized
+[   19.482578] Bluetooth: HCI socket layer initialized
+[   19.482581] Bluetooth: L2CAP socket layer initialized
+[   19.482586] Bluetooth: SCO socket layer initialized
+[   19.498472] iwlwifi 0000:03:00.0: Detected Intel(R) Dual Band Wireless AC 3165, REV=0x210
+[   19.499617] thermal thermal_zone2: failed to read out thermal zone (-61)
+[   19.500353] intel_rapl_common: Found RAPL domain package
+[   19.500356] intel_rapl_common: Found RAPL domain core
+[   19.500357] intel_rapl_common: Found RAPL domain uncore
+[   19.500359] intel_rapl_common: Found RAPL domain dram
+[   19.514510] iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM
+[   19.516027] iwlwifi 0000:03:00.0: Allocated 0x00400000 bytes for firmware monitor.
+[   19.520729] iwlwifi 0000:03:00.0: base HW address: cc:2f:71:54:47:8c, OTP minor version: 0x0
+[   19.520945] snd_hda_codec_realtek hdaudioC1D0: autoconfig for ALC269VC: line_outs=1 (0x14/0x0/0x0/0x0/0x0) type:speaker
+[   19.520949] snd_hda_codec_realtek hdaudioC1D0:    speaker_outs=0 (0x0/0x0/0x0/0x0/0x0)
+[   19.520951] snd_hda_codec_realtek hdaudioC1D0:    hp_outs=1 (0x15/0x0/0x0/0x0/0x0)
+[   19.520953] snd_hda_codec_realtek hdaudioC1D0:    mono: mono_out=0x0
+[   19.520954] snd_hda_codec_realtek hdaudioC1D0:    inputs:
+[   19.520956] snd_hda_codec_realtek hdaudioC1D0:      Internal Mic=0x12
+[   19.520957] snd_hda_codec_realtek hdaudioC1D0:      Mic=0x18
+[   19.591377] input: HDA Digital PCBeep as /devices/pci0000:00/0000:00:1f.3/sound/card1/input17
+[   19.591649] input: HDA Intel PCH Mic as /devices/pci0000:00/0000:00:1f.3/sound/card1/input18
+[   19.591976] input: HDA Intel PCH Front Headphone as /devices/pci0000:00/0000:00:1f.3/sound/card1/input19
+[   19.592281] input: HDA Intel PCH HDMI/DP,pcm=3 as /devices/pci0000:00/0000:00:1f.3/sound/card1/input20
+[   19.595722] input: HDA Intel PCH HDMI/DP,pcm=7 as /devices/pci0000:00/0000:00:1f.3/sound/card1/input21
+[   19.602699] input: HDA Intel PCH HDMI/DP,pcm=8 as /devices/pci0000:00/0000:00:1f.3/sound/card1/input22
+[   19.604661] ieee80211 phy0: Selected rate control algorithm 'iwl-mvm-rs'
+[   19.620992] usbcore: registered new interface driver btusb
+[   19.634993] Bluetooth: hci0: Legacy ROM 2.5 revision 1.0 build 3 week 17 2014
+[   19.637922] bluetooth hci0: firmware: direct-loading firmware intel/ibt-hw-37.8.10-fw-1.10.3.11.e.bseq
+[   19.637934] Bluetooth: hci0: Intel Bluetooth firmware file: intel/ibt-hw-37.8.10-fw-1.10.3.11.e.bseq
+[   19.642107] iwlwifi 0000:03:00.0 wlp3s0: renamed from wlan0
+[   19.866274] loop0: detected capacity change from 0 to 378624
+[   19.867426] loop1: detected capacity change from 0 to 8
+[   19.869213] loop2: detected capacity change from 0 to 378664
+[   19.889665] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[   19.892928] loop3: detected capacity change from 0 to 113384
+[   19.896100] loop4: detected capacity change from 0 to 113384
+[   19.909208] loop5: detected capacity change from 0 to 151320
+[   19.916876] loop6: detected capacity change from 0 to 130568
+[   19.921266] loop7: detected capacity change from 0 to 130600
+[   19.927701] loop8: detected capacity change from 0 to 151328
+[   19.942171] loop9: detected capacity change from 0 to 337560
+[   19.953083] loop10: detected capacity change from 0 to 1056784
+[   19.959340] loop11: detected capacity change from 0 to 187776
+[   19.961021] loop12: detected capacity change from 0 to 246648
+[   19.965105] loop13: detected capacity change from 0 to 245520
+[   19.966924] Bluetooth: hci0: Intel BT fw patch 0x32 completed & activated
+[   19.974821] loop15: detected capacity change from 0 to 91024
+[   19.975098] loop14: detected capacity change from 0 to 104232
+[   20.071168] audit: type=1400 audit(1748109186.168:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="nvidia_modprobe" pid=705 comm="apparmor_parser"
+[   20.071173] audit: type=1400 audit(1748109186.168:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="nvidia_modprobe//kmod" pid=705 comm="apparmor_parser"
+[   20.071386] audit: type=1400 audit(1748109186.168:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="lsb_release" pid=704 comm="apparmor_parser"
+[   20.076900] audit: type=1400 audit(1748109186.176:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/x86_64-linux-gnu/lightdm/lightdm-guest-session" pid=703 comm="apparmor_parser"
+[   20.076906] audit: type=1400 audit(1748109186.176:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/x86_64-linux-gnu/lightdm/lightdm-guest-session//chromium" pid=703 comm="apparmor_parser"
+[   20.078188] audit: type=1400 audit(1748109186.176:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/man" pid=708 comm="apparmor_parser"
+[   20.078195] audit: type=1400 audit(1748109186.176:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="man_filter" pid=708 comm="apparmor_parser"
+[   20.078198] audit: type=1400 audit(1748109186.176:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="man_groff" pid=708 comm="apparmor_parser"
+[   20.083408] audit: type=1400 audit(1748109186.180:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/redshift" pid=710 comm="apparmor_parser"
+[   20.084875] audit: type=1400 audit(1748109186.184:11): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-client.action" pid=706 comm="apparmor_parser"
+[   20.694121] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[   20.694124] Bluetooth: BNEP filters: protocol multicast
+[   20.694128] Bluetooth: BNEP socket layer initialized
+[   20.703099] Bluetooth: MGMT ver 1.22
+[   20.720749] NET: Registered PF_ALG protocol family
+[   20.855594] NET: Registered PF_QIPCRTR protocol family
+[   20.878220] r8169 0000:02:00.1: firmware: direct-loading firmware rtl_nic/rtl8411-2.fw
+[   20.908427] Generic FE-GE Realtek PHY r8169-0-201:00: attached PHY driver (mii_bus:phy_addr=r8169-0-201:00, irq=MAC)
+[   21.112630] r8169 0000:02:00.1 enp2s0f1: Link is Down
+[   21.138202] iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM
+[   21.223820] iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM
+[   21.225583] iwlwifi 0000:03:00.0: FW already configured (0) - re-configuring
+[   21.280001] iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM
+[   21.365526] iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM
+[   21.366768] iwlwifi 0000:03:00.0: FW already configured (0) - re-configuring
+[   21.803568] loop16: detected capacity change from 0 to 8
+[   22.684139] Bluetooth: RFCOMM TTY layer initialized
+[   22.684163] Bluetooth: RFCOMM socket layer initialized
+[   22.684168] Bluetooth: RFCOMM ver 1.11
+[   24.753228] wlp3s0: authenticate with e4:c3:2a:8a:54:8a
+[   24.753240] wlp3s0: 80 MHz not supported, disabling VHT
+[   24.756080] wlp3s0: send auth to e4:c3:2a:8a:54:8a (try 1/3)
+[   24.762600] wlp3s0: authenticated
+[   24.764440] wlp3s0: associate with e4:c3:2a:8a:54:8a (try 1/3)
+[   24.801289] wlp3s0: RX AssocResp from e4:c3:2a:8a:54:8a (capab=0x411 status=0 aid=2)
+[   24.804294] wlp3s0: associated
+[   24.884701] IPv6: ADDRCONF(NETDEV_CHANGE): wlp3s0: link becomes ready
+[   88.551978] usb 1-8: USB disconnect, device number 5
+[   91.851571] usb 1-6: USB disconnect, device number 4
+[   92.180517] usb 1-6: new low-speed USB device number 6 using xhci_hcd
+[   92.332508] usb 1-6: New USB device found, idVendor=0000, idProduct=3825, bcdDevice= 1.00
+[   92.332534] usb 1-6: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+[   92.332541] usb 1-6: Product:  USB OPTICAL MOUSE
+[   92.335933] input:  USB OPTICAL MOUSE as /devices/pci0000:00/0000:00:14.0/usb1/1-6/1-6:1.0/0003:0000:3825.0002/input/input23
+[   92.337241] hid-generic 0003:0000:3825.0002: input,hidraw0: USB HID v1.11 Mouse [ USB OPTICAL MOUSE] on usb-0000:00:14.0-6/input0
+[   92.759748] usb 1-6: USB disconnect, device number 6
+[   93.084430] usb 1-6: new low-speed USB device number 7 using xhci_hcd
+[   93.235723] usb 1-6: New USB device found, idVendor=0000, idProduct=3825, bcdDevice= 1.00
+[   93.235739] usb 1-6: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+[   93.235747] usb 1-6: Product:  USB OPTICAL MOUSE
+[   93.238868] input:  USB OPTICAL MOUSE as /devices/pci0000:00/0000:00:14.0/usb1/1-6/1-6:1.0/0003:0000:3825.0003/input/input24
+[   93.239274] hid-generic 0003:0000:3825.0003: input,hidraw0: USB HID v1.11 Mouse [ USB OPTICAL MOUSE] on usb-0000:00:14.0-6/input0
+[   95.360519] usb 1-8: new high-speed USB device number 8 using xhci_hcd
+[   95.512616] usb 1-8: New USB device found, idVendor=18d1, idProduct=4ee8, bcdDevice= 4.19
+[   95.512634] usb 1-8: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   95.512641] usb 1-8: Product: OnePlus Nord
+[   95.512646] usb 1-8: Manufacturer: OnePlus
+[   95.512651] usb 1-8: SerialNumber: 6259eff1
+[  150.864494] usb 1-8: USB disconnect, device number 8
+[ 2888.945090] perf: interrupt took too long (2519 > 2500), lowering kernel.perf_event_max_sample_rate to 79250
+[ 3250.113938] perf: interrupt took too long (3159 > 3148), lowering kernel.perf_event_max_sample_rate to 63250
+[ 3669.739850] perf: interrupt took too long (3957 > 3948), lowering kernel.perf_event_max_sample_rate to 50500
+[ 4912.811554] perf: interrupt took too long (4947 > 4946), lowering kernel.perf_event_max_sample_rate to 40250
+[ 5309.476129] wlp3s0: Connection to AP e4:c3:2a:8a:54:8a lost
+[ 5310.734415] wlp3s0: authenticate with e4:c3:2a:8a:54:8a
+[ 5310.734435] wlp3s0: 80 MHz not supported, disabling VHT
+[ 5310.738073] wlp3s0: send auth to e4:c3:2a:8a:54:8a (try 1/3)
+[ 5310.744875] wlp3s0: authenticated
+[ 5310.748338] wlp3s0: associate with e4:c3:2a:8a:54:8a (try 1/3)
+[ 5310.912256] wlp3s0: associate with e4:c3:2a:8a:54:8a (try 2/3)
+[ 5311.019166] wlp3s0: associate with e4:c3:2a:8a:54:8a (try 3/3)
+[ 5311.220262] wlp3s0: association with e4:c3:2a:8a:54:8a timed out
+[ 5325.062155] wlp3s0: authenticate with e4:c3:2a:8a:54:8a
+[ 5325.062174] wlp3s0: 80 MHz not supported, disabling VHT
+[ 5325.066923] wlp3s0: send auth to e4:c3:2a:8a:54:8a (try 1/3)
+[ 5325.069614] wlp3s0: aborting authentication with e4:c3:2a:8a:54:8a by local choice (Reason: 3=DEAUTH_LEAVING)
+[ 5325.699461] wlp3s0: authenticate with e4:c3:2a:8a:54:8a
+[ 5325.699477] wlp3s0: 80 MHz not supported, disabling VHT
+[ 5325.701905] wlp3s0: send auth to e4:c3:2a:8a:54:8a (try 1/3)
+[ 5325.710395] wlp3s0: authenticated
+[ 5325.712340] wlp3s0: associate with e4:c3:2a:8a:54:8a (try 1/3)
+[ 5325.735322] wlp3s0: RX AssocResp from e4:c3:2a:8a:54:8a (capab=0x411 status=0 aid=2)
+[ 5325.738080] wlp3s0: associated
+[ 5325.804691] IPv6: ADDRCONF(NETDEV_CHANGE): wlp3s0: link becomes ready
+[ 5367.741434] wlp3s0: Connection to AP e4:c3:2a:8a:54:8a lost
+[ 5382.805897] wlp3s0: authenticate with e4:c3:2a:8a:54:8a
+[ 5382.805912] wlp3s0: 80 MHz not supported, disabling VHT
+[ 5382.808173] wlp3s0: send auth to e4:c3:2a:8a:54:8a (try 1/3)
+[ 5382.813515] wlp3s0: authenticated
+[ 5382.819622] wlp3s0: associate with e4:c3:2a:8a:54:8a (try 1/3)
+[ 5382.980367] wlp3s0: associate with e4:c3:2a:8a:54:8a (try 2/3)
+[ 5384.244470] wlp3s0: authenticate with e4:c3:2a:8a:54:8a
+[ 5384.244485] wlp3s0: 80 MHz not supported, disabling VHT
+[ 5384.246726] wlp3s0: send auth to e4:c3:2a:8a:54:8a (try 1/3)
+[ 5384.250961] wlp3s0: authenticated
+[ 5384.252327] wlp3s0: associate with e4:c3:2a:8a:54:8a (try 1/3)
+[ 5384.271344] wlp3s0: RX AssocResp from e4:c3:2a:8a:54:8a (capab=0x411 status=0 aid=2)
+[ 5384.285091] wlp3s0: associated
+[ 5385.316543] IPv6: ADDRCONF(NETDEV_CHANGE): wlp3s0: link becomes ready
+[ 5473.417251] wlp3s0: Connection to AP e4:c3:2a:8a:54:8a lost
+[ 5482.542861] wlp3s0: authenticate with e4:c3:2a:8a:54:8a
+[ 5482.542878] wlp3s0: 80 MHz not supported, disabling VHT
+[ 5482.547320] wlp3s0: send auth to e4:c3:2a:8a:54:8a (try 1/3)
+[ 5482.552361] wlp3s0: authenticated
+[ 5482.556359] wlp3s0: associate with e4:c3:2a:8a:54:8a (try 1/3)
+[ 5482.654905] wlp3s0: associate with e4:c3:2a:8a:54:8a (try 2/3)
+[ 5482.730002] wlp3s0: associate with e4:c3:2a:8a:54:8a (try 3/3)
+[ 5482.836245] wlp3s0: association with e4:c3:2a:8a:54:8a timed out
+[ 5484.350230] wlp3s0: authenticate with e4:c3:2a:8a:54:8a
+[ 5484.350246] wlp3s0: 80 MHz not supported, disabling VHT
+[ 5484.352489] wlp3s0: send auth to e4:c3:2a:8a:54:8a (try 1/3)
+[ 5484.360338] wlp3s0: authenticated
+[ 5484.364262] wlp3s0: associate with e4:c3:2a:8a:54:8a (try 1/3)
+[ 5484.480252] wlp3s0: associate with e4:c3:2a:8a:54:8a (try 2/3)
+[ 5484.495992] wlp3s0: RX AssocResp from e4:c3:2a:8a:54:8a (capab=0x411 status=0 aid=2)
+[ 5484.514746] wlp3s0: associated
+[ 5492.154870] wlp3s0: Connection to AP e4:c3:2a:8a:54:8a lost
+[ 5493.426411] wlp3s0: authenticate with e4:c3:2a:8a:54:8a
+[ 5493.426428] wlp3s0: 80 MHz not supported, disabling VHT
+[ 5493.430960] wlp3s0: send auth to e4:c3:2a:8a:54:8a (try 1/3)
+[ 5493.438425] wlp3s0: authenticated
+[ 5493.444263] wlp3s0: associate with e4:c3:2a:8a:54:8a (try 1/3)
+[ 5493.463378] wlp3s0: RX AssocResp from e4:c3:2a:8a:54:8a (capab=0x411 status=0 aid=2)
+[ 5493.466586] wlp3s0: associated
+[ 5537.620267] wlp3s0: Connection to AP e4:c3:2a:8a:54:8a lost
+[ 5545.086558] wlp3s0: authenticate with e4:c3:2a:8a:54:8a
+[ 5545.086580] wlp3s0: 80 MHz not supported, disabling VHT
+[ 5545.099636] wlp3s0: send auth to e4:c3:2a:8a:54:8a (try 1/3)
+[ 5545.112867] wlp3s0: authenticated
+[ 5545.116249] wlp3s0: associate with e4:c3:2a:8a:54:8a (try 1/3)
+[ 5545.236244] wlp3s0: associate with e4:c3:2a:8a:54:8a (try 2/3)
+[ 5545.416241] wlp3s0: associate with e4:c3:2a:8a:54:8a (try 3/3)
+[ 5545.438547] wlp3s0: RX AssocResp from e4:c3:2a:8a:54:8a (capab=0x411 status=0 aid=2)
+[ 5545.449756] wlp3s0: associated
+[ 5558.304453] wlp3s0: Connection to AP e4:c3:2a:8a:54:8a lost
+[ 5575.202651] wlp3s0: authenticate with 6c:61:f4:34:6f:be
+[ 5575.202666] wlp3s0: 80 MHz not supported, disabling VHT
+[ 5575.207430] wlp3s0: send auth to 6c:61:f4:34:6f:be (try 1/3)
+[ 5575.216495] wlp3s0: authenticated
+[ 5575.220259] wlp3s0: associate with 6c:61:f4:34:6f:be (try 1/3)
+[ 5575.224332] wlp3s0: RX AssocResp from 6c:61:f4:34:6f:be (capab=0x1411 status=0 aid=5)
+[ 5575.235883] wlp3s0: associated
+[ 5575.288543] IPv6: ADDRCONF(NETDEV_CHANGE): wlp3s0: link becomes ready
+[10100.678409] input: tel (AVRCP) as /devices/virtual/input/input25
+[10211.073325] input: tel (AVRCP) as /devices/virtual/input/input26
+[10453.098627] input: tel (AVRCP) as /devices/virtual/input/input27
+[10836.380176] usb 1-8: new high-speed USB device number 9 using xhci_hcd
+[10836.537852] usb 1-8: New USB device found, idVendor=18d1, idProduct=4ee8, bcdDevice= 6.01
+[10836.537866] usb 1-8: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[10836.537873] usb 1-8: Product: BLAIR-MTP_SN:C10A98C7
+[10836.537879] usb 1-8: Manufacturer: OnePlus
+[10836.537883] usb 1-8: SerialNumber: c10a98c7
+[10846.713606] wlp3s0: deauthenticating from 6c:61:f4:34:6f:be by local choice (Reason: 3=DEAUTH_LEAVING)
+[10850.079175] wlp3s0: authenticate with e4:c3:2a:8a:54:8a
+[10850.079203] wlp3s0: 80 MHz not supported, disabling VHT
+[10850.082676] wlp3s0: send auth to e4:c3:2a:8a:54:8a (try 1/3)
+[10850.087386] wlp3s0: authenticated
+[10850.092101] wlp3s0: associate with e4:c3:2a:8a:54:8a (try 1/3)
+[10850.110052] wlp3s0: RX AssocResp from e4:c3:2a:8a:54:8a (capab=0x411 status=0 aid=2)
+[10850.114610] wlp3s0: associated
+[10850.156556] IPv6: ADDRCONF(NETDEV_CHANGE): wlp3s0: link becomes ready
+[10974.816177] usb 1-9: new high-speed USB device number 10 using xhci_hcd
+[10974.979537] usb 1-9: New USB device found, idVendor=058f, idProduct=6387, bcdDevice= 1.ff
+[10974.979552] usb 1-9: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[10974.979559] usb 1-9: SerialNumber: 576A71F5
+[10975.008370] usb-storage 1-9:1.0: USB Mass Storage device detected
+[10975.008701] scsi host4: usb-storage 1-9:1.0
+[10975.008835] usbcore: registered new interface driver usb-storage
+[10975.012565] usbcore: registered new interface driver uas
+[10976.042334] scsi 4:0:0:0: Direct-Access              PHILIPS          8.07 PQ: 0 ANSI: 4
+[10976.042982] sd 4:0:0:0: Attached scsi generic sg2 type 0
+[10976.046339] sd 4:0:0:0: [sdb] 61440000 512-byte logical blocks: (31.5 GB/29.3 GiB)
+[10976.047098] sd 4:0:0:0: [sdb] Write Protect is off
+[10976.047108] sd 4:0:0:0: [sdb] Mode Sense: 23 00 00 00
+[10976.047885] sd 4:0:0:0: [sdb] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+[10976.084891]  sdb: sdb1
+[10976.085120] sd 4:0:0:0: [sdb] Attached SCSI removable disk
+[10976.612090] FAT-fs (sdb1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+[11568.340815] usb 1-8: USB disconnect, device number 9
+[12769.412638] wlp3s0: Connection to AP e4:c3:2a:8a:54:8a lost
+[12770.768420] wlp3s0: authenticate with e4:c3:2a:8a:54:8a
+[12770.768432] wlp3s0: 80 MHz not supported, disabling VHT
+[12770.770675] wlp3s0: send auth to e4:c3:2a:8a:54:8a (try 1/3)
+[12770.876103] wlp3s0: send auth to e4:c3:2a:8a:54:8a (try 2/3)
+[12770.879725] wlp3s0: authenticated
+[12770.884092] wlp3s0: associate with e4:c3:2a:8a:54:8a (try 1/3)
+[12770.921977] wlp3s0: RX AssocResp from e4:c3:2a:8a:54:8a (capab=0x411 status=0 aid=2)
+[12770.925329] wlp3s0: associated
+[12771.385051] iwlwifi 0000:03:00.0: No beacon heard and the time event is over already...
+[12771.385137] wlp3s0: Connection to AP e4:c3:2a:8a:54:8a lost
+[12772.628737] wlp3s0: authenticate with e4:c3:2a:8a:54:8a
+[12772.628764] wlp3s0: 80 MHz not supported, disabling VHT
+[12772.631404] wlp3s0: send auth to e4:c3:2a:8a:54:8a (try 1/3)
+[12772.635253] wlp3s0: authenticated
+[12772.640018] wlp3s0: associate with e4:c3:2a:8a:54:8a (try 1/3)
+[12772.685543] wlp3s0: RX AssocResp from e4:c3:2a:8a:54:8a (capab=0x411 status=0 aid=2)
+[12772.688980] wlp3s0: associated
+[12773.245710] iwlwifi 0000:03:00.0: No beacon heard and the time event is over already...
+[12773.245781] wlp3s0: Connection to AP e4:c3:2a:8a:54:8a lost
+[12782.312172] wlp3s0: authenticate with e4:c3:2a:8a:54:8a
+[12782.312199] wlp3s0: 80 MHz not supported, disabling VHT
+[12782.315534] wlp3s0: send auth to e4:c3:2a:8a:54:8a (try 1/3)
+[12782.326482] wlp3s0: authenticated
+[12782.328052] wlp3s0: associate with e4:c3:2a:8a:54:8a (try 1/3)
+[12782.365988] wlp3s0: RX AssocResp from e4:c3:2a:8a:54:8a (capab=0x411 status=0 aid=2)
+[12782.369605] wlp3s0: associated
+[13018.415192] i915 0000:00:02.0: [drm] *ERROR* CPU pipe A FIFO underrun
+[14839.865735] kauditd_printk_skb: 33 callbacks suppressed
+[14839.865742] audit: type=1400 audit(1748124005.964:45): apparmor="DENIED" operation="capable" profile="/usr/sbin/cupsd" pid=5054 comm="cupsd" capability=12  capname="net_admin"
+[55671.424157] sdb: detected capacity change from 61440000 to 0
+[55680.045194] usb 1-9: USB disconnect, device number 10
+[58736.043659] psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 5 bytes away.
+[58895.842183] i915 0000:00:02.0: [drm] *ERROR* CPU pipe A FIFO underrun
+[78103.086259] wlp3s0: deauthenticating from e4:c3:2a:8a:54:8a by local choice (Reason: 3=DEAUTH_LEAVING)
+[78106.797689] wlp3s0: authenticate with e4:c3:2a:8a:54:8a
+[78106.797708] wlp3s0: 80 MHz not supported, disabling VHT
+[78106.800316] wlp3s0: send auth to e4:c3:2a:8a:54:8a (try 1/3)
+[78106.805859] wlp3s0: authenticated
+[78106.810036] wlp3s0: associate with e4:c3:2a:8a:54:8a (try 1/3)
+[78106.828421] wlp3s0: RX AssocResp from e4:c3:2a:8a:54:8a (capab=0x411 status=0 aid=2)
+[78106.832716] wlp3s0: associated
+[78106.882291] IPv6: ADDRCONF(NETDEV_CHANGE): wlp3s0: link becomes ready
+[78108.474108] wlp3s0: deauthenticating from e4:c3:2a:8a:54:8a by local choice (Reason: 3=DEAUTH_LEAVING)
+[78108.766796] wlp3s0: authenticate with 6c:61:f4:34:6f:be
+[78108.766812] wlp3s0: 80 MHz not supported, disabling VHT
+[78108.769290] wlp3s0: send auth to 6c:61:f4:34:6f:be (try 1/3)
+[78108.772660] wlp3s0: authenticated
+[78108.774333] wlp3s0: associate with 6c:61:f4:34:6f:be (try 1/3)
+[78108.779774] wlp3s0: RX AssocResp from 6c:61:f4:34:6f:be (capab=0x1411 status=0 aid=5)
+[78108.783818] wlp3s0: associated
+[78108.846901] IPv6: ADDRCONF(NETDEV_CHANGE): wlp3s0: link becomes ready
+[78175.143112] psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 4 bytes away.
+[78336.037635] wlp3s0: deauthenticating from 6c:61:f4:34:6f:be by local choice (Reason: 3=DEAUTH_LEAVING)
+[78337.326725] wlp3s0: authenticate with e4:c3:2a:8a:54:8a
+[78337.326737] wlp3s0: 80 MHz not supported, disabling VHT
+[78337.329020] wlp3s0: send auth to e4:c3:2a:8a:54:8a (try 1/3)
+[78337.333324] wlp3s0: authenticated
+[78337.333978] wlp3s0: associate with e4:c3:2a:8a:54:8a (try 1/3)
+[78337.348091] wlp3s0: RX AssocResp from e4:c3:2a:8a:54:8a (capab=0x411 status=0 aid=2)
+[78337.349543] wlp3s0: associated
+[78337.398518] IPv6: ADDRCONF(NETDEV_CHANGE): wlp3s0: link becomes ready
+[78423.760987] psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 4 bytes away.
+[78423.964080] i915 0000:00:02.0: [drm] *ERROR* CPU pipe A FIFO underrun
+[78935.906058] usb 1-9: new high-speed USB device number 11 using xhci_hcd
+[78936.057058] usb 1-9: New USB device found, idVendor=346d, idProduct=5678, bcdDevice= 2.00
+[78936.057073] usb 1-9: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[78936.057080] usb 1-9: Product: Disk 2.0
+[78936.057085] usb 1-9: Manufacturer: USB
+[78936.057090] usb 1-9: SerialNumber: 4173601206937646442
+[78936.058609] usb-storage 1-9:1.0: USB Mass Storage device detected
+[78936.059217] scsi host4: usb-storage 1-9:1.0
+[78937.062736] scsi 4:0:0:0: Direct-Access     VendorCo ProductCode      2.00 PQ: 0 ANSI: 4
+[78937.063342] sd 4:0:0:0: Attached scsi generic sg2 type 0
+[78937.065347] sd 4:0:0:0: [sdb] 245760000 512-byte logical blocks: (126 GB/117 GiB)
+[78937.065538] sd 4:0:0:0: [sdb] Write Protect is off
+[78937.065545] sd 4:0:0:0: [sdb] Mode Sense: 03 00 00 00
+[78937.065676] sd 4:0:0:0: [sdb] No Caching mode page found
+[78937.065681] sd 4:0:0:0: [sdb] Assuming drive cache: write through
+[78937.077804]  sdb: sdb1
+[78937.077985] sd 4:0:0:0: [sdb] Attached SCSI removable disk
+[78937.496703] FAT-fs (sdb1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+[78962.993917] wlp3s0: deauthenticated from e4:c3:2a:8a:54:8a (Reason: 1=UNSPECIFIED)
+[78966.398092] wlp3s0: authenticate with e4:c3:2a:8a:54:8a
+[78966.398103] wlp3s0: 80 MHz not supported, disabling VHT
+[78966.400873] wlp3s0: send auth to e4:c3:2a:8a:54:8a (try 1/3)
+[78966.404624] wlp3s0: authenticated
+[78966.405968] wlp3s0: associate with e4:c3:2a:8a:54:8a (try 1/3)
+[78966.425201] wlp3s0: RX AssocResp from e4:c3:2a:8a:54:8a (capab=0x411 status=0 aid=2)
+[78966.430738] wlp3s0: associated
+[86598.606687] psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 4 bytes away.
+[88467.829798] wlp3s0: deauthenticating from e4:c3:2a:8a:54:8a by local choice (Reason: 3=DEAUTH_LEAVING)
+[88475.614774] wlp3s0: authenticate with 6c:61:f4:34:6f:be
+[88475.614787] wlp3s0: 80 MHz not supported, disabling VHT
+[88475.617031] wlp3s0: send auth to 6c:61:f4:34:6f:be (try 1/3)
+[88475.619694] wlp3s0: authenticated
+[88475.621703] wlp3s0: associate with 6c:61:f4:34:6f:be (try 1/3)
+[88475.625451] wlp3s0: RX AssocResp from 6c:61:f4:34:6f:be (capab=0x1411 status=0 aid=1)
+[88475.637085] wlp3s0: associated
+[88475.709941] IPv6: ADDRCONF(NETDEV_CHANGE): wlp3s0: link becomes ready
+[91839.690246] perf: interrupt took too long (6200 > 6183), lowering kernel.perf_event_max_sample_rate to 32250
+[91951.700751] i915 0000:00:02.0: [drm] *ERROR* CPU pipe A FIFO underrun
+[93818.124421] psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 5 bytes away.
+[94285.190529] psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 4 bytes away.
+[95101.331057] psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 4 bytes away.
+[95143.039096] wlp3s0: deauthenticating from 6c:61:f4:34:6f:be by local choice (Reason: 3=DEAUTH_LEAVING)
+[137829.808199] i915 0000:00:02.0: [drm] *ERROR* CPU pipe A FIFO underrun
+[139560.370030] iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM
+[139560.449214] iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM
+[139560.450671] iwlwifi 0000:03:00.0: FW already configured (0) - re-configuring
+[139564.059291] wlp3s0: authenticate with 6c:61:f4:34:6f:be
+[139564.059306] wlp3s0: 80 MHz not supported, disabling VHT
+[139564.061692] wlp3s0: send auth to 6c:61:f4:34:6f:be (try 1/3)
+[139564.066772] wlp3s0: authenticated
+[139564.068198] wlp3s0: associate with 6c:61:f4:34:6f:be (try 1/3)
+[139564.071969] wlp3s0: RX AssocResp from 6c:61:f4:34:6f:be (capab=0x1411 status=0 aid=7)
+[139564.073649] wlp3s0: associated
+[139564.124546] IPv6: ADDRCONF(NETDEV_CHANGE): wlp3s0: link becomes ready
+[141615.333049] wlp3s0: deauthenticating from 6c:61:f4:34:6f:be by local choice (Reason: 3=DEAUTH_LEAVING)
+[141978.696222] INFO: task kworker/u8:3:13608 blocked for more than 120 seconds.
+[141978.696241]       Tainted: G          I        6.1.0-34-amd64 #1 Debian 6.1.135-1
+[141978.696249] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[141978.696254] task:kworker/u8:3    state:D stack:0     pid:13608 ppid:2      flags:0x00004000
+[141978.696271] Workqueue: writeback wb_workfn (flush-8:16)
+[141978.696293] Call Trace:
+[141978.696297]  <TASK>
+[141978.696307]  __schedule+0x34d/0x9e0
+[141978.696329]  schedule+0x5a/0xd0
+[141978.696339]  io_schedule+0x42/0x70
+[141978.696350]  folio_wait_bit_common+0x13d/0x350
+[141978.696367]  ? filemap_alloc_folio+0x100/0x100
+[141978.696379]  write_cache_pages+0x1dc/0x4c0
+[141978.696387]  ? mpage_read_folio+0xa0/0xa0
+[141978.696410]  mpage_writepages+0x83/0xe0
+[141978.696426]  ? fat_add_cluster+0x90/0x90 [fat]
+[141978.696457]  do_writepages+0xbd/0x1c0
+[141978.696469]  __writeback_single_inode+0x3d/0x360
+[141978.696482]  writeback_sb_inodes+0x1f5/0x4d0
+[141978.696501]  __writeback_inodes_wb+0x4c/0xf0
+[141978.696512]  wb_writeback+0x204/0x2f0
+[141978.696525]  wb_workfn+0x350/0x4f0
+[141978.696541]  process_one_work+0x1c4/0x380
+[141978.696552]  worker_thread+0x4d/0x380
+[141978.696560]  ? rescuer_thread+0x3a0/0x3a0
+[141978.696566]  kthread+0xd7/0x100
+[141978.696579]  ? kthread_complete_and_exit+0x20/0x20
+[141978.696591]  ret_from_fork+0x1f/0x30
+[141978.696632]  </TASK>
+[149469.698267] perf: interrupt took too long (7753 > 7750), lowering kernel.perf_event_max_sample_rate to 25750
+[150924.527539] psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 4 bytes away.
+[151703.856078] iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM
+[151703.933767] iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM
+[151703.935097] iwlwifi 0000:03:00.0: FW already configured (0) - re-configuring
+[151707.528993] wlp3s0: authenticate with 6c:61:f4:34:6f:be
+[151707.529022] wlp3s0: 80 MHz not supported, disabling VHT
+[151707.531336] wlp3s0: send auth to 6c:61:f4:34:6f:be (try 1/3)
+[151707.533448] wlp3s0: authenticated
+[151707.535704] wlp3s0: associate with 6c:61:f4:34:6f:be (try 1/3)
+[151707.541441] wlp3s0: RX AssocResp from 6c:61:f4:34:6f:be (capab=0x1411 status=0 aid=9)
+[151707.542226] wlp3s0: associated
+[151707.596139] IPv6: ADDRCONF(NETDEV_CHANGE): wlp3s0: link becomes ready
+[152124.335893] i915 0000:00:02.0: [drm] *ERROR* CPU pipe A FIFO underrun
+[155322.895988] wlp3s0: deauthenticating from 6c:61:f4:34:6f:be by local choice (Reason: 3=DEAUTH_LEAVING)
+[158965.329984] iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM
+[158965.408099] iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM
+[158965.409479] iwlwifi 0000:03:00.0: FW already configured (0) - re-configuring
+[158969.053415] wlp3s0: authenticate with 6c:61:f4:34:6f:be
+[158969.053431] wlp3s0: 80 MHz not supported, disabling VHT
+[158969.055816] wlp3s0: send auth to 6c:61:f4:34:6f:be (try 1/3)
+[158969.059322] wlp3s0: authenticated
+[158969.063528] wlp3s0: associate with 6c:61:f4:34:6f:be (try 1/3)
+[158969.067317] wlp3s0: RX AssocResp from 6c:61:f4:34:6f:be (capab=0x1411 status=0 aid=3)
+[158969.068171] wlp3s0: associated
+[158969.116378] IPv6: ADDRCONF(NETDEV_CHANGE): wlp3s0: link becomes ready
+[159391.426674] psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 4 bytes away.
+[160828.711382] loop16: detected capacity change from 0 to 130592
+[160943.959343] wlp3s0: deauthenticating from 6c:61:f4:34:6f:be by local choice (Reason: 3=DEAUTH_LEAVING)
+[162107.763778] usb 1-6: reset low-speed USB device number 7 using xhci_hcd
+[162211.619695] usb 1-9: reset high-speed USB device number 11 using xhci_hcd
+[162212.587923] usb 1-9: USB disconnect, device number 11
+[162212.611469] device offline error, dev sdb, sector 44387448 op 0x1:(WRITE) flags 0x4800 phys_seg 30 prio class 2
+[162212.611530] device offline error, dev sdb, sector 2056 op 0x0:(READ) flags 0x80700 phys_seg 1 prio class 2
+[162212.611570] device offline error, dev sdb, sector 43250352 op 0x1:(WRITE) flags 0x104000 phys_seg 30 prio class 2
+[162212.611627] device offline error, dev sdb, sector 44387688 op 0x1:(WRITE) flags 0x4800 phys_seg 29 prio class 2
+[162212.611664] device offline error, dev sdb, sector 43250592 op 0x1:(WRITE) flags 0x104000 phys_seg 30 prio class 2
+[162212.611698] device offline error, dev sdb, sector 2056 op 0x0:(READ) flags 0x0 phys_seg 2 prio class 2
+[162212.611709] Buffer I/O error on dev sdb1, logical block 8, async page read
+[162212.611719] Buffer I/O error on dev sdb1, logical block 9, async page read
+[162212.611732] device offline error, dev sdb, sector 44387928 op 0x1:(WRITE) flags 0x4800 phys_seg 29 prio class 2
+[162212.611769] device offline error, dev sdb, sector 2058 op 0x0:(READ) flags 0x0 phys_seg 1 prio class 2
+[162212.611779] Buffer I/O error on dev sdb1, logical block 10, async page read
+[162212.611791] device offline error, dev sdb, sector 43250832 op 0x1:(WRITE) flags 0x104000 phys_seg 30 prio class 2
+[162212.611822] device offline error, dev sdb, sector 2059 op 0x0:(READ) flags 0x0 phys_seg 1 prio class 2
+[162212.611834] Buffer I/O error on dev sdb1, logical block 11, async page read
+[162212.611846] Buffer I/O error on dev sdb1, logical block 12, async page read
+[162212.611898] Buffer I/O error on dev sdb1, logical block 13, async page read
+[162212.611935] Buffer I/O error on dev sdb1, logical block 14, async page read
+[162212.611969] Buffer I/O error on dev sdb1, logical block 15, async page read
+[162212.892430] Buffer I/O error on dev sdb1, logical block 1, lost async page write
+[162212.892462] Buffer I/O error on dev sdb1, logical block 35994304, lost async page write
+[162497.821136] psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 4 bytes away.
+[163164.381469] psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 4 bytes away.
+[163304.975838] iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM
+[163305.053839] iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM
+[163305.055172] iwlwifi 0000:03:00.0: FW already configured (0) - re-configuring
+[163308.668741] wlp3s0: authenticate with 6c:61:f4:34:6f:be
+[163308.668756] wlp3s0: 80 MHz not supported, disabling VHT
+[163308.671238] wlp3s0: send auth to 6c:61:f4:34:6f:be (try 1/3)
+[163308.675044] wlp3s0: authenticated
+[163308.675334] wlp3s0: associate with 6c:61:f4:34:6f:be (try 1/3)
+[163308.681913] wlp3s0: RX AssocResp from 6c:61:f4:34:6f:be (capab=0x1411 status=0 aid=3)
+[163308.689384] wlp3s0: associated
+[163308.743621] IPv6: ADDRCONF(NETDEV_CHANGE): wlp3s0: link becomes ready
+[163849.501758] psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 4 bytes away.
+[163879.466908] psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 4 bytes away.
+[163967.277496] psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 4 bytes away.
+[164037.591988] psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 4 bytes away.
+[175692.560566] psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 4 bytes away.
+[175918.862141] psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 5 bytes away.
+[176033.346297] wlp3s0: Connection to AP 6c:61:f4:34:6f:be lost
+[176034.645778] wlp3s0: authenticate with 6c:61:f4:34:6f:be
+[176034.645804] wlp3s0: 80 MHz not supported, disabling VHT
+[176034.649974] wlp3s0: send auth to 6c:61:f4:34:6f:be (try 1/3)
+[176034.655890] wlp3s0: authenticated
+[176034.658964] wlp3s0: associate with 6c:61:f4:34:6f:be (try 1/3)
+[176034.674876] wlp3s0: RX AssocResp from 6c:61:f4:34:6f:be (capab=0x1411 status=0 aid=3)
+[176034.680488] wlp3s0: associated
+[176034.782885] wlp3s0: Connection to AP 6c:61:f4:34:6f:be lost
+[176035.941253] wlp3s0: authenticate with 6c:61:f4:34:6f:be
+[176035.941264] wlp3s0: 80 MHz not supported, disabling VHT
+[176035.943638] wlp3s0: send auth to 6c:61:f4:34:6f:be (try 1/3)
+[176035.946573] wlp3s0: authenticated
+[176035.946936] wlp3s0: associate with 6c:61:f4:34:6f:be (try 1/3)
+[176035.950687] wlp3s0: RX AssocResp from 6c:61:f4:34:6f:be (capab=0x1411 status=0 aid=3)
+[176035.955985] wlp3s0: associated
+[176353.569821] i915 0000:00:02.0: [drm] *ERROR* CPU pipe A FIFO underrun
+[177745.289347] psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 4 bytes away.
+[177854.160152] psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 4 bytes away.
+[178615.000132] wlp3s0: deauthenticating from 6c:61:f4:34:6f:be by local choice (Reason: 3=DEAUTH_LEAVING)
+[187639.936068] audit: type=1400 audit(1748296806.041:46): apparmor="DENIED" operation="capable" profile="/usr/sbin/cupsd" pid=34885 comm="cupsd" capability=12  capname="net_admin"
+[226316.099272] iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM
+[226316.179385] iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM
+[226316.180710] iwlwifi 0000:03:00.0: FW already configured (0) - re-configuring
+[226319.830344] wlp3s0: authenticate with 6c:61:f4:34:6f:be
+[226319.830356] wlp3s0: 80 MHz not supported, disabling VHT
+[226319.832837] wlp3s0: send auth to 6c:61:f4:34:6f:be (try 1/3)
+[226319.834951] wlp3s0: authenticated
+[226319.837698] wlp3s0: associate with 6c:61:f4:34:6f:be (try 1/3)
+[226319.841731] wlp3s0: RX AssocResp from 6c:61:f4:34:6f:be (capab=0x1411 status=0 aid=5)
+[226319.852863] wlp3s0: associated
+[226319.905583] IPv6: ADDRCONF(NETDEV_CHANGE): wlp3s0: link becomes ready
+[228680.770381] wlp3s0: deauthenticating from 6c:61:f4:34:6f:be by local choice (Reason: 3=DEAUTH_LEAVING)
+[245454.273368] psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 4 bytes away.
+[245608.152870] iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM
+[245608.231595] iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM
+[245608.232935] iwlwifi 0000:03:00.0: FW already configured (0) - re-configuring
+[245611.877960] wlp3s0: authenticate with 6c:61:f4:34:6f:be
+[245611.877972] wlp3s0: 80 MHz not supported, disabling VHT
+[245611.880483] wlp3s0: send auth to 6c:61:f4:34:6f:be (try 1/3)
+[245611.884406] wlp3s0: authenticated
+[245611.884774] wlp3s0: associate with 6c:61:f4:34:6f:be (try 1/3)
+[245611.888520] wlp3s0: RX AssocResp from 6c:61:f4:34:6f:be (capab=0x1411 status=0 aid=5)
+[245611.890173] wlp3s0: associated
+[245611.953176] IPv6: ADDRCONF(NETDEV_CHANGE): wlp3s0: link becomes ready
+[247072.108826] usb 1-9: new high-speed USB device number 12 using xhci_hcd
+[247072.259343] usb 1-9: New USB device found, idVendor=346d, idProduct=5678, bcdDevice= 2.00
+[247072.259358] usb 1-9: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[247072.259365] usb 1-9: Product: Disk 2.0
+[247072.259370] usb 1-9: Manufacturer: USB
+[247072.259375] usb 1-9: SerialNumber: 4173601206937646442
+[247072.266658] usb-storage 1-9:1.0: USB Mass Storage device detected
+[247072.267055] scsi host4: usb-storage 1-9:1.0
+[247073.281865] scsi 4:0:0:0: Direct-Access     VendorCo ProductCode      2.00 PQ: 0 ANSI: 4
+[247073.282529] sd 4:0:0:0: Attached scsi generic sg2 type 0
+[247073.284363] sd 4:0:0:0: [sdb] 245760000 512-byte logical blocks: (126 GB/117 GiB)
+[247073.284510] sd 4:0:0:0: [sdb] Write Protect is off
+[247073.284517] sd 4:0:0:0: [sdb] Mode Sense: 03 00 00 00
+[247073.284645] sd 4:0:0:0: [sdb] No Caching mode page found
+[247073.284650] sd 4:0:0:0: [sdb] Assuming drive cache: write through
+[247073.297484]  sdb: sdb1
+[247073.297770] sd 4:0:0:0: [sdb] Attached SCSI removable disk
+[247073.548469] FAT-fs (sdb1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+[247754.518389] wlp3s0: deauthenticating from 6c:61:f4:34:6f:be by local choice (Reason: 3=DEAUTH_LEAVING)
+[247761.951672] i915 0000:00:02.0: [drm] *ERROR* CPU pipe A FIFO underrun
+[248119.211567] iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM
+[248119.290531] iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM
+[248119.291763] iwlwifi 0000:03:00.0: FW already configured (0) - re-configuring
+[248123.057599] wlp3s0: authenticate with 6c:61:f4:34:6f:be
+[248123.057614] wlp3s0: 80 MHz not supported, disabling VHT
+[248123.059933] wlp3s0: send auth to 6c:61:f4:34:6f:be (try 1/3)
+[248123.062020] wlp3s0: authenticated
+[248123.064967] wlp3s0: associate with 6c:61:f4:34:6f:be (try 1/3)
+[248123.068772] wlp3s0: RX AssocResp from 6c:61:f4:34:6f:be (capab=0x1411 status=0 aid=5)
+[248123.070184] wlp3s0: associated
+[248123.136939] IPv6: ADDRCONF(NETDEV_CHANGE): wlp3s0: link becomes ready
+[249881.664742] INFO: task kcompactd0:44 blocked for more than 120 seconds.
+[249881.664758]       Tainted: G          I        6.1.0-34-amd64 #1 Debian 6.1.135-1
+[249881.664766] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[249881.664770] task:kcompactd0      state:D stack:0     pid:44    ppid:2      flags:0x00004000
+[249881.664783] Call Trace:
+[249881.664787]  <TASK>
+[249881.664797]  __schedule+0x34d/0x9e0
+[249881.664818]  schedule+0x5a/0xd0
+[249881.664829]  io_schedule+0x42/0x70
+[249881.664839]  folio_wait_bit_common+0x13d/0x350
+[249881.664855]  ? filemap_alloc_folio+0x100/0x100
+[249881.664867]  migrate_pages_batch+0x651/0xb90
+[249881.664876]  ? isolate_freepages_block+0x410/0x410
+[249881.664884]  ? release_freepages+0xc0/0xc0
+[249881.664894]  ? filemap_migrate_folio+0xb0/0xb0
+[249881.664903]  migrate_pages+0x9cd/0xa90
+[249881.664911]  ? isolate_freepages_block+0x410/0x410
+[249881.664916]  ? release_freepages+0xc0/0xc0
+[249881.664934]  compact_zone+0x97e/0xdb0
+[249881.664946]  ? __switch_to_asm+0x3a/0x60
+[249881.664960]  proactive_compact_node+0x87/0xc0
+[249881.664975]  kcompactd+0x34c/0x420
+[249881.664983]  ? cpuusage_read+0x10/0x10
+[249881.664995]  ? kcompactd_do_work+0x2a0/0x2a0
+[249881.665002]  kthread+0xd7/0x100
+[249881.665012]  ? kthread_complete_and_exit+0x20/0x20
+[249881.665024]  ret_from_fork+0x1f/0x30
+[249881.665041]  </TASK>
+[249881.665141] INFO: task kworker/u8:2:35822 blocked for more than 120 seconds.
+[249881.665149]       Tainted: G          I        6.1.0-34-amd64 #1 Debian 6.1.135-1
+[249881.665155] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[249881.665159] task:kworker/u8:2    state:D stack:0     pid:35822 ppid:2      flags:0x00004000
+[249881.665170] Workqueue: writeback wb_workfn (flush-8:16)
+[249881.665185] Call Trace:
+[249881.665188]  <TASK>
+[249881.665193]  __schedule+0x34d/0x9e0
+[249881.665211]  schedule+0x5a/0xd0
+[249881.665222]  io_schedule+0x42/0x70
+[249881.665233]  folio_wait_bit_common+0x13d/0x350
+[249881.665246]  ? filemap_alloc_folio+0x100/0x100
+[249881.665258]  write_cache_pages+0x1dc/0x4c0
+[249881.665265]  ? mpage_read_folio+0xa0/0xa0
+[249881.665286]  mpage_writepages+0x83/0xe0
+[249881.665299]  ? fat_add_cluster+0x90/0x90 [fat]
+[249881.665328]  do_writepages+0xbd/0x1c0
+[249881.665339]  ? xts_crypt+0x123/0x340 [aesni_intel]
+[249881.665377]  __writeback_single_inode+0x3d/0x360
+[249881.665389]  writeback_sb_inodes+0x1f5/0x4d0
+[249881.665400]  ? __blk_flush_plug+0xf1/0x150
+[249881.665417]  __writeback_inodes_wb+0x4c/0xf0
+[249881.665429]  wb_writeback+0x204/0x2f0
+[249881.665442]  wb_workfn+0x350/0x4f0
+[249881.665457]  process_one_work+0x1c4/0x380
+[249881.665467]  worker_thread+0x4d/0x380
+[249881.665475]  ? rescuer_thread+0x3a0/0x3a0
+[249881.665480]  kthread+0xd7/0x100
+[249881.665489]  ? kthread_complete_and_exit+0x20/0x20
+[249881.665501]  ret_from_fork+0x1f/0x30
+[249881.665518]  </TASK>
+[250485.824636] INFO: task kcompactd0:44 blocked for more than 120 seconds.
+[250485.824652]       Tainted: G          I        6.1.0-34-amd64 #1 Debian 6.1.135-1
+[250485.824660] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[250485.824664] task:kcompactd0      state:D stack:0     pid:44    ppid:2      flags:0x00004000
+[250485.824677] Call Trace:
+[250485.824682]  <TASK>
+[250485.824690]  __schedule+0x34d/0x9e0
+[250485.824712]  schedule+0x5a/0xd0
+[250485.824723]  io_schedule+0x42/0x70
+[250485.824733]  folio_wait_bit_common+0x13d/0x350
+[250485.824749]  ? filemap_alloc_folio+0x100/0x100
+[250485.824761]  migrate_pages_batch+0x651/0xb90
+[250485.824771]  ? isolate_freepages_block+0x410/0x410
+[250485.824779]  ? release_freepages+0xc0/0xc0
+[250485.824789]  ? check_preempt_wakeup+0x17b/0x2c0
+[250485.824800]  migrate_pages+0x9cd/0xa90
+[250485.824808]  ? isolate_freepages_block+0x410/0x410
+[250485.824813]  ? release_freepages+0xc0/0xc0
+[250485.824831]  compact_zone+0x97e/0xdb0
+[250485.824844]  ? __switch_to_asm+0x3a/0x60
+[250485.824857]  proactive_compact_node+0x87/0xc0
+[250485.824872]  kcompactd+0x34c/0x420
+[250485.824880]  ? cpuusage_read+0x10/0x10
+[250485.824892]  ? kcompactd_do_work+0x2a0/0x2a0
+[250485.824899]  kthread+0xd7/0x100
+[250485.824910]  ? kthread_complete_and_exit+0x20/0x20
+[250485.824922]  ret_from_fork+0x1f/0x30
+[250485.824940]  </TASK>
+[250606.656707] INFO: task kcompactd0:44 blocked for more than 241 seconds.
+[250606.656723]       Tainted: G          I        6.1.0-34-amd64 #1 Debian 6.1.135-1
+[250606.656730] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[250606.656735] task:kcompactd0      state:D stack:0     pid:44    ppid:2      flags:0x00004000
+[250606.656748] Call Trace:
+[250606.656752]  <TASK>
+[250606.656760]  __schedule+0x34d/0x9e0
+[250606.656781]  schedule+0x5a/0xd0
+[250606.656792]  io_schedule+0x42/0x70
+[250606.656803]  folio_wait_bit_common+0x13d/0x350
+[250606.656818]  ? filemap_alloc_folio+0x100/0x100
+[250606.656831]  migrate_pages_batch+0x651/0xb90
+[250606.656840]  ? isolate_freepages_block+0x410/0x410
+[250606.656848]  ? release_freepages+0xc0/0xc0
+[250606.656859]  ? check_preempt_wakeup+0x17b/0x2c0
+[250606.656869]  migrate_pages+0x9cd/0xa90
+[250606.656877]  ? isolate_freepages_block+0x410/0x410
+[250606.656883]  ? release_freepages+0xc0/0xc0
+[250606.656900]  compact_zone+0x97e/0xdb0
+[250606.656913]  ? __switch_to_asm+0x3a/0x60
+[250606.656926]  proactive_compact_node+0x87/0xc0
+[250606.656941]  kcompactd+0x34c/0x420
+[250606.656949]  ? cpuusage_read+0x10/0x10
+[250606.656960]  ? kcompactd_do_work+0x2a0/0x2a0
+[250606.656967]  kthread+0xd7/0x100
+[250606.656977]  ? kthread_complete_and_exit+0x20/0x20
+[250606.656989]  ret_from_fork+0x1f/0x30
+[250606.657006]  </TASK>
+[250606.657104] INFO: task kworker/u8:2:35822 blocked for more than 120 seconds.
+[250606.657112]       Tainted: G          I        6.1.0-34-amd64 #1 Debian 6.1.135-1
+[250606.657126] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[250606.657130] task:kworker/u8:2    state:D stack:0     pid:35822 ppid:2      flags:0x00004000
+[250606.657142] Workqueue: writeback wb_workfn (flush-8:16)
+[250606.657156] Call Trace:
+[250606.657159]  <TASK>
+[250606.657165]  __schedule+0x34d/0x9e0
+[250606.657179]  schedule+0x5a/0xd0
+[250606.657189]  io_schedule+0x42/0x70
+[250606.657199]  folio_wait_bit_common+0x13d/0x350
+[250606.657213]  ? filemap_alloc_folio+0x100/0x100
+[250606.657224]  write_cache_pages+0x1dc/0x4c0
+[250606.657232]  ? mpage_read_folio+0xa0/0xa0
+[250606.657253]  mpage_writepages+0x83/0xe0
+[250606.657267]  ? fat_add_cluster+0x90/0x90 [fat]
+[250606.657299]  do_writepages+0xbd/0x1c0
+[250606.657309]  ? xts_crypt+0x123/0x340 [aesni_intel]
+[250606.657349]  __writeback_single_inode+0x3d/0x360
+[250606.657362]  writeback_sb_inodes+0x1f5/0x4d0
+[250606.657381]  __writeback_inodes_wb+0x4c/0xf0
+[250606.657395]  wb_writeback+0x204/0x2f0
+[250606.657408]  wb_workfn+0x350/0x4f0
+[250606.657425]  process_one_work+0x1c4/0x380
+[250606.657435]  worker_thread+0x4d/0x380
+[250606.657443]  ? rescuer_thread+0x3a0/0x3a0
+[250606.657449]  kthread+0xd7/0x100
+[250606.657460]  ? kthread_complete_and_exit+0x20/0x20
+[250606.657472]  ret_from_fork+0x1f/0x30
+[250606.657490]  </TASK>
+[250727.488709] INFO: task kcompactd0:44 blocked for more than 362 seconds.
+[250727.488724]       Tainted: G          I        6.1.0-34-amd64 #1 Debian 6.1.135-1
+[250727.488732] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[250727.488736] task:kcompactd0      state:D stack:0     pid:44    ppid:2      flags:0x00004000
+[250727.488749] Call Trace:
+[250727.488753]  <TASK>
+[250727.488762]  __schedule+0x34d/0x9e0
+[250727.488783]  schedule+0x5a/0xd0
+[250727.488794]  io_schedule+0x42/0x70
+[250727.488804]  folio_wait_bit_common+0x13d/0x350
+[250727.488819]  ? filemap_alloc_folio+0x100/0x100
+[250727.488832]  migrate_pages_batch+0x651/0xb90
+[250727.488841]  ? isolate_freepages_block+0x410/0x410
+[250727.488849]  ? release_freepages+0xc0/0xc0
+[250727.488860]  ? check_preempt_wakeup+0x17b/0x2c0
+[250727.488871]  migrate_pages+0x9cd/0xa90
+[250727.488878]  ? isolate_freepages_block+0x410/0x410
+[250727.488884]  ? release_freepages+0xc0/0xc0
+[250727.488901]  compact_zone+0x97e/0xdb0
+[250727.488914]  ? __switch_to_asm+0x3a/0x60
+[250727.488928]  proactive_compact_node+0x87/0xc0
+[250727.488943]  kcompactd+0x34c/0x420
+[250727.488950]  ? cpuusage_read+0x10/0x10
+[250727.488962]  ? kcompactd_do_work+0x2a0/0x2a0
+[250727.488969]  kthread+0xd7/0x100
+[250727.488979]  ? kthread_complete_and_exit+0x20/0x20
+[250727.488991]  ret_from_fork+0x1f/0x30
+[250727.489008]  </TASK>
+[250727.489105] INFO: task kworker/u8:2:35822 blocked for more than 241 seconds.
+[250727.489113]       Tainted: G          I        6.1.0-34-amd64 #1 Debian 6.1.135-1
+[250727.489119] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[250727.489123] task:kworker/u8:2    state:D stack:0     pid:35822 ppid:2      flags:0x00004000
+[250727.489134] Workqueue: writeback wb_workfn (flush-8:16)
+[250727.489148] Call Trace:
+[250727.489151]  <TASK>
+[250727.489157]  __schedule+0x34d/0x9e0
+[250727.489171]  schedule+0x5a/0xd0
+[250727.489181]  io_schedule+0x42/0x70
+[250727.489191]  folio_wait_bit_common+0x13d/0x350
+[250727.489204]  ? filemap_alloc_folio+0x100/0x100
+[250727.489216]  write_cache_pages+0x1dc/0x4c0
+[250727.489223]  ? mpage_read_folio+0xa0/0xa0
+[250727.489244]  mpage_writepages+0x83/0xe0
+[250727.489258]  ? fat_add_cluster+0x90/0x90 [fat]
+[250727.489287]  do_writepages+0xbd/0x1c0
+[250727.489297]  ? xts_crypt+0x123/0x340 [aesni_intel]
+[250727.489334]  __writeback_single_inode+0x3d/0x360
+[250727.489347]  writeback_sb_inodes+0x1f5/0x4d0
+[250727.489364]  __writeback_inodes_wb+0x4c/0xf0
+[250727.489376]  wb_writeback+0x204/0x2f0
+[250727.489388]  wb_workfn+0x350/0x4f0
+[250727.489405]  process_one_work+0x1c4/0x380
+[250727.489414]  worker_thread+0x4d/0x380
+[250727.489422]  ? rescuer_thread+0x3a0/0x3a0
+[250727.489428]  kthread+0xd7/0x100
+[250727.489437]  ? kthread_complete_and_exit+0x20/0x20
+[250727.489448]  ret_from_fork+0x1f/0x30
+[250727.489465]  </TASK>
+[250848.320698] INFO: task kcompactd0:44 blocked for more than 483 seconds.
+[250848.320716]       Tainted: G          I        6.1.0-34-amd64 #1 Debian 6.1.135-1
+[250848.320722] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[250848.320727] task:kcompactd0      state:D stack:0     pid:44    ppid:2      flags:0x00004000
+[250848.320738] Call Trace:
+[250848.320741]  <TASK>
+[250848.320750]  __schedule+0x34d/0x9e0
+[250848.320770]  schedule+0x5a/0xd0
+[250848.320778]  io_schedule+0x42/0x70
+[250848.320785]  folio_wait_bit_common+0x13d/0x350
+[250848.320798]  ? filemap_alloc_folio+0x100/0x100
+[250848.320806]  migrate_pages_batch+0x651/0xb90
+[250848.320814]  ? isolate_freepages_block+0x410/0x410
+[250848.320820]  ? release_freepages+0xc0/0xc0
+[250848.320828]  ? check_preempt_wakeup+0x17b/0x2c0
+[250848.320836]  migrate_pages+0x9cd/0xa90
+[250848.320841]  ? isolate_freepages_block+0x410/0x410
+[250848.320845]  ? release_freepages+0xc0/0xc0
+[250848.320858]  compact_zone+0x97e/0xdb0
+[250848.320867]  ? __switch_to_asm+0x3a/0x60
+[250848.320879]  proactive_compact_node+0x87/0xc0
+[250848.320889]  kcompactd+0x34c/0x420
+[250848.320895]  ? cpuusage_read+0x10/0x10
+[250848.320905]  ? kcompactd_do_work+0x2a0/0x2a0
+[250848.320909]  kthread+0xd7/0x100
+[250848.320919]  ? kthread_complete_and_exit+0x20/0x20
+[250848.320927]  ret_from_fork+0x1f/0x30
+[250848.320940]  </TASK>
+[250848.321102] INFO: task kworker/u8:2:35822 blocked for more than 362 seconds.
+[250848.321108]       Tainted: G          I        6.1.0-34-amd64 #1 Debian 6.1.135-1
+[250848.321112] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[250848.321115] task:kworker/u8:2    state:D stack:0     pid:35822 ppid:2      flags:0x00004000
+[250848.321124] Workqueue: writeback wb_workfn (flush-8:16)
+[250848.321135] Call Trace:
+[250848.321137]  <TASK>
+[250848.321141]  __schedule+0x34d/0x9e0
+[250848.321151]  schedule+0x5a/0xd0
+[250848.321157]  io_schedule+0x42/0x70
+[250848.321164]  folio_wait_bit_common+0x13d/0x350
+[250848.321174]  ? filemap_alloc_folio+0x100/0x100
+[250848.321182]  write_cache_pages+0x1dc/0x4c0
+[250848.321189]  ? mpage_read_folio+0xa0/0xa0
+[250848.321207]  mpage_writepages+0x83/0xe0
+[250848.321220]  ? fat_add_cluster+0x90/0x90 [fat]
+[250848.321242]  do_writepages+0xbd/0x1c0
+[250848.321250]  ? xts_crypt+0x123/0x340 [aesni_intel]
+[250848.321291]  __writeback_single_inode+0x3d/0x360
+[250848.321302]  writeback_sb_inodes+0x1f5/0x4d0
+[250848.321315]  __writeback_inodes_wb+0x4c/0xf0
+[250848.321323]  wb_writeback+0x204/0x2f0
+[250848.321333]  wb_workfn+0x350/0x4f0
+[250848.321344]  process_one_work+0x1c4/0x380
+[250848.321352]  worker_thread+0x4d/0x380
+[250848.321357]  ? rescuer_thread+0x3a0/0x3a0
+[250848.321361]  kthread+0xd7/0x100
+[250848.321368]  ? kthread_complete_and_exit+0x20/0x20
+[250848.321375]  ret_from_fork+0x1f/0x30
+[250848.321389]  </TASK>
+[251528.928045] psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 4 bytes away.
+[251536.929900] psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 4 bytes away.
+[251979.821024] wlp3s0: deauthenticating from 6c:61:f4:34:6f:be by local choice (Reason: 3=DEAUTH_LEAVING)
+[253345.000878] usb 1-9: reset high-speed USB device number 12 using xhci_hcd
+[253345.152798] usb 1-9: device firmware changed
+[253345.152924] usb 1-9: USB disconnect, device number 12
+[253345.168653] blk_print_req_error: 5971 callbacks suppressed
+[253345.168660] device offline error, dev sdb, sector 44735080 op 0x1:(WRITE) flags 0x4800 phys_seg 4 prio class 2
+[253345.168756] device offline error, dev sdb, sector 44735320 op 0x1:(WRITE) flags 0x4800 phys_seg 5 prio class 2
+[253345.168776] device offline error, dev sdb, sector 44735560 op 0x1:(WRITE) flags 0x4800 phys_seg 5 prio class 2
+[253345.168806] device offline error, dev sdb, sector 44735800 op 0x1:(WRITE) flags 0x4800 phys_seg 5 prio class 2
+[253345.168820] device offline error, dev sdb, sector 44736040 op 0x1:(WRITE) flags 0x4800 phys_seg 4 prio class 2
+[253345.168847] device offline error, dev sdb, sector 44736280 op 0x1:(WRITE) flags 0x4800 phys_seg 5 prio class 2
+[253345.168860] device offline error, dev sdb, sector 44736520 op 0x1:(WRITE) flags 0x4800 phys_seg 4 prio class 2
+[253345.168885] device offline error, dev sdb, sector 44736760 op 0x1:(WRITE) flags 0x4800 phys_seg 4 prio class 2
+[253345.168899] device offline error, dev sdb, sector 44737000 op 0x1:(WRITE) flags 0x4800 phys_seg 3 prio class 2
+[253345.168926] device offline error, dev sdb, sector 44737240 op 0x1:(WRITE) flags 0x4800 phys_seg 5 prio class 2
+[253345.361224] FAT-fs (sdb1): Directory bread(block 44391232) failed
+[253345.361244] FAT-fs (sdb1): Directory bread(block 44391233) failed
+[253345.361254] FAT-fs (sdb1): Directory bread(block 44391234) failed
+[253345.361261] FAT-fs (sdb1): Directory bread(block 44391235) failed
+[253345.361268] FAT-fs (sdb1): Directory bread(block 44391236) failed
+[253345.361275] FAT-fs (sdb1): Directory bread(block 44391237) failed
+[253345.361282] FAT-fs (sdb1): Directory bread(block 44391238) failed
+[253345.361289] FAT-fs (sdb1): Directory bread(block 44391239) failed
+[253345.361296] FAT-fs (sdb1): Directory bread(block 44391240) failed
+[253345.361303] FAT-fs (sdb1): Directory bread(block 44391241) failed
+[253345.420653] usb 1-9: new high-speed USB device number 13 using xhci_hcd
+[253345.572856] usb 1-9: New USB device found, idVendor=ffff, idProduct=1201, bcdDevice= 0.00
+[253345.572870] usb 1-9: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[253345.574312] usb-storage 1-9:1.0: USB Mass Storage device detected
+[253345.574783] scsi host5: usb-storage 1-9:1.0
+[253345.684736] FAT-fs (sdb1): bread failed in fat_clusters_flush
+[253367.260900] usb 1-9: reset high-speed USB device number 13 using xhci_hcd
+[256712.992618] psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 4 bytes away.
+[256870.179054] psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 5 bytes away.
+[256944.365698] psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 4 bytes away.
+[256947.125810] psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 5 bytes away.
+[256950.609634] psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 4 bytes away.
+[256955.416925] iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM
+[256955.496586] iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM
+[256955.497825] iwlwifi 0000:03:00.0: FW already configured (0) - re-configuring
+[256959.161859] wlp3s0: authenticate with 6c:61:f4:34:6f:be
+[256959.161873] wlp3s0: 80 MHz not supported, disabling VHT
+[256959.164175] wlp3s0: send auth to 6c:61:f4:34:6f:be (try 1/3)
+[256959.167816] wlp3s0: authenticated
+[256959.172511] wlp3s0: associate with 6c:61:f4:34:6f:be (try 1/3)
+[256959.176730] wlp3s0: RX AssocResp from 6c:61:f4:34:6f:be (capab=0x1411 status=0 aid=5)
+[256959.177711] wlp3s0: associated
+[256959.237198] IPv6: ADDRCONF(NETDEV_CHANGE): wlp3s0: link becomes ready
+[257161.990973] psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 4 bytes away.
+[257280.203556] psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 5 bytes away.
+[257355.371243] psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 4 bytes away.
+[257361.618661] psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 5 bytes away.
+[260345.727168] psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 4 bytes away.
+[260427.608828] psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 4 bytes away.
+[263401.638347] psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 4 bytes away.
+[264598.948093] usb 1-9: USB disconnect, device number 13
+[264604.596210] usb 1-9: new high-speed USB device number 14 using xhci_hcd
+[264604.744478] usb 1-9: New USB device found, idVendor=ffff, idProduct=1201, bcdDevice= 0.00
+[264604.744494] usb 1-9: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[264604.746072] usb-storage 1-9:1.0: USB Mass Storage device detected
+[264604.747310] scsi host4: usb-storage 1-9:1.0
+[264605.760662] scsi 4:0:0:0: Direct-Access     NAND     USB2DISK         0.00 PQ: 0 ANSI: 4
+[264605.761240] sd 4:0:0:0: Attached scsi generic sg2 type 0
+[264605.761565] sd 4:0:0:0: [sdb] Media removed, stopped polling
+[264605.762236] sd 4:0:0:0: [sdb] Attached SCSI removable disk

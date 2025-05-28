@@ -1,0 +1,14 @@
+250525
+16:59:05
+n
+computer
+/home/n/machine/journal/not_sorted/computer/n
+
+toujours en galere pour les fichiers trop gros
+
+sftp> put Desktop/backup.7z ~
+Uploading Desktop/backup.7z to /home/nimettre/~
+backup.7z                                      52%   21GB   0.0KB/s - stalled -client_loop: send disconnect: Broken pipe
+Connection closed.  
+Couldn't send packet: Connection reset by peer
+

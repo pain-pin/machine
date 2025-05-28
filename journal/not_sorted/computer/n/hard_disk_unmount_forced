@@ -1,0 +1,39 @@
+250524
+19:09:49
+n
+computer
+/home/n/machine/journal/not_sorted/computer/n
+
+disque dur demonte de force
+Apres l'insersion d'une nouvelle clef usb
+
+250524-17:55:44-n@computer-~-
+=> lsblk
+NAME    MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINTS
+loop0     7:0    0     4K  1 loop  /snap/bare/5
+loop1     7:1    0 184,9M  1 loop  /snap/brave/509
+loop2     7:2    0 184,9M  1 loop  /snap/brave/511
+loop3     7:3    0  55,4M  1 loop  /snap/core18/2846
+loop4     7:4    0  55,4M  1 loop  /snap/core18/2855
+loop5     7:5    0  63,8M  1 loop  /snap/core20/2501
+loop6     7:6    0  63,8M  1 loop  /snap/core20/2571
+loop7     7:7    0  73,9M  1 loop  /snap/core22/1908
+loop8     7:8    0  73,9M  1 loop  /snap/core22/1963
+loop9     7:9    0 164,8M  1 loop  /snap/gnome-3-28-1804/198
+loop10    7:10   0   516M  1 loop  /snap/gnome-42-2204/202
+loop11    7:11   0  91,7M  1 loop  /snap/gtk-common-themes/1535
+loop12    7:12   0 119,9M  1 loop  /snap/obsidian/45
+loop13    7:13   0 120,4M  1 loop  /snap/obsidian/47
+loop14    7:14   0  44,4M  1 loop  /snap/snapd/23771
+loop15    7:15   0  50,9M  1 loop  /snap/snapd/24505
+sda       8:0    0 238,5G  0 disk  
+├─sda1    8:1    0   300M  0 part  /boot/efi
+├─sda2    8:2    0 229,4G  0 part  
+│ └─luks-89741473-61f8-4a2a-a51d-5706f262feb8
+│       253:0    0 229,4G  0 crypt /
+└─sda3    8:3    0   8,8G  0 part  
+  └─luks-04d06edc-abb2-4c09-a9e0-7c14c01b021c
+        253:1    0   8,8G  0 crypt [SWAP]
+sdb       8:16   0 931,5G  0 disk  
+└─sdb1    8:17   0 931,5G  0 part  
+sr0      11:0    1  1024M  0 rom   
