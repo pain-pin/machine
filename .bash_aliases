@@ -487,6 +487,7 @@ makere ()
 alpine_launch () 
 {
 	DIR="$HOME"/alpine
-	FILE="$DIR"/alpine-standard*iso 
+	FILE=$(find $DIR -iregex ".*alpine.*.iso")
+	#FILE="$DIR"/alpine-standard*iso 
 	qemu-system-x86_64 -m 512 -nic user -boot d -cdrom $FILE -hda alpine.qcow2 -enable-kvm #-display gtk
 }
