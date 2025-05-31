@@ -124,6 +124,7 @@ PATH+=":$HOME/.local/bin/"
 PATH+=':/var/lib/flatpak/exports/share'
 PATH+=':/home/n/.local/share/flatpak/exports/share'
 PATH+=':/opt/CLion-2025.1/bin/'
+PATH+=':/usr/sbin/'
 
 export LESS=-R
 
