@@ -120,11 +120,11 @@ unset __conda_setup
 
 export HISTCONTROL=ignorespace
 
-PATH+=":$HOME/.local/bin/"
-PATH+=':/var/lib/flatpak/exports/share'
-PATH+=':/home/n/.local/share/flatpak/exports/share'
-PATH+=':/opt/CLion-2025.1/bin/'
-PATH+=':/usr/sbin/'
+PATH="$PATH:$HOME/.local/bin/"
+PATH="$PATH:/var/lib/flatpak/exports/share"
+PATH="$PATH:/home/n/.local/share/flatpak/exports/share"
+PATH="$PATH:/usr/sbin/"
+PATH="$PATH:/opt/CLion-2025.1/bin/"
 
 export LESS=-R
 
