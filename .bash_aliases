@@ -486,5 +486,7 @@ makere ()
 # from https://wiki.alpinelinux.org/wiki/Installing_Alpine_in_a_virtual_machine
 alpine_launch () 
 {
-	qemu-system-x86_64 -m 512 -nic user -boot d -cdrom $HOME/alpine-standard*iso -hda alpine.qcow2 -enable-kvm #-display gtk
+	DIR="$HOME"/alpine
+	FILE="$DIR"/alpine-standard*iso 
+	qemu-system-x86_64 -m 512 -nic user -boot d -cdrom $FILE -hda alpine.qcow2 -enable-kvm #-display gtk
 }
