@@ -491,3 +491,8 @@ alpine_launch ()
 	#FILE="$DIR"/alpine-standard*iso 
 	qemu-system-x86_64 -m 512 -nic user,hostfwd=tcp::2222-:22 -boot d -cdrom $FILE -hda alpine.qcow2 -enable-kvm #-display gtk
 }
+
+compose ()
+{
+	docker compose up --watch
+}
