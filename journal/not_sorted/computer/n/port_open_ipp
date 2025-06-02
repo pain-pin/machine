@@ -1,0 +1,26 @@
+250602
+15:52:08
+n
+computer
+/home/n/machine/journal/not_sorted/computer/n
+
+on a debian, checking ports
+
+250602-15:48:32-n@computer-~/alpine-
+=> sudo nmap localhost -p 1-65535
+[sudo] password for n: 
+Starting Nmap 7.93 ( https://nmap.org ) at 2025-06-02 15:48 CEST
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.0000080s latency).
+Other addresses for localhost (not scanned): ::1
+Not shown: 65532 closed tcp ports (reset)
+PORT    STATE SERVICE
+22/tcp  open  ssh
+25/tcp  open  smtp
+631/tcp open  ipp
+
+Nmap done: 1 IP address (1 host up) scanned in 1.28 seconds
+
+En informatique, Internet Printing Protocol (protocole d'impression Internet) ou IPP, définit un protocole standard pour l'impression et ce qui s'y rattache, comme les files d'attente d'impression, la taille des médias, la résolution, etc.
+
+Comme tous les protocoles basés sur IP, IPP peut être utilisé localement ou sur l'Internet vers des imprimantes à des centaines ou des milliers de kilomètres. Toutefois, au contraire d'autres protocoles, IPP supporte les contrôles d'accès comme l'authentification et le chiffrement, le rendant ainsi plus sécurisé que d'autres solutions plus anciennes.
