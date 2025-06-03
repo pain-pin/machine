@@ -409,19 +409,21 @@ journal ()
     local USER=$(whoami)
     local HOST=$(hostname -s)
     local PWD_=$(pwd)
+	F_NAME="${DATE_STRING}_${USER}_${HOST}.txt"
+	FOLDER="$HOME/machine/journal/"
+	DFLT_SRT="by_session/$HOST/$USER"
 	if [ "$#" -gt 2 -o "$#" -eq 0 ]; then
 	    echo "Usage: $0 [path/to] <file>"
-		echo "default file path is journal/not_sorted/$(date +%F)_${USER}_${HOST}_${PWD}.txt"
+		echo "default file path is ${FOLDER}${DFLT_SRT} and filename $F_NAME"
 	    return 1
 	fi
-	F_NAME="${DATE_STRING}_${USER}_${HOST}.txt"
-	FOLDER="$HOME/machine/journal/not_sorted"
 	if [ "$#" -eq 1 ]; then
-		FOLDER=$HOME/machine/journal/not_sorted/$HOST/$USER
+		FOLDER+=$DFLT_SRT
 		F_NAME=$1
 	fi
 	if [ "$#" -eq 2 ]; then
-		FOLDER=$2
+		FOLDER+=$1
+		F_NAME=$2
 	fi
 	mkdir -p $FOLDER
 	cd $FOLDER
@@ -478,9 +480,9 @@ gcl ()
 	git clone $1 $2
 }
 
-makere ()
+src ()
 {
-	source $HOME
+	source $HOME/.bashrc
 }
 
 # from https://wiki.alpinelinux.org/wiki/Installing_Alpine_in_a_virtual_machine
@@ -495,4 +497,15 @@ alpine_launch ()
 compose ()
 {
 	docker compose up --watch
+}
+
+cert_local ()
+{
+	DIR=${1:-"certs"}
+
+	mkdir -p $DIR
+	openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
+	  -keyout $DIR/localhost.key \
+	  -out $DIR/localhost.crt \
+	  -subj "/CN=localhost"
 }
