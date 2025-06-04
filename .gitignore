@@ -53,3 +53,5 @@ bin
 *.backup
 .idea
 .idea/*
+
+pip_env/lib/
