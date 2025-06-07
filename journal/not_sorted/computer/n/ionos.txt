@@ -1,8 +1,0 @@
-250414
-20:30:02
-n
-computer
-/home/n/machine/journal/not_sorted/computer/n
-
-passwd invalid for 
-7*****838 (from 2 passwd manager)

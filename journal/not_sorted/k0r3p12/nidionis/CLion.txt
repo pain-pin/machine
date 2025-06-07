@@ -1,7 +1,0 @@
-250319
-17:13:49
-nidionis
-k0r3p12
-/home/nidionis/machine/journal/not_sorted/k0r3p12/nidionis
-VIM pluging disabled
-Ideavim set to enable

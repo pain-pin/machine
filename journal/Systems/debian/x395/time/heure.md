@@ -1,1 +1,0 @@
-regleheure samarquande (Ouzbekistant)

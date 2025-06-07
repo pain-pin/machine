@@ -1,9 +1,0 @@
-250314
-21:41:16
-n
-computer
-
-en cliquant sur "commander un certificat Perfect SSL"
-https://radis.o2switch.net:2083/cpsess1369727131/frontend/o2switch/o2switch-ssl-certificate/index.live.php
-radis.o2switch.net:2083 says:
-Une erreur est survenue lors de la commande.

@@ -1,8 +1,0 @@
-250317
-22:57:21
-n
-computer
-/home/n/machine/journal/not_sorted/computer/n
-
-message d'erreur
-You're running in a GNOME environment but the OS keyring is not available for encryption. Ensure you have gnome-keyring or another libsecret compatible implementation installed and running.

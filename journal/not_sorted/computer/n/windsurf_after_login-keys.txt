@@ -1,8 +1,0 @@
-250317
-23:09:38
-n
-computer
-/home/n/machine/journal/not_sorted/computer/n
-
-property `Windsurf` can be omitted or must be of type `string`
-Extension '{0}' is required to open the remote window. OK to enable?

@@ -1,7 +1,0 @@
-250603
-17:15:03
-n
-computer
-/home/n/machine/journal/by_session/computer/n
-
-bluesky and facebook (at least) must reconnect after unlocking manually, a bit anoying

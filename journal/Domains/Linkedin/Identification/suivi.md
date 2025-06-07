@@ -1,1 +1,0 @@
-![[Domains/Linkedin/Identification/screeshot_suivi.png]]

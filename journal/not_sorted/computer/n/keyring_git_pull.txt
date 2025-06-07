@@ -1,7 +1,0 @@
-250405
-01:16:55
-n
-computer
-/home/n/machine/journal/not_sorted/computer/n
-
-Doesn't unlock when using sudo passwd (or git passwd)

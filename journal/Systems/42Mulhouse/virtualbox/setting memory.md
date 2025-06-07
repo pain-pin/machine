@@ -1,1 +1,0 @@
-virtualbox plante en laissant la machine indisponible

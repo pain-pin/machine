@@ -1,6 +1,0 @@
-250307
-18:59:12
-n
-computer
-/home/n/machine
-You're running in a GNOME environment but the OS keyring is not available for encryption. Ensure you have gnome-keyring or another libsecret compatible implementation installed and running.
