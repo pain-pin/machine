@@ -1,0 +1,36 @@
+250607
+21:56:57
+n
+computer
+/media/n/niemettre
+
+250607-21:54:16-n@computer-/media/n/niemettre-
+=> ls '/media/n/My Passport/Documents/backup_perso_journaux/journaux_machines/by_Domains/WebStorm-243.26053.12/plugins/webpac'*
+ls: cannot access '/media/n/My Passport/Documents/backup_perso_journaux/journaux_machines/by_Domains/WebStorm-243.26053.12/plugins/webpack': Input/output error
+(pip_env) 
+250607-21:54:39-n@computer-/media/n/niemettre-
+=> file /media/n/My Passport/Documents/backup_perso_journaux/journaux_machines/by_Domains/WebStorm-243.26053.12/plugins/webpack'^C
+(pip_env) 
+250607-21:55:18-n@computer-/media/n/niemettre-
+=> ls '/media/n/My Passport/Documents/backup_perso_journaux/journaux_machines/by_Domains/WebStorm-243.26053.12/plugins/web'*
+ls: cannot access '/media/n/My Passport/Documents/backup_perso_journaux/journaux_machines/by_Domains/WebStorm-243.26053.12/plugins/webDeployment': Input/output error
+ls: cannot access '/media/n/My Passport/Documents/backup_perso_journaux/journaux_machines/by_Domains/WebStorm-243.26053.12/plugins/webpack': Input/output error
+'/media/n/My Passport/Documents/backup_perso_journaux/journaux_machines/by_Domains/WebStorm-243.26053.12/plugins/webp':
+lib
+(pip_env) 
+250607-21:55:22-n@computer-/media/n/niemettre-
+=> file '/media/n/My Passport/Documents/backup_perso_journaux/journaux_machines/by_Domains/WebStorm-243.26053.12/plugins/webpack'
+/media/n/My Passport/Documents/backup_perso_journaux/journaux_machines/by_Domains/WebStorm-243.26053.12/plugins/webpack: cannot open `/media/n/My Passport/Documents/backup_perso_journaux/journaux_machines/by_Domains/WebStorm-243.26053.12/plugins/webpack' (Input/output error)
+(pip_env) 
+250607-21:55:45-n@computer-/media/n/niemettre-
+=> hexdump -C '/media/n/My Passport/Documents/backup_perso_journaux/journaux_machines/by_Domains/WebStorm-243.26053.12/plugins/webpack'
+hexdump: /media/n/My Passport/Documents/backup_perso_journaux/journaux_machines/by_Domains/WebStorm-243.26053.12/plugins/webpack: Input/output error
+hexdump: all input file arguments failed
+
+
+
+
+
+
+idem for some others skipped
+Error when getting information for file “/media/n/My Passport/Documents/backup_perso_journaux/journaux_machines/by_Domains/WebStorm-243.26053.12/plugins/terminal/lib/terminal.jar”: Input/output error
