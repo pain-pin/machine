@@ -426,14 +426,13 @@ journal ()
 		F_NAME=$2
 	fi
 	mkdir -p $FOLDER
-	cd $FOLDER
 	FILE=$FOLDER/$F_NAME
-
 	echo "$DATE_STRING" > $FILE
     echo "$TIME_STRING" >> $FILE
     echo "$USER" >> $FILE
     echo "$HOST" >> $FILE
     echo "$PWD" >> $FILE
+	cd $FOLDER
 	vim + $FILE
 	git add $FILE
 	git commit -m "[journal] $FILE"
