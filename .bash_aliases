@@ -509,3 +509,28 @@ cert_local ()
 	  -out $DIR/localhost.crt \
 	  -subj "/CN=localhost"
 }
+
+virtual() {
+    if [ -z "$1" ]; then
+        echo "Usage: virtual <fichier.iso> [arguments supplémentaires pour QEMU]"
+        return 1
+    fi
+    ISO="$1"
+    shift
+    if [ ! -f "$ISO" ]; then
+        echo "Erreur : fichier '$ISO' introuvable."
+        return 1
+    fi
+
+    qemu-system-x86_64 \                # Lance une VM 64 bits
+        -enable-kvm \                   # Active l'accélération matérielle (si disponible)
+        -m 2048 \                       # Alloue 2 Go de RAM
+        -cpu host \                     # Emule le CPU hôte (meilleures perfs)
+        -cdrom "$ISO" \                 # Monte le fichier ISO en tant que lecteur CD
+        -boot d \                       # Boot prioritairement depuis le CD
+        -vga virtio \                   # Carte graphique virtualisée (rapide et compatible)
+        -soundhw hda \                  # Son compatible AC97/HDA
+        -nic user \                     # Accès réseau simple (NAT)
+        "$@"                            # Autorise l’ajout d’options personnalisées
+}
+
