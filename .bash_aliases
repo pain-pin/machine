@@ -368,21 +368,21 @@ journal_perso ()
     local HOST=$(hostname -s)
     local PWD_=$(pwd)
 	F_NAME="${DATE_STRING}_${USER}_${HOST}.txt"
-	FOLDER="$HOME/perso/journal/$YEAR/$HOST/"
+	FOLDER="$HOME/perso/$YEAR
 	if [ "$#" -gt 2 -o "$#" -eq 0 ]; then
 	    echo "Usage: $0 [path/to] <file>"
 		echo "default path is $FOLDER"
 		echo "default file name is $F_NAME"
 	    return 1
 	fi
-	if [ "$#" -ge 1 ]; then
+	if [ "$#" -eq 1 ]; then
 		F_NAME=$1
 	fi
 	if [ "$#" -eq 2 ]; then
-		FOLDER=$2
+		FOLDER=$1
+		F_NAME=$2
 	fi
 	mkdir -p $FOLDER
-	cd $FOLDER
 	FILE=$FOLDER/$F_NAME
 
 	echo "$DATE_STRING" > $FILE
@@ -390,9 +390,10 @@ journal_perso ()
     echo "$USER" >> $FILE
     echo "$HOST" >> $FILE
     echo "$PWD" >> $FILE
-	vim + $FILE
-	git add $FILE
-	git commit -m "[journal] $FILE"
+	cd $FOLDER
+	vim + $F_NAME
+	git add $F_NAME
+	git commit -m "[journal] $F_NAME"
 	git push
 	cd -
 }
