@@ -1,0 +1,60 @@
+250608
+21:12:59
+n
+computer
+/home/n
+
+
+250608-20:28:11-n@computer-~/oses-
+=> qemu-system-aarch64 \
+  -M virt \
+  -cpu cortex-a72 \
+  -m 2048 \
+  -nographic \
+  -bios /usr/share/qemu-efi-aarch64/QEMU_EFI.fd \
+  -drive file=2025-05-13-raspios-bookworm-arm64.img,format=raw,if=none,id=hd0 \
+  -device virtio-blk-device,drive=hd0 \
+  -netdev user,id=net0,hostfwd=tcp::2222-:22 \
+  -device virtio-net-device,netdev=net0
+UEFI firmware (version  built at 13:10:49 on Nov  5 2024)
+
+
+BdsDxe: failed to load Boot0001 "UEFI Misc Device" from VenHw(837DCA9E-E874-4D82-B29A-23FE0E23D1E2,003E000A00000000): Not Found
+
+>>Start PXE over IPv4.
+  PXE-E16: No valid offer received.
+BdsDxe: failed to load Boot0002 "UEFI PXEv4 (MAC:525400123456)" from VenHw(837DCA9E-E874-4D82-B29A-23FE0E23D1E2,003C000A00000000)/MAC(525400123456,0x1)/IPv4(0.0.0.0,0x0,DHCP,0.0.0.0,0.0.0.0,0.0.0.0): Not Found
+
+>>Start PXE over IPv6.
+  PXE-E16: No valid offer received.
+BdsDxe: failed to load Boot0003 "UEFI PXEv6 (MAC:525400123456)" from VenHw(837DCA9E-E874-4D82-B29A-23FE0E23D1E2,003C000A00000000)/MAC(525400123456,0x1)/IPv6(0000:0000:0000:0000:0000:0000:0000:0000,0x0,Static,0000:0000:0000:0000:0000:0000:0000:0000,0x40,0000:0000:0000:0000:0000:0000:0000:0000): Not Found
+
+>>Start HTTP Boot over IPv4.....
+  Error: Could not retrieve NBP file size from HTTP server.
+
+  Error: Server response timeout.
+BdsDxe: failed to load Boot0004 "UEFI HTTPv4 (MAC:525400123456)" from VenHw(837DCA9E-E874-4D82-B29A-23FE0E23D1E2,003C000A00000000)/MAC(525400123456,0x1)/IPv4(0.0.0.0,0x0,DHCP,0.0.0.0,0.0.0.0,0.0.0.0)/Uri(): Not Found
+
+>>Start HTTP Boot over IPv6.
+  Error: Could not retrieve NBP file size from HTTP server.
+
+  Error: Unexpected network error.
+BdsDxe: failed to load Boot0005 "UEFI HTTPv6 (MAC:525400123456)" from VenHw(837DCA9E-E874-4D82-B29A-23FE0E23D1E2,003C000A00000000)/MAC(525400123456,0x1)/IPv6(0000:0000:0000:0000:0000:0000:0000:0000,0x0,Static,0000:0000:0000:0000:0000:0000:0000:0000,0x40,0000:0000:0000:0000:0000:0000:0000:0000)/Uri(): Not Found
+BdsDxe: loading Boot0006 "EFI Internal Shell" from Fv(64074AFE-340A-4BE6-94BA-91B5B4D0F71E)/FvFile(7C04A583-9E3E-4F1C-AD65-E05268D0B4D1)
+BdsDxe: starting Boot0006 "EFI Internal Shell" from Fv(64074AFE-340A-4BE6-94BA-91B5B4D0F71E)/FvFile(7C04A583-9E3E-4F1C-AD65-E05268D0B4D1)
+
+
+UEFI Interactive Shell v2.2
+EDK II
+UEFI v2.70 (EDK II, 0x00010000)
+Mapping table
+      FS0: Alias(s):HD0b:;BLK1:
+          VenHw(837DCA9E-E874-4D82-B29A-23FE0E23D1E2,003E000A00000000)/HD(1,MBR,0xD1876EE1,0x4000,0x100000)
+     BLK0: Alias(s):
+          VenHw(837DCA9E-E874-4D82-B29A-23FE0E23D1E2,003E000A00000000)
+     BLK2: Alias(s):
+          VenHw(837DCA9E-E874-4D82-B29A-23FE0E23D1E2,003E000A00000000)/HD(2,MBR,0xD1876EE1,0x104000,0xA74000)
+Press ESC in 1 seconds to skip startup.nsh or any other key to continue.
+Shell> lsbkk
+'lsbkk' is not recognized as an internal or external command, operable program, or script file.
+
