@@ -1,0 +1,17 @@
+250611
+08:38:24
+n
+computer
+/home/n
+
+Installation de l'os pourtant peu recente
+(pas ma premiere seance avec Benjamin, mais pas eu depuis plusieurs mois aussi)
+
+250611-08:37:10-n@computer-~-
+=> snap skype
+error: unknown command "skype", see 'snap help'.
+(pip_env) 
+250611-08:37:19-n@computer-~-
+=> skype
+bash: skype: command not found
+
