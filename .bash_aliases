@@ -368,7 +368,7 @@ journal_perso ()
     local HOST=$(hostname -s)
     local PWD_=$(pwd)
 	F_NAME="${DATE_STRING}_${USER}_${HOST}.txt"
-	FOLDER="$HOME/perso/$YEAR
+	FOLDER="$HOME/perso/$YEAR"
 	if [ "$#" -gt 2 -o "$#" -eq 0 ]; then
 	    echo "Usage: $0 [path/to] <file>"
 		echo "default path is $FOLDER"
@@ -379,13 +379,13 @@ journal_perso ()
 		F_NAME=$1
 	fi
 	if [ "$#" -eq 2 ]; then
-		FOLDER=$1
+		FOLDER+=$1
 		F_NAME=$2
 	fi
 	mkdir -p $FOLDER
 	FILE=$FOLDER/$F_NAME
 
-	echo "$DATE_STRING" > $FILE
+	echo "$DATE_STRING" >> $FILE
     echo "$TIME_STRING" >> $FILE
     echo "$USER" >> $FILE
     echo "$HOST" >> $FILE
@@ -393,7 +393,7 @@ journal_perso ()
 	cd $FOLDER
 	vim + $F_NAME
 	git add $F_NAME
-	git commit -m "[journal] $F_NAME"
+	git commit -m "[journal] $F_NAME at $FOLDER"
 	git push
 	cd -
 }
@@ -522,15 +522,14 @@ virtual() {
         return 1
     fi
 
-    qemu-system-x86_64 \                # Lance une VM 64 bits
-        -enable-kvm \                   # Active l'accélération matérielle (si disponible)
-        -m 2048 \                       # Alloue 2 Go de RAM
-        -cpu host \                     # Emule le CPU hôte (meilleures perfs)
-        -cdrom "$ISO" \                 # Monte le fichier ISO en tant que lecteur CD
-        -boot d \                       # Boot prioritairement depuis le CD
-        -vga virtio \                   # Carte graphique virtualisée (rapide et compatible)
-        -soundhw hda \                  # Son compatible AC97/HDA
-        -nic user \                     # Accès réseau simple (NAT)
-        "$@"                            # Autorise l’ajout d’options personnalisées
+    qemu-system-x86_64 $ISO \
+        -enable-kvm \
+        -m 2048 \
+        -cpu host \
+        -cdrom "$ISO" \
+        -boot d \
+        -vga virtio \
+        -nic user \
+        "$@"
 }
 
