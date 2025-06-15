@@ -128,3 +128,6 @@ export LESS=-R
 source $HOME/machine/pip_env/bin/activate
 
 bind -f  ~/.inputrc
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/n/.lmstudio/bin"
