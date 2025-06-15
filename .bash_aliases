@@ -359,7 +359,7 @@ testee ()
 # create a subfoler if passed as argument
 # name the file with an argument
 # open the file in vim +
-journal_perso ()
+journal-perso ()
 {
 	local DATE_STRING=$(date +"%y%m%d")
     local TIME_STRING=$(date +"%T")
@@ -379,17 +379,19 @@ journal_perso ()
 		F_NAME=$1
 	fi
 	if [ "$#" -eq 2 ]; then
-		FOLDER+=$1
+		FOLDER="$FOLDER/$1"
 		F_NAME=$2
 	fi
 	mkdir -p $FOLDER
 	FILE=$FOLDER/$F_NAME
 
-	echo "$DATE_STRING" >> $FILE
-    echo "$TIME_STRING" >> $FILE
-    echo "$USER" >> $FILE
-    echo "$HOST" >> $FILE
-    echo "$PWD" >> $FILE
+	if [ ! -a $FILE ]; then  
+		echo "$DATE_STRING" >> $FILE
+		echo "$TIME_STRING" >> $FILE
+		echo "$USER" >> $FILE
+		echo "$HOST" >> $FILE
+		echo "$PWD" >> $FILE
+	fi
 	cd $FOLDER
 	vim + $F_NAME
 	git add $F_NAME
