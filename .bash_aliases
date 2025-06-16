@@ -361,6 +361,7 @@ testee ()
 # open the file in vim +
 journal-perso ()
 {
+	DIR_ORIGINAL=$PWD
 	local DATE_STRING=$(date +"%y%m%d")
     local TIME_STRING=$(date +"%T")
     local YEAR=$(date +"%Y")
@@ -368,23 +369,24 @@ journal-perso ()
     local HOST=$(hostname -s)
     local PWD_=$(pwd)
 	F_NAME="${DATE_STRING}_${USER}_${HOST}.txt"
-	FOLDER="$HOME/perso"
+	DIR_ALIAS="$HOME/perso"
 	if [ "$#" -gt 2 -o "$#" -eq 0 ]; then
 	    echo "Usage: $0 [path/to] <file>"
-		echo "default path is $FOLDER"
+		echo "default path is $DIR_ALIAS"
 		echo "default file name is $F_NAME"
 	    return 1
 	fi
+	cd $DIR_ALIAS
 	if [ "$#" -eq 1 ]; then
-		FOLDER="$FOLDER/$YEAR"
+		DIR_RELATIVE="$YEAR"
 		F_NAME=$1
 	fi
 	if [ "$#" -eq 2 ]; then
-		FOLDER="$FOLDER/$1"
+		DIR_RELATIVE="$1"
 		F_NAME=$2
 	fi
-	mkdir -p $FOLDER
-	FILE=$FOLDER/$F_NAME
+	mkdir -p $DIR_RELATIVE
+	FILE=$F_NAME
 
 	if [ ! -a $FILE ]; then  
 		echo "$DATE_STRING" >> $FILE
@@ -393,12 +395,12 @@ journal-perso ()
 		echo "$HOST" >> $FILE
 		echo "$PWD" >> $FILE
 	fi
-	cd $FOLDER
+	cd $DIR_RELATIVE
 	vim + $F_NAME
 	git add $F_NAME
-	git commit -m "[journal] $F_NAME at $FOLDER"
+	git commit -m "[journal] $F_NAME at $DIR_RELATIVE"
 	git push
-	cd -
+	cd $DIR_ORIGINAL
 }
 
 # open a file ready to paste (probably a command with its output)
