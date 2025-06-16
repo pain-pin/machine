@@ -368,7 +368,7 @@ journal-perso ()
     local HOST=$(hostname -s)
     local PWD_=$(pwd)
 	F_NAME="${DATE_STRING}_${USER}_${HOST}.txt"
-	FOLDER="$HOME/perso/$YEAR"
+	FOLDER="$HOME/perso"
 	if [ "$#" -gt 2 -o "$#" -eq 0 ]; then
 	    echo "Usage: $0 [path/to] <file>"
 		echo "default path is $FOLDER"
@@ -376,6 +376,7 @@ journal-perso ()
 	    return 1
 	fi
 	if [ "$#" -eq 1 ]; then
+		FOLDER="$FOLDER/$YEAR"
 		F_NAME=$1
 	fi
 	if [ "$#" -eq 2 ]; then
