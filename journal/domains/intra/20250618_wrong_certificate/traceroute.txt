@@ -1,0 +1,15 @@
+250618
+21:25:14
+n
+computer
+/home/n/machine/journal/domains/intra/20250618_wrong_certificate
+
+invalid ssl certificate
+250618-21:20:55-n@computer-~/perso-
+=> traceroute profile.intra.42.fr
+traceroute to profile.intra.42.fr (104.22.44.83), 30 hops max, 60 byte packets
+ 1  _gateway (192.168.1.1)  3.248 ms  3.324 ms  3.398 ms
+ 2  * * *
+ 3  25.5.128.77.rev.sfr.net (77.128.5.25)  7.755 ms  6.516 ms  7.698 ms
+ 4  104.22.44.83 (104.22.44.83)  12.183 ms  15.433 ms  15.406 ms
+
