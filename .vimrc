@@ -281,3 +281,8 @@ set directory=/tmp
 colorscheme koehler
 
 set tags=./tags;,tags;
+
+"https://github.com/preservim/nerdtree
+call pathogen#infect()
+syntax on
+filetype plugin indent on
