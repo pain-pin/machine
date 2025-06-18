@@ -1,0 +1,21 @@
+250618
+17:08:31
+n
+computer
+/home/n/machine/journal/2025
+
+Package configuration
+┌────┤ Daemons using outdated libraries ├─────┐
+│                                             │ 
+│                                             │ 
+│ Which services should be restarted?         │ 
+│                                             │ 
+│  [ ] bluetooth.service                      │ 
+│  [*] cups-browsed.service                   │ 
+│  [ ] lightdm.service                        │ 
+│                                             │ 
+│                                             │ 
+│          <Ok>              <Cancel>         │ 
+│                                             │ 
+└─────────────────────────────────────────────┘ 
+
