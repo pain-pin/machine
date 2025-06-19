@@ -354,11 +354,47 @@ testee ()
 	fi
 }
 
-# open a file ready to paste (probably a command with its output)
-# create a file in the folder of the day (create it if it does not exist)
-# create a subfoler if passed as argument
-# name the file with an argument
-# open the file in vim +
+journal ()
+{
+	DIR_ORIGINAL=$PWD
+	local DATE_STRING=$(date +"%y%m%d")
+    local TIME_STRING=$(date +"%T")
+    local YEAR=$(date +"%Y")
+    local USER=$(whoami)
+    local HOST=$(hostname -s)
+    local PWD_=$(pwd)
+	F_NAME="${DATE_STRING}_${USER}_${HOST}.txt"
+	DIR_ALIAS="$HOME/machine/journal"
+	if [ "$#" -gt 2 -o "$#" -eq 0 ]; then
+	    echo "Usage: $0 [path/to] <file>"
+		echo "default path is $DIR_ALIAS"
+		echo "default file name is $F_NAME"
+	    return 1
+	fi
+	cd $DIR_ALIAS
+	if [ "$#" -eq 1 ]; then
+		DIR_RELATIVE="$YEAR"
+		F_NAME=$1
+	fi
+	if [ "$#" -eq 2 ]; then
+		DIR_RELATIVE="$1"
+		F_NAME=$2
+	fi
+	mkdir -p $DIR_RELATIVE
+	cd $DIR_RELATIVE
+	echo "$DATE_STRING" >> $F_NAME
+	echo "$TIME_STRING" >> $F_NAME
+	echo "$USER" >> $F_NAME
+	echo "$HOST" >> $F_NAME
+	echo "$PWD" >> $F_NAME
+	vim + $F_NAME
+	git add $F_NAME
+	git commit -m "[journal] $F_NAME at $DIR_RELATIVE"
+	git push
+	cd $DIR_ORIGINAL
+}
+
+
 journal-perso ()
 {
 	DIR_ORIGINAL=$PWD
@@ -386,64 +422,17 @@ journal-perso ()
 		F_NAME=$2
 	fi
 	mkdir -p $DIR_RELATIVE
-	FILE=$F_NAME
-
-	if [ ! -a $FILE ]; then  
-		echo "$DATE_STRING" >> $FILE
-		echo "$TIME_STRING" >> $FILE
-		echo "$USER" >> $FILE
-		echo "$HOST" >> $FILE
-		echo "$PWD" >> $FILE
-	fi
 	cd $DIR_RELATIVE
+	echo "$DATE_STRING" >> $F_NAME
+	echo "$TIME_STRING" >> $F_NAME
+	echo "$USER" >> $F_NAME
+	echo "$HOST" >> $F_NAME
+	echo "$PWD" >> $F_NAME
 	vim + $F_NAME
 	git add $F_NAME
 	git commit -m "[journal] $F_NAME at $DIR_RELATIVE"
 	git push
 	cd $DIR_ORIGINAL
-}
-
-# open a file ready to paste (probably a command with its output)
-# create a file in the folder of the day (create it if it does not exist)
-# create a subfoler if passed as argument
-# name the file with an argument
-# open the file in vim +
-journal ()
-{
-	local DATE_STRING=$(date +"%y%m%d")
-    local TIME_STRING=$(date +"%T")
-    local USER=$(whoami)
-    local HOST=$(hostname -s)
-    local PWD_=$(pwd)
-	F_NAME="${DATE_STRING}_${USER}_${HOST}.txt"
-	FOLDER="$HOME/machine/journal/"
-	DFLT_SRT="by_session/$HOST/$USER"
-	if [ "$#" -gt 2 -o "$#" -eq 0 ]; then
-	    echo "Usage: $0 [path/to] <file>"
-		echo "default file path is ${FOLDER}${DFLT_SRT} and filename $F_NAME"
-	    return 1
-	fi
-	if [ "$#" -eq 1 ]; then
-		FOLDER+=$DFLT_SRT
-		F_NAME=$1
-	fi
-	if [ "$#" -eq 2 ]; then
-		FOLDER+=$1
-		F_NAME=$2
-	fi
-	mkdir -p $FOLDER
-	FILE=$FOLDER/$F_NAME
-	echo "$DATE_STRING" > $FILE
-    echo "$TIME_STRING" >> $FILE
-    echo "$USER" >> $FILE
-    echo "$HOST" >> $FILE
-    echo "$PWD" >> $FILE
-	cd $FOLDER
-	vim + $FILE
-	git add $FILE
-	git commit -m "[journal] $FILE"
-	git push
-	cd -
 }
 
 printcouou ()
