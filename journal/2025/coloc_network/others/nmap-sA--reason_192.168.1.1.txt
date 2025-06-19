@@ -1,0 +1,22 @@
+Starting Nmap 7.93 ( https://nmap.org ) at 2025-06-19 19:10 CEST
+Nmap scan report for box (192.168.1.1)
+Host is up, received arp-response (0.0021s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT     STATE      SERVICE    REASON
+53/tcp   unfiltered domain     reset ttl 64
+80/tcp   unfiltered http       reset ttl 64
+1287/tcp unfiltered routematch reset ttl 64
+MAC Address: 6C:61:F4:34:6F:B8 (SFR)
+
+Nmap done: 1 IP address (1 host up) scanned in 4.48 seconds
+Starting Nmap 7.93 ( https://nmap.org ) at 2025-06-19 19:10 CEST
+Nmap scan report for box (192.168.1.1)
+Host is up, received arp-response (0.012s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT     STATE      SERVICE    REASON
+53/tcp   unfiltered domain     reset ttl 64
+80/tcp   unfiltered http       reset ttl 64
+1287/tcp unfiltered routematch reset ttl 64
+MAC Address: 6C:61:F4:34:6F:B8 (SFR)
+
+Nmap done: 1 IP address (1 host up) scanned in 7.79 seconds

@@ -1,0 +1,12 @@
+Starting Nmap 7.93 ( https://nmap.org ) at 2025-06-19 19:10 CEST
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 1.52 seconds
+
+##############################
+
+250619-19:38:30-n@computer-~/machine/journal/2025/coloc_network-(main)
+=> sudo nmap -Pn -sA --reason 192.168.1.47
+[sudo] password for n: 
+Starting Nmap 7.93 ( https://nmap.org ) at 2025-06-19 19:39 CEST
+Nmap done: 1 IP address (0 hosts up) scanned in 1.51 seconds
+
