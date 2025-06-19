@@ -19,3 +19,34 @@ Package configuration
 │                                             │ 
 └─────────────────────────────────────────────┘ 
 
+250619
+20:58:55
+n
+computer
+/home/n/machine/journal/samba
+
+250619-20:58:21-n@computer-~/machine-
+=> sudo apt install samba
+
+(intallation log tailed)
+Running kernel seems to be up-to-date.
+
+The processor microcode seems to be up-to-date.
+
+Restarting services...
+Service restarts being deferred:
+ systemctl restart bluetooth.service
+ systemctl restart lightdm.service
+
+No containers need to be restarted.
+
+User sessions running outdated binaries:
+ n @ session #1: blueman-tray[1648], brave[2867,2868,2870],
+  brave-browser-s[2848], chrome_crashpad[2859,2861,17253],
+  cinnamon[1427], cinnamon-launch[1380], cinnamon-sessio[1040],
+  ibus-daemon[1146], ibus-x11[1175], lightdm[1008],
+  lm-studio[17227,17236,17237], terminator[2444], thunderbird[28937]
+ n @ user manager service: brave[2856], systemd[1015]
+
+No VM guests are running outdated hypervisor (qemu) binaries on this
+
