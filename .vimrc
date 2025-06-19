@@ -283,6 +283,10 @@ colorscheme koehler
 set tags=./tags;,tags;
 
 "https://github.com/preservim/nerdtree
+execute pathogen#infect()
+
 call pathogen#infect()
 syntax on
 filetype plugin indent on
+" Start NERDTree and leave the cursor in it.
+autocmd VimEnter * NERDTree
