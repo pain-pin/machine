@@ -1,0 +1,21 @@
+250619
+20:57:38
+n
+computer
+/home/n/machine/journal/samba
+
+Package configuration
+
+┌────┤ Daemons using outdated libraries ├─────┐
+│                                             │ 
+│                                             │ 
+│ Which services should be restarted?         │ 
+│                                             │ 
+│  [ ] bluetooth.service                      │ 
+│  [ ] lightdm.service                        │ 
+│                                             │ 
+│                                             │ 
+│          <Ok>              <Cancel>         │ 
+│                                             │ 
+└─────────────────────────────────────────────┘ 
+
