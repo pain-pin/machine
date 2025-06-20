@@ -1,0 +1,23 @@
+250620
+20:32:00
+n
+computer
+/home/n/machine/journal/sysadmin/skype
+
+250620-20:29:35-n@computer-~/machine/journal/networks/coloc_network-(main)
+=> cat  journalctl.grep.net.txt | sed s/[0-9]//g | cut -d\r -f 2- | sort | uniq -c | sort -rn | grep skype
+   4636 il  :: computer audit[]: AVC apparmor="DENIED" operation="open" profile="snap.skype.skype" name="/sys/devices/virtual/net/lo/speed" pid= comm="skypeforlinux" requested_mask="r" denied_mask="r" fsuid= ouid=
+   4636 il  :: computer audit[]: AVC apparmor="DENIED" operation="open" profile="snap.skype.skype" name="/sys/devices/pci:/::c./::./net/wlps/speed" pid= comm="skypeforlinux" requested_mask="r" denied_mask="r" fsuid= ouid=
+   4636 il  :: computer audit[]: AVC apparmor="DENIED" operation="open" profile="snap.skype.skype" name="/sys/devices/pci:/::c./::./net/enpsf/speed" pid= comm="skypeforlinux" requested_mask="r" denied_mask="r" fsuid= ouid=
+   4502 il  :: computer kernel: audit: type= audit(.:): apparmor="DENIED" operation="open" profile="snap.skype.skype" name="/sys/devices/virtual/net/lo/speed" pid= comm="skypeforlinux" requested_mask="r" denied_mask="r" fsuid= ouid=
+   4495 il  :: computer kernel: audit: type= audit(.:): apparmor="DENIED" operation="open" profile="snap.skype.skype" name="/sys/devices/pci:/::c./::./net/enpsf/speed" pid= comm="skypeforlinux" requested_mask="r" denied_mask="r" fsuid= ouid=
+   4472 il  :: computer kernel: audit: type= audit(.:): apparmor="DENIED" operation="open" profile="snap.skype.skype" name="/sys/devices/pci:/::c./::./net/wlps/speed" pid= comm="skypeforlinux" requested_mask="r" denied_mask="r" fsuid= ouid=
+    839  audit[]: AVC apparmor="DENIED" operation="open" profile="snap.skype.skype" name="/sys/devices/virtual/net/lo/speed" pid= comm="skypeforlinux" requested_mask="r" denied_mask="r" fsuid= ouid=
+    839  audit[]: AVC apparmor="DENIED" operation="open" profile="snap.skype.skype" name="/sys/devices/pci:/::c./::./net/wlps/speed" pid= comm="skypeforlinux" requested_mask="r" denied_mask="r" fsuid= ouid=
+    839  audit[]: AVC apparmor="DENIED" operation="open" profile="snap.skype.skype" name="/sys/devices/pci:/::c./::./net/enpsf/speed" pid= comm="skypeforlinux" requested_mask="r" denied_mask="r" fsuid= ouid=
+    739  kernel: audit: type= audit(.:): apparmor="DENIED" operation="open" profile="snap.skype.skype" name="/sys/devices/virtual/net/lo/speed" pid= comm="skypeforlinux" requested_mask="r" denied_mask="r" fsuid= ouid=
+    732  kernel: audit: type= audit(.:): apparmor="DENIED" operation="open" profile="snap.skype.skype" name="/sys/devices/pci:/::c./::./net/enpsf/speed" pid= comm="skypeforlinux" requested_mask="r" denied_mask="r" fsuid= ouid=
+    721  kernel: audit: type= audit(.:): apparmor="DENIED" operation="open" profile="snap.skype.skype" name="/sys/devices/pci:/::c./::./net/wlps/speed" pid= comm="skypeforlinux" requested_mask="r" denied_mask="r" fsuid= ouid=
+      1  skypeforlinux.desktop[]: [:/.:ERROR:ssl_client_socket_impl.cc()] handshake failed; returned -, SSL error code , net_error -
+      1 il  :: computer skypeforlinux.desktop[]: [:/.:ERROR:ssl_client_socket_impl.cc()] handshake failed; returned -, SSL error code , net_error -
+
