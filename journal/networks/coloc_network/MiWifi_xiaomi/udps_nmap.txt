@@ -1,0 +1,34 @@
+250620
+15:36:11
+n
+computer
+/home/n/machine/journal/networks/coloc_network/MiWifi_xiaomi
+
+250620-15:32:35-n@computer-~/machine/journal/networks/coloc_network-(main)
+=> sudo nmap -sU -T4 --top-ports 50 192.168.1.81
+[sudo] password for n: 
+Starting Nmap 7.93 ( https://nmap.org ) at 2025-06-20 15:35 CEST
+Warning: 192.168.1.81 giving up on port because retransmission cap hit (6).
+Nmap scan report for MiWiFi-RA82 (192.168.1.81)
+Host is up (0.0032s latency).
+Not shown: 35 closed udp ports (port-unreach)
+PORT      STATE         SERVICE
+53/udp    open|filtered domain
+69/udp    open|filtered tftp
+135/udp   open|filtered msrpc
+161/udp   open|filtered snmp
+162/udp   open|filtered snmptrap
+514/udp   open|filtered syslog
+520/udp   open|filtered route
+626/udp   open|filtered serialnumberd
+997/udp   open|filtered maitrd
+998/udp   open|filtered puparp
+1701/udp  open|filtered L2TP
+2222/udp  open|filtered msantipiracy
+5353/udp  open|filtered zeroconf
+49152/udp open|filtered unknown
+49153/udp open|filtered unknown
+MAC Address: 64:64:4A:74:DF:16 (Beijing Xiaomi Mobile Software)
+
+Nmap done: 1 IP address (1 host up) scanned in 26.28 seconds
+
