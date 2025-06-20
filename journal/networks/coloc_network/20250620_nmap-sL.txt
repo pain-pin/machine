@@ -1,0 +1,19 @@
+250620
+15:23:04
+n
+computer
+/home/n/machine/journal/networks/coloc_network
+
+250620-15:19:08-n@computer-~/machine/journal/networks/coloc_network-
+=> nmap -sL 192.168.1.1-255 | grep \(
+Starting Nmap 7.93 ( https://nmap.org ) at 2025-06-20 15:19 CEST
+Nmap scan report for box (192.168.1.1)
+Nmap scan report for flo-Inspiron-5570 (192.168.1.21)
+Nmap scan report for nicolas-Swift-SF313-53 (192.168.1.41)
+Nmap scan report for OPPO-Reno6-Pro-5G (192.168.1.47)
+Nmap scan report for CASWLT137 (192.168.1.48)
+Nmap scan report for computer (192.168.1.72)
+Nmap scan report for MiTV-MSSP3 (192.168.1.73)
+Nmap scan report for MiWiFi-RA82 (192.168.1.81)
+Nmap done: 255 IP addresses (0 hosts up) scanned in 2.57 seconds
+
