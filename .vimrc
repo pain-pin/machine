@@ -289,4 +289,4 @@ call pathogen#infect()
 syntax on
 filetype plugin indent on
 " Start NERDTree and leave the cursor in it.
-autocmd VimEnter * NERDTree
+" autocmd VimEnter * NERDTree
