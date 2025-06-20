@@ -1,0 +1,59 @@
+250620
+19:30:28
+n
+computer
+/home/n/machine/journal/sysadmin/hibernation
+
+250620-19:26:03-n@computer-~/machine/journal/networks/coloc_network-(main)
+=> sudo journalctl -b 1 | tail -50
+avril 24 11:09:06 computer wpa_supplicant[828]: wlp3s0: CTRL-EVENT-SIGNAL-CHANGE above=0 signal=-9999 noise=9999 txrate=0
+avril 24 11:09:06 computer NetworkManager[813]: <info>  [1745485746.6813] device (wlp3s0): supplicant interface state: completed -> disconnected
+avril 24 11:09:06 computer NetworkManager[813]: <info>  [1745485746.6817] device (wlp3s0): state change: deactivating -> disconnected (reason 'sleeping', sys-iface-state: 'managed')
+avril 24 11:09:06 computer NetworkManager[813]: <info>  [1745485746.6823] dhcp4 (wlp3s0): canceled DHCP transaction
+avril 24 11:09:06 computer NetworkManager[813]: <info>  [1745485746.6824] dhcp4 (wlp3s0): activation: beginning transaction (timeout in 45 seconds)
+avril 24 11:09:06 computer NetworkManager[813]: <info>  [1745485746.6825] dhcp4 (wlp3s0): state changed no lease
+avril 24 11:09:06 computer avahi-daemon[780]: Withdrawing address record for 2a02:8428:2409:6701:db59:e7ae:fc90:554c on wlp3s0.
+avril 24 11:09:06 computer avahi-daemon[780]: Leaving mDNS multicast group on interface wlp3s0.IPv6 with address 2a02:8428:2409:6701:db59:e7ae:fc90:554c.
+avril 24 11:09:06 computer avahi-daemon[780]: Joining mDNS multicast group on interface wlp3s0.IPv6 with address fe80::4184:f801:cbd8:6fcc.
+avril 24 11:09:06 computer avahi-daemon[780]: Registering new address record for fe80::4184:f801:cbd8:6fcc on wlp3s0.*.
+avril 24 11:09:06 computer avahi-daemon[780]: Withdrawing address record for fe80::4184:f801:cbd8:6fcc on wlp3s0.
+avril 24 11:09:06 computer avahi-daemon[780]: Leaving mDNS multicast group on interface wlp3s0.IPv6 with address fe80::4184:f801:cbd8:6fcc.
+avril 24 11:09:06 computer avahi-daemon[780]: Interface wlp3s0.IPv6 no longer relevant for mDNS.
+avril 24 11:09:06 computer avahi-daemon[780]: Interface wlp3s0.IPv4 no longer relevant for mDNS.
+avril 24 11:09:06 computer avahi-daemon[780]: Leaving mDNS multicast group on interface wlp3s0.IPv4 with address 192.168.1.72.
+avril 24 11:09:06 computer NetworkManager[813]: <info>  [1745485746.7109] device (wlp3s0): set-hw-addr: set MAC address to F2:5B:55:4F:92:2B (scanning)
+avril 24 11:09:06 computer audit[2141]: AVC apparmor="DENIED" operation="open" profile="snap.skype.skype" name="/sys/devices/virtual/net/lo/speed" pid=2141 comm="skypeforlinux" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+avril 24 11:09:06 computer audit[2141]: AVC apparmor="DENIED" operation="open" profile="snap.skype.skype" name="/sys/devices/pci0000:00/0000:00:1c.4/0000:02:00.1/net/enp2s0f1/speed" pid=2141 comm="skypeforlinux" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+avril 24 11:09:06 computer audit[2141]: AVC apparmor="DENIED" operation="open" profile="snap.skype.skype" name="/sys/devices/pci0000:00/0000:00:1c.6/0000:03:00.0/net/wlp3s0/speed" pid=2141 comm="skypeforlinux" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+avril 24 11:09:06 computer avahi-daemon[780]: Withdrawing address record for 192.168.1.72 on wlp3s0.
+avril 24 11:09:06 computer avahi-daemon[780]: Joining mDNS multicast group on interface wlp3s0.IPv4 with address 192.168.1.72.
+avril 24 11:09:06 computer avahi-daemon[780]: New relevant interface wlp3s0.IPv4 for mDNS.
+avril 24 11:09:06 computer avahi-daemon[780]: Registering new address record for 192.168.1.72 on wlp3s0.IPv4.
+avril 24 11:09:06 computer avahi-daemon[780]: Withdrawing address record for 192.168.1.72 on wlp3s0.
+avril 24 11:09:06 computer avahi-daemon[780]: Leaving mDNS multicast group on interface wlp3s0.IPv4 with address 192.168.1.72.
+avril 24 11:09:06 computer avahi-daemon[780]: Interface wlp3s0.IPv4 no longer relevant for mDNS.
+avril 24 11:09:06 computer audit[2141]: AVC apparmor="DENIED" operation="open" profile="snap.skype.skype" name="/sys/devices/virtual/net/lo/speed" pid=2141 comm="skypeforlinux" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+avril 24 11:09:06 computer audit[2141]: AVC apparmor="DENIED" operation="open" profile="snap.skype.skype" name="/sys/devices/pci0000:00/0000:00:1c.4/0000:02:00.1/net/enp2s0f1/speed" pid=2141 comm="skypeforlinux" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+avril 24 11:09:06 computer audit[2141]: AVC apparmor="DENIED" operation="open" profile="snap.skype.skype" name="/sys/devices/pci0000:00/0000:00:1c.6/0000:03:00.0/net/wlp3s0/speed" pid=2141 comm="skypeforlinux" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+avril 24 11:09:06 computer NetworkManager[813]: <info>  [1745485746.7681] device (wlp3s0): state change: disconnected -> unmanaged (reason 'sleeping', sys-iface-state: 'managed')
+avril 24 11:09:06 computer NetworkManager[813]: <info>  [1745485746.8986] device (wlp3s0): set-hw-addr: reset MAC address to CC:2F:71:54:47:8C (unmanage)
+avril 24 11:09:06 computer audit[2141]: AVC apparmor="DENIED" operation="open" profile="snap.skype.skype" name="/sys/devices/virtual/net/lo/speed" pid=2141 comm="skypeforlinux" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+avril 24 11:09:06 computer audit[2141]: AVC apparmor="DENIED" operation="open" profile="snap.skype.skype" name="/sys/devices/pci0000:00/0000:00:1c.4/0000:02:00.1/net/enp2s0f1/speed" pid=2141 comm="skypeforlinux" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+avril 24 11:09:06 computer audit[2141]: AVC apparmor="DENIED" operation="open" profile="snap.skype.skype" name="/sys/devices/pci0000:00/0000:00:1c.6/0000:03:00.0/net/wlp3s0/speed" pid=2141 comm="skypeforlinux" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+avril 24 11:09:06 computer wpa_supplicant[828]: p2p-dev-wlp3s0: CTRL-EVENT-DSCP-POLICY clear_all
+avril 24 11:09:06 computer audit[2141]: AVC apparmor="DENIED" operation="open" profile="snap.skype.skype" name="/sys/devices/virtual/net/lo/speed" pid=2141 comm="skypeforlinux" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+avril 24 11:09:06 computer audit[2141]: AVC apparmor="DENIED" operation="open" profile="snap.skype.skype" name="/sys/devices/pci0000:00/0000:00:1c.4/0000:02:00.1/net/enp2s0f1/speed" pid=2141 comm="skypeforlinux" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+avril 24 11:09:06 computer audit[2141]: AVC apparmor="DENIED" operation="open" profile="snap.skype.skype" name="/sys/devices/pci0000:00/0000:00:1c.6/0000:03:00.0/net/wlp3s0/speed" pid=2141 comm="skypeforlinux" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+avril 24 11:09:06 computer wpa_supplicant[828]: p2p-dev-wlp3s0: CTRL-EVENT-DSCP-POLICY clear_all
+avril 24 11:09:06 computer wpa_supplicant[828]: nl80211: deinit ifname=p2p-dev-wlp3s0 disabled_11b_rates=0
+avril 24 11:09:06 computer wpa_supplicant[828]: wlp3s0: CTRL-EVENT-DSCP-POLICY clear_all
+avril 24 11:09:07 computer wpa_supplicant[828]: wlp3s0: CTRL-EVENT-DSCP-POLICY clear_all
+avril 24 11:09:07 computer wpa_supplicant[828]: nl80211: deinit ifname=wlp3s0 disabled_11b_rates=0
+avril 24 11:09:07 computer audit[2141]: AVC apparmor="DENIED" operation="open" profile="snap.skype.skype" name="/sys/devices/virtual/net/lo/speed" pid=2141 comm="skypeforlinux" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+avril 24 11:09:07 computer audit[2141]: AVC apparmor="DENIED" operation="open" profile="snap.skype.skype" name="/sys/devices/pci0000:00/0000:00:1c.4/0000:02:00.1/net/enp2s0f1/speed" pid=2141 comm="skypeforlinux" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+avril 24 11:09:07 computer audit[2141]: AVC apparmor="DENIED" operation="open" profile="snap.skype.skype" name="/sys/devices/pci0000:00/0000:00:1c.6/0000:03:00.0/net/wlp3s0/speed" pid=2141 comm="skypeforlinux" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+avril 24 11:09:07 computer audit[2141]: AVC apparmor="DENIED" operation="open" profile="snap.skype.skype" name="/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0003:00/power_supply/AC/online" pid=2141 comm="skypeforlinux" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+avril 24 11:09:07 computer cinnamon-screensaver-pam-helper[172402]: pam_unix(cinnamon-screensaver:auth): authentication failure; logname= uid=1000 euid=1000 tty=:0 ruser= rhost=  user=n
+avril 24 11:09:08 computer systemd[1]: Reached target sleep.target - Sleep.
+avril 24 11:09:08 computer systemd[1]: Starting systemd-suspend.service - System Suspend...
+
