@@ -1,0 +1,8 @@
+250620
+13:56:19
+n
+computer
+/home/n/machine/journal/sysadmin/test
+
+ceci est un sest utilisant un lien symbolique
+
