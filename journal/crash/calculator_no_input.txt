@@ -1,0 +1,15 @@
+250621
+17:38:19
+n
+computer
+/home/n/machine/journal/crash
+
+the calculator graphical interface does not work (no way to enter inputs)
+finish proposing a forced quitting because it does not responds
+
+250621-17:39:31-n@computer-~/machine/journal/networks/coloc_network-(main)
+=> ps aux | grep calc
+n          34339  0.2  0.1  15616 10260 pts/5    Sl+  17:38   0:00 vim + calculator_no_input.txt
+n          34356  2.9  1.9 1507628 159740 ?      Sl   17:39   0:00 gnome-calculator
+n          34412  0.0  0.0   6476  2028 pts/3    S+   17:39   0:00 grep --color=auto calc
+
