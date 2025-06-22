@@ -1,0 +1,14 @@
+250622
+13:05:45
+n
+computer
+/home/n/machine/journal/sysadmin/network/coloc_network/hidden
+
+250622-13:03:52-n@computer-~/machine/journal/sysadmin/network-
+=> find . -type f -exec grep 'ce:bd:6c:dd:86:74' {} \;
+192.168.1.85	ce:bd:6c:dd:86:74	(Unknown: locally administered)
+(pip_env) 
+250622-13:04:16-n@computer-~/machine/journal/sysadmin/network-
+=> find . -type f -exec grep '8a:d2:d1:1b:19:14' {} \;
+192.168.1.57	8a:d2:d1:1b:19:14	(Unknown: locally administered)
+
