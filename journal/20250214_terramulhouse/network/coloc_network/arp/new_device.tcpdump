@@ -1,0 +1,44 @@
+250622
+13:46:09
+n
+computer
+/home/n/machine/journal/sysadmin/network/coloc_network/arp
+
+250622-13:32:36-n@computer-~/machine/journal/20250214_terramulhouse/network-(main)
+=> sudo tcpdump -i wlp3s0 arp
+[sudo] password for n: 
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on wlp3s0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+13:32:54.801751 ARP, Request who-has computer tell 192.168.1.63, length 28
+13:32:54.801768 ARP, Reply computer is-at cc:2f:71:54:47:8c (oui Unknown), length 28
+13:34:00.543194 ARP, Request who-has computer tell _gateway, length 28
+13:34:00.543211 ARP, Reply computer is-at cc:2f:71:54:47:8c (oui Unknown), length 28
+13:34:54.915269 ARP, Request who-has computer tell 192.168.1.63, length 28
+13:34:54.915286 ARP, Reply computer is-at cc:2f:71:54:47:8c (oui Unknown), length 28
+13:35:01.064005 ARP, Request who-has computer tell _gateway, length 28
+13:35:01.064021 ARP, Reply computer is-at cc:2f:71:54:47:8c (oui Unknown), length 28
+13:35:19.183721 ARP, Request who-has 192.168.1.63 tell _gateway, length 28
+13:36:01.577267 ARP, Request who-has computer tell _gateway, length 28
+13:36:01.577284 ARP, Reply computer is-at cc:2f:71:54:47:8c (oui Unknown), length 28
+13:36:54.722798 ARP, Request who-has computer tell 192.168.1.63, length 28
+13:36:54.722815 ARP, Reply computer is-at cc:2f:71:54:47:8c (oui Unknown), length 28
+13:37:00.252258 ARP, Request who-has computer tell _gateway, length 28
+13:37:00.252274 ARP, Reply computer is-at cc:2f:71:54:47:8c (oui Unknown), length 28
+13:38:02.278228 ARP, Request who-has computer tell _gateway, length 28
+13:38:02.278246 ARP, Reply computer is-at cc:2f:71:54:47:8c (oui Unknown), length 28
+13:38:54.836864 ARP, Request who-has computer tell 192.168.1.63, length 28
+13:38:54.836881 ARP, Reply computer is-at cc:2f:71:54:47:8c (oui Unknown), length 28
+13:39:02.824197 ARP, Request who-has computer tell _gateway, length 28
+13:39:02.824215 ARP, Reply computer is-at cc:2f:71:54:47:8c (oui Unknown), length 28
+13:40:03.034763 ARP, Request who-has computer tell _gateway, length 28
+13:40:03.034780 ARP, Reply computer is-at cc:2f:71:54:47:8c (oui Unknown), length 28
+13:40:55.872663 ARP, Request who-has computer tell 192.168.1.63, length 28
+13:40:55.872681 ARP, Reply computer is-at cc:2f:71:54:47:8c (oui Unknown), length 28
+13:41:03.379780 ARP, Request who-has computer tell _gateway, length 28
+13:41:03.379798 ARP, Reply computer is-at cc:2f:71:54:47:8c (oui Unknown), length 28
+13:42:04.072638 ARP, Request who-has computer tell _gateway, length 28
+13:42:04.072652 ARP, Reply computer is-at cc:2f:71:54:47:8c (oui Unknown), length 28
+13:42:54.762856 ARP, Request who-has computer tell 192.168.1.63, length 28
+13:42:54.762873 ARP, Reply computer is-at cc:2f:71:54:47:8c (oui Unknown), length 28
+13:42:56.909161 ARP, Request who-has computer tell _gateway, length 28
+13:42:56.909177 ARP, Reply computer is-at cc:2f:71:54:47:8c (oui Unknown), length 28
