@@ -1,0 +1,69 @@
+250620
+20:15:47
+n
+computer
+/home/n/machine/journal/sysadmin/netmork/wifi
+
+250620-20:12:50-n@computer-~/machine/journal/networks/coloc_network-(main)
+=> cat $WIFI_JOURNALCTL | sed s/[0-9]//g | cut -d\r -f 2- | sort | uniq -c | sort -rn
+    202  kernel: iwlwifi ::.: Applying debug destination EXTERNAL_DRAM
+    110  NetworkManager[]: <info>  [.] device (wlps): Activation: (wifi) Stage  of  (Device Configure) successful. Connected to wireless network "Binder-fd"
+    110  NetworkManager[]: <info>  [.] device (wlps): Activation: (wifi) connection 'Auto Binder-fd' has security, and secrets exist.  No new secrets needed.
+    110  NetworkManager[]: <info>  [.] device (wlps): Activation: (wifi) access point 'Auto Binder-fd' has security, but secrets are required.
+     95  kernel: iwlwifi ::.: FW already configured () - re-configuring
+     22  NetworkManager[]: <info>  [.] device (wlps): Activation: (wifi) Stage  of  (Device Configure) successful. Connected to wireless network "TP-Link_A"
+     22  NetworkManager[]: <info>  [.] device (wlps): Activation: (wifi) connection 'Auto TP-Link_A' has security, and secrets exist.  No new secrets needed.
+     22  NetworkManager[]: <info>  [.] device (wlps): Activation: (wifi) access point 'Auto TP-Link_A' has security, but secrets are required.
+     12  sensors[]: iwlwifi_-virtual-
+     12  NetworkManager[]: <info>  [.] rfkill: found Wi-Fi radio killswitch (at /sys/devices/pci:/::c./::./ieee/phy/rfkill) (driver iwlwifi)
+     12  NetworkManager[]: <info>  [.] Loaded device plugin: NMWifiFactory (/usr/lib/x_-linux-gnu/NetworkManager/../libnm-device-plugin-wifi.so)
+     12  kernel: iwlwifi ::. wlps: renamed from wlan
+     12  kernel: iwlwifi ::.: loaded firmware version .. D-.ucode op_mode iwlmvm
+     12  kernel: iwlwifi ::.: Found debug destination: EXTERNAL_DRAM
+     12  kernel: iwlwifi ::.: Found debug configuration: 
+     12  kernel: iwlwifi ::.: firmware: direct-loading firmware iwlwifi-D-.ucode
+     12  kernel: iwlwifi ::.: enabling device ( -> )
+     12  kernel: iwlwifi ::.: Detected Intel(R) Dual Band Wireless AC , REV=x
+     12  kernel: iwlwifi ::.: base HW address: cc:f::::c, OTP minor version: x
+     12  kernel: iwlwifi ::.: Allocated x bytes for firmware monitor.
+     12  kernel: Intel(R) Wireless WiFi driver for Linux
+     11  kernel: iwlwifi ::.: No beacon heard and the time event is over already...
+      9 il  :: computer kernel: iwlwifi ::.: Applying debug destination EXTERNAL_DRAM
+      7  NetworkManager[]: <info>  [.] device (wlps): Activation: (wifi) connection 'Auto Toto' has security, and secrets exist.  No new secrets needed.
+      7  NetworkManager[]: <info>  [.] device (wlps): Activation: (wifi) access point 'Auto Toto' has security, but secrets are required.
+      7  NetworkManager[]: <info>  [.] device (wlps): Activation: (wifi) access point 'Auto Binder-fd_GHZ' has security, but secrets are required.
+      4 il  :: computer kernel: iwlwifi ::.: FW already configured () - re-configuring
+      3  NetworkManager[]: <info>  [.] device (wlps): Activation: (wifi) access point 'Auto Freebox-FDA' has security, but secrets are required.
+      3 il  :: computer NetworkManager[]: <info>  [.] device (wlps): Activation: (wifi) Stage  of  (Device Configure) successful. Connected to wireless network "Binder-fd"
+      3 il  :: computer NetworkManager[]: <info>  [.] device (wlps): Activation: (wifi) connection 'Auto Binder-fd' has security, and secrets exist.  No new secrets needed.
+      3 il  :: computer NetworkManager[]: <info>  [.] device (wlps): Activation: (wifi) access point 'Auto Binder-fd' has security, but secrets are required.
+      3 il  :: computer kernel: iwlwifi ::.: No beacon heard and the time event is over already...
+      2  NetworkManager[]: <warn>  [.] device (wlps): Activation: (wifi) association took too long, failing activation
+      2  NetworkManager[]: <info>  [.] device (wlps): Activation: (wifi) access point 'Auto SFR_FF' has security, but secrets are required.
+      2  NetworkManager[]: <info>  [.] device (wlps): Activation: (wifi) access point 'Auto Freebox-AFA' has security, but secrets are required.
+      2  kernel: (NULL device *): firmware: direct-loading firmware iwlwifi-D-.ucode
+      2  kernel: iwlwifi ::.: RF_KILL bit toggled to enable radio.
+      2 
+      1  NetworkManager[]: ((src/core/devices/wifi/nm-device-wifi.c:)): assertion '<dropped>' failed
+      1  NetworkManager[]: <info>  [.] device (wlps): Activation: (wifi) Stage  of  (Device Configure) successful. Started Wi-Fi Hotspot "computer"
+      1  NetworkManager[]: <info>  [.] device (wlps): Activation: (wifi) connection 'Hotspot' has security, and secrets exist.  No new secrets needed.
+      1  NetworkManager[]: <info>  [.] device (wlps): Activation: (wifi) access point 'Hotspot' has security, but secrets are required.
+      1  NetworkManager[]: <info>  [.] device (wlps): Activation: (wifi) access point 'Auto SFR_BF' has security, but secrets are required.
+      1  NetworkManager[]: <info>  [.] device (wlps): Activation: (wifi) access point 'Auto Freebox-AD' has security, but secrets are required.
+      1  NetworkManager[]: <info>  [.] device (wlps): Activation: (wifi) access point 'Auto Djoumessi_BM' has security, but secrets are required.
+      1 nalctl | grep -i wifi > wifi/journald_grep_wifi.txt
+      1 -~/machine/journal/networks/coloc_network-(main)
+      1 il  :: computer sensors[]: iwlwifi_-virtual-
+      1 il  :: computer NetworkManager[]: <info>  [.] rfkill: found Wi-Fi radio killswitch (at /sys/devices/pci:/::c./::./ieee/phy/rfkill) (driver iwlwifi)
+      1 il  :: computer NetworkManager[]: <info>  [.] Loaded device plugin: NMWifiFactory (/usr/lib/x_-linux-gnu/NetworkManager/../libnm-device-plugin-wifi.so)
+      1 il  :: computer kernel: iwlwifi ::. wlps: renamed from wlan
+      1 il  :: computer kernel: iwlwifi ::.: loaded firmware version .. D-.ucode op_mode iwlmvm
+      1 il  :: computer kernel: iwlwifi ::.: Found debug destination: EXTERNAL_DRAM
+      1 il  :: computer kernel: iwlwifi ::.: Found debug configuration: 
+      1 il  :: computer kernel: iwlwifi ::.: firmware: direct-loading firmware iwlwifi-D-.ucode
+      1 il  :: computer kernel: iwlwifi ::.: enabling device ( -> )
+      1 il  :: computer kernel: iwlwifi ::.: Detected Intel(R) Dual Band Wireless AC , REV=x
+      1 il  :: computer kernel: iwlwifi ::.: base HW address: cc:f::::c, OTP minor version: x
+      1 il  :: computer kernel: iwlwifi ::.: Allocated x bytes for firmware monitor.
+      1 il  :: computer kernel: Intel(R) Wireless WiFi driver for Linux
+

@@ -1,0 +1,23 @@
+250620
+15:43:11
+n
+computer
+/home/n/machine/journal/networks/coloc_network
+
+250620-15:40:44-n@computer-~/machine/journal/networks/coloc_network-(main)
+=> avahi-browse -a
++ br-cc680f061a34 IPv4 COMPUTER                                      Microsoft Windows Network local
++ docker0 IPv4 COMPUTER                                      Microsoft Windows Network local
++ wlp3s0 IPv6 COMPUTER                                      Microsoft Windows Network local
++ wlp3s0 IPv4 COMPUTER                                      Microsoft Windows Network local
++     lo IPv4 COMPUTER                                      Microsoft Windows Network local
++ wlp3s0 IPv6 COMPUTER                                      Device Info          local
++ br-cc680f061a34 IPv4 COMPUTER                                      Device Info          local
++ docker0 IPv4 COMPUTER                                      Device Info          local
++ wlp3s0 IPv4 COMPUTER                                      Device Info          local
++     lo IPv4 COMPUTER                                      Device Info          local
++ wlp3s0 IPv6 6fabcc3a-e172-4b88-bc7c-e30e3049a334          _occam._udp          local
++ wlp3s0 IPv4 6fabcc3a-e172-4b88-bc7c-e30e3049a334          _occam._udp          local
++ wlp3s0 IPv6 Amazon Echo #51B7                             _meshcop._udp        local
++ wlp3s0 IPv4 Amazon Echo #51B7                             _meshcop._udp        local
+
