@@ -297,35 +297,6 @@ save_cmd ()
 
 alias v="nvim"
 
-diariz ()
-{
-	if [ "$#" -ne 1 ]; then
-	    echo "Usage: $0 <path/to/file>
-	    (without .md extention)"
-	    return 1
-	fi
-	DATE=$(date +%Y-%m-%d)
-	TIME=$(date +%H-%M)
-	DIR_JOURNAL="$HOME/machine/journal"
-	FILE=$1
-	NEW_DIARY="$DIR_JOURNAL/$FILE.md"
-	mkdir -p "$DIR_JOURNAL/$(dirname "$FILE")"
-	{
-	    echo "# Journal du $DATE à $TIME"
-	    echo "## Thème : $THEME"
-	    echo ""
-	    echo "### Réflexions"
-	    echo "- "
-	    echo ""
-	    echo "### Événements marquants"
-	    echo "- "
-	    echo ""
-	    echo "### Notes supplémentaires"
-	    echo "- "
-	} > "$NEW_DIARY"
-	vim + "$NEW_DIARY"
-}
-
 bashalias ()
 {
 	vim ~/.bash_aliases
@@ -525,5 +496,102 @@ virtual() {
         -vga virtio \
         -nic user \
         "$@"
+}
+
+report_last_boot ()
+{
+	NAME=$1
+	DIR_ORIGINAL=$PWD
+	local DATE_STRING=$(date +"%y%m%d")
+    local TIME_STRING=$(date +"%T")
+    local YEAR=$(date +"%Y")
+    local USER=$(whoami)
+    local HOST=$(hostname -s)
+    local PWD_=$(pwd)
+	CRASH_DIR="${DATE_STRING}_${TIME_STRING}"
+	F_NAME="${NAME}.crash"
+	DIR_RELATIVE="$HOME/machine/journal/sysadmin/crash"
+	DIR_RELATIVE+="/${CRASH_DIR}"
+	if [ "$#" -ne 1 ]; then
+	    echo "Usage: $0 FILE_NAME"
+		echo "default path is $DIR_RELATIVE/${CRASH_DIR}/FILE_NAME.crash"
+		echo "write log outputs"
+	    return 1
+	fi
+	mkdir -p $DIR_RELATIVE
+	cd $DIR_RELATIVE
+	echo "$DATE_STRING" >> $F_NAME
+	echo "$TIME_STRING" >> $F_NAME
+	echo "$USER" >> $F_NAME
+	echo "$HOST" >> $F_NAME
+	echo >> $F_NAME
+	echo "###############################################" | tee -a $F_NAME
+	echo >> $F_NAME
+	echo "$NAME" >> $F_NAME
+	echo >> $F_NAME
+	CMD="sudo journalctl -b -1 | grep -v UFW | tail -100 #(but cleaned)"
+    echo ${CMD}	>> $F_NAME
+    eval ${CMD}	>> $F_NAME
+	echo >> $F_NAME
+	echo "###############################################" | tee -a $F_NAME
+	echo >> $F_NAME
+	CMD="sudo journalctl -k -b -1 | grep -v UFW | tail -100 #(but cleaned)"
+    echo ${CMD}	>> $F_NAME
+    eval ${CMD}	>> $F_NAME
+
+	vim $F_NAME
+	git add $F_NAME
+	git commit -m "[crash report] $F_NAME at $DIR_RELATIVE, automated by $0 script"
+	git push
+	cd $DIR_ORIGINAL
+}
+
+
+report_crash ()
+{
+	NAME=$1
+	DIR_ORIGINAL=$PWD
+	local DATE_STRING=$(date +"%y%m%d")
+    local TIME_STRING=$(date +"%T")
+    local YEAR=$(date +"%Y")
+    local USER=$(whoami)
+    local HOST=$(hostname -s)
+    local PWD_=$(pwd)
+	CRASH_DIR="${DATE_STRING}_${TIME_STRING}"
+	F_NAME="${NAME}.crash"
+	DIR_RELATIVE="$HOME/machine/journal/sysadmin/crash"
+	DIR_RELATIVE+="/${CRASH_DIR}"
+	if [ "$#" -ne 1 ]; then
+	    echo "Usage: $0 FILE_NAME"
+		echo "default path is $DIR_RELATIVE/${CRASH_DIR}/FILE_NAME.crash"
+		echo "write log outputs"
+	    return 1
+	fi
+	mkdir -p $DIR_RELATIVE
+	cd $DIR_RELATIVE
+	echo "$DATE_STRING" >> $F_NAME
+	echo "$TIME_STRING" >> $F_NAME
+	echo "$USER" >> $F_NAME
+	echo "$HOST" >> $F_NAME
+	echo >> $F_NAME
+	echo "###############################################" >> $F_NAME
+	echo >> $F_NAME
+	echo "$NAME" >> $F_NAME
+	echo >> $F_NAME
+	CMD="sudo journalctl -b 0 | grep -v UFW | tail -100 #(but cleaned)"
+    echo ${CMD}	>> $F_NAME
+    eval ${CMD}	>> $F_NAME
+	echo >> $F_NAME
+	echo "###############################################" >> $F_NAME
+	echo >> $F_NAME
+	CMD="sudo journalctl -k -b 0 | grep -v UFW | tail -100 #(but cleaned)"
+    echo ${CMD}	>> $F_NAME
+    eval ${CMD}	>> $F_NAME
+
+	vim $F_NAME
+	git add $F_NAME
+	git commit -m "[crash report] $F_NAME at $DIR_RELATIVE, automated by $0 script"
+	git push
+	cd $DIR_ORIGINAL
 }
 
