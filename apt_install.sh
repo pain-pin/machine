@@ -1,10 +1,11 @@
 #!/usr/bin/bash
 
+apt install -y  ufw
 curl -fsS https://dl.brave.com/install.sh | sh
 
 apt install -y  bc
 apt install -y  ctags
-apt install -y firefox
+#apt install -y firefox
 apt install python3.11-venv
 apt install -y  cmake
 apt install -y  gimp
@@ -33,6 +34,6 @@ apt install -y vlc
 apt install -y curl
 apt install -y tree
 apt install -y ffmpeg
-apt install -y snap
+#apt install -y snap
 curl -fsSL "https://windsurf-stable.codeiumdata.com/wVxQEIWkwPUEAGf3/windsurf.gpg" | sudo gpg --dearmor -o /usr/share/keyrings/windsurf-stable-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/windsurf-stable-archive-keyring.gpg arch=amd64] https://windsurf-stable.codeiumdata.com/wVxQEIWkwPUEAGf3/apt stable main" | sudo tee /etc/apt/sources.list.d/windsurf.list > /dev/null

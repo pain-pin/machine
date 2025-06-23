@@ -55,3 +55,6 @@ bin
 .idea/*
 
 pip_env/lib/
+
+journal
+passwd_gen
