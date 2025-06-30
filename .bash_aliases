@@ -334,17 +334,17 @@ journal ()
     local USER=$(whoami)
     local HOST=$(hostname -s)
     local PWD_=$(pwd)
-	F_NAME="${DATE_STRING}_${USER}_${HOST}.txt"
+	STAMP="${DATE_STRING}/${USER}_${HOST}"
 	DIR_ALIAS="$HOME/machine/journal"
 	if [ "$#" -gt 2 -o "$#" -eq 0 ]; then
 	    echo "Usage: $0 [path/to] <file>"
 		echo "default path is $DIR_ALIAS"
-		echo "default file name is $F_NAME"
+		echo "default dir name is $STAMP"
 	    return 1
 	fi
 	cd $DIR_ALIAS
 	if [ "$#" -eq 1 ]; then
-		DIR_RELATIVE="$YEAR"
+		DIR_RELATIVE="$YEAR/$STAMP"
 		F_NAME=$1
 	fi
 	if [ "$#" -eq 2 ]; then
@@ -385,7 +385,6 @@ journal-perso ()
 	fi
 	cd $DIR_ALIAS
 	if [ "$#" -eq 1 ]; then
-		if [ -d 
 		DIR_RELATIVE=""
 		F_NAME=$1
 	fi
