@@ -385,7 +385,8 @@ journal-perso ()
 	fi
 	cd $DIR_ALIAS
 	if [ "$#" -eq 1 ]; then
-		DIR_RELATIVE="$YEAR"
+		if [ -d 
+		DIR_RELATIVE=""
 		F_NAME=$1
 	fi
 	if [ "$#" -eq 2 ]; then
