@@ -144,6 +144,7 @@ gitaddcommit () {
 	echo "\$1: $1"
 	if [ -n "$1" ]; then
 		git commit -m "$1"
+	fi
 	git commit
 }
 
