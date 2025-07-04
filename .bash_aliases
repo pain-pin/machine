@@ -144,11 +144,7 @@ gitaddcommit () {
 	echo "\$1: $1"
 	if [ -n "$1" ]; then
 		git commit -m "$1"
-	else
-		echo 'need an arg as commmit:'
-		echo 'gitaddcommit "je suis un commit"'
-		echo '(or use gitadd)'
-	fi
+	git commit
 }
 
 gitotal () {
