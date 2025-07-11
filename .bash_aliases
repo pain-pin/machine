@@ -444,9 +444,17 @@ gcl ()
 
 src ()
 {
-	if [ -n $1 ]
-		source $1/bin/activate
 	source $HOME/.bashrc
+}
+
+a ()
+{
+	PATH='/'
+	if [ -n $1 ] ; then
+		PATH+=$1
+		PATH+=/
+	fi
+	bash .${PATH}bin/activate
 }
 
 # from https://wiki.alpinelinux.org/wiki/Installing_Alpine_in_a_virtual_machine
