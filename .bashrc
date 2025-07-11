@@ -84,7 +84,8 @@ RESET_COLOR="$NO_COLOR"
 
 export GIT_EDITOR=vim
 
-PS1="\n${DATE_COLOR}\D{%y%m%d}${RESET_COLOR}-${TIME_COLOR}\t${RESET_COLOR}-${USER_COLOR}\u${RESET_COLOR}@${HOST_COLOR}\H${RESET_COLOR}-${DIR_COLOR}\w${RESET_COLOR}-${RED}$(parse_git_branch)${RESET_COLOR}\n=> "
+BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+PS1="\n${DATE_COLOR}\D{%y%m%d}${RESET_COLOR}-${TIME_COLOR}\t${RESET_COLOR}-${USER_COLOR}\u${RESET_COLOR}@${HOST_COLOR}\H${RESET_COLOR}-${DIR_COLOR}\w${RESET_COLOR}-${RED}${BRANCH}${RESET_COLOR}\n=> "
 
 export OCTET="(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)"
 export IPV4_REG="($OCTET\.){3}$OCTET"
