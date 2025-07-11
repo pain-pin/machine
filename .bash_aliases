@@ -444,6 +444,8 @@ gcl ()
 
 src ()
 {
+	if [ -n $1 ]
+		source $1/bin/activate
 	source $HOME/.bashrc
 }
 
