@@ -332,7 +332,7 @@ journal ()
     local HOST=$(hostname -s)
     local PWD_=$(pwd)
 	STAMP="${DATE_STRING}/${USER}_${HOST}"
-	DIR_ALIAS="$HOME/machine/journal"
+	DIR_ALIAS="$HOME/journal"
 	if [ "$#" -gt 2 -o "$#" -eq 0 ]; then
 	    echo "Usage: $0 [path/to] <file>"
 		echo "default path is $DIR_ALIAS"
