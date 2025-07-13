@@ -1,8 +1,0 @@
-250620
-12:34:08
-n
-computer
-/home/n/machine/journal/templeOS
-
-connection http
-download "blocked" (but downloaded anyway)
