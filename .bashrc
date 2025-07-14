@@ -101,6 +101,12 @@ export YYYYMMDD_REG="$YYYY_REG$MM_REG$DD_REG"
 export DDMMYYYY_REG="$DD_REG$MM_REG$YYYY_REG"
 export CFUNCTION="^[a-z].*\)$"
 
+# --- Media File Extension Regex Patterns ---
+export AUDIO_REG="mp3|wav|ogg|flac|m4a|aac|aiff|opus"
+export VIDEO_REG="mp4|mkv|mov|avi|webm|wmv|flv|mpeg|mpg|3gp|m4v"
+export IMAGE_REG="jpg|jpeg|png|gif|bmp|webp|tiff|ico|heic|svg|jfif"
+
+export MEDIA_REG="(?i)\.(${MEDIA_AUDIO_EXT}|${MEDIA_VIDEO_EXT}|${MEDIA_IMAGE_EXT})$"
 
 __conda_setup="$('/home/presko/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
