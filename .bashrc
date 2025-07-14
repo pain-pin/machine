@@ -106,7 +106,7 @@ export AUDIO_REG="mp3|wav|ogg|flac|m4a|aac|aiff|opus"
 export VIDEO_REG="mp4|mkv|mov|avi|webm|wmv|flv|mpeg|mpg|3gp|m4v"
 export IMAGE_REG="jpg|jpeg|png|gif|bmp|webp|tiff|ico|heic|svg|jfif"
 
-export MEDIA_REG="(?i)\.(${AUDIO_REG}|${VIDEO_REG}|${IMAGE_REG})$"
+export MEDIA_REG="\.(${AUDIO_REG}|${VIDEO_REG}|${IMAGE_REG})$"
 
 __conda_setup="$('/home/presko/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
