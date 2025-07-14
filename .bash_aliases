@@ -608,13 +608,17 @@ mediaspi ()
 		echo "usage: $0 $DIR_NAME"
 		return 1
 	fi
-	BINAME="$1"
+	BINAME="collector_bin"
 	DEST="$HOME/perso/${BINAME}"
-	DIR="${1:-$BINAME}"
-	echo "saved in $DIR"
-	mkdir -p $DIR
-	mkdir -p $DEST
+	DIR="${1}"
+	mkdir  -p $DEST
+	mkdir $DIR
+	if [ $? -ne 0 ] ; then
+		echo "$DIR exists, must be deleted (will be anyway)"
+		return 1
+	fi
 	find . -type f -regextype egrep -iregex ".*$MEDIA_REG" -exec cp --parents -u {} -t $DIR \;
-	cp -apu $DIR $DEST
+	cp -apu $DIR -t $DEST
+	rm -rf $DIR
 
 }
