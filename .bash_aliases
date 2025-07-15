@@ -136,16 +136,15 @@ gitmain () {
 gitadd () {
 	make fclean
 	git add .
-	git status
 }
 
 gitaddcommit () {
 	gitadd
-	echo "\$1: $1"
 	if [ -n "$1" ]; then
 		git commit -m "$1"
+	else
+		git commit
 	fi
-	git commit
 }
 
 gitotal () {
@@ -278,6 +277,7 @@ install ()
 
 save_cmd ()
 {
+	refresh_time
 	FILE=journal_$(date +%F_%T)_$1.txt
 	DIR=$HOME/machine/journal
 	USER=$(whoami)
@@ -324,14 +324,9 @@ testee ()
 
 journal ()
 {
+	refresh_time
 	DIR_ORIGINAL=$PWD
-	local DATE_STRING=$(date +"%y%m%d")
-    local TIME_STRING=$(date +"%T")
-    local YEAR=$(date +"%Y")
-    local USER=$(whoami)
-    local HOST=$(hostname -s)
-    local PWD_=$(pwd)
-	STAMP="${DATE_STRING}/${USER}_${HOST}"
+	STAMP="${DATE}/${USER}_${HOST}"
 	DIR_ALIAS="$HOME/journal"
 	if [ "$#" -gt 2 -o "$#" -eq 0 ]; then
 	    echo "Usage: $0 [path/to] <file>"
@@ -350,8 +345,8 @@ journal ()
 	fi
 	mkdir -p $DIR_RELATIVE
 	cd $DIR_RELATIVE
-	echo "$DATE_STRING" >> $F_NAME
-	echo "$TIME_STRING" >> $F_NAME
+	echo "$DATE" >> $F_NAME
+	echo "$TIME" >> $F_NAME
 	echo "$USER" >> $F_NAME
 	echo "$HOST" >> $F_NAME
 	echo "$PWD" >> $F_NAME
@@ -365,14 +360,9 @@ journal ()
 
 journal-perso ()
 {
+	refresh_time
 	DIR_ORIGINAL=$PWD
-	local DATE_STRING=$(date +"%y%m%d")
-    local TIME_STRING=$(date +"%T")
-    local YEAR=$(date +"%Y")
-    local USER=$(whoami)
-    local HOST=$(hostname -s)
-    local PWD_=$(pwd)
-	F_NAME="${DATE_STRING}_${USER}_${HOST}.txt"
+	F_NAME="${DATE}_${USER}_${HOST}.txt"
 	DIR_ALIAS="$HOME/perso"
 	if [ "$#" -gt 2 -o "$#" -eq 0 ]; then
 	    echo "Usage: $0 [path/to] <file>"
@@ -391,8 +381,8 @@ journal-perso ()
 	fi
 	mkdir -p $DIR_RELATIVE
 	cd $DIR_RELATIVE
-	echo "$DATE_STRING" >> $F_NAME
-	echo "$TIME_STRING" >> $F_NAME
+	echo "$DATE" >> $F_NAME
+	echo "$TIME" >> $F_NAME
 	echo "$USER" >> $F_NAME
 	echo "$HOST" >> $F_NAME
 	echo "$PWD" >> $F_NAME
@@ -505,17 +495,17 @@ virtual() {
         "$@"
 }
 
+refresh_time () {
+	export DATE=$(date +"%y%m%d")
+    export TIME=$(date +"%T")
+}
+
 report_last_boot ()
 {
+	refresh_time
 	NAME=$1
 	DIR_ORIGINAL=$PWD
-	local DATE_STRING=$(date +"%y%m%d")
-    local TIME_STRING=$(date +"%T")
-    local YEAR=$(date +"%Y")
-    local USER=$(whoami)
-    local HOST=$(hostname -s)
-    local PWD_=$(pwd)
-	CRASH_DIR="${DATE_STRING}_${TIME_STRING}"
+	CRASH_DIR="${DATE}_${TIME}"
 	F_NAME="${NAME}.crash"
 	DIR_RELATIVE="$HOME/machine/journal/sysadmin/crash"
 	DIR_RELATIVE+="/${CRASH_DIR}"
@@ -527,8 +517,8 @@ report_last_boot ()
 	fi
 	mkdir -p $DIR_RELATIVE
 	cd $DIR_RELATIVE
-	echo "$DATE_STRING" >> $F_NAME
-	echo "$TIME_STRING" >> $F_NAME
+	echo "$DATE" >> $F_NAME
+	echo "$TIME" >> $F_NAME
 	echo "$USER" >> $F_NAME
 	echo "$HOST" >> $F_NAME
 	echo >> $F_NAME
@@ -553,18 +543,39 @@ report_last_boot ()
 	cd $DIR_ORIGINAL
 }
 
+header_report () {
+	F_NAME=$1
+	echo "$DATE" >> $F_NAME
+	echo "$TIME" >> $F_NAME
+	echo "$USER" >> $F_NAME
+	echo "$HOST" >> $F_NAME
+	echo >> $F_NAME
+	echo "###############################################" >> $F_NAME
+	echo >> $F_NAME
+	echo "$NAME" >> $F_NAME
+	echo >> $F_NAME
+}
+
+append_cmd () {
+	CMD=$1
+	F_NAME=$2
+	echo >> $F_NAME
+    echo ${CMD}	>> $F_NAME
+	echo >> $F_NAME
+
+    eval ${CMD}	>> $F_NAME
+	echo >> $F_NAME
+	echo "###############################################" >> $F_NAME
+	echo >> $F_NAME
+}
 
 report_crash ()
 {
+	refresh_time
 	NAME=$1
+	TAIL_SIZE="100"
 	DIR_ORIGINAL=$PWD
-	local DATE_STRING=$(date +"%y%m%d")
-    local TIME_STRING=$(date +"%T")
-    local YEAR=$(date +"%Y")
-    local USER=$(whoami)
-    local HOST=$(hostname -s)
-    local PWD_=$(pwd)
-	CRASH_DIR="${DATE_STRING}_${TIME_STRING}"
+	CRASH_DIR="$(echo ${DATE}_${TIME} | sed 's/:/-/g')"
 	F_NAME="${NAME}.crash"
 	DIR_RELATIVE="$HOME/machine/journal/sysadmin/crash"
 	DIR_RELATIVE+="/${CRASH_DIR}"
@@ -574,31 +585,31 @@ report_crash ()
 		echo "write log outputs"
 	    return 1
 	fi
+
 	mkdir -p $DIR_RELATIVE
 	cd $DIR_RELATIVE
-	echo "$DATE_STRING" >> $F_NAME
-	echo "$TIME_STRING" >> $F_NAME
-	echo "$USER" >> $F_NAME
-	echo "$HOST" >> $F_NAME
-	echo >> $F_NAME
-	echo "###############################################" >> $F_NAME
-	echo >> $F_NAME
-	echo "$NAME" >> $F_NAME
-	echo >> $F_NAME
-	CMD="sudo journalctl -b 0 | grep -v UFW | tail -100 #(but cleaned)"
-    echo ${CMD}	>> $F_NAME
-    eval ${CMD}	>> $F_NAME
-	echo >> $F_NAME
-	echo "###############################################" >> $F_NAME
-	echo >> $F_NAME
-	CMD="sudo journalctl -k -b 0 | grep -v UFW | tail -100 #(but cleaned)"
-    echo ${CMD}	>> $F_NAME
-    eval ${CMD}	>> $F_NAME
+	CMD="sudo journalctl -b 0 | grep -v UFW | tail -${TAIL_SIZE}"
+	CMD_SORTED="${CMD} | cut -d\: -f 4- | sort |  uniq -c | sort -n"
+	append_cmd "$CMD_SORTED" "$F_NAME"
+	append_cmd "$CMD" "$F_NAME"
+	CMD="sudo journalctl -k -b 0 | grep -v UFW | tail -${TAIL_SIZE}"
+	CMD_SORTED="${CMD} | cut -d\: -f 4- | sort |  uniq -c | sort -n"
+	append_cmd "$CMD" "$F_NAME"
+	append_cmd "$CMD_SORTED" "$F_NAME"
 
+	CHECK_MOFIF="md5sum ${F_NAME} | cut -d ' ' -f1"
+	M1=$(eval $CHECK_MOFIF)
 	vim $F_NAME
-	git add $F_NAME
-	git commit -m "[crash report] $F_NAME at $DIR_RELATIVE, automated by $0 script"
-	git push
+
+	if [ "$M1" != "$(eval $CHECK_MOFIF)" ]; then
+		git add $F_NAME
+		git commit -m "[crash report] $F_NAME at $DIR_RELATIVE, automated by $0 script"
+		git push
+	else
+		echo "[no modifications] -> file deleted"
+		rm $F_NAME
+		rmdir $DIR_RELATIVE
+	fi	   
 	cd $DIR_ORIGINAL
 }
 
@@ -620,5 +631,4 @@ mediaspi ()
 	find . -type f -regextype egrep -iregex ".*$MEDIA_REG" -exec cp --parents -u {} -t $DIR \;
 	cp -apu $DIR -t $DEST
 	rm -rf $DIR
-
 }
