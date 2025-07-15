@@ -66,6 +66,13 @@ set -o vi
 #bind 'set show-all-if-ambiguous on'
 #bind 'TAB:menu-complete'
 
+export DATE=$(date +"%y%m%d")
+export TIME=$(date +"%T")
+export YEAR=$(date +"%Y")
+export USER=$(whoami)
+export HOST=$(hostname -s)
+export PWD_=$(pwd)
+
 # Définir les couleurs
 GREEN='\[\e[32m\]'
 YELLOW='\[\e[33m\]'
@@ -95,7 +102,7 @@ export YES_REG="\$y\$[./A-Za-z0-9]+\$[./A-Za-z0-9]{,86}\$[./A-Za-z0-9]{43}"
 export FILE_REG="[a-zA-Z0-9]+\.[a-zA-Z0-9]+"
 export YYYY_REG="19[5-9][0-9]|20[0-2][0-9]"
 export MM_REG="(0?[1-9])|(1[0-2])"
-export DD_REG="(0?[1-9])|([1-2][0-9])|(3[0-1])"
+export DD_REG="(0?[1-9])|([1-2][export PATH="$PATH:/home/n/.lmstudio/bin"0-9])|(3[0-1])"
 export DATE_REG="($YYYY_REG$MM_REGc$DD_REG)|($DD_REGMM_REG$YYYY_REG)"
 export YYYYMMDD_REG="$YYYY_REG$MM_REG$DD_REG"
 export DDMMYYYY_REG="$DD_REG$MM_REG$YYYY_REG"
@@ -135,4 +142,4 @@ source $HOME/machine/pip_env/bin/activate
 bind -f  ~/.inputrc
 
 # Added by LM Studio CLI (lms)
-export PATH="$PATH:/home/n/.lmstudio/bin"
+
