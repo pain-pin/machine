@@ -62,6 +62,7 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 set -o vi
+export EDITOR="vim"
 
 #bind 'set show-all-if-ambiguous on'
 #bind 'TAB:menu-complete'
