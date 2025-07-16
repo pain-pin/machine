@@ -500,49 +500,6 @@ refresh_time () {
     export TIME=$(date +"%T")
 }
 
-report_last_boot ()
-{
-	refresh_time
-	NAME=$1
-	DIR_ORIGINAL=$PWD
-	CRASH_DIR="${DATE}_${TIME}"
-	F_NAME="${NAME}.crash"
-	DIR_RELATIVE="$HOME/machine/journal/sysadmin/crash"
-	DIR_RELATIVE+="/${CRASH_DIR}"
-	if [ "$#" -ne 1 ]; then
-	    echo "Usage: $0 FILE_NAME"
-		echo "default path is $DIR_RELATIVE/${CRASH_DIR}/FILE_NAME.crash"
-		echo "write log outputs"
-	    return 1
-	fi
-	mkdir -p $DIR_RELATIVE
-	cd $DIR_RELATIVE
-	echo "$DATE" >> $F_NAME
-	echo "$TIME" >> $F_NAME
-	echo "$USER" >> $F_NAME
-	echo "$HOST" >> $F_NAME
-	echo >> $F_NAME
-	echo "###############################################" | tee -a $F_NAME
-	echo >> $F_NAME
-	echo "$NAME" >> $F_NAME
-	echo >> $F_NAME
-	CMD="sudo journalctl -b -1 | grep -v UFW | tail -100 #(but cleaned)"
-    echo ${CMD}	>> $F_NAME
-    eval ${CMD}	>> $F_NAME
-	echo >> $F_NAME
-	echo "###############################################" | tee -a $F_NAME
-	echo >> $F_NAME
-	CMD="sudo journalctl -k -b -1 | grep -v UFW | tail -100 #(but cleaned)"
-    echo ${CMD}	>> $F_NAME
-    eval ${CMD}	>> $F_NAME
-
-	vim $F_NAME
-	git add $F_NAME
-	git commit -m "[crash report] $F_NAME at $DIR_RELATIVE, automated by $0 script"
-	git push
-	cd $DIR_ORIGINAL
-}
-
 header_report () {
 	F_NAME=$1
 	echo "$DATE" >> $F_NAME
@@ -554,6 +511,22 @@ header_report () {
 	echo >> $F_NAME
 	echo "$NAME" >> $F_NAME
 	echo >> $F_NAME
+}
+
+journalctl_prettyfy () {
+	SIZE=${1:-"100"}
+	UNIQ_MIN=${2:-"9"}
+	BOOT=${3:-"0"}
+	TMP="/tmp/journalctl_prettyf.tmp"
+	_FILE=${4:-"$TMP"}
+
+	CMD="sudo journalctl -b ${BOOT} | tail -n $SIZE"
+	CMD_SORTED="${CMD} | cut -d\: -f 4- | sort | uniq -c | sort -n"
+	rm -f "$TMP"
+	append_cmd "$CMD" "$TMP"
+	append_cmd "$CMD_SORTED" "$TMP"
+	grep -vE " +[0-${UNIQ_MIN}] " "$TMP" >> "$_FILE"
+	rm "$TMP"
 }
 
 append_cmd () {
@@ -577,7 +550,7 @@ report_crash ()
 	DIR_ORIGINAL=$PWD
 	CRASH_DIR="$(echo ${DATE}_${TIME} | sed 's/:/-/g')"
 	F_NAME="${NAME}.crash"
-	DIR_RELATIVE="$HOME/machine/journal/sysadmin/crash"
+	DIR_RELATIVE="$HOME/journal/sysadmin/crash"
 	DIR_RELATIVE+="/${CRASH_DIR}"
 	if [ "$#" -ne 1 ]; then
 	    echo "Usage: $0 FILE_NAME"
@@ -588,14 +561,49 @@ report_crash ()
 
 	mkdir -p $DIR_RELATIVE
 	cd $DIR_RELATIVE
-	CMD="sudo journalctl -b 0 | grep -v UFW | tail -${TAIL_SIZE}"
-	CMD_SORTED="${CMD} | cut -d\: -f 4- | sort |  uniq -c | sort -n"
-	append_cmd "$CMD_SORTED" "$F_NAME"
-	append_cmd "$CMD" "$F_NAME"
-	CMD="sudo journalctl -k -b 0 | grep -v UFW | tail -${TAIL_SIZE}"
-	CMD_SORTED="${CMD} | cut -d\: -f 4- | sort |  uniq -c | sort -n"
-	append_cmd "$CMD" "$F_NAME"
-	append_cmd "$CMD_SORTED" "$F_NAME"
+	if [ -f $F_NAME ] ; then
+		BCK="/tmp/$F_NAME.backup"
+		echo "File exists moved to $BCK"
+		mv $F_NAME $BCK
+	fi
+	header_report $F_NAME
+	journalctl_prettyfy "100" "5" "0" "$F_NAME"
+	CHECK_MOFIF="md5sum ${F_NAME} | cut -d ' ' -f1"
+	#M1=$#(eval $CHECK_MOFIF)
+	#vim  $F_NAME
+         #
+	#if [# "$M1" != "$(eval $CHECK_MOFIF)" ]; then
+	#	g#it add $F_NAME
+	#	g#it commit -m "[crash report] $F_NAME at $DIR_RELATIVE, automated by $0 script"
+	#	g#it push
+	#else#
+	#	e#cho "[no modifications] -> file deleted"
+	#	r#m rf $DIR_RELATIVE
+	#fi	 #  
+	#cd $DIR_ORIGINAL
+}
+
+report_last_boot ()
+{
+	refresh_time
+	NAME=$1
+	DIR_ORIGINAL=$PWD
+	CRASH_DIR="$(echo ${DATE}_${TIME} | sed 's/:/-/g')"
+	F_NAME="${NAME}.crash"
+	DIR_RELATIVE="$HOME/journal/sysadmin/crash/reboot"
+	DIR_RELATIVE+="/${CRASH_DIR}"
+	if [ "$#" -ne 1 ]; then
+	    echo "Usage: $0 FILE_NAME"
+		echo "default path is $DIR_RELATIVE/${CRASH_DIR}/FILE_NAME.crash"
+		echo "write log outputs"
+	    return 1
+	fi
+
+	mkdir -p $DIR_RELATIVE
+	cd $DIR_RELATIVE
+	header_report $F_NAME
+	journalctl_prettyfy 500 5 1 $F_NAME
+	journalctl_prettyfy 10000 5 0 $F_NAME
 
 	CHECK_MOFIF="md5sum ${F_NAME} | cut -d ' ' -f1"
 	M1=$(eval $CHECK_MOFIF)
@@ -603,7 +611,7 @@ report_crash ()
 
 	if [ "$M1" != "$(eval $CHECK_MOFIF)" ]; then
 		git add $F_NAME
-		git commit -m "[crash report] $F_NAME at $DIR_RELATIVE, automated by $0 script"
+		git commit -m "[boot report] $F_NAME at $DIR_RELATIVE, automated by $0 script"
 		git push
 	else
 		echo "[no modifications] -> file deleted"
