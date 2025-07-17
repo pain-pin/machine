@@ -267,8 +267,8 @@ set mouse=a
 "inoremap ( ()<left>
 "inoremap [ []<left>
 "inoremap { {}<left>
-inoremap {{<CR>}<ESC>O
-inoremap {;{<CR>};<ESC>O
+inoremap {{ {}<ESC>O
+inoremap {;{ ;}<ESC>O
 
 :nnoremap <Space> @q
 
