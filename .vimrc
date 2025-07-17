@@ -267,9 +267,8 @@ set mouse=a
 "inoremap ( ()<left>
 "inoremap [ []<left>
 "inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
+inoremap {{<CR>}<ESC>O
+inoremap {;{<CR>};<ESC>O
 
 :nnoremap <Space> @q
 
@@ -290,4 +289,6 @@ syntax on
 filetype plugin indent on
 " Start NERDTree and leave the cursor in it.
 " autocmd VimEnter * NERDTree
+"
+"
 "
