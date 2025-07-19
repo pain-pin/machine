@@ -43,10 +43,7 @@ basha () {
 	vim + $FILE
 	source $SOURCE
 	cd "$F_PATH"
-	git diff
-	git pull
-	git diff
-	git add $FILE && git commit -m "something new in $(basename $FILE)" && git push
+    commit_if_modified "$F_NAME"
 	cd -
 }
 
@@ -55,26 +52,18 @@ brc () {
 	SOURCE_PATH="$(find $HOME -type d -name machine)"
 	SOURCE="$SOURCE_PATH/.bashrc"
 	FILE="$(find $SOURCE -name "$FILE_NAME" | head -1)"
-	vim + $FILE
-	source $SOURCE
 	cd "$SOURCE_PATH"
-	git diff
-	git pull
-	git diff
-	git add $FILE && git commit -m "something new in $(basename $FILE)" && git push
+    commit_if_modified "$FILE_NAME"
 	cd -
+	source $SOURCE
 }
 
 vrc () {
-	NAME=".vimrc"
-	FILE="$(find /home -name $NAME| head -1)"
+	F_NAME=".vimrc"
+	FILE="$(find /home -name $FILE_NAME| head -1)"
 	F_PATH="$(dirname $FILE)"
-	vim + $FILE
 	cd "$F_PATH"
-	git diff
-	git pull
-	git diff
-	git add $FILE && git commit -m "something new in $(basename $FILE)" && git push
+    commit_if_modified "$F_NAME"
 	cd -
 }
 
@@ -322,76 +311,82 @@ testee ()
 	fi
 }
 
-journal ()
-{
-	refresh_time
-	DIR_ORIGINAL=$PWD
-	STAMP="${DATE}/${USER}_${HOST}"
-	DIR_ALIAS="$HOME/journal"
-	if [ "$#" -gt 2 -o "$#" -eq 0 ]; then
-	    echo "Usage: $0 [path/to] <file>"
-		echo "default path is $DIR_ALIAS"
-		echo "default dir name is $STAMP"
-	    return 1
-	fi
-	cd $DIR_ALIAS
-	if [ "$#" -eq 1 ]; then
-		DIR_RELATIVE="$YEAR/$STAMP"
-		F_NAME=$1
-	fi
-	if [ "$#" -eq 2 ]; then
-		DIR_RELATIVE="$1"
-		F_NAME=$2
-	fi
-	mkdir -p $DIR_RELATIVE
-	cd $DIR_RELATIVE
-	echo "$DATE" >> $F_NAME
-	echo "$TIME" >> $F_NAME
-	echo "$USER" >> $F_NAME
-	echo "$HOST" >> $F_NAME
-	echo "$PWD" >> $F_NAME
-	vim + $F_NAME
-	git add $F_NAME
-	git commit -m "[journal] $F_NAME at $DIR_RELATIVE"
-	git push
-	cd $DIR_ORIGINAL
-}
-
-
 journal-perso ()
 {
 	refresh_time
 	DIR_ORIGINAL=$PWD
-	F_NAME="${DATE}_${USER}_${HOST}.txt"
-	DIR_ALIAS="$HOME/perso"
-	if [ "$#" -gt 2 -o "$#" -eq 0 ]; then
-	    echo "Usage: $0 [path/to] <file>"
-		echo "default path is $DIR_ALIAS"
+	DIR="$HOME/perso"
+	DATE_DIR="$YEAR/$MONTH/$DAY"
+	if [ "$#" -eq 0 ]; then
+	    echo "Usage: $0 [ subfolder ] < file >"
+		echo "default path is $DIR"
 		echo "default file name is $F_NAME"
 	    return 1
 	fi
-	cd $DIR_ALIAS
 	if [ "$#" -eq 1 ]; then
-		DIR_RELATIVE=""
+		LN_DIR="fouretout"
 		F_NAME=$1
 	fi
 	if [ "$#" -eq 2 ]; then
-		DIR_RELATIVE="$1"
+		LN_DIR="$1"
 		F_NAME=$2
+	else
+		return 1
 	fi
-	mkdir -p $DIR_RELATIVE
-	cd $DIR_RELATIVE
-	echo "$DATE" >> $F_NAME
-	echo "$TIME" >> $F_NAME
-	echo "$USER" >> $F_NAME
-	echo "$HOST" >> $F_NAME
-	echo "$PWD" >> $F_NAME
-	vim + $F_NAME
-	git add $F_NAME
-	git commit -m "[journal] $F_NAME at $DIR_RELATIVE"
-	git push
+	F_NAME+=".md"
+	cd $DIR
+	PATH_="${DATE_DIR}/${LN_DIR}"
+	mkdir -p "$PATH_"
+	FILE="${PATH_}/${F_NAME}"
+	header_journal $FILE
+	if commit_if_modified $FILE ; then
+		mkdir -p "$DIR/$LN_DIR"
+		ln -P "$FILE" "$DIR/$LN_DIR/"
+	else
+		rm $FILE
+		rmdir -p "${PATH_}"
+	fi
 	cd $DIR_ORIGINAL
 }
+
+journal ()
+{
+	refresh_time
+	DIR_ORIGINAL=$PWD
+	DIR="$HOME/journal"
+	DATE_DIR="$YEAR/$MONTH/$DAY"
+	if [ "$#" -eq 0 ]; then
+	    echo "Usage: $0 [ subfolder ] < file >"
+		echo "default path is $DIR"
+		echo "default file name is $F_NAME"
+	    return 1
+	fi
+	if [ "$#" -eq 1 ]; then
+		LN_DIR="fouretout"
+		F_NAME=$1
+	fi
+	if [ "$#" -eq 2 ]; then
+		LN_DIR="$1"
+		F_NAME=$2
+	else
+		return 1
+	fi
+	F_NAME+=".md"
+	cd $DIR
+	PATH_="${DATE_DIR}/${LN_DIR}"
+	mkdir -p "$PATH_"
+	FILE="${PATH_}/${F_NAME}"
+	header_journal $FILE
+	if commit_if_modified $FILE ; then
+		mkdir -p "$DIR/$LN_DIR"
+		ln -P "$FILE" "$DIR/$LN_DIR/"
+	else
+		rm $FILE
+		rmdir -p "${PATH_}"
+	fi
+	cd $DIR_ORIGINAL
+}
+
 
 printcouou ()
 {
@@ -500,7 +495,7 @@ refresh_time () {
     export TIME=$(date +"%T")
 }
 
-header_report () {
+header_journal () {
 	F_NAME=$1
 	echo "$DATE" >> $F_NAME
 	echo "$TIME" >> $F_NAME
@@ -509,7 +504,7 @@ header_report () {
 	echo >> $F_NAME
 	echo "###############################################" >> $F_NAME
 	echo >> $F_NAME
-	echo "$NAME" >> $F_NAME
+	echo "$F_NAME" >> $F_NAME
 	echo >> $F_NAME
 }
 
@@ -517,7 +512,7 @@ journalctl_prettyfy () {
 	SIZE=${1:-"100"}
 	UNIQ_MIN=${2:-"9"}
 	BOOT=${3:-"0"}
-	TMP="/tmp/journalctl_prettyf.tmp"
+	local TMP="/tmp/journalctl_prettyf.tmp"
 	_FILE=${4:-"$TMP"}
 
 	CMD="sudo journalctl -b ${BOOT} | tail -n $SIZE"
@@ -525,13 +520,13 @@ journalctl_prettyfy () {
 	rm -f "$TMP"
 	append_cmd "$CMD" "$TMP"
 	append_cmd "$CMD_SORTED" "$TMP"
-	grep -vE " +[0-${UNIQ_MIN}] " "$TMP" >> "$_FILE"
+	grep -vE " +[0-${UNIQ_MIN}] " $TMP >> "$_FILE"
 	rm "$TMP"
 }
 
 append_cmd () {
-	CMD=$1
-	F_NAME=$2
+	local CMD=$1
+	local F_NAME=$2
 	echo >> $F_NAME
     echo ${CMD}	>> $F_NAME
 	echo >> $F_NAME
@@ -540,6 +535,24 @@ append_cmd () {
 	echo >> $F_NAME
 	echo "###############################################" >> $F_NAME
 	echo >> $F_NAME
+}
+
+commit_if_modified () {
+	local F_NAME=$1
+	local DEL=$2
+	vim + $F_NAME
+	git pull
+	git add $F_NAME
+	if ! git commit ; then
+		echo -n "[no modifications]"
+		if [ -n "$DEL" ] ; then
+			rm $F_NAME
+			echo -n " -> deleted"
+			return 1
+		fi
+		git push
+	fi	   
+	return 0
 }
 
 report_crash ()
@@ -554,7 +567,7 @@ report_crash ()
 	DIR_RELATIVE+="/${CRASH_DIR}"
 	if [ "$#" -ne 1 ]; then
 	    echo "Usage: $0 FILE_NAME"
-		echo "default path is $DIR_RELATIVE/${CRASH_DIR}/FILE_NAME.crash"
+		echo "default path is $DIR_RELATIVE/FILE_NAME.crash"
 		echo "write log outputs"
 	    return 1
 	fi
@@ -566,21 +579,10 @@ report_crash ()
 		echo "File exists moved to $BCK"
 		mv $F_NAME $BCK
 	fi
-	header_report $F_NAME
-	journalctl_prettyfy "100" "5" "0" "$F_NAME"
-	CHECK_MOFIF="md5sum ${F_NAME} | cut -d ' ' -f1"
-	#M1=$#(eval $CHECK_MOFIF)
-	#vim  $F_NAME
-         #
-	#if [# "$M1" != "$(eval $CHECK_MOFIF)" ]; then
-	#	g#it add $F_NAME
-	#	g#it commit -m "[crash report] $F_NAME at $DIR_RELATIVE, automated by $0 script"
-	#	g#it push
-	#else#
-	#	e#cho "[no modifications] -> file deleted"
-	#	r#m rf $DIR_RELATIVE
-	#fi	 #  
-	#cd $DIR_ORIGINAL
+	header_journal $F_NAME
+	journalctl_prettyfy "100" "1" "0" "$F_NAME"
+    commit_if_modified "$F_NAME" "DELETE_IF_NOT_MODIFIED"
+	cd $DIR_ORIGINAL
 }
 
 report_last_boot ()
@@ -601,23 +603,10 @@ report_last_boot ()
 
 	mkdir -p $DIR_RELATIVE
 	cd $DIR_RELATIVE
-	header_report $F_NAME
+	header_journal $F_NAME
 	journalctl_prettyfy 500 5 1 $F_NAME
 	journalctl_prettyfy 10000 5 0 $F_NAME
-
-	CHECK_MOFIF="md5sum ${F_NAME} | cut -d ' ' -f1"
-	M1=$(eval $CHECK_MOFIF)
-	vim $F_NAME
-
-	if [ "$M1" != "$(eval $CHECK_MOFIF)" ]; then
-		git add $F_NAME
-		git commit -m "[boot report] $F_NAME at $DIR_RELATIVE, automated by $0 script"
-		git push
-	else
-		echo "[no modifications] -> file deleted"
-		rm $F_NAME
-		rmdir $DIR_RELATIVE
-	fi	   
+    commit_if_modified "$F_NAME" "DELETE_IF_NOT_MODIFIED"
 	cd $DIR_ORIGINAL
 }
 

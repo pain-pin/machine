@@ -254,7 +254,6 @@ set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
 
 " skeletons
-autocmd BufNewFile *.md 0r ~/.vim/templates/template.md
 autocmd BufNewFile *.sh 0r ~/.vim/templates/template.sh
 autocmd BufNewFile *.py 0r ~/.vim/templates/template.py
 autocmd BufNewFile *.c 0r ~/.vim/templates/template.c
