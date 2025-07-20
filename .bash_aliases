@@ -38,13 +38,12 @@ cdebug () {
 
 basha () {
 	SOURCE="$HOME/.bashrc"
-	FILE="$(find /home -name '.bash_aliases' 2>/dev/null | head -1)"
-	F_PATH="$(dirname $FILE)"
-	vim + $FILE
-	source $SOURCE
+	F_NAME=".bash_aliases"
+	F_PATH="$HOME/machine"
 	cd "$F_PATH"
     commit_if_modified "$F_NAME"
 	cd -
+	source $SOURCE
 }
 
 brc () {
@@ -541,8 +540,8 @@ append_cmd () {
 commit_if_modified () {
 	local F_NAME=$1
 	local DEL=$2
-	vim + $F_NAME
 	git pull
+	vim + $F_NAME
 	git add $F_NAME
 	if ! git commit ; then
 		echo -n "[no modifications]"
@@ -551,8 +550,8 @@ commit_if_modified () {
 			echo -n " -> deleted"
 			return 1
 		fi
-		git push
 	fi	   
+	git push
 	return 0
 }
 
