@@ -515,12 +515,13 @@ journalctl_prettyfy () {
 	local TMP="/tmp/journalctl_prettyf.tmp"
 	_FILE=${4:-"$TMP"}
 
-	CMD="sudo journalctl -b ${BOOT} | tail -n $SIZE"
+	CMD="journalctl -b ${BOOT} | tail -n $SIZE"
 	CMD_SORTED="${CMD} | cut -d\: -f 4- | sort | uniq -c | sort -n"
 	rm -f "$TMP"
 	append_cmd "$CMD" "$TMP"
 	append_cmd "$CMD_SORTED" "$TMP"
 	grep -vE " +[0-${UNIQ_MIN}] " $TMP >> "$_FILE"
+	if ! $# ; then cat $_FILE ; fi
 	rm "$TMP"
 }
 
