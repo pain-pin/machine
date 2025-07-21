@@ -36,6 +36,27 @@ cdebug () {
 	cc $BASE $FLAGS -o "$NAME" && gdb "$NAME" && rm $NAME
 }
 
+brc () {
+	SOURCE="$HOME/.bashrc"
+	F_NAME=".bashrc"
+	FILE="$(find -O3 $HOME -name $F_NAME 2>/dev/null | head -n 1)"
+	F_PATH="$(dirname $FILE)"
+	cd "$F_PATH"
+    commit_if_modified "$F_NAME"
+	cd -
+	source $SOURCE
+}
+
+vrc () {
+	SOURCE="$HOME/.vimrc"
+	F_NAME=".bash_aliases"
+	FILE="$(find -O3 $HOME -name $F_NAME 2>/dev/null | head -n 1)"
+	F_PATH="$(dirname $FILE)"
+	cd "$F_PATH"
+    commit_if_modified "$F_NAME"
+	cd -
+	source $SOURCE
+}
 basha () {
 	SOURCE="$HOME/.bashrc"
 	F_NAME=".bash_aliases"
@@ -45,26 +66,6 @@ basha () {
     commit_if_modified "$F_NAME"
 	cd -
 	source $SOURCE
-}
-
-brc () {
-	FILE_NAME='.bashrc'
-	SOURCE_PATH="$(find $HOME -type d -name machine)"
-	SOURCE="$SOURCE_PATH/.bashrc"
-	FILE="$(find $SOURCE -name "$FILE_NAME" | head -1)"
-	cd "$SOURCE_PATH"
-    commit_if_modified "$FILE_NAME"
-	cd -
-	source $SOURCE
-}
-
-vrc () {
-	F_NAME=".vimrc"
-	FILE="$(find /home -name $FILE_NAME| head -1)"
-	F_PATH="$(dirname $FILE)"
-	cd "$F_PATH"
-    commit_if_modified "$F_NAME"
-	cd -
 }
 
 machine_install () {
@@ -144,12 +145,6 @@ gitotal () {
 	fi
 }
 
-gitRoot () {
-	git add Root.*
-	git commit -m "Root database update"
-	git push
-}
-
 gitlog () {
 	git log --oneline --decorate --graph --all
 }
@@ -174,21 +169,8 @@ history_full () {
     done < $HIST_FILE
 }
 
-test_funct () {
-	awk '/^[a-z]+\tft_.*\)$/ { print "\nint main(int argc, char **argv)\n{\n\t"$2");\n}"}' $1 >> $1
-	vim + $1
-	gcc $1 -o test_funct && ./test_funct && rm test_funct
-	awk 'BEGIN {A=1000} { if ($0 ~ /.*main.*/) A=NR ; if (NR < A) print $0}' $1 > /tmp/test_f.tmp
-	cat /tmp/test_f.tmp > $1
-	rm /tmp/test_f.tmp
-}
-
 normi () {
 	norminette -R CheckForbiddenSourceHeader -R CheckDefine $1
-}
-
-ctagss () {
-	ctags -R --c-kinds=+p --fields=+S $@
 }
 
 alias ccc="cc -Wall -Wextra -Werror $@"
@@ -200,39 +182,6 @@ ulog_sort () {
 
 header_awk () {
 	grep -RE $CFUNCTION src | cut -d: -f2 | sed s/\$/';'/g
-}
-
-francinette () {
-	bash $HOME/francinette/tester.sh
-}
-
-sedi () {
-	if [ $# -lt 3 ]; then
-        echo "Usage: sedi <motif> <remplacement> <fichiers...>"
-        return 1
-    fi
-	REG="$1"
-	shift
-	NEW_WD="$1"
-	shift
-	FILES="$@"
-	for FILE in ${FILES} ; do
-		sed "s/$REG/$NEW_WD/g" $FILE
-		echo "$FILE"
-	done
-}
-
-sed_in_place () {
-	TMP="/tmp/sed_in_place.tmp"
-	REG=$1
-	CHANGE=$2
-	for F in $(find . ) ; do
-		if [ -n "$(file $F | grep 'ASCII text')" ] ; then
-			gawk -v reg="$REG" -v change="$CHANGE" '{gsub(reg, change); print $0}' "$F" > $TMP
-			chmod --reference=$F $TMP
-			mv -f $TMP $F
-		fi
-	done
 }
 
 clone () {
@@ -257,31 +206,6 @@ iptables_update () {
 	sudo iptables-save > $HOME/tmp
 	sudo mv $HOME/tmp $F_PERSISTENT
 }
-
-install ()
-{
-	F_LOG="/tmp/last_pacman_output.log"
-	sudo pacman -S $@ | tee $FLOG
-}
-
-save_cmd ()
-{
-	refresh_time
-	FILE=journal_$(date +%F_%T)_$1.txt
-	DIR=$HOME/machine/journal
-	USER=$(whoami)
-	HOST=$(hostname)
-	DATETIME=$(date +"%Y%m%d-%H:%M:%S")
-
-	echo "$DATETIME-$USER@$HOST-$PWD" >> $DIR/$FILE
-	echo "" >> $DIR/$FILE
-	LAST_CMD=$(history 2 | awk '{$1=$2=$3="" ; print $0}' | head -1)
-	echo "cmd: ${LAST_CMD}">> $DIR/$FILE
-	echo "" >> $DIR/$FILE
-	echo "$LAST_CMD" | bash >> $DIR/$FILE
-}
-
-alias v="nvim"
 
 bashalias ()
 {
@@ -387,17 +311,6 @@ journal ()
 	cd $DIR_ORIGINAL
 }
 
-
-printcouou ()
-{
-	echo coucou
-}
-
-print_c_files ()
-{
-	find . -regex ".+\.[^o]+" -exec cat {} \;
-}
-
 ps_parents ()
 {
 	if [ "$#" -ne 1 ]; then
@@ -430,16 +343,6 @@ gcl ()
 src ()
 {
 	source $HOME/.bashrc
-}
-
-a ()
-{
-	PATH='/'
-	if [ -n $1 ] ; then
-		PATH+=$1
-		PATH+=/
-	fi
-	bash .${PATH}bin/activate
 }
 
 # from https://wiki.alpinelinux.org/wiki/Installing_Alpine_in_a_virtual_machine
