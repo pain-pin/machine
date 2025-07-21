@@ -38,13 +38,13 @@ cdebug () {
 
 basha () {
 	SOURCE="$HOME/.bashrc"
-	FILE="$(find /home -name '.bash_aliases' 2>/dev/null | head -1)"
+	F_NAME=".bash_aliases"
+	FILE="$(find -O3 $HOME -name $F_NAME 2>/dev/null | head -n 1)"
 	F_PATH="$(dirname $FILE)"
-	vim + $FILE
-	source $SOURCE
 	cd "$F_PATH"
     commit_if_modified "$F_NAME"
 	cd -
+	source $SOURCE
 }
 
 brc () {
@@ -510,7 +510,7 @@ header_journal () {
 
 journalctl_prettyfy () {
 	SIZE=${1:-"100"}
-	UNIQ_MIN=${2:-"9"}
+	UNIQ_MIN=${2:-"1"}
 	BOOT=${3:-"0"}
 	local TMP="/tmp/journalctl_prettyf.tmp"
 	_FILE=${4:-"$TMP"}
@@ -520,7 +520,11 @@ journalctl_prettyfy () {
 	rm -f "$TMP"
 	append_cmd "$CMD" "$TMP"
 	append_cmd "$CMD_SORTED" "$TMP"
-	grep -vE " +[0-${UNIQ_MIN}] " $TMP >> "$_FILE"
+	if [ "$TMP" != "$_FILE" ] ; then 
+		grep -vE -e " +[0-${UNIQ_MIN}] " $TMP >> "$_FILE"
+	else
+		grep -vE -e " +[0-${UNIQ_MIN}] " $TMP
+	fi
 	rm "$TMP"
 }
 
@@ -550,8 +554,8 @@ commit_if_modified () {
 			echo -n " -> deleted"
 			return 1
 		fi
-		git push
 	fi	   
+	git push
 	return 0
 }
 
