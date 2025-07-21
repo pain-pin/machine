@@ -418,16 +418,13 @@ journalctl_prettyfy () {
 	local TMP="/tmp/journalctl_prettyf.tmp"
 	_FILE=${4:-"$TMP"}
 
-	CMD="sudo journalctl -b ${BOOT} | tail -n $SIZE"
+	CMD="journalctl -b ${BOOT} | tail -n $SIZE"
 	CMD_SORTED="${CMD} | cut -d\: -f 4- | sort | uniq -c | sort -n"
 	rm -f "$TMP"
 	append_cmd "$CMD" "$TMP"
 	append_cmd "$CMD_SORTED" "$TMP"
-	if [ "$TMP" != "$_FILE" ] ; then 
-		grep -vE -e " +[0-${UNIQ_MIN}] " $TMP >> "$_FILE"
-	else
-		grep -vE -e " +[0-${UNIQ_MIN}] " $TMP
-	fi
+	grep -vE " +[0-${UNIQ_MIN}] " $TMP >> "$_FILE"
+	if ! $# ; then cat $_FILE ; fi
 	rm "$TMP"
 }
 
@@ -447,8 +444,8 @@ append_cmd () {
 commit_if_modified () {
 	local F_NAME=$1
 	local DEL=$2
-	vim + $F_NAME
 	git pull
+	vim + $F_NAME
 	git add $F_NAME
 	if ! git commit ; then
 		echo -n "[no modifications]"
