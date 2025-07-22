@@ -22,4 +22,4 @@ cat >> ~/.inputrc <<'EOF'
 EOF
 
 sudo ./setup_paranoid_ufw.sh
-
+sudo ./tcpdump_monitoring.sh
