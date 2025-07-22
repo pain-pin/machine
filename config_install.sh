@@ -21,4 +21,5 @@ cat >> ~/.inputrc <<'EOF'
 "\e[B": history-search-forward
 EOF
 
+sudo ./setup_paranoid_ufw.sh
 
