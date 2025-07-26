@@ -535,5 +535,5 @@ mediaspi ()
 }
 
 conn () {
-	sudo tail /var/log/connection_attempts.log
+	sudo cat /var/log/connection_attempts.log
 }
