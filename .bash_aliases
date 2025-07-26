@@ -533,3 +533,7 @@ mediaspi ()
 	cp -apu $DIR -t $DEST
 	rm -rf $DIR
 }
+
+conn () {
+	sudo tail /var/log/connection_attempts.log
+}
