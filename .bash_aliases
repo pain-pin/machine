@@ -537,3 +537,8 @@ mediaspi ()
 conn () {
 	sudo cat /var/log/connection_attempts.log
 }
+
+sortu() {
+  sort | uniq -c | sort -n
+}
+
