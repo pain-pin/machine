@@ -542,3 +542,11 @@ sortu() {
   sort | uniq -c | sort -n
 }
 
+expresso () {
+	DIR="$HOME/interets/jeux/poker"
+	HISTORY="expresso_history.md"
+	SCRIPT=expresso_stat.sh
+
+	vim $DIR/$HISTORY
+	./$DIR/$SCRIPT $DIR/$HISTORY
+}
