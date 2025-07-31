@@ -556,5 +556,21 @@ git_light () {
 	git filter-repo --strip-blobs-bigger-than 10M
 }
 
+git_list_heavy_commits () {
+	git verify-pack -v .git/objects/pack/*.idx   | sort -k 3 -n -r   | head -n 20
+}
+
+git_list_heavy () {
+	for B in $(git_list_heavy_commits | cut -d' ' -f1) ; do git rev-list --all | while read commit; do git ls-tree -rl $commit; done   | grep  $B ; done
+}
+
+git_rm_repo () {
+	KEYWORD=$1 #ex: '*.mp4'
+	git filter-repo --path-glob "$KEYWORD" --invert-paths
+}
+
+
 alias mvj='rsync -aH --remove-source-files'
 alias cpj='rsync -aH'
+
+
