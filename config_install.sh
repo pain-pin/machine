@@ -21,5 +21,5 @@ cat >> ~/.inputrc <<'EOF'
 "\e[B": history-search-forward
 EOF
 
-sudo ./setup_paranoid_ufw.sh
-sudo ./tcpdump_monitoring.sh
+sudo ./networking/setup_paranoid_ufw.sh
+sudo ./networking/tcpdump_monitoring.sh

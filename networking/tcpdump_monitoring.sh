@@ -1,5 +1,6 @@
 #!/bin/bash
-
+BACKUP_LOG_FOLDER="journal/sysadmin/network/log"
+USER_HOME=$(getent passwd $SUDO_USER | cut -d: -f6)
 # =============================
 # Configurable variables
 # =============================
@@ -62,7 +63,8 @@ cat <<EOF > "$LOGROTATE_CONF_FILE"
 $LOG_FILE {
     daily
     missingok
-    rotate 7
+    rotate -1
+	olddir /${USER_HOME}/${BACKUP_LOG_FOLDER}
     compress
     delaycompress
     notifempty

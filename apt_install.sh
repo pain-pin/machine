@@ -4,6 +4,7 @@ apt install -y  ufw
 curl -fsS https://dl.brave.com/install.sh | sh
 
 apt install -y  bc
+apt install -y  gawk
 apt install -y  ctags
 #apt install -y firefox
 apt install python3.11-venv
