@@ -554,4 +554,7 @@ expresso () {
 
 git_light () {
 	git filter-repo --strip-blobs-bigger-than 10M
+}
 
+alias mvj='rsync -aH --remove-source-files'
+alias cpj='rsync -aH'
