@@ -543,10 +543,15 @@ sortu() {
 }
 
 expresso () {
-	DIR="$HOME/interets/jeux/poker"
+	DIR="$HOME/perso/interets/jeux/poker"
 	HISTORY="expresso_history.md"
 	SCRIPT=expresso_stat.sh
+	TAIL=${1:-1000}
 
-	vim $DIR/$HISTORY
-	./$DIR/$SCRIPT $DIR/$HISTORY
+	vim + $DIR/$HISTORY
+	bash $DIR/$SCRIPT $DIR/$HISTORY $TAIL
 }
+
+git_light () {
+	git filter-repo --strip-blobs-bigger-than 10M
+
