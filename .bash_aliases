@@ -574,3 +574,6 @@ alias mvj='rsync -aH --remove-source-files'
 alias cpj='rsync -aH'
 
 
+monip () {
+	curl ifconfig.me
+}
