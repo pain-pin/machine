@@ -577,3 +577,11 @@ alias cpj='rsync -aH'
 monip () {
 	curl ifconfig.me
 }
+
+ipinfo () {
+	curl https://ipinfo.io/$1
+}
+
+remote () {
+	su -c 'ssh debian@37.187.180.32' terra 
+}
