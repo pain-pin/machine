@@ -60,9 +60,8 @@ vrc () {
 basha () {
 	SOURCE="$HOME/.bashrc"
 	F_NAME=".bash_aliases"
-	FILE="$(find -O3 $HOME -name $F_NAME 2>/dev/null | head -n 1)"
-	F_PATH="$(dirname $FILE)"
-	cd "$F_PATH"
+	FILE=$HOME/$F_NAME
+	cd "$HOME"
     commit_if_modified "$F_NAME"
 	cd -
 	source $SOURCE
@@ -583,5 +582,8 @@ ipinfo () {
 }
 
 remote () {
-	su -c 'ssh debian@37.187.180.32' terra 
+	USER=${1:-$LOGNAME}
+	HOST=${2:-"37.187.180.32"}
+	PORT=${2:-"9191"}
+	sudo -u $USER ssh -l $USER -i /home/$USER/.ssh/id_rsa -p $PORT $HOST
 }
