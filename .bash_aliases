@@ -594,5 +594,5 @@ remote_copy () {
 	if [ -z "$ITEM" ] ; then
 		return 1
 	fi
-	sudo -u $USER scp -i /home/$USER/.ssh/id_rsa -P $PORT -r $ITEM $HOST
+	sudo -u $USER scp -i /home/$USER/.ssh/id_rsa -P $PORT -r $ITEM $USER@$HOST:$ITEM
 }
