@@ -60,8 +60,8 @@ vrc () {
 basha () {
 	SOURCE="$HOME/.bashrc"
 	F_NAME=".bash_aliases"
-	FILE=$HOME/$F_NAME
-	cd "$HOME"
+	FILE=$HOME/machine/$F_NAME
+	cd "$HOME/machine"
     commit_if_modified "$F_NAME"
 	cd -
 	source $SOURCE
@@ -542,7 +542,7 @@ sortu() {
 }
 
 expresso () {
-	DIR="$HOME/perso/interets/jeux/poker"
+	DIR="$HOME/perso/thm/interets/jeux/poker"
 	HISTORY="expresso_history.md"
 	SCRIPT=expresso_stat.sh
 	TAIL=${1:-1000}
@@ -551,9 +551,7 @@ expresso () {
 	bash $DIR/$SCRIPT $DIR/$HISTORY $TAIL
 }
 
-git_light () {
-	git filter-repo --strip-blobs-bigger-than 10M
-}
+alias git_light="git filter-repo --strip-blobs-bigger-than 10M"
 
 git_list_heavy_commits () {
 	git verify-pack -v .git/objects/pack/*.idx   | sort -k 3 -n -r   | head -n 20
