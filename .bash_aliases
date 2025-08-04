@@ -582,6 +582,17 @@ ipinfo () {
 remote () {
 	USER=${1:-$LOGNAME}
 	HOST=${2:-"37.187.180.32"}
-	PORT=${2:-"9191"}
+	PORT=${3:-"9191"}
 	sudo -u $USER ssh -l $USER -i /home/$USER/.ssh/id_rsa -p $PORT $HOST
+}
+
+remote_copy () {
+	ITEM=${1:-""}
+	USER=${2:-$LOGNAME}
+	HOST=${3:-"37.187.180.32"}
+	PORT=${4:-"9191"}
+	if [ -z "$ITEM" ] ; then
+		return 1
+	fi
+	sudo -u $USER scp -i /home/$USER/.ssh/id_rsa -P $PORT -r $ITEM $HOST
 }
