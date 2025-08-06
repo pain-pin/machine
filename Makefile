@@ -7,11 +7,9 @@ MACHINE := machine
 GROUP := users
 SCRIPTS := $(wildcard bin/*)
 
-.PHONY: all create_machine_user dotfiles chmod_env setup_users
+all:
 
-all: chmod_env dotfiles
-
-create_machine_user:
+create_machine:
 	sudo useradd -m -s /bin/bash $(MACHINE); \
 	echo "[+] Copying current repo to /home/$(MACHINE)"; \
 	sudo cp -a "$$(pwd)/*" /home/$(MACHINE)/; \
@@ -24,10 +22,8 @@ chmod_env:
 	sudo find $(ENV_DIR) -type f -exec chmod 640 {} \;
 	sudo find $(ENV_DIR) -type d -exec chmod 750 {} \;
 	sudo find $(BIN_DIR) -type f -exec chmod 750 {} \;
-	sudo find $(ENV_DIR) -type f -exec chmod 750 {} \;
 	sudo find $(ENV_DIR)/.ssh -type f -exec chmod 400 {} \;
 
-# Centralise les dotfiles dans /home/machine/.config/machine
 dotfiles:
 	@echo "[*] Linking dotfiles (non-destructive)..."
 	mkdir -p /home/$(MACHINE)/.config/machine
@@ -39,11 +35,7 @@ dotfiles:
 	done
 
 set-user:
-	@if [ -z "${USER}" ]; then \
-		echo "Usage: make set-user USER=<username>"; \
-		exit 1; \
-	fi
-	@USER_HOME=$$(getent passwd ${USER} | cut -d: -f6); \
+	USER_HOME=$$(getent passwd ${USER} | cut -d: -f6); \
 	if [ -z "$$USER_HOME" ]; then \
 		echo "[-] User '${USER}' not found"; \
 		exit 1; \
@@ -70,3 +62,8 @@ set-user:
 		fi; \
 	done
 
+_add_user:
+	sudo useradd -m -s /bin/bash $(USER);
+	sudo usermod -aG users $(USER);
+
+add_user: _add_user set-user

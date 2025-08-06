@@ -248,3 +248,95 @@ ncdu
 sudo apt install ncdu
 #1754496162
 ncdu
+#1754496185
+gitaddcommit
+#1754496236
+git push
+#1754496317
+ls
+#1754496326
+rm -rf machine/
+#1754497699
+make add_user USER=coding
+#1754497715
+make add_user USER=coding
+#1754497733
+sudo make add_user USER=coding
+#1754497823
+sudo make add_user USER=coding
+#1754497839
+sudo ls ..
+#1754497845
+sudo ls ../coding/
+#1754497857
+sudo deluser coding
+#1754497860
+sudo ls ../coding/
+#1754497864
+sudo ls ../
+#1754497872
+sudo rm -rf ../coding/
+#1754497877
+sudo make add_user USER=coding
+#1754497961
+sudo deluser coding
+#1754497969
+sudo ls ../
+#1754497972
+sudo rm -rf ../coding/
+#1754497977
+sudo make add_user USER=coding
+#1754498096
+sudo make add_user USER=coding
+#1754498106
+sudo rm -rf ../coding/
+#1754498109
+sudo deluser coding
+#1754498112
+sudo make add_user USER=coding
+#1754498190
+sudo make add_user USER=coding
+#1754498217
+sudo deluser coding && sudo rm -rf ~/../coding/
+#1754498237
+sudo make add_user USER=coding
+#1754498373
+ls
+#1754498685
+cat Makefile
+#1754498815
+sudo deluser coding && sudo rm -rf ~/../coding/
+#1754498818
+sudo make add_user USER=coding
+#1754498833
+groups coding
+#1754498912
+sudo deluser coding && sudo rm -rf ~/../coding/
+#1754498918
+sudo make add_user USER=coding
+#1754498952
+sudo passwd coding
+#1754499188
+cd
+#1754499189
+l
+#1754499193
+ll
+#1754499278
+ls
+#1754499360
+sudo make chmod_env
+#1754499368
+ll
+#1754499434
+sudo make add_user USER=sysadmin
+#1754495766
+vim Makefile
+#1754499784
+gitaddcommit 
+#1754499808
+vim .gitignore 
+#1754499820
+gitaddcommit 
+#1754499835
+git rm -rf .ansible
