@@ -412,3 +412,201 @@ ls
 vim bin/basha
 #1754508034
 git status
+#1754508049
+gitaddcommit
+#1754508138
+rm coucou 
+#1754508143
+basha coucou
+#1754508170
+ls
+#1754508470
+basha
+#1754508488
+basha
+#1754508644
+vim .vim/templates/template.my_aliases
+#1754508782
+basha
+#1754508827
+ls
+#1754508901
+basha
+#1754508926
+la
+#1754508934
+cd bin/
+#1754508937
+git status
+#1754509071
+basha
+#1754509223
+basha
+#1754509235
+basha coucou
+#1754509283
+basha coucou
+#1754509354
+ll
+#1754509378
+basha
+#1754509421
+basha
+#1754509471
+basha
+#1754509475
+basha coucou
+#1754509503
+cat basha
+#1754509624
+250806-19:44:39-machine@frhb97007flex-~/bin
+#1754509624
+=> cat ba
+#1754509624
+basha      bashalias  bashrc     
+#1754509632
+ll basha
+#1754509937
+ll ..
+#1754509970
+cd ..
+#1754509977
+chmod u+w /home/machine/bin
+#1754509986
+basha coucou
+#1754510014
+ls
+#1754510020
+ll
+#1754510243
+ll bin/
+#1754510261
+file bin/
+#1754510272
+ll
+#1754510328
+basha coucou
+#1754510477
+basha coucou
+#1754510507
+whereis basha
+#1754510513
+basha
+#1754510518
+basha s
+#1754510556
+bashrc
+#1754510646
+basha s
+#1754510659
+src
+#1754510661
+basha s
+#1754510688
+echo $SOURCE
+#1754510692
+src
+#1754510699
+bashalias
+#1754510722
+rm .bash_aliases 
+#1754510730
+bashrc
+#1754510750
+basha src
+#1754510769
+source .bashrc 
+#1754510774
+src
+#1754510782
+bashrc
+#1754510788
+basha src
+#1754510822
+basha coucou
+#1754510844
+echo > test
+#1754510860
+echo > bin/test
+#1754511026
+basha coucou
+#1754511049
+bashrc
+#1754511100
+basha coucou
+#1754511161
+ls
+#1754511236
+basha coucou
+#1754511275
+src
+#1754511277
+basha coucou
+#1754511308
+echo $BIN
+#1754511326
+echo $MACHINE_PATH/
+#1754511346
+bashrc
+#1754511409
+echo $MACHINE_PATH/
+#1754511410
+echo $MACHINE_PATH
+#1754511415
+basha coucou
+#1754511469
+bashrc
+#1754511514
+src
+#1754511517
+basha coucou
+#1754511550
+ls
+#1754511561
+cat bin/basha
+#1754511594
+src
+#1754511597
+basha coucou
+#1754511631
+ls
+#1754511635
+rm coucou 
+#1754511636
+ls
+#1754511640
+coucou
+#1754511645
+basha
+#1754511647
+basha a
+#1754511671
+bashrc
+#1754511688
+src
+#1754511694
+basha src
+#1754511708
+source .bashrc 
+#1754511720
+basha coucou
+#1754511750
+coucou
+#1754511753
+ls
+#1754511761
+rm a src 
+#1754511770
+ls bin/coucou 
+#1754511777
+rm bin/coucou 
+#1754511782
+git status
+#1754511793
+ls
+#1754511799
+rm test 
+#1754508183
+vim bin/basha
+#1754511808
+gitaddcommit

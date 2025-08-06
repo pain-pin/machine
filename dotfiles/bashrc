@@ -68,6 +68,7 @@ export DAY=$(date +"%d")
 export USER=$(whoami)
 export HOST=$(hostname -s)
 export PWD_=$(pwd)
+export SOURCE="$HOME/.bashrc"
 
 # Définir les couleurs
 GREEN='\[\e[32m\]'
@@ -116,7 +117,8 @@ export MEDIA_REG="\.(${AUDIO_REG}|${VIDEO_REG}|${IMAGE_REG})$"
 
 export HISTCONTROL=ignorespace
 
-MACHINE_PATH=/home/machine
+export MACHINE_PATH=/home/machine
+export BIN=${MACHINE_PATH}/bin
 PATH="$PATH:$MACHINE_PATH/bin/"
 
 export LESS=-R
