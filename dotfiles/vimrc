@@ -111,6 +111,4 @@ colorscheme koehler
 set tags=./tags;,tags;
 
 syntax on
-"
-"
-"
+set tags=./tags;/

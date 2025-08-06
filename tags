@@ -1,0 +1,87 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BIN_DIR	Makefile	/^BIN_DIR := ${ENV_DIR}\/bin$/;"	m
+DOTFILES	Makefile	/^DOTFILES := $(notdir $(wildcard dotfiles\/*))$/;"	m
+ENV_DIR	Makefile	/^ENV_DIR := ${MACHINE_PATH}$/;"	m
+GROUP	Makefile	/^GROUP := users$/;"	m
+MACHINE	Makefile	/^MACHINE := machine$/;"	m
+MACHINE_PATH	Makefile	/^MACHINE_PATH := $(shell pwd)$/;"	m
+SCRIPTS	Makefile	/^SCRIPTS := $(wildcard bin\/*)$/;"	m
+SKEL_DIR	Makefile	/^SKEL_DIR := \/etc\/skel$/;"	m
+alpine_launch	bin/alpine_launch	/^alpine_launch () $/;"	f
+append_cmd	bin/append_cmd	/^append_cmd () $/;"	f
+argparse	bin/argparse.bash	/^argparse(){$/;"	f
+aur	bin/aur	/^aur () $/;"	f
+basha	bin/basha	/^basha () $/;"	f
+bashalias	bin/bashalias	/^bashalias () $/;"	f
+bashrc	bin/bashrc	/^bashrc () $/;"	f
+brc	bin/brc	/^brc () $/;"	f
+cdebug	bin/cdebug	/^cdebug () $/;"	f
+cert_local	bin/cert_local	/^cert_local () $/;"	f
+cexec	bin/cexec	/^cexec () $/;"	f
+clone	bin/clone	/^clone () $/;"	f
+commit_if_modified	bin/commit_if_modified	/^commit_if_modified () $/;"	f
+compose	bin/compose	/^compose () $/;"	f
+conn	bin/conn	/^conn () $/;"	f
+convert_to_jpeg	bin/convert_to_jpeg	/^convert_to_jpeg() {$/;"	f
+deactivate	bin/deactivate	/^deactivate () $/;"	f
+doc	bin/lemmatizer.py	/^doc = nlp(text)$/;"	v
+english_words	bin/lemmatizer.py	/^english_words = sum(1 for w in words if w.lower() in ["the","is","are","i","you","we","and"])$/;"	v
+expresso	bin/expresso	/^expresso () $/;"	f
+gcl	bin/gcl	/^gcl () $/;"	f
+git_list_heavy	bin/git_list_heavy	/^git_list_heavy () $/;"	f
+git_list_heavy_commits	bin/git_list_heavy_commits	/^git_list_heavy_commits () $/;"	f
+git_rm_repo	bin/git_rm_repo	/^git_rm_repo () $/;"	f
+gitadd	bin/gitadd	/^gitadd () $/;"	f
+gitaddcommit	bin/gitaddcommit	/^gitaddcommit () $/;"	f
+gitlog	bin/gitlog	/^gitlog () $/;"	f
+gitmain	bin/gitmain	/^gitmain () $/;"	f
+gitotal	bin/gitotal	/^gitotal () $/;"	f
+header_awk	bin/header_awk	/^header_awk () $/;"	f
+header_journal	bin/header_journal	/^header_journal () $/;"	f
+history_full	bin/history_full	/^history_full () $/;"	f
+ipinfo	bin/ipinfo	/^ipinfo () $/;"	f
+iptables_update	bin/iptables_update	/^iptables_update () $/;"	f
+journal	bin/journal	/^journal () $/;"	f
+journalctl_prettyfy	bin/journalctl_prettyfy	/^journalctl_prettyfy () $/;"	f
+kill_all	bin/kill_all	/^kill_all () $/;"	f
+lemmes	bin/lemmatizer.py	/^lemmes = [token.lemma_ for token in doc if token.is_alpha]$/;"	v
+log	bin/nmap_script.sh	/^log() {$/;"	f
+main	.vim/templates/template.c	/^int	main(int argc, char **argv)$/;"	f
+main	.vim/templates/template.py	/^def main():$/;"	f
+main	dotfiles/vim/templates/template.c	/^int	main(int argc, char **argv)$/;"	f
+main	dotfiles/vim/templates/template.py	/^def main():$/;"	f
+mediaspi	bin/mediaspi	/^mediaspi () $/;"	f
+monip	bin/monip	/^monip () $/;"	f
+netstat_tunlp	bin/netstat_tunlp	/^netstat_tunlp () $/;"	f
+nlp	bin/lemmatizer.py	/^nlp = nlp_en if english_words > len(words) \/ 2 else nlp_fr$/;"	v
+nlp_en	bin/lemmatizer.py	/^nlp_en = spacy.load("en_core_web_sm")$/;"	v
+nlp_fr	bin/lemmatizer.py	/^nlp_fr = spacy.load("fr_core_news_sm")$/;"	v
+nmap_full	bin/nmap_full	/^nmap_full () $/;"	f
+nmap_sA	bin/nmap_sA	/^nmap_sA () $/;"	f
+nmap_ssh_brute	bin/nmap_ssh_brute	/^nmap_ssh_brute () $/;"	f
+nmap_version	bin/nmap_version	/^nmap_version () $/;"	f
+normi	bin/normi	/^normi () $/;"	f
+parse_args	.vim/templates/template.py	/^def parse_args():$/;"	f
+parse_args	dotfiles/vim/templates/template.py	/^def parse_args():$/;"	f
+ps_parents	bin/ps_parents	/^ps_parents () $/;"	f
+refresh_time	bin/refresh_time	/^refresh_time () $/;"	f
+remote	bin/remote	/^remote () $/;"	f
+remote_copy	bin/remote_copy	/^remote_copy () $/;"	f
+report_crash	bin/report_crash	/^report_crash () $/;"	f
+report_last_boot	bin/report_last_boot	/^report_last_boot () $/;"	f
+sortu	bin/sortu	/^sortu () $/;"	f
+src	bin/src	/^src () $/;"	f
+testee	bin/testee	/^testee () $/;"	f
+text	bin/lemmatizer.py	/^text = sys.stdin.read().strip()$/;"	v
+to_mp3	bin/to_mp3	/^to_mp3 () $/;"	f
+to_wav	bin/to_wav	/^to_wav () $/;"	f
+ulog_sort	bin/ulog_sort	/^ulog_sort () $/;"	f
+uniqq	bin/uniqq	/^uniqq () $/;"	f
+virtual	bin/virtual	/^virtual () $/;"	f
+vrc	bin/vrc	/^vrc () $/;"	f
+words	bin/lemmatizer.py	/^words = text.split()$/;"	v

@@ -340,3 +340,75 @@ vim .gitignore
 gitaddcommit 
 #1754499835
 git rm -rf .ansible
+#1754499837
+gitaddcommit 
+#1754499881
+git push
+#1754500192
+ls
+#1754500265
+users
+#1754500283
+ls /home
+#1754500315
+groups sysadmin
+#1754504023
+usermod -aG machine sysadmin 
+#1754504113
+sudo usermod -aG machine sysadmin 
+#1754504313
+su sysadmin
+#1754504340
+users
+#1754504362
+groups machine
+#1754506441
+vim bin/basha
+#1754506800
+basha coucou
+#1754506684
+vim .bashrc 
+#1754506887
+src
+#1754506894
+basha coucou
+#1754506916
+basha basha
+#1754507167
+vim .vimrc 
+#1754506933
+vim bin/basha
+#1754507206
+vim .vimrc 
+#1754507264
+brc
+#1754507314
+ls
+#1754507445
+src
+#1754507189
+vim bin/basha
+#1754507456
+vim bin/basha
+#1754507487
+ls bin/
+#1754507510
+vim  bin/commit_if_modified 
+#1754507552
+ctags -R .
+#1754507562
+apt install ctags
+#1754507733
+vim deploy/
+#1754507757
+vim deploy/apt_install.sh 
+#1754507873
+ctags
+#1754507877
+ctags -R .
+#1754507879
+ls
+#1754507893
+vim bin/basha
+#1754508034
+git status

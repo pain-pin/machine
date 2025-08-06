@@ -121,5 +121,7 @@ PATH="$PATH:$MACHINE_PATH/bin/"
 
 export LESS=-R
 
+ctags -R .
+
 bind -f  ~/.inputrc
 
