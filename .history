@@ -1,0 +1,250 @@
+#1754488467
+ls
+#1754488472
+cd
+#1754488473
+ls
+#1754488480
+make
+#1754488490
+sudo make
+#1754489524
+sudo vim Makefile
+#1754489541
+make
+#1754489987
+vim Makefile
+#1754491044
+cat Makefile
+#1754491147
+vim Makefile
+#1754491308
+cat Makefile
+#1754491777
+sudo vim Makefile
+#1754491840
+ls
+#1754491848
+sudo vim Makefile
+#1754491907
+sudo make set-user machine
+#1754491924
+sudo make set-user USER=machine
+#1754491929
+ls 
+#1754491935
+ls -la
+#1754491950
+source .bashrc
+#1754491952
+ls
+#1754492379
+declare -f remote
+#1754492384
+remote
+#1754492641
+ll
+#1754492666
+vim Makefile
+#1754492724
+sudo make chmod_env
+#1754492861
+ls
+#1754492869
+make chmod_env
+#1754492884
+ll
+#1754492956
+sudo make set-user USER=kami
+#1754492754
+vim Makefile
+#1754493291
+ls
+#1754493312
+ls networking/
+#1754493329
+rm -rf networking/whoisdir/
+#1754493330
+ls
+#1754493334
+ls README.md 
+#1754493339
+rm README.md 
+#1754493340
+la
+#1754493370
+rm .*.bak
+#1754493377
+rm -rf .*.bak
+#1754493379
+ls
+#1754493380
+la
+#1754493393
+ls .ansible/
+#1754493396
+ls .ansible/tmp/
+#1754493399
+ls .ansible/tmp/ansible-tmp-1754483059.2132447-1323-4458409730945/
+#1754493409
+cat .ansible/tmp/ansible-tmp-1754483059.2132447-1323-4458409730945/
+#1754493457
+cat .ansible/tmp/ansible-tmp-1754483059.2132447-1323-4458409730945/AnsiballZ_*
+#1754493485
+cat .ansible/tmp/ansible-tmp-1754483059.2132447-1323-4458409730945/AnsiballZ_* | grep $IP_REG 
+#1754493502
+ls
+#1754493506
+la
+#1754493512
+ls .config/
+#1754493525
+rm -rf .config/
+#1754493532
+ls .local/
+#1754493537
+ls .local/share/nano/
+#1754493552
+rm -rv .local/share/nano/
+#1754493559
+la
+#1754493600
+git status
+#1754493608
+sudo apt install git
+#1754493623
+git status
+#1754493629
+la
+#1754493654
+cat .ssh/
+#1754493658
+cat .ssh/authorized_keys 
+#1754493668
+ssh-keygen 
+#1754493689
+cat .ssh/id_rsa.pub 
+#1754494019
+clone machine
+#1754494040
+ll /home/machine/.bin/clone
+#1754494108
+ls
+#1754494167
+mv .bin bin
+#1754494205
+sudo make chmod_env
+#1754494074
+vim Makefile
+#1754494236
+clone machine
+#1754494252
+src
+#1754494264
+source .bashrc 
+#1754494269
+src
+#1754494292
+ls .vim
+#1754494306
+vim .vimrc 
+#1754494277
+vim .bashrc 
+#1754494608
+source .bashrc 
+#1754494612
+clone machine
+#1754494622
+echo $PATH
+#1754494629
+vim .bashrc 
+#1754494719
+source .bashrc 
+#1754494723
+clone machine
+#1754494747
+ll /home/machine/bin/clone
+#1754494765
+vim Makefile
+#1754494819
+vim Makefile
+#1754494857
+sudo make chmod_env
+#1754494867
+ll /home/machine/bin/clone
+#1754494957
+vim Makefile
+#1754495019
+sudo make chmod_env
+#1754495024
+clone machine
+#1754495037
+ll /home/machine/bin/clone
+#1754495133
+vim Makefile
+#1754495185
+sudo make chmod_env
+#1754495189
+clone machine
+#1754495454
+clone machine
+#1754495459
+src
+#1754495470
+source .bashrc
+#1754495473
+clone
+#1754495483
+sudo make chmod_env
+#1754495493
+sudo find /home/machine/bin -type f -exec chmod 750 {} \;
+#1754495503
+sudo find /home/machine/bin -type f -exec chmod 750 {} \;
+#1754495515
+ll  bin
+#1754495530
+ls
+#1754495385
+vim /home/machine/bin/clone
+#1754495547
+vim Makefile
+#1754495565
+mv dotfiles/bin/ .
+#1754495570
+rm bin
+#1754495572
+mv dotfiles/bin/ .
+#1754495582
+sudo make chmod_env
+#1754495592
+clone machine
+#1754495676
+ll
+#1754495694
+ll .ssh/
+#1754495848
+la dotfiles/
+#1754495866
+la
+#1754496024
+sudo make chmod_env
+#1754496041
+clone machine
+#1754496081
+mv machine/.git* .
+#1754496082
+ls
+#1754496088
+ls machine/
+#1754496096
+ls
+#1754496104
+gitlog
+#1754496119
+git status
+#1754496133
+ncdu
+#1754496146
+sudo apt install ncdu
+#1754496162
+ncdu

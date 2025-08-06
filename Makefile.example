@@ -1,0 +1,40 @@
+HOME_DIR := $(HOME)
+DOTFILES := dotfiles
+JOURNAUX := journaux
+BACKUPS := backups
+CONTAINERS := containers
+
+DOTFILES_LIST := .bashrc .aliases .gitconfig
+
+.PHONY: all install symlinks pull push backup container clean
+
+all: install
+
+install: symlinks
+
+symlinks:
+	@echo "Symlinking dotfiles..."
+	@for file in $(DOTFILES_LIST); do \
+		ln -sf $(PWD)/$(DOTFILES)/$$file $(HOME_DIR)/$$file; \
+	done
+
+pull:
+	@git pull
+
+push:
+	@git add .
+	@git commit -m "auto: update $(shell date '+%Y-%m-%d %H:%M')"
+	@git push
+
+backup:
+	@echo "Backing up journaux/"
+	@tar -czf $(BACKUPS)/journal_$(shell date +%F_%H%M).tar.gz $(JOURNAUX)
+
+container:
+	@echo "Lancement des conteneurs..."
+	@docker compose -f $(CONTAINERS)/compose.yml up -d
+
+clean:
+	@echo "Nettoyage des backups de plus de 30 jours..."
+	@find $(BACKUPS) -type f -name "*.tar.gz" -mtime +30 -delete
+
