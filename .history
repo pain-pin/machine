@@ -976,3 +976,15 @@ vim Makefile
 vim bin/chmodd 
 #1754598006
 vim Makefile
+#1754598669
+gitaddcommit
+#1754598942
+gitlog
+#1754598952
+git status
+#1754598967
+vim gitignore
+#1754598976
+vim .gitignore
+#1754598991
+git rm .history

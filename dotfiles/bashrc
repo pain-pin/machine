@@ -120,7 +120,7 @@ export SSH=177
 
 export MACHINE_PATH=/home/machine
 export BIN=${MACHINE_PATH}/bin
-PATH="$PATH:$MACHINE_PATH/bin/"
+export PATH="$PATH:$BIN"
 
 export LESS=-R
 
