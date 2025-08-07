@@ -32,8 +32,6 @@ deactivate	bin/deactivate	/^deactivate () $/;"	f
 doc	bin/lemmatizer.py	/^doc = nlp(text)$/;"	v
 english_words	bin/lemmatizer.py	/^english_words = sum(1 for w in words if w.lower() in ["the","is","are","i","you","we","and"])$/;"	v
 expresso	bin/expresso	/^expresso () $/;"	f
-f	a	/^f () {$/;"	f
-f	src	/^f () {$/;"	f
 gcl	bin/gcl	/^gcl () $/;"	f
 git_list_heavy	bin/git_list_heavy	/^git_list_heavy () $/;"	f
 git_list_heavy_commits	bin/git_list_heavy_commits	/^git_list_heavy_commits () $/;"	f

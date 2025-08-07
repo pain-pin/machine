@@ -116,6 +116,7 @@ export IMAGE_REG="jpg|jpeg|png|gif|bmp|webp|tiff|ico|heic|svg|jfif"
 export MEDIA_REG="\.(${AUDIO_REG}|${VIDEO_REG}|${IMAGE_REG})$"
 
 export HISTCONTROL=ignorespace
+export SSH=177
 
 export MACHINE_PATH=/home/machine
 export BIN=${MACHINE_PATH}/bin
@@ -126,4 +127,6 @@ export LESS=-R
 ctags -R .
 
 bind -f  ~/.inputrc
+
+envsubst < ${MACHINE_PATH}/dotfiles/ssh/config.template > ~/.ssh/config
 

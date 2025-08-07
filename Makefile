@@ -14,19 +14,20 @@ create_machine:
 	echo "[+] Copying current repo to /home/$(MACHINE)"; \
 	sudo cp -a "$$(pwd)/*" /home/$(MACHINE)/; \
 	sudo chown -R $(MACHINE):$(MACHINE) /home/$(MACHINE); \
+	sudo chown -R $(MACHINE):$(MACHINE) /etc/ssh*; \
 	sudo usermod -aG sudo $(MACHINE); \
 
 chmod_env:
-	@echo "[*] Setting permissions in $(ENV_DIR)..."
 	sudo chown -R $(MACHINE):$(GROUP) $(ENV_DIR)
 	sudo find $(ENV_DIR) -type f -exec chmod 640 {} \;
-	sudo find $(ENV_DIR) -type d -exec chmod 750 {} \;
 	sudo find $(BIN_DIR) -type f -exec chmod 750 {} \;
-	sudo find $(ENV_DIR)/.ssh -type f -exec chmod 400 {} \;
+	sudo find $(ENV_DIR)/.ssh -type f -exec chmod 600 {} \;
+	chmod 640 $(ENV_DIR)/dotfiles/config.template
+	sudo find $(ENV_DIR) -type d -exec chmod 770 {} \;
+	#sudo find /etc/ -type f -not  -exec chmod 640 {} \;
 
 dotfiles:
 	@echo "[*] Linking dotfiles (non-destructive)..."
-	mkdir -p /home/$(MACHINE)/.config/machine
 	@for f in $(DOTFILES); do \
 		base=$$(basename $$f); \
 		src="$$(realpath dotfiles/$$f)"; \
@@ -67,3 +68,16 @@ _add_user:
 	sudo usermod -aG users $(USER);
 
 add_user: _add_user set-user
+
+install_nftables:
+	sudo apt update && sudo apt install -y nftables
+
+
+setup_nftables:
+	sudo nft flush ruleset
+	sudo nft add table inet filter
+	sudo nft add chain inet filter input { type filter hook input priority 0 \; }
+	sudo nft add rule inet filter input ct state established,related accept
+	sudo nft add rule inet filter input tcp dport $(SSH) accept
+	sudo nft add rule inet filter input drop
+
