@@ -12,7 +12,7 @@ all:
 create_machine:
 	sudo useradd -m -s /bin/bash $(MACHINE); \
 	echo "[+] Copying current repo to /home/$(MACHINE)"; \
-	sudo cp -a "$$(pwd)/*" /home/$(MACHINE)/; \
+	sudo cp -ra "$$(pwd)" /home/$(MACHINE)/; \
 	sudo chown -R $(MACHINE):$(MACHINE) /home/$(MACHINE); \
 	sudo chown -R $(MACHINE):$(MACHINE) /etc/ssh*; \
 	sudo usermod -aG sudo $(MACHINE); \
@@ -26,12 +26,20 @@ chmod_env:
 	sudo find $(ENV_DIR) -type d -exec chmod 770 {} \;
 	#sudo find /etc/ -type f -not  -exec chmod 640 {} \;
 
-dotfiles:
+rm_dotfiles:
+	@echo "[*] Linking dotfiles (non-destructive)..."
+	@for f in $(DOTFILES); do \
+		base=$$(basename $$f); \
+		dst="$(MACHINE_PATH)/.$$base"; \
+		rm "$$dst"; \
+	done
+
+ln_dotfiles: rm_dotfile
 	@echo "[*] Linking dotfiles (non-destructive)..."
 	@for f in $(DOTFILES); do \
 		base=$$(basename $$f); \
 		src="$$(realpath dotfiles/$$f)"; \
-		dst="$(MACHINE_PATH)/$$base"; \
+		dst="$(MACHINE_PATH)/.$$base"; \
 		ln -sf "$$src" "$$dst"; \
 	done
 
