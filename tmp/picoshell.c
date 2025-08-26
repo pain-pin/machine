@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2025/08/26 17:20:33 by nidionis         ###   ########.fr       */
+/*   Updated: 2025/08/26 17:29:31 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,14 @@ void child_proc(int *prev_fd, int (*fds)[], char **cmds[], int i) {
     exit(EXIT_FAILURE);
 }
 
+void parent_proc(int *prev_fd, int (*fds)[], char **not_last) {
+	close(*prev_fd);
+	if (not_last) {
+	    close((*fds)[1]);
+	    *prev_fd = (*fds)[0];
+	}
+}
+
 void pipe_cmd(int i, char **cmds[], int (*fds)[2], int *prev_fd) {
 	pid_t pid;
 	pipe_if_not_last(cmds[i + 1], fds);
@@ -68,12 +76,7 @@ void pipe_cmd(int i, char **cmds[], int (*fds)[2], int *prev_fd) {
 	if (pid == 0) {
 		child_proc(prev_fd, fds, cmds, i);
 	}
-	if (*prev_fd != -1)
-	    close(*prev_fd);
-	if (cmds[i + 1] != NULL) {
-	    close((*fds)[1]);
-	    *prev_fd = (*fds)[0];
-	}
+	parent_proc(prev_fd, fds, cmds[i + 1]);
     for (int j = 0; j < i; j++) {
         wait(NULL);
     }
