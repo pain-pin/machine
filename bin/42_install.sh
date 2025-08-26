@@ -7,4 +7,5 @@ for F in ~/machine/dotfiles/* ; do
 	rm $DOTFILE
 	ln -s $F $DOTFILE
 done
+echo bash >> .zshrc
 cd -

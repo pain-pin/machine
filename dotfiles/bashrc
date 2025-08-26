@@ -53,9 +53,9 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-#if [ -f ~/.bash_aliases ]; then
-#    . ~/.bash_aliases
-#fi
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
 
 set -o vi
 export EDITOR="vim"
@@ -124,9 +124,9 @@ export PATH="$PATH:$BIN"
 
 export LESS=-R
 
-ctags -R .
+#ctags -R .
 
 bind -f  ~/.inputrc
 
-envsubst < ${MACHINE_PATH}/dotfiles/ssh/config.template > ~/.ssh/config
+#envsubst < ${MACHINE_PATH}/dotfiles/ssh/config.template > ~/.ssh/config
 
