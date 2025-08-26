@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2025/08/26 15:39:23 by nidionis         ###   ########.fr       */
+/*   Updated: 2025/08/26 16:54:22 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,18 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
-void pipe_cmd(int i, char **cmds[], int (*fds)[2], int *prev_fd) {
-	pid_t pid;
-	// if not last, pipe
-    if (cmds[i + 1] != NULL) {
+void pipe_if_not_last(char *next_cmd[], int (*fds)[2]) {
+    if (next_cmd != NULL) {
     	if (pipe((*fds)) == -1) {
 			perror("pipe");
 			exit(EXIT_FAILURE);
 		}
 	}
+}
+
+void pipe_cmd(int i, char **cmds[], int (*fds)[2], int *prev_fd) {
+	pid_t pid;
+	pipe_if_not_last(cmds[i + 1], fds);
 	//fork
 	pid = fork();
 	if (pid < 0) {
