@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2025/08/26 16:54:22 by nidionis         ###   ########.fr       */
+/*   Updated: 2025/08/26 17:20:33 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,28 +42,31 @@ void pipe_if_not_last(char *next_cmd[], int (*fds)[2]) {
 	}
 }
 
+void child_proc(int *prev_fd, int (*fds)[], char **cmds[], int i) {
+    if (*prev_fd != -1) {
+        dup2(*prev_fd, STDIN_FILENO);
+        close(*prev_fd);
+    }
+    if (cmds[i + 1] != NULL) {
+        close((*fds)[0]);
+        dup2((*fds)[1], STDOUT_FILENO);
+        close((*fds)[1]);
+    }
+    execvp(cmds[i][0], cmds[i]);
+    perror("execvp");
+    exit(EXIT_FAILURE);
+}
+
 void pipe_cmd(int i, char **cmds[], int (*fds)[2], int *prev_fd) {
 	pid_t pid;
 	pipe_if_not_last(cmds[i + 1], fds);
-	//fork
 	pid = fork();
 	if (pid < 0) {
 	    perror("fork");
 	    exit(EXIT_FAILURE);
 	}
 	if (pid == 0) {
-	    if (*prev_fd != -1) {
-	        dup2(*prev_fd, STDIN_FILENO);
-	        close(*prev_fd);
-	    }
-	    if (cmds[i + 1] != NULL) {
-	        close((*fds)[0]);
-	        dup2((*fds)[1], STDOUT_FILENO);
-	        close((*fds)[1]);
-	    }
-	    execvp(cmds[i][0], cmds[i]);
-	    perror("execvp");
-	    exit(EXIT_FAILURE);
+		child_proc(prev_fd, fds, cmds, i);
 	}
 	if (*prev_fd != -1)
 	    close(*prev_fd);
