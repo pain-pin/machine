@@ -1,0 +1,2 @@
+[profiles]
+	custom_command = "bash"

@@ -9,6 +9,14 @@ SCRIPTS := $(wildcard bin/*)
 
 all:
 
+42: ln_dotfiles 
+	@for f in $(DOTFILES); do \
+                base=$$(basename $$f); \
+                src="$$(realpath dotfiles/$$f)"; \
+                dst=$(HOME)/.$$base"; \
+                ln -sf "$$src" "$$dst"; \
+        done
+
 create_machine:
 	sudo useradd -m -s /bin/bash $(MACHINE); \
 	echo "[+] Copying current repo to /home/$(MACHINE)"; \
