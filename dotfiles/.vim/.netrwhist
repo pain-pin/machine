@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/nidionis/machine/tmp/42-Exam04/level2/ft_popen'
+let g:netrw_dirhist_5='/home/nidionis/machine/tmp/42-Exam04/level2'
+let g:netrw_dirhist_4='/home/nidionis/machine/tmp/42-Exam04/level2/sandbox'
+let g:netrw_dirhist_3='/home/nidionis/machine/tmp/42-Exam04/level2'
+let g:netrw_dirhist_2='/home/nidionis/machine/tmp/42-Exam04'
+let g:netrw_dirhist_1='/home/nidionis/machine/bin'

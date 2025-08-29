@@ -11,11 +11,11 @@ all:
 
 42: ln_dotfiles 
 	@for f in $(DOTFILES); do \
-                base=$$(basename $$f); \
+base=$$(basename $$f); \
                 src="$$(realpath dotfiles/$$f)"; \
                 dst=$(HOME)/.$$base"; \
                 ln -sf "$$src" "$$dst"; \
-        done
+        done \
 
 create_machine:
 	sudo useradd -m -s /bin/bash $(MACHINE); \

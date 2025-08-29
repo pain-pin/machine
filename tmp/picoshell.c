@@ -6,7 +6,7 @@
 /*   By: nidionis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 16:20:59 by nidionis          #+#    #+#             */
-/*   Updated: 2025/08/26 17:29:31 by nidionis         ###   ########.fr       */
+/*   Updated: 2025/08/27 18:59:17 by nidionis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,65 +32,117 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <errno.h>
 
-void pipe_if_not_last(char *next_cmd[], int (*fds)[2]) {
-    if (next_cmd != NULL) {
-    	if (pipe((*fds)) == -1) {
+
+//void pipe_if_not_last(char *next_cmd[], int (*fds)[2]) {
+//    if (next_cmd != NULL) {
+//    	if (pipe((*fds)) == -1) {
+//			perror("pipe");
+//			exit(EXIT_FAILURE);
+//		}
+//	}
+//}
+
+//void child_proc(int *prev_fd, int (*fds)[], char **cmds[], int i) {
+//    if (*prev_fd != -1) {
+//        dup2(*prev_fd, STDIN_FILENO);
+//        close(*prev_fd);
+//    }
+//    if (cmds[i + 1] != NULL) {
+//        close((*fds)[0]);
+//        dup2((*fds)[1], STDOUT_FILENO);
+//        close((*fds)[1]);
+//    }
+//    execvp(cmds[i][0], cmds[i]);
+//    perror("execvp");
+//    exit(EXIT_FAILURE);
+//}
+
+//void parent_proc(int *prev_fd, int (*fds)[], char **not_last) {
+//	close(*prev_fd);
+//	if (not_last) {
+//	    close((*fds)[1]);
+//	    *prev_fd = (*fds)[0];
+//	}
+//}
+
+//void pipe_cmd(int i, char **cmds[], int (*fds)[2], int *prev_fd) {
+//	pid_t pid;
+//	pipe_if_not_last(cmds[i + 1], fds);
+//	pid = fork();
+//	if (pid < 0) {
+//	    perror("fork");
+//	    exit(EXIT_FAILURE);
+//	}
+//	if (pid == 0) {
+//		child_proc(prev_fd, fds, cmds, i);
+//	}
+//	parent_proc(prev_fd, fds, cmds[i + 1]);
+//    for (int j = 0; j < i; j++) {
+//        wait(NULL);
+//    }
+//}
+
+//void picoshell(char **argv[]) {
+//    int i = 0;
+//	int pipefd[2];
+//	int prev_fd = -1;
+//    while (argv[i] != NULL) {
+//		pipe_cmd(i, argv, &pipefd, &prev_fd);
+//		i++;
+//	}
+//}
+
+void child_proc(int i, char **cmds[], int fds[2], int *prev_fd) {
+	if (*prev_fd != -1) {
+		if (dup2(*prev_fd, STDIN_FILENO) == -1) {
+			close(*prev_fd);
+			perror("dup2");
+			exit(EXIT_FAILURE);
+		}
+	}
+	if (cmds[i + 1])
+		dup2(fds[1], STDOUT_FILENO);
+	close(fds[1]);
+	close(fds[0]);
+	execvp(cmds[i][0], cmds[i]);
+	exit(-1);
+}
+
+void run_cmd(int i, char **cmds[], int fds[2], int *prev_fd) {
+	if (cmds[i + 1]) {
+		if (pipe(fds) == -1) {
 			perror("pipe");
 			exit(EXIT_FAILURE);
 		}
 	}
-}
-
-void child_proc(int *prev_fd, int (*fds)[], char **cmds[], int i) {
-    if (*prev_fd != -1) {
-        dup2(*prev_fd, STDIN_FILENO);
-        close(*prev_fd);
-    }
-    if (cmds[i + 1] != NULL) {
-        close((*fds)[0]);
-        dup2((*fds)[1], STDOUT_FILENO);
-        close((*fds)[1]);
-    }
-    execvp(cmds[i][0], cmds[i]);
-    perror("execvp");
-    exit(EXIT_FAILURE);
-}
-
-void parent_proc(int *prev_fd, int (*fds)[], char **not_last) {
-	close(*prev_fd);
-	if (not_last) {
-	    close((*fds)[1]);
-	    *prev_fd = (*fds)[0];
+	int pid = fork();
+	if (pid == 0)
+		child_proc(i, cmds, fds, prev_fd);
+	if (cmds[i + 1]) {
+		*prev_fd = dup(fds[0]);
+	}
+	close(fds[0]);
+	close(fds[1]);
+	for (int j = 0; j < i; j++) {
+		wait(NULL);
 	}
 }
 
-void pipe_cmd(int i, char **cmds[], int (*fds)[2], int *prev_fd) {
-	pid_t pid;
-	pipe_if_not_last(cmds[i + 1], fds);
-	pid = fork();
-	if (pid < 0) {
-	    perror("fork");
-	    exit(EXIT_FAILURE);
-	}
-	if (pid == 0) {
-		child_proc(prev_fd, fds, cmds, i);
-	}
-	parent_proc(prev_fd, fds, cmds[i + 1]);
-    for (int j = 0; j < i; j++) {
-        wait(NULL);
-    }
-}
-
-void picoshell(char **argv[]) {
-    int i = 0;
-	int pipefd[2];
+void picoshell(char **cmds[]) {
+	int i = 0;
+	int fds[2];
 	int prev_fd = -1;
-    while (argv[i] != NULL) {
-		pipe_cmd(i, argv, &pipefd, &prev_fd);
+	while (cmds[i]) {
+		run_cmd(i, cmds, fds, &prev_fd);
 		i++;
 	}
+	if (prev_fd != -1)
+		dup2(prev_fd, STDOUT_FILENO);
 }
+
+
 
 // Fonction utilitaire pour parser une ligne en commandes argv[]
 int parse_input(char *line, char **argv[]) {

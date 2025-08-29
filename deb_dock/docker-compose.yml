@@ -1,0 +1,12 @@
+services:
+  debian_custom:
+    build: .
+    environment:
+      - SSH=2222
+    volumes:
+      - ./root-only:/srv/root-only
+      - ./shared:/srv/shared
+      - ./bin:/srv/bin
+    ports:
+      - "2222:2222"
+
