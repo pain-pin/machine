@@ -8,7 +8,11 @@ RUN apt-get update \
  && apt-get install -y $(cat /tmp/packages.txt) openssh-server sudo \
  && rm -rf /var/lib/apt/lists/*
 
-RUN useradd -m -s /bin/bash kami \
+RUN rm -rf /etc/skel
+COPY home_skel /etc/skel
+
+RUN useradd -k /etc/skel -m -s /bin/bash kami \
+ && chown -R kami:kami /home/kami \
  && mkdir -p /etc/sudoers.d \
  && echo "kami ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/kami \
  && chmod 440 /etc/sudoers.d/kami

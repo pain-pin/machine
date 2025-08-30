@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/nidionis/machine/deb_dock/home_template'
+let g:netrw_dirhist_8='/home/nidionis/machine/deb_dock/kami-home/.ssh'
+let g:netrw_dirhist_7='/home/nidionis/machine/deb_dock/kami-home'
 let g:netrw_dirhist_6='/home/nidionis/machine/tmp/42-Exam04/level2/ft_popen'
 let g:netrw_dirhist_5='/home/nidionis/machine/tmp/42-Exam04/level2'
 let g:netrw_dirhist_4='/home/nidionis/machine/tmp/42-Exam04/level2/sandbox'

@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-SSH_PORT=${1:-2222}
+export SSH_PORT=${1:-"2222"}
 NAME=${2:-"debian_ssh"}
 DOCKER_ID=$(docker ps | awk '/ssh/ {print $1}')
 
