@@ -1,9 +1,9 @@
 #!/usr/bin/bash
 
-HOME_SKEL="~/machine/deb_dock/home_skel"
+HOME_SKEL="$HOME/machine/deb_dock/home_skel"
 
 cd
-ln -s machine/bin .
+ln -s "$HOME/machine/bin" .
 for F in $HOME_SKEL/.[a-z]* ; do
 	DOTFILE="$(basename $F)"
 	rm $DOTFILE
