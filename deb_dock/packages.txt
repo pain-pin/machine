@@ -1,4 +1,6 @@
 bc
+tree
+git
 gawk
 exuberant-ctags
 cmake
