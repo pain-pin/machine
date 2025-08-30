@@ -11,7 +11,6 @@ services:
       - ./root-only:/srv/root-only
       - ./shared:/srv/shared
       - ./bin:/srv/bin
-      - ./home_template:/etc/skel
-      - ../dotfiles:/mnt/dotfiles:ro
+      - ./home_template:/etc/skel:ro
     ports:
       - "${SSH_PORT}:${SSH_PORT}"

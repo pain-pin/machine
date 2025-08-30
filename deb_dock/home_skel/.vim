@@ -1,1 +1,0 @@
-/home/nidionis/machine/dotfiles/.vim
