@@ -6,8 +6,9 @@ cd
 ln -s "$HOME/machine/bin" .
 for F in $HOME_SKEL/.[a-z]* ; do
 	DOTFILE="$(basename $F)"
-	rm $DOTFILE
+	rm -i $DOTFILE
 	ln -s $F $DOTFILE
 done
-echo bash >> .zshrc
+#echo bash >> .zshrc
+source .bashrc
 cd -
