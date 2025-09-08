@@ -60,9 +60,9 @@ vrc () {
 basha () {
 	SOURCE="$HOME/.bashrc"
 	F_NAME=".bash_aliases"
-	FILE=$HOME/machine/$F_NAME
+	FILE=$HOME/$F_NAME
 	cd "$HOME/machine"
-    commit_if_modified "$F_NAME"
+    commit_if_modified "$FILE"
 	cd -
 	source $SOURCE
 }
@@ -596,3 +596,9 @@ remote_copy () {
 	fi
 	sudo -u $USER scp -i /home/$USER/.ssh/id_rsa -P $PORT -r $ITEM $USER@$HOST:$ITEM
 }
+
+grepip () {
+	grep -E $IP_REG -o $1 | sortu
+}
+
+

@@ -119,7 +119,8 @@ export HISTCONTROL=ignorespace
 export SSH=177
 
 export MACHINE_PATH=/home/machine
-export BIN=${MACHINE_PATH}/bin
+#export BIN=${MACHINE_PATH}/bin
+export BIN=${HOME}/bin
 export PATH="$PATH:$BIN"
 
 export LESS=-R
