@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0"
+    exit 1
+fi
+
+gitaddcommit .gitignore
+
+exit 0
+
