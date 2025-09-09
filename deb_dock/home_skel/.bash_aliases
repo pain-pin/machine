@@ -612,6 +612,5 @@ edit-bin () {
 	fi
 
 	[ ! -f "$FILENAME" ] && cp "$TEMPLATE" "$FILENAME"
-		vim "$FILENAME"
 	commit_if_modified $FILENAME
 }

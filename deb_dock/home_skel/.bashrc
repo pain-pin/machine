@@ -122,6 +122,7 @@ export MACHINE_PATH=/home/machine
 #export BIN=${MACHINE_PATH}/bin
 export BIN=${HOME}/bin
 export PATH="$PATH:$BIN"
+export REMOTE_BRANCHES="github origin"
 
 export LESS=-R
 
