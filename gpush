@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+if [ "$#" -gt 1 ]; then
+    echo "Usage: $0"
+    exit 1
+fi
+
+for branch in $REMOTE_BRANCHES; do
+    git push "$branch"
+done
