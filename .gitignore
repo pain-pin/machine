@@ -1,3 +1,4 @@
 *.config/Brav*
 *.swp
 passwd_gen
+deb_dock/home_skel/.vim/.netrwhist

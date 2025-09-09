@@ -131,3 +131,4 @@ bind -f  ~/.inputrc
 
 #envsubst < ${MACHINE_PATH}/dotfiles/ssh/config.template > ~/.ssh/config
 
+export PATH=~/.npm-global/bin:$PATH

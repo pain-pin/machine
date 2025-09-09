@@ -601,4 +601,17 @@ grepip () {
 	grep -E $IP_REG -o $1 | sortu
 }
 
+edit-bin () {
+	BIN_PATH=${BIN_PATH:-$HOME/bin}
+	FILENAME=$1
+	TEMPLATE=~/.vim/templates/template.my_aliases
 
+	if [ "$#" -lt 1 ] || [ "$#" -gt 2 ]; then
+		echo "Usage: $0 alias_name"
+		return 1
+	fi
+
+	[ ! -f "$FILENAME" ] && cp "$TEMPLATE" "$FILENAME"
+		vim "$FILENAME"
+	commit_if_modified $FILENAME
+}

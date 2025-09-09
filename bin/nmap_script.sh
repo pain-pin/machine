@@ -1,10 +1,11 @@
 #!/bin/bash
 
-#!/bin/bash
-USER_HOME=$(getent passwd $SUDO_USER | cut -d: -f6)
-TARGET="$1"
-DIR=${2:-"$HOME/journal/sysadmin/nmap_scan/"}
-OUTPUT_DIR=$DIR${3:-"scan_$(date +%F_%H-%M-%S)_$TARGET"}
+if [ -z "$1" ] ; then echo "no args" ; exit 1 ; fi
+
+TARGET=$1
+DIR="$HOME/journal/sysadmin/nmap_scan/$2"
+[[ "$DIR" != */ ]] && DIR="$DIR/"
+OUTPUT_DIR=$DIR"${TARGET}_$(date +%F_%H-%M-%S).nmap"
 
 mkdir -p "$OUTPUT_DIR"
 
@@ -15,32 +16,66 @@ log() {
 
 log "Target: $TARGET"
 
+### 1. Passive recon
 log "DNS & WHOIS"
-dig +short "$TARGET" | tee -a "$OUTPUT_DIR/dns.txt"
-whois "$TARGET" | tee -a "$OUTPUT_DIR/whois.txt"
-nslookup "$TARGET" | tee -a "$OUTPUT_DIR/nslookup.txt"
+dig +short "$TARGET" > "$OUTPUT_DIR/dns.txt"
+whois "$TARGET" > "$OUTPUT_DIR/whois.txt"
+nslookup "$TARGET" > "$OUTPUT_DIR/nslookup.txt"
 
-log "Ping & Traceroute"
-traceroute "$TARGET" | tee -a "$OUTPUT_DIR/traceroute.txt"
+log "Traceroute"
+traceroute "$TARGET" > "$OUTPUT_DIR/traceroute.txt"
 
-log "Nmap Fast Scan + Service Detection"
-nmap -Pn -O -sS -sV -T2 --top-ports 100 "$TARGET" -oN "$OUTPUT_DIR/nmap_fast.txt"
+# Détection IPv4 / IPv6
+IPV4=$(dig +short A "$TARGET" | head -n1)
+IPV6=$(dig +short AAAA "$TARGET" | head -n1)
 
-#log "Nmap Ping Scan"
-#nmap -sn "$TARGET" -oN "$OUTPUT_DIR/nmap_ping.txt"
+scan_block() {
+  local mode=$1  # "IPv4" ou "IPv6"
+  local opt=$2   # "" ou "-6"
 
-## 5. Nmap - Full TCP Scan (long)
-log "Full TCP Scan (all 65535 ports)"
-nmap -p- -A -sS -T3 "$TARGET" -oN "$OUTPUT_DIR/nmap_full_tcp.txt"
+  log "=== $mode Scans ==="
 
-### 6. Nmap - OS detection, version + script scan (bruyant)
-#log "Nmap Aggressive Scan"
-#nmap -A "$TARGET" -T4 -oN "$OUTPUT_DIR/nmap_aggressive.txt"
+  log "Fast TCP Scan (top 100 ports)"
+  sudo nmap $opt -Pn -sS -sV --top-ports 100 -T2 "$TARGET" -oN "$OUTPUT_DIR/nmap_${mode}_fast_tcp.txt"
 
-#log "Nmap vuln scan"
-#nmap --script vuln -T4 "$TARGET" -oN "$OUTPUT_DIR/nmap_vuln.txt"
+  log "Full TCP Scan (all 65535 ports)"
+  sudo nmap $opt -Pn -sS -p- -T3 "$TARGET" -oN "$OUTPUT_DIR/nmap_${mode}_full_tcp.txt"
 
+  log "UDP Scan (top 200 ports)"
+  sudo nmap $opt -Pn -sU --top-ports 200 -T3 "$TARGET" -oN "$OUTPUT_DIR/nmap_${mode}_udp.txt"
+
+  log "SCTP Init Scan (top 50 ports)"
+  sudo nmap $opt -Pn -sY --top-ports 50 -T3 "$TARGET" -oN "$OUTPUT_DIR/nmap_${mode}_sctp.txt"
+
+  log "Service Detection (all protocols)"
+  sudo nmap $opt -Pn -sV -p- -sS -sU -T2 "$TARGET" -oN "$OUTPUT_DIR/nmap_${mode}_service.txt"
+
+  log "OS Detection"
+  sudo nmap $opt -Pn -O -A -T2 "$TARGET" -oN "$OUTPUT_DIR/nmap_${mode}_os.txt"
+
+  log "Nmap Vulnerability Scripts"
+  sudo nmap $opt -Pn --script vuln -T2 "$TARGET" -oN "$OUTPUT_DIR/nmap_${mode}_vuln.txt"
+}
+
+### 2. Lancer scans selon ce qui est dispo
+if [ -n "$IPV4" ]; then
+  log "IPv4 detected: $IPV4"
+  scan_block "ipv4" ""
+else
+  log "No IPv4 found"
+fi
+
+if [ -n "$IPV6" ]; then
+  log "IPv6 detected: $IPV6"
+  scan_block "ipv6" "-6"
+else
+  log "No IPv6 found"
+fi
+
+### 3. Fin
 log "Scan completed. Results in $OUTPUT_DIR/"
 
-source "$USER_HOME/.bashrc"
-journal $OUTPUT_DIR README
+# Hook perso
+source "$HOME/.bashrc"
+journal "$OUTPUT_DIR" README
+
