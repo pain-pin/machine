@@ -9,7 +9,7 @@ for F in $(declare -F | awk '{print $3}'); do
 
     {
         echo "#!/bin/bash"
-        echo "$fbody"
+        echo "$fbody" | sed "s/return/exit/g"
         echo "$F \"\$@\""
     } > "$script"
 
