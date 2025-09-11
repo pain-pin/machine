@@ -1,0 +1,13 @@
+#!/bin/bash
+brc () 
+{ 
+    SOURCE="$HOME/.bashrc";
+    F_NAME=".bashrc";
+    FILE="$(find -O3 $HOME -name $F_NAME 2> /dev/null | head -n 1)";
+    F_PATH="$(dirname $FILE)";
+    cd "$F_PATH";
+    commit_if_modified "$F_NAME";
+    cd -;
+    source $SOURCE
+}
+brc "$@"

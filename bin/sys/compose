@@ -1,0 +1,6 @@
+#!/bin/bash
+compose () 
+{ 
+    docker compose up --watch
+}
+compose "$@"

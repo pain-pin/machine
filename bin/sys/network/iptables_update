@@ -1,0 +1,14 @@
+#!/bin/bash
+iptables_update () 
+{ 
+    F_PATH="$(dirname $FILE)";
+    F_PERSISTENT="/etc/iptables.rules";
+    FILE="$(find /home -name 'iptables_script.sh' | head -1)";
+    F_TMP=/etc/iptables.rules.backup;
+    sudo cp $F_PERSISTENT > $F_TMP;
+    vim + $FILE;
+    sudo ./$FILE -s -f ip_to_ban.txt -r;
+    sudo iptables-save > $HOME/tmp;
+    sudo mv $HOME/tmp $F_PERSISTENT
+}
+iptables_update "$@"

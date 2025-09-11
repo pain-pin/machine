@@ -1,0 +1,7 @@
+#!/bin/bash
+refresh_time () 
+{ 
+    export DATE=$(date +"%y%m%d");
+    export TIME=$(date +"%T")
+}
+refresh_time "$@"

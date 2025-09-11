@@ -1,0 +1,9 @@
+#!/bin/bash
+cdebug () 
+{ 
+    BASE="$1";
+    NAME="${BASE%.*}";
+    FLAGS="-g3";
+    cc $BASE $FLAGS -o "$NAME" && gdb "$NAME" && rm $NAME
+}
+cdebug "$@"

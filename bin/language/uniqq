@@ -1,0 +1,9 @@
+#!/bin/bash
+uniqq () 
+{ 
+    for F in $@;
+    do
+        sort $F | uniq -c | sort -nr;
+    done
+}
+uniqq "$@"

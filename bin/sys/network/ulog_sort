@@ -1,0 +1,6 @@
+#!/bin/bash
+ulog_sort () 
+{ 
+    sudo grep -Eo "MAC.*DST=[^ ]*" /var/log/ulogd.syslogemu | sort | uniq -c | sort -n
+}
+ulog_sort "$@"

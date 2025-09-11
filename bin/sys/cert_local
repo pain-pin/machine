@@ -1,0 +1,8 @@
+#!/bin/bash
+cert_local () 
+{ 
+    DIR=${1:-"certs"};
+    mkdir -p $DIR;
+    openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout $DIR/localhost.key -out $DIR/localhost.crt -subj "/CN=localhost"
+}
+cert_local "$@"
