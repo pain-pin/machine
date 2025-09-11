@@ -44,8 +44,8 @@ def text_matches_keywords(text, keywords, hashtags_only=False):
 
 def parse_arguments():
     parser = argparse.ArgumentParser(description="Search Bluesky posts for keywords")
-    parser.add_argument("-u", "--user", required=True, help="Bluesky username")
-    parser.add_argument("-p", "--password", required=True, help="Bluesky password")
+    parser.add_argument("-u", "--user", required=False, help="Bluesky username")
+    parser.add_argument("-p", "--password", required=False, help="Bluesky password")
     parser.add_argument("-k", "--keywords", required=True, help="File with keywords, one per line")
     parser.add_argument("-H", "--hashtags", action="store_true", help="Match hashtags only")
     parser.add_argument("-L", "--limit", type=int, default=25, help="Number of posts to fetch")
