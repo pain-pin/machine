@@ -61,7 +61,8 @@ nlp.Defaults.stop_words.add("unknown")
 nlp.Defaults.stop_words.add("date")
 nlp.Defaults.stop_words.add("social")
 nlp.Defaults.stop_words.add("thumbnail")
-nlp.Defaults.stop_words.add("social")
+nlp.Defaults.stop_words.add("replier")
+nlp.Defaults.stop_words.add("replie")
 
 for md_file in VAULT_DIR.rglob("*.md"):
     if "Dictionary" in md_file.parts:

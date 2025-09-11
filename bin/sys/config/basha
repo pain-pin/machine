@@ -5,7 +5,7 @@ if [ "$#" -lt 1 ] || [ "$#" -gt 1 ]; then
     exit 1
 fi
 
-F=$(command -v -- "$1")
+F=$(which "$1")
 
 if [ -f "$F" ]; then
     vim "$F"
