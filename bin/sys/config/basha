@@ -9,6 +9,7 @@ F=$(which "$1")
 
 if [ ! -f "$F" ]; then
 	F="$BIN/$1"
+	cp ~/.vim/templates/template.bashalias $F
 fi
 vim "$F"
 chmod +x $BIN/$1
