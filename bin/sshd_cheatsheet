@@ -1,11 +1,9 @@
-#!/usr/bin/bash
-
 #!/usr/bin/env bash
 # sshd wrapper
 
 PORT=${1:-22}
 CONFIG=${2:-/etc/ssh/sshd_config}
-LOG=${3:-/var/log/sshd_wrapper.log}
+LOG=${3:-/tmp/sshd_wrapper.log}
 
 start_sshd() {
     echo "Starting sshd on port $PORT with config $CONFIG" | tee -a "$LOG"
