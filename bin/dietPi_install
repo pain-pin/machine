@@ -13,7 +13,7 @@ if [ -z "$DEV" ]; then
 fi
 
 # URL par défaut
-DIETPI_URL="https://dietpi.com/downloads/images/DietPi_RPi-ARMv8-Bookworm.img.xz"
+DIETPI_URL="https://dietpi.com/downloads/images/DietPi_RPi234-ARMv8-Trixie.img.xz"
 SUM_URL="$DIETPI_URL.sha256"
 
 # Fichiers locaux
