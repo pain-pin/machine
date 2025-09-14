@@ -2,7 +2,7 @@
 report_crash () 
 { 
     refresh_time;
-	NAME="$(echo $1 | sed "s/\//-/g)";
+	NAME=$1;
     TAIL_SIZE="100";
     DIR_ORIGINAL=$PWD;
     CRASH_DIR="$(echo ${DATE}_${TIME} | sed 's/:/-/g')";
