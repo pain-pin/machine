@@ -11,10 +11,10 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 ./config_install.sh
-apt instll -y  ulogd
+#apt instll -y  ulogd
 NETWORKDIR="$MACHINE_DIR/networking"
-systemctl enable ulogd
-systemctl start ulogd
-bash $NETWORKDIR/iptables_script.sh -f $NETWORKDIR/ip_to_ban.txt -r
+#systemctl enable ulogd
+#systemctl start ulogd
+#bash $NETWORKDIR/iptables_script.sh -f $NETWORKDIR/ip_to_ban.txt -r
 
 bash apt_install.sh

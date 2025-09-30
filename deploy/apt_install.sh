@@ -1,12 +1,12 @@
 #!/usr/bin/bash
 
-apt install -y  ufw
-curl -fsS https://dl.brave.com/install.sh | sh
+#apt install -y  ufw
+#curl -fsS https://dl.brave.com/install.sh | sh
+
 
 apt install -y  bc
 apt install -y  gawk
 apt install -y  exuberant-ctags
-apt install python3.11-venv
 apt install -y  cmake
 apt install -y unzip
 apt install -y tcpdump
@@ -17,13 +17,10 @@ apt install -y whois
 apt install -y nmap
 apt install -y lldb
 apt install -y man-db
-apt install -y apropos
 apt install -y gdb
 apt install -y docker
-apt install -y go
 apt install -y makepkg
 apt install -y vim
-apt install -y iwctl
 apt install -y gcc
 apt install -y make
 apt install -y pip

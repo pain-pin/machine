@@ -120,7 +120,7 @@ export SSH=177
 
 export MACHINE_PATH=/home/machine
 #export BIN=${MACHINE_PATH}/bin
-export BIN=${HOME}/bin
+export BIN=${HOME}/.bin
 for d in $(find -L $BIN -type d); do
     PATH="$d:$PATH"
 done
