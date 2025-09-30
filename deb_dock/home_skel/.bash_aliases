@@ -3,6 +3,8 @@ alias val="valgrind --leak-check=full --show-leak-kinds=all"
 alias mvj='rsync -aH --remove-source-files'
 alias cpj='rsync -aH'
 alias git_light="git filter-repo --strip-blobs-bigger-than 10M"
+alias src="source ~/.bashrc"
+alias sudo="sudo -E"
 
 ##convert mp3 to wav
 #to_wav () {
