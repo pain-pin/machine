@@ -13,7 +13,7 @@ while IFS= read -r line; do
 	IP_ADDR=$(echo $line | grep -Eo $IPV4_REG)
 	F_OUT=$DIR/$IP_ADDR
 	echo request $IP_ADDR
-	if [ -s "$IP_ADDR" ] ; then
+	if [ -n "$IP_ADDR" ] ; then
 		whois $IP_ADDR | tee $F_OUT
 		echo done
 	fi
