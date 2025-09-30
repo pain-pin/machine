@@ -119,11 +119,14 @@ export HISTCONTROL=ignorespace
 export SSH=177
 
 export MACHINE_PATH=/home/machine
+export NETWORK_DIR=$MACHINE_PATH/networking
 #export BIN=${MACHINE_PATH}/bin
 export BIN=${HOME}/.bin
+
 for d in $(find -L $BIN -type d); do
     PATH="$d:$PATH"
 done
+
 export PATH
 
 export REMOTE_BRANCHES="github origin"
