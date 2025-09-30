@@ -1,7 +1,8 @@
 #!/usr/bin/bash
 
+refresh_time
 DIR=~/network
-NAME=${DATE}-${TIME}-${1-:"tcpdump_default"}
+NAME=${1-:"tcpdump_default"}-${DATE}-${TIME}
 
 sudo tcpdump -w $DIR/$NAME.log
 
