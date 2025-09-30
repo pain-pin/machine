@@ -7,13 +7,12 @@ fi
 FILE=${1}
 DIR=${2:-"$HOME/network/whois"}
 
-mkdir -p $DIR
-echo $DIR
-exit 0
+mkdir -p "${DIR}"
 
 while IFS= read -r line; do
-	IP_ADDR=$(echo $line | grep -Eo $IP_REG)
+	IP_ADDR=$(echo $line | grep -Eo $IPV4_REG)
 	F_OUT=$DIR/$IP_ADDR
+	[[ -s $IP_ADDR ]] && \
 	whois $IP_ADDR | tee $F_OUT
 done < "$FILE"
 
