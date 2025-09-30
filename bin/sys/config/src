@@ -1,6 +1,0 @@
-#!/bin/bash
-src () 
-{ 
-    source $HOME/.bashrc
-}
-src "$@"

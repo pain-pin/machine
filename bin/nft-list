@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+
+sudo -E bash $NETWORK_DIR/nftable_setup.sh
+
+exit 0
+
