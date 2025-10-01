@@ -9,7 +9,7 @@ refresh_time
 DIR=$JOURNAL_DIR/logs
 mkdir -p $DIR
 FILE=$1-$DATE-$TIME.md
-sudo bash -c "tcpdump | tee $DIR/$FILE"
+sudo bash -c "tcpdump -f | tee $DIR/$FILE"
 sudo chown root $FILE
 
 exit 0
