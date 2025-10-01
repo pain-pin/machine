@@ -5,6 +5,7 @@ if [ "$#" -ne 0 ]; then
     exit 1
 fi
 
+vim + .gitignore
 gitaddcommit .gitignore
 
 exit 0
