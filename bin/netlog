@@ -1,0 +1,15 @@
+#!/usr/bin/bash
+
+if [ "$#" -ne 1 ]
+    echo "Usage: $0 name"
+    exit 1
+fi
+
+refresh_time
+DIR=$JOURNAL_DIR/logs
+FILE=$1-$DATE-$TIME.md
+sudo tcpdump >> $DIR/$FILE
+sudo chown root $FILE
+
+exit 0
+
