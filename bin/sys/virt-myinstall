@@ -1,0 +1,29 @@
+#!/usr/bin/bash
+
+IMG=${1:-"debian-12-genericcloud-amd64.qcow2"}
+OS_V=$(echo $IMG | grep -Eo "^[a-z]+.[0-9]+" | sed "s/[^0-9a-z]//g")
+URL="https://cloud.debian.org/images/cloud/bookworm/latest/$IMG"
+V_NAME=${2:-"debian-vm"}
+CPUS=${3:-"1"}
+RAM=${4:-"1024"}
+DISK=${5:-"5"}
+DISK_PATH=${V_NAME}.qcow2
+
+[ -f "$IMG" ] || wget "$URL"
+
+qemu-img create -f qcow2 -F qcow2 -b "$IMG" $DISK_PATH 15G
+
+sudo virsh net-define $NETWORK_DIR/virtnat.xml
+sudo virsh net-autostart virtnat
+sudo virsh net-start virtnat
+
+virt-install \
+	--name=$V_NAME \
+	--vcpus=$CPUS \
+	--memory=$RAM \
+	--disk path=$DISK_PATH,format=qcow2 \
+	--import \
+	--graphics spice \
+	--os-variant=$OS_V \
+	--network network=default
+
