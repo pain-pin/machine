@@ -118,7 +118,7 @@ export MEDIA_REG="\.(${AUDIO_REG}|${VIDEO_REG}|${IMAGE_REG})$"
 export HISTCONTROL=ignorespace
 export SSH=177
 
-export MACHINE_PATH=/home/machine
+export MACHINE_PATH=$HOME/machine
 export NETWORK_DIR=$MACHINE_PATH/networking
 #export BIN=${MACHINE_PATH}/bin
 export BIN=${HOME}/.bin
@@ -139,4 +139,4 @@ bind -f  ~/.inputrc
 
 #envsubst < ${MACHINE_PATH}/dotfiles/ssh/config.template > ~/.ssh/config
 
-export PATH=~/.npm-global/bin:$PATH
+#export PATH=~/.npm-global/bin:$PATH
