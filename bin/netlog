@@ -7,8 +7,9 @@ fi
 
 refresh_time
 DIR=$JOURNAL_DIR/logs
+mkdir -p $DIR
 FILE=$1-$DATE-$TIME.md
-sudo $(tcpdump >> $DIR/$FILE)
+sudo bash -c "tcpdump >> $DIR/$FILE"
 sudo chown root $FILE
 
 exit 0
