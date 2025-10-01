@@ -4,10 +4,10 @@ clone ()
     if [ $# -eq "3" ]; then
         PROFIL_NAME="$1";
         PROJECT_NAME="$2";
-        git clone --resurse-submodules https://github.com/$PROFIL_NAME/$PROJECT_NAME.git;
+        git clone --recurse-submodules https://github.com/$PROFIL_NAME/$PROJECT_NAME.git;
     else
         PROJECT_NAME="$1";
-        git clone --resurse-submodules git@github.com:nidionis/$PROJECT_NAME.git;
+        git clone --recurse-submodules git@github.com:nidionis/$PROJECT_NAME.git;
     fi
 }
 clone "$@"
