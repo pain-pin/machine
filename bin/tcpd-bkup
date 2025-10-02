@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+
+BKUP_DIR=$LOG_CONN_DIR/..
+
+for F in logs/* ; do
+	RNAME=$(basename $F)
+	grep -Eo "$IP_REG" $F | sortu | tee ${BKUP_DIR}/$RNAME.md
+done
+
