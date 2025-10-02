@@ -17,7 +17,6 @@ chmod +x $BIN/$1
 cd $BIN
 gitaddcommit
 cd -
-src
 
 exit 0
 
