@@ -5,6 +5,7 @@
 
 
 apt install -y  bc
+apt install -y  virt-viewer
 apt install -y  gawk
 apt install -y  exuberant-ctags
 apt install -y  cmake

@@ -1,4 +1,0 @@
-#!/usr/bin/bash
-mkdir -p a/b
-echo a
-exit 0

@@ -45,27 +45,27 @@ if [ ! -f "$RAW_IMG" ]; then
   xz -dk "$IMG_NAME"
 fi
 
-# Arrêt éventuelle ancienne VM
-pkill -f "qemu-system-x86_64.*$RAW_IMG" || true
-
-# Lancement VM
-echo "[5] Lancement VM"
-nohup qemu-system-x86_64 \
-  -m 2048 -smp 2 \
-  -drive file="$RAW_IMG",format=raw \
-  -nic user,hostfwd=tcp::2222-:22 \
-  -nographic >"$WORKDIR/qemu.log" 2>&1 &
-
-# Sauvegarde incrémentale
-echo "[6] Sauvegarde incrémentale"
-TODAY=$(date +%F)
-rsync -a --link-dest="$BACKUPDIR/latest" \
-  "$RAW_IMG" \
-  "$BACKUPDIR/$TODAY/"
-ln -sfn "$BACKUPDIR/$TODAY" "$BACKUPDIR/latest"
-
-echo "[OK] VM active sur port 2222 (SSH/X11)."
-echo "Depuis smartphone :"
-echo "  ssh -p 2222 -C -X user@serveur"
-echo "Puis lancer startlxqt ou autre session graphique."
+## Arrêt éventuelle ancienne VM
+#pkill -f "qemu-system-x86_64.*$RAW_IMG" || true
+#
+## Lancement VM
+#echo "[5] Lancement VM"
+#nohup qemu-system-x86_64 \
+#  -m 2048 -smp 2 \
+#  -drive file="$RAW_IMG",format=raw \
+#  -nic user,hostfwd=tcp::2222-:22 \
+#  -nographic >"$WORKDIR/qemu.log" 2>&1 &
+#
+## Sauvegarde incrémentale
+#echo "[6] Sauvegarde incrémentale"
+#TODAY=$(date +%F)
+#rsync -a --link-dest="$BACKUPDIR/latest" \
+#  "$RAW_IMG" \
+#  "$BACKUPDIR/$TODAY/"
+#ln -sfn "$BACKUPDIR/$TODAY" "$BACKUPDIR/latest"
+#
+#echo "[OK] VM active sur port 2222 (SSH/X11)."
+#echo "Depuis smartphone :"
+#echo "  ssh -p 2222 -C -X user@serveur"
+#echo "Puis lancer startlxqt ou autre session graphique."
 
