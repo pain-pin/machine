@@ -4,7 +4,7 @@ if [ "$#" -ne 1 ] ; then
     echo "Usage: $0 keywd"
 fi
 
-find $BIN -iregex ".*$1[^/]*"
+find -L $BIN -iregex ".*${1}[^/]*"
 
 exit 0
 
