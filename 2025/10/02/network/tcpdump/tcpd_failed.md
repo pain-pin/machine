@@ -7,6 +7,10 @@ localhost
 
 2025/10/02/network/tcpdump/tcpd_failed.md
 
+SOLVED (wrong script, should be netlog)
+mv netlog -> tcpd done
+
+
 => sudo apt install qemu-user-static
 Installing:                     
   qemu-user-static
@@ -45,4 +49,13 @@ drwxrwxr-x 17 k    k    4.0K Oct  2 06:20 ../
 -rw-r--r--  1 root root  24K Oct  2 06:09 rpios_shasum-251001-23:20:00.md
 -rw-r--r--  1 root root  73M Oct  1 20:38 torrent-251001-20:14:21.md
 -rw-r--r--  1 root root  24K Oct  2 06:37 wait-251002-06:11:09.md
+
+251002
+10:23:36
+k
+localhost
+
+###############################################
+
+2025/10/02/network/tcpdump/tcpd_failed.md
 
