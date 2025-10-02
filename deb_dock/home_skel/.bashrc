@@ -121,7 +121,7 @@ export SSH=177
 export MACHINE_PATH=$HOME/machine
 export NETWORK_DIR=$MACHINE_PATH/networking
 export JOURNAL_DIR=$HOME/journal
-#export BIN=${MACHINE_PATH}/bin
+export LOG_CONN_DIR=$JOURNAL_DIR/logs
 export BIN=${HOME}/.bin
 
 for d in $(find -L $BIN -type d); do
