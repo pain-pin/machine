@@ -12,7 +12,7 @@ if [ ! -f "$F" ]; then
 	cp ~/.vim/templates/template.my_aliases $F
 fi
 vim "$F"
-chmod +x $BIN/$1
+chmod +x $F
 
 cd $BIN
 gitaddcommit
