@@ -123,6 +123,8 @@ export NETWORK_DIR=$MACHINE_PATH/networking
 export BLACKLIST=$NETWORK_DIR/ip_to_ban.txt
 export WHITELIST=$NETWORK_DIR/whitelist.txt
 export NFT_RESET=$NETWORK_DIR/nft_setup.sh
+export DEVICE="$(ip addr | grep -v DOWN | grep -E "^[0-9]" | awk -F':' '{print $2}' | grep -v lo)"
+
 
 export JOURNAL_DIR=$HOME/journal
 export LOG_CONN_DIR=$JOURNAL_DIR/logs
