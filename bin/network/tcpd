@@ -22,7 +22,7 @@ fi
 echo 'DEVICE='$DEVICE
 echo 
 
-sudo tcpdump -n -i $DEVICE > $DIR/$FILE 
+sudo tcpdump -n -i $DEVICE | grepcidr -f $WHITELIST
 sudo chown root $DIR/$FILE
 
 exit 0
