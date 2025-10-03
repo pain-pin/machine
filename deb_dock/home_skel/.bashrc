@@ -120,6 +120,10 @@ export SSH=177
 
 export MACHINE_PATH=$HOME/machine
 export NETWORK_DIR=$MACHINE_PATH/networking
+export BLACKLIST=$NETWORK_DIR/ip_to_ban.txt
+export WHITELIST=$NETWORK_DIR/whitelist.txt
+export NFT_RESET=$NETWORK_DIR/nftables_setup.sh
+
 export JOURNAL_DIR=$HOME/journal
 export LOG_CONN_DIR=$JOURNAL_DIR/logs
 export BIN=${HOME}/.bin
