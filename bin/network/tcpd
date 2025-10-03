@@ -9,7 +9,18 @@ refresh_time
 DIR=$JOURNAL_DIR/logs
 mkdir -p $DIR
 FILE=$1-$DATE-$TIME.md
-sudo bash -c "tcpdump -f | tee $DIR/$FILE"
+
+DEVICES="$(ip addr | grep -v DOWN | grep -E "^[0-9]" | awk -F':' '{print $2}' | grep -v lo)"
+NB_DEVICES="$(echo ${DEVICES} | awk '{print NF}')"
+
+if [ $NB_DEVICES -ne "1" ] ; then
+	echo several devices, precise it using '$2':
+	echo $DEVICES
+	exit 1
+fi
+
+echo 'DEVICE='$DEVICES
+sudo bash -c "tcpdump -i $DEVICES -f | tee $DIR/$FILE"
 sudo chown root $FILE
 
 exit 0
