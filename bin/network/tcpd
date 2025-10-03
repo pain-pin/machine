@@ -20,8 +20,10 @@ if [ $NB_DEVICES -ne "1" ] ; then
 fi
 
 echo 'DEVICE='$DEVICE
-sudo bash -c "tcpdump -n -i $DEVICE | tee $DIR/$FILE"
-sudo chown root $FILE
+echo 
+
+sudo tcpdump -n -i $DEVICE > $DIR/$FILE 
+sudo chown root $DIR/$FILE
 
 exit 0
 
