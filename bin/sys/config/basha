@@ -15,7 +15,9 @@ vim "$F"
 chmod +x $F
 
 cd $BIN
+git pull
 gitaddcommit
+git push
 cd -
 
 exit 0
