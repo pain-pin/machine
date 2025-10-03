@@ -10,17 +10,17 @@ DIR=$JOURNAL_DIR/logs
 mkdir -p $DIR
 FILE=$1-$DATE-$TIME.md
 
-DEVICES="$(ip addr | grep -v DOWN | grep -E "^[0-9]" | awk -F':' '{print $2}' | grep -v lo)"
-NB_DEVICES="$(echo ${DEVICES} | awk '{print NF}')"
+DEVICE=${2:-"$(ip addr | grep -v DOWN | grep -E "^[0-9]" | awk -F':' '{print $2}' | grep -v lo)"}
+NB_DEVICES="$(echo ${DEVICE} | awk '{print NF}')"
 
 if [ $NB_DEVICES -ne "1" ] ; then
 	echo several devices, precise it using '$2':
-	echo $DEVICES
+	echo $DEVICE
 	exit 1
 fi
 
-echo 'DEVICE='$DEVICES
-sudo bash -c "tcpdump -i $DEVICES | tee $DIR/$FILE"
+echo 'DEVICE='$DEVICE
+sudo bash -c "tcpdump -n -i $DEVICE | tee $DIR/$FILE"
 sudo chown root $FILE
 
 exit 0
