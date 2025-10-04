@@ -1,0 +1,122 @@
+251004
+00:50:51
+k
+localhost
+
+###############################################
+
+login_bug.crash
+
+
+
+Oct 04 10:17:03 localhost kernel: iwlwifi 0000:03:00.0: RF_KILL bit toggled to enable radio.
+Oct 04 10:17:03 localhost kernel: ata1: SATA link up 6.0 Gbps (SStatus 133 SControl 300)
+Oct 04 10:17:03 localhost kernel: ata3: SATA link down (SStatus 4 SControl 300)
+Oct 04 10:17:03 localhost kernel: usb 1-2: reset high-speed USB device number 2 using xhci_hcd
+Oct 04 10:17:03 localhost kernel: ata4: SATA link up 1.5 Gbps (SStatus 113 SControl 300)
+Oct 04 10:17:03 localhost kernel: sd 0:0:0:0: [sda] Starting disk
+Oct 04 10:17:03 localhost kernel: ata1.00: configured for UDMA/133
+Oct 04 10:17:03 localhost kernel: ata4.00: configured for UDMA/133
+Oct 04 10:17:03 localhost kernel: ahci 0000:00:17.0: port does not support device sleep
+Oct 04 10:17:03 localhost kernel: usb 1-3: reset full-speed USB device number 3 using xhci_hcd
+Oct 04 10:17:03 localhost kernel: OOM killer enabled.
+Oct 04 10:17:03 localhost kernel: Restarting tasks ... done.
+Oct 04 10:17:03 localhost kernel: random: crng reseeded on system resumption
+Oct 04 10:17:03 localhost kernel: PM: suspend exit
+Oct 04 10:17:03 localhost kernel: Bluetooth: hci0: Legacy ROM 2.5 revision 1.0 build 3 week 17 2014
+Oct 04 10:17:03 localhost kernel: Bluetooth: hci0: Intel Bluetooth firmware file: intel/ibt-hw-37.8.10-fw-1.10.3.11.e.bseq
+Oct 04 10:17:03 localhost kernel: Generic FE-GE Realtek PHY r8169-0-201:00: attached PHY driver (mii_bus:phy_addr=r8169-0-201:00, irq=MAC)
+Oct 04 10:17:02 localhost systemd-logind[939]: Lid opened.
+Oct 04 10:17:03 localhost fwupd[2671]: 08:17:03.045 FuPluginIntelMe      failed to get public key using /fpf/OemCred: generic failure [0xb]
+Oct 04 10:17:03 localhost kdeconnectd[1762]: 2025-10-04T10:17:02 default: Error sending UDP packet: QAbstractSocket::NetworkError
+Oct 04 10:17:03 localhost kdeconnectd[1762]: 2025-10-04T10:17:02 kdeconnect.core: Failed to open any MDNS client sockets
+Oct 04 10:17:03 localhost kdeconnectd[1762]: 2025-10-04T10:17:02 kdeconnect.core: Failed to open any MDNS server sockets
+Oct 04 10:17:03 localhost ModemManager[1040]: <msg> [sleep-monitor-systemd] system is resuming
+Oct 04 10:17:02 localhost systemd-sleep[36556]: System returned from sleep operation 'suspend'.
+Oct 04 10:17:02 localhost systemd[1]: Starting systemd-rfkill.service - Load/Save RF Kill Switch Status...
+Oct 04 10:17:02 localhost systemd[1]: user@1001.service: Unit now thawed.
+Oct 04 10:17:02 localhost systemd[1]: user.slice: Unit now thawed.
+Oct 04 10:17:02 localhost systemd[1]: user-1001.slice: Unit now thawed.
+Oct 04 10:17:02 localhost systemd[1]: session-4.scope: Unit now thawed.
+Oct 04 10:17:02 localhost systemd-sleep[36556]: Successfully thawed unit 'user.slice'.
+Oct 04 10:17:02 localhost systemd[1]: systemd-suspend.service: Deactivated successfully.
+Oct 04 10:17:02 localhost systemd[1]: Finished systemd-suspend.service - System Suspend.
+Oct 04 10:17:02 localhost systemd[1]: Stopped target sleep.target - Sleep.
+Oct 04 10:17:02 localhost systemd[1]: Reached target suspend.target - Suspend.
+Oct 04 10:17:02 localhost systemd-logind[939]: Operation 'suspend' finished.
+Oct 04 10:17:03 localhost systemd[1347]: Stopped target bluetooth.target - Bluetooth.
+Oct 04 10:17:03 localhost systemd[1347]: Reached target bluetooth.target - Bluetooth.
+Oct 04 10:17:03 localhost NetworkManager[1021]: <info>  [1759565823.0320] manager: sleep: wake requested (sleeping: yes  enabled: yes)
+Oct 04 10:17:03 localhost NetworkManager[1021]: <info>  [1759565823.0321] device (enp2s0f1): state change: unmanaged -> unavailable (reason 'managed', managed-type: 'external')
+Oct 04 10:17:03 localhost systemd[1]: Starting grub-common.service - Record successful boot for GRUB...
+Oct 04 10:17:03 localhost systemd[1]: Stopped target bluetooth.target - Bluetooth Support.
+Oct 04 10:17:03 localhost systemd[1]: Stopped target suspend.target - Suspend.
+Oct 04 10:17:03 localhost systemd[1]: Started systemd-rfkill.service - Load/Save RF Kill Switch Status.
+Oct 04 10:17:03 localhost systemd[1]: grub-common.service: Deactivated successfully.
+Oct 04 10:17:03 localhost systemd[1]: Finished grub-common.service - Record successful boot for GRUB.
+Oct 04 10:17:03 localhost kernel: psmouse serio2: synaptics: queried max coordinates: x [..5672], y [..4722]
+Oct 04 10:17:03 localhost kernel: r8169 0000:02:00.1 enp2s0f1: Link is Down
+Oct 04 10:17:03 localhost NetworkManager[1021]: <info>  [1759565823.4125] device (wlp3s0): state change: unmanaged -> unavailable (reason 'managed', managed-type: 'external')
+Oct 04 10:17:03 localhost NetworkManager[1021]: <info>  [1759565823.4131] manager: NetworkManager state is now DISCONNECTED
+Oct 04 10:17:03 localhost kernel: psmouse serio2: synaptics: queried min coordinates: x [1380..], y [1192..]
+Oct 04 10:17:03 localhost kernel: Bluetooth: hci0: Intel BT fw patch 0x32 completed & activated
+Oct 04 10:17:06 localhost unix_chkpwd[36593]: password check failed for user (k)
+Oct 04 10:17:07 localhost ModemManager[1040]: <msg> [base-manager] couldn't check support for device '/sys/devices/pci0000:00/0000:00:1c.4/0000:02:00.1': not supported by any plugin
+Oct 04 10:17:07 localhost ModemManager[1040]: <msg> [base-manager] couldn't check support for device '/sys/devices/pci0000:00/0000:00:1c.6/0000:03:00.0': not supported by any plugin
+Oct 04 10:17:08 localhost systemd[1]: systemd-rfkill.service: Deactivated successfully.
+Oct 04 10:17:17 localhost kscreenlocker_greet[36155]: pam_kwallet5(kde:auth): pam_kwallet5: pam_sm_authenticate
+Oct 04 10:17:17 localhost kscreenlocker_greet[36155]: pam_kwallet5(kde:auth): pam_kwallet5: we were already executed
+Oct 04 10:17:17 localhost kscreenlocker_greet[36155]: pam_kwallet5(kde:setcred): pam_kwallet5: pam_sm_setcred
+Oct 04 10:17:17 localhost kwin_wayland_wrapper[36155]: qt.qpa.wayland: Could not create EGL surface (EGL error 0x3000)
+Oct 04 10:17:17 localhost kwin_wayland_wrapper[36155]: Failed to write to the pipe: Bad file descriptor.
+Oct 04 10:17:19 localhost CRON[36605]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Oct 04 10:17:19 localhost CRON[36607]: (root) CMD (cd / && run-parts --report /etc/cron.hourly)
+Oct 04 10:17:19 localhost CRON[36605]: pam_unix(cron:session): session closed for user root
+Oct 04 10:17:33 localhost NetworkManager[1021]: <info>  [1759565853.6721] policy: set-hostname: set hostname to 'localhost.localdomain' (no hostname found)
+Oct 04 10:17:33 localhost dbus-daemon[926]: [system] Activating via systemd: service name='org.freedesktop.hostname1' unit='dbus-org.freedesktop.hostname1.service' requested by ':1.10' (uid=0 pid=1021 comm="/usr/sbin/NetworkManager --no-daemon")
+Oct 04 10:17:33 localhost systemd[1]: Starting systemd-hostnamed.service - Hostname Service...
+Oct 04 10:17:33 localhost systemd[1]: Started systemd-hostnamed.service - Hostname Service.
+Oct 04 10:17:33 localhost dbus-daemon[926]: [system] Successfully activated service 'org.freedesktop.hostname1'
+Oct 04 10:17:33 localhost systemd-hostnamed[36613]: Hostname set to <localhost> (static)
+Oct 04 10:17:33 localhost dbus-daemon[926]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.10' (uid=0 pid=1021 comm="/usr/sbin/NetworkManager --no-daemon")
+Oct 04 10:17:33 localhost systemd[1]: Starting NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service...
+Oct 04 10:17:33 localhost dbus-daemon[926]: [system] Successfully activated service 'org.freedesktop.nm_dispatcher'
+Oct 04 10:17:33 localhost systemd[1]: Started NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service.
+Oct 04 10:17:43 localhost systemd[1]: NetworkManager-dispatcher.service: Deactivated successfully.
+Oct 04 10:18:03 localhost systemd[1]: systemd-hostnamed.service: Deactivated successfully.
+Oct 04 10:18:15 localhost kernel: psmouse serio2: TouchPad at isa0060/serio2/input0 lost synchronization, throwing 4 bytes away.
+Oct 04 10:20:29 localhost anacron[36312]: Job `cron.daily' started
+Oct 04 10:20:29 localhost anacron[36651]: Updated timestamp for job `cron.daily' to 2025-10-04
+Oct 04 10:20:29 localhost anacron[36312]: Job `cron.daily' terminated
+Oct 04 10:20:29 localhost anacron[36312]: Normal exit (1 job run)
+Oct 04 10:20:29 localhost systemd[1]: anacron.service: Deactivated successfully.
+Oct 04 10:20:57 localhost sudo[36659]:        k : TTY=pts/9 ; PWD=/home/k/machine/networking ; USER=root ; COMMAND=/usr/bin/dmesg
+Oct 04 10:20:57 localhost sudo[36659]: pam_unix(sudo:session): session opened for user root(uid=0) by k(uid=1001)
+Oct 04 10:20:57 localhost sudo[36659]: pam_unix(sudo:session): session closed for user root
+Oct 04 10:21:16 localhost sudo[36667]:        k : TTY=pts/9 ; PWD=/home/k/machine/networking ; USER=root ; COMMAND=/usr/bin/dmesg -T
+Oct 04 10:21:16 localhost sudo[36667]: pam_unix(sudo:session): session opened for user root(uid=0) by k(uid=1001)
+Oct 04 10:21:16 localhost sudo[36667]: pam_unix(sudo:session): session closed for user root
+Oct 04 10:21:58 localhost kwin_wayland_wrapper[1429]: kwin_libinput: Libinput: event6  - SynPS/2 Synaptics TouchPad: kernel bug: Touch jump detected and discarded.
+Oct 04 10:21:58 localhost kwin_wayland_wrapper[1429]: See https://wayland.freedesktop.org/libinput/doc/1.28.1/touchpad-jumping-cursors.html for details
+Oct 04 10:23:05 localhost sudo[36697]:        k : TTY=pts/9 ; PWD=/home/k/journal/sysadmin/crash/251004_00-50-51 ; USER=root ; COMMAND=/usr/bin/journalctl -b 0
+Oct 04 10:23:05 localhost sudo[36697]: pam_unix(sudo:session): session opened for user root(uid=0) by k(uid=1001)
+Oct 04 10:23:05 localhost sudo[36697]: pam_unix(sudo:session): session closed for user root
+Oct 04 10:23:05 localhost sudo[36703]:        k : TTY=pts/9 ; PWD=/home/k/journal/sysadmin/crash/251004_00-50-51 ; USER=root ; COMMAND=/usr/bin/journalctl -b 0
+Oct 04 10:23:05 localhost sudo[36703]: pam_unix(sudo:session): session opened for user root(uid=0) by k(uid=1001)
+Oct 04 10:23:05 localhost sudo[36703]: pam_unix(sudo:session): session closed for user root
+Oct 04 10:23:57 localhost sudo[36729]:        k : TTY=pts/9 ; PWD=/home/k/machine/networking ; USER=root ; COMMAND=/usr/bin/ls
+Oct 04 10:23:57 localhost sudo[36729]: pam_unix(sudo:session): session opened for user root(uid=0) by k(uid=1001)
+Oct 04 10:23:57 localhost sudo[36729]: pam_unix(sudo:session): session closed for user root
+Oct 04 10:24:01 localhost sudo[36748]:        k : TTY=pts/9 ; PWD=/home/k/journal/sysadmin/crash/251004_00-50-51 ; USER=root ; COMMAND=/usr/bin/journalctl -b 0
+Oct 04 10:24:01 localhost sudo[36748]: pam_unix(sudo:session): session opened for user root(uid=0) by k(uid=1001)
+
+###############################################
+
+
+
+      4         k : TTY=pts/9 ; PWD=/home/k/journal/sysadmin/crash/251004_00-50-51 ; USER=root ; COMMAND=/usr/bin/journalctl -b 0
+      6  pam_unix(sudo:session): session closed for user root
+      7  pam_unix(sudo:session): session opened for user root(uid=0) by k(uid=1001)
+
+###############################################
+
