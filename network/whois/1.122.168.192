@@ -1,0 +1,123 @@
+% [whois.apnic.net]
+% Whois data copyright terms    http://www.apnic.net/db/dbcopyright.html
+
+% Information related to '1.120.0.0 - 1.127.255.255'
+
+% Abuse contact for '1.120.0.0 - 1.127.255.255' is 'abuse@telstra.net'
+
+inetnum:        1.120.0.0 - 1.127.255.255
+netname:        TELSTRAINTERNET49-AU
+descr:          Telstra Limited
+country:        AU
+org:            ORG-TC6-AP
+admin-c:        TIAR-AP
+tech-c:         TAN2-AP
+abuse-c:        AT1005-AP
+status:         ALLOCATED PORTABLE
+remarks:        -----
+remarks:        All reports regarding SPAM or security breaches
+remarks:        should be addressed to abuse@telstra.net
+remarks:        ------
+remarks:        --------------------------------------------------------
+remarks:        To report network abuse, please contact mnt-irt
+remarks:        For troubleshooting, please contact tech-c and admin-c
+remarks:        Report invalid contact via www.apnic.net/invalidcontact
+remarks:        --------------------------------------------------------
+mnt-by:         APNIC-HM
+mnt-lower:      MAINT-AU-TIAR-AP
+mnt-routes:     MAINT-AU-TIAR-AP
+mnt-irt:        IRT-TELSTRA-AU
+last-modified:  2024-05-10T00:50:21Z
+geofeed:        https://geofeed.tools.telstra.net/geofeed.csv
+source:         APNIC
+
+irt:            IRT-TELSTRA-AU
+address:        Telstra Internet
+e-mail:         abuse@telstra.net
+abuse-mailbox:  abuse@telstra.net
+admin-c:        TIAR-AP
+tech-c:         TIAR-AP
+auth:           # Filtered
+remarks:        abuse@telstra.net was validated on 2025-07-15
+mnt-by:         MAINT-AU-TIAR-AP
+last-modified:  2025-09-04T01:00:06Z
+source:         APNIC
+
+organisation:   ORG-TC6-AP
+org-name:       Telstra Limited
+org-type:       LIR
+country:        AU
+address:        242 Exhibition Street
+e-mail:         corporateaddressing@team.telstra.com
+mnt-ref:        APNIC-HM
+mnt-by:         APNIC-HM
+last-modified:  2024-12-06T08:30:50Z
+source:         APNIC
+
+role:           ABUSE TELSTRAAU
+country:        ZZ
+address:        Telstra Internet
+phone:          +000000000
+e-mail:         abuse@telstra.net
+admin-c:        TIAR-AP
+tech-c:         TIAR-AP
+nic-hdl:        AT1005-AP
+remarks:        Generated from irt object IRT-TELSTRA-AU
+remarks:        abuse@telstra.net was validated on 2025-07-15
+abuse-mailbox:  abuse@telstra.net
+mnt-by:         APNIC-ABUSE
+last-modified:  2025-07-15T22:43:15Z
+source:         APNIC
+
+role:           Telstra AU NOC
+address:        Telstra Internet
+address:        242 Exhibition Street
+address:        Melbourne
+address:        VIC 3000
+country:        AU
+phone:          +61 3 8632 0516
+e-mail:         ipnoc-au@team.telstra.com
+admin-c:        TIAR-AP
+tech-c:         TIAR-AP
+nic-hdl:        TAN2-AP
+mnt-by:         MAINT-AU-TIAR-AP
+last-modified:  2022-06-08T09:03:20Z
+source:         APNIC
+
+person:         Telstra Internet Address Registry
+address:        Telstra Internet
+address:        242 Exhibition St
+address:        Melbourne
+address:        VIC 3000
+country:        AU
+phone:          +61 000000000
+e-mail:         addressing@telstra.net
+nic-hdl:        TIAR-AP
+remarks:        Telstra Internet Address Registry Role Object
+mnt-by:         MAINT-AU-TIAR-AP
+last-modified:  2021-12-09T22:28:56Z
+source:         APNIC
+
+% Information related to '1.120.0.0/13AS1221'
+
+route:          1.120.0.0/13
+origin:         AS1221
+descr:          Telstra Corporation
+                242 Exhibition Street
+mnt-by:         MAINT-AU-TIAR-AP
+last-modified:  2019-12-11T21:02:31Z
+source:         APNIC
+
+% Information related to '1.120.0.0/13AS19905'
+
+route:          1.120.0.0/13
+origin:         AS19905
+descr:          Telstra Corporation Limited
+                242 Exhibition Street
+mnt-by:         MAINT-AU-TIAR-AP
+last-modified:  2022-09-11T23:45:33Z
+source:         APNIC
+
+% This query was served by the APNIC Whois Service version 1.88.34 (WHOIS-UK2)
+
+

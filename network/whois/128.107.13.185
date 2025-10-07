@@ -1,0 +1,67 @@
+
+#
+# ARIN WHOIS data and services are subject to the Terms of Use
+# available at: https://www.arin.net/resources/registry/whois/tou/
+#
+# If you see inaccuracies in the results, please report at
+# https://www.arin.net/resources/registry/whois/inaccuracy_reporting/
+#
+# Copyright 1997-2025, American Registry for Internet Numbers, Ltd.
+#
+
+
+NetRange:       128.107.0.0 - 128.107.255.255
+CIDR:           128.107.0.0/16
+NetName:        CISCO-PRNET1
+NetHandle:      NET-128-107-0-0-1
+Parent:         NET128 (NET-128-0-0-0-0)
+NetType:        Direct Allocation
+OriginAS:       
+Organization:   CISCO SYSTEMS, INC. (CS-2831)
+RegDate:        1986-02-05
+Updated:        2024-03-08
+Comment:        Geofeed https://www.cisco.com/web/automation/CiscoAS109_geoip.csv
+Ref:            https://rdap.arin.net/registry/ip/128.107.0.0
+
+
+OrgName:        CISCO SYSTEMS, INC.
+OrgId:          CS-2831
+Address:        251 LITTLE FALLS DRIVE
+City:           WILMINGTON
+StateProv:      DE
+PostalCode:     19808
+Country:        US
+RegDate:        2023-06-07
+Updated:        2024-02-16
+Ref:            https://rdap.arin.net/registry/entity/CS-2831
+
+
+OrgNOCHandle: GATC-ARIN
+OrgNOCName:   GIS ARIN Technical Contact
+OrgNOCPhone:  +1-408-526-8888 
+OrgNOCEmail:  arin-tech@cisco.com
+OrgNOCRef:    https://rdap.arin.net/registry/entity/GATC-ARIN
+
+OrgTechHandle: GATC-ARIN
+OrgTechName:   GIS ARIN Technical Contact
+OrgTechPhone:  +1-408-526-8888 
+OrgTechEmail:  arin-tech@cisco.com
+OrgTechRef:    https://rdap.arin.net/registry/entity/GATC-ARIN
+
+OrgAbuseHandle: CISCO6-ARIN
+OrgAbuseName:   Cisco CSIRT
+OrgAbusePhone:  +1-408-527-3227 
+OrgAbuseEmail:  csirt-notify@cisco.com
+OrgAbuseRef:    https://rdap.arin.net/registry/entity/CISCO6-ARIN
+
+
+#
+# ARIN WHOIS data and services are subject to the Terms of Use
+# available at: https://www.arin.net/resources/registry/whois/tou/
+#
+# If you see inaccuracies in the results, please report at
+# https://www.arin.net/resources/registry/whois/inaccuracy_reporting/
+#
+# Copyright 1997-2025, American Registry for Internet Numbers, Ltd.
+#
+

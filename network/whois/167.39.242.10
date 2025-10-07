@@ -1,0 +1,85 @@
+
+#
+# ARIN WHOIS data and services are subject to the Terms of Use
+# available at: https://www.arin.net/resources/registry/whois/tou/
+#
+# If you see inaccuracies in the results, please report at
+# https://www.arin.net/resources/registry/whois/inaccuracy_reporting/
+#
+# Copyright 1997-2025, American Registry for Internet Numbers, Ltd.
+#
+
+
+NetRange:       167.39.0.0 - 167.39.255.255
+CIDR:           167.39.0.0/16
+NetName:        GTIS-B1-8
+NetHandle:      NET-167-39-0-0-1
+Parent:         NET167 (NET-167-0-0-0-0)
+NetType:        Direct Allocation
+OriginAS:       
+Organization:   Shared Services Canada (SSC-299)
+RegDate:        1993-03-25
+Updated:        2021-12-14
+Ref:            https://rdap.arin.net/registry/ip/167.39.0.0
+
+
+OrgName:        Shared Services Canada
+OrgId:          SSC-299
+Address:        434 Queen Street
+Address:        PO Box 9808 STN T CSC
+City:           Ottawa
+StateProv:      ON
+PostalCode:     K1G 4A8
+Country:        CA
+RegDate:        2013-11-19
+Updated:        2024-11-25
+Ref:            https://rdap.arin.net/registry/entity/SSC-299
+
+
+OrgAbuseHandle: GEEMI-ARIN
+OrgAbuseName:   Gee, Michel 
+OrgAbusePhone:  +1-613-218-1124 
+OrgAbuseEmail:  michel.gee@ssc-spc.gc.ca
+OrgAbuseRef:    https://rdap.arin.net/registry/entity/GEEMI-ARIN
+
+OrgNOCHandle: SAUND92-ARIN
+OrgNOCName:   Saunders, Michelle 
+OrgNOCPhone:  +1-613-301-0722 
+OrgNOCEmail:  michelle.saunders@ssc-spc.gc.ca
+OrgNOCRef:    https://rdap.arin.net/registry/entity/SAUND92-ARIN
+
+OrgAbuseHandle: HOSTM227-ARIN
+OrgAbuseName:   Hostmaster
+OrgAbusePhone:  +1-819-697-8032 
+OrgAbuseEmail:  michel.gee@ssc-spc.gc.ca
+OrgAbuseRef:    https://rdap.arin.net/registry/entity/HOSTM227-ARIN
+
+OrgNOCHandle: GEEMI-ARIN
+OrgNOCName:   Gee, Michel 
+OrgNOCPhone:  +1-613-218-1124 
+OrgNOCEmail:  michel.gee@ssc-spc.gc.ca
+OrgNOCRef:    https://rdap.arin.net/registry/entity/GEEMI-ARIN
+
+OrgAbuseHandle: SAUND92-ARIN
+OrgAbuseName:   Saunders, Michelle 
+OrgAbusePhone:  +1-613-301-0722 
+OrgAbuseEmail:  michelle.saunders@ssc-spc.gc.ca
+OrgAbuseRef:    https://rdap.arin.net/registry/entity/SAUND92-ARIN
+
+OrgTechHandle: HOSTM227-ARIN
+OrgTechName:   Hostmaster
+OrgTechPhone:  +1-819-697-8032 
+OrgTechEmail:  michel.gee@ssc-spc.gc.ca
+OrgTechRef:    https://rdap.arin.net/registry/entity/HOSTM227-ARIN
+
+
+#
+# ARIN WHOIS data and services are subject to the Terms of Use
+# available at: https://www.arin.net/resources/registry/whois/tou/
+#
+# If you see inaccuracies in the results, please report at
+# https://www.arin.net/resources/registry/whois/inaccuracy_reporting/
+#
+# Copyright 1997-2025, American Registry for Internet Numbers, Ltd.
+#
+
