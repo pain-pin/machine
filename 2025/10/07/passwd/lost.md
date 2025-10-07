@@ -21,3 +21,16 @@ password   include      system-local-login
 
 bug lorsque la ligne est mise au debut ou retiree
 
+251007
+15:28:43
+arche
+yduseche
+
+###############################################
+
+2025/10/07/passwd//lost.md
+251007-15:32:27-arche@yduseche-~
+=> ll /etc/pam.d/login
+-rw-r--r-- 1 root root 262 Oct  7 15:30 /etc/pam.d/login
+
+note modite avec vim
