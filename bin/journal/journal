@@ -31,6 +31,8 @@ journal ()
     if commit_if_modified $FILE; then
         mkdir -p "$DIR/$LN_DIR";
         ln -P "$FILE" "$DIR/$LN_DIR/";
+		git add "$DIR/$LN_DIR/$FILE";
+		git commit -m "file $DIR/$LN_DIR/$FILE linked";
     else
         rm $FILE;
         rmdir -p "${PATH_}";
