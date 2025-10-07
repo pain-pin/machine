@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+FILE="deploy/arch_install.sh"
+cd $MACHINE_DIR
+vim $FILE
+gitaddcommit $FILE
+cd -
+
+exit 0
+
