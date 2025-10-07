@@ -21,7 +21,7 @@ fi
 echo 'DEVICE='$DEVICE
 echo 
 
-sudo tcpdump -n -i $DEVICE | grepcidr -v -f $WHITELIST
+sudo tcpdump -n -i $DEVICE 'host not github and not src and dst net localnet'
 sudo chown root $DIR/$FILE
 
 exit 0
