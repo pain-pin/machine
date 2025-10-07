@@ -4,16 +4,6 @@ if [[ $EUID -ne 0 ]]; then
    echo "This script must be run as root"
    exit 1
 fi
-#SUDO_HOME="/home/$SUDO_USER"
-#MACHINE_DIR="$SUDO_HOME/machine"
-#USER=$(users | cut -d\  -f1)
-
-FILES_TO_LINK="$MACHINE_DIR/.vim $MACHINE_DIR/.vimrc $MACHINE_DIR/.bashrc $MACHINE_DIR/.bash_aliases"
-for F in $FILES_TO_LINK; do
-	BASENAME=$(basename $F)
-	mv $SUDO_HOME/$BASENAME $SUDO_HOME/$BASENAME.original
-	ln -s $F $SUDO_HOME/$BASENAME
-done;
 
 #pacman --noconfirm -Syu ulogd
 #NETWORKDIR="$MACHINE_DIR/networking"
@@ -50,24 +40,8 @@ pacman --noconfirm -S tree
 pacman --noconfirm -S vim
 pacman --noconfirm -S iwctl
 mandb #rend possible la commande apropos
-#pacman -S zram-generator
-#pacman -S cuda
-#pacman -S zsh
-#pacman --noconfirm -S python-pytorch-rocm
 
-#echo "zram-size = ram w* 2\ncompression-algorithm = zstd" >> /etc/systemd/zram-generator.conf
-
-#wget https://gitlab.archlinux.org/pacman/pacman/-/raw/master/scripts/makepkg.sh.in
-#chmod +x makepkg.sh.in
-#mv makepkg.sh.in /bin/makepkg
-
-#pip install openai-whisper pydub
-
-# log iptables dans /var/log/iptables.log au lieu de dmesg via syslog-ng
-#awk '/filter f_everything/ { print "#" $0; print "filter f_everything { level(debug..emerg) and not facility(auth, authpriv) and not filter(f_iptables); };" ; next } 1' /etc/syslog-ng/syslog-ng.conf > /tmp/tmp
-#mv /tmp/tmp /etc/syslog-ng/syslog-ng.conf
-
-git clone https://github.com/Exafunction/codeium.vim ~/.vim/pack/Exafunction/start/codeium.vim
+#git clone https://github.com/Exafunction/codeium.vim ~/.vim/pack/Exafunction/start/codeium.vim
 
 sudo -i -u $USER bash << EOF
 
@@ -83,4 +57,3 @@ rm -rf yay
 
 EOF
 mv ~/yay.tmp /usr/bin/yay
-yay -S grepcidr

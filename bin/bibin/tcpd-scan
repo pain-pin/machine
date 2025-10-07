@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+
+#from man
+#reset + ackowledgement set
+tcpdump 'tcp[tcpflags] & (tcp-rst|tcp-ack) == (tcp-rst|tcp-ack)'
