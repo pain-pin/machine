@@ -1,17 +1,8 @@
 #!/usr/bin/bash
 
-if [[ $EUID -ne 0 ]]; then
-   echo "This script must be run as root"
-   exit 1
+if [ $UEID -ne 0 ] ; then
+	echo "This script must be run as root"
 fi
-
-#pacman --noconfirm -Syu ulogd
-#NETWORKDIR="$MACHINE_DIR/networking"
-##TOR_LIST=$NETWORKDIR/tor_list.txt
-##curl https://www.dan.me.uk/torlist/?full= > $TOR_LIST
-#systemctl enable ulogd
-#systemctl start ulogd
-#bash $NETWORKDIR/iptables_script.sh -f $NETWORKDIR/ip_to_ban.txt -r
 
 pacman --noconfirm -S cherrytree
 pacman --noconfirm -S git
