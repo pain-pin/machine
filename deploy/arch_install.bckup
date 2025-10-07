@@ -24,8 +24,6 @@ done;
 #bash $NETWORKDIR/iptables_script.sh -f $NETWORKDIR/ip_to_ban.txt -r
 
 pacman --noconfirm -S cherrytree
-pacman --noconfirm -S git
-pacman --noconfirm -S nftables
 pacman --noconfirm -S bc
 pacman --noconfirm -S ctags
 pacman --noconfirm -S firefox
@@ -37,6 +35,7 @@ pacman --noconfirm -S moreutils
 pacman --noconfirm -S net-tools
 pacman --noconfirm -S make
 pacman --noconfirm -S whois
+#pacman --noconfirm -S syslog-ng
 pacman --noconfirm -S nmap
 pacman --noconfirm -S lldb
 pacman --noconfirm -S terminator
@@ -80,6 +79,20 @@ makepkg
 cp $(find src/yay* -name yay) ~/yay.tmp
 cd ..
 rm -rf yay
+
+#bufsize=150000
+#file="/var/log/iptables_group1.log"
+#cd ~
+#git clone git@github.com:presk0/perso.git
+#cd perso
+#python3 -m venv env
+#source env/bin/activate
+##pip install torch
+##pip install numpy
+##pip install openai-whisper
+##pip install pydub
+##pip install transformers
+##pip install accelerate
 
 EOF
 mv ~/yay.tmp /usr/bin/yay

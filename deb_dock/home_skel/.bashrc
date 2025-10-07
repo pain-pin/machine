@@ -99,7 +99,8 @@ export HISTCONTROL=ignorespace
 export SSH=177
 
 export MACHINE_PATH=$HOME/machine
-export NETWORK_DIR=$MACHINE_PATH/networking
+export MACHINE_DIR=$MACHINE_PATH
+export NETWORK_DIR=$MACHINE_DIR/networking
 export BLACKLIST=$NETWORK_DIR/ip_to_ban.txt
 export WHITELIST=$NETWORK_DIR/whitelist.txt
 export NFT_RESET=$NETWORK_DIR/nft_setup.sh
