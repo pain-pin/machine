@@ -46,7 +46,7 @@ export YEAR=$(date +"%Y")
 export MONTH=$(date +"%m")
 export DAY=$(date +"%d")
 export USER=$(whoami)
-export HOST=$(hostname -s)
+export HOST=$(cat /etc/hostname)
 export PWD_=$(pwd)
 export SOURCE="$HOME/.bashrc"
 
