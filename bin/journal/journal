@@ -21,7 +21,8 @@ journal ()
     else
         return 1;
     fi;
-	mkdir -p $DIR
+	#mkdir -p $DIR
+	mkdir -p $DIR/$HOST
     F_NAME+=".md";
     cd $DIR;
     PATH_="${DATE_DIR}/${LN_DIR}";
@@ -31,7 +32,9 @@ journal ()
     if commit_if_modified $FILE; then
         mkdir -p "$DIR/$LN_DIR";
         ln -P "$FILE" "$DIR/$LN_DIR/";
+        ln -P "$FILE" "$DIR/$HOST/";
 		git add "$DIR/$LN_DIR/$FILE";
+		git add "$DIR/$HOST/$FILE";
 		git commit -m "file $DIR/$LN_DIR/$FILE linked";
     else
         rm $FILE;
