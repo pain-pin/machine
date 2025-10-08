@@ -3,7 +3,7 @@ journal ()
 { 
     refresh_time;
     DIR_ORIGINAL=$PWD;
-    DIR="$HOME/journal/$HOST";
+    DIR="$HOME/journal/";
     DATE_DIR="$YEAR/$MONTH/$DAY";
     if [ "$#" -eq 0 ]; then
         echo "Usage: $0 [ subfolder ] < file >";
