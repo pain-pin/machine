@@ -102,6 +102,7 @@ export MACHINE_PATH=$HOME/machine
 export MACHINE_DIR=$MACHINE_PATH
 export NETWORK_DIR=$MACHINE_DIR/networking
 export HOMESKEL_DIR=$MACHINE_DIR/install/home_skel
+export INSTALL_DIR=$MACHINE_DIR/install
 export BLACKLIST=$NETWORK_DIR/ip_to_ban.txt
 export WHITELIST=$NETWORK_DIR/whitelist.txt
 export NFT_RESET=$NETWORK_DIR/nft_setup.sh
