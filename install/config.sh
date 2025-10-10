@@ -1,9 +1,10 @@
 #!/usr/bin/bash
 
-CONFIG_DIR="$MACHINE_DIR/deploy/home_skel"
+CONFIG_DIR="$MACHINE_DIR/install/home_skel"
 HOME="${SUDO_HOME:-$HOME}"
 
-FILES_TO_LINK="ls -A $CONFIG_DIR/"
+FILES_TO_LINK="$(ls -A $CONFIG_DIR | grep -E '^.')"
+
 for F in $FILES_TO_LINK; do
 	BASENAME=$(basename $F)
 	mv $HOME/$BASENAME $HOME/$BASENAME.original
