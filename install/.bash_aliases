@@ -1,0 +1,1 @@
+/home/arche/.bash_aliases

@@ -10,6 +10,7 @@ esac
 
 #. /etc/bash.bashrc
 
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 # append to the history file, don't overwrite it
@@ -113,10 +114,10 @@ export JOURNAL_DIR=$HOME/journal
 export LOG_CONN_DIR=$JOURNAL_DIR/logs
 export BIN=${HOME}/.bin
 
+PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 for d in $(find -L $BIN -type d); do
-    PATH="$d:$PATH"
+    PATH="$PATH:$d"
 done
-
 export PATH
 
 export REMOTE_BRANCHES="github origin"

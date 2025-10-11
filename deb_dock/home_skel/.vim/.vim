@@ -1,1 +1,0 @@
-/home/n/machine/deb_dock/home_skel/.vim

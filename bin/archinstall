@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-FILE="deploy/arch_install.sh"
+FILE="install/arch.sh"
 cd $MACHINE_DIR
 vim $FILE
 gitaddcommit $FILE
