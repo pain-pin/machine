@@ -8,6 +8,7 @@ fi
 bash config.sh
 bash pacman.sh
 bash network.sh
+systemctl enable --now NetworkManager #enable dongle
 
 #pacman --noconfirm -Syu ulogd
 #NETWORKDIR="$MACHINE_DIR/networking"
