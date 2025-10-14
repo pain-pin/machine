@@ -10,6 +10,14 @@ yduseche
 En balage au cmp
 Aucune raison d'etre set
 
+251014-16:42:30-arche@yduseche-~/machine/install
+=> sudo systemctl status bluetooth 
+○ bluetooth.service - Bluetooth service
+     Loaded: loaded (/usr/lib/systemd/system/bluetooth.service; disable>
+     Active: inactive (dead)
+       Docs: man:bluetoothd(8)
+
+
 251014-16:37:24-arche@yduseche-~/machine/install
 => sudo dmesg -T | grep -i bluetooth
 [Tue Oct 14 15:20:54 2025] Bluetooth: Core ver 2.22
