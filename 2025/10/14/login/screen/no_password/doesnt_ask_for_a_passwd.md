@@ -57,3 +57,13 @@ rien dans dmesg
 [Tue Oct 14 16:51:49 2025] Bluetooth: hci0: Firmware revision 0.1 build 201 week 12 2024
 [Tue Oct 14 16:51:49 2025] Bluetooth: hci0: HCI LE Coded PHY feature bit is set, but its usage is not supported.
 
+251014
+16:38:44
+arche
+yduseche
+
+###############################################
+
+2025/10/14/login/screen/no_password/doesnt_ask_for_a_passwd.md
+
+idem
