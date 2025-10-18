@@ -25,9 +25,8 @@ sudo tcpdump -n -i $DEVICE &
 PIDS+="$! "
 while true
 do
-	trap "kill -9 $PIDS" SIGINT
+	trap "kill -9 $PIDS && exit 0" SIGINT
 done
-sudo chown root $DIR/$FILE
 
-exit 0
+exit 1
 
