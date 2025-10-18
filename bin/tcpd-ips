@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 REG='[0-9 .]+>[0-9 .]+'
-FILE=$LOG_CONN_DIR/$(tree $LOG_CONN_DIR -t | grep md | tail -1 | awk '{print $NF}')
+FILE=$LOG_CONN_DIR/$(ls -t $LOG_CONN_DIR/*/*)
 echo "ips:"
 grepip $FILE
 exit 0
