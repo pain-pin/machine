@@ -32,6 +32,7 @@ pacman --noconfirm -Syu vim
 pacman --noconfirm -Syu iwctl
 pacman --noconfirm -Syu pciutils
 pacman --noconfirm -Syu base-devel
+pacman --noconfirm -Syu git-filter-repo
 mandb #rend possible la commande apropos
 
 #git clone https://github.com/Exafunction/codeium.vim ~/.vim/pack/Exafunction/start/codeium.vim
