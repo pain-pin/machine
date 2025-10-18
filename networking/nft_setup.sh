@@ -9,6 +9,9 @@ nft flush ruleset
 nft add table inet filter
 nft add chain inet filter input { type filter hook input priority 0 \; }
 nft add chain inet filter output { type filter hook output priority 0 \; }
+nft add chain inet filter forward { type filter hook output priority 0 \; }
+
+nft add rule inet filter forward drop
 
 nft add set inet filter banned_ipv4 '{ type ipv4_addr ; flags interval ; }'
 nft add set inet filter banned_ipv6 '{ type ipv6_addr ; flags interval ; }'

@@ -1,9 +1,11 @@
 #!/usr/bin/bash
 
 refresh_time
-DIR=$JOURNAL_DIR/logs
+DIR=$LOCAL_JOURNAL_DIR/tcpd
+SUB_DIR=${1:-"fouretou"}
 mkdir -p $DIR
-FILE=$1-$DATE-$TIME.md
+NAME=${2:-"tcpd"}
+FILE=$DATE-$TIME.$NAME.md
 
 DEVICE=${2:-"$(ip addr | grep -v DOWN | grep -E "^[0-9]" | awk -F':' '{print $2}' | grep -v lo)"}
 NB_DEVICES="$(echo ${DEVICE} | awk '{print NF}')"
@@ -21,12 +23,13 @@ fi
 echo 'DEVICE='$DEVICE
 echo 
 
-sudo tcpdump -n -i $DEVICE &
-PIDS+="$! "
-while true
-do
-	trap "kill -9 $PIDS && exit 0" SIGINT
-done
+sudo tcpdump -n -i $DEVICE | tee -a $FILE
+chgrp root $FILE
+#PIDS+="$! " 
+#while true
+#do
+#	trap "kill -9 $PIDS && exit 0" SIGINT
+#done
 
 exit 1
 
