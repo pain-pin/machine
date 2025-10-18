@@ -112,7 +112,7 @@ export DEVICE="$(ip addr | grep -v DOWN | grep -E "^[0-9]" | awk -F':' '{print $
 
 export JOURNAL_DIR=$HOME/journal
 export LOCAL_JOURNAL_DIR=$JOURNAL_DIR/$HOST
-export LOG_CONN_DIR=$JOURNAL_DIR/logs
+export LOG_CONN_DIR=$LOG_CONN_DIR/logs
 export BIN=${HOME}/.bin
 
 PATH="/bin:/sbin:/usr/bin:/usr/sbin"
