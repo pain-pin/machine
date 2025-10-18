@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 refresh_time
-DIR=$LOCAL_JOURNAL_DIR/tcpd
+DIR=$LOG_CONN_DIR
 SUB_DIR=${1:-"fouretou"}
 mkdir -p $DIR
 NAME=${2:-"tcpd"}
