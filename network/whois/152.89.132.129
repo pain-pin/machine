@@ -1,0 +1,57 @@
+% This is the RIPE Database query service.
+% The objects are in RPSL format.
+%
+% The RIPE Database is subject to Terms and Conditions.
+% See https://docs.db.ripe.net/terms-conditions.html
+
+% Note: this output has been filtered.
+%       To receive output for a database update, use the "-B" flag.
+
+% Information related to '152.89.132.0 - 152.89.132.255'
+
+% Abuse contact for '152.89.132.0 - 152.89.132.255' is 'abuse-ripe@kvado.ru'
+
+inetnum:        152.89.132.0 - 152.89.132.255
+netname:        KVADO-NET1
+country:        RU
+geoloc:         59.910615 30.339946
+admin-c:        KDE-RIPE
+tech-c:         BES37-RIPE
+status:         ASSIGNED PA
+mnt-by:         mnt-ru-kvartplata-1
+created:        2019-01-31T14:14:14Z
+last-modified:  2023-11-12T16:36:12Z
+source:         RIPE
+
+person:         Egor Borisov
+address:        196143, Russia, Saint-Petersburg
+address:        Yuriya Gagarina PR-kt, house 77, litera A, room 9NCH
+phone:          +7 812 647-01-11
+nic-hdl:        BES37-RIPE
+mnt-by:         MALOCO-MNT
+created:        2015-10-01T14:25:41Z
+last-modified:  2022-01-24T13:46:35Z
+source:         RIPE # Filtered
+
+person:         Dmitry Kuznetsov
+address:        Russia, Saint-Petersburg, Pushkin, Konyushennaya, 36
+phone:          +78126474777
+nic-hdl:        KDE-RIPE
+mnt-by:         MALOCO-MNT
+created:        2007-04-03T14:21:04Z
+last-modified:  2020-04-08T07:07:40Z
+source:         RIPE # Filtered
+
+% Information related to '152.89.132.0/24AS204489'
+
+route:          152.89.132.0/24
+descr:          Kvartplata Onlain LLC.
+origin:         AS204489
+mnt-by:         mnt-ru-kvartplata-1
+created:        2019-01-31T14:18:21Z
+last-modified:  2019-01-31T14:18:21Z
+source:         RIPE
+
+% This query was served by the RIPE Database Query Service version 1.118.1 (ABERDEEN)
+
+

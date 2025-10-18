@@ -1,0 +1,57 @@
+root@localhost:~# tcpdump
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on wwp0s20f0u8i5, link-type RAW (Raw IP), snapshot length 262144 bytes
+13:04:44.923688 IP 10.239.44.146.40771 > ntp01.ix1.inferno.net.uk.ntp: NTPv4, Client, length 48
+13:04:44.934853 IP 10.239.44.146.34457 > resolver1.level3.net.domain: 52881+ PTR? 50.144.57.193.in-addr.arpa. (44)
+13:04:45.085689 IP ntp01.ix1.inferno.net.uk.ntp > 10.239.44.146.40771: NTPv4, Server, length 48
+13:04:45.247558 IP resolver1.level3.net.domain > 10.239.44.146.34457: 52881 1/0/0 PTR ntp01.ix1.inferno.net.uk. (82)
+13:04:45.248045 IP 10.239.44.146.46141 > resolver1.level3.net.domain: 16032+ PTR? 146.44.239.10.in-addr.arpa. (44)
+13:04:45.290557 IP resolver1.level3.net.domain > 10.239.44.146.46141: 16032 NXDomain* 0/1/0 (103)
+13:04:45.291127 IP 10.239.44.146.59389 > resolver1.level3.net.domain: 36541+ PTR? 3.0.244.209.in-addr.arpa. (42)
+13:04:45.952064 IP resolver1.level3.net.domain > 10.239.44.146.59389: 36541 1/0/0 PTR resolver1.level3.net. (76)
+13:35:02.072690 IP 10.239.44.146.60379 > resolver1.level3.net.domain: 20809+ PTR? 146.44.239.10.in-addr.arpa. (44)
+13:35:02.542565 IP resolver1.level3.net.domain > 10.239.44.146.60379: 20809 NXDomain* 0/1/0 (103)
+
+root@localhost:~# tcpdump -vv
+tcpdump: listening on wwp0s20f0u8i5, link-type RAW (Raw IP), snapshot length 262144 bytes
+13:36:03.071600 IP (tos 0x0, ttl 64, id 16645, offset 0, flags [DF], proto UDP (17), length 72)
+    10.239.44.146.59434 > resolver1.level3.net.domain: [udp sum ok] 64924+ PTR? 146.44.239.10.in-addr.arpa. (44)
+13:36:03.174808 IP (tos 0x0, ttl 64, id 27511, offset 0, flags [DF], proto UDP (17), length 70)
+    10.239.44.146.48654 > resolver1.level3.net.domain: [udp sum ok] 26460+ PTR? 3.0.244.209.in-addr.arpa. (42)
+13:36:03.295234 IP (tos 0x0, ttl 58, id 9222, offset 0, flags [none], proto UDP (17), length 104)
+    resolver1.level3.net.domain > 10.239.44.146.48654: [udp sum ok] 26460 q: PTR? 3.0.244.209.in-addr.arpa. 1/0/0 3.0.244.209.in-addr.arpa. PTR resolver1.level3.net. (76)
+13:36:03.295704 IP (tos 0x0, ttl 64, id 59851, offset 0, flags [DF], proto UDP (17), length 72)
+    10.239.44.146.54417 > resolver1.level3.net.domain: [udp sum ok] 62090+ PTR? 146.44.239.10.in-addr.arpa. (44)
+13:36:04.047027 IP (tos 0x0, ttl 58, id 32351, offset 0, flags [none], proto UDP (17), length 131)
+    resolver1.level3.net.domain > 10.239.44.146.59434: [udp sum ok] 64924 NXDomain* q: PTR? 146.44.239.10.in-addr.arpa. 0/1/0 ns: 10.in-addr.arpa. SOA localhost. nobody.invalid. 1 3600 1200 604800 10800 (103)
+13:36:04.366929 IP (tos 0x0, ttl 58, id 32548, offset 0, flags [none], proto UDP (17), length 131)
+    resolver1.level3.net.domain > 10.239.44.146.54417: [udp sum ok] 62090 NXDomain* q: PTR? 146.44.239.10.in-addr.arpa. 0/1/0 ns: 10.in-addr.arpa. SOA localhost. nobody.invalid. 1 3600 1200 604800 10800 (103)
+13:38:53.173525 IP (tos 0xb8, ttl 64, id 65289, offset 0, flags [DF], proto UDP (17), length 76)
+    10.239.44.146.47656 > ntp01.ix1.inferno.net.uk.ntp: [udp sum ok] NTPv4, Client, length 48
+        Leap indicator:  (0), Stratum 0 (unspecified), poll 0 (1s), precision 0
+        Root Delay: 0.000000, Root dispersion: 0.000000, Reference-ID: (unspec)
+          Reference Timestamp:  0.000000000
+          Originator Timestamp: 0.000000000
+          Receive Timestamp:    0.000000000
+          Transmit Timestamp:   2172159543.183373328 (1968-10-31T17:39:03Z)
+            Originator - Receive Timestamp:  0.000000000
+            Originator - Transmit Timestamp: 2172159543.183373328 (1968-10-31T17:39:03Z)
+13:38:53.190031 IP (tos 0x0, ttl 64, id 57669, offset 0, flags [DF], proto UDP (17), length 72)
+    10.239.44.146.57613 > resolver1.level3.net.domain: [udp sum ok] 19942+ PTR? 50.144.57.193.in-addr.arpa. (44)
+13:38:53.326179 IP (tos 0x28, ttl 57, id 3282, offset 0, flags [DF], proto UDP (17), length 76)
+    ntp01.ix1.inferno.net.uk.ntp > 10.239.44.146.47656: [udp sum ok] NTPv4, Server, length 48
+        Leap indicator:  (0), Stratum 2 (secondary reference), poll 0 (1s), precision -25
+        Root Delay: 0.002151, Root dispersion: 0.000717, Reference-ID: 0xc342f102
+          Reference Timestamp:  3968141621.952889110 (2025-09-29T13:33:41Z)
+          Originator Timestamp: 2172159543.183373328 (1968-10-31T17:39:03Z)
+          Receive Timestamp:    3968141933.271822911 (2025-09-29T13:38:53Z)
+          Transmit Timestamp:   3968141933.271854420 (2025-09-29T13:38:53Z)
+            Originator - Receive Timestamp:  +1795982390.088449583
+            Originator - Transmit Timestamp: +1795982390.088481091
+13:38:53.371338 IP (tos 0x0, ttl 58, id 55970, offset 0, flags [none], proto UDP (17), length 110)
+    resolver1.level3.net.domain > 10.239.44.146.57613: [udp sum ok] 19942 q: PTR? 50.144.57.193.in-addr.arpa. 1/0/0 50.144.57.193.in-addr.arpa. PTR ntp01.ix1.inferno.net.uk. (82)
+13:40:34.072427 IP (tos 0x0, ttl 64, id 53596, offset 0, flags [DF], proto UDP (17), length 72)
+    10.239.44.146.46812 > resolver1.level3.net.domain: [udp sum ok] 64837+ PTR? 146.44.239.10.in-addr.arpa. (44)
+13:40:35.383875 IP (tos 0x0, ttl 58, id 12451, offset 0, flags [none], proto UDP (17), length 131)
+    resolver1.level3.net.domain > 10.239.44.146.46812: [udp sum ok] 64837 NXDomain* q: PTR? 146.44.239.10.in-addr.arpa. 0/1/0 ns: 10.in-addr.arpa. SOA localhost. nobody.invalid. 1 3600 1200 604800 10800 (103)
+

@@ -1,0 +1,137 @@
+
+#
+# ARIN WHOIS data and services are subject to the Terms of Use
+# available at: https://www.arin.net/resources/registry/whois/tou/
+#
+# If you see inaccuracies in the results, please report at
+# https://www.arin.net/resources/registry/whois/inaccuracy_reporting/
+#
+# Copyright 1997-2025, American Registry for Internet Numbers, Ltd.
+#
+
+
+NetRange:       166.8.0.0 - 166.15.255.255
+CIDR:           166.8.0.0/13
+NetName:        RIPE-ERX-166-8-0-0-1
+NetHandle:      NET-166-8-0-0-1
+Parent:         NET166 (NET-166-0-0-0-0)
+NetType:        Early Registrations, Transferred to RIPE NCC
+OriginAS:       
+Organization:   RIPE Network Coordination Centre (RIPE)
+RegDate:        1993-11-12
+Updated:        2025-02-10
+Comment:        These addresses have been further assigned to users in the RIPE NCC region. Please note that the organization and point of contact details listed below are those of the RIPE NCC not the current address holder. ** You can find user contact information for the current address holder in the RIPE database at http://www.ripe.net/whois.
+Ref:            https://rdap.arin.net/registry/ip/166.8.0.0
+
+ResourceLink:  https://apps.db.ripe.net/db-web-ui/query
+ResourceLink:  whois.ripe.net
+
+
+OrgName:        RIPE Network Coordination Centre
+OrgId:          RIPE
+Address:        P.O. Box 10096
+City:           Amsterdam
+StateProv:      
+PostalCode:     1001EB
+Country:        NL
+RegDate:        
+Updated:        2013-07-29
+Ref:            https://rdap.arin.net/registry/entity/RIPE
+
+ReferralServer:  whois.ripe.net
+ResourceLink:  https://apps.db.ripe.net/db-web-ui/query
+
+OrgTechHandle: RNO29-ARIN
+OrgTechName:   RIPE NCC Operations
+OrgTechPhone:  +31 20 535 4444 
+OrgTechEmail:  hostmaster@ripe.net
+OrgTechRef:    https://rdap.arin.net/registry/entity/RNO29-ARIN
+
+OrgAbuseHandle: ABUSE3850-ARIN
+OrgAbuseName:   Abuse Contact
+OrgAbusePhone:  +31205354444 
+OrgAbuseEmail:  abuse@ripe.net
+OrgAbuseRef:    https://rdap.arin.net/registry/entity/ABUSE3850-ARIN
+
+
+#
+# ARIN WHOIS data and services are subject to the Terms of Use
+# available at: https://www.arin.net/resources/registry/whois/tou/
+#
+# If you see inaccuracies in the results, please report at
+# https://www.arin.net/resources/registry/whois/inaccuracy_reporting/
+#
+# Copyright 1997-2025, American Registry for Internet Numbers, Ltd.
+#
+
+
+
+Found a referral to whois.ripe.net.
+
+% This is the RIPE Database query service.
+% The objects are in RPSL format.
+%
+% The RIPE Database is subject to Terms and Conditions.
+% See https://docs.db.ripe.net/terms-conditions.html
+
+% Note: this output has been filtered.
+%       To receive output for a database update, use the "-B" flag.
+
+% Information related to '166.11.0.0 - 166.11.255.255'
+
+% Abuse contact for '166.11.0.0 - 166.11.255.255' is 'abuse@softlayer.com'
+
+inetnum:        166.11.0.0 - 166.11.255.255
+netname:        SOFTLAYER-RIPE-4-30-33
+country:        US
+org:            ORG-STI12-RIPE
+admin-c:        SA8109-RIPE
+tech-c:         SA8109-RIPE
+status:         LEGACY
+mnt-by:         RIPE-NCC-LEGACY-MNT
+mnt-by:         MAINT-SOFTLAYER-TECH-INC
+mnt-lower:      MAINT-SOFTLAYER-RIPE
+mnt-domains:    MAINT-SOFTLAYER-RIPE
+created:        2015-04-02T10:33:15Z
+last-modified:  2024-06-06T23:02:02Z
+source:         RIPE
+
+organisation:   ORG-STI12-RIPE
+org-name:       SoftLayer Technologies, Inc.
+country:        US
+org-type:       LIR
+address:        14001 N.Dallas Parkway,Suite 800
+address:        75240
+address:        Dallas TX
+address:        UNITED STATES
+phone:          +118664037638
+admin-c:        DB27581-RIPE
+admin-c:        CS21299-RIPE
+admin-c:        CT8826-RIPE
+admin-c:        CP14572-RIPE
+tech-c:         DB27581-RIPE
+tech-c:         CS21299-RIPE
+tech-c:         CT8826-RIPE
+tech-c:         CP14572-RIPE
+abuse-c:        SLAB
+mnt-ref:        RIPE-NCC-HM-MNT
+mnt-ref:        MAINT-SOFTLAYER-TECH-INC
+mnt-by:         RIPE-NCC-HM-MNT
+mnt-by:         MAINT-SOFTLAYER-TECH-INC
+created:        2015-01-02T14:40:58Z
+last-modified:  2024-06-06T22:32:34Z
+source:         RIPE # Filtered
+
+person:         SoftLayer IP Administrator
+address:        Paul van Vlissingenstraat 16
+address:        1096 BK Amsterdam, The Netherlands
+phone:          +1-281-714-3958
+nic-hdl:        SA8109-RIPE
+mnt-by:         MAINT-SOFTLAYER-RIPE
+created:        2011-09-01T12:09:35Z
+last-modified:  2012-01-25T12:12:47Z
+source:         RIPE # Filtered
+
+% This query was served by the RIPE Database Query Service version 1.118.1 (ABERDEEN)
+
+

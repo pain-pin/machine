@@ -1,0 +1,113 @@
+
+#
+# ARIN WHOIS data and services are subject to the Terms of Use
+# available at: https://www.arin.net/resources/registry/whois/tou/
+#
+# If you see inaccuracies in the results, please report at
+# https://www.arin.net/resources/registry/whois/inaccuracy_reporting/
+#
+# Copyright 1997-2025, American Registry for Internet Numbers, Ltd.
+#
+
+
+NetRange:       165.8.0.0 - 165.11.255.255
+CIDR:           165.8.0.0/14
+NetName:        AFRINIC-165-8-0-0
+NetHandle:      NET-165-8-0-0-1
+Parent:         NET165 (NET-165-0-0-0-0)
+NetType:        Transferred to AfriNIC
+OriginAS:       
+Organization:   African Network Information Center (AFRINIC)
+RegDate:        2005-02-21
+Updated:        2005-02-21
+Comment:        This IP address range is under AFRINIC responsibility.
+Comment:        Please see http://www.afrinic.net/ for further details,
+Comment:        or check the WHOIS server located at whois.afrinic.net.
+Ref:            https://rdap.arin.net/registry/ip/165.8.0.0
+
+ResourceLink:  http://afrinic.net/en/services/whois-query
+ResourceLink:  whois.afrinic.net
+
+
+OrgName:        African Network Information Center
+OrgId:          AFRINIC
+Address:        Level 11ABC
+Address:        Raffles Tower
+Address:        Lot 19, Cybercity
+City:           Ebene
+StateProv:      
+PostalCode:     
+Country:        MU
+RegDate:        2004-05-17
+Updated:        2015-05-04
+Comment:        AfriNIC - http://www.afrinic.net
+Comment:        The African & Indian Ocean Internet Registry
+Ref:            https://rdap.arin.net/registry/entity/AFRINIC
+
+ReferralServer:  whois://whois.afrinic.net
+ResourceLink:  http://afrinic.net/en/services/whois-query
+
+OrgAbuseHandle: GENER11-ARIN
+OrgAbuseName:   Generic POC
+OrgAbusePhone:  +230 4666616 
+OrgAbuseEmail:  abusepoc@afrinic.net
+OrgAbuseRef:    https://rdap.arin.net/registry/entity/GENER11-ARIN
+
+OrgTechHandle: GENER11-ARIN
+OrgTechName:   Generic POC
+OrgTechPhone:  +230 4666616 
+OrgTechEmail:  abusepoc@afrinic.net
+OrgTechRef:    https://rdap.arin.net/registry/entity/GENER11-ARIN
+
+
+#
+# ARIN WHOIS data and services are subject to the Terms of Use
+# available at: https://www.arin.net/resources/registry/whois/tou/
+#
+# If you see inaccuracies in the results, please report at
+# https://www.arin.net/resources/registry/whois/inaccuracy_reporting/
+#
+# Copyright 1997-2025, American Registry for Internet Numbers, Ltd.
+#
+
+
+
+Found a referral to whois.afrinic.net.
+
+% This is the AfriNIC Whois server.
+% The AFRINIC whois database is subject to  the following terms of Use. See https://afrinic.net/whois/terms
+
+% Note: this output has been filtered.
+%       To receive output for a database update, use the "-B" flag.
+
+% Information related to '165.11.0.0 - 165.11.255.255'
+
+% No abuse contact registered for 165.11.0.0 - 165.11.255.255
+
+inetnum:        165.11.0.0 - 165.11.255.255
+netname:        SAPOSNET4
+descr:          South African Post Office
+descr:          Private Bag X846
+descr:          Pretoria
+descr:          0001
+country:        ZA
+admin-c:        NMV2-AFRINIC
+tech-c:         NMV2-AFRINIC
+status:         ASSIGNED PA
+mnt-by:         TF-165-8-0-0-165-11-255-255-MNT
+mnt-lower:      TF-165-8-0-0-165-11-255-255-MNT
+source:         AFRINIC # Filtered
+parent:         165.8.0.0 - 165.11.255.255
+
+person:         Manie van Niekerk
+address:        Private Bag X846
+address:        Pretoria
+address:        0001
+address:        ZA
+phone:          tel:+27-12-325-6117
+nic-hdl:        NMV2-AFRINIC
+mnt-by:         GENERATED-VWGCEAQTL4BPF3ZU2E1NSAHARPEFFQQU-MNT
+source:         AFRINIC # Filtered
+
+
+

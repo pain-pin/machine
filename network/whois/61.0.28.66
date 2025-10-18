@@ -1,0 +1,92 @@
+% [whois.apnic.net]
+% Whois data copyright terms    http://www.apnic.net/db/dbcopyright.html
+
+% Information related to '61.0.0.0 - 61.0.171.255'
+
+% Abuse contact for '61.0.0.0 - 61.0.171.255' is 'abuse1@bsnl.co.in'
+
+inetnum:        61.0.0.0 - 61.0.171.255
+netname:        BB-Multiplay
+descr:          Broadband Multiplay Project, O/o DGM BB, NOC BSNL Bangalore
+country:        IN
+admin-c:        BH155-AP
+tech-c:         DB374-AP
+abuse-c:        AB1061-AP
+status:         ASSIGNED NON-PORTABLE
+mnt-by:         MAINT-IN-DOT
+mnt-irt:        IRT-BSNL-IN
+last-modified:  2021-07-15T07:15:54Z
+source:         APNIC
+
+irt:            IRT-BSNL-IN
+address:        Internet Cell
+address:        Bharat Sanchar Nigam Limited.
+address:        8th Floor,148-B Statesman House
+address:        Barakhamba Road, New Delhi - 110 001
+e-mail:         abuse1@bsnl.co.in
+abuse-mailbox:  abuse1@bsnl.co.in
+admin-c:        NC83-AP
+tech-c:         CGMD1-AP
+auth:           # Filtered
+remarks:        abuse1@bsnl.co.in was validated on 2025-07-02
+mnt-by:         MAINT-IN-DOT
+last-modified:  2025-09-04T01:01:13Z
+source:         APNIC
+
+role:           ABUSE BSNLIN
+country:        ZZ
+address:        Internet Cell
+address:        Bharat Sanchar Nigam Limited.
+address:        8th Floor,148-B Statesman House
+address:        Barakhamba Road, New Delhi - 110 001
+phone:          +000000000
+e-mail:         abuse1@bsnl.co.in
+admin-c:        NC83-AP
+tech-c:         CGMD1-AP
+nic-hdl:        AB1061-AP
+remarks:        Generated from irt object IRT-BSNL-IN
+remarks:        abuse1@bsnl.co.in was validated on 2025-07-02
+abuse-mailbox:  abuse1@bsnl.co.in
+mnt-by:         APNIC-ABUSE
+last-modified:  2025-07-02T04:54:12Z
+source:         APNIC
+
+person:         BSNL Hostmaster
+nic-hdl:        BH155-AP
+e-mail:         hostmaster@bsnl.co.in
+address:        Broadband Networks
+address:        Bharat Sanchar Nigam Limited
+address:        2nd Floor, Telephone Exchange, Sector 62
+address:        Noida
+phone:          +91-120-2404243
+fax-no:         +91-120-2404241
+country:        IN
+mnt-by:         MAINT-IN-PER-DOT
+last-modified:  2021-12-08T10:52:18Z
+source:         APNIC
+
+person:         DGM Broadband
+address:        BSNL NOC Bangalore
+country:        IN
+phone:          +91-080-25805800
+fax-no:         +91-080-25800022
+e-mail:         dnwplg@bsnl.in
+nic-hdl:        DB374-AP
+mnt-by:         MAINT-IN-PER-DOT
+last-modified:  2011-02-19T10:03:44Z
+source:         APNIC
+
+% Information related to '61.0.28.0/24AS9829'
+
+route:          61.0.28.0/24
+origin:         AS9829
+descr:          Bharat Sanchar Nigam Ltd
+                O/o Chief General Manager, Data Networks, BSNL
+                CTS Compond, Netaji Nagar
+mnt-by:         MAINT-IN-DOT
+last-modified:  2020-10-12T11:57:44Z
+source:         APNIC
+
+% This query was served by the APNIC Whois Service version 1.88.34 (WHOIS-UK2)
+
+

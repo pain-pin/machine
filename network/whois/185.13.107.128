@@ -1,0 +1,59 @@
+% This is the RIPE Database query service.
+% The objects are in RPSL format.
+%
+% The RIPE Database is subject to Terms and Conditions.
+% See https://docs.db.ripe.net/terms-conditions.html
+
+% Note: this output has been filtered.
+%       To receive output for a database update, use the "-B" flag.
+
+% Information related to '185.13.107.0 - 185.13.107.255'
+
+% Abuse contact for '185.13.107.0 - 185.13.107.255' is 'kadams@lycatel.com'
+
+inetnum:        185.13.107.0 - 185.13.107.255
+netname:        UK-LYCATEL
+descr:          LYCATEL DISTRIBUTION UK LIMITED
+country:        FR
+admin-c:        KS1869-RIPE
+tech-c:         VK1894-RIPE
+status:         ASSIGNED PA
+mnt-by:         LYCATEL-MNT
+mnt-lower:      LYCATEL-MNT
+mnt-domains:    LYCATEL-MNT
+mnt-routes:     LYCATEL-MNT
+created:        2013-09-09T10:31:00Z
+last-modified:  2025-09-17T02:51:32Z
+source:         RIPE
+
+person:         Kadamban S
+address:        Lycatel Ltd., 59 Skyline Village/Lime Harbor Rd, Dockland, E14 9TS, UK.
+phone:          +442075366456
+nic-hdl:        KS1869-RIPE
+created:        2004-03-04T14:05:59Z
+last-modified:  2016-04-06T11:03:54Z
+mnt-by:         RIPE-NCC-LOCKED-MNT
+source:         RIPE
+
+person:         Vinoth kumar
+address:        Lycatel Ltd 59 Skyline Village/Lime Harbor Rd Dockland E14 9TS UK
+phone:          +44 2075366456
+nic-hdl:        Vk1894-RIPE
+created:        2010-06-05T14:18:00Z
+last-modified:  2020-06-04T09:55:01Z
+source:         RIPE
+mnt-by:         LYCATEL-MNT
+
+% Information related to '185.13.107.0/24as31404'
+
+route:          185.13.107.0/24
+descr:          lycatel route
+origin:         as31404
+mnt-by:         lycatel-mnt
+created:        2013-09-17T13:20:17Z
+last-modified:  2013-09-17T13:20:17Z
+source:         RIPE
+
+% This query was served by the RIPE Database Query Service version 1.118.1 (BUSA)
+
+
