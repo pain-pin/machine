@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 REG='[0-9 .]+>[0-9 .]+'
-FILE=$LOG_CONN_DIR/$(ls -t $LOG_CONN_DIR/*/*)
+FILE=$(ls -t $LOG_CONN_DIR/*/* | head -1)
 echo "ips:"
 grepip $FILE
 exit 0
