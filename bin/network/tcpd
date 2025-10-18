@@ -21,7 +21,12 @@ fi
 echo 'DEVICE='$DEVICE
 echo 
 
-sudo tcpdump -n -i $DEVICE 'host not github and not src and dst net localnet'
+sudo tcpdump -n -i $DEVICE &
+PIDS+="$! "
+while true
+do
+	trap "kill -9 $PIDS" SIGINT
+done
 sudo chown root $DIR/$FILE
 
 exit 0
