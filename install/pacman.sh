@@ -39,10 +39,11 @@ sudo -i -u $SUDO_USER bash << EOF
 
 git config --global user.email "contact@presko.info"
 git config --global user.name "prsko_$HOST"
+EOF
 
+su $SUDO_USER
 git clone https://aur.archlinux.org/yay.git
 cd yay/
 makepkg -si
 cd ..
 rm -rf yay
-EOF
