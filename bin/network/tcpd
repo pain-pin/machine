@@ -7,7 +7,7 @@ mkdir -p $DIR
 NAME=${2:-"tcpd"}
 FILE=$(echo $DATE-$TIME.$NAME.md | sed "s/:/_/g")
 
-DEVICE=$(ip addr | grep -v DOWN | grep -E "^[0-9]" | awk -F':' '{print $2}' | grep -v lo)"
+DEVICE=$(ip addr | grep -v DOWN | grep -E "^[0-9]" | awk -F':' '{print $2}' | grep -v lo)
 NB_DEVICES="$(echo ${DEVICE} | awk '{print NF}')"
 
 if [ $NB_DEVICES -lt "1" ] ; then
