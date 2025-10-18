@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 REG='[0-9 .]+>[0-9 .]+'
-FILE='tree . -t | grep md | tail -1 | awk "{print $NF}"'
+FILE=$(tree . -t | grep md | tail -1 | awk '{print $NF}')
 echo "ips:"
 grepip $FILE
 exit 0
