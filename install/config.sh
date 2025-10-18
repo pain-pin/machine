@@ -1,13 +1,8 @@
 #!/usr/bin/bash
 
-<<<<<<< HEAD
-CONFIG_DIR="$MACHINE_DIR/install/home_skel"
-HOME="${SUDO_HOME:-$HOME}"
-=======
 HOME="${SUDO_HOME:-$HOME}"
 MACHINE_DIR="$HOME/machine"
 CONFIG_DIR="$MACHINE_DIR/install/home_skel"
->>>>>>> main
 
 FILES_TO_LINK="$(ls -A $CONFIG_DIR | grep -E '^.')"
 
