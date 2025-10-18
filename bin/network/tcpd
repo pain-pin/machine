@@ -5,9 +5,9 @@ DIR=$LOCAL_JOURNAL_DIR/tcpd
 SUB_DIR=${1:-"fouretou"}
 mkdir -p $DIR
 NAME=${2:-"tcpd"}
-FILE=$DATE-$TIME.$NAME.md
+FILE=$(echo $DATE-$TIME.$NAME.md | sed "s/:/_/g")
 
-DEVICE=${2:-"$(ip addr | grep -v DOWN | grep -E "^[0-9]" | awk -F':' '{print $2}' | grep -v lo)"}
+DEVICE=$(ip addr | grep -v DOWN | grep -E "^[0-9]" | awk -F':' '{print $2}' | grep -v lo)"
 NB_DEVICES="$(echo ${DEVICE} | awk '{print NF}')"
 
 if [ $NB_DEVICES -lt "1" ] ; then
