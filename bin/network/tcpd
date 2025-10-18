@@ -5,7 +5,8 @@ DIR=$LOG_CONN_DIR
 SUB_DIR=${1:-"fouretou"}
 mkdir -p $DIR
 NAME=${2:-"tcpd"}
-FILE=$(echo $DATE-$TIME.$NAME.md | sed "s/:/_/g")
+NAME=$(echo $DATE-$TIME.$NAME.md | sed "s/:/_/g")
+FILE=$DIR/$NAME
 
 DEVICE=$(ip addr | grep -v DOWN | grep -E "^[0-9]" | awk -F':' '{print $2}' | grep -v lo)
 NB_DEVICES="$(echo ${DEVICE} | awk '{print NF}')"
