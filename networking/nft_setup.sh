@@ -21,6 +21,17 @@ nft add set inet filter banned_ipv6 '{ type ipv6_addr ; flags interval ; }'
 nft add set inet filter white_ipv4  '{ type ipv4_addr ; flags interval ; }'
 nft add set inet filter white_ipv6  '{ type ipv6_addr ; flags interval ; }'
 
+## NOT From / to locale address
+## cannot work, but should develop the concept
+#for IP_LOCALE in $(ip addr | grep inet | grep -Eo $IP_REG) ; do
+#	if [[ "$line" == *:* ]]; then
+#		nft add rule ip filter input ip6 daddr $IP_LOCALE drop
+#	else
+#		echo "ban $line"
+#		nft add rule ip filter input ip daddr $IP_LOCALE drop
+#	fi
+#done < "$BLACKLIST"
+
 # Load blacklist
 while IFS= read -r line; do
 	[[ -z "$line" || "$line" == \#* ]] && continue
