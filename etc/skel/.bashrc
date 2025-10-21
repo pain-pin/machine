@@ -99,7 +99,7 @@ export MEDIA_REG="\.(${AUDIO_REG}|${VIDEO_REG}|${IMAGE_REG})$"
 export HISTCONTROL=ignorespace
 export SSH=177
 
-export MACHINE_PATH=$HOME/machine
+export MACHINE_PATH=/svr
 export MACHINE_DIR=$MACHINE_PATH
 export NETWORK_DIR=$MACHINE_DIR/net
 export HOMESKEL_DIR=$MACHINE_DIR/install/home_skel
@@ -113,9 +113,10 @@ export DEVICE="$(ip addr | grep -v DOWN | grep -E "^[0-9]" | awk -F':' '{print $
 export JOURNAL_DIR=$HOME/journal
 export LOCAL_JOURNAL_DIR=$JOURNAL_DIR/$HOST
 export LOG_CONN_DIR=$LOCAL_JOURNAL_DIR/logs
-export BIN=${HOME}/.bin
+export BIN=$MACHINE_DIR/bin
 
 PATH="/bin:/sbin:/usr/bin:/usr/sbin"
+PATH="$PATH:$MACHINE_DIR/sbin"
 for d in $(find -L $BIN -type d); do
     PATH="$PATH:$d"
 done
