@@ -101,7 +101,7 @@ export SSH=177
 
 export MACHINE_PATH=$HOME/machine
 export MACHINE_DIR=$MACHINE_PATH
-export NETWORK_DIR=$MACHINE_DIR/networking
+export NETWORK_DIR=$MACHINE_DIR/net
 export HOMESKEL_DIR=$MACHINE_DIR/install/home_skel
 export INSTALL_DIR=$MACHINE_DIR/install
 export BLACKLIST=$NETWORK_DIR/ip_to_ban.txt
