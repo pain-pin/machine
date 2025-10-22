@@ -99,7 +99,8 @@ export MEDIA_REG="\.(${AUDIO_REG}|${VIDEO_REG}|${IMAGE_REG})$"
 export HISTCONTROL=ignorespace
 export SSH=177
 
-export MACHINE_PATH=/svr
+export MACHINE=svr
+export MACHINE_PATH=/$MACHINE
 export MACHINE_DIR=$MACHINE_PATH
 export NETWORK_DIR=$MACHINE_DIR/net
 export HOMESKEL_DIR=$MACHINE_DIR/install/home_skel
