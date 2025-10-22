@@ -14,3 +14,8 @@ for F in $FILES_TO_LINK; do
 	chmod +x 664
 done
 
+find etc/ -type d -exec mkdir /{} \;
+find etc/ -type f -exec cp {} /{} \;
+
+chmod +x 664 /etc/resolv.conf
+
