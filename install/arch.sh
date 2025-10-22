@@ -1,14 +1,14 @@
 #!/usr/bin/bash
 
-if [[ "$EUID" -ne "0" ]]; then
-   echo "This script must be run as root"
-   exit 1
-fi
+#if [[ "$EUID" -ne "0" ]]; then
+#   echo "This script must be run as root"
+#   exit 1
+#fi
 
 bash config.sh
 bash pacman.sh
 bash network.sh
-systemctl enable --now NetworkManager #enable dongle
+#systemctl enable --now NetworkManager #enable dongle
 
 #pacman --noconfirm -Syu ulogd
 #NETWORKDIR="$MACHINE_DIR/networking"
