@@ -10,3 +10,5 @@
 #Umea ftp archive (debian)
 194.71.11.0/24
 
+#gitea
+34.217.253.146
