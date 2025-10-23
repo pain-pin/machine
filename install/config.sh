@@ -17,5 +17,6 @@ done
 find etc/ -type d -exec mkdir /{} \;
 find etc/ -type f -exec cp {} /{} \;
 
-chmod +x 664 /etc/resolv.conf
+find usr/ -type d -exec mkdir /{} \;
+find usr/ -type f -exec cp {} /{} \;
 
