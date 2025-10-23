@@ -6,15 +6,16 @@ commit_if_modified ()
     git pull;
     vim + $F_NAME;
     git add $F_NAME;
-    if ! git commit; then
+	git commit
+	RET="$?"
+    [[ "$RET" != "0" ]] && {
         echo -n "[no modifications]";
         if [ -n "$DEL" ]; then
             rm $F_NAME;
             echo -n " -> deleted";
             return 1;
         fi;
-    fi;
-    git push;
+	}
     return 0
 }
 commit_if_modified "$@"
