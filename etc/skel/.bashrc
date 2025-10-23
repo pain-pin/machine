@@ -99,7 +99,8 @@ export MEDIA_REG="\.(${AUDIO_REG}|${VIDEO_REG}|${IMAGE_REG})$"
 export HISTCONTROL=ignorespace
 export SSH=177
 
-export MACHINE=svr
+export SKEL_DIR=svr
+export MACHINE=$SKEL_DIR
 export MACHINE_PATH=/$MACHINE
 export MACHINE_DIR=$MACHINE_PATH
 export NETWORK_DIR=$MACHINE_DIR/net
@@ -112,6 +113,7 @@ export DEVICE="$(ip addr | grep -v DOWN | grep -E "^[0-9]" | awk -F':' '{print $
 
 
 export JOURNAL_DIR=$HOME/journal
+export PERSO_DIR=$JOURNAL_DIR/perso
 export LOCAL_JOURNAL_DIR=$JOURNAL_DIR/$HOST
 export LOG_CONN_DIR=$LOCAL_JOURNAL_DIR/logs
 export BIN=$MACHINE_DIR/bin
