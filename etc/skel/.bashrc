@@ -115,6 +115,8 @@ export JOURNAL_DIR=$HOME/journal
 export LOCAL_JOURNAL_DIR=$JOURNAL_DIR/$HOST
 export LOG_CONN_DIR=$LOCAL_JOURNAL_DIR/logs
 export BIN=$MACHINE_DIR/bin
+export SBIN_DIR=$MACHINE_DIR/sbin
+export BIN_DIR=$BIN
 
 PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 PATH="$PATH:$MACHINE_DIR/sbin"

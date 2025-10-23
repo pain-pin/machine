@@ -3,7 +3,7 @@
 if [ -z "$1" ] ; then echo "no args" ; exit 1 ; fi
 
 TARGET=$1
-DIR="$HOME/journal/sysadmin/nmap_scan/$2"
+DIR="$HOME/journal/net/scan/$2"
 [[ "$DIR" != */ ]] && DIR="$DIR/"
 OUTPUT_DIR=$DIR"${TARGET}_$(date +%F_%H-%M-%S).nmap"
 
@@ -41,8 +41,8 @@ scan_block() {
   log "Full TCP Scan (all 65535 ports)"
   sudo nmap $opt -Pn -sS -p- -T3 "$TARGET" -oN "$OUTPUT_DIR/nmap_${mode}_full_tcp.txt"
 
-  log "UDP Scan (top 200 ports)"
-  sudo nmap $opt -Pn -sU --top-ports 200 -T3 "$TARGET" -oN "$OUTPUT_DIR/nmap_${mode}_udp.txt"
+  log "UDP Scan (top 50 ports)"
+  sudo nmap $opt -Pn -sU --top-ports 50 -T4 "$TARGET" -oN "$OUTPUT_DIR/nmap_${mode}_udp.txt"
 
   log "SCTP Init Scan (top 50 ports)"
   sudo nmap $opt -Pn -sY --top-ports 50 -T3 "$TARGET" -oN "$OUTPUT_DIR/nmap_${mode}_sctp.txt"
