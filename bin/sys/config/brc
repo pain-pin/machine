@@ -2,9 +2,12 @@
 brc () 
 { 
     F_NAME=".bashrc";
+	ORIGINAL_PWD=pwd;
     cd "$SKEL_DIR";
-    commit_if_modified "$F_NAME";
-    cd -;
+	[[ ! commit_if_modified "$F_NAME" ]] && {
+		cp $F_NAME $HOME/$F_NAME;
+	}
+    cd $ORIGINAL_PWD;
     source $HOME/$F_NAME
 }
 brc "$@"
