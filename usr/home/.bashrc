@@ -99,12 +99,12 @@ export MEDIA_REG="\.(${AUDIO_REG}|${VIDEO_REG}|${IMAGE_REG})$"
 export HISTCONTROL=ignorespace
 export SSH=177
 
-export SKEL_DIR=svr
-export MACHINE=$SKEL_DIR
+export SKEL=svr
+export MACHINE=$SKEL
 export MACHINE_PATH=/$MACHINE
-export MACHINE_DIR=$MACHINE_PATH
+export MACHINE_DIR=/$MACHINE
 export NETWORK_DIR=$MACHINE_DIR/net
-export HOMESKEL_DIR=$MACHINE_DIR/etc/skel
+export HOMESKEL_DIR=$MACHINE_DIR/usr/home
 export INSTALL_DIR=$MACHINE_DIR/install
 export BLACKLIST=$NETWORK_DIR/blacklist.txt
 export WHITELIST=$NETWORK_DIR/whitelist.txt
@@ -116,8 +116,8 @@ export JOURNAL_DIR=$HOME/journal
 export PERSO_DIR=$JOURNAL_DIR/perso
 export LOCAL_JOURNAL_DIR=$JOURNAL_DIR/$HOST
 export LOG_CONN_DIR=$LOCAL_JOURNAL_DIR/logs
-export BIN=$MACHINE_DIR/bin
-export SBIN_DIR=$MACHINE_DIR/sbin
+export BIN=$MACHINE_DIR/usr/bin
+export SBIN_DIR=$MACHINE_DIR/usr/sbin
 export BIN_DIR=$BIN
 
 PATH="/bin:/sbin:/usr/bin:/usr/sbin"
