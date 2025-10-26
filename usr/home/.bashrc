@@ -121,8 +121,8 @@ export SBIN_DIR=$MACHINE_DIR/usr/sbin
 export BIN_DIR=$BIN
 
 PATH="/bin:/sbin:/usr/bin:/usr/sbin"
-PATH="$PATH:$MACHINE_DIR/sbin"
-for d in $(find -L $BIN -type d); do
+PATH="$PATH:$SBIN_DIR"
+for d in $(find -L $BIN_DIR -type d); do
     PATH="$PATH:$d"
 done
 export PATH
