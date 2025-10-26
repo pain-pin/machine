@@ -1,0 +1,8 @@
+*.config/Brav*
+*.swp
+.ssh/
+.ssh
+*ssh
+.ssh/*
+passwd_gen
+deb_dock/home_skel/.vim/.netrwhist
