@@ -11,7 +11,7 @@ F=$(which "$1")
 
 if [ ! -f "$F" ]; then
 	F="$BIN_DIR/$1"
-	cp $MACHINE_DIR/etc/skel/.vim/templates/template.sh $F
+	cp $MACHINE_DIR/usr/home/.vim/templates/template.sh $F
 fi
 vim "$F"
 chmod +x $F
