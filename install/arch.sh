@@ -5,8 +5,14 @@
 #   exit 1
 #fi
 
+# append sources
 bash config.sh
+source /home/.bashrc
+# append sources
+bash	tree_cpy.sh $MACHINE_DIR/usr
+
 bash pacman.sh
+
 bash network.sh
 #systemctl enable --now NetworkManager #enable dongle
 

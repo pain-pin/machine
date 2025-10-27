@@ -133,7 +133,7 @@ export LESS=-R
 
 #ctags -R .
 
-bind -f  ./.inputrc
+bind -f  /home/.inputrc
 
 #envsubst < ${MACHINE_PATH}/dotfiles/ssh/config.template > ~/.ssh/config
 

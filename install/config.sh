@@ -9,4 +9,4 @@ echo "source /home/$FILE" >> $HOME/$FILE
 FILE=".profile"
 echo "source /home/$FILE" >> $HOME/$FILE
 
-
+setxkbmap us -variant intl
