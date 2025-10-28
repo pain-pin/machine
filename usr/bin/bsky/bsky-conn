@@ -1,0 +1,115 @@
+#!/usr/bin/env python3
+"""
+bs_conn.py — minimal Bluesky connection manager
+
+Usage:
+  python3 bs_conn.py [handle] [--domain DOMAIN] [--passwd PASSWORD]
+"""
+
+import argparse
+import json
+import sys
+from pathlib import Path
+import requests
+
+import os
+os.environ["PYTHON_KEYRING_BACKEND"] = "keyrings.alt.file.PlaintextKeyring"
+
+
+import keyring
+from appdirs import user_config_dir
+
+SERVICE = "bsky_tokens"
+CONFIG = Path(user_config_dir("bsky_auth")) / "config.json"
+DEFAULT_DOMAIN = "bsky.social"
+
+
+# ---------- core helpers ----------
+def kr_key(handle, domain):
+    return f"bsky:{handle}@{domain}"
+
+
+def store_tokens(handle, domain, j):
+    data = {
+        "access": j["accessJwt"],
+        "refresh": j["refreshJwt"],
+        "did": j["did"],
+    }
+    keyring.set_password(SERVICE, kr_key(handle, domain), json.dumps(data))
+
+
+def load_tokens(handle, domain):
+    raw = keyring.get_password(SERVICE, kr_key(handle, domain))
+    return json.loads(raw) if raw else None
+
+
+def save_last(handle):
+    CONFIG.parent.mkdir(parents=True, exist_ok=True)
+    conf = {"last": handle}
+    with open(CONFIG, "w") as f:
+        json.dump(conf, f)
+
+
+def load_last():
+    if CONFIG.exists():
+        try:
+            return json.load(open(CONFIG)).get("last")
+        except Exception:
+            return None
+    return None
+
+
+def create_session(domain, handle, password):
+    url = f"https://{domain}/xrpc/com.atproto.server.createSession"
+    r = requests.post(url, json={"identifier": handle, "password": password}, timeout=10)
+    if r.status_code != 200:
+        sys.exit(f"login failed: {r.status_code} {r.text}")
+    return r.json()
+
+
+def refresh_session(domain, refresh_jwt):
+    url = f"https://{domain}/xrpc/com.atproto.server.refreshSession"
+    r = requests.post(url, headers={"authorization": f"Bearer {refresh_jwt}"}, timeout=10)
+    if r.status_code != 200:
+        return None
+    return r.json()
+
+
+# ---------- public API ----------
+def connect(handle=None, domain=DEFAULT_DOMAIN, password=None):
+    if not handle:
+        handle = load_last()
+        if not handle:
+            sys.exit("no handle specified and no previous connection found")
+
+    tokens = load_tokens(handle, domain)
+    if tokens:
+        refreshed = refresh_session(domain, tokens["refresh"])
+        if refreshed:
+            store_tokens(handle, domain, refreshed)
+            save_last(handle)
+            return refreshed
+    if not password:
+        sys.exit("password required for first connection")
+
+    session = create_session(domain, handle, password)
+    store_tokens(handle, domain, session)
+    save_last(handle)
+    return session
+
+
+# ---------- main ----------
+def main():
+    p = argparse.ArgumentParser(description="Connect to Bluesky and store session.")
+    p.add_argument("handle", nargs="?", help="Bluesky handle (username)")
+    p.add_argument("--domain", default=DEFAULT_DOMAIN)
+    p.add_argument("--passwd", help="password")
+    args = p.parse_args()
+
+    s = connect(args.handle, args.domain, args.passwd)
+    print(f"connected as {s['handle']} (did={s['did']})")
+
+
+if __name__ == "__main__":
+    main()
+
