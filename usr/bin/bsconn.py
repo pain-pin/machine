@@ -74,7 +74,6 @@ def refresh_session(domain, refresh_jwt):
         return None
     return r.json()
 
-
 # ---------- public API ----------
 def connect(handle=None, domain=DEFAULT_DOMAIN, password=None):
     if not handle:

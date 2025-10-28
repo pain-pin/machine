@@ -121,10 +121,11 @@ export SBIN_DIR=$MACHINE_DIR/usr/sbin
 export BIN_DIR=$BIN
 
 PATH="/bin:/sbin:/usr/bin:/usr/sbin"
+PATH="$PATH:$BIN_DIR"
 PATH="$PATH:$SBIN_DIR"
-for d in $(find -L $BIN_DIR -type d); do
-    PATH="$PATH:$d"
-done
+#for d in $(find -L $BIN_DIR -type d); do
+#    PATH="$PATH:$d"
+#done
 export PATH
 
 export REMOTE_BRANCHES="github origin"
@@ -132,6 +133,9 @@ export REMOTE_BRANCHES="github origin"
 export LESS=-R
 
 #ctags -R .
+
+# permet les accents
+setxkbmap us -variant intl
 
 bind -f  /home/.inputrc
 
