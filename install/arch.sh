@@ -8,6 +8,9 @@
 # append sources
 bash config.sh
 source /home/.bashrc
+bash python.py
+source /home/.bashrc
+
 # append sources
 bash	tree_cpy.sh $MACHINE_DIR/usr
 
