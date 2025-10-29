@@ -11,6 +11,7 @@ source /home/.bashrc
 bash python.py
 source /home/.bashrc
 
+bash chmod.sh
 # append sources
 bash	tree_cpy.sh $MACHINE_DIR/usr
 

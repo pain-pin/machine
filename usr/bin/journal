@@ -29,6 +29,7 @@ journal ()
     mkdir -p "$PATH_";
     FILE="${PATH_}/${F_NAME}";
     header_journal $FILE;
+	echo "header done"
     if commit_if_modified $FILE; then
         mkdir -p "$DIR/$LN_DIR";
         ln -P "$FILE" "$DIR/$LN_DIR/";

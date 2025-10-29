@@ -3,7 +3,7 @@ commit_if_modified ()
 { 
     local F_NAME=$1;
     local DEL=$2;
-    git pull;
+    #git pull;
     vim + $F_NAME;
     git add $F_NAME;
 	git commit
