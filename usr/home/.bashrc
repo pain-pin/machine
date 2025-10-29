@@ -119,6 +119,7 @@ export LOG_CONN_DIR=$LOCAL_JOURNAL_DIR/logs
 export BIN=$MACHINE_DIR/usr/bin
 export SBIN_DIR=$MACHINE_DIR/usr/sbin
 export BIN_DIR=$BIN
+export PY_ENV=$BIN/py-env
 
 PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 PATH="$PATH:$BIN_DIR"
@@ -136,6 +137,7 @@ export LESS=-R
 
 # permet les accents
 setxkbmap us -variant intl
+source $PY_ENV/bin/activate
 
 bind -f  /home/.inputrc
 

@@ -1,68 +1,44 @@
 #!/usr/bin/env python3
-"""
-bsky_connect.py — Factorized Bluesky connection module
-Author: nidionis
-"""
 
-import os
-import json
-import requests
+from atproto import Client
+import argparse
 
-BSKY_API = "https://bsky.social/xrpc"
+DEFAULT_DOMAIN="bsky.social"
+DEFAULT_DIR="/tmp/bs"
 
-def load_token(token_file="~/.config/bsky/session.json"):
-    path = os.path.expanduser(token_file)
-    if not os.path.exists(path):
-        return None
-    with open(path, "r") as f:
-        return json.load(f)
+def save_session(client, full_name, tokendir):
+    session_string = client.export_session_string()
+    with open(tokendir + full_name, "w") as f:
+        f.write(session_string)
 
-def save_token(data, token_file="~/.config/bsky/session.json"):
-    os.makedirs(os.path.dirname(os.path.expanduser(token_file)), exist_ok=True)
-    with open(os.path.expanduser(token_file), "w") as f:
-        json.dump(data, f)
+def get_session(client, full_name, tokendir):
+    with open(tokendir + full_name, "r") as f:
+        session_string = f.read()
+    client.login(session_string=session_string)
+    return client
 
-def login_with_password(handle: str, password: str):
-    url = f"{BSKY_API}/com.atproto.server.createSession"
-    r = requests.post(url, json={"identifier": handle, "password": password})
-    r.raise_for_status()
-    return r.json()
+def connect(name, domain, passwd, token_dir):
+    client = Client()
+    full_name = name + "." + domain
+    try:
+        client.login(full_name, passwd)
+        save_session(client, full_name, token_dir)
+    except ValueError: # No passwd
+        client = get_session(client, full_name, token_dir)
+    return client
 
-def refresh_session(refresh_token: str):
-    url = f"{BSKY_API}/com.atproto.server.refreshSession"
-    r = requests.post(url, headers={"Authorization": f"Bearer {refresh_token}"})
-    r.raise_for_status()
-    return r.json()
-
-def get_session(handle=None, password=None, token_file="~/.config/bsky/session.json"):
-    session = load_token(token_file)
-    if session:
-        try:
-            refreshed = refresh_session(session["refreshJwt"])
-            save_token(refreshed, token_file)
-            return refreshed
-        except requests.HTTPError:
-            pass
-    if not (handle and password):
-        raise ValueError("Missing handle or password for new session.")
-    session = login_with_password(handle, password)
-    save_token(session, token_file)
-    return session
-
-def whoami(session):
-    return session.get("did", "unknown")
-
-if __name__ == "__main__":
-    import argparse
-    p = argparse.ArgumentParser(description="Connect to Bluesky.")
-    p.add_argument("handle", nargs="?", help="Bluesky handle (e.g. user.bsky.social)")
-    p.add_argument("-p", "--passwd", help="Account password (if no token)")
-    p.add_argument("--token", help="Path to session token file", default="~/.config/bsky/session.json")
+# ---------- main ----------
+def main():
+    p = argparse.ArgumentParser(description="Connect to Bluesky and store session.")
+    p.add_argument("name", nargs="?", help="Bluesky handle (username)")
+    p.add_argument("--domain", default=DEFAULT_DOMAIN)
+    p.add_argument("--tokendir", default=DEFAULT_DIR)
+    p.add_argument("--passwd", "-p", help="passwd", default=None)
     args = p.parse_args()
 
-    try:
-        session = get_session(args.handle, args.passwd, args.token)
-        print(f"Connected as {whoami(session)}")
-    except Exception as e:
-        print(f"Connection failed: {e}")
+    client = connect(args.name, args.domain, args.passwd, args.tokendir)
+    print(f"connected")
+    client.send_post(text='Hello World!')
 
+if __name__ == "__main__":
+    main()
