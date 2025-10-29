@@ -1,0 +1,3 @@
+DFLT_CUSTOM_DOMAIN="bsky.social"
+TOKEN_DIR=/tmp/bs
+LAST_USER_DIR=$TOKEN_DIR/last
