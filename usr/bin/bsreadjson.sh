@@ -1,4 +1,4 @@
 #!/usr/bin/bash
 
 
-jq '.thread[] | {uri: .thread.post.uri, text: .thread.post.record.text}' $1
+jq '.thread[] | {author: .thread.post.author.handle, text: .thread.post.record.text}' $1
