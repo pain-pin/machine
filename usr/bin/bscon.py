@@ -4,9 +4,10 @@ import argparse
 import os
 
 DEFAULT_DOMAIN = "bsky.social"
+DEFAULT_NAME = "ni-bot"
 DEFAULT_DIR = "/tmp/bs"
 
-def path(tokendir, name=""):
+def path(tokendir, name="ni-bot"):
     return os.path.join(tokendir, name)
 
 def read_file(filepath):
