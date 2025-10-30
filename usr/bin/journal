@@ -32,8 +32,7 @@ journal ()
 	echo "header done"
     if commit_if_modified $FILE; then
         mkdir -p "$DIR/$LN_DIR";
-        ln -P "$FILE" "$DIR/$LN_DIR/";
-        ln -P "$FILE" "$DIR/$HOST/";
+        ln -P "$FILE" "$DIR/$HOST/$LN_DIR";
 		git add . ;
 		git commit -m "	->	$LN_DIR/$FILE linked";
     else
