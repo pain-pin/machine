@@ -1,17 +1,25 @@
-#!/usr/bin/env python3
-import re
-import sys
+#!/usr/bin/bash
 
-def get_post_uri(url):
-    m = re.search(r'https://bsky\.app/profile/([^/]+)/post/([a-z0-9]+)', url)
-    if not m:
-        sys.exit("Invalid Bluesky post URL")
-    handle, rkey = m.groups()
-    return f"at://{handle}/app.bsky.feed.post/{rkey}"
+if [ "$#" -lt 1 ] || [ "$#" -gt 3 ]; then
+    echo "Usage: $0 arg1 [arg2] [arg3]"
+    exit 1
+fi
 
-if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print(f"Usage: {sys.argv[0]} <bsky_post_url>")
-        sys.exit(1)
-    print(get_post_uri(sys.argv[1]))
+# interactive session check
+if [ -t 0 ]; then
+    echo -n "Delete existing output files? [y/N]: "
+    read ans
+    case "$ans" in
+        y|Y) rm -f *.school ;;
+        *) echo "Aborted"; exit 0 ;;
+    esac
+fi
+
+# process input file
+while IFS= read -r line; do
+    new_f="${line%.*}.school"
+    f > "$new_f"
+done < "$FILE"
+
+exit 0
 

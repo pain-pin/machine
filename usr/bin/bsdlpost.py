@@ -1,51 +1,46 @@
 #!/usr/bin/env python3
 import argparse
 import json
-from atproto import Client
 from bscon import connect
 
-def load_thread(client: Client, uri: str, seen=None):
-    """Recursively load a post thread including replies."""
+def fetch_thread(client, uri, seen=None):
+    """Recursively fetch a post thread including replies."""
     if seen is None:
         seen = set()
     if uri in seen:
         return []
     seen.add(uri)
-    thread = client.app.bsky.feed.get_post_thread({"uri": uri})
-    out = [thread]
-    post = thread.get("thread")
-    if not post:
-        return out
-    replies = post.get("replies") or []
-    for reply in replies:
-        child = reply.get("post", {}).get("uri")
-        if child:
-            out += load_thread(client, child, seen)
+
+    resp = client.app.bsky.feed.get_post_thread({"uri": uri})
+    data = resp.model_dump()  # convert Pydantic Response to dict
+    out = [data]
+
+    post = data.get("thread")
+    if post and "replies" in post:
+        for reply in post["replies"]:
+            child_uri = reply.get("post", {}).get("uri")
+            if child_uri:
+                out += fetch_thread(client, child_uri, seen)
     return out
 
-def fetch_likes(client: Client, uri: str):
-    """Return list of likes for a post."""
-    likes = []
+def fetch_all_pages(fetch_fn, client, uri, key):
+    """Generic paginated fetch (likes, reposts)."""
+    results = []
     cursor = None
     while True:
-        data = client.app.bsky.feed.get_likes({"uri": uri, "cursor": cursor})
-        likes.extend(data.get("likes", []))
+        resp = fetch_fn(client, uri, cursor)
+        data = resp.model_dump()  # <-- convert to dict
+        results.extend(data.get(key, []))
         cursor = data.get("cursor")
         if not cursor:
             break
-    return likes
+    return results
 
-def fetch_reposts(client: Client, uri: str):
-    """Return list of reposts for a post."""
-    reposts = []
-    cursor = None
-    while True:
-        data = client.app.bsky.feed.get_reposted_by({"uri": uri, "cursor": cursor})
-        reposts.extend(data.get("repostedBy", []))
-        cursor = data.get("cursor")
-        if not cursor:
-            break
-    return reposts
+def fetch_likes(client, uri, cursor=None):
+    return client.app.bsky.feed.get_likes({"uri": uri, "cursor": cursor})
+
+def fetch_reposts(client, uri, cursor=None):
+    return client.app.bsky.feed.get_reposted_by({"uri": uri, "cursor": cursor})
 
 def main():
     parser = argparse.ArgumentParser(description="Load a Bluesky post recursively with interactions.")
@@ -56,15 +51,16 @@ def main():
     args = parser.parse_args()
 
     client = connect()
-    data = {"thread": load_thread(client, args.uri)}
+    data = {"thread": fetch_thread(client, args.uri)}
 
     if args.likes:
-        data["likes"] = fetch_likes(client, args.uri)
+        data["likes"] = fetch_all_pages(fetch_likes, client, args.uri, "likes")
     if args.reposts:
-        data["reposts"] = fetch_reposts(client, args.uri)
+        data["reposts"] = fetch_all_pages(fetch_reposts, client, args.uri, "repostedBy")
 
     with open(args.output, "w") as f:
         json.dump(data, f, indent=2)
+
     print(f"Saved to {args.output}")
 
 if __name__ == "__main__":
