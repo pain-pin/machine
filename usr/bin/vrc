@@ -7,6 +7,9 @@ vrc ()
     F_PATH="$(dirname $FILE)";
     cd "$F_PATH";
     commit_if_modified "$F_NAME";
+	if [ "$?" == "0" ] ; then
+		cp $F_NAME $MACHINE_DIR/usr/home/.vimrc
+	fi
     cd -;
     source $SOURCE
 }
