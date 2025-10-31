@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+
+cd $BIN_DIR
+rm $1
+git rm $1
+git commit -m "rm $1"
+git push
+cd -
+
+
+exit 0
+
