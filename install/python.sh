@@ -8,6 +8,7 @@ source $PY_ENV/bin/activate
 
 pip install requests
 pip install atproto
+pip install pandas
 #pip install keyring
 
 exit 0

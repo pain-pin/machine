@@ -36,4 +36,5 @@ journal-perso ()
     fi;
     cd $DIR_ORIGINAL
 }
+
 journal-perso "$@"
