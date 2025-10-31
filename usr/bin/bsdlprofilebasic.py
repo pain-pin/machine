@@ -3,6 +3,11 @@ import argparse
 import json
 from bscon import connect  # ton module de connexion Bluesky
 
+#!/usr/bin/env python3
+import argparse
+import json
+from bscon import connect  # ton module de connexion Bluesky
+
 
 def get_posts(client, handle, limit=100):
     """Télécharge tous les posts publics d'un profil via le feed public."""
@@ -20,11 +25,13 @@ def get_posts(client, handle, limit=100):
 
         for item in resp.feed:
             post = item.post
+            record = post.record
+
             posts.append({
                 "uri": post.uri,
                 "cid": post.cid,
-                "createdAt": post.record.get("createdAt"),
-                "text": post.record.get("text", "")
+                "createdAt": getattr(record, "created_at", None),
+                "text": getattr(record, "text", ""),
             })
 
         cursor = getattr(resp, "cursor", None)
