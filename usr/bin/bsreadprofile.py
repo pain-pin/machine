@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import json
 
 def generate_html(posts_file, out_file="profile.html"):
@@ -22,5 +23,5 @@ def generate_html(posts_file, out_file="profile.html"):
     with open(out_file, "w", encoding="utf-8") as f:
         f.write("\n".join(html))
 
-generate_html("ni_bot_bsky_social_posts.json")
+generate_html("post.json")
 

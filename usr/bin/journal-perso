@@ -30,6 +30,8 @@ journal-perso ()
     if commit_if_modified $FILE; then
         mkdir -p "$DIR/$LN_DIR";
         ln -P "$FILE" "$DIR/$LN_DIR/";
+		git add "$DIR/$LN_DIR/$FILE";
+		commit -m "linking $DIR/$LN_DIR/$FILE";
     else
         rm $FILE;
         rmdir -p "${PATH_}";
