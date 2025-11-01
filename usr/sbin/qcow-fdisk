@@ -9,4 +9,18 @@ NAME=$1
 
 modprobe nbd
 qemu-nbd --connect=/dev/nbd0 $NAME
-fdisk /dev/nbd0
+sudo fdisk /dev/nbd0 <<EOF
+g
+n
+
+
++400M
+t
+1
+n
+
+
+
+w
+EOF
+
