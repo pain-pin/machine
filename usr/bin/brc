@@ -10,5 +10,4 @@ if [ $? -eq 0 ] ; then
 	cp $F_NAME /home/$F_NAME;
 	echo copied
 fi
-cd -;
 source $HOME/$F_NAME
