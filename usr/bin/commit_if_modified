@@ -7,15 +7,14 @@ commit_if_modified ()
     vim + $F_NAME;
     git add $F_NAME;
 	git commit
-	RET="$?"
-    [[ "$RET" != "0" ]] && {
+    if [ $? -eq 0 ] ; then
         echo -n "[no modifications]";
         if [ -n "$DEL" ]; then
             rm $F_NAME;
             echo -n " -> deleted";
             return 1;
         fi;
-	}
+	fi;
     return 0
 }
 commit_if_modified "$@"
