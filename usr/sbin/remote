@@ -1,0 +1,9 @@
+#!/bin/bash
+remote () 
+{ 
+    USER=${1:-$LOGNAME};
+    HOST=${2:-"37.187.180.32"};
+    PORT=${3:-"9191"};
+    sudo -u $USER ssh -l $USER -i /home/$USER/.ssh/id_rsa -p $PORT $HOST
+}
+remote "$@"

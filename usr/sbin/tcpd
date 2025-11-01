@@ -1,0 +1,38 @@
+#!/usr/bin/bash
+
+refresh_time
+DIR=$LOG_CONN_DIR
+SUB_DIR=${1:-"tcpd"}
+DIR="$DIR/$SUB_DIR"
+mkdir -p $DIR
+NAME=${2:-"default_pcap"}
+NAME=$(echo $DATE-$TIME.$NAME.md | sed "s/:/_/g")
+FILE=$DIR/$NAME
+echo "File at $FILE"
+
+DEVICE=$(ip addr | grep -v DOWN | grep -E "^[0-9]" | awk -F':' '{print $2}' | grep -v lo)
+NB_DEVICES="$(echo ${DEVICE} | awk '{print NF}')"
+
+if [ $NB_DEVICES -lt "1" ] ; then
+	echo no device
+	echo $DEVICE
+	exit 1
+elif [ $NB_DEVICES -gt "1" ] ; then
+	echo several devices, precise it using '$2':
+	echo $DEVICE
+	exit 1
+fi
+
+echo 'DEVICE='$DEVICE
+echo 
+
+sudo tcpdump -n -i $DEVICE >> $FILE
+chgrp root $FILE
+#PIDS+="$! " 
+#while true
+#do
+#	trap "kill -9 $PIDS && exit 0" SIGINT
+#done
+
+exit 1
+
