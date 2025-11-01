@@ -1,6 +1,0 @@
-#!/usr/bin/bash
-
-set -e
-
-vim $BLACKLIST
-bash $NFT_RESET

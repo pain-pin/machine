@@ -5,11 +5,10 @@ brc ()
 	ORIGINAL_PWD=$PWD;
     cd "$SKEL_DIR/usr/home";
 	commit_if_modified "$F_NAME"
-	[[ "$?" == "0" ]] && { \
+	if [ $? -eq 0 ] ; then
 		cp $F_NAME /home/$F_NAME;
 		echo copied
-	}
-echo "$? = " $?
+	fi
     cd $ORIGINAL_PWD;
     source $HOME/$F_NAME
 }

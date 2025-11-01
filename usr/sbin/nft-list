@@ -1,6 +1,0 @@
-#!/usr/bin/bash
-
-sudo -E bash $NETWORK_DIR/nft_setup.sh
-
-exit 0
-
