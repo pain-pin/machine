@@ -1,0 +1,21 @@
+#!/usr/bin/bash
+# from https://gist.github.com/robertkirkman/f79441c79811ad263f2f881f7864e793
+# should be run after qcow-fdisc
+
+if [ "$#" -ne 1 ] ; then
+    echo "Usage: $0 arg1 [arg2] [arg3]"
+    exit 1
+fi
+
+NAME=$1
+
+sudo mkfs.vfat /dev/nbd0p1
+sudo mkfs.ext4 /dev/nbd0p2
+sudo mkdir rootfs
+sudo mount /dev/nbd0p2 rootfs
+sudo mkdir rootfs/boot
+sudo mount /dev/nbd0p1 rootfs/boot
+sudo bsdtar -xpf $NAME -C rootfs
+
+exit 0
+
