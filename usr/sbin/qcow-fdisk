@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+
+if [ "$#" -eq 1 ]
+    echo "Usage: $0 disk_name"
+    exit 1
+fi
+
+NAME=$1
+
+modprobe nbd
+qemu-nbd --connect=/dev/nbd0 $NAME
+fdisk /dev/nbd0
