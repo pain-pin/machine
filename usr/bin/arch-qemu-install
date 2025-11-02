@@ -6,8 +6,8 @@ IMG=${1:-arch.qcow2}
 SIZE=${2:-4G}
 RAM=${3:-2G}
 CPUS=${4:-2}
-ISO=${5:-$(curl -Ls https://geo.mirror.pkgbuild.com/iso/latest/ | grep -o 'archlinux-.*-x86_64.iso' | head -1)}
 ISO_URL="https://geo.mirror.pkgbuild.com/iso/latest/$ISO"
+ISO=${5:-$(basename $ISO_URL)}
 SHARE=${6:-$PWD/share}
 
 # --- Setup ---
@@ -30,6 +30,6 @@ qemu-system-x86_64 \
   -drive file="$IMG",format=qcow2 \
   -device virtio-vga \
   -display default,show-cursor=on \
-  -nic user,model=virtio \
+  -nic user,model=virtio,hostfwd=tcp::2222-:22,dns=9.9.9.9 \
   -virtfs local,id=share,path="$SHARE",security_model=none,mount_tag=hostshare
 
