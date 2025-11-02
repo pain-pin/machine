@@ -1,0 +1,46 @@
+#!/usr/bin/bash
+#!/bin/bash
+set -e
+
+IMG="${1:-arch-min.qcow2}"
+SIZE="15G"
+MNT="/mnt/arch"
+ISO_URL="https://mirror.rackspace.com/archlinux/iso/latest/archlinux-x86_64.iso"
+ISO_NAME=$(basename $ISO_URL)
+
+# 1. Download ISO
+[ -f $ISO_NAME ] || curl -L "$ISO_URL" -o $ISO_NAME
+
+# 2. Create image
+qemu-img create -f qcow2 "$IMG" "$SIZE"
+
+# 3. Run installer (interactive)
+qemu-system-x86_64 \
+  -m 2G \
+  -enable-kvm \
+  -cdrom $ISO_NAME \
+  -boot d \
+  -drive file="$IMG",format=qcow2 \
+  -nic user,model=virtio-net-pci \
+  -nographic
+
+# --- Inside QEMU (manual minimal install) ---
+# loadkeys us
+# pacman -Sy --noconfirm archlinux-keyring
+# fdisk /dev/vda  (create 1 partition, type Linux)
+# mkfs.ext4 /dev/vda1
+# mount /dev/vda1 /mnt
+# pacstrap /mnt base linux linux-firmware
+# genfstab -U /mnt >> /mnt/etc/fstab
+# arch-chroot /mnt
+# ln -sf /usr/share/zoneinfo/UTC /etc/localtime
+# hwclock --systohc
+# echo arch > /etc/hostname
+# passwd
+# exit
+# umount -R /mnt
+# poweroff
+
+# 4. Boot installed image
+# qemu-system-x86_64 -enable-kvm -m 2G -drive file="$IMG",format=qcow2 -nic user -nographic
+
