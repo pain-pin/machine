@@ -1,6 +1,9 @@
 #!/bin/bash
 set -eux
 
+# from vm to make a shared folder
+# mount -t 9p -o trans=virtio hostshare /mnt
+
 # --- Configurable defaults ---
 IMG=${1:-arch.qcow2}
 SIZE=${2:-4G}
