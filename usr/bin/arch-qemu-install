@@ -7,7 +7,7 @@ set -eux
 # --- Configurable defaults ---
 ISO_URL="https://mirror.arizona.edu/archlinux/iso/latest/archlinux-x86_64.iso"
 ISO=${1:-$(basename $ISO_URL)}
-IMG=${2:-arch.qcow2}
+IMG=${2:-disk_qemu.qcow2}
 SIZE=${3:-16G}
 RAM=${4:-2G}
 CPUS=${5:-2}
@@ -17,7 +17,7 @@ SHARE=${6:-$PWD/share}
 mkdir -p "$SHARE"
 echo "iso = $ISO"
 [ -f "$ISO" ] || wget "$ISO_URL"
-[ -f "$IMG" ] || qemu-img create -f qcow2 "$IMG" "$SIZE"
+[ -f "$IMG" ] || qemu-img create -o -f qcow2 "$IMG" "$SIZE"
 
 # --- Optional install script ---
 # Drop any file named install.sh in ./share to execute it inside the VM later:

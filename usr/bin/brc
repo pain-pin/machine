@@ -6,5 +6,5 @@ F_NAME=".bashrc";
 echo "ORIGINAL_PWD: $ORIGINAL_PWD"
 cd "$SKEL_DIR/usr/home";
 commit_if_modified "$F_NAME"
-cp $F_NAME /home/$F_NAME;
+cp -f $F_NAME /home/$F_NAME;
 source $HOME/$F_NAME
