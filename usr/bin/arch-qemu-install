@@ -5,16 +5,17 @@ set -eux
 # mount -t 9p -o trans=virtio hostshare /mnt
 
 # --- Configurable defaults ---
-IMG=${1:-arch.qcow2}
-SIZE=${2:-4G}
-RAM=${3:-2G}
-CPUS=${4:-2}
 ISO_URL="https://mirror.arizona.edu/archlinux/iso/latest/archlinux-x86_64.iso"
-ISO=${5:-$(basename $ISO_URL)}
+ISO=${1:-$(basename $ISO_URL)}
+IMG=${2:-arch.qcow2}
+SIZE=${3:-16G}
+RAM=${4:-2G}
+CPUS=${5:-2}
 SHARE=${6:-$PWD/share}
 
 # --- Setup ---
 mkdir -p "$SHARE"
+echo "iso = $ISO"
 [ -f "$ISO" ] || wget "$ISO_URL"
 [ -f "$IMG" ] || qemu-img create -f qcow2 "$IMG" "$SIZE"
 
