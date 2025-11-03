@@ -4,13 +4,13 @@
 
 FILE=".bashrc"
 echo "source /home/$FILE" > $HOME/$FILE
-cat $HOME/$FIL > /etc/skel
+cat $HOME/$FILE > /etc/skel/$FILE
 
 FILE=".vimrc"
 echo "source /home/$FILE" > $HOME/$FILE
-cat $HOME/$FILE > /etc/skel
+cat $HOME/$FILE > /etc/skel/$FILE
 
 FILE=".profile"
 echo "source /home/$FILE" > $HOME/$FILE
-cat $HOME/$FILE > /etc/skel
+cat $HOME/$FILE > /etc/skel/$FILE
 
