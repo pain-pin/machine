@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+bash tree_cpy.sh ../usr
+
 FILE=".bashrc"
 echo "source /home/$FILE" >> $HOME/$FILE
 
@@ -9,4 +11,3 @@ echo "source /home/$FILE" >> $HOME/$FILE
 FILE=".profile"
 echo "source /home/$FILE" >> $HOME/$FILE
 
-setxkbmap us -variant intl
