@@ -1,12 +1,16 @@
 #!/usr/bin/bash
 
-bash tree_cpy.sh
+#bash tree_cpy.sh ../usr
+
 FILE=".bashrc"
-echo "source /home/$FILE" >> $HOME/$FILE
+echo "source /home/$FILE" > $HOME/$FILE
+cat $HOME/$FIL > /etc/skel
 
 FILE=".vimrc"
-echo "source /home/$FILE" >> $HOME/$FILE
+echo "source /home/$FILE" > $HOME/$FILE
+cat $HOME/$FILE > /etc/skel
 
 FILE=".profile"
-echo "source /home/$FILE" >> $HOME/$FILE
+echo "source /home/$FILE" > $HOME/$FILE
+cat $HOME/$FILE > /etc/skel
 
