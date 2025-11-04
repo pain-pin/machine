@@ -34,6 +34,8 @@ qemu-system-x86_64 \
   -drive file="$IMG",format=qcow2 \
   -device virtio-vga \
   -display default,show-cursor=on \
+  -device e1000,netdev=net0 \
+  -netdev user,id=net0 \
   -nic user,hostfwd=tcp::2222-:22 \
   -virtfs local,id=share,path="$SHARE",security_model=none,mount_tag=hostshare
 
