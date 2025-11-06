@@ -3,6 +3,7 @@
 .ssh/
 .ssh
 *ssh
+py-env/
 .ssh/*
 passwd_gen
 deb_dock/home_skel/.vim/.netrwhist
