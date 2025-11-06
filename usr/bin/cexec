@@ -1,9 +1,0 @@
-#!/bin/bash
-cexec () 
-{ 
-    BASE=($@);
-    NAME="${BASE%.*}";
-    FLAGS=('-Wall' '-Wextra' '-Werror');
-    cc ${FLAGS[@]} $BASE -o "$NAME" && ./"$NAME" && rm $NAME
-}
-cexec "$@"

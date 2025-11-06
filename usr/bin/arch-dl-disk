@@ -1,7 +1,0 @@
-#!/usr/bin/bash
-
-wget http://os.archlinuxarm.org/os/ArchLinuxARM-aarch64-latest.tar.gz
-echo "cheat sheet qemu-img create -f qcow2 arch-aarch64.qcow2 10G"
-echo "https://gist.github.com/robertkirkman/f79441c79811ad263f2f881f7864e793"
-
-echo "qcow-fdisk and ndb-mkfs are made from this page"
