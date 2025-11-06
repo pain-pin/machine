@@ -8,7 +8,7 @@
 # append sources
 bash config.sh
 source /home/.bashrc
-bash python.py
+bash python.sh
 source /home/.bashrc
 
 bash chmod.sh

@@ -10,12 +10,12 @@ H=$(find / -type d -name home | head -1)
 source $H/.bashrc
 bash	tree_cpy.sh $MACHINE_DIR/usr
 bash config.sh
-bash python.py
+bash python.sh
 
 bash chmod.sh
 # append sources
 
-#bash pacman.sh
+bash apk.sh
 
 bash network.sh
 #systemctl enable --now NetworkManager #enable dongle
