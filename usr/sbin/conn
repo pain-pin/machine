@@ -1,6 +1,0 @@
-#!/bin/bash
-conn () 
-{ 
-    sudo cat /var/log/connection_attempts.log
-}
-conn "$@"
