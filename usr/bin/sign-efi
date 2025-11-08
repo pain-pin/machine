@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 EFI=${1:-"shim.efi"}
-SIGNED_EFI=${2:-"signed-$EFI"}
+SIGNED_EFI=${2:-"$(echo $EFI | sed 's/.efi/-signed.efi/')"}
 DB_KEY=${3:-"db.key"}
 DB_CERT=${4:-"$(echo db.key | sed s/key/crt/)"}
 
