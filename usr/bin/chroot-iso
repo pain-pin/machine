@@ -11,17 +11,17 @@ MNT=mnt
 NEWISO=custom.iso
 
 mkdir -p "$MNT" "$WORKDIR"
-sudo mount -o loop "$ISO" "$MNT"
+mount -o loop "$ISO" "$MNT"
 
 echo "[*] Copying contents..."
 cp -a "$MNT"/* "$WORKDIR"
-sudo umount "$MNT"
+umount "$MNT"
 
 echo "[*] Enter chroot (bind mounts first)"
-sudo mount --bind /dev "$WORKDIR/dev"
-sudo mount --bind /sys "$WORKDIR/sys"
-sudo mount --bind /proc "$WORKDIR/proc"
-sudo chroot "$WORKDIR" /bin/bash
+mount --bind /dev "$WORKDIR/dev"
+mount --bind /sys "$WORKDIR/sys"
+mount --bind /proc "$WORKDIR/proc"
+chroot "$WORKDIR" /bin/bash
 
 echo """
 run:
