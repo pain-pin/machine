@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 local nmap = require "nmap"
 local stdnse = require "stdnse"
 local shortport = require "shortport"
