@@ -7,15 +7,10 @@ fi
 
 ISO="$1"
 WORKDIR=iso_edit
-MNT=mnt
 NEWISO=custom.iso
 
-mkdir -p "$MNT" "$WORKDIR"
-mount -o loop "$ISO" "$MNT"
-
-echo "[*] Copying contents..."
-cp -a "$MNT"/* "$WORKDIR"
-umount "$MNT"
+mkdir -p "$WORKDIR"
+mount -o loop "$ISO" "$WORKDIR"
 
 echo "[*] Enter chroot (bind mounts first)"
 mount --bind /dev "$WORKDIR/dev"
