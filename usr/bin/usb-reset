@@ -1,0 +1,31 @@
+#!/usr/bin/bash
+
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 /dev/sdb"
+    exit 1
+fi
+
+#!/bin/sh
+# partitionne /dev/sdb en une partition unique FAT32 montable Win/Linux
+
+dev=$1
+
+# créer table de partition MBR et 1 partition FAT32
+sudo fdisk "$dev" <<EOF
+o      # nouvelle table DOS
+n      # nouvelle partition
+p      # primaire
+1      # numéro
+       # début par défaut
+       # fin par défaut
+t      # changer type
+c      # W95 FAT32 (LBA)
+w      # écrire
+EOF
+
+# formater en FAT32
+sudo mkfs.vfat -F32 ${dev}1 -n STORAGE
+
+
+exit 0
+
