@@ -1,13 +1,12 @@
 #!/usr/bin/bash
 
 EFI=${1:-"shim.efi"}
-SIGNED_EFI=${2:-"signed.efi"}
+SIGNED_EFI=${2:-"signed-$EFI"}
 DB_KEY=${3:-"db.key"}
-DB_CERT=${4:-"$(echo db.key | sed s/key/cert)"}
+DB_CERT=${4:-"$(echo db.key | sed s/key/crt/)"}
 
 if [ "$#" -eq 0 ] ; then 
-	echo "run sbsign --key db.key --cert db.crt --output shim-signed.efi shim.efi before (or sign-db)"
-	echo "sbsign --key db.key --cert db.crt --output shim-signed.efi shim.efi"
+	echo "sbsign --key $DB_KEY --cert $DB_CERT --output $SIGNED_EFI $EFI"
     echo "Usage: $0 efi"
     exit 1
 fi
