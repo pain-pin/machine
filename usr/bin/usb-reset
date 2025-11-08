@@ -11,21 +11,32 @@ fi
 dev=$1
 
 # créer table de partition MBR et 1 partition FAT32
-sudo fdisk "$dev" <<EOF
-o      # nouvelle table DOS
-n      # nouvelle partition
-p      # primaire
-1      # numéro
-       # début par défaut
-       # fin par défaut
-t      # changer type
-c      # W95 FAT32 (LBA)
-w      # écrire
+fdisk "$dev" <<EOF
+o
+n
+p
+1
+ 
+ 
+t
+c
+w
 EOF
 
-# formater en FAT32
-sudo mkfs.vfat -F32 ${dev}1 -n STORAGE
+echo """
+# nouvelle table DOS
+# nouvelle partition
+# primaire
+# numéro
+# début par défaut
+# fin par défaut
+# changer type
+# W95 FAT32 (LBA)
+# écrire
+"""
 
+mkfs.vfat -F32 ${dev}1 -n STORAGE
+echo "note: mkfs.vfat in dosfstools package"
 
 exit 0
 
