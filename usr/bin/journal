@@ -21,7 +21,6 @@ journal ()
     else
         return 1;
     fi;
-	#mkdir -p $DIR
 	mkdir -p $DIR/$HOST
     F_NAME+=".md";
     cd $DIR;
@@ -31,10 +30,10 @@ journal ()
     header_journal $FILE;
 	echo "header done"
     if commit_if_modified $FILE; then
-        mkdir -p "$DIR/$LN_DIR";
+        mkdir -p "$DIR/$HOST/$LN_DIR";
         ln -P "$FILE" "$DIR/$HOST/$LN_DIR";
 		git add . ;
-		git commit -m "	->	$LN_DIR/$FILE linked";
+		git commit -m "	-> linked $LN_DIR/$FILE";
     else
         rm $FILE;
         rmdir -p "${PATH_}";
