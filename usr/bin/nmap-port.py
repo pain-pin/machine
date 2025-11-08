@@ -1,38 +1,16 @@
-#!/usr/bin/env python3
-local nmap = require "nmap"
-local stdnse = require "stdnse"
-local shortport = require "shortport"
-local socket = require "socket"         -- for simple banner read
--- reads port from script-args or defaults to 80
-local arg_port = tonumber(stdnse.get_script_args("checkport.port")) or 80
+#!/usr/bin/bash
 
-portrule = function(host, port)
-  return port.number == arg_port
-end
+if [ "$#" -ne 2 ] ; then
+    echo "Usage: $0 IP port"
+    exit 1
+fi
 
-action = function(host, port)
-  if port.state ~= "open" then
-    return ("port %d closed on %s"):format(port.number, host.ip or host.targetname)
-  end
+IP=$1
+PORT=$2
 
-  local s, err = nmap.new_socket()
-  if not s then
-    return ("socket error: %s"):format(err)
-  end
+nmap -Pn -sV -p "$PORT" --open "$TARGET"
 
-  s:set_timeout(3000)
-  local ok, cerr = s:connect(host.ip, port.number)
-  if not ok then
-    s:close()
-    return ("connect failed: %s"):format(cerr)
-  end
+nmap --script check-port --script-args checkport.port=$PORT -p $PORT $IP
 
-  -- try to read a short banner
-  local status, data = pcall(function() return s:receive_chars(512) end)
-  s:close()
-  if status and data and #data > 0 then
-    return ("port %d open — banner: %q"):format(port.number, data:gsub("%s+", " "))
-  end
-  return ("port %d open — no banner"):format(port.number)
-end
+exit 0
 
