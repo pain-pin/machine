@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 
+groupadd $MACHINE
 chown -R root $MACHINE_DIR
 chgrp -R $MACHINE $MACHINE_DIR
 chmod -R 664 $MACHINE_DIR

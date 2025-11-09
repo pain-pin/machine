@@ -5,6 +5,7 @@
 #   exit 1
 #fi
 
+bash	tree_cpy.sh $MACHINE_DIR/usr
 # append sources
 bash config.sh
 source /home/.bashrc
@@ -13,7 +14,6 @@ source /home/.bashrc
 
 bash chmod.sh
 # append sources
-bash	tree_cpy.sh $MACHINE_DIR/usr
 
 bash pacman.sh
 
