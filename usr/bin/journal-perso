@@ -1,7 +1,7 @@
 #!/bin/bash
 journal-perso () 
 { 
-    refresh_time;
+    . . refresh_time;
     DIR_ORIGINAL=$PWD;
     DIR=$PERSO_DIR;
     DATE_DIR="$YEAR/$MONTH/$DAY";

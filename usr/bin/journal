@@ -1,7 +1,7 @@
 #!/bin/bash
 journal () 
 { 
-    refresh_time;
+    . . refresh_time;
     DIR_ORIGINAL=$PWD;
     DIR="$HOME/journal/";
     DATE_DIR="$YEAR/$MONTH/$DAY";

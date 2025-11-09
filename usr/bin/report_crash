@@ -1,7 +1,7 @@
 #!/bin/bash
 report_crash () 
 { 
-    refresh_time;
+    . refresh_time;
 	NAME=$1;
     TAIL_SIZE="100";
     DIR_ORIGINAL=$PWD;

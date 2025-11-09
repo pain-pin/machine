@@ -1,7 +1,7 @@
 #!/bin/bash
 report_last_boot () 
 { 
-    refresh_time;
+    . refresh_time;
     NAME=$1;
     DIR_ORIGINAL=$PWD;
     CRASH_DIR="$(echo ${DATE}_${TIME} | sed 's/:/-/g')";

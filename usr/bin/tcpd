@@ -1,8 +1,6 @@
 #!/usr/bin/bash
 
-#refresh_time -> not working
-DATE=$(date +"%y%m%d");
-TIME=$(date +"%T")
+. refresh_time
 DIR=$LOG_CONN_DIR
 SUB_DIR=${1:-"tcpd"}
 DIR="$DIR/$SUB_DIR"

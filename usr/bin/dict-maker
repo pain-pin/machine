@@ -63,6 +63,15 @@ nlp.Defaults.stop_words.add("social")
 nlp.Defaults.stop_words.add("thumbnail")
 nlp.Defaults.stop_words.add("replier")
 nlp.Defaults.stop_words.add("replie")
+nlp.Defaults.stop_words.add("for")
+nlp.Defaults.stop_words.add("you")
+nlp.Defaults.stop_words.add("from")
+nlp.Defaults.stop_words.add("to")
+nlp.Defaults.stop_words.add("script")
+nlp.Defaults.stop_words.add("grep")
+nlp.Defaults.stop_words.add("localhost")
+nlp.Defaults.stop_words.add("sudo")
+nlp.Defaults.stop_words.add("not")
 
 for md_file in VAULT_DIR.rglob("*.md"):
     if "Dictionary" in md_file.parts:

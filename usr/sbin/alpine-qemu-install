@@ -1,11 +1,22 @@
 #!/bin/bash
 set -eux
 
+ISO_URL="https://dl-cdn.alpinelinux.org/alpine/v3.22/releases/x86_64/alpine-virt-3.22.2-x86_64.iso"
+
 # from vm to make a shared folder
-echo "cheat sheet: mount -t 9p -o trans=virtio hostshare /mnt"
+if [ $# -lt 1 ] ; then
+	echo """
+		ISO=${1:-$(basename $ISO_URL)}
+		IMG=${2:-disc_alpine.qcow2}
+		SIZE=${3:-16G}
+		RAM=${4:-2G}
+		CPUS=${5:-2}
+		SHARE=${6:-$PWD/share}
+	"""
+	echo "cheat sheet: mount -t 9p -o trans=virtio hostshare /mnt"
+fi
 
 # --- Configurable defaults ---
-ISO_URL="https://dl-cdn.alpinelinux.org/alpine/v3.22/releases/x86_64/alpine-virt-3.22.2-x86_64.iso"
 ISO=${1:-$(basename $ISO_URL)}
 IMG=${2:-disc_alpine.qcow2}
 SIZE=${3:-16G}

@@ -2,7 +2,7 @@
 header_journal () 
 { 
     F_NAME=$1;
-	refresh_time
+	. . refresh_time
     echo "$DATE" >> $F_NAME;
     echo "$TIME" >> $F_NAME;
     echo "$USER" >> $F_NAME;
