@@ -1,10 +1,12 @@
 #!/usr/bin/bash
 
 DIR=${LOG_CONN_DIR:-"/var/log/tcpd"}
-SUB_DIR=${1:-"nothing_special"}
+TIME=$(date +"%T")
+DATE=$(date +"%y%m%d")
+SUB_DIR=${1:-"$(echo $DATE | sed 's/:/_/g')"}
 DIR="$DIR/$SUB_DIR"
-NAME=${2:-"dflt"}.pcap
-NAME=$(echo $(date +"%y%m%d")-$(date +"%T").$NAME | sed "s/:/_/g")
+NAME=${2:-"$DATE-${TIME}-dflt"}.pcap
+
 FILE=$DIR/$NAME
 
 echo "File at $FILE"
@@ -33,7 +35,8 @@ fi
 echo 'DEVICE='$DEVICE
 echo 
 
-sudo tcpdump -n -vvv -i $DEVICE >> $FILE
+tcpdump -n >> $FILE
+#tcpdump -n -vvv -i $DEVICE >> $FILE
 
 exit 1
 

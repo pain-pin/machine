@@ -57,13 +57,13 @@ while IFS= read -r line; do
 done < "$BLACKLIST"
 
 # Input rules
+nft add rule inet filter input iif "lo" accept
 nft add rule inet filter input ip saddr @white_ipv4 accept
 nft add rule inet filter input ip6 saddr @white_ipv6 accept
 nft add rule inet filter input ip saddr @banned_ipv4 drop
 nft add rule inet filter input ip6 saddr @banned_ipv6 drop
 nft add rule inet filter input ct state established,related accept
-nft add rule inet filter input iif "lo" accept
-#nft add rule inet filter input drop
+nft add rule inet filter input drop
 
 # Output rules
 nft add rule inet filter output ip daddr @white_ipv4 accept
