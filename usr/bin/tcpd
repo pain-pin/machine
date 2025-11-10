@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
-DIR=${LOG_CONN_DIR:-"/var/log/tcpd"}
-SUB_DIR=${1:-"nothing_special"}
+DIR=${1:-"$LOG_CONN_DIR"}
+SUB_DIR=${2:-$(date "+%y%m%d")}
 DIR="$DIR/$SUB_DIR"
 NAME=${2:-"dflt"}.pcap
 NAME=$(echo $(date +"%y%m%d")-$(date +"%T").$NAME | sed "s/:/_/g")
@@ -17,23 +17,24 @@ fi
 mkdir -p $DIR
 echo "File at $FILE"
 
-DEVICE=$(ip addr | grep -v DOWN | grep -E "^[0-9]" | awk -F':' '{print $2}' | grep -v lo)
-NB_DEVICES="$(echo ${DEVICE} | awk '{print NF}')"
-
-if [ $NB_DEVICES -lt "1" ] ; then
-	echo no device
-	echo $DEVICE
-	exit 1
-elif [ $NB_DEVICES -gt "1" ] ; then
-	echo several devices, precise it using '$2':
-	echo $DEVICE
-	exit 1
-fi
+#DEVICE=$(ip addr | grep -v DOWN | grep -E "^[0-9]" | awk -F':' '{print $2}' | grep -v lo)
+#NB_DEVICES="$(echo ${DEVICE} | awk '{print NF}')"
+#
+#if [ $NB_DEVICES -lt "1" ] ; then
+#	echo no device
+#	echo $DEVICE
+#	exit 1
+#elif [ $NB_DEVICES -gt "1" ] ; then
+#	echo several devices, precise it using '$2':
+#	echo $DEVICE
+#	exit 1
+#fi
 
 echo 'DEVICE='$DEVICE
 echo 
 
-sudo tcpdump -n -vvv -i $DEVICE >> $FILE
+tcpdump -n -w $FILE
+#tcpdump -n -i $DEVICE -w $FILE
 
 exit 1
 
