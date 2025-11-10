@@ -1,13 +1,20 @@
 #!/usr/bin/bash
 
-. refresh_time
-DIR=$LOG_CONN_DIR
-SUB_DIR=${1:-"tcpd"}
+DIR=${LOG_CONN_DIR:-"/var/log/tcpd"}
+SUB_DIR=${1:-"nothing_special"}
 DIR="$DIR/$SUB_DIR"
-mkdir -p $DIR
-NAME=${2:-"default_pcap"}
-NAME=$(echo $DATE-$TIME.$NAME.md | sed "s/:/_/g")
+NAME=${2:-"dflt"}.pcap
+NAME=$(echo $(date +"%y%m%d")-$(date +"%T").$NAME | sed "s/:/_/g")
 FILE=$DIR/$NAME
+
+echo "File at $FILE"
+if [ "$#" -lt 1 ] ; then
+	echo "usage $0 filename"
+	echo "File at $FILE"
+	exit 1 
+fi
+
+mkdir -p $DIR
 echo "File at $FILE"
 
 DEVICE=$(ip addr | grep -v DOWN | grep -E "^[0-9]" | awk -F':' '{print $2}' | grep -v lo)
@@ -26,13 +33,7 @@ fi
 echo 'DEVICE='$DEVICE
 echo 
 
-sudo tcpdump -n -i $DEVICE >> $FILE
-chgrp root $FILE
-#PIDS+="$! " 
-#while true
-#do
-#	trap "kill -9 $PIDS && exit 0" SIGINT
-#done
+sudo tcpdump -n -vvv -i $DEVICE >> $FILE
 
 exit 1
 

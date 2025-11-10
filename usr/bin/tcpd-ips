@@ -1,24 +1,12 @@
 #!/usr/bin/bash
 REG='[0-9 .]+>[0-9 .]+'
 
-if [ ! -d $LOG_CONN_DIR ] ; then
+if [ "$#" -ne 1 ] ; then
 	echo "no log file"
 	exit 1
 fi
 
-FILE=${1:-"$(ls -t $LOG_CONN_DIR/*/* | head -1)"}
-
-echo $FILE
-echo
-echo "src port"
-SRCS_PORTS=$(cut -d '>' -f 1 $FILE | awk '{print $NF}' | awk -F'.' '{print $NF}' | sed 's/://' | sort | uniq)
-for X in $SRCS_PORTS ; do echo $X ; done
-echo 
-
-echo "dest ports"
-DEST_PORTS=$(cut -d '>' -f 2 $FILE | awk '{print $1}' | awk -F'.' '{print $NF}' | sed 's/://' | sort | uniq)
-for X in $DEST_PORTS ; do echo $X ; done
-echo 
+FILE=${1}
 
 echo "src ips"
 SRCS_IPS=$(cut -d '>' -f 1 $FILE | awk '{print $NF}' | grep -Eo "$IP_REG" | sort | uniq)
@@ -28,6 +16,17 @@ echo
 echo "dest ips"
 DEST_IPS=$(cut -d '>' -f 2 $FILE | awk '{print $1}' | grep -Eo "$IP_REG" | sort | uniq)
 for X in $DEST_IPS ; do echo $X ; done
+echo 
+
+echo
+echo "src port"
+SRCS_PORTS=$(cut -d '>' -f 1 $FILE | awk '{print $NF}' | awk -F'.' '{print $NF}' | sed 's/://' | sort | uniq)
+for X in $SRCS_PORTS ; do echo $X ; done
+echo 
+
+echo "dest ports"
+DEST_PORTS=$(cut -d '>' -f 2 $FILE | awk '{print $1}' | awk -F'.' '{print $NF}' | sed 's/://' | sort | uniq)
+for X in $DEST_PORTS ; do echo $X ; done
 echo 
 
 echo "from $FILE:"
