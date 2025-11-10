@@ -66,10 +66,10 @@ nft add rule inet filter input iif "lo" accept
 #nft add rule inet filter input drop
 
 # Output rules
-nft add rule inet filter output ip saddr @white_ipv4 accept
-nft add rule inet filter output ip6 saddr @white_ipv6 accept
-nft add rule inet filter output ip saddr @banned_ipv4 drop
-nft add rule inet filter output ip6 saddr @banned_ipv6 drop
+nft add rule inet filter output ip daddr @white_ipv4 accept
+nft add rule inet filter output ip6 daddr @white_ipv6 accept
+nft add rule inet filter output ip daddr @banned_ipv4 drop
+nft add rule inet filter output ip6 daddr @banned_ipv6 drop
 #nft add rule inet filter output accept
 
 # Save and enable
