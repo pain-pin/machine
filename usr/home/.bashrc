@@ -33,10 +33,6 @@ HISTFILE=~/.history
 ## make less more friendly for non-text input files, see lesspipe(1)
 #[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
 set -o vi
 export EDITOR="vim"
 
@@ -144,6 +140,10 @@ export AWK_GREP_KEY="'{
 
 bind -f  /home/.inputrc
 
+if [ -f $MACHINE_DIR/usr/home/.bash_aliases ]; then
+	. $MACHINE_DIR/usr/home/.bash_aliases
+fi
+
 # permet les accents
 setxkbmap us -variant intl
 source $PY_ENV/bin/activate
@@ -151,4 +151,5 @@ source $PY_ENV/bin/activate
 #envsubst < ${MACHINE_PATH}/dotfiles/ssh/config.template > ~/.ssh/config
 
 #export PATH=~/.npm-global/bin:$PATH
+
 
