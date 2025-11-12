@@ -1,7 +1,7 @@
 #!/bin/bash
 journal () 
 { 
-    . . refresh_time;
+    . refresh_time;
     DIR_ORIGINAL=$PWD;
     DIR="$HOME/journal/";
     DATE_DIR="$YEAR/$MONTH/$DAY";
@@ -19,6 +19,7 @@ journal ()
         LN_DIR="$1";
         F_NAME=$2;
     else
+		echo check args
         return 1;
     fi;
 	mkdir -p $DIR/$HOST

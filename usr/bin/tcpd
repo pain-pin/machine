@@ -15,6 +15,7 @@ if [ "$#" -lt 1 ] ; then
 fi
 
 mkdir -p $DIR
+
 echo "File at $FILE"
 
 #DEVICE=$(ip addr | grep -v DOWN | grep -E "^[0-9]" | awk -F':' '{print $2}' | grep -v lo)
