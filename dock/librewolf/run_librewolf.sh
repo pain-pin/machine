@@ -2,7 +2,7 @@
 
 # https://belginux.com/installer-librewolf-avec-docker/
 #
-docker compose up -d
+docker compose up -d 
 
 # Rendez-vous sur l'ip:# port, 
 # suivant l'IP de votre serveur local et du port choisi, 
