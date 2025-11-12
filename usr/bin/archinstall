@@ -1,23 +1,11 @@
 #!/usr/bin/bash
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-FILE=$MACHINE_DIR/deploy/arch_install.sh
-
-vim $FILE
-gitaddcommit $FILE
-=======
->>>>>>> main
 FILE="install/arch.sh"
+
 cd $MACHINE_DIR
 vim $FILE
 gitaddcommit $FILE
 cd -
-<<<<<<< HEAD
-=======
->>>>>>> a
->>>>>>> main
 
 exit 0
 
