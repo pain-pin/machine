@@ -76,12 +76,12 @@ MAC_REG='([0-9A-Fa-f]{2}[:-]){5}[0-9A-Fa-f]{2}'
 
 export YES_REG="\$y\$[./A-Za-z0-9]+\$[./A-Za-z0-9]{,86}\$[./A-Za-z0-9]{43}"
 export FILE_REG="[a-zA-Z0-9]+\.[a-zA-Z0-9]+"
-export YYYY_REG="19[5-9][0-9]|20[0-2][0-9]"
-export MM_REG="(0?[1-9])|(1[0-2])"
-export DD_REG="(0?[1-9])|([1-2][0-9])|(3[0-1])"
-export DATE_REG="($YYYY_REG$MM_REGc$DD_REG)|($DD_REGMM_REG$YYYY_REG)"
-export YYYYMMDD_REG="$YYYY_REG$MM_REG$DD_REG"
-export DDMMYYYY_REG="$DD_REG$MM_REG$YYYY_REG"
+export YYYY_REG="((19[5-9][0-9])|(20[0-2][0-9]))"
+export MM_REG="((0?[1-9])|(1[0-2]))"
+export DD_REG="((0?[1-9])|([1-2][0-9])|(3[0-1]))"
+export DATE_REG="(${YYYY_REG}${MM_REG}${DD_REG})|(${DD_REGMM_REG}${YYYY_REG})"
+export YYYYMMDD_REG="${YYYY_REG}${MM_REG}${DD_REG}"
+export DDMMYYYY_REG="${DD_REG}${MM_REG}${YYYY_REG}"
 export CFUNCTION="^[a-z].*\)$"
 
 # --- Media File Extension Regex Patterns ---
