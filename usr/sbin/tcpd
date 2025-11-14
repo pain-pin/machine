@@ -34,7 +34,7 @@ echo "File at $FILE"
 echo 'DEVICE='$DEVICE
 echo 
 
-tcpdump -n -w $FILE
+tcpdump -n -vvv -w $FILE
 #tcpdump -n -i $DEVICE -w $FILE
 
 exit 1

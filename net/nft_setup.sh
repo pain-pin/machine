@@ -72,6 +72,10 @@ nft add rule inet filter output ip daddr @banned_ipv4 drop
 nft add rule inet filter output ip6 daddr @banned_ipv6 drop
 #nft add rule inet filter output accept
 
+add rule inet filter input udp dport 53 log prefix "DNS-IN "
+add rule inet filter output udp sport 53 log prefix "DNS-OUT "
+
+
 # Save and enable
 echo "==> Saving to /etc/nftables.conf"
 nft list ruleset > /etc/nftables.conf
