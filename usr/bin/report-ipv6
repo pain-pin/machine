@@ -10,33 +10,27 @@ IP="$1"
 DIR="${2:-${IP}_report}"
 
 mkdir -p "$DIR"
+cd $DIR
 
-run() {
-    CMD="$1"
-    OUT="$DIR/${CMD}.${IP}.out"
-    echo "== $CMD ==" | tee "$OUT"
-    eval "$CMD" 2>&1 | tee -a "$OUT"
-}
-
-#run "dig AAAA $IP"
+#report-cmd "dig AAAA $IP"
 #
-#run "dig -x $IP"
-#run "host $IP"
+#report-cmd "dig -x $IP"
+#report-cmd "host $IP"
 
-run "curl -s https://ipinfo.io/$IP"
-run "curl -s https://ipapi.co/$IP/json/"
+report-cmd "curl -s https://ipinfo.io/$IP"
+report-cmd "curl -s https://ipapi.co/$IP/json/"
 
-#run "sipcalc $IP"
-#run "ipv6calc --in ipv6addr $IP"
+#report-cmd "sipcalc $IP"
+#report-cmd "ipv6calc --in ipv6addr $IP"
 #
-#run "traceroute6 $IP"
-#run "tracepath6 $IP"
+#report-cmd "traceroute6 $IP"
+#report-cmd "tracepath6 $IP"
 
-run "curl -s https://api.bgpview.io/ip/$IP"
-run "curl -s 'https://stat.ripe.net/data/prefix-overview/data.json?resource=$IP'"
+report-cmd "curl -s https://api.bgpview.io/ip/$IP"
+report-cmd "curl -s 'https://stat.ripe.net/data/prefix-overview/data.json?resource=$IP'"
 
-run "nmap -6 $IP"
-
+report-cmd "nmap -6 $IP"
+cd -
 
 exit 0
 
