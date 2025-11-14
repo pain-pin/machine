@@ -1,0 +1,16 @@
+#!/usr/bin/bash
+
+if [ "$#" -lt 1 ] ; then
+    echo "Usage: $0 cmd [outfile]"
+    exit 1
+fi
+
+    CMD="$1"
+	OUT=${2:-"$(echo $CMD | sed s/ /_/g)"}
+	DIR=$(realpath $OUT)
+	mkdir -p $DIR
+    echo "== $CMD ==" | tee "$OUT"
+    eval "$CMD" 2>&1 | tee -a "$OUT"
+
+exit 0
+
