@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+commit_if_modified $MACHINE_DIR/install/pacman.sh
+exit 0
+
