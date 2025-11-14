@@ -9,7 +9,8 @@ fi
 	OUT=${2:-"$(echo $CMD | sed s/ /_/g)"}
 	#DIR=$(realpath $OUT)
 	#mkdir -p $DIR
-    echo "== $CMD ==" | tee "$OUT"
+	header_journal "$OUT"
+    echo "== $CMD ==" | tee -a "$OUT"
     eval "$CMD" 2>&1 | tee -a "$OUT"
 
 exit 0
