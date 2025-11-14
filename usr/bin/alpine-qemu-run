@@ -32,7 +32,6 @@ mkdir -p "$SHARE"
 
 qemu-system-x86_64 \
 	-m $RAM \
-	-nic user \
 	-boot once=d \
 	-drive file=$IMG \
 	-device virtio-vga \
