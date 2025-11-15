@@ -1,0 +1,15 @@
+[Unit]
+Description=watch connections
+After=network.target
+#Before=nextcloud-web.serviceT
+
+[Service]
+ExecStart=/svr/usr/sbin/tcpd /var/log/tcpd service
+ExecReload=/svr/usr/sbin/tcpd /var/log/tcpd service
+Type=Simple
+Restart=always
+
+
+[Install]
+WantedBy=default.target
+RequiredBy=network.target
