@@ -140,8 +140,8 @@ export AWK_GREP_KEY="'{
 
 bind -f  /home/.inputrc
 
-if [ -f $MACHINE_DIR/usr/home/.bash_aliases ]; then
-	. $MACHINE_DIR/usr/home/.bash_aliases
+if [ -f /home/.bash_aliases ]; then
+	. /home/.bash_aliases
 fi
 
 # permet les accents
