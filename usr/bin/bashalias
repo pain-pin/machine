@@ -1,6 +1,6 @@
 #!/bin/bash
 bashalias () 
 { 
-    vim ~/.bash_aliases
+    vim /home/.bash_aliases
 }
 bashalias "$@"
