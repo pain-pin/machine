@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+openvpn --auth-user-pass /etc/openvpn/.pot.swp --config /etc/openvpn/client/ch-free-2.protonvpn.tcp.ovpn
