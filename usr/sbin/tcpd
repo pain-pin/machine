@@ -3,7 +3,7 @@
 DIR=${1:-"$LOG_CONN_DIR"}
 SUB_DIR=${2:-$(date "+%y%m%d")}
 DIR="$DIR/$SUB_DIR"
-NAME=${2:-"dflt"}.pcap
+NAME=${2:-"dflt"}
 NAME=$(echo $(date +"%y%m%d")-$(date +"%T").$NAME | sed "s/:/_/g")
 FILE=$DIR/$NAME
 
@@ -34,8 +34,8 @@ echo "File at $FILE"
 echo 'DEVICE='$DEVICE
 echo 
 
-tcpdump -n -vvv -w $FILE
-#tcpdump -n -i $DEVICE -w $FILE
+tcpdump -n | tee -a $FILE.log
+tcpdump -w $FILE.pcap
 
 exit 1
 
