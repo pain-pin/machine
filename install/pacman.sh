@@ -34,7 +34,7 @@ pacman --noconfirm -Sy xorg-setxkbmap
 pacman --noconfirm -Sy xorg-xhost
 pacman --noconfirm -Sy xorg-xhost
 mandb #rend possible la commande apropos
-#
+
 ##git clone https://github.com/Exafunction/codeium.vim ~/.vim/pack/Exafunction/start/codeium.vim
 #sudo -i -u $SUDO_USER bash << EOF
 #
@@ -42,9 +42,9 @@ mandb #rend possible la commande apropos
 #git config --global user.name "prsko_$HOST"
 #EOF
 
-su $SUDO_USER
-git clone https://aur.archlinux.org/yay.git
-cd yay/
-makepkg -si
-cd ..
-rm -rf yay
+#su $SUDO_USER
+#git clone https://aur.archlinux.org/yay.git
+#cd yay/
+#makepkg -si
+#cd ..
+#rm -rf yay
