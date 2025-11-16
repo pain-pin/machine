@@ -34,7 +34,7 @@ journal ()
         mkdir -p "$DIR/$HOST/$LN_DIR";
         ln -P "$FILE" "$DIR/$HOST/$LN_DIR";
 		git add . ;
-		git commit -m "	-> linked $FILE";
+		git commit -m "	-> linked";
     else
         rm $FILE;
         rmdir -p "${PATH_}";
