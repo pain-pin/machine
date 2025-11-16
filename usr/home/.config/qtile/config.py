@@ -81,6 +81,10 @@ keys = [
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+    Key([], "XF86AudioRaiseVolume", lazy.widget["vol"].increase_vol()),
+    Key([], "XF86AudioLowerVolume", lazy.widget["vol"].decrease_vol()),
+    Key([], "XF86AudioMute", lazy.widget["vol"].mute()),
+
 ]
 
 # Add key bindings to switch VTs in Wayland.
@@ -145,7 +149,7 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
-logo = os.path.join(os.path.dirname(libqtile.resources.__file__), "enso.png")
+logo = os.path.join(os.path.dirname(libqtile.resources.__file__), "~/.config/qtile/enso.png")
 screens = [
     Screen(
         bottom=bar.Bar(
@@ -162,8 +166,6 @@ screens = [
                 ),
                 # widget.StatusNotifier(),
                 widget.Systray(),
-                widget.NetGraph(),
-                widget.BatteryIcon(),
                 widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
                 widget.QuickExit(),
             ],

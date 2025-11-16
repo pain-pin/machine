@@ -1,50 +1,44 @@
 #!/usr/bin/env python3
 import argparse
 import json
-from bscon import connect  # ton module de connexion Bluesky
-
-#!/usr/bin/env python3
-import argparse
-import json
-from bscon import connect  # ton module de connexion Bluesky
-
-
+from bscon import connect
+import requests
 import os
+import subprocess
 import json
 from atproto import Client
+from atproto_client import models
 
-def get_posts(client: Client, handle: str, folder: str):
-    os.makedirs(folder, exist_ok=True)
+TMP_DIR="/tmp/profile_tmp"
 
-    feed = client.app.bsky.feed.get_author_feed
-    cursor = None
+def save_profile(profile, directory):
+    avatar = requests.get(profile.avatar).content
+    file = directory + '/' + profile.handle
+    image_file = directory + '/' + profile.handle + ".jpeg"
+    subprocess.run(["mkdir", "-p", directory])
+    with open(image_file, "wb") as f:
+        f.write(avatar)
+    with open(file, "w") as f:
+        f.write(profile.description)
+        f.write("\n\nfollowers: ")
+        f.write(str(profile.followers_count))
 
-    while True:
-        page = feed({"actor": handle, "cursor": cursor, "limit": 100})
-        items = page.feed
-
-        for item in items:
-            post = item.post
-            uri = post.uri.replace(":", "_").replace("/", "_")
-            path = os.path.join(folder, f"{uri}.json")
-
-            with open(path, "w") as f:
-                json.dump(post.dict(), f, indent=2)
-
-        cursor = page.cursor
-        if not cursor:
-            break
+def get_profile(client, profile, tmp_dir=TMP_DIR):
+    profile = client.app.bsky.actor.get_profile(params={"actor": profile})
+    save_profile(profile, tmp_dir)
+    return profile
 
 
 
 def main():
     parser = argparse.ArgumentParser(description="Download Bluesky profile posts to JSON")
     parser.add_argument("handle", help="Bluesky handle (ex: ni-bot.bsky.social)")
-    parser.add_argument("--folder", default="out")
+    parser.add_argument("--folder", default=TMP_DIR)
     args = parser.parse_args()
 
     client = connect()
-    posts = get_posts(client, args.handle, args.folder)
+    profile = get_profile(client, args.handle, args.folder)
+
 
 
 if __name__ == "__main__":
