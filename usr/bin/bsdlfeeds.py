@@ -10,16 +10,50 @@ import subprocess
 from atproto import Client
 from atproto_client import models
 
+def save_post(post, directory, post_number):
+    directory = directory + '/' + post_number
+    subprocess.run(["mkdir", "-p", directory])
+    #avatar = requests.get(post.avatar).content
+    #image_file = directory + '/avatar.jpeg'
+    #with open(image_file, "wb") as f:
+    #    f.write(avatar)
+    text_file = directory + '/text'
+    with open(text_file, "w") as f:
+        f.write(str(post.post.record.text))
+        f.write('\n\ncreated_at : ')
+        f.write(post.created_at)
+    data_file = directory + '/metadata'
+    metadata_file = directory + '/metadata'
+    with open(metadata_file, "w") as f:
+        f.write('\n\nconstruct : ')
+        f.write(post.construct)
+        f.write('\n\ncopy : ')
+        f.write(post.copy)
+        f.write('\n\ndict : ')
+        f.write(post.dict)
+        f.write('\n\nembed : ')
+        f.write(post.embed)
+        f.write('\n\nentities : ')
+        f.write(post.entities)
+        f.write('\n\nfacets : ')
+        f.write(post.facets)
+        f.write('\n\nreply : ')
+        f.write(post.reply)
+
+
 def get_feeds(client, profile, tmp_dir=TMP_DIR, save=False):
-    res = client.app.bsky.feed.get_author_feed(params={"actor": "ni-bot.bsky.social", "limit": 20})
-    posts = res["feed"]
+    n = 0
+    res = client.app.bsky.feed.get_author_feed(params={"actor": profile})
+    for post in res["feed"]
+        save_post(res["feed"], tmp_dir + profile, f"{n:05d}")
+        n+=1
     cursor = res.get("cursor")
     while cursor:
-        res = client.app.bsky.feed.get_author_feed(params={"actor": "ni-bot.bsky.social", "limit": 20, "cursor": cursor})
-        posts.extend(res["feed"])
-        cursor = res.get("cursor")
-    for post in posts:
-        print(post["post"]["text"])
+        res = client.app.bsky.feed.get_author_feed(params={"actor": profile, "cursor": cursor})
+    for post in res["feed"]
+        save_post(res["feed"], tmp_dir + profile, f"{n:05d}")
+        n+=1
+    cursor = res.get("cursor")
 
 def main():
     parser = argparse.ArgumentParser(description="Download Bluesky profile posts to JSON")
