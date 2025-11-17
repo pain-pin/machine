@@ -7,53 +7,50 @@ from bsdlprofile import TMP_DIR
 import requests
 import os
 import subprocess
+import re
 from atproto import Client
 from atproto_client import models
 
-def save_post(post, directory, post_number):
-    directory = directory + '/' + post_number
+LIMIT_LOAD = 177
+
+def save_item(filename, obj, directory=""):
+    filename = directory + '/' + filename
     subprocess.run(["mkdir", "-p", directory])
-    #avatar = requests.get(post.avatar).content
-    #image_file = directory + '/avatar.jpeg'
-    #with open(image_file, "wb") as f:
-    #    f.write(avatar)
-    text_file = directory + '/text'
-    with open(text_file, "w") as f:
-        f.write(str(post.post.record.text))
-        f.write('\n\ncreated_at : ')
-        f.write(post.created_at)
-    data_file = directory + '/metadata'
-    metadata_file = directory + '/metadata'
-    with open(metadata_file, "w") as f:
-        f.write('\n\nconstruct : ')
-        f.write(post.construct)
-        f.write('\n\ncopy : ')
-        f.write(post.copy)
-        f.write('\n\ndict : ')
-        f.write(post.dict)
-        f.write('\n\nembed : ')
-        f.write(post.embed)
-        f.write('\n\nentities : ')
-        f.write(post.entities)
-        f.write('\n\nfacets : ')
-        f.write(post.facets)
-        f.write('\n\nreply : ')
-        f.write(post.reply)
+    with open(filename, 'w') as f:
+        f.write(str(obj))
+
+def save_items(obj, directory=""):
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            new_directory = f"{directory}/{k}" if directory else k
+            save_items(v, new_directory)
+    elif isinstance(obj, list):
+        for i, v in enumerate(obj):
+            new_directory = f"{directory}[{i}]"
+            save_items(v, new_directory)
+    else:
+        filename = ''.join(re.findall(r'[a-zA-Z0-9]', str(obj)[:20])) + '.txt'
+        save_item(filename, obj, directory)
 
 
 def get_feeds(client, profile, tmp_dir=TMP_DIR, save=False):
+    directory = tmp_dir + '/' + profile
     n = 0
-    res = client.app.bsky.feed.get_author_feed(params={"actor": profile})
-    for post in res["feed"]
-        save_post(res["feed"], tmp_dir + profile, f"{n:05d}")
+    res = client.app.bsky.feed.get_author_feed(params={"actor": profile, "limit": LIMIT_LOAD})
+    for post in res["feed"]:
+        item_directory = directory + f"/{n:05d}"
+        print(f"\n\nsaving: {n:05d} \n\t{post.post.record.text}")
+        save_items(post.model_dump(), item_directory)
         n+=1
-    cursor = res.get("cursor")
+    cursor = res.cursor
     while cursor:
-        res = client.app.bsky.feed.get_author_feed(params={"actor": profile, "cursor": cursor})
-    for post in res["feed"]
-        save_post(res["feed"], tmp_dir + profile, f"{n:05d}")
+        res = client.app.bsky.feed.get_author_feed(params={"actor": profile, "limit": LIMIT_LOAD, "cursor": cursor})
+    for post in res["feed"]:
+        item_directory = directory + f"/{n:05d}"
+        print(f"\n\nsaving: {n:05d} \n\t{post.post.record.text}")
+        save_items(post.model_dump(), item_directory)
         n+=1
-    cursor = res.get("cursor")
+    cursor = res.cursor
 
 def main():
     parser = argparse.ArgumentParser(description="Download Bluesky profile posts to JSON")
@@ -62,7 +59,7 @@ def main():
     args = parser.parse_args()
 
     client = connect()
-    profile = get_profile(client, args.handle, args.folder)
+    profile = get_feeds(client, args.handle, args.folder)
 
 
 
