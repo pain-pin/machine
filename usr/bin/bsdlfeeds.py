@@ -59,13 +59,6 @@ def main():
     args = parser.parse_args()
 
     client = connect()
-    i = 0
-    while i < 36:
-        res = client.app.bsky.feed.get_author_feed(
-            params={"actor": profile, "limit": LIMIT_LOAD, **({"cursor": cursor} if cursor else {})}
-        )
-        i += 1
-        cursor = res.cursor
     profile = get_feeds(client, args.handle, args.folder, cursor=cursor)
 
 
