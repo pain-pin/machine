@@ -32,6 +32,7 @@ def save_items(obj, directory=""):
         filename = ''.join(re.findall(r'[a-zA-Z0-9]', str(obj)[:20])) + '.txt'
         save_item(filename, obj, directory)
 
+
 def get_feeds(client, profile, tmp_dir=TMP_DIR, save=False, cursor=None):
     directory = f"{tmp_dir}/{profile}"
     n = 0
@@ -39,7 +40,6 @@ def get_feeds(client, profile, tmp_dir=TMP_DIR, save=False, cursor=None):
         res = client.app.bsky.feed.get_author_feed(
             params={"actor": profile, "limit": LIMIT_LOAD, **({"cursor": cursor} if cursor else {})}
         )
-
         for post in res["feed"]:
             item_directory = f"{directory}/{n:05d}"
             print(f"\nsaving: {n:05d}\n\t{post.post.record.text}")
@@ -59,14 +59,7 @@ def main():
     args = parser.parse_args()
 
     client = connect()
-    i = 0
-    while i < 36:
-        res = client.app.bsky.feed.get_author_feed(
-            params={"actor": profile, "limit": LIMIT_LOAD, **({"cursor": cursor} if cursor else {})}
-        )
-        i += 1
-        cursor = res.cursor
-    profile = get_feeds(client, args.handle, args.folder, cursor=cursor)
+    profile = get_feeds(client, args.handle, args.folder)
 
 
 
