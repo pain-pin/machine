@@ -2,6 +2,13 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+
+if [ -f /etc/env ]; then
+	set -a
+	. /etc/env
+	set +a
+fi
+
 case $- in
     *i*) ;;
       *) return;;
@@ -119,12 +126,6 @@ export AWK_GREP_KEY="'{
 
 bind -f  /home/.inputrc
 
-
-if [ -f /etc/env ]; then
-	set -a
-	. /etc/env
-	set +a
-fi
 
 if [ -f /home/.bash_aliases ]; then
 	. /home/.bash_aliases
