@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-. /home/.bashrc
+. /etc/env
 
 mkdir -p $LOG_CONN_DIR
 tcpdump -n -l > $LOG_CONN
