@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+
+vim /tmp/status.txt
+
+exit 0
+
