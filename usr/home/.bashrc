@@ -92,29 +92,8 @@ export IMAGE_REG="jpg|jpeg|png|gif|bmp|webp|tiff|ico|heic|svg|jfif"
 export MEDIA_REG="\.(${AUDIO_REG}|${VIDEO_REG}|${IMAGE_REG})$"
 
 export HISTCONTROL=ignorespace
-export SSH=177
 
-export SKEL=svr
-export MACHINE=$SKEL
-export MACHINE_PATH=/$MACHINE
-export MACHINE_DIR=/$MACHINE
-export NETWORK_DIR=$MACHINE_DIR/net
-export HOMESKEL_DIR=$MACHINE_DIR/usr/home
-export INSTALL_DIR=$MACHINE_DIR/install
-export BLACKLIST=$NETWORK_DIR/blacklist.txt
-export WHITELIST=$NETWORK_DIR/whitelist.txt
-export NFT_RESET=$NETWORK_DIR/nft_setup.sh
-export DEVICE="$(ip addr | grep -v DOWN | grep -E "^[0-9]" | awk -F':' '{print $2}' | grep -v lo)"
-
-
-export JOURNAL_DIR=$HOME/journal
-export PERSO_DIR=$HOME/perso
-export LOCAL_JOURNAL_DIR=$JOURNAL_DIR/$HOST
-export LOG_CONN_DIR=/var/log/tcpd
-export BIN=$MACHINE_DIR/usr/bin
-export SBIN_DIR=$MACHINE_DIR/usr/sbin
-export BIN_DIR=$BIN
-export PY_ENV=$BIN/py-env
+DEVICE="$(ip addr | grep -v DOWN | grep -E "^[0-9]" | awk -F':' '{print $2}' | grep -v lo)"
 
 PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 PATH="$PATH:$SBIN_DIR"
@@ -139,6 +118,13 @@ export AWK_GREP_KEY="'{
 #ctags -R .
 
 bind -f  /home/.inputrc
+
+
+if [ -f /etc/env ]; then
+	set -a
+	. /etc/env
+	set +a
+fi
 
 if [ -f /home/.bash_aliases ]; then
 	. /home/.bash_aliases

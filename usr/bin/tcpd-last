@@ -1,6 +1,0 @@
-#!/usr/bin/bash
-
-NLAST=${1:-"100"}
-
-P=/var/log/tcpd/service/
-tail -$NLAST $(ls -t $P*.log | head -1) | grepip
