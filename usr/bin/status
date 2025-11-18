@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-vim /tmp/status.txt
+vim $NET_STATUS
 
 exit 0
 
