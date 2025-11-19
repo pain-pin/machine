@@ -7,20 +7,18 @@ def scan(host, port, banner, timeout):
     s.settimeout(timeout)
     try:
         err = s.connect_ex((host, port))
-        if err == 111:      # ECONNREFUSED → closed
+        if err == 111:
             return "closed", b""
-        if err != 0:        # timeout, unreachable → filtered
+        if err != 0:
             return "filtered", b""
-
-        # connected → open
         try:
             s.sendall(banner)
         except:
-            pass
+            print("Error sending")
         try:
             data = s.recv(1024)
         except:
-            data = b""
+            data = b"error receiving"
         return "open", data
     finally:
         s.close()
