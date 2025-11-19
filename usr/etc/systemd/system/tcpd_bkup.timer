@@ -2,7 +2,7 @@
 Descriptioon = bckup tcpd service every hour
 
 [Timer]
-OnCalendar=hourly
+OnCalendar=*-*-* *:*:00
 Persistent=true
 
 [Install]

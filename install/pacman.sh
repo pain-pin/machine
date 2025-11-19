@@ -23,6 +23,7 @@ pacman --noconfirm -Sy openvpn
 pacman --noconfirm -Sy wireguard-tools
 pacman --noconfirm -Sy proton-vpn-gtk-app
 pacman --noconfirm -Sy systemd-resolvconf
+pacman --noconfirm -Sy cronie
 pacman --noconfirm -Sy docker
 pacman --noconfirm -Sy makepkg
 pacman --noconfirm -Sy tree

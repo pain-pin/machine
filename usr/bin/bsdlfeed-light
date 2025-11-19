@@ -17,7 +17,7 @@ def save_item(post, filename, directory=""):
     filename = f"{directory}/{filename}"
     subprocess.run(["mkdir", "-p", directory])
     with open(filename, 'w') as f:
-		f.write(post.record.text)
+        f.write(post.record.text)
 
 
 def get_feeds(client, profile, tmp_dir=TMP_DIR, save=False, cursor=None):
@@ -28,7 +28,7 @@ def get_feeds(client, profile, tmp_dir=TMP_DIR, save=False, cursor=None):
             params={"actor": profile, "limit": LIMIT_LOAD, **({"cursor": cursor} if cursor else {})}
         )
         for post in res["feed"]:
-            save_item(post.post, directory, post.post.record.created_at)
+            save_item(post.post, post.post.record.created_at, directory)
             n += 1
         cursor = res.cursor
         if not cursor:
