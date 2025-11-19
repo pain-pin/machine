@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 #run from crontab
 
-source /home/.bashrc
+. /home/.bashrc
 
 . refresh_time
 
