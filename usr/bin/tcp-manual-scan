@@ -1,66 +1,47 @@
 #!/usr/bin/env python3
-# manual_banner_scan.py
-# Python 3 — simple manual TCP banner scanner
+import socket
+import argparse
 
-import argparse, socket, sys, time
-
-def parse_ports(s):
-    ports = set()
-    for part in s.split(','):
-        if '-' in part:
-            a,b = part.split('-',1); ports.update(range(int(a), int(b)+1))
-        else:
-            if part.strip(): ports.add(int(part))
-    return sorted(ports)
-
-def scan_one(host, port, banner, timeout, recv_bytes):
+def scan(host, port, banner, timeout):
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.settimeout(timeout)
     try:
         err = s.connect_ex((host, port))
-        if err != 0:
-            return False, None
-        if banner:
-            try:
-                s.sendall(banner)
-            except Exception:
-                pass
+        if err == 111:      # ECONNREFUSED → closed
+            return "closed", b""
+        if err != 0:        # timeout, unreachable → filtered
+            return "filtered", b""
+
+        # connected → open
         try:
-            data = s.recv(recv_bytes)
-        except Exception:
-            data = b''
-        return True, data
-    except Exception as e:
-        return False, None
+            s.sendall(banner)
+        except:
+            pass
+        try:
+            data = s.recv(1024)
+        except:
+            data = b""
+        return "open", data
     finally:
         s.close()
 
 def main():
-    p = argparse.ArgumentParser(description="Manual TCP banner scanner")
-    p.add_argument("host", help="target host or IP")
-    p.add_argument("-P","--ports", default="1-1024",
-                   help="ports list: comma separated and ranges allowed (default: 1-1024)")
-    p.add_argument("-b","--banner", default="HELLO\r\n",
-                   help="raw banner to send (default: 'HELLO\\r\\n')")
-    p.add_argument("-t","--timeout", type=float, default=1.0, help="connect/recv timeout (s)")
-    p.add_argument("-r","--recv", type=int, default=1024, help="bytes to receive")
-    args = p.parse_args()
+    p = argparse.ArgumentParser()
+    p.add_argument("host")
+    p.add_argument("-P", "--ports", default="22,80,443")
+    p.add_argument("-b", "--banner", default="GET / ")
+    p.add_argument("-t", "--timeout", type=float, default=1.0)
+    a = p.parse_args()
 
-    try:
-        banner_bytes = args.banner.encode('utf-8')
-    except Exception:
-        banner_bytes = b""
-
-    ports = parse_ports(args.ports)
-    print(f"Scanning {args.host} ports {len(ports)} (banner='{args.banner}')", file=sys.stderr)
+    ports = [int(x) for x in a.ports.split(",") if x.strip()]
+    banner = a.banner.encode()
 
     for port in ports:
-        up, data = scan_one(args.host, port, banner_bytes, args.timeout, args.recv)
-        if up:
-            resp = data.decode('utf-8', errors='replace').strip()
-            print(f"{port:5d} open  | response: {resp!s}")
+        state, data = scan(a.host, port, banner, a.timeout)
+        if state == "open":
+            print(f"{port} open       {data.decode('utf-8', 'replace').strip()}")
         else:
-            print(f"{port:5d} closed/filtered")
+            print(f"{port} {state}")
 
 if __name__ == "__main__":
     main()
