@@ -1,30 +1,34 @@
 34.0.0.0/8
 35.0.0.0/8
+
 #SKYCA-3#Owner:Fastly
-#151.101.0.0/16
+151.101.0.0/16
+
+#NETBLK Cox
+98.174.32.0/19
+
 #OVH
 37.59.32.0/19
 #oman#mobile
 134.0.192.0/20
-#Umea ftp archive (debian)
-#194.71.11.0/24
-
-#LEVEL3-CIDR
-#209.244.0.0/14
-
-#66.28.0.0/16
-
-#pip atproto ?
-#151.101.0.0/16
 
 # RIPE
 # http addr
-#141.0.0.0/8
+141.0.0.0/8
+
+#pip atproto ?
+151.101.0.0/16
 
 #Cloud flare chatgpt
 #104.16.0.0/12
 
-#github agressive
-#20.26.156.215
+#Umea ftp archive (debian)
+#194.71.11.0/24
+
+#Fastly Skyca
+199.232.0.0/16
+
+#LEVEL3-CIDR
+#209.244.0.0/14
 
 1.0.0.1
