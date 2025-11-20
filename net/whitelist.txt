@@ -1,5 +1,7 @@
 #sigmanet#codium
 178.238.223.0/24
+#gititea
+34.217.253.146
 
 #microsoft (github)
 #20.0.0.0/11

@@ -14,9 +14,9 @@ mkdir $DIR
 
 cp $1 $DIR/$FILE
 
-cd dir
+cd $DIR
 
-osirrox -indev $DIR/$FILE \
+osirrox -indev $FILE \
 	-extract_boot_images ./ \
 	-cpx /arch/boot/x86_64/vmlinuz-linux \
 	/EFI/BOOT/BOOTx64.EFI \
