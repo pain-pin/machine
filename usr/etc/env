@@ -11,6 +11,7 @@ WHITELIST=$NETWORK_DIR/whitelist.txt
 NFT_RESET=$NETWORK_DIR/nft_setup.sh
 LOG_CONN_DIR=/var/log/tcpd
 LOG_CONN=$LOG_CONN_DIR/lasts.log
+NET_STATUS=/tmp/status.txt
 SSH=177
 
 JOURNAL_DIR=$HOME/journal
