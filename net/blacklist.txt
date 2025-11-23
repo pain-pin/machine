@@ -31,4 +31,8 @@
 #LEVEL3-CIDR
 #209.244.0.0/14
 
+#ionos
+#212.227.232.161 lors dúnse installation arch
+212.227.232.0/24
+
 1.0.0.1
