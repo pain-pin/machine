@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+
+ping -c1 grep transmit
+
+exit 0
+
