@@ -2,7 +2,7 @@
 set -euo pipefail
 
 ### === CONFIG ===
-ALPINE_VERSION="3.20.3"
+ALPINE_VERSION="3.22"
 ALPINE_BASE_URL="https://dl-cdn.alpinelinux.org/alpine/v${ALPINE_VERSION%.*}/releases/aarch64"
 IMAGE="alpine-rpi-${ALPINE_VERSION}-aarch64.img.gz"
 SHA256SUMS="SHA256SUMS"
