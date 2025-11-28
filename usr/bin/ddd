@@ -1,10 +1,10 @@
 #!/usr/bin/bash
 
-FILE=${1:"alpine.iso"}
-DEVICE=${2:"/dev/sdb"}
+FILE=${1:-"alpine.iso"}
+DEVICE=${2:-"/dev/sdb"}
 if [ "$#" -lt 1 ] ; then
     echo "Usage: $0 $FILE $DEVICE"
     exit 1
 fi
 
-dd of="$DEVICE" bs=4M status=progress conv=fsync
+dd if="$FILE" of="$DEVICE" bs=4M status=progress conv=fsync

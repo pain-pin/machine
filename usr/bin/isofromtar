@@ -1,0 +1,24 @@
+#!/usr/bin/bash
+
+IMG=${1:-"alpine.iso"}
+DEV=${2:-"/dev/sdb"}
+MNT_DIR=${3:-"/mnt"}
+
+if [ "$#" -lt 1 ] || [ "$#" -gt 3 ]; then
+    echo "Usage: $0 $IMG $DEV"
+    exit 1
+fi
+
+mkdir -p $MNT_DIR/boot
+
+mkfs.vfat ${DEV}1
+mkfs.ext4 ${DEV}2
+
+mount ${DEV}1 $MNT_DIR/boot
+mount ${DEV}2
+
+tar -xpf $IMG -C $IMG/root
+cp -r $IMG/root/boot/* $IMG/boot/
+
+exit 0
+
