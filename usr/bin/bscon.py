@@ -5,7 +5,8 @@ import os
 
 DEFAULT_DOMAIN = "bsky.social"
 DEFAULT_NAME = "ni-bot"
-DEFAULT_DIR = "/tmp/bs"
+DEFAULT_DIR = os.path.expanduser('~') + "/.config/bs"
+os.makedirs(DEFAULT_DIR, exist_ok=True)
 
 def path(tokendir, name="ni-bot"):
     return os.path.join(tokendir, name)
